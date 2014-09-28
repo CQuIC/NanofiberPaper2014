@@ -1,0 +1,236 @@
+\documentclass[preprint,pra,onecolumn]{revtex4-1} %reprint
+%\tightenlines
+
+%\draft
+\usepackage{etex}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{listings}
+% % \textwidth 16cm \textheight 23.5cm
+% \renewcommand{\baselinestretch}{1.2}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{color}
+\usepackage{multirow}
+\usepackage[colorlinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{calc}
+\usepackage{natbib} %[numbers]
+\usepackage{bibentry}
+% underline tool
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+%\uline{foo}	Underlines foo
+%\uuline{foo}	Double underlines foo
+%\uwave{foo}	Underlines foo with a wavy line
+%\sout{foo}	Strikesout foo
+%\xout{foo}	Crosses out foo with ¡®/6¤7¡¯
+% triple lines in colors
+\makeatletter
+\newcommand\uuuline{\bgroup\markoverwith%
+   {%
+     \textcolor{red}{\rule[-0.5ex]{2pt}{0.4pt}}%
+     \llap{\textcolor{blue}{\rule[-0.7ex]{2pt}{0.4pt}}}%
+     \llap{\textcolor{green}{\rule[-0.9ex]{2pt}{0.4pt}}}%
+   }%
+   \ULon}
+\makeatother
+
+
+\usepackage{amsmath,soul} % underline with a number
+% usage example: $\underset{4}{\text{\ul{This is short text}}}$
+% another package to use, but did not work for me.
+% From: http://tex.stackexchange.com/questions/45341/labeling-underlined-text-over-multiple-lines
+%\usepackage{soulpos}
+%\ulposdef{\ulnumaux}{%
+%   $\underset{\saveulnum}{\rule[-.7ex]{\ulwidth}{.4pt}}$}
+%
+%\newcommand{\ulnum}[2]{%
+%  \def\saveulnum{#1}%
+%  \ulnumaux{#2}}
+
+% todo list and commands
+\usepackage{todonotes}
+%% to avoid the conflict with amths package % not working
+%\makeatletter
+%\providecommand\@dotsep{5}
+%\makeatother
+%\listoftodos\relax
+\usepackage{makeidx}
+\allowdisplaybreaks
+% for eps transfering to pdf.
+\usepackage[update,prepend]{epstopdf}
+\usepackage{ifpdf}
+
+\ifpdf
+   \usepackage{graphicx}
+   \usepackage{epstopdf}
+   \epstopdfsetup{suffix=}
+   \DeclareGraphicsRule{.eps}{pdf}{.pdf}{`epstopdf #1}
+   \pdfcompresslevel=9
+\else
+   \usepackage{graphicx}
+\fi
+% subfig
+\usepackage{mwe}
+\usepackage{subfig}
+% to fix a figure's position using [H] option of thec figure.
+\usepackage{float}
+% to use \lesssim and other math symbols
+\usepackage{amssymb}
+
+
+% self-defined short-cuts and commands
+
+% packages we need for judging the operating system
+% compile your tex file with option -shell-escape is required: 
+% e.g. xelatex -shell-escape file.tex
+\usepackage{pdftexcmds}
+\usepackage{catchfile}
+\usepackage{ifluatex}
+\usepackage{ifplatform}
+
+% judge platform and include correct definiation package
+\ifwindows
+	%\input{F:/Research/Works/Templates/Mydef.tex} % %
+	\input{F:/Research/Works/Templates/Mydef.tex} % 
+\else
+	\input{/media/F/Research/Works/Templates/Mydef.tex} %
+\fi
+
+%\includeonly{VectorTensor}
+% for table captions.
+\usepackage{tabularx,ragged2e,booktabs} %,caption
+
+% packages for drawing
+\usepackage{tikz}
+%\usepackage{xypic}
+%\usepackage[matrix,frame,arrow]{xypic}
+\usetikzlibrary{calc}
+%\input{Qcircuit}
+\usepackage{qcircuit}
+
+
+\begin{document}
+\title{Dispersive response: Phase shift and polarization transformation of guided nanofiber modes due to trapped atoms in the evanescent field (TBD)}
+\author{}
+\affiliation{CQuIC, UNM, Albuquerque, NM 87131, USA }
+\date{\today}
+%\pacs{42.50.Pq, 33.50.-j, 32.80.-t, 12.20.Ds}
+
+
+\begin{abstract}
+(TBD) Strong coupling between atoms and photons is a prerequisite for quantum information processing protocols ranging from quantum-limited metrology to quantum communication and computation.  This strong coupling regime can be achieved in a nanofiber platform whereby ensembles or atoms are trapped in a two-side chain through the evanescent field of a nanofiber.  In this work, we study the atom-photon interface in the dispersive regime, where the atoms' spin state is coupled to the photons' polarization through the index of refraction. We calculate this dispersive interaction through a first principles scattering model. Connections of the Green function method to a few other methods are discussed.  We calculate the dyadic Greens functions that allows and find the field scattered from the tensor-polarizable atoms. By decomposing the scattered field into guided and radiation modes, we study the phase shift and polarization rotation of the guided light along the nanofiber in presence of atoms. Compared with the free-space laser trapped atomic cloud systems, our results show that the nanofiber platform will yield strong coupling between the atoms and photons. We also analyzed the atomic state dependent phase shift and decay rates using a radiation surface model. We show the completely mixed state condition can also give a scalar polarizability effect to the phase shift. The interference effect due to a long one-sided or two-side atom chain is studied at the end of this work. This model will be used to design an efficient quantum data bus for entangling atoms with nanofiber modes.   
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+\bigskip
+Motivations: quantum data bus based on nanofiber trapped atomic systems; benefit from the advantages of the dispersive regime; connections to some existing theories; sensitivity of polarization spectroscopy...
+
+\section{Phase shift and polarization transformation of the guided modes of a nanofiber in presence of an atom}
+Mainly focus on the semi-classical radiation problem of a two-level dipole in the evanescent field of a nanofiber. Make expressions as general as possible for the natural extension to the real atom and quantized field case which will be discussed next. 
+
+\subsection{Nanofiber mode scattering in presence of an atom}
+Start from the Maxwell equation with a dipole source and the corresponding equation of the dyadic Green function. Describe the framework of solving the fiber fields in presence of an atom using the dyadic Green function method.
+
+\subsection{Dyadic Green functions and fiber mode decomposition}
+Sketch out the \textit{numerical} approach to solve the dyadic Green functions through the division of reflected and transmitted parts, and how to distinguish the radiation and guided modes through separating different integral paths. Give the equivalent expression for the guided mode contribution to the dyadic Green function using the eigenmode decomposition method. Detailed solutions should be given in the appendix. 
+
+\subsection{Phase shift and birefringence spectroscopy}
+The theory of phase shift for a given fiber mode and the transformation of polarization of the two orthogonal guided modes. This should include both circular and linear polarization presentations. Show that the phase shift is proportional to the $ \Gamma_{1D} $ which is defined through the imaginary part of the dyadic Green function. 
+\begin{align}
+\delta\phi &= -\frac{\Gamma_{1D}}{2\Delta},\\
+\frac{\Gamma_{1D}}{\Gamma_0} &= \frac{6\pi c}{\omega}\frac{\sum_g\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}_g(\br',\br') \right]\cdot\mathbf{d}_{eg}^* }{\sum_g|\mathbf{d}_{eg}|^2} = 1+ \frac{3}{2} \frac{\mathrm{Im}\left[\sum_g\mathbf{d}_{eg}^*\cdot \mathbf{E}^{(R)}_g(\br') \right]}{\sum_g|\mathbf{d}_{eg}|^2 k^3}\nonumber\\
+&=\frac{3\pi}{2}\left(\frac{c}{\omega}\right)^2\frac{c}{v_g} \frac{\sum_{g,m=\pm 1, f=\pm 1}|\mathbf{d}_{eg}\cdot \mathbf{u}^f_m(\br')|^2}{\sum_g|\mathbf{d}_{eg}|^2}\\
+\mathbf{E}^{(R)}_g(\br') &= -\frac{1}{4\pi k^2} \mathbf{G}^{(R)}_g(\br',\br')\cdot \mathbf{d}_{eg},
+\end{align}
+the exact version of $ \delta\phi $ may include both the difference of the laser and atomic frequencies (detuning, $ \Delta $) and the sum of them for far-detuned energy levels. 
+
+The polarization transformation related to the real part of the dyadic Green function. There could be a polarization transformation effect for the forward or backward propagating guided modes, which has been studied in literature. 
+
+Discuss the homodyne detection and sensitivity to the atom number and operating frequency in the shot noise limit. 
+
+
+\section{Discussions}
+
+\subsection{Connect to the Heisenberg picture}
+Quantization of field. Input-output formalism
+\begin{align}
+\hat{a}_{out} &= f(\hat{a}_{in}).
+\end{align}
+Connection to the dyadic Green function.
+
+Phase shift expression. 
+
+\subsection{Connect to the Schrodinger picture}
+
+\subsection{Effects of the evanescent field and the multilevel structure of the atom}
+In general, 
+\begin{align}
+\Gamma \propto \mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}(\br',\br') \right]\cdot\mathbf{d}_{eg}^*=\mathrm{tr}\left[\mathbf{d}_{eg}^*\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}(\br',\br') \right] \right]\propto \mathrm{tr}\left[\boldsymbol{\alpha}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}(\br',\br') \right] \right]
+\end{align}
+where $ \boldsymbol{\alpha}_{eg} $ is the polarizability of the atom due to the transition between levels labeled by $ eg $. Therefore, the phase shift effect can be treated as a combination effect of the atomic internal structure and the external field properties. 
+
+Since 
+\begin{align}
+\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}(\br',\br') \right]\cdot\mathbf{d}_{eg}^*>0
+\end{align}
+for a physical decay rate, $\mathrm{Im}\left[\mathbf{G}(\br',\br')\right]$ is positive definite and should always has three positive eigenvalues which indicate the range of $ \Gamma $ and phase shift at the atom position. The 3 corresponding eigenvectors indicate the 3 orthogonal principal axes of the radiation/emission surface. Case studies...
+
+Radiation surface theory for the effective orientation of dipoles, elementary transitions ($ \pi $ and $ \sigma_\pm $ transitions) and the example of completely mixed state case. 
+\begin{align}
+\Gamma_{mix} &\propto \frac{1}{3} \mathrm{tr}\left[ \mathrm{Im}\left[\mathbf{G}(\br',\br')\right] \right].
+\end{align}
+
+For the atomic internal structure, we have the irreducible tensor decompositions that 
+\begin{align}
+\boldsymbol{\alpha}_{eg} = \boldsymbol{\alpha}^S + \boldsymbol{\alpha}^V + \boldsymbol{\alpha}^T.
+\end{align}
+The scalar component will yield a decay rate equivalent to the completely mixed state case. 
+
+Some interesting examples of state-dependent decay and phase shift...
+
+
+
+\subsection{Interference due to a one-sided or two-sided atom chain}
+Effect of an infinite long one-side chain... S matrix, reflectivity... Random filling effect...
+
+Effect of the two-side chain:
+
+The symmetry or antisymmetry nature (TBD) of the radiation surface at the opposite sides along the $ r\!_\perp $ axis will yield a constructive/destructive interference of the two-side chain. 
+
+\section{Conclusions}
+
+\begin{acknowledgments}
+X.Q. would like to thank Ninnat Dangniam, Tzu-Cheng Wu and Matthew Chase for their helpful discussions.
+\end{acknowledgments}
+
+\appendix
+\section{Dyadic Green functions for the atom-nanofiber system}
+Expressions for the 9 elements of the dyadic Green function and its reflected and transmitted decomposition.
+
+\section{Group index of refraction of a single-mode nanofiber}
+Expression of $ n_g $ for the HE11 mode.
+
+Frequency stability.
+
+%\begin{center}
+%{\bf References}
+%\end{center}
+
+%\bibliography
+%\bibliographystyle{amsplain}
+\bibliographystyle{unsrt}
+% \nocite{*}
+\ifwindows
+	\bibliography{F:/References/Archive/Archive}
+\else
+	\bibliography{/media/F/References/Archive/Archive}
+\fi
+
+
+\end{document}  

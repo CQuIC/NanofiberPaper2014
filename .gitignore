@@ -1,0 +1,10 @@
+#Not tracked folders and files
+
+
+#TempFiles for tex.
+*.aux
+*.ilg
+*.log
+*.synctex.gz
+*.out
+
