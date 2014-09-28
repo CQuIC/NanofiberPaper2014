@@ -121,7 +121,7 @@
 
 
 \begin{abstract}
-(TBD) Strong coupling between atoms and photons is a prerequisite for quantum information processing protocols ranging from quantum-limited metrology to quantum communication and computation.  This strong coupling regime can be achieved in a nanofiber platform whereby ensembles or atoms are trapped in a two-side chain through the evanescent field of a nanofiber.  In this work, we study the atom-photon interface in the dispersive regime, where the atoms' spin state is coupled to the photons' polarization through the index of refraction. We calculate this dispersive interaction through a first principles scattering model. Connections of the Green function method to a few other methods are discussed.  We calculate the dyadic Greens functions that allows and find the field scattered from the tensor-polarizable atoms. By decomposing the scattered field into guided and radiation modes, we study the phase shift and polarization rotation of the guided light along the nanofiber in presence of atoms. Compared with the free-space laser trapped atomic cloud systems, our results show that the nanofiber platform will yield strong coupling between the atoms and photons. We also analyzed the atomic state dependent phase shift and decay rates using a radiation surface model. We show the completely mixed state condition can also give a scalar polarizability effect to the phase shift. The interference effect due to a long one-sided or two-side atom chain is studied at the end of this work. This model will be used to design an efficient quantum data bus for entangling atoms with nanofiber modes.   
+(TBD) Strong coupling between atoms and photons is a prerequisite for quantum information processing protocols ranging from quantum-limited metrology to quantum communication and computation.  This strong coupling regime can be achieved in a nanofiber platform whereby ensembles or atoms are trapped in a two-side chain through the evanescent field of a nanofiber.  In this work, we study the atom-photon interface in the dispersive regime, where the atoms' spin state is coupled to the photons' polarization through the index of refraction. We calculate this dispersive interaction through a first principles scattering model. Connections of the Green function method to a few other methods are discussed.  We calculate the dyadic Greens functions that allow and find the field scattered from the tensor-polarizable atoms. By decomposing the scattered field into guided and radiation modes, we study the phase shift and polarization rotation of the guided light along the nanofiber in presence of atoms. Compared with the free-space laser trapped atomic cloud systems, our results show that the nanofiber platform will yield strong coupling between the atoms and photons. We also analyzed the atomic state dependent phase shift and decay rates using a radiation surface model. We show the completely mixed state condition can also give a scalar polarizability effect to the phase shift. The interference effect due to a long one-sided or two-side atom chain is studied at the end of this work. This model will be used to design an efficient quantum data bus for entangling atoms with nanofiber modes.   
 \end{abstract}
 
 \maketitle
@@ -143,16 +143,20 @@ Sketch out the \textit{numerical} approach to solve the dyadic Green functions t
 \subsection{Phase shift and birefringence spectroscopy}
 The theory of phase shift for a given fiber mode and the transformation of polarization of the two orthogonal guided modes. This should include both circular and linear polarization presentations. Show that the phase shift is proportional to the $ \Gamma_{1D} $ which is defined through the imaginary part of the dyadic Green function. 
 \begin{align}
-\delta\phi &= -\frac{\Gamma_{1D}}{2\Delta},\\
-\frac{\Gamma_{1D}}{\Gamma_0} &= \frac{6\pi c}{\omega}\frac{\sum_g\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}_g(\br',\br') \right]\cdot\mathbf{d}_{eg}^* }{\sum_g|\mathbf{d}_{eg}|^2} = 1+ \frac{3}{2} \frac{\mathrm{Im}\left[\sum_g\mathbf{d}_{eg}^*\cdot \mathbf{E}^{(R)}_g(\br') \right]}{\sum_g|\mathbf{d}_{eg}|^2 k^3}\nonumber\\
-&=\frac{3\pi}{2}\left(\frac{c}{\omega}\right)^2\frac{c}{v_g} \frac{\sum_{g,m=\pm 1, f=\pm 1}|\mathbf{d}_{eg}\cdot \mathbf{u}^f_m(\br')|^2}{\sum_g|\mathbf{d}_{eg}|^2}\\
-\mathbf{E}^{(R)}_g(\br') &= -\frac{1}{4\pi k^2} \mathbf{G}^{(R)}_g(\br',\br')\cdot \mathbf{d}_{eg},
+\delta\phi &= -\frac{\Gamma_{1D}^\mu}{2\Delta},\\
+\frac{\Gamma_{1D}^\mu}{\Gamma_0} &= \frac{6\pi c}{\omega}\frac{\sum_g\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}_g^\mu(\br',\br') \right]\cdot\mathbf{d}_{eg}^* }{\sum_g|\mathbf{d}_{eg}|^2} = 1+ \frac{3}{2} \frac{\mathrm{Im}\left[\sum_g\mathbf{d}_{eg}^*\cdot \mathbf{E}^{(R,\mu)}_g(\br') \right]}{\sum_g|\mathbf{d}_{eg}|^2 k^3}\nonumber\\
+&=\frac{3\pi}{2}\left(\frac{c}{\omega}\right)^2\frac{c}{v_g} \frac{\sum_{g}|\mathbf{d}_{eg}\cdot \mathbf{u}^\mu(\br')|^2}{\sum_g|\mathbf{d}_{eg}|^2}\\
+\mathbf{E}^{(R,\mu)}_g(\br') &= -\frac{1}{4\pi k^2} \mathbf{G}^{(R,\mu)}_g(\br',\br')\cdot \mathbf{d}_{eg},
 \end{align}
-the exact version of $ \delta\phi $ may include both the difference of the laser and atomic frequencies (detuning, $ \Delta $) and the sum of them for far-detuned energy levels. 
+the exact version of $ \delta\phi $ may include both the difference of the laser and atomic frequencies (detuning, $ \Delta $) and the sum of them for far-detuned energy levels. The index $ R $ indicates the reflected component, and $\mu=(m,f,\beta)  $ identifies the normalized fiber mode $ \mathbf{u}^\mu(\br') $ with angular moment quantum number $ m $ and propagation index $ f $. 
 
 The polarization transformation related to the real part of the dyadic Green function. There could be a polarization transformation effect for the forward or backward propagating guided modes, which has been studied in literature. 
 
-Discuss the homodyne detection and sensitivity to the atom number and operating frequency in the shot noise limit. 
+\subsection{Dispersive atom number measurement}
+
+Discuss the homodyne detection and sensitivity to the atom number and operating frequency in the shot noise limit.  It relates to (i) the phase shift and (ii) the shot noise resolution of the polarimeter. Should cover expectation value and fluctuation measurements. Requires quantization of fields in Green function language.
+
+\subsection{Other applications?} 
 
 
 \section{Discussions}
