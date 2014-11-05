@@ -1,4 +1,4 @@
-\documentclass[preprint,pra,onecolumn]{revtex4-1} %reprint
+\documentclass[preprint,aps,pra,onecolumn]{revtex4-1} %reprint
 %\tightenlines
 
 %\draft
@@ -91,13 +91,14 @@
 \usepackage{ifluatex}
 \usepackage{ifplatform}
 
+\input{Mydef.tex}
 % judge platform and include correct definiation package
-\ifwindows
-	%\input{F:/Research/Works/Templates/Mydef.tex} % %
-	\input{F:/Research/Works/Templates/Mydef.tex} % 
-\else
-	\input{/media/F/Research/Works/Templates/Mydef.tex} %
-\fi
+%\ifwindows
+%	%\input{F:/Research/Works/Templates/Mydef.tex} % %
+%	\input{F:/Research/Works/Templates/Mydef.tex} % 
+%\else
+%	\input{/media/F/Research/Works/Templates/Mydef.tex} %
+%\fi
 
 %\includeonly{VectorTensor}
 % for table captions.
@@ -111,6 +112,8 @@
 %\input{Qcircuit}
 \usepackage{qcircuit}
 
+% Redefine the tensor command.
+\renewcommand{\tensor}[1]{\boldsymbol{#1}}
 
 \begin{document}
 \title{Dispersive response: Phase shift and polarization transformation of guided nanofiber modes due to trapped atoms in the evanescent field (TBD)}
@@ -129,19 +132,20 @@
 \section{Introduction}
 
 \bigskip
-Motivations: quantum data bus based on nanofiber trapped atomic systems; benefit from the advantages of the dispersive regime; connections to some existing theories; sensitivity of polarization spectroscopy...
+\textcolor{blue}{Motivations: quantum data bus based on nanofiber trapped atomic systems; benefit from the advantages of the dispersive regime; connections to some existing theories; sensitivity of polarization spectroscopy...}
+
 
 \section{Phase shift and polarization transformation of the guided modes of a nanofiber in presence of an atom}
-Mainly focus on the semi-classical radiation problem of a two-level dipole in the evanescent field of a nanofiber. Make expressions as general as possible for the natural extension to the real atom and quantized field case which will be discussed next. 
+\textcolor{blue}{Mainly focus on the semi-classical radiation problem of a two-level dipole in the evanescent field of a nanofiber. Make expressions as general as possible for the natural extension to the real atom and quantized field case which will be discussed next.} 
 
 \subsection{Nanofiber mode scattering in presence of an atom}
-Start from the Maxwell equation with a dipole source and the corresponding equation of the dyadic Green function. Describe the framework of solving the fiber fields in presence of an atom using the dyadic Green function method.
+\textcolor{blue}{Start from the Maxwell equation with a dipole source and the corresponding equation of the dyadic Green function. Describe the framework of solving the fiber fields in presence of an atom using the dyadic Green function method.}
 
 \subsection{Dyadic Green functions and fiber mode decomposition}
-Sketch out the \textit{numerical} approach to solve the dyadic Green functions through the division of reflected and transmitted parts, and how to distinguish the radiation and guided modes through separating different integral paths. Give the equivalent expression for the guided mode contribution to the dyadic Green function using the eigenmode decomposition method. Detailed solutions should be given in the appendix. 
+\textcolor{blue}{Sketch out the \textit{numerical} approach to solve the dyadic Green functions through the division of reflected and transmitted parts, and how to distinguish the radiation and guided modes through separating different integral paths. Give the equivalent expression for the guided mode contribution to the dyadic Green function using the eigenmode decomposition method. Detailed solutions should be given in the appendix.} 
 
 \subsection{Phase shift and birefringence spectroscopy}
-The theory of phase shift for a given fiber mode and the transformation of polarization of the two orthogonal guided modes. This should include both circular and linear polarization presentations. Show that the phase shift is proportional to the $ \Gamma_{1D} $ which is defined through the imaginary part of the dyadic Green function. 
+\textcolor{blue}{The theory of phase shift for a given fiber mode and the transformation of polarization of the two orthogonal guided modes. This should include both circular and linear polarization presentations. Show that the phase shift is proportional to the $ \Gamma_{1D} $ which is defined through the imaginary part of the dyadic Green function.} 
 \begin{align}
 \delta\phi &= -\frac{\Gamma_{1D}^\mu}{2\Delta},\\
 \frac{\Gamma_{1D}^\mu}{\Gamma_0} &= \frac{6\pi c}{\omega}\frac{\sum_g\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}_g^\mu(\br',\br') \right]\cdot\mathbf{d}_{eg}^* }{\sum_g|\mathbf{d}_{eg}|^2} = 1+ \frac{3}{2} \frac{\mathrm{Im}\left[\sum_g\mathbf{d}_{eg}^*\cdot \mathbf{E}^{(R,\mu)}_g(\br') \right]}{\sum_g|\mathbf{d}_{eg}|^2 k^3}\nonumber\\
@@ -150,11 +154,11 @@ The theory of phase shift for a given fiber mode and the transformation of polar
 \end{align}
 the exact version of $ \delta\phi $ may include both the difference of the laser and atomic frequencies (detuning, $ \Delta $) and the sum of them for far-detuned energy levels. The index $ R $ indicates the reflected component, and $\mu=(m,f,\beta)  $ identifies the normalized fiber mode $ \mathbf{u}^\mu(\br') $ with angular moment quantum number $ m $ and propagation index $ f $. 
 
-The polarization transformation related to the real part of the dyadic Green function. There could be a polarization transformation effect for the forward or backward propagating guided modes, which has been studied in literature. 
+\textcolor{blue}{The polarization transformation related to the real part of the dyadic Green function. There could be a polarization transformation effect for the forward or backward propagating guided modes, which has been studied in literature.} 
 
 \subsection{Dispersive atom number measurement}
 
-Discuss the homodyne detection and sensitivity to the atom number and operating frequency in the shot noise limit.  It relates to (i) the phase shift and (ii) the shot noise resolution of the polarimeter. Should cover expectation value and fluctuation measurements. Requires quantization of fields in Green function language.
+\textcolor{blue}{Discuss the homodyne detection and sensitivity to the atom number and operating frequency in the shot noise limit.  It relates to (i) the phase shift and (ii) the shot noise resolution of the polarimeter. Should cover expectation value and fluctuation measurements. Requires quantization of fields in Green function language.}
 
 \subsection{Other applications?} 
 
@@ -227,6 +231,7 @@ Expressions for the 9 elements of the dyadic Green function and its reflected an
 Expression of $ n_g $ for the HE11 mode.
 
 Frequency stability.
+
 
 %\begin{center}
 %{\bf References}
