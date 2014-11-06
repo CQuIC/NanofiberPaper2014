@@ -110,7 +110,7 @@
 %\usepackage[matrix,frame,arrow]{xypic}
 \usetikzlibrary{calc}
 %\input{Qcircuit}
-\usepackage{qcircuit}
+%\usepackage{qcircuit}
 
 % Redefine the tensor command.
 \renewcommand{\tensor}[1]{\boldsymbol{#1}}
@@ -135,8 +135,46 @@
 \textcolor{blue}{Motivations: quantum data bus based on nanofiber trapped atomic systems; benefit from the advantages of the dispersive regime; connections to some existing theories; sensitivity of polarization spectroscopy...}
 
 
+
+
 \section{Phase shift and polarization transformation of the guided modes of a nanofiber in presence of an atom}
-\textcolor{blue}{Mainly focus on the semi-classical radiation problem of a two-level dipole in the evanescent field of a nanofiber. Make expressions as general as possible for the natural extension to the real atom and quantized field case which will be discussed next.} 
+The light-atom interaction Hamiltonian can be defined in terms of the atomic angular momentum operator $\hat{\mathbf{F}}$ and the photonic Stokes vector operator $ \hat{\mathbf{S}}$. In general, the evolution operator can be given by
+\begin{align}
+\hat{U}(\tau)&=e^{i\chi \mathbin{\color{red}{\hat{\mathbf{S}}}} \cdot \hat{\mathbf{F}}}.
+\end{align}
+For instance, if we only consider the Faraday rotation case that the Stokes operator only has the $\hat{S}_3$ component, and the initial state of the atom-light system is given by
+\begin{align}
+\ket{\Psi(0)} &=\frac{1}{\sqrt{2}}(\ket{\uparrow}+\ket{\downarrow})\mathbin{\color{red}{\ket{\phi_L}}}
+\end{align}
+where the atom is prepared in a superposition of spin up and down state, and the light in prepared in an arbitrary $\ket{\phi_L}$ state. The output after the Faraday interaction of duration $\tau$ will become
+\begin{align}
+\ket{\Psi(\tau)}&=\frac{1}{\sqrt{2}}\left[\ket{\uparrow}e^{+i\chi \mathbin{\color{red}{\hat{S}_3}}}\mathbin{\color{red}{\ket{\phi_L}}} 
++\ket{\downarrow}e^{-i\chi \mathbin{\color{red}{\hat{S}_3}}}\mathbin{\color{red}{\ket{\phi_L}}} \right]\\
+&=\frac{1}{\sqrt{2}}\left[\ket{\uparrow}\mathbin{\color{red}{\ket{\phi^1_L}}} 
++\ket{\downarrow}\mathbin{\color{red}{\ket{\phi^2_L}}} \right]
+\end{align}
+The polarization of the light has been rotated along the $z$-axis, either $+2\chi$ or $ -2\chi$ around the $S_3$ axis on the Poincare sphere entangled with the spin state. Now the state of the joined system is in an entangled state between the spin system and the light. The entanglement between the atomic system and the light can be employed for quantum metrology and quantum information processing. 
+
+The Faraday effect does not change the helicity of the polarized light. In general, however, the output Stokes vector $\mathbf{S}_{out}$ can be an arbitrary rotation along the three Poincare sphere axis after the atom-light interaction:
+\begin{align}
+\mathbf{S}_{out} &= \mathbf{S}_{in}+\mathbf{\Theta}\times\mathbf{S}_{in},
+\end{align}
+where the rotation angle along the $i$-axis is $\Theta_i \propto N_A\left( \frac{\sigma_0}{A}\right) \left(\frac{\Gamma}{2\Delta}\right)$ with effective atom number $N_A$, on-resonance scattering cross section $\sigma_0$, effective mode area $A$ which is inversely proportional to the mode square of the normalized electric field, atomic decay rate $\Gamma$ and the detuning $\Delta$. The rotation along the $S_1$ or $S_2$ axes yields the birefringence effect for the light. 
+
+\textcolor{red}{Maybe a figure to show the Poincare sphere and the Faraday/birefringence effects here.}
+
+For a given detuning and atom species, the effective atom number, $N_A$, and the optical depth per atom, $ OD=\sigma_0/A$, determines the rotation angle and hence the coupling strength between the joint systems. There have been a huge amount of efforts to enhance the atom-light interaction strength using the atom trapping configuration in free-space or vacuum~[\textcolor{red}{Refs}]. The problem for the vacuum trapping configuration is that the effective atom number $N_A$ is positively correlated with the effective mode area, and hence the total optical depth, $N_A\left( \frac{\sigma_0}{A}\right)$, is limited to some finite value around $50\sim 100$, typically with $10^6$ atoms. The nanofiber trapped atomic system, however, decouples the correlation between the effective atom number and the effective mode area. Each atom has the same amount of effective mode area, and experiences the same strength of field. Moreover, the evanescent probing field of the nanofiber where the atoms are trapped can be very strong compared to the vacuum trapping configuration due to the weak confinement of the nanofiber with a sub-wavelength diameter. With about $2000$ atoms, it is possible to achieve a total optical depth of $200$ as will be shown later. All of these factors above makes the nanofiber a promising platform for atom-light interfaces with strong coupling strength. 
+
+
+In the consequent sections, we will firstly employ the Green function method to solve the semi-classical radiation and scattering problem of a two-level dipole in the evanescent field of a nanofiber. Then we will extend to the real atom in a quantized field case. The phase shift and birefringence effects will be studied in terms of orthogonal field components. For example, if the input field is diagonally linearly polarized as
+\begin{align}
+\mathbf{E}_{in} &= E_0(\hat{e}_x+\hat{e}_y),
+\end{align}
+the output field can be written as
+\begin{align}
+\mathbf{E}_{out} &= E_0(t_xe^{i\phi_x}\hat{e}_x+t_ye^{i\phi_y}\hat{e}_y).
+\end{align}
+The ratio of the attenuation coefficients, $t_x$ and $t_y$, indicates the helicity of the polarization of the light. $\phi_x$ and $\phi_y$ represent the phase shifts in the $x$- and $y$-modes. 
 
 \subsection{Nanofiber mode scattering in presence of an atom}
 \textcolor{blue}{Start from the Maxwell equation with a dipole source and the corresponding equation of the dyadic Green function. Describe the framework of solving the fiber fields in presence of an atom using the dyadic Green function method.}
@@ -248,4 +286,4 @@ Frequency stability.
 \fi
 
 
-\end{document}  
+\end{document}
