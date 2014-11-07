@@ -5,6 +5,7 @@
 \usepackage{etex}
 \usepackage{amsmath}
 \usepackage{bm}
+\usepackage{bbm}
 \usepackage{listings}
 % % \textwidth 16cm \textheight 23.5cm
 % \renewcommand{\baselinestretch}{1.2}
@@ -110,7 +111,7 @@
 %\usepackage[matrix,frame,arrow]{xypic}
 \usetikzlibrary{calc}
 %\input{Qcircuit}
-%\usepackage{qcircuit}
+\usepackage{qcircuit}
 
 % Redefine the tensor command.
 \renewcommand{\tensor}[1]{\boldsymbol{#1}}
@@ -174,29 +175,263 @@ the output field can be written as
 \begin{align}
 \mathbf{E}_{out} &= E_0(t_xe^{i\phi_x}\hat{e}_x+t_ye^{i\phi_y}\hat{e}_y).
 \end{align}
-The ratio of the attenuation coefficients, $t_x$ and $t_y$, indicates the helicity of the polarization of the light. $\phi_x$ and $\phi_y$ represent the phase shifts in the $x$- and $y$-modes. 
+The ratio of the attenuation coefficients, $t_x$ and $t_y$, indicates the helicity of the polarization of the light. $\phi_x$ and $\phi_y$ represent the phase shifts in the $x$- and $y$-modes. We will consider the phase shift for one input mode first, and then present our theory for the birefringence effect with two orthogonal input modes. 
 
-\subsection{Nanofiber mode scattering in presence of an atom}
+\subsection{Nanofiber mode scattering due to an atom using the dyadic Green function method}
 \textcolor{blue}{Start from the Maxwell equation with a dipole source and the corresponding equation of the dyadic Green function. Describe the framework of solving the fiber fields in presence of an atom using the dyadic Green function method.}
 
-\subsection{Dyadic Green functions and fiber mode decomposition}
-\textcolor{blue}{Sketch out the \textit{numerical} approach to solve the dyadic Green functions through the division of reflected and transmitted parts, and how to distinguish the radiation and guided modes through separating different integral paths. Give the equivalent expression for the guided mode contribution to the dyadic Green function using the eigenmode decomposition method. Detailed solutions should be given in the appendix.} 
+\textcolor{blue}{Sketch out the \textit{reflection-transmission decomposition} approach to solve the dyadic Green functions for the boundary value problem, and how to distinguish the radiation and guided modes through separating different integral paths. Detailed solutions should be given in the appendix. For the guided mode contribution to the dyadic Green function, give the explicit expression using the eigenmode decomposition method and make a clear link to the field quantization result. }
 
-\subsection{Phase shift and birefringence spectroscopy}
-\textcolor{blue}{The theory of phase shift for a given fiber mode and the transformation of polarization of the two orthogonal guided modes. This should include both circular and linear polarization presentations. Show that the phase shift is proportional to the $ \Gamma_{1D} $ which is defined through the imaginary part of the dyadic Green function.} 
-\begin{align}
-\delta\phi &= -\frac{\Gamma_{1D}^\mu}{2\Delta},\\
-\frac{\Gamma_{1D}^\mu}{\Gamma_0} &= \frac{6\pi c}{\omega}\frac{\sum_g\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}_g^\mu(\br',\br') \right]\cdot\mathbf{d}_{eg}^* }{\sum_g|\mathbf{d}_{eg}|^2} = 1+ \frac{3}{2} \frac{\mathrm{Im}\left[\sum_g\mathbf{d}_{eg}^*\cdot \mathbf{E}^{(R,\mu)}_g(\br') \right]}{\sum_g|\mathbf{d}_{eg}|^2 k^3}\nonumber\\
-&=\frac{3\pi}{2}\left(\frac{c}{\omega}\right)^2\frac{c}{v_g} \frac{\sum_{g}|\mathbf{d}_{eg}\cdot \mathbf{u}^\mu(\br')|^2}{\sum_g|\mathbf{d}_{eg}|^2}\\
-\mathbf{E}^{(R,\mu)}_g(\br') &= -\frac{1}{4\pi k^2} \mathbf{G}^{(R,\mu)}_g(\br',\br')\cdot \mathbf{d}_{eg},
+The Maxwell equation with dipole sources:
+\begin{align}\label{eq:Maxwellwithsource2}
+\left[\! -\! \nabla\!\!\times\!\nabla\!\!\times + n^2\!(\br)\frac{\omega^2}{c^2} \right]\!\! \boldsymbol{\mathcal{E}}(\br) &\!=\! -4\pi\! \frac{\omega^2}{c^2}\! \boldsymbol{\chi}(\br)\! \cdot\! \boldsymbol{\mathcal{E}}(\br)=\!-4\pi\! \frac{\omega^2}{c^2}\!\sum_{\br'}\delta(\br-\br')\boldsymbol{\alpha} \, (\br')\cdot \boldsymbol{\mathcal{E}}(\br).
 \end{align}
-the exact version of $ \delta\phi $ may include both the difference of the laser and atomic frequencies (detuning, $ \Delta $) and the sum of them for far-detuned energy levels. The index $ R $ indicates the reflected component, and $\mu=(m,f,\beta)  $ identifies the normalized fiber mode $ \mathbf{u}^\mu(\br') $ with angular moment quantum number $ m $ and propagation index $ f $. 
+The corresponding Green function for one dipole source satisfies
+\begin{align}
+\left[ -\nabla\times\nabla\times + n^2\frac{\omega^2}{c^2} \right] \mathbf{G}(\br,\br') &= \mathbf{I}\delta(\mathbf{r}-\mathbf{r}'). 
+\end{align}
+Each column can be expressed as
+\begin{align}\label{eq:GFcolumneq}
+\left[ -\nabla\times\nabla\times + n^2\frac{\omega^2}{c^2} \right] \mathbf{G}_i(\mathbf{r},\mathbf{r}') &= \mathbf{e}_i\delta(\mathbf{r}-\mathbf{r}'), 
+\end{align}
+where the subscription $ i=r\!_\perp,\phi,z $ denotes the coordinate components. Compared with Equ.~\ref{eq:Maxwellwithsource2}, one can find that each column of the dyadic function is equivalent to the electric filed solution in Equ.~\ref{eq:Maxwellwithsource2} with a dipole source of $-\frac{\mathbf{e}_i}{4\pi k^2}$. Therefore, one can solve the dyadic Green function by solving the radiation problem from a dipole source satisfying the boundary condition of the nanofiber.
 
-\textcolor{blue}{The polarization transformation related to the real part of the dyadic Green function. There could be a polarization transformation effect for the forward or backward propagating guided modes, which has been studied in literature.} 
+Once we obtain the dyadic Green function of the nanofiber system, the total electric field with an input field $\mathbf{E}_0(\br)$ and in presence of a dipole source $\mathbf{d}(\br')$ positioned at $\br'$ can be given by
+\begin{align}
+\mathbf{E}(\br) &= \mathbf{E}_0(\br)-4\pi k^2\mathbf{G}(\br,\br')\cdot \mathbf{d}(\br')\\
+&=\mathbf{E}_0(\br)-4\pi k^2 \mathbf{G}(\br,\br')\cdot \boldsymbol{\alpha}\cdot \mathbf{E}(\br')\\
+&=\mathbf{E}_0(\br)-4\pi k^2 \mathbf{G}(\br,\br')\cdot \boldsymbol{\alpha}\cdot \mathbf{E}_0(\br').
+\end{align}
+The Born approximation has been used in the last step, which should be a good approximation for the far-detuning case we are interested in. 
 
-\subsection{Dispersive atom number measurement}
+For our problem, we only care about the guided mode contributions which are the dominate components detected at the end of a long nanofiber (a few centimeters long). One can show that the dyadic Green function for the guided modes can be written as \textcolor{red}{(Check the factor of 2 from this equation.)}
+\begin{align}
+\mathbf{G}_g(\br,\br') = -\frac{i\mathbin{\color{blue}{n_g}}}{4k_0} \sum_{m,f=\pm 1} \mathbf{u}_{\mu}(r\!_\perp)\mathbf{u}^*_{\mu}(r_{\!\perp}^\prime)e^{if\beta_0(z-z')+im(\phi-\phi')}.
+\end{align}
+In the equation above, the transverse modes of the nanofiber, $\mathbf{u}_{\mu}(\br)$, are defined by
+\begin{align}
+[-\nabla\times\nabla + \frac{\omega_{\mu}^2}{c^2}n^2(\br)]  \mathbf{u}_{\mu}(\br) &=0,
+\end{align}
+where the mode index $\mu=(\beta_0,m,f)$ with angular moment quantum number $ m $ and propagation index $ f $. We have used the circularly polarized modes as the basis for the eigenmode expansion for the dyadic Green function. One should be able to expand the dyadic Green functions in terms of any orthonormal basis, and replace the $m$ index with any other polarization indices. 
 
-\textcolor{blue}{Discuss the homodyne detection and sensitivity to the atom number and operating frequency in the shot noise limit.  It relates to (i) the phase shift and (ii) the shot noise resolution of the polarimeter. Should cover expectation value and fluctuation measurements. Requires quantization of fields in Green function language.}
+To retrieve the formula for the phase shift of an input mode in presence of a dipole, we consider the input field is
+\begin{align}
+\mathbf{E}_0(\br) &= E_0 \mathbf{u}_{m=1}^{f=1} (\br) = E_0 \mathbf{u}_1^1 (\mathbf{r}\!_\perp)e^{i\phi+i\beta_0 z}. 
+\end{align}
+The output can be retrieved as
+$\mathbf{E}(\br)  = \mathbf{E}_0(\br) -4\pi k_0^2 \alpha \mathbf{G}^g(\br,\br')\cdot\mathbf{E}_0(\br')$.
+The output field can also be expanded as
+\begin{align}
+\mathbf{E}(\br) &= E_0\mathbf{u}_{1}^{1} (\br) + \sum_{m,f=\pm 1} C_{mf} E_0 \mathbf{u}_m^f(\br),  
+\end{align}
+where the mode projection coefficients are
+\begin{align}
+C_{mf} &= -4\pi k_0^2 \alpha \!\int\! \mathrm{d}^2r\!_\perp n^2(\mathbf{r}\!_\perp){\mathbf{u}^f_m}^*(\mathbf{r})\cdot \mathbf{G}^g(\br,\br') \!\cdot\! \mathbf{u}_1^1(\mathbf{r}^\prime).
+\end{align}
+Using the eigenmode expansion of the dyadic Green function, these coefficients become
+\begin{align}
+C_{mf} &= i\pi k_0 n_g\alpha \!\int\! \mathrm{d}^2r\!_\perp n^2 {\mathbf{u}^f_m}^*(\mathbf{r}\!_\perp)\cdot\!\!\!\!\!\! \sum_{f',m'=\pm 1}\!\!\!\! \left[\mathbf{u}_{m'}^{f'}(\mathbf{r}\!_\perp){\mathbf{u}^{f'}_{m'}}^*(\mathbf{r}^\prime\!_\perp) \right]\!\cdot\! \mathbf{u}_1^1(\mathbf{r}^\prime\!_\perp)\nonumber\\
+&\quad\quad\quad e^{if'\beta_0(z-z')} e^{i\beta_0(z'-fz)}\\
+&= i\pi k_0 n_g\alpha  {\mathbf{u}^f_m}^*(r'_{\!\perp})\cdot \mathbf{u}_1^1(r'_{\!\perp})e^{i\beta_0 (1-f)z'+i(1-m)\phi'},
+\end{align}
+where the orthogonality relationship of the fiber modes had been used:
+\begin{align}
+\int n^2(\br)  \mathbf{u}_{\mathbf{k}}(\br) \cdot \mathbf{u}^*_{\mathbf{k}'}(\br)\mathrm{d} \br\!_\perp &=\delta_{\mathbf{k}\mathbf{k}'}\\
+\Leftrightarrow \int_0^{2\pi}\!\!\!\!\! \mathrm{d}\phi\!\! \int_0^\infty\!\!\!\! r\!_\perp \mathrm{d}r\!_\perp  n^2(r\!_\perp) \mathbf{u}_{m}(r\!_\perp )\!\cdot\!\mathbf{u}_{m'}^*(r\!_\perp )& e^{i(f\!-\!f')\beta z+i(m\! -\! m')\phi}  =\delta_{mm'}e^{i(f\!-\!f')\beta z} \label{eq:orthutrans}.
+\end{align}
+
+The output forwarding $ m=1 $ HE11 mode component is then given by
+\begin{align}
+\mathbf{E}_+(\br) &= (1+C_{11})E_0\mathbf{u}_{1}^{1} (\br)\\
+&\approx \exp\left[i\pi k_0 n_g\alpha  | \mathbf{u}_1^1(r'_{\!\perp})|^2 \right] E_0\mathbf{u}_{1}^{1} (\br)\\
+&= \mathbin{\color{red}{te^{i\delta\phi}}}E_{in}(\br), 
+\end{align}
+where the factor change of the mode's amplitude is 
+\begin{align}
+t=\exp\left[\mathrm{Im}[C_{11}]\right]=\exp\left[ -\pi k_0 n_g \mathrm{Im}[\alpha]  | \mathbf{u}_1^1(r'_{\!\perp})|^2 \right]
+\end{align}
+and the phase shift is
+\begin{align}
+\delta\phi &= \mathrm{Re}[C_{11}]= \pi \mathrm{Re}[\alpha] \frac{\omega_0}{v_g}  | \mathbf{u}_1^1(r'_{\!\perp})|^2
+= \pi \mathrm{Re}[\alpha] \frac{\omega_0}{cA^{11}_{e\!f\!f}},
+\end{align}
+where $ A^{mf}_{e\!f\!f}=1/n_g| \mathbf{u}_m^f(r'_{\!\perp})|^2 $ is the effective $(m,f)$ mode area at the atom position. 
+
+We use the fact that 
+\begin{align}
+\alpha &=-\frac{|d_{eg}|^2}{\hbar \Delta}, \,\, (\Delta=\omega_{\beta}-\omega_{eg})\\
+\Gamma^{1D}_{mf} &= 2\pi \frac{|d_{eg}|^2}{\hbar A^{mf}_{e\!f\!f}}\left(\frac{\omega_0}{v_g} \right)\\
+\Gamma_{vac} &= \frac{4}{3} \left( \frac{\omega_0}{c}\right)^3 \frac{|d_{eg}|^2}{\hbar}\\
+\sigma_0 &= \frac{3\lambda^2}{2\pi} \equiv \text{resonant cross section}
+\end{align}
+the phase shift can be rewritten as
+\begin{align}
+\mathbin{\color{red}{\delta\phi}} &= -\frac{\Gamma^{1\!D}_{11}}{2\Delta} = - \frac{\sigma_0 }{A'_{e\!f\!f}} \frac{\Gamma_{vac}}{8\Delta} = -\frac{c}{v_g} \sigma_0 |\mathbf{u}_1^1 (r'_{\!\perp})|^2 \frac{\Gamma_{vac}}{8\Delta}.
+\end{align}
+
+If there are two input modes, the Faraday and birefringence effects can be analyzed along this line. 
+
+\subsection{Enhancement compared to the vacuum case}
+Notice that, the phase shift for an atom in vacuum can be given in a similar form by
+\begin{align}
+\delta\phi^{vac} &= 2\pi \frac{\omega_0}{cA} \Re[\alpha] |\mathbf{u}_{00}(\br')|^2 =  2\pi \frac{\omega_0}{c A^{vac'}_{e\!f\!f}} \Re[\alpha]=-\frac{1}{A} \sigma_0 |\mathbf{u}_{00} (r'_{\!\perp})|^2 \frac{\Gamma_{vac}}{4\Delta},
+\end{align}
+where $\mathbf{u}_{00}(\br')  $ is the TEM00 mode of a Gaussian laser field at the atom position, $ A=\frac{\pi W_0^2}{2} $ is the mode area of the Gaussian beam with wist $ W_0 $. Hence, the relative strength of phase shift due to the presence of a nanofiber versus vacuum can be given by
+\begin{align}
+\frac{\delta\phi^{nano}}{\delta\phi^{vac}} &=\frac{A_{e\!f\!f}^{vac'}}{A_{e\!f\!f}^{11}}= \frac{A}{2} \!n_g\! \frac{|\mathbf{u}_1(r_\perp^{nano'})|^2}{|\mathbf{u}_{00}(r_\perp^{vac'})|^2}.
+\end{align}
+In the vacuum case, the strongest mode is given by $ |\mathbf{u}_{00}(r_\perp^{vac'})|=1 $ when the atom is placed at the center of the beam waist. 
+
+\textcolor{red}{Figure for the enhancement comparison.}
+
+
+
+\subsection{Quantum interface for the nanofiber with clock state}
+We consider the case that the atoms are pumped to the clock state. Therefore, we only care about the atomic polarizability components
+\begin{align}
+\tensor{\alpha}_{\uparrow} &=\bra{f=4,m=0}\tensor{\alpha}\ket{f=4,m=0}\\
+\tensor{\alpha}_{\downarrow} &=\bra{f=3,m=0}\tensor{\alpha}\ket{f=3,m=0}.
+\end{align}
+Suppose there are $H$ and $V$ two orthogonal linear polarized mode components. The quantized electric field can be given by
+\begin{align}
+\hat{\mathbf{E}}^{(+)}(r\!_\perp,\phi,z) &= \sqrt{ \frac{2 \pi \hbar \omega_0}{ v_g \tau} } \big( \mathbf{u}_H(r\!_\perp,\phi) \hat{a}_H + \mathbf{u}_V(r\!_\perp,\phi) \hat{a}_V \big) e^{i \beta z}.
+\end{align}
+The Hamiltonian can be given by
+\begin{align}
+H_{\rm eff}   &= -\hat{\mathbf{E}}^{(-)}(r^\prime\!\!_\perp,\phi',z')\cdot \tensor{\alpha}\cdot \hat{\mathbf{E}}^{(+)}(r^\prime\!\!_\perp,\phi',z')\\
+ &=- \sum_{f,f'}\alpha_0(\Delta_{f,f'}) \left\{ C_{j'ff}^{(0)} \hat{\mathbf{E}}^{(-)} \cdot \hat{\mathbf{E}}^{(+)} \hat{\mathbbm{1}}_f \phantom{\frac{\hat{1}}{1}}\right. \nonumber\\
+&\quad\quad\quad + i C_{j'ff'}^{(1)} \left(\hat{\mathbf{E}}^{(-)} \times \hat{\mathbf{E}}^{(+)} \right) \cdot \hat{ \mathbf{f}} \nonumber\\
+&\quad\quad\quad  \left. + C_{j'ff}^{(2)} \hat{E}_i^{(-)} \hat{E}_j^{(+)} \left( \frac{ \hat{f}_i \hat{f}_j  + \hat{f}_j \hat{f}_i  }{2} - \frac{1}{3}\delta_{ij} \hat{ \mathbf{f}} \cdot \hat{\mathbf{f}}  \right) \right\}. 
+\end{align}
+The characteristic polarizability is given by
+\begin{align} \label{Eq::alpha0}
+\alpha_0(\Delta) & =  -\frac{|  \bra{ j' }| d | \ket{ j } |^2}{\hbar \Delta } = - \frac{3 \lambda_{j' j}^3}{32 \pi^3} \frac{ \Gamma }{ \Delta }\quad \text{with}\quad 
+\Gamma = \frac{1}{\hbar} \frac{4}{3} \frac{\omega_{j j'}^3}{c^3} | \bra{ j' }| d | \ket{ j } |^2.
+\end{align}
+In our case, the vector component of the atomic polarizability is zero. We can ignore the tensor component of the atomic polarizability in the far off-resonance regime. The scalar polarizability coefficient is given by
+\begin{align} \label{Eq::alpha0}
+C_{j' f}^{(0)} &\equiv \sum_{f'} C_{j' f f'}^{(0)} =   \frac{2^{j'-1/2}}{3} =\left\{ \frac{1}{3},\frac{2}{3}\right\}.
+\end{align}
+The two values are for the D1 line and D2 line respectively.
+
+The Hamiltonian can be rewritten as
+\begin{align}
+H_{\rm eff} & = \frac{ \hbar }{ \tau}\Big( \chi_{H,\uparrow}\op{\uparrow}{\uparrow} +  \chi_{H,\downarrow} \op{\downarrow}{\downarrow} \Big) \hat{a}_H\dg \hat{a}_H \nonumber\\
+&\quad +  \frac{ \hbar }{ \tau} \Big( \chi_{V,\uparrow}\op{\uparrow}{\uparrow} +  \chi_{V,\downarrow} \op{\downarrow}{\downarrow} \Big) \hat{a}_V\dg \hat{a}_V  ,
+\end{align}
+where the coupling strengths are defined as
+\begin{align}
+\chi_{H,\uparrow} &=  -\frac{2\pi\omega_0}{v_g} \mathbf{u}^*_{H}(r^\prime\!\!_\perp,\phi') \cdot\tensor{\alpha}_{\uparrow}\cdot \mathbf{u}_{H}(r^\prime\!\!_\perp,\phi') \\
+\chi_{H,\downarrow} &=  -\frac{2\pi\omega_0}{v_g} \mathbf{u}^*_{H}(r^\prime\!\!_\perp,\phi') \cdot\tensor{\alpha}_{\downarrow}\cdot \mathbf{u}_{H}(r^\prime\!\!_\perp,\phi') \\
+\chi_{V,\uparrow} &=  -\frac{2\pi\omega_0}{v_g}  \mathbf{u}^*_{V}(r^\prime\!\!_\perp,\phi') \cdot\tensor{\alpha}_{\uparrow}\cdot \mathbf{u}_{V}(r^\prime\!\!_\perp,\phi')  \\
+\chi_{V,\downarrow} &=  -\frac{2\pi\omega_0}{v_g}  \mathbf{u}^*_{V}(r^\prime\!\!_\perp,\phi') \cdot\tensor{\alpha}_{\downarrow}\cdot \mathbf{u}_{V}(r^\prime\!\!_\perp,\phi'). 
+\end{align}
+with $\tensor{\alpha}_{\uparrow} \approx\sum_{f'=3,4}\frac{\alpha_0(\Delta_{4,f'})}{3}\mathbf{I}$
+and $\tensor{\alpha}_{\downarrow} \approx\sum_{f'=3,4}\frac{\alpha_0(\Delta_{3,f'})}{3}\mathbf{I}$.
+One can use different detuning regime to detect the psuedo-spin state.
+
+The coupling strength for the $ D_1 $ line probing can then be written as
+\begin{align}
+\chi_{H,\uparrow} &=  \sum_{f'} \frac{\chi_{H0}(f',4)}{3}, \quad
+&\chi_{H,\downarrow} = \sum_{f'} \frac{\chi_{H0}(f',3) }{3}, \\
+\chi_{V,\uparrow} &=  \sum_{f'} \frac{\chi_{V0}(f',4)}{3}, \quad
+&\chi_{V,\downarrow} = \sum_{f'} \frac{\chi_{V0}(f',3) }{3} 
+\end{align}
+and 
+\begin{align}
+\chi_{H0}(f',f) &= \left( \frac{ \sigma_0}{A_{ef\!f}^H} \right) \left( \frac{\Gamma}{4 \Delta_{f,f'}} \right)=\frac{\Gamma_H^{1D}}{\Delta_{f,f'}},\quad
+& A_{ef\!f}^H = \frac{1}{n_g|\mathbf{u}_{H}(r^\prime\!\!_\perp,\phi')|^2 },\\
+\chi_{V0}(f',f) &= \left( \frac{ \sigma_0}{A_{ef\!f}^V} \right) \left( \frac{\Gamma}{4 \Delta_{f,f'}} \right)=\frac{\Gamma_V^{1D}}{\Delta_{f,f'}},\quad
+& A_{ef\!f}^V = \frac{1}{n_g|\mathbf{u}^*_{V}(r^\prime\!\!_\perp,\phi')|^2 }.
+\end{align}
+
+The Hamiltonian can also be rewritten as below using the Stokes operators and collective spin operators.
+\begin{align}
+H_{\rm eff} 
+=\frac{\hbar}{\tau} \Big\{ & \left[ \big( \chi_{H,\uparrow} + \chi_{H,\downarrow}\big) + \big(\chi_{V,\uparrow} + \chi_{V,\downarrow}\big) \right] \hat{J}_0 \hat{S}_0 \nonumber \\
++ & \left[ \big( \chi_{H, \uparrow} + \chi_{H,\downarrow}\big) - \big( \chi_{V,\uparrow} + \chi_{V,\downarrow} \big)\right]  \hat{J}_0 \hat{S}_1 \nonumber \\
++ & \left[ \big( \chi_{H,\uparrow} - \chi_{H,\downarrow}\big) + \big(\chi_{V,\uparrow} - \chi_{V,\downarrow} \big) \right] \hat{J}_z \hat{S}_0 \nonumber \\
++ & \left[ \big( \chi_{H,\uparrow} - \chi_{H,\downarrow}\big) - \big(\chi_{V,\uparrow} - \chi_{V,\downarrow} \big) \right]  \hat{J}_z \hat{S}_1\Big\}
+\end{align}
+The first term is an overall scalar shift and thus does not contribute to the relative dynamics.  The second term is a constant birefringence and can be canceled with a compensating waveplate as long as the atom number remains constant which is usually the case when the trapping time is fairly large compared to the measurement time. The first two terms can be also be canceled when we have the detuning approximately equally biased for the $ f=3 $ and $ f=4 $ ground states. 
+For example, we  can choose $ \Delta_3=-4.6 $ GHz and $ \Delta_4=4.6 $ GHz to the $ 6P_{1/2} $ excited state sublevels to satisfy this condition, where the hyperfine splitting of the excited state can be ignored ($ ~500 $ MHz) compared to the detuning. However, we would like to leave the choice of detuning to control the third and fourth terms as will be discussed consequently. 
+
+The final term describes the QND Faraday interaction we wish to isolate (similar to the Faraday interaction since we choose to use the $ x $-axis as the quantization axis), but this requires dealing with the third term that describes the effect of the scalar light shift on the rotation of the pseudo-spin.  Canceling the third term amounts to enforcing the condition that
+	\begin{align}
+		\chi_{H,\uparrow} - \chi_{H,\downarrow} = \chi_{V,\downarrow} - \chi_{V,\uparrow} ,
+	\end{align}
+which can be satisfied if we carefully choose the detuning of the probe light. The wavelength to choose to cancel the third term is atom position related, since the condition is determined by the effective mode areas which may have different ratios for the $ H $ and $ V $ modes at different locals. We can the exact wavelength to satisfy this condition as the \textit{magic wavelength}\index{magic wavelength}. If this condition can be met, then we can achieve an interaction of the form,
+	\begin{align}
+		H_{\rm eff} = \frac{\hbar}{\tau} \chi_{\rm eff} \hat{J}_z \hat{S}_1
+	\end{align}
+where $\chi_{\rm eff} = 2(\chi_{H,\uparrow} - \chi_{H,\downarrow})$.  
+
+Using this, we can prepare the spins in $ D $ state on the Bloch sphere and characterize the collective spin state along the $ z $-axis after the rotation along $ S_1 $ axis due to the photon-atom interaction. To achieve this, we use the $ \hat{S}_3 $ Stokes vector component measurement. As a result of the backaction of the polarization measurement, there is a squeezing to the collective spin state which results in a reduced uncertainty of measurement output. To see this, we assume the photon number is large and apply the Holstein-Primakoff approximation to set $ \hat{S}_1=\sqrt{\frac{N_L}{2}}\hat{P}_L $ and $ \hat{S}_3=\sqrt{\frac{N_L}{2}}\hat{X}_L $. Now the effective Hamiltonian can be written as
+\begin{align}
+H_{\rm eff} = \frac{\hbar}{\tau} \chi_{\rm eff} \sqrt{\frac{N_L}{2}}\hat{J}_z \hat{P}_L. 
+\end{align}
+The $ \hat{S}_3 $ measurement is achieved through sending the signal light to one input port of a beam splitter along as a vacuum input on the other input port and then performing a balanced Homodyne measurement of the $ X_L $ quadrature. The equivalent Kraus operator conditional on this measurement is 
+\begin{align}
+\hat{A}_{X_L} &= \bra{X_L} e^{-i\chi_{\rm eff} \sqrt{\frac{N_L}{2}}\hat{J}_z \hat{P}_L} \ket{0_L}\propto \exp\left\{ -\frac{\kappa T}{4}(m-\hat{J}_z)^2 \right\},
+\end{align} 
+where $ m=\frac{X_L}{\chi_{\rm eff} \sqrt{N_L/2}} $ is the measurement outcome in angular momentum units, and $ \kappa T=\chi_{\rm eff}^2N_L $ is the integrated measurement strength per spin. The shot noise resolution of the QND measurement is $ \sigma^2=\frac{1}{\kappa T} $. The Kraus operator is exactly the same as Equ.~\eqref{KrausOpSq} to generate a spin squeezing
+ state. For a SCS input state, the output state probability distribution is given by 
+\begin{align}
+P_{M|m} \propto e^{-\frac{(M-\bar{M}(m))^2}{2\Delta J_{out}^2}},
+\end{align}
+where $ \Delta J_{out}^2 =\frac{\Delta J_{in}^2}{1+\xi}=\frac{J}{2(1+\xi)} $, $ \bar{M}(m)=\frac{m}{1+\xi} $, and $ \xi\equiv \frac{\Delta J_{in}^2}{\sigma^2}=\frac{J}{2\sigma^2}=\frac{\chi_{e\!f\!f}^2}{4}N_AN_L $ is the measurement strength which characterizes the measurement backaction and the squeezing effect. The ability to resolve the initial quantum variance of $ J_z $ within the resolution of the meter is the key to QND squeezing.
+
+
+
+
+\subsection{Birefringence and Faraday spectroscopies}
+
+\textcolor{blue}{Discuss the homodyne detection and sensitivity to the atom number and operating frequency in the shot noise limit.  It relates to (i) the phase shift and (ii) the shot noise resolution of the polarimeter. Should cover expectation value and fluctuation measurements.}
+
+For the birefringence measurement of the clock states discussed above, the fluctuation of the $ S_3 $ measurement is a combination effect of the shot noise fluctuation of the photon detector and the projection noise as the signal to determine the collective spin state:
+\begin{align}
+\Delta M^2 &= \Delta P^2_{SN} + \Delta P^2_S .
+\end{align}
+The smallest detectable spin polarization is determined by the shot noise limit condition that 
+\begin{align}
+\Delta P_S = \Delta P_{SN},
+\end{align}
+where the standard variance of the signal can be estimated by
+\begin{align}
+\Delta P_S=P_0 \sin(\varphi_{_N}) \approx P_0 \varphi_{_N}
+\end{align}
+and the shot noise variance is determined by
+\begin{align}
+\Delta P_{SN} = \sqrt{\frac{P_0 \hbar \omega_0 }{2\eta \tau_{pd}}}.
+\end{align}
+We estimate the phase difference is
+We estimate the phase difference is
+\begin{align}
+\varphi_{_N} &= N_A \chi_{e\!f\!f}=N_A [(\chi_{H,\uparrow}-\chi_{H,\downarrow})-(\chi_{V,\uparrow}-\chi_{V,\downarrow})]\\
+&= 2N_AC_{j'}^{(0)}(\Gamma_{H}^{1D}-\Gamma_V^{1D})\frac{1}{\Delta}=\frac{C_{j'}^{(0)}\sigma_0\Gamma_{vac}}{2}(\frac{1}{A^H_{e\!f\!f}}-\frac{1}{A^V_{e\!f\!f}})\frac{1}{\Delta}\\
+&=N_AC_{j'}^{(0)}n_g\sigma_0\frac{\Gamma_{vac}}{2\Delta}\left[| \mathbf{u}_H(r'_{\!\perp})|^2- | \mathbf{u}_V(r'_{\!\perp})|^2 \right],
+\end{align}
+where $\frac{1}{\Delta}=\frac{1}{2}\sum_{f'}(\frac{1}{\Delta_{f',4}}-\frac{1}{\Delta_{f',3}})\approx \frac{1}{\Delta_{f',4}}$.
+
+Now, we consider the critical case: $\eta =100\%$ and $\tau_{pd} = \frac{1}{\gamma_s}$, where the photon scattering rate
+\begin{align}
+\gamma_s &= \sigma(\Delta) \frac{I(\br')}{\hbar \omega_0} \\
+\sigma(\Delta) &=\frac{\sigma_0}{1+\frac{4\Delta^2}{\Gamma^2_{vac}}}\approx \sigma_0 \frac{\Gamma_{vac}^2}{4\Delta^2} \quad \text{(far detuning.)}
+\end{align}
+We can rewrite 
+\begin{align}
+\Delta P_{SN} &=P_0\sqrt{\frac{ \sigma_0 }{2A_{in}}}\frac{\Gamma_{vac}}{2\Delta},\\
+\Delta P_S &= N_A C_{j'}^{(0)}P_0 \frac{\sigma_0}{A_{e\!f\!f}}\frac{\Gamma_{vac}}{2\Delta}, 
+\end{align}
+with the effective mode areas
+\begin{align}
+A_{in } &= \frac{P_0}{I(\br')}=\frac{2}{| \mathbf{u}_H(r'_{\!\perp})|^2+ | \mathbf{u}_V(r'_{\!\perp})|^2},\\
+A_{e\!f\!f} &= \frac{1}{n_g\left[ | \mathbf{u}_H(r'_{\!\perp})|^2- | \mathbf{u}_V(r'_{\!\perp})|^2\right]}.
+\end{align}
+Therefore, the $ \Delta P_S = \Delta P_{SN}$ condition gives the resolution of the birefringence measurement in terms of the minimum atom number as
+\begin{align}
+N^{min}_A &= \frac{1}{C_{j'}^{(0)}}\sqrt{\frac{A_{e\!f\!f}^2}{A_{in}\sigma_0}}.
+\end{align}
 
 \subsection{Other applications?} 
 
@@ -214,7 +449,94 @@ Phase shift expression.
 
 \subsection{Connect to the Schrodinger picture}
 
-\subsection{Effects of the evanescent field and the multilevel structure of the atom}
+
+
+
+%\subsection{Group velocity}
+
+\subsection{Achievable phase shift with scalar atomic polarizabilities}
+
+\textcolor{blue}{Show the phase shift and the decay rate is a result of the interference between the free dipole radiation and the reflection from the nanofiber interface. Discuss the phase shift control landscape and the difference with the vacuum case.}
+\begin{align}
+\delta\phi &= -\frac{\Gamma_{1D}^\mu}{2\Delta},\\
+\frac{\Gamma_{1D}^\mu}{\Gamma_0} &= \frac{6\pi c}{\omega}\frac{\sum_g\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}_g^\mu(\br',\br') \right]\cdot\mathbf{d}_{eg}^* }{\sum_g|\mathbf{d}_{eg}|^2} = 1+ \frac{3}{2} \frac{\mathrm{Im}\left[\sum_g\mathbf{d}_{eg}^*\cdot \mathbf{E}^{(R,\mu)}_g(\br') \right]}{\sum_g|\mathbf{d}_{eg}|^2 k^3}\nonumber\\
+&=\frac{3\pi}{2}\left(\frac{c}{\omega}\right)^2\frac{c}{v_g} \frac{\sum_{g}|\mathbf{d}_{eg}\cdot \mathbf{u}^\mu(\br')|^2}{\sum_g|\mathbf{d}_{eg}|^2}\\
+\mathbf{E}^{(R,\mu)}_g(\br') &= -\frac{1}{4\pi k^2} \mathbf{G}^{(R,\mu)}_g(\br',\br')\cdot \mathbf{d}_{eg}.
+\end{align}
+The index $ R $ indicates the reflected component, and $\mu=(m,f,\beta)  $ identifies the normalized fiber mode $ \mathbf{u}^\mu(\br') $. 
+
+We can write 
+\begin{align}
+\Gamma_{vac} &= \frac{4\omega_0^3|\mathbf{d}|^2}{3\hbar c^3}=-\frac{8\pi \omega_0^2}{\hbar c^2}\left[ \mathbf{d}\cdot \mathrm{Im}[\mathbin{\color{red}{\mathbf{G}^{(0)}}}(\br',\br')]\cdot \mathbf{d}^* \right]\\
+\Gamma &= -\frac{8\pi \omega_0^2}{\hbar c^2}\left[ \mathbf{d}\cdot \mathrm{Im}[\mathbf{G}(\br',\br')]\cdot \mathbf{d}^* \right]=-\frac{8\pi \omega_0^2}{\hbar c^2}\left[ \mathbf{d}\cdot \mathrm{Im}[\mathbin{\color{red}{\mathbf{G}^{(0)}}}(\br',\br')+\mathbin{\color{red}{\mathbf{G}^{(R)}}}(\br'\br')]\cdot \mathbf{d}^* \right]\\
+\end{align}
+The decay rate is result of the interference between the free dipole radiation and the reflection from the nanofiber interface.
+
+\begin{align}
+\Gamma &\propto -\mathbf{d}\cdot \mathrm{Im}[\mathbf{G}(\br',\br')]\cdot \mathbf{d}^* \\
+&=\mathrm{tr}\left[ \mathbin{\color{red}{(\mathbf{d}^*\mathbf{d})}}\cdot\mathbin{\color{blue}{ \mathrm{Im}[\mathbf{G}^*(\br',\br')]}}  \right]\\
+&= \mathrm{tr}\left[ \boldsymbol{\rho} \cdot \mathrm{Im}[\mathbf{G}^{*}(\br',\br')]  \right]\ge 0
+\end{align}
+where $\boldsymbol{\rho}=(\mathbf{d}^*\mathbf{d})$ is defined as the dipole orientation tensor which is merely a property of the atoms. The dyadic Green function part is only a property of the waveguide.  
+
+By mathematical definition, $\mathrm{Im}[\mathbf{G}^{*}(\br',\br')]$ is positive definite. 
+\begin{align}
+\mathrm{Im}[\mathbf{G}^{*}(\br',\br')] &= \sum_{i=1,2,3} \mathbin{\color{red}{g_i}}\hat{\mathbf{v}}_i\hat{\mathbf{v}}_i,\,\text{with}\, g_i>0.
+\end{align}
+$\hat{\mathbf{v}}_i$ form the principal axes of the decay rate. The principal axes indicate the dipole orientations along which the interference bwteen the free dipole radiation and the reflected field (equivalent to the radiation from the image dipole) is most constructive and destructive.   
+\begin{align}
+\Gamma &= C(\omega)\sum_i g_i(\hat{\mathbf{v}}_i\cdot \boldsymbol{\rho}\cdot \hat{\mathbf{v}}_i) 
+= \sum_i \mathbin{\color{blue}{(d'_i)^2}} \mathbin{\color{red}{g_i}} \\
+&= \mathbin{\color{red}{\Gamma_1}}\cos^2\phi\sin^2\theta+\mathbin{\color{red}{\Gamma_2}}\sin^2\phi\sin^2\theta+\mathbin{\color{red}{\Gamma_3}}\cos^2\theta,
+\end{align}
+where $ d'_i=\sqrt{\hat{\mathbf{v}}_i\cdot \boldsymbol{\rho}\cdot \hat{\mathbf{v}}_i}$ and $\mathbf{d}'=\sum_i d'_i\hat{\mathbf{v}}_i$ defines the equivalent dipole orientation of the atomic polarizability transition.
+
+The range of decay rates:
+$$\mathbin{\color{red}{\Gamma_1}}=\Gamma_{max}\mathbin{\color{red}{\ge \Gamma (\theta,\phi) \ge}} \Gamma_{min}=\mathbin{\color{red}{\Gamma_3}}$$
+
+Quantum transitions and dipole orientations correspondence:
+\begin{align}
+\sigma_+ &\leftrightarrow \mathbf{d}_+\propto \frac{1}{\sqrt{2}}(i\mathbf{e}_{r\!_\perp}+\mathbf{e}_\phi)\\
+\pi &\leftrightarrow \mathbf{d}_0 \propto \mathbf{e}_z\\
+\sigma_- &\leftrightarrow \mathbf{d}_-\propto \frac{1}{\sqrt{2}}(-i\mathbf{e}_{r\!_\perp}+\mathbf{e}_\phi).
+\end{align}
+Example: completely mixed state decay rate calculation:
+\begin{align}
+\boldsymbol{\rho} &=\frac{1}{3}(\boldsymbol{\rho}_++\boldsymbol{\rho}_0+\boldsymbol{\rho}_-)=\frac{d_0^2}{3}\boldsymbol{I}\\
+\Gamma &=\frac{C(\omega)}{3}d_0^2 \mathrm{tr}\left[ \mathrm{Im}[\mathbf{G}^*(\br',\br')] \right]=\frac{1}{3}(\Gamma_1+\Gamma_2+\Gamma_3).
+\end{align}
+This is equivalent to assume the dipole is uniformly pointing to any direction, and hence
+$\Gamma = \int \frac{\mathrm{\Omega}}{4\pi}\Gamma(\theta,\phi)=\frac{1}{3}(\Gamma_1+\Gamma_2+\Gamma_3)$.
+
+\textcolor{red}{Some plots here.}
+
+The phase shift is proportional to the time integral of the path on the emission rate surface. The range of the decay rates determines the achievable phase shift in a unit time. However, the emission rate surface for the vacuum case is a uniform sphere and the corresponding phase shift in a given time is a constant independent from the orientation of the dipole with a scalar atomic polarizability. Therefore, it is possible to use the scalar atomic polarizability to realize a wide controlable phase shift range in the off-resonance regime that the vacuum configuration can hardly achieve. 
+
+
+\subsection{Interference due to a one-sided or two-sided atom chain}
+\textcolor{blue}{Effect of an infinite long one-side chain... S matrix, reflectivity... Random filling effect...}
+
+\textcolor{blue}{Effect of the two-side chain:
+The symmetry or antisymmetry nature (TBD) of the radiation surface at the opposite sides along the $ r\!_\perp $ axis will yield a constructive/destructive interference of the two-side chain.} 
+
+\textcolor{blue}{There could be a polarization transformation effect for the forward or backward propagating guided modes, which has been studied in literature.} 
+
+\section{Conclusions}
+
+\begin{acknowledgments}
+X.Q. would like to particularly thank Ninnat Dangniam, Tzu-Cheng Wu and Matthew Chase for their inspiring discussions. We thank the UNM Center for Advanced Research Computing for computational resources used in this work.
+\end{acknowledgments}
+
+\appendix
+\section{Dyadic Green functions for the atom-nanofiber system}
+Expressions for the 9 elements of the dyadic Green function and its reflected and transmitted decomposition.
+
+\section{Group index of refraction of a single-mode nanofiber}
+Expression of $ n_g $ for the HE11 mode.
+
+Frequency stability.
+
+\section{Junk: Effects of the evanescent field and the multilevel structure of the atom}
 In general, 
 \begin{align}
 \Gamma \propto \mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}(\br',\br') \right]\cdot\mathbf{d}_{eg}^*=\mathrm{tr}\left[\mathbf{d}_{eg}^*\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}(\br',\br') \right] \right]\propto \mathrm{tr}\left[\boldsymbol{\alpha}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}(\br',\br') \right] \right]
@@ -245,30 +567,6 @@ Another way to look at this problem is that we can decompose the guided mode Gre
 Therefore, where the position of the atom relative to the fiber mode yields a strong scalar component, the atomic response is more independent of the atom state... 
 
 Some interesting examples of state-dependent decay and phase shift...
-
-
-
-\subsection{Interference due to a one-sided or two-sided atom chain}
-Effect of an infinite long one-side chain... S matrix, reflectivity... Random filling effect...
-
-Effect of the two-side chain:
-
-The symmetry or antisymmetry nature (TBD) of the radiation surface at the opposite sides along the $ r\!_\perp $ axis will yield a constructive/destructive interference of the two-side chain. 
-
-\section{Conclusions}
-
-\begin{acknowledgments}
-X.Q. would like to particularly thank Ninnat Dangniam, Tzu-Cheng Wu and Matthew Chase for their inspiring discussions. We thank the UNM Center for Advanced Research Computing for computational resources used in this work.
-\end{acknowledgments}
-
-\appendix
-\section{Dyadic Green functions for the atom-nanofiber system}
-Expressions for the 9 elements of the dyadic Green function and its reflected and transmitted decomposition.
-
-\section{Group index of refraction of a single-mode nanofiber}
-Expression of $ n_g $ for the HE11 mode.
-
-Frequency stability.
 
 
 %\begin{center}
