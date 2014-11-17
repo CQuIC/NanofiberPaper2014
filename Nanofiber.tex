@@ -177,7 +177,7 @@ the output field can be written as
 \end{align}
 The ratio of the attenuation coefficients, $t_x$ and $t_y$, indicates the helicity of the polarization of the light. $\phi_x$ and $\phi_y$ represent the phase shifts in the $x$- and $y$-modes. We will consider the phase shift for one input mode first, and then present our theory for the birefringence effect with two orthogonal input modes. 
 
-\subsection{Nanofiber mode scattering due to an atom using the dyadic Green function method}
+\subsection{Nanofiber mode scattering due to an atom using the dyadic Green function method}\label{sec:GFmethod}
 \textcolor{blue}{Start from the Maxwell equation with a dipole source and the corresponding equation of the dyadic Green function. Describe the framework of solving the fiber fields in presence of an atom using the dyadic Green function method.}
 
 \textcolor{blue}{Sketch out the \textit{reflection-transmission decomposition} approach to solve the dyadic Green functions for the boundary value problem, and how to distinguish the radiation and guided modes through separating different integral paths. Detailed solutions should be given in the appendix. For the guided mode contribution to the dyadic Green function, give the explicit expression using the eigenmode decomposition method and make a clear link to the field quantization result. }
@@ -528,8 +528,173 @@ X.Q. would like to particularly thank Ninnat Dangniam, Tzu-Cheng Wu and Matthew 
 \end{acknowledgments}
 
 \appendix
-\section{Dyadic Green functions for the atom-nanofiber system}
-Expressions for the 9 elements of the dyadic Green function and its reflected and transmitted decomposition.
+\section{Radiation fields from an atom close to a nanofiber}
+As discussed in section~\ref{sec:GFmethod}, the 9 elements of a dyadic electric Green function is proportional to the local electric field components due to the radiation from an electric dipole orientated in some basis directions. The spontaneous radiation field components can be calculated through decomposing the field into reflected and transmitted field components and matching up the boundary conditions of the nanofiber which can be treated as an infinitely long cylindrical dielectric medium. The detailed calculations have been conducted by Nha, Klimov and others in earlier publications~\cite{Nha1997,Klimov2004}. We summarize some of those results in this section. 
+
+One can separate the electric and magnetic fields into free-dipole radiation, reflected and transmitted parts. For example, the electric field can be written as 
+\begin{align}
+\boldsymbol{\mathcal{E}}(\br) &= \boldsymbol{\mathcal{E}}^{(0)}(\br) + 
+\boldsymbol{\mathcal{E}}^{(R)}(\br)+\boldsymbol{\mathcal{E}}^{(T)}(\br)\\
+&=
+	\begin{cases}
+	  \boldsymbol{\mathcal{E}}^{(0)} (\br)+ \boldsymbol{\mathcal{E}}^{(R)}(\br) & r\!_\perp \geq a,\\
+	  \boldsymbol{\mathcal{E}}^{(T)}(\br) & r\!_\perp<a.
+	\end{cases} \label{Etotalfiber}
+\end{align}
+where the superscripts $^0$, $^R$ and $^T$ indicate the free-dipole radiation, reflection and transmission of the field. For a translationally invariant waveguide, which means the index of refraction of waveguide is independent of the propagating axis $z$, the electric and magnetic fields can be written as 
+\begin{align}
+\bmc{E}(\br) &= \bmc{E}(\br\!_\perp)\exp(i\beta z), & \bmc{H}(\br) &= \bmc{H}(\br\!_\perp)\exp(i\beta 
+z),
+\end{align}
+where $ \beta $ is the propagation constant and $ \br\!_\perp $ is the position vector in the transverse 
+plane perpendicular to the $ z $-axis.
+In this case, we only need to calculate the longitudinal components (the $z$-components) of the fields, the rest components can be obtained using the following relationships:
+\begin{subequations}\label{EHzgauss}
+\begin{align}
+\mathcal{E}_{r\!_\perp} &= \frac{i}{h^2} \left[ \beta \pp{\mathcal{E}_z }{r\!_\perp} + 
+  \frac{k}{r\!_\perp} 
+\pp{\mathcal{H}_z}{\phi} \right]= \frac{i\beta}{h^2} \pp{\mathcal{E}_z }{r\!_\perp} - 
+  \frac{km}{r\!_\perp h^2} {\mathcal{H}_z}, \\
+\mathcal{E}_\phi &= \frac{i}{h^2} \left[\frac{\beta}{r\!_\perp} 
+\pp{\mathcal{E}_z}{\phi} - k 
+\pp{\mathcal{H}_z}{r\!_\perp} 
+\right] = -\frac{\beta m}{r\!_\perp h^2} 
+{\mathcal{E}_z} - \frac{ik}{h^2} 
+\pp{\mathcal{H}_z}{r\!_\perp},\\
+\mathcal{H}_{r\!_\perp} &= \frac{i}{h^2} \left[ \beta \pp{\mathcal{H}_z}{r\!_\perp} 
+- \frac{kn^2}{r\!_\perp}\pp{\mathcal{E}_z}{\phi} \right]= \frac{i\beta}{h^2} \pp{\mathcal{H}_z}{r\!_\perp} 
++ \frac{kn^2m}{r\!_\perp h^2} {\mathcal{E}_z},\\
+\mathcal{H}_\phi &= \frac{i}{h^2} \left[ \frac{\beta}{r\!_\perp} \pp{\mathcal{H}_z}{\phi} + 
+ kn^2 \pp{\mathcal{E}_z}{r\!_\perp} \right] = -\frac{\beta m}{r\!_\perp h^2} {\mathcal{H}_z} + 
+  \frac{ikn^2}{h^2} \pp{\mathcal{E}_z}{r\!_\perp}.
+\end{align}
+\end{subequations}
+We use Gauss units in this paper, and assume the material of the nanofiber is non-magnetic, and hence $ 
+\boldsymbol{\mathcal{B}}= \mu\boldsymbol{\mathcal{H}}\approx \boldsymbol{\mathcal{H}} $. 
+
+Now that the longitudinal components of the electrical and magnetic fields can be expanded as
+\begin{subequations}\label{ET0Rexpand}
+\begin{align}
+\mathcal{E}^{(T)}_z
+&= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} c_{m\beta} J_m (hr\!_\perp),\\
+\mathcal{E}^{(0)}_{z} &= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} \mathcal{E}^{(0)}_{z,m\beta}(r\!_\perp)\\
+\mathcal{E}^{(R)}_z 
+&= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} a_{m\beta} H_m^{(1)} (pr\!_\perp),
+\end{align}
+\end{subequations}
+\begin{subequations}\label{BT0Rexpand}
+\begin{align}
+\mathcal{B}^{(T)}_z 
+&= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} d_{m\beta} J_m (hr\!_\perp),\\
+% + E_{m\beta} Y_m(hr\!_\perp)\right],\\
+\mathcal{B}^{(0)}_{z} &= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} \mathcal{B}^{(0)}_{z,m\beta}(r\!_\perp)\\
+\mathcal{B}^{(R)}_z 
+&= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} b_{m\beta} H_m^{(1)} (pr\!_\perp),
+\end{align}
+\end{subequations}
+in which $J$ and $H$ indicate the first kind of the Bessel function and the Hankel function as the basis of the cylindrical harmonics; the atom is positioned at $\br'=(r^\prime\!_\perp,\phi',z')$ with an electric dipole moment $\mathbf{d}_0=(d^0_{r\!_\perp}, d^0_\phi,d^0_z)$ in the atom's coordinate system. In the fiber's coordinate system, the dipole moment observed at an arbitrary position $\br$ is defined by the three components defined below:
+\begin{align}
+d_{r\!_\perp}\! &= \cos(\phi\!-\!\phi')d^0_{r\!_\perp}\!\!+\!\sin(\phi\!-\!\phi')d^0_\phi=\frac{1}{\sqrt{2}}\left(-e^{-i(\phi\!-\!\phi')}d_++e^{i(\phi\!-\!\phi')}d_- \right),\\
+d_\phi &=\cos(\phi\!-\!\phi')d^0_\phi\!-\!\sin(\phi\!-\!\phi')d^0_{r\!_\perp}=\frac{i}{\sqrt{2}}\left(e^{-i(\phi\!-\!\phi')}d_++e^{i(\phi\!-\!\phi')}d_- \right),\\
+d_z &= d^0_z,
+\end{align}
+where we have defined the position-independent reduced dipole vector components
+\begin{align}
+d_\pm \equiv \mp \frac{1}{\sqrt{2}}(d^0_{r\!_\perp}\pm id^0_{\phi}).
+\end{align}
+The terms associated with $d_\pm$ in the dipole moment formula lower or raise the mode index or the angular momentum quantum number, $m$, of the fiber modes by $1$. Notice that we have used $\phi\!-\!\phi'$ as the projected angle between $\mathbf{r}$ and $\mathbf{r}'$ to make the relationship work in general. In most of our calculations, we usually position the atom on the $x$-axis of the fiber coordinate and make $z'=0$.
+
+
+The free radiation field components associated with the $ e^{im\phi+i\beta z} $ term (the $m$-th mode components) for the $r\!_\perp<r'\!_\perp$ region can be given by
+\begin{align}
+\mathcal{B}_{z,m\beta}^{(0)} &= \frac{ikp}{2\sqrt{2}}J_m(pr\!_\perp)\left[ d_{+} H_{m+1}^{(1)}(pr'\!\!_\perp) \!-\! d_- H_{m-1}^{(1)}(pr'\!_\perp) \right],\\
+\mathcal{B}_{\phi,m\beta}^{(0)} &= \frac{ik}{2}\left[ \frac{\beta d_{-}}{\sqrt{2}} J_{m-1}\left( pr\!_\perp \right)H_{m-1}^{(1)}\left( {pr\!_\perp^{\prime} }\right) -\frac{\beta d_+}{\sqrt{2}} J_{m+1}\left( pr\!_\perp \right)H_{m+1}^{(1)}\left( {pr\!_\perp^{\prime} }\right)\right. \nonumber\\ 
+&\qquad\quad \left. + \frac{ipd^0_z}{2}\left(J_{m-1}(pr\!_\perp)-J_{m+1}(pr\!_\perp) \right)H_m^{(1)}(pr\!_\perp^{\prime}) \right],\\
+\mathcal{B}_{r\!_\perp, m\beta}^{(0)} &= \frac{k}{2}\left[\frac{i m d^0_z}{r\!_\perp} J_m\left( pr\!_\perp \right) H_m^{(1)}\left( {pr\!_\perp^{\prime} }\right) \right. \nonumber\\
+&\qquad \left. +\frac{\beta d_+}{\sqrt{2}} J_{m\!+\!1}(pr\!_\perp) H_{m\!+\! 1}^{(1)}(pr\!_\perp^{\prime}) \!+\! \frac{\beta d_-}{\sqrt{2}} J_{m\!-\! 1}(pr\!_\perp)H_{m\!-\!1}^{(1)}(pr\!_\perp^{\prime})   \right],\\
+\mathcal{E}_{z,m\beta}^{(0)} 
+&= \frac{p}{2}J_{m}\left( pr\!_\perp \right)\left[  id^0_z p H_m^{(1)}\left( {pr\!_\perp^{\prime} }\right) \phantom{\frac{d^0_z}{\sqrt{2}}} \right. \nonumber\\
+&\qquad\qquad\qquad \left. + \frac{\beta d_{+}}{\sqrt{2}} H_{m+1}^{(1)}\left( {pr\!_\perp^{\prime} }\right) +\frac{\beta d_-}{\sqrt{2}} H_{m-1}^{(1)}\left( {pr\!_\perp^{\prime} }\right) \right], \\
+\mathcal{E}_{\phi,m\beta}^{(0)} 
+&= -\frac{im\beta d^0_z}{2r\!_\perp} J_{m}\left( pr\!_\perp \right) H_m^{(1)}\left( {pr\!_\perp^{\prime} }\right) \nonumber\\
+&\quad+\frac{d_+}{2\sqrt{2}} \left[ \frac{mp}{r\!_\perp}J_{m}\left( pr\!_\perp \right)-k^2 J_{m+1}\left( pr\!_\perp \right)\right] H_{m+1}^{(1)}\left( {pr\!_\perp^{\prime} }\right) \nonumber\\
+&\quad+ \frac{d_-}{2\sqrt{2}}\left[\frac{mp}{r\!_\perp}J_m\!\left( pr_\perp \right)-k^2J_{m-1}\!\left( pr_\perp \right) \right] H_{m-1}^{(1)}\!\left( {pr\!_\perp^{\prime} }\right),\\
+\mathcal{E}_{r\!_\perp,m\beta}^{(0)} 
+&= \frac{\beta pd^0_z}{4}\left[ J_{m+1}\!\left( pr\!_\perp \right)-J_{m-1}\!\left( pr_\perp \right)\right] H_m^{(1)}\left( {pr\!_\perp^{\prime} }\right)\nonumber\\ 
+&\quad -\frac{d_+}{2\sqrt{2}}\left[ i\beta^2J_{m+1}\!\left( pr_\perp \right) +\frac{imp}{r\!_\perp}J_m\!\left( pr_\perp \right)\right] H_{m+1}^{(1)}\!\left( {pr\!_\perp^{\prime} }\right)\nonumber\\
+&\quad + \frac{d_-}{2\sqrt{2}}\left[ i\beta^2J_{m-1}\!\left( pr_\perp \right) +\frac{imp}{r\!_\perp}J_m\!\left( pr_\perp \right)\right] H_{m-1}^{(1)}\!\left( {pr\!_\perp^{\prime} }\right).
+\end{align}
+The magnetic and electrical fields components for $ \br\!_\perp>\br'\!_\perp $ are 
+\begin{align}
+\mathcal{B}_{z,m\beta}^{(0)} &= \frac{ikp}{2\sqrt{2}}H^{(1)}_m(pr\!_\perp)\left[ d_{+} J_{m+1}(pr'\!\!_\perp) \!-\! d_- J_{m-1}(pr'\!_\perp) \right],\\
+\mathcal{B}_{\phi,m\beta}^{(0)} &= \frac{ik}{2}\left[ \frac{\beta d_{-}}{\sqrt{2}} H^{(1)}_{m-1}\left( pr\!_\perp \right)J_{m-1}\left( {pr\!_\perp^{\prime} }\right) -\frac{\beta d_+}{\sqrt{2}} H^{(1)}_{m+1}\left( pr\!_\perp \right)J_{m+1}\left( {pr\!_\perp^{\prime} }\right)\right. \nonumber\\ 
+&\qquad\quad \left. + \frac{ipd^0_z}{2}\left(H^{(1)}_{m-1}(pr\!_\perp)-H^{(1)}_{m+1}(pr\!_\perp) \right)J_m(pr\!_\perp^{\prime}) \right],\\
+\mathcal{B}_{r\!_\perp, m\beta}^{(0)} &= \frac{k}{2}\left[\frac{i m d^0_z}{r\!_\perp} H^{(1)}_m\left( pr\!_\perp \right) J_m\left( {pr\!_\perp^{\prime} }\right) \right. \nonumber\\
+&\qquad \left. +\frac{\beta d_+}{\sqrt{2}} H^{(1)}_{m\!+\!1}(pr\!_\perp) J_{m\!+\! 1}(pr\!_\perp^{\prime}) \!+\! \frac{\beta d_-}{\sqrt{2}} H^{(1)}_{m\!-\! 1}(pr\!_\perp) J_{m\!-\!1}(pr\!_\perp^{\prime})   \right],\\
+\mathcal{E}_{z,m\beta}^{(0)} 
+&= \frac{p}{2}H^{(1)}_{m}\left( pr\!_\perp \right)\left[  id^0_z p J_m\left( {pr\!_\perp^{\prime} }\right) \phantom{\frac{d^0_z}{\sqrt{2}}} \right. \nonumber\\
+&\qquad\qquad\qquad \left. + \frac{\beta d_{+}}{\sqrt{2}} J_{m+1}\left( {pr\!_\perp^{\prime} }\right) +\frac{\beta d_-}{\sqrt{2}} J_{m-1}\left( {pr\!_\perp^{\prime} }\right) \right], \\
+\mathcal{E}_{\phi,m\beta}^{(0)} 
+&= -\frac{im\beta d^0_z}{2r\!_\perp} H^{(1)}_{m}\left( pr\!_\perp \right) J_m\left( {pr\!_\perp^{\prime} }\right) \nonumber\\
+&\quad+\frac{d_+}{2\sqrt{2}} \left[ \frac{mp}{r\!_\perp}H^{(1)}_{m}\left( pr\!_\perp \right)-k^2 H^{(1)}_{m+1}\left( pr\!_\perp \right)\right] J_{m+1}\left( {pr\!_\perp^{\prime} }\right) \nonumber\\
+&\quad+ \frac{d_-}{2\sqrt{2}}\left[\frac{mp}{r\!_\perp}H^{(1)}_m\!\left( pr_\perp \right)-k^2 H^{(1)}_{m-1}\!\left( pr_\perp \right) \right] J_{m-1}\!\left( {pr\!_\perp^{\prime} }\right),\\
+\mathcal{E}_{r\!_\perp,m\beta}^{(0)} 
+&= \frac{\beta pd^0_z}{4}\left[ H^{(1)}_{m+1}\!\left( pr\!_\perp \right)-H^{(1)}_{m-1}\!\left( pr_\perp \right)\right] J_m\left( {pr\!_\perp^{\prime} }\right)\nonumber\\ 
+&\quad -\frac{d_+}{2\sqrt{2}}\left[ i\beta^2H^{(1)}_{m+1}\!\left( pr_\perp \right) +\frac{imp}{r\!_\perp}H^{(1)}_m\!\left( pr_\perp \right)\right] J_{m+1}\!\left( {pr\!_\perp^{\prime} }\right)\nonumber\\
+&\quad + \frac{d_-}{2\sqrt{2}}\left[ i\beta^2H^{(1)}_{m-1}\!\left( pr_\perp \right) +\frac{imp}{r\!_\perp}H^{(1)}_m\!\left( pr_\perp \right)\right] J_{m-1}\!\left( {pr\!_\perp^{\prime} }\right).
+\end{align}
+
+By using the boundary conditions at $ r\!_\perp=a $ and Equ.~\ref{Etotalfiber} that
+\begin{align}
+%\varepsilon_f \mathcal{E}_{r\!_\perp}(r\!_\perp =a^> ) = \mathcal{E}_{r\!_\perp}(r\!_\perp =a^< ),\\
+\mathcal{E}_{z}(r\!_\perp =a^> ) = \mathcal{E}_{z}(r\!_\perp =a^< ),\\
+%\mathcal{B}_{r\!_\perp}(r\!_\perp =a^> ) = \mathcal{B}_{r\!_\perp}(r\!_\perp =a^< ),\\
+\mathcal{B}_{z}(r\!_\perp =a^> ) = \mathcal{B}_{z}(r\!_\perp =a^< ),\\
+\mathcal{E}_{\phi}(r\!_\perp =a^> ) = \mathcal{E}_{\phi}(r\!_\perp =a^< ),\\
+\mathcal{B}_{\phi}(r\!_\perp =a^> ) = \mathcal{B}_{\phi}(r\!_\perp =a^< ),
+\end{align}
+where $ a^< $ and $ a^> $ denote the boundaries at the sides less and larger than $ a $, and the connections between field components (Equ.(\ref{EHzgauss})), we can obtain all unknown coefficients. To summarize, we have~\cite{Klimov2004}
+\begin{align}
+a_{m\beta} &= \frac{na}{P^2+QR},\\
+b_{m\beta} &= \frac{nb}{P^2+QR},\\
+c_{m\beta} &= \frac{\mathcal{E}_{z,m\beta}^{(0)}(r\!_\perp\!=\!a)+ H_m^{(1)}(pa)a_{m\beta}}{J_m(ha)},\\
+d_{m\beta} &= \frac{\mathcal{H}_{z,m\beta}^{(0)}(r\!_\perp\!=\!a)+ H_m^{(1)}(pa)b_{m\beta}}{J_m(ha)},
+\end{align}
+where
+\begin{align}
+na &= h^2p^2aJ_m(ha)PE_{\phi,m\beta}^{(0)}(r\!_\perp\!=\!a) \nonumber\\
+&\quad + p^2\left[J_m(ha)\beta mP+kan_1^2h \dd{}{(ha)}J_m(ha)Q \right] E_{z,m\beta}^{(0)} \nonumber\\
+&\quad + ih^2p^2 aJ_m(ha)QB_{\phi,m\beta}^{(0)}(r\!_\perp\!\!=\!a) \!-\! im\beta hpJ_m(ha)SB_{z,m\beta}^{(0)}(r\!_\perp\!\!=\!a),\\
+nb &= h^2p^2aJ_m(ha)PB_{\phi,m\beta}^{(0)}(r\!_\perp\!=\!a) \nonumber\\
+&\quad + p^2\left[J_m(ha)\beta mP-kah \dd{}{(ha)}J_m(ha)R \right] B_{z,m\beta}^{(0)} \nonumber\\
+&\quad + ih^2p^2 aJ_m(ha)RE_{\phi,m\beta}^{(0)}(r\!_\perp\!\!=\!a) \!+\! im\beta hpJ_m(ha)TE_{z,m\beta}^{(0)}(r\!_\perp\!\!=\!a),
+\end{align} 
+and
+\begin{align}
+P &=m\beta k^2J_m(ha)H_m^{(1)}(pa)(n_1^2-1),\\
+Q &=-hpak\left[ hJ_m(ha)\dd{}{(pa)}H_m^{(1)}(pa)-pH_m^{(1)}(pa)\dd{}{(ha)}J_m(ha) \right],\\
+R &=hpak\left[ hJ_m(ha)\dd{}{(pa)}H_m^{(1)}(pa)-pn_1^2H_m^{(1)}(pa)\dd{}{(ha)}J_m(ha) \right],\\
+S &=hpak\left[ pJ_m(ha)\dd{}{(pa)}H_m^{(1)}(pa)-hH_m^{(1)}(pa)\dd{}{(ha)}J_m(ha) \right],\\
+T &=hpak\left[ pJ_m(ha)\dd{}{(pa)}H_m^{(1)}(pa)-hn_1^2H_m^{(1)}(pa)\dd{}{(ha)}J_m(ha) \right].
+\end{align}
+
+The integral in Equs.~\ref{EHzgauss} should be chosen as path $C_1$ as shown in Fig.~\ref{fig:integralpath} to detour the branch cuts and singularities of integrands. 
+
+\begin{figure}
+\begin{minipage}{.91\linewidth}
+\centering
+\subfloat[]{\label{contourplot_upper}\includegraphics[scale=0.75]{./Figs/contourplot_upper}}
+\end{minipage}
+\par\medskip
+\begin{minipage}{.91\linewidth}
+\centering
+\subfloat[]{\label{contourplot_lower}\includegraphics[scale=0.75]{./Figs/contourplot_lower}}
+\end{minipage}
+\caption{Integration paths. For the case that $ z>0 $, we can use the zero-valued contour integral path drawn in subfig.~\ref{contourplot_upper} to calculate the integration along path $ C_1 $. The simplified integration path by ignoring waveguide losses is given on the right-hand-side. It only contains the forward propagating mode contributions with radiation and guided mode components as divided through the real-axis integral and the loop-hole integral. For the $ z<0 $ case, the contour integral analysis is given in subfig.~\ref{contourplot_lower}, which only includes the backward propagating mode contributions.}
+\label{fig:integralpath}
+\end{figure}
+
+
 
 \section{Group index of refraction of a single-mode nanofiber}
 Expression of $ n_g $ for the HE11 mode.
