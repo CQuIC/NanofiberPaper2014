@@ -204,7 +204,9 @@ Once we obtain the dyadic Green function of the nanofiber system, the total elec
 \end{align}
 The Born approximation has been used in the last step, which should be a good approximation for the far-detuning case we are interested in. 
 
-For our problem, we only care about the guided mode contributions which are the dominate components detected at the end of a long nanofiber (a few centimeters long). One can show that the dyadic Green function for the guided modes can be written as \textcolor{red}{(Check the factor of 2 from this equation.)}
+Since the Maxwell equation of a bare fiber has a similar form to the time-independent Schrodinger equation, one can reference to the division of bound and scattering problems of the Schrodinger equation to define guided and radiation modes according to the value of the propagation constant $ \beta $. If $ n_2^2k^2<\beta^2<n_1^2k^2 $ with $ k=\omega/c $, the propagating mode of the fiber described by $ \beta $ is called a guided mode. If $ \beta^2<n_2^2k^2 $, the corresponding mode is called a radiation mode. There are finite guided modes with discrete $ \beta $ values for a given nanofiber; yet, radiation modes have continuous $ \beta $ and are countless. Correspondingly, the dyadic Green function can be decomposed into guided mode components and radiation mode components. Details regarding calculating the radiation and guided components for the fields and hence the dyadic Green functions are given in Appendix~(\ref{app:fieldcalculation}).   
+
+For our problem, we only care about the guided mode contributions which are the dominate components detected at the end of a long nanofiber (a few centimeters long). We are interested in the single mode fibers for this paper. The only allowed guided mode for a single-mode fiber is called \textit{HE11} mode which has degeneracies of two propagating directions and two polarization patterns. One can show that the dyadic Green function for the guided modes can be written as \textcolor{red}{(Check the factor of 2 from this equation.)}
 \begin{align}
 \mathbf{G}_g(\br,\br') = -\frac{i\mathbin{\color{blue}{n_g}}}{4k_0} \sum_{m,f=\pm 1} \mathbf{u}_{\mu}(r\!_\perp)\mathbf{u}^*_{\mu}(r_{\!\perp}^\prime)e^{if\beta_0(z-z')+im(\phi-\phi')}.
 \end{align}
@@ -528,7 +530,7 @@ X.Q. would like to particularly thank Ninnat Dangniam, Tzu-Cheng Wu and Matthew 
 \end{acknowledgments}
 
 \appendix
-\section{Radiation fields from an atom close to a nanofiber}
+\section{Radiation fields from an atom close to a nanofiber}\label{app:fieldcalculation}
 As discussed in section~\ref{sec:GFmethod}, the 9 elements of a dyadic electric Green function is proportional to the local electric field components due to the radiation from an electric dipole orientated in some basis directions. The spontaneous radiation field components can be calculated through decomposing the field into reflected and transmitted field components and matching up the boundary conditions of the nanofiber which can be treated as an infinitely long cylindrical dielectric medium. The detailed calculations have been conducted by Nha, Klimov and others in earlier publications~\cite{Nha1997,Klimov2004}. We summarize some of those results in this section. 
 
 One can separate the electric and magnetic fields into free-dipole radiation, reflected and transmitted parts. For example, the electric field can be written as 
@@ -570,9 +572,9 @@ In this case, we only need to calculate the longitudinal components (the $z$-com
 \end{align}
 \end{subequations}
 We use Gauss units in this paper, and assume the material of the nanofiber is non-magnetic, and hence $ 
-\boldsymbol{\mathcal{B}}= \mu\boldsymbol{\mathcal{H}}\approx \boldsymbol{\mathcal{H}} $. 
+\boldsymbol{\mathcal{B}}= \mu\boldsymbol{\mathcal{H}}\approx \boldsymbol{\mathcal{H}} $. We have also defined the transverse decay constant inside of the nanofiber, $ h $, by $h^2=n_1^2k-\beta^2$. Similarly, one can define the transverse decay constant outside of the nanofiber, $ p $, by $ p^2=n_2^2k-\beta^2=k^2-\beta^2 $.
 
-Now that the longitudinal components of the electrical and magnetic fields can be expanded as
+Now that the longitudinal components of the electrical and magnetic fields can be expanded as Fourier transformations over the $ \beta $ space,
 \begin{subequations}\label{ET0Rexpand}
 \begin{align}
 \mathcal{E}^{(T)}_z
@@ -678,7 +680,7 @@ S &=hpak\left[ pJ_m(ha)\dd{}{(pa)}H_m^{(1)}(pa)-hH_m^{(1)}(pa)\dd{}{(ha)}J_m(ha)
 T &=hpak\left[ pJ_m(ha)\dd{}{(pa)}H_m^{(1)}(pa)-hn_1^2H_m^{(1)}(pa)\dd{}{(ha)}J_m(ha) \right].
 \end{align}
 
-The integral in Equs.~\ref{EHzgauss} should be chosen as path $C_1$ as shown in Fig.~\ref{fig:integralpath} to detour the branch cuts and singularities of integrands. 
+The integral in Equs.~\ref{EHzgauss} should be chosen along path $C_1$ as shown in Fig.~\ref{fig:integralpath} to detour the branch cuts and singularities of integrands. The branch cuts are determined by $ \mathrm{Im}[p],\mathrm{Im}[h]>0 $ to ensure the integrands single-valued and remain on the Riemann sheet where the radiation fields decrease at the infinities. Note that there are only two branch cuts along the $ y $-axis and within $ [-n_2k,n_2k] $ on the $ x $-axis originated from $ \mathrm{Im}[p]=0 $. The $ \mathrm{Im}[h]=0 $ condition does not yield any other new branch cuts where the integrands discontinue. Approximately, we use dashed lines to indicate the branch cuts on the left subplots in Fig.~\ref{fig:integralpath}. There are also poles on the complex plane of $ \beta $, and are located at $ \pm\beta_0 $ characterizing the guided modes (HE11 modes for the single-mode nanofier). We exclude the singularities by closing the integration contours on the upper-half complex plane of $ \beta $ when $ z>0 $ and the lower-half plane when $ z<0 $ to ensure the Fourier transform convergent at infinities. Since the closed contour integrals vanish, the integrals along $ C_1 $ can be transformed to the contour integrals detouring the branch cuts and around the poles which generate the radiation mode and the guided mode components, respectively. We have used the fact that the integrands vanish at infinities (red solid contour paths). Along the contour paths, we choose $ h $ always positive real while $ p $ being negative real in the first and third quadrants and being positive real in the second and forth quadrants. 
 
 \begin{figure}
 \begin{minipage}{.91\linewidth}
@@ -690,9 +692,15 @@ The integral in Equs.~\ref{EHzgauss} should be chosen as path $C_1$ as shown in 
 \centering
 \subfloat[]{\label{contourplot_lower}\includegraphics[scale=0.75]{./Figs/contourplot_lower}}
 \end{minipage}
-\caption{Integration paths. For the case that $ z>0 $, we can use the zero-valued contour integral path drawn in subfig.~\ref{contourplot_upper} to calculate the integration along path $ C_1 $. The simplified integration path by ignoring waveguide losses is given on the right-hand-side. It only contains the forward propagating mode contributions with radiation and guided mode components as divided through the real-axis integral and the loop-hole integral. For the $ z<0 $ case, the contour integral analysis is given in subfig.~\ref{contourplot_lower}, which only includes the backward propagating mode contributions.}
+\caption{Equivalent integration paths to calculate the radiation and guided fields. For $ z>0 $, we can use the zero-valued contour integral path drawn in subfig.~\ref{contourplot_upper} to calculate the integration along path $ C_1 $. The simplified integration path by ignoring waveguide losses is given on the right-hand-side. It only contains the forward propagating mode contributions with radiation and guided mode components as divided through the real-axis integral and the loop-hole integral. For the $ z<0 $ case, the contour integral analysis is given in subfig.~\ref{contourplot_lower}, which only includes the backward propagating mode contributions.}
 \label{fig:integralpath}
 \end{figure}
+
+\textcolor{blue}{More information: Physics meaning of the sections detouring the branch cuts and poles...} The integrals along the vertical sections of the contour paths, $ a $ and $ d $, cancel. The integrals along the horizontal sections, $ b $ and $ c $, double one the other. In the end, the contour integral detouring the branch cuts yields $ 2\int_0^k\mathrm{d}\beta $ for $ z>0 $ or $ 2\int_{-k}^0\mathrm{d}\beta $ for $ z<0 $ with $ n_2=1 $. Similarly, one can show that the contour integrals around the poles with separated segments of positive and negative real $ p $'s are equivalent to $ \pm 2\oint_{\pm \beta_0}\!\!\mathrm{d}\beta $ with positive real $ p $. When $ z=0 $, the full integral along path $ C_1 $ can be rewritten as the average value of the $ z>0 $ and $ z<0 $ limits. Therefore, we have 
+\begin{align}
+\int_{C_1}\mathrm{d}\beta =\int_{-k}^k\mathrm{d}\beta +\oint_{\beta_0}\mathrm{d}\beta -\oint_{-\beta_0}\!\!\mathrm{d}\beta,
+\end{align}
+where the first integral yield the radiation mode contribution and the last two terms yield the guided mode contribution in two respective propagation directions. When we calculate the decay rates or phase shift due to the presence of atoms, we can use this decomposition relationship of integrals. 
 
 
 
