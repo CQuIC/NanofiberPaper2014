@@ -131,15 +131,16 @@
 \maketitle
 
 \section{Introduction}
+\todo[inline]{Literature reviewing and story telling.}
 
 \bigskip
-\textcolor{blue}{Motivations: quantum data bus based on nanofiber trapped atomic systems; benefit from the advantages of the dispersive regime; connections to some existing theories; sensitivity of polarization spectroscopy...}
+\textcolor{blue}{Motivations: theories not covered by other papers; quantum data bus based on nanofiber trapped atomic systems; benefit from the advantages of the dispersive regime; connections to some existing theories; sensitivity of polarization spectroscopy...}
 
 
 
 
 \section{Phase shift and polarization transformation of the guided modes of a nanofiber in presence of an atom}
-The light-atom interaction Hamiltonian can be defined in terms of the atomic angular momentum operator $\hat{\mathbf{F}}$ and the photonic Stokes vector operator $ \hat{\mathbf{S}}$. In general, the evolution operator can be given by
+The light-atom interaction Hamiltonian can be defined in terms of the atomic angular momentum operator $\hat{\mathbf{F}}$ and the photonic Stokes vector operator $ \hat{\mathbf{S}}$. In general, the evolution operator can be given by\todo{This should be changed based on the long paper.}
 \begin{align}
 \hat{U}(\tau)&=e^{i\chi \mathbin{\color{red}{\hat{\mathbf{S}}}} \cdot \hat{\mathbf{F}}}.
 \end{align}
@@ -162,7 +163,7 @@ The Faraday effect does not change the helicity of the polarized light. In gener
 \end{align}
 where the rotation angle along the $i$-axis is $\Theta_i \propto N_A\left( \frac{\sigma_0}{A}\right) \left(\frac{\Gamma}{2\Delta}\right)$ with effective atom number $N_A$, on-resonance scattering cross section $\sigma_0$, effective mode area $A$ which is inversely proportional to the mode square of the normalized electric field, atomic decay rate $\Gamma$ and the detuning $\Delta$. The rotation along the $S_1$ or $S_2$ axes yields the birefringence effect for the light. 
 
-\textcolor{red}{Maybe a figure to show the Poincare sphere and the Faraday/birefringence effects here.}
+\missingfigure{Maybe a figure to show the Poincare sphere and the Faraday/birefringence effects here.}
 
 For a given detuning and atom species, the effective atom number, $N_A$, and the optical depth per atom, $ OD=\sigma_0/A$, determines the rotation angle and hence the coupling strength between the joint systems. There have been a huge amount of efforts to enhance the atom-light interaction strength using the atom trapping configuration in free-space or vacuum~[\textcolor{red}{Refs}]. The problem for the vacuum trapping configuration is that the effective atom number $N_A$ is positively correlated with the effective mode area, and hence the total optical depth, $N_A\left( \frac{\sigma_0}{A}\right)$, is limited to some finite value around $50\sim 100$, typically with $10^6$ atoms. The nanofiber trapped atomic system, however, decouples the correlation between the effective atom number and the effective mode area. Each atom has the same amount of effective mode area, and experiences the same strength of field. Moreover, the evanescent probing field of the nanofiber where the atoms are trapped can be very strong compared to the vacuum trapping configuration due to the weak confinement of the nanofiber with a sub-wavelength diameter. With about $2000$ atoms, it is possible to achieve a total optical depth of $200$ as will be shown later. All of these factors above makes the nanofiber a promising platform for atom-light interfaces with strong coupling strength. 
 
@@ -194,7 +195,7 @@ Each column can be expressed as
 \begin{align}\label{eq:GFcolumneq}
 \left[ -\nabla\times\nabla\times + n^2\frac{\omega^2}{c^2} \right] \mathbf{G}_i(\mathbf{r},\mathbf{r}') &= \mathbf{e}_i\delta(\mathbf{r}-\mathbf{r}'), 
 \end{align}
-where the subscription $ i=r\!_\perp,\phi,z $ denotes the coordinate components. Compared with Equ.~\ref{eq:Maxwellwithsource2}, one can find that each column of the dyadic function is equivalent to the electric filed solution in Equ.~\ref{eq:Maxwellwithsource2} with a dipole source of $-\frac{\mathbf{e}_i}{4\pi k^2}$. Therefore, one can solve the dyadic Green function by solving the radiation problem from a dipole source satisfying the boundary condition of the nanofiber.
+where the subscription $ i=r\!_\perp,\phi,z $ denotes the coordinate components. Compared with Equ.~\eqref{eq:Maxwellwithsource2}, one can find that each column of the dyadic function is equivalent to the electric filed solution in Equ.~\eqref{eq:Maxwellwithsource2} with a dipole source of $-\frac{\mathbf{e}_i}{4\pi k^2}$. Therefore, one can solve the dyadic Green function by solving the radiation problem from a dipole source satisfying the boundary condition of the nanofiber.
 
 Once we obtain the dyadic Green function of the nanofiber system, the total electric field with an input field $\mathbf{E}_0(\br)$ and in presence of a dipole source $\mathbf{d}(\br')$ positioned at $\br'$ can be given by
 \begin{align}
@@ -206,7 +207,7 @@ The Born approximation has been used in the last step, which should be a good ap
 
 Since the Maxwell equation of a bare fiber has a similar form to the time-independent Schrodinger equation, one can reference to the division of bound and scattering problems of the Schrodinger equation to define guided and radiation modes according to the value of the propagation constant $ \beta $. If $ n_2^2k^2<\beta^2<n_1^2k^2 $ with $ k=\omega/c $, the propagating mode of the fiber described by $ \beta $ is called a guided mode. If $ \beta^2<n_2^2k^2 $, the corresponding mode is called a radiation mode. There are finite guided modes with discrete $ \beta $ values for a given nanofiber; yet, radiation modes have continuous $ \beta $ and are countless. Correspondingly, the dyadic Green function can be decomposed into guided mode components and radiation mode components. Details regarding calculating the radiation and guided components for the fields and hence the dyadic Green functions are given in Appendix~(\ref{app:fieldcalculation}).   
 
-For our problem, we only care about the guided mode contributions which are the dominate components detected at the end of a long nanofiber (a few centimeters long). We are interested in the single mode fibers for this paper. The only allowed guided mode for a single-mode fiber is called \textit{HE11} mode which has degeneracies of two propagating directions and two polarization patterns. One can show that the dyadic Green function for the guided modes can be written as \textcolor{red}{(Check the factor of 2 from this equation.)}
+For our problem, we only care about the guided mode contributions which are the dominate components detected at the end of a long nanofiber (a few centimeters long). We are interested in the single mode fibers for this paper. The only allowed guided mode for a single-mode fiber is called \textit{$\mathrm{HE}_{11}$} mode which has degeneracies of two propagating directions and two polarization patterns. One can show that the dyadic Green function for the guided modes can be written as \textcolor{red}{(Check the factor of 2 from this equation.)}
 \begin{align}
 \mathbf{G}_g(\br,\br') = -\frac{i\mathbin{\color{blue}{n_g}}}{4k_0} \sum_{m,f=\pm 1} \mathbf{u}_{\mu}(r\!_\perp)\mathbf{u}^*_{\mu}(r_{\!\perp}^\prime)e^{if\beta_0(z-z')+im(\phi-\phi')}.
 \end{align}
@@ -242,7 +243,7 @@ where the orthogonality relationship of the fiber modes had been used:
 \Leftrightarrow \int_0^{2\pi}\!\!\!\!\! \mathrm{d}\phi\!\! \int_0^\infty\!\!\!\! r\!_\perp \mathrm{d}r\!_\perp  n^2(r\!_\perp) \mathbf{u}_{m}(r\!_\perp )\!\cdot\!\mathbf{u}_{m'}^*(r\!_\perp )& e^{i(f\!-\!f')\beta z+i(m\! -\! m')\phi}  =\delta_{mm'}e^{i(f\!-\!f')\beta z} \label{eq:orthutrans}.
 \end{align}
 
-The output forwarding $ m=1 $ HE11 mode component is then given by
+The output forwarding $ m=1 $ $\mathrm{HE}_{11}$ mode component is then given by
 \begin{align}
 \mathbf{E}_+(\br) &= (1+C_{11})E_0\mathbf{u}_{1}^{1} (\br)\\
 &\approx \exp\left[i\pi k_0 n_g\alpha  | \mathbf{u}_1^1(r'_{\!\perp})|^2 \right] E_0\mathbf{u}_{1}^{1} (\br)\\
@@ -278,13 +279,13 @@ Notice that, the phase shift for an atom in vacuum can be given in a similar for
 \begin{align}
 \delta\phi^{vac} &= 2\pi \frac{\omega_0}{cA} \Re[\alpha] |\mathbf{u}_{00}(\br')|^2 =  2\pi \frac{\omega_0}{c A^{vac'}_{e\!f\!f}} \Re[\alpha]=-\frac{1}{A} \sigma_0 |\mathbf{u}_{00} (r'_{\!\perp})|^2 \frac{\Gamma_{vac}}{4\Delta},
 \end{align}
-where $\mathbf{u}_{00}(\br')  $ is the TEM00 mode of a Gaussian laser field at the atom position, $ A=\frac{\pi W_0^2}{2} $ is the mode area of the Gaussian beam with wist $ W_0 $. Hence, the relative strength of phase shift due to the presence of a nanofiber versus vacuum can be given by
+where $\mathbf{u}_{00}(\br')  $ is the $\mathrm{TEM}_{00}$ mode of a Gaussian laser field at the atom position, $ A=\frac{\pi W_0^2}{2} $ is the mode area of the Gaussian beam with wist $ W_0 $. Hence, the relative strength of phase shift due to the presence of a nanofiber versus vacuum can be given by
 \begin{align}
 \frac{\delta\phi^{nano}}{\delta\phi^{vac}} &=\frac{A_{e\!f\!f}^{vac'}}{A_{e\!f\!f}^{11}}= \frac{A}{2} \!n_g\! \frac{|\mathbf{u}_1(r_\perp^{nano'})|^2}{|\mathbf{u}_{00}(r_\perp^{vac'})|^2}.
 \end{align}
 In the vacuum case, the strongest mode is given by $ |\mathbf{u}_{00}(r_\perp^{vac'})|=1 $ when the atom is placed at the center of the beam waist. 
 
-\textcolor{red}{Figure for the enhancement comparison.}
+\missingfigure{Figure for the enhancement comparison.}
 
 
 
@@ -485,7 +486,7 @@ By mathematical definition, $\mathrm{Im}[\mathbf{G}^{*}(\br',\br')]$ is positive
 \begin{align}
 \mathrm{Im}[\mathbf{G}^{*}(\br',\br')] &= \sum_{i=1,2,3} \mathbin{\color{red}{g_i}}\hat{\mathbf{v}}_i\hat{\mathbf{v}}_i,\,\text{with}\, g_i>0.
 \end{align}
-$\hat{\mathbf{v}}_i$ form the principal axes of the decay rate. The principal axes indicate the dipole orientations along which the interference bwteen the free dipole radiation and the reflected field (equivalent to the radiation from the image dipole) is most constructive and destructive.   
+$\hat{\mathbf{v}}_i$ form the principal axes of the decay rate. The principal axes indicate the dipole orientations along which the interference between the free dipole radiation and the reflected field (equivalent to the radiation from the image dipole) is most constructive and destructive.   
 \begin{align}
 \Gamma &= C(\omega)\sum_i g_i(\hat{\mathbf{v}}_i\cdot \boldsymbol{\rho}\cdot \hat{\mathbf{v}}_i) 
 = \sum_i \mathbin{\color{blue}{(d'_i)^2}} \mathbin{\color{red}{g_i}} \\
@@ -510,9 +511,9 @@ Example: completely mixed state decay rate calculation:
 This is equivalent to assume the dipole is uniformly pointing to any direction, and hence
 $\Gamma = \int \frac{\mathrm{\Omega}}{4\pi}\Gamma(\theta,\phi)=\frac{1}{3}(\Gamma_1+\Gamma_2+\Gamma_3)$.
 
-\textcolor{red}{Some plots here.}
+\missingfigure{Some plots for emission surfaces here.}
 
-The phase shift is proportional to the time integral of the path on the emission rate surface. The range of the decay rates determines the achievable phase shift in a unit time. However, the emission rate surface for the vacuum case is a uniform sphere and the corresponding phase shift in a given time is a constant independent from the orientation of the dipole with a scalar atomic polarizability. Therefore, it is possible to use the scalar atomic polarizability to realize a wide controlable phase shift range in the off-resonance regime that the vacuum configuration can hardly achieve. 
+The phase shift is proportional to the time integral of the path on the emission rate surface. The range of the decay rates determines the achievable phase shift in a unit time. However, the emission rate surface for the vacuum case is a uniform sphere and the corresponding phase shift in a given time is a constant independent from the orientation of the dipole with a scalar atomic polarizability. Therefore, it is possible to use the scalar atomic polarizability to realize a wide controllable phase shift range in the off-resonance regime that the vacuum configuration can hardly achieve. 
 
 
 \subsection{Interference due to a one-sided or two-sided atom chain}
@@ -531,7 +532,7 @@ X.Q. would like to particularly thank Ninnat Dangniam, Tzu-Cheng Wu and Matthew 
 
 \appendix
 \section{Radiation fields from an atom close to a nanofiber}\label{app:fieldcalculation}
-As discussed in section~\ref{sec:GFmethod}, the 9 elements of a dyadic electric Green function is proportional to the local electric field components due to the radiation from an electric dipole orientated in some basis directions. The spontaneous radiation field components can be calculated through decomposing the field into reflected and transmitted field components and matching up the boundary conditions of the nanofiber which can be treated as an infinitely long cylindrical dielectric medium. The detailed calculations have been conducted by Nha, Klimov and others in earlier publications~\cite{Nha1997,Klimov2004}. We summarize some of those results in this section. 
+As discussed in section~\ref{sec:GFmethod}, the 9 elements of a dyadic electric Green function is proportional to the local electric field components due to the radiation from an electric dipole orientated in some basis directions. The spontaneous radiation field components can be calculated through decomposing the field into reflected and transmitted field components and matching up the boundary conditions of the nanofiber which can be treated as an infinitely long cylindrical dielectric medium. The detailed calculations have been conducted by Nha, Klimov and others in their earlier publications~\cite{Nha1997,Klimov2004}. We summarize some of those results in this section. 
 
 One can separate the electric and magnetic fields into free-dipole radiation, reflected and transmitted parts. For example, the electric field can be written as 
 \begin{align}
@@ -572,7 +573,7 @@ In this case, we only need to calculate the longitudinal components (the $z$-com
 \end{align}
 \end{subequations}
 We use Gauss units in this paper, and assume the material of the nanofiber is non-magnetic, and hence $ 
-\boldsymbol{\mathcal{B}}= \mu\boldsymbol{\mathcal{H}}\approx \boldsymbol{\mathcal{H}} $. We have also defined the transverse decay constant inside of the nanofiber, $ h $, by $h^2=n_1^2k-\beta^2$. Similarly, one can define the transverse decay constant outside of the nanofiber, $ p $, by $ p^2=n_2^2k-\beta^2=k^2-\beta^2 $.
+\boldsymbol{\mathcal{B}}= \mu\boldsymbol{\mathcal{H}}\approx \boldsymbol{\mathcal{H}} $. We have also defined the transverse propagation constant inside of the nanofiber, $ h $, by $h^2=n_1^2k-\beta^2$. Similarly, one can define the transverse propagation constant outside of the nanofiber, $ p $, by $ p^2=n_2^2k-\beta^2=k^2-\beta^2 $.
 
 Now that the longitudinal components of the electrical and magnetic fields can be expanded as Fourier transformations over the $ \beta $ space,
 \begin{subequations}\label{ET0Rexpand}
@@ -655,7 +656,7 @@ By using the boundary conditions at $ r\!_\perp=a $ and Equ.~\ref{Etotalfiber} t
 \mathcal{E}_{\phi}(r\!_\perp =a^> ) = \mathcal{E}_{\phi}(r\!_\perp =a^< ),\\
 \mathcal{B}_{\phi}(r\!_\perp =a^> ) = \mathcal{B}_{\phi}(r\!_\perp =a^< ),
 \end{align}
-where $ a^< $ and $ a^> $ denote the boundaries at the sides less and larger than $ a $, and the connections between field components (Equ.(\ref{EHzgauss})), we can obtain all unknown coefficients. To summarize, we have~\cite{Klimov2004}
+where $ a^< $ and $ a^> $ denote the boundaries at the sides less and larger than $ a $, and the connections between field components (Equ.~\eqref{EHzgauss}), we can obtain all unknown coefficients. To summarize, we have~\cite{Klimov2004}
 \begin{align}
 a_{m\beta} &= \frac{na}{P^2+QR},\\
 b_{m\beta} &= \frac{nb}{P^2+QR},\\
@@ -680,7 +681,7 @@ S &=hpak\left[ pJ_m(ha)\dd{}{(pa)}H_m^{(1)}(pa)-hH_m^{(1)}(pa)\dd{}{(ha)}J_m(ha)
 T &=hpak\left[ pJ_m(ha)\dd{}{(pa)}H_m^{(1)}(pa)-hn_1^2H_m^{(1)}(pa)\dd{}{(ha)}J_m(ha) \right].
 \end{align}
 
-The integral in Equs.~\ref{EHzgauss} should be chosen along path $C_1$ as shown in Fig.~\ref{fig:integralpath} to detour the branch cuts and singularities of integrands. The branch cuts are determined by $ \mathrm{Im}[p],\mathrm{Im}[h]>0 $ to ensure the integrands single-valued and remain on the Riemann sheet where the radiation fields decrease at the infinities. Note that there are only two branch cuts along the $ y $-axis and within $ [-n_2k,n_2k] $ on the $ x $-axis originated from $ \mathrm{Im}[p]=0 $. The $ \mathrm{Im}[h]=0 $ condition does not yield any other new branch cuts where the integrands discontinue. Approximately, we use dashed lines to indicate the branch cuts on the left subplots in Fig.~\ref{fig:integralpath}. There are also poles on the complex plane of $ \beta $, and are located at $ \pm\beta_0 $ characterizing the guided modes (HE11 modes for the single-mode nanofier). We exclude the singularities by closing the integration contours on the upper-half complex plane of $ \beta $ when $ z>0 $ and the lower-half plane when $ z<0 $ to ensure the Fourier transform convergent at infinities. Since the closed contour integrals vanish, the integrals along $ C_1 $ can be transformed to the contour integrals detouring the branch cuts and around the poles which generate the radiation mode and the guided mode components, respectively. We have used the fact that the integrands vanish at infinities (red solid contour paths). Along the contour paths, we choose $ h $ always positive real while $ p $ being negative real in the first and third quadrants and being positive real in the second and forth quadrants. 
+The integral in Equs.~\eqref{EHzgauss} should be chosen along path $C_1$ as shown in Fig.~\ref{fig:integralpath} to detour the branch cuts and singularities of integrands. The branch cuts are determined by $ \mathrm{Im}[p],\mathrm{Im}[h]>0 $ to ensure the integrands single-valued and remain on the Riemann sheet where the radiation fields decrease at the infinities. Note that there are only two branch cuts along the $ y $-axis and within $ [-n_2k,n_2k] $ on the $ x $-axis originated from $ \mathrm{Im}[p]=0 $. The $ \mathrm{Im}[h]=0 $ condition does not yield any other new branch cuts where the integrands discontinue. Approximately, we use dashed lines to indicate the branch cuts on the left subplots in Fig.~\ref{fig:integralpath}. There are also poles on the complex plane of $ \beta $, and are located at $ \pm\beta_0 $ characterizing the guided modes ($\mathrm{HE}_{11}$ modes for the single-mode nanofiber). We exclude the singularities by closing the integration contours on the upper-half complex plane of $ \beta $ when $ z>0 $ and the lower-half plane when $ z<0 $ to ensure the Fourier transform convergent at infinities. Since the closed contour integrals vanish, the integrals along $ C_1 $ can be transformed to the contour integrals detouring the branch cuts and around the poles which generate the radiation mode and the guided mode components, respectively. We have used the fact that the integrands vanish at infinities (red solid contour paths). Along the contour paths, we choose $ h $ always positive real while $ p $ being negative real in the first and third quadrants and being positive real in the second and forth quadrants. 
 
 \begin{figure}
 \begin{minipage}{.91\linewidth}
@@ -700,14 +701,117 @@ The integral in Equs.~\ref{EHzgauss} should be chosen along path $C_1$ as shown 
 \begin{align}
 \int_{C_1}\mathrm{d}\beta =\int_{-k}^k\mathrm{d}\beta +\oint_{\beta_0}\mathrm{d}\beta -\oint_{-\beta_0}\!\!\mathrm{d}\beta,
 \end{align}
-where the first integral yield the radiation mode contribution and the last two terms yield the guided mode contribution in two respective propagation directions. When we calculate the decay rates or phase shift due to the presence of atoms, we can use this decomposition relationship of integrals. 
+where the first integral yield the radiation mode contribution and the last two terms yield the guided mode contribution in two respective propagation directions. When we calculate the decay rates or phase shift due to the presence of atoms, we can use this decomposition relationship of integrals. Notice that, the guided mode contribution part should only include the $ m=\pm 1 $ $\mathrm{HE}_{11}$ modes when summing over mode index $ m $ for a single-mode nanofiber. 
 
 
 
-\section{Group index of refraction of a single-mode nanofiber}
-Expression of $ n_g $ for the HE11 mode.
+\section{Group index of refraction and mode functions of the fundamental guided modes}
+The longitudinal propagation constant $\beta$ of the fundamental $\mathrm{HE}_{11}$ guided mode is determined by the fiber eigenvalue equation~\cite{LeKien2005}
+\begin{align}
+f(h,q,k,\beta) &=0,
+\end{align}
+where
+\begin{align}
+f(h,q,k,\beta) &=\frac{J_0(ha)}{haJ_1(ha)}+\frac{n_1^2+n_2^2}{2n_1^2}\frac{K_1^\prime(qa)}{qaK_1(qa)}-\frac{1}{h^2a^2} \\
+&+\left\{\left[\frac{n_1^2-n_2^2}{2n_1^2}\frac{K_1^\prime(qa)}{qaK_1(qa)} \right]^2 +\frac{\beta^2}{n_1^2k^2}\left(\frac{1}{q^2a^2}+\frac{1}{h^2a^2} \right)^2 \right\}^{1/2}
+\end{align}
+and the transverse propagation parameters $h=\sqrt{n_1^2k^2-\beta^2}$ and $q=\sqrt{\beta^2-n_2^2k^2}=\sqrt{\beta^2-k^2}$. $J_n$ and $K_n$ stand for the Bessel functions of the first kind and the modified Bessel functions of the second kind, respectively. 
 
-Frequency stability.
+We differentiate the fiber eigenvalue equation above with respect to $ \beta $ on both sides, and obtain
+\begin{align}
+\dd{f}{\beta} &= \pp{f}{h} \left(\pp{h}{k}\dd{k}{\beta}+\pp{h}{\beta} \right) + \pp{f}{q}\left(\pp{q}{k}\dd{k}{\beta}+\pp{q}{\beta} \right) +\pp{f}{k}\dd{k}{\beta}+\pp{f}{\beta}=0
+\end{align}
+Therefore, the group index of refraction of the fundamental modes of the nanofiber can be given by
+\begin{align}
+ n_g &= \dd{\beta}{k} = -\frac{\pp{f}{h}\pp{h}{k}+\pp{f}{q}\pp{q}{k}+\pp{f}{k}}
+{\pp{f}{h}\pp{h}{\beta}+\pp{f}{q}\pp{q}{\beta}+\pp{f}{\beta}}.
+\end{align}
+
+\todo[inline]{Frequency stability, linearity and such of the group index of refraction.}
+
+The fundamental mode functions, $\mathbf{u}^{(\mu)}(r\!_\perp,\phi,z)$, of the electric components of the fiber~\cite{LeKien2005,Lacroute2012} can be separated into $r\!_\perp-$, $\phi-$ and $z-$ dependent parts, and are characterized by the mode index $\mu=(\omega,f,\xi)$, where $f=\pm 1$ indicates forward and backward propagating directions and $\xi $ indicates the polarization state of the mode. For a quasicircularly polarized fundamental mode, we use $\xi=m=\pm $ to indicate the counterclockwise and clockwise rotations, respectively; for a quasilinearly polarized fundamental mode, we usually use $\xi=\phi_0$ to indicate the polarization axis is rotated by $\phi_0$ from the $x$-axis; specially, we use $\xi=H$ or $V$ when the quasilinear polarization axis is along the $x$-axis or $y$-axis, respectively. For the circularly polarized case, the fundamental mode can be written as 
+\begin{align}
+\mathbf{u}^{(\mu)}(r\!_\perp,\phi,z) &=u^{(\mu)}_{r\!_\perp}(r\!_\perp) e^{if\beta z+im\phi }\hat{r}\!_\perp +u^{(\mu)}_{\phi}(r\!_\perp) e^{if\beta z+im\phi } \hat{\phi} +u^{(\mu)}_{z}(r\!_\perp)e^{if\beta z+im\phi }\hat{z}\\
+&=u_{r\!_\perp}(r\!_\perp) e^{if\beta z+im\phi }\hat{r}\!_\perp + m u_{\phi}(r\!_\perp) e^{if\beta z+im\phi }\hat{\phi} + f u_z (r\!_\perp) e^{if\beta z+im\phi }\hat{z},
+\end{align}
+where the forwarding, counterclockwise rotating guided mode components, $\mathbf{u}(r\!_\perp)$, are determined, for $r\!_\perp<a$, by
+\begin{subequations}
+\label{urtcrla}
+\begin{align}
+u_{r\!_\perp}(r\!_\perp) &=iA\frac{\beta_0}{2h} \left[ (1-s)J_0(hr\!_\perp)-(1+s)J_2(hr\!_\perp) \right]\\
+u_\phi(r\!_\perp) &=  -mA \frac{\beta_0}{2h} \left[ (1-s)J_0(hr\!_\perp) +(1+s)J_2(hr\!_\perp) \right] \\
+u_z(r\!_\perp) &= fA J_1(hr\!_\perp),
+\end{align}
+\end{subequations}
+and, for $ r_\perp>a $, by
+\begin{subequations}
+\label{urtcrga}
+\begin{align}
+u_{r\!_\perp}(r\!_\perp) &=iA\frac{\beta_0}{2h}\frac{J_1(ha)}{K_1(qa)} \left[ (1-s)K_0(qr\!_\perp)+(1+s)K_2(qr\!_\perp) \right]\\
+u_\phi(r\!_\perp) &=  -mA \frac{\beta_0}{2h} \frac{J_1(ha)}{K_1(qa)} \left[ (1-s)K_0(qr\!_\perp) - (1+s)K_2(qr\!_\perp) \right] \\
+u_z(r\!_\perp) &= fA \frac{J_1(ha)}{K_1(qa)} K_1(qr\!_\perp),
+\end{align}
+\end{subequations}
+with
+\begin{align}
+s &= \left[\frac{1}{(ha)^2}+ \frac{1}{(qa)^2} \right] \left[ \frac{J_1'(ha)}{haJ_1(ha)} + \frac{K'_1(qa)}{qaK_1(qa)} \right],\\
+h &= \sqrt{k^2 n_1^2-\beta_0^2}.
+\end{align}
+The normalization factor, $A$, is determined by the normalized energy that 
+\begin{align}
+1 &= \int_0^{2\pi} \!\!\mathrm{d} \phi \int_0^\infty\!\!\mathrm{d}r\!_\perp r\!_\perp\,  n^2(\br\!_\perp)|\boldsymbol{\mathcal{E}}^g(\br\!_\perp)|^2 = 2\pi A^2 a^2 (n_1^2P_1 + n_2^2P_2),
+\end{align}
+where the stored energy distribution factors are given by
+\begin{align}
+\!\!\!\!\! P_1
+&= \frac{\beta^2}{4h^2}\!\left\{(1\!-\! s)^2\!\left[J_0^2(ha)\!+\! J_1^2(ha) \right] \!+\!(1\!+\!s)^2\!\left[J_2^2(ha)\!-\!J_1(ha)J_3(ha) \right]\right\}\nonumber\\
+&\quad +\frac{1}{2}\left[J_1^2(ha)-J_0(ha)J_2(ha) \right] \\
+\!\!\!\!\! P_2
+&= \frac{\beta^2J_1^2(ha)}{4q^2K_1^2(qa)}\!\left\{\phantom{\frac{1}{1}}\!\!\!\!(1\!-\!s)^2\!\left[K_1^2(qa)\!-\!K_0^2(qa) \right]\right.\nonumber\\
+&\quad\left. \!+(1\!+\!s)^2\!\!\left[K\!_1\!(qa)K\!_3\!(qa)\!-\! K_2^2\!(qa) \right]\!+\!\frac{2q^2}{\beta^2}\!\!\left[K\!_0\!(qa)K\!_2\!(qa)\!-\!K_1^2\!(qa) \right]  \right\}.
+\end{align}
+Using this basis, the electric part of a guided field with quasicircularly propagating mode index $\mu=(\omega f m)$ can be written as 
+\begin{align}
+E^{(\mu)}(r\!_\perp,\phi,z,t) &=E_0(u_{r\!_\perp}(r\!_\perp) e^{if\beta z+im\phi-i\omega t }\hat{r}\!_\perp + m u_{\phi}(r\!_\perp) e^{if\beta z+im\phi-i\omega t }\hat{\phi} + f u_z (r\!_\perp) e^{if\beta z+im\phi-i\omega t }\hat{z}).
+\end{align}
+By using the power propagating inside and outside the fiber can be given in terms of the time averaged Poynting vector along the propagation direction, $\left< S_z \right>$, by
+\begin{align}
+P_{in} &= \int_0^{2\pi} \mathrm{d}\phi \int_0^a \left< S_z \right> r\!_\perp \mathrm{d}r\!_\perp\\
+P_{out} &= \int_0^{2\pi} \mathrm{d}\phi \int_a^\infty \left< S_z \right> r\!_\perp \mathrm{d}r\!_\perp,
+\end{align}
+and the total power $ P=P_{in}+P_{out} $, one can show that the normalization constant $ E_0 A $ reads
+\begin{align}\label{eq:EA}
+E_0 A=\sqrt{\frac{4\mu_0\omega P}{\pi a^2 \beta_0}}\left(D_{in} + D_{out} \right)^{-1/2},
+\end{align}
+where
+\begin{align}
+D_{in} &= (1-s)\left[ 1+(1-s)\frac{\beta_0^2}{h^2}\right] \left(J_0^2(ha) + J_1^2(ha) \right) \nonumber\\
+&\quad + (1+s)\left[ 1+(1+s)\frac{\beta_0^2}{h^2}\right] \left(J_2^2(ha)- J_1(ha)J_3(ha) \right)\\
+D_{out} &= \frac{J_1^2(ha)}{K_1^2(qa)}\left\{ (1-s)\left[ 1-(1-s)\frac{\beta_0^2}{q^2}\right] \left(K_0^2(qa) - K_1^2(qa) \right)\right. \nonumber\\
+&\quad \left. + (1\!+\! s)\left[ 1\!-\! (1\!+\! s)\frac{\beta_0^2}{q^2}\right] \left(K_2^2(qa)\! -\! K_1(qa)K_3(qa) \right) \right\}.
+\end{align}
+
+
+
+For a quasilinearly polarized fundamental guided mode, the electric part of the mode can be written as 
+\begin{align}
+u^{(\omega f \phi_0)}(r\!_\perp,\phi,z) &= \frac{1}{\sqrt{2}} \left(u^{(\omega f +)}e^{-i\phi_0} +u^{(\omega f -)}e^{i\phi_0} \right)\\
+&= \sqrt{2}\left[u_{r\!_\perp}(r\!_\perp)\cos(\phi-\phi_0)\hat{\mathbf{r}}\!_\perp + iu_\phi(r\!_\perp)\sin(\phi-\phi_0)\hat{\boldsymbol{\phi}} \right. \nonumber \\
+&\quad\quad \left. + fu_z(r\!_\perp)\cos(\phi-\phi_0)\hat{\mathbf{z}} \right]e^{if\beta z}.
+\end{align}
+One can write down an arbitrary quasilinearly polarized electric field in the form similar to the quasicircularly polarized case with $E_0A$ satisfying the same relationship defined in Equ.~\eqref{eq:EA}. 
+
+Particularly, when $\phi_0=0$ and $\pi/2$, we obtain the $H$ and $V$ fundamental modes as given by
+\begin{align}
+u^{(\omega f H)}(r\!_\perp,\phi,z)
+&= \sqrt{2}\left[u_{r\!_\perp}(r\!_\perp)\cos(\phi)\hat{\mathbf{r}}\!_\perp + iu_\phi(r\!_\perp)\sin(\phi)\hat{\boldsymbol{\phi}} + fu_z(r\!_\perp)\cos(\phi)\hat{\mathbf{z}} \right]e^{if\beta z}\\
+u^{(\omega f V)}(r\!_\perp,\phi,z)
+&= \sqrt{2}\left[u_{r\!_\perp}(r\!_\perp)\sin(\phi)\hat{\mathbf{r}}\!_\perp - iu_\phi(r\!_\perp)\cos(\phi)\hat{\boldsymbol{\phi}}  + fu_z(r\!_\perp)\sin(\phi)\hat{\mathbf{z}} \right]e^{if\beta z}.
+\end{align}
+
+\todo[inline]{To show $v_g=\frac{P}{W}$ using the formulas above?}
+
+
 
 \section{Junk: Effects of the evanescent field and the multilevel structure of the atom}
 In general, 
