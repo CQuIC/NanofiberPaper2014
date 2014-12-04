@@ -263,7 +263,7 @@ where $ A^g_{mf}=1/n_g| \mathbf{u}_m^f(r'_{\!\perp})|^2 $ is the effective $(m,f
 We use the fact that 
 \begin{align}
 \alpha &=-\frac{|d_{eg}|^2}{\hbar \Delta}, \,\, (\Delta=\omega_{\beta}-\omega_{eg})\\
-\Gamma^{g}_{mf} &= 2\pi \frac{|d_{eg}|^2}{\hbar A^g_{mf}}\left(\frac{\omega_0}{v_g} \right)\label{eq:Gammagmf}\\
+\Gamma^{g}_{mf} &= 2\pi \frac{|\mathbf{u}^\mu(\br')\cdot \mathbf{d}_{eg}|^2}{\hbar }\left(\frac{\omega_0}{v_g} \right)= 2\pi \frac{| \mathbf{d}_{eg}|^2}{\hbar A^g_{mf}}\left(\frac{\omega_0}{c} \right)\label{eq:Gammagmf}\\
 \Gamma_{vac} &= \frac{4}{3} \left( \frac{\omega_0}{c}\right)^3 \frac{|d_{eg}|^2}{\hbar}\\
 \sigma_0 &= \frac{3\lambda^2}{2\pi} \equiv \text{resonant cross section}
 \end{align}
@@ -281,77 +281,88 @@ We consider a single mode interact with an atom, the Hamiltonian can be given by
 \end{align}
 where the free field Hamiltonian can be given by
 \begin{align}
-\hat{H}_0 &= \sum_\mu \int \mathrm{d}\beta \hbar \omega_{\beta} \hat{a}^\dagger_\mu(\beta)\hat{a}_\mu (\beta) + \hat{H}_A = \sum_\mu \int \mathrm{d}\omega \hbar \omega \hat{a}^\dagger_\mu(\omega)\hat{a}_\mu (\omega) + \hat{H}_A,
+\hat{H}_0 &= \sum_\mu \int \mathrm{d}\beta \hbar \omega_{\beta} \hat{a}^\dagger_\mu(\beta)\hat{a}_\mu (\beta) + \hat{H}_A = \sum_\mu f\int \mathrm{d}\omega \hbar \omega \hat{a}^\dagger_\mu(\omega)\hat{a}_\mu (\omega) + \hat{H}_A,
 \end{align}
-where $\hat{a}_\mu (\omega)= \sqrt{ \frac{\mathrm{d}\beta}{\mathrm{d}\omega} }\hat{a}_\mu (\beta)=\frac{1}{\sqrt{fv_g}}\hat{a}_\mu (\beta)$. For the two-direction propagating guided modes, we have linearized the frequency as $\omega\approx \omega_0+fv_g(\beta-f\beta_0)$. We consider the atomic Hamiltonian $\hat{H}_A = \frac{\hbar\omega_{eg}}{2}\hat{\sigma}_z$ representing a two-level system. The interaction Hamiltonian is
+where $\hat{a}_\mu (\omega)= \sqrt{\left| \frac{\mathrm{d}\beta}{\mathrm{d}\omega}\right| }\hat{a}_\mu (\beta)=\frac{1}{\sqrt{v_g}}\hat{a}_\mu (\beta)$. For the two-direction propagating guided modes, we have linearized the frequency as $\omega\approx \omega_0+fv_g(\beta-f\beta_0)$. We consider the atomic Hamiltonian $\hat{H}_A = \frac{\hbar\omega_{eg}}{2}\hat{\sigma}_z$ representing a two-level system. The interaction Hamiltonian is
 \begin{align}
 \hat{H}_{int} &= -\hat{\mathbf{d}}\cdot \hat{\mathbf{E}}=-\hat{\mathbf{d}}_{eg}\cdot \hat{\mathbf{E}}^{(+)}(\br')-\hat{\mathbf{d}}_{ge}\cdot \hat{\mathbf{E}}^{(-)}(\br'),
 \end{align}
 where the electric field operator for the guided modes 
 \begin{align}
-\hat{\mathbf{E}}^{(+)}(\br') &= \sum_\mu \sqrt{\frac{\hbar \omega}{v_g}} \hat{a}_\mu (\omega) \mathbf{u}^{(\mu)}(\br\!_\perp) e^{if\beta z},
+\hat{\mathbf{E}}^{(+)}(\br) &= \sum_\mu \int \mathrm{d}\omega\sqrt{\frac{\hbar \omega}{v_g}} \hat{a}_\mu (\omega) \mathbf{u}^{(\mu)}(\br\!_\perp) e^{if\beta z},
 \end{align}
-the coupling strength between the electric dipole and the electric field is measured by
+the coupling strength between the electric dipole and the electric field $\mathbf{u}^{(\mu)}(\br')$ at the dipole position is measured by
 \begin{align}
-\hbar g(\omega) &= \sqrt{\frac{\hbar \omega}{A^g_{mf}c}}|\mathbf{d}_{eg}|
+\hbar g_\mu(\omega) &= \sqrt{\frac{\hbar \omega}{v_g}} \mathbf{d}_{eg}\cdot\mathbf{u}^{(\mu)}(\br') .
 \end{align}
-with effective mode area $A^g_{mf}=\frac{1}{n_g|\mathbf{u}^{(\mu)}(\br')|^2}$. 
-
+%with effective mode area $A^g_{mf}=\frac{1}{n_g|\mathbf{u}^{(\mu)}(\br')|^2}$. 
+The atomic rising dipole operator $\hat{\mathbf{d}}_{eg}=\mathbf{d}_{eg}\hat{\sigma}_+=\bra{e}\mathbf{D}\ket{g}\hat{\sigma}_+$.
 
 The Heisenberg equations of motion can then be given by
 \begin{align}
-\dt{\hat{a}} &= -i\omega \hat{a} -ig(\omega) \hat{\sigma}_-\label{eq:da}\\
-\dt{\hat{\sigma}_-} &= -i\omega_{eg} \hat{\sigma}_- +i\int_0^{\infty}\mathrm{d}\omega g(\omega) \hat{\sigma}_z \hat{a}(\omega).\label{eq:dsigma} 
+\dt{\hat{a}_\mu} &= -if\omega \hat{a}_\mu +ig_\mu^*(\omega) \hat{\sigma}_-\label{eq:da}\\
+\dt{\hat{\sigma}_-} &= -i\omega_{eg} \hat{\sigma}_- -i\sum_\mu \int_0^{\infty}\mathrm{d}\omega g_\mu(\omega) \hat{\sigma}_z \hat{a}_\mu(\omega).\label{eq:dsigma} 
 \end{align}
-A formal solution of the first equation above is
+We have used the commutator that $[\hat{\sigma}_-,\hat{\sigma}_+ ]=-\hat{\sigma}_z $. A formal solution of the first equation above is
 \begin{align}\label{eq:aout1}
-\hat{a}(\omega,t)\equiv \hat{a}_{out}(\omega) = \hat{a}_{in}(\omega) e^{-i\omega(t-t_0)} -ig(\omega) \int_{t_0}^t \mathrm{d} t' e^{-i\omega (t-t')}\hat{\sigma}_-(t'),
+\hat{a}_\mu(\omega,t)\equiv \hat{a}^{out}_\mu(\omega) = \hat{a}^{in}_\mu(\omega) e^{-if\omega(t-t_0)} +ig_\mu^*(\omega) \int_{t_0}^t \mathrm{d} t' e^{-i\omega (t-t')}\hat{\sigma}_-(t'),
 \end{align}
-where we have defined $\hat{a}_{in}(\omega)=\hat{a}(\omega, t_0)$. We can substitute the formal solution above into Equ.~\ref{eq:dsigma}, and rewrite
+where we have defined $\hat{a}^{in}_\mu(\omega)=\hat{a}_\mu(\omega, t_0)$. We can substitute the formal solution above into Equ.~\ref{eq:dsigma}, and rewrite
 \begin{align}
-\dt{\hat{\sigma}_-} &= -i\omega_{eg} \hat{\sigma}_- +\int_{t_0}^t \mathrm{d}t' \int_0^\infty \mathrm{d}\omega e^{-i\omega (t-t')} g^2(\omega)\hat{\sigma}_z(t)\hat{\sigma}_-(t') +i\int_0^\infty \mathrm{d}\omega g(\omega) \hat{\sigma}_z(t) \hat{a}_{in}(\omega) e^{-i\omega(t-t_0)}. 
+\dt{\hat{\sigma}_-} &= -i\omega_{eg} \hat{\sigma}_- +\sum_\mu \int_{t_0}^t \mathrm{d}t' \int_0^\infty \mathrm{d}\omega e^{-i\omega (t-t')} |g_\mu(\omega)|^2\hat{\sigma}_z(t)\hat{\sigma}_-(t') \nonumber\\
+&\quad -i\sum_\mu \int_0^\infty \mathrm{d}\omega g_\mu(\omega) \hat{\sigma}_z(t) \hat{a}^{in}_\mu(\omega) e^{-if\omega(t-t_0)}. 
 \end{align}
-In the Markoff approximation that $\int_0^\infty \mathrm{d}\omega e^{-i\omega (t-t')} g^2(\omega)\approx \pi \delta(t-t')g^2(\omega_{eg})$, one can obtain
+In the Markoff approximation that $\int_0^\infty \mathrm{d}\omega e^{-i\omega (t-t')} |g_\mu(\omega)|^2\approx \pi \delta(t-t')|g_\mu(\omega_{eg})|^2$, one can obtain
 \begin{align}
-\dt{\hat{\sigma}_-} &= -i\omega_{eg} \hat{\sigma}_- + \pi g^2(\omega_{eg}) \hat{\sigma}_z(t)\hat{\sigma}_-(t) + i\int_0^\infty \mathrm{d}\omega g(\omega) \hat{a}_{in}(\omega)\hat{\sigma}_z(t) e^{-i\omega (t-t_0)}\\
-&= (-i\omega_{eg}-\frac{\Gamma^g_{mf}}{2})\hat{\sigma}_-(t) +i\int_0^\infty \mathrm{d}\omega g(\omega) \hat{a}_{in}(\omega)\hat{\sigma}_z(t) e^{-i\omega (t-t_0)}, \label{eq:dsigma-t}
+\dt{\hat{\sigma}_-} &= -i\omega_{eg} \hat{\sigma}_- + \mathbin{\color{red}{4}}\pi |g_\mu(\omega_{eg})|^2 \hat{\sigma}_z(t)\hat{\sigma}_-(t) - i\sum_\mu\int_0^\infty \mathrm{d}\omega g_\mu(\omega) \hat{a}^{in}_\mu(\omega)\hat{\sigma}_z(t) e^{-if\omega (t-t_0)}\\
+&= (-i\omega_{eg}-2\Gamma^g_{mf})\hat{\sigma}_-(t) -i\sum_\mu\int_0^\infty \mathrm{d}\omega g_\mu(\omega) \hat{a}^{in}_\mu(\omega)\hat{\sigma}_z(t) e^{-if\omega (t-t_0)}, \label{eq:dsigma-t}
 \end{align}
 where we have used $\hat{\sigma}_z\hat{\sigma}_-=-\hat{\sigma}_- $, and have used the definition of the \textit{one dimensional} decay rate for the guided mode $\mu=(\beta_0,m,f)$ from Equ.~\ref{eq:Gammagmf} as
 \begin{align}
-\Gamma^g_{mf} &= 2\pi g^2(\omega_{eg})= \frac{2\pi|d_{eg}|^2}{\hbar A^g_{mf}}\left( \frac{\omega_{eg}}{v_g}\right). 
+\Gamma^g_{mf} &= 2\pi |g_\mu(\omega_{eg})|^2= \frac{2\pi|\mathbf{u}^\mu(\br')\cdot \mathbf{d}_{eg}|^2}{\hbar }\left( \frac{\omega_{eg}}{v_g}\right)= \frac{2\pi|\mathbf{d}_{eg}|^2}{\hbar A^g_{mf} }\left( \frac{\omega_{eg}}{c}\right). 
 \end{align}
 
 What we are interested in is the frequency response of the guided modes at a given $\omega$. We can use the Fourier transformation relationship that 
 \begin{align}
-\hat{\sigma}_-(t) &= \int \frac{\mathrm{d}\omega}{\sqrt{2\pi}} \hat{\sigma}_-(\omega) e^{i\omega(t-t_0)},
+\hat{\sigma}_-(t) &= \int \frac{\mathrm{d}\omega}{\sqrt{2\pi}} \hat{\sigma}_-(\omega) e^{-i\omega(t-t_0)},
 \end{align}
 and considering the weak saturation case that $\hat{\sigma}_z\approx -1$ or almost all atoms are in the ground state, Equ.~\ref{eq:dsigma-t} becomes
 \begin{align}
--i\omega \hat{\sigma}_-(\omega) &= \left[-i\omega_{eg}-\frac{\Gamma^g_{mf}}{2} \right]\hat{\sigma}_-(\omega) -i\sqrt{2\pi}g(\omega) \hat{a}_{in}(\omega).
+-i\omega \hat{\sigma}_-(\omega) &= \left[-i\omega_{eg}-2\Gamma^g_{mf} \right]\hat{\sigma}_-(\omega) +i\sum_\mu \sqrt{2\pi}g_\mu(\omega) \hat{a}^{in}_\mu(\omega)e^{i(1-f)\omega(t-t_0)}.
 \end{align}
-Therefore, we can obtain the linear repsonse relationship between $\hat{\sigma}_-(\omega)$ and $\hat{a}_{in}(\omega)$ as
+Therefore, we can obtain the linear response relationship between $\hat{\sigma}_-(\omega)$ and $\hat{a}_{in}(\omega)$ as
 \begin{align}\label{eq:sigma-ain}
-\hat{\sigma}_-(\omega) &= \frac{\sqrt{\Gamma^g_{mf}}}{\Delta+i\frac{\Gamma^g_{mf}}{2}}\hat{a}_{in}(\omega),
+\hat{\sigma}_-(\omega) &= -\sum_\mu \frac{\sqrt{2\pi}g_\mu(\omega)e^{i(1-f)\omega(t-t_0)}}{\Delta+i2\Gamma^g_{mf}}\hat{a}^{in}_\mu(\omega),
 \end{align}
-where the detuning $\Delta=\omega-\omega_{eg}$. Similarly, Equ.~\ref{eq:aout1} implies
+where the detuning $\Delta=\omega-\omega_{eg}$. Similarly, Equ.~\ref{eq:aout1} implies the input-output relationship in the frequency domain $(t\gg t_0)$ that
 \begin{align}
-\hat{a}_{out}(\omega ) &= \hat{a}_{in}(\omega) -i\sqrt{\Gamma^g_{mf}}\hat{\sigma}_-(\omega). 
+\hat{a}^{out}_\mu(\omega ) &= \hat{a}^{in}_\mu(\omega) +i\mathbin{\color{red} \sqrt{2\pi}}g_\mu^*(\omega)\hat{\sigma}_-(\omega). 
 \end{align}
 By substituting Equ.~\ref{eq:sigma-ain} into the equation above, we obtain the input-output relationship of the guided modes due to an atom close to the nanofiber as
 \begin{align}
-\hat{a}_{out}(\omega) &= \hat{a}_{in} (\omega) -i\frac{\Gamma^g_{mf}}{\Delta+i\frac{\Gamma^g_{mf}}{2}}\hat{a}_{in}(\omega)= \left(\frac{\Delta-i\frac{\Gamma^g_{mf}}{2}}{\Delta+i\frac{\Gamma^g_{mf}}{2}} \right)\hat{a}_{in}(\omega).
+\hat{a}^{out}_\mu(\omega) &= \hat{a}^{in}_\mu (\omega) -i\sum_{\mu'}\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)e^{i(1-f')\omega(t-t_0)}}{\Delta+i2\Gamma^g_{m'f'}}\hat{a}^{in}_{\mu'}(\omega)=\sum_{\mu'}S^\mu_{\mu'}\hat{a}^{in}_{\mu'}(\omega),
 \end{align}
-In abscence of reflection, the transmitted guided mode has a phase shift effect that 
+where the scattering matrix elements
+\begin{align}
+S^\mu_{\mu'} &\equiv S^{mf}_{m'f'}=\delta_{mm'}\delta_{ff'}-i\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)e^{i(1-f')\omega(t-t_0)}}{\Delta+i2\Gamma^g_{m'f'}}.
+\end{align}
+
+For the $m=1,f=1$ mode, for instance, if we ignore the portions scattered to all the other modes, we will have 
+\begin{align}
+\hat{a}_{\mu}^{out}(\omega) &\approx \left[ 1- i\frac{\Gamma^g_{mf}}{\Delta+i2\Gamma^g_{mf}}\right] \hat{a}^{in}_\mu(\omega) \\
+&= \left(\frac{\Delta+i\Gamma^g_{mf}}{\Delta+i2\Gamma^g_{mf}} \right)\hat{a}^{in}_\mu(\omega).
+\end{align}
+In absence of scattering, the transmitted guided mode has a phase shift effect that 
 the transmission coefficient is
 \begin{align}
 t(\omega) &= e^{i\delta \phi(\omega)},
 \end{align}
-where the phase shift is 
+where the phase shift in the dispersive regime ($\Delta\gg \Gamma^g_{mf}$) is 
 \begin{align}
-\delta\phi &= -2\tan^{-1}\left(\frac{\Gamma^g_{mf}}{2\Delta} \right)\approx -\frac{\Gamma^g_{mf}}{\Delta}=-2\pi \frac{|d_{eg}|^2}{\hbar\Delta}\frac{\omega}{cA^g_{mf}}=2\pi \frac{\alpha}{A^g_{mf}}\frac{\omega}{c}.
+\delta\phi &\approx -\tan^{-1}\left(\frac{\Gamma^g_{mf}}{\Delta} \right)\approx -\frac{\Gamma^g_{mf}}{\Delta}=-2\pi \frac{|d_{eg}|^2}{\hbar\Delta}\frac{\omega}{cA^g_{mf}}=2\pi \frac{\alpha}{A^g_{mf}}\frac{\omega}{c}.
 \end{align}
 
-\todo[inline]{Considering two-direction propagation?}
+\todo[inline]{Not consistent with the Green function results? The $C_{mf}$ and $S^{mf}_{m'f'}$ matrices and phase shifts...}
 
 
 \subsection{Enhancement compared to the vacuum case}
