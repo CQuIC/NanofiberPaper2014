@@ -140,11 +140,11 @@
 
 
 \section{Phase shift and polarization transformation of the guided modes of a nanofiber in presence of an atom}
-The light-atom interaction Hamiltonian can be defined in terms of the atomic angular momentum operator $\hat{\mathbf{F}}$ and the photonic Stokes vector operator $ \hat{\mathbf{S}}$. In general, the evolution operator can be given by\todo{This should be changed based on the long paper.}
+The light-atom interaction Hamiltonian can be defined in terms of the atomic angular momentum operator $\hat{\mathbf{F}}$ and the photonic Stokes vector operator $ \hat{\mathbf{S}}$~\cite{Deutsch2010a}. For instance, the evolution operator of a Faraday interaction can be given by
 \begin{align}
-\hat{U}(\tau)&=e^{i\chi \mathbin{\color{red}{\hat{\mathbf{S}}}} \cdot \hat{\mathbf{F}}}.
+\hat{U}(\tau)&=e^{i\chi \mathbin{\color{red}{\hat{S}_3}} \cdot \hat{F}_z}.
 \end{align}
-For instance, if we only consider the Faraday rotation case that the Stokes operator only has the $\hat{S}_3$ component, and the initial state of the atom-light system is given by
+Suppose the initial state of the atom-light system is given by
 \begin{align}
 \ket{\Psi(0)} &=\frac{1}{\sqrt{2}}(\ket{\uparrow}+\ket{\downarrow})\mathbin{\color{red}{\ket{\phi_L}}}
 \end{align}
@@ -256,23 +256,103 @@ t=\exp\left[\mathrm{Im}[C_{11}]\right]=\exp\left[ -\pi k_0 n_g \mathrm{Im}[\alph
 and the phase shift is
 \begin{align}
 \delta\phi &= \mathrm{Re}[C_{11}]= \pi \mathrm{Re}[\alpha] \frac{\omega_0}{v_g}  | \mathbf{u}_1^1(r'_{\!\perp})|^2
-= \pi \mathrm{Re}[\alpha] \frac{\omega_0}{cA^{11}_{e\!f\!f}},
+= \pi \mathrm{Re}[\alpha] \frac{\omega_0}{cA^g_{11}},
 \end{align}
-where $ A^{mf}_{e\!f\!f}=1/n_g| \mathbf{u}_m^f(r'_{\!\perp})|^2 $ is the effective $(m,f)$ mode area at the atom position. 
+where $ A^g_{mf}=1/n_g| \mathbf{u}_m^f(r'_{\!\perp})|^2 $ is the effective $(m,f)$ mode area at the atom position. 
 
 We use the fact that 
 \begin{align}
 \alpha &=-\frac{|d_{eg}|^2}{\hbar \Delta}, \,\, (\Delta=\omega_{\beta}-\omega_{eg})\\
-\Gamma^{1D}_{mf} &= 2\pi \frac{|d_{eg}|^2}{\hbar A^{mf}_{e\!f\!f}}\left(\frac{\omega_0}{v_g} \right)\\
+\Gamma^{g}_{mf} &= 2\pi \frac{|d_{eg}|^2}{\hbar A^g_{mf}}\left(\frac{\omega_0}{v_g} \right)\label{eq:Gammagmf}\\
 \Gamma_{vac} &= \frac{4}{3} \left( \frac{\omega_0}{c}\right)^3 \frac{|d_{eg}|^2}{\hbar}\\
 \sigma_0 &= \frac{3\lambda^2}{2\pi} \equiv \text{resonant cross section}
 \end{align}
 the phase shift can be rewritten as
 \begin{align}
-\mathbin{\color{red}{\delta\phi}} &= -\frac{\Gamma^{1\!D}_{11}}{2\Delta} = - \frac{\sigma_0 }{A'_{e\!f\!f}} \frac{\Gamma_{vac}}{8\Delta} = -\frac{c}{v_g} \sigma_0 |\mathbf{u}_1^1 (r'_{\!\perp})|^2 \frac{\Gamma_{vac}}{8\Delta}.
+\mathbin{\color{red}{\delta\phi}} &= -\frac{\Gamma^{g}_{11}}{2\Delta} = - \frac{\sigma_0 }{A^g_{mf}} \frac{\Gamma_{vac}}{8\Delta} = -\frac{c}{v_g} \sigma_0 |\mathbf{u}_1^1 (r'_{\!\perp})|^2 \frac{\Gamma_{vac}}{8\Delta}.
 \end{align}
 
 If there are two input modes, the Faraday and birefringence effects can be analyzed along this line. 
+
+\subsection{Connect to the Heisenberg picture}
+We consider a single mode interact with an atom, the Hamiltonian can be given by
+\begin{align}
+\hat{H} &= \hat{H}_0 + \hat{H}_{int}, 
+\end{align}
+where the free field Hamiltonian can be given by
+\begin{align}
+\hat{H}_0 &= \sum_\mu \int \mathrm{d}\beta \hbar \omega_{\beta} \hat{a}^\dagger_\mu(\beta)\hat{a}_\mu (\beta) + \hat{H}_A = \sum_\mu \int \mathrm{d}\omega \hbar \omega \hat{a}^\dagger_\mu(\omega)\hat{a}_\mu (\omega) + \hat{H}_A,
+\end{align}
+where $\hat{a}_\mu (\omega)= \sqrt{ \frac{\mathrm{d}\beta}{\mathrm{d}\omega} }\hat{a}_\mu (\beta)=\frac{1}{\sqrt{fv_g}}\hat{a}_\mu (\beta)$. For the two-direction propagating guided modes, we have linearized the frequency as $\omega\approx \omega_0+fv_g(\beta-f\beta_0)$. We consider the atomic Hamiltonian $\hat{H}_A = \frac{\hbar\omega_{eg}}{2}\hat{\sigma}_z$ representing a two-level system. The interaction Hamiltonian is
+\begin{align}
+\hat{H}_{int} &= -\hat{\mathbf{d}}\cdot \hat{\mathbf{E}}=-\hat{\mathbf{d}}_{eg}\cdot \hat{\mathbf{E}}^{(+)}(\br')-\hat{\mathbf{d}}_{ge}\cdot \hat{\mathbf{E}}^{(-)}(\br'),
+\end{align}
+where the electric field operator for the guided modes 
+\begin{align}
+\hat{\mathbf{E}}^{(+)}(\br') &= \sum_\mu \sqrt{\frac{\hbar \omega}{v_g}} \hat{a}_\mu (\omega) \mathbf{u}^{(\mu)}(\br\!_\perp) e^{if\beta z},
+\end{align}
+the coupling strength between the electric dipole and the electric field is measured by
+\begin{align}
+\hbar g(\omega) &= \sqrt{\frac{\hbar \omega}{A^g_{mf}c}}|\mathbf{d}_{eg}|
+\end{align}
+with effective mode area $A^g_{mf}=\frac{1}{n_g|\mathbf{u}^{(\mu)}(\br')|^2}$. 
+
+
+The Heisenberg equations of motion can then be given by
+\begin{align}
+\dt{\hat{a}} &= -i\omega \hat{a} -ig(\omega) \hat{\sigma}_-\label{eq:da}\\
+\dt{\hat{\sigma}_-} &= -i\omega_{eg} \hat{\sigma}_- +i\int_0^{\infty}\mathrm{d}\omega g(\omega) \hat{\sigma}_z \hat{a}(\omega).\label{eq:dsigma} 
+\end{align}
+A formal solution of the first equation above is
+\begin{align}\label{eq:aout1}
+\hat{a}(\omega,t)\equiv \hat{a}_{out}(\omega) = \hat{a}_{in}(\omega) e^{-i\omega(t-t_0)} -ig(\omega) \int_{t_0}^t \mathrm{d} t' e^{-i\omega (t-t')}\hat{\sigma}_-(t'),
+\end{align}
+where we have defined $\hat{a}_{in}(\omega)=\hat{a}(\omega, t_0)$. We can substitute the formal solution above into Equ.~\ref{eq:dsigma}, and rewrite
+\begin{align}
+\dt{\hat{\sigma}_-} &= -i\omega_{eg} \hat{\sigma}_- +\int_{t_0}^t \mathrm{d}t' \int_0^\infty \mathrm{d}\omega e^{-i\omega (t-t')} g^2(\omega)\hat{\sigma}_z(t)\hat{\sigma}_-(t') +i\int_0^\infty \mathrm{d}\omega g(\omega) \hat{\sigma}_z(t) \hat{a}_{in}(\omega) e^{-i\omega(t-t_0)}. 
+\end{align}
+In the Markoff approximation that $\int_0^\infty \mathrm{d}\omega e^{-i\omega (t-t')} g^2(\omega)\approx \pi \delta(t-t')g^2(\omega_{eg})$, one can obtain
+\begin{align}
+\dt{\hat{\sigma}_-} &= -i\omega_{eg} \hat{\sigma}_- + \pi g^2(\omega_{eg}) \hat{\sigma}_z(t)\hat{\sigma}_-(t) + i\int_0^\infty \mathrm{d}\omega g(\omega) \hat{a}_{in}(\omega)\hat{\sigma}_z(t) e^{-i\omega (t-t_0)}\\
+&= (-i\omega_{eg}-\frac{\Gamma^g_{mf}}{2})\hat{\sigma}_-(t) +i\int_0^\infty \mathrm{d}\omega g(\omega) \hat{a}_{in}(\omega)\hat{\sigma}_z(t) e^{-i\omega (t-t_0)}, \label{eq:dsigma-t}
+\end{align}
+where we have used $\hat{\sigma}_z\hat{\sigma}_-=-\hat{\sigma}_- $, and have used the definition of the \textit{one dimensional} decay rate for the guided mode $\mu=(\beta_0,m,f)$ from Equ.~\ref{eq:Gammagmf} as
+\begin{align}
+\Gamma^g_{mf} &= 2\pi g^2(\omega_{eg})= \frac{2\pi|d_{eg}|^2}{\hbar A^g_{mf}}\left( \frac{\omega_{eg}}{v_g}\right). 
+\end{align}
+
+What we are interested in is the frequency response of the guided modes at a given $\omega$. We can use the Fourier transformation relationship that 
+\begin{align}
+\hat{\sigma}_-(t) &= \int \frac{\mathrm{d}\omega}{\sqrt{2\pi}} \hat{\sigma}_-(\omega) e^{i\omega(t-t_0)},
+\end{align}
+and considering the weak saturation case that $\hat{\sigma}_z\approx -1$ or almost all atoms are in the ground state, Equ.~\ref{eq:dsigma-t} becomes
+\begin{align}
+-i\omega \hat{\sigma}_-(\omega) &= \left[-i\omega_{eg}-\frac{\Gamma^g_{mf}}{2} \right]\hat{\sigma}_-(\omega) -i\sqrt{2\pi}g(\omega) \hat{a}_{in}(\omega).
+\end{align}
+Therefore, we can obtain the linear repsonse relationship between $\hat{\sigma}_-(\omega)$ and $\hat{a}_{in}(\omega)$ as
+\begin{align}\label{eq:sigma-ain}
+\hat{\sigma}_-(\omega) &= \frac{\sqrt{\Gamma^g_{mf}}}{\Delta+i\frac{\Gamma^g_{mf}}{2}}\hat{a}_{in}(\omega),
+\end{align}
+where the detuning $\Delta=\omega-\omega_{eg}$. Similarly, Equ.~\ref{eq:aout1} implies
+\begin{align}
+\hat{a}_{out}(\omega ) &= \hat{a}_{in}(\omega) -i\sqrt{\Gamma^g_{mf}}\hat{\sigma}_-(\omega). 
+\end{align}
+By substituting Equ.~\ref{eq:sigma-ain} into the equation above, we obtain the input-output relationship of the guided modes due to an atom close to the nanofiber as
+\begin{align}
+\hat{a}_{out}(\omega) &= \hat{a}_{in} (\omega) -i\frac{\Gamma^g_{mf}}{\Delta+i\frac{\Gamma^g_{mf}}{2}}\hat{a}_{in}(\omega)= \left(\frac{\Delta-i\frac{\Gamma^g_{mf}}{2}}{\Delta+i\frac{\Gamma^g_{mf}}{2}} \right)\hat{a}_{in}(\omega).
+\end{align}
+In abscence of reflection, the transmitted guided mode has a phase shift effect that 
+the transmission coefficient is
+\begin{align}
+t(\omega) &= e^{i\delta \phi(\omega)},
+\end{align}
+where the phase shift is 
+\begin{align}
+\delta\phi &= -2\tan^{-1}\left(\frac{\Gamma^g_{mf}}{2\Delta} \right)\approx -\frac{\Gamma^g_{mf}}{\Delta}=-2\pi \frac{|d_{eg}|^2}{\hbar\Delta}\frac{\omega}{cA^g_{mf}}=2\pi \frac{\alpha}{A^g_{mf}}\frac{\omega}{c}.
+\end{align}
+
+\todo[inline]{Considering two-direction propagation?}
+
 
 \subsection{Enhancement compared to the vacuum case}
 Notice that, the phase shift for an atom in vacuum can be given in a similar form by
@@ -281,7 +361,7 @@ Notice that, the phase shift for an atom in vacuum can be given in a similar for
 \end{align}
 where $\mathbf{u}_{00}(\br')  $ is the $\mathrm{TEM}_{00}$ mode of a Gaussian laser field at the atom position, $ A=\frac{\pi W_0^2}{2} $ is the mode area of the Gaussian beam with wist $ W_0 $. Hence, the relative strength of phase shift due to the presence of a nanofiber versus vacuum can be given by
 \begin{align}
-\frac{\delta\phi^{nano}}{\delta\phi^{vac}} &=\frac{A_{e\!f\!f}^{vac'}}{A_{e\!f\!f}^{11}}= \frac{A}{2} \!n_g\! \frac{|\mathbf{u}_1(r_\perp^{nano'})|^2}{|\mathbf{u}_{00}(r_\perp^{vac'})|^2}.
+\frac{\delta\phi^{nano}}{\delta\phi^{vac}} &=\frac{A_{e\!f\!f}^{vac'}}{A^g_{11}}= \frac{A}{2} \!n_g\! \frac{|\mathbf{u}^1_1(r_\perp^{nano'})|^2}{|\mathbf{u}_{00}(r_\perp^{vac'})|^2}.
 \end{align}
 In the vacuum case, the strongest mode is given by $ |\mathbf{u}_{00}(r_\perp^{vac'})|=1 $ when the atom is placed at the center of the beam waist. 
 
@@ -441,16 +521,9 @@ N^{min}_A &= \frac{1}{C_{j'}^{(0)}}\sqrt{\frac{A_{e\!f\!f}^2}{A_{in}\sigma_0}}.
 
 \section{Discussions}
 
-\subsection{Connect to the Heisenberg picture}
-Quantization of field. Input-output formalism
-\begin{align}
-\hat{a}_{out} &= f(\hat{a}_{in}).
-\end{align}
-Connection to the dyadic Green function.
 
-Phase shift expression. 
 
-\subsection{Connect to the Schrodinger picture}
+\subsection{Connect to the Schrodinger picture?}
 
 
 
@@ -795,7 +868,7 @@ D_{out} &= \frac{J_1^2(ha)}{K_1^2(qa)}\left\{ (1-s)\left[ 1-(1-s)\frac{\beta_0^2
 
 For a quasilinearly polarized fundamental guided mode, the electric part of the mode can be written as 
 \begin{align}
-u^{(\omega f \phi_0)}(r\!_\perp,\phi,z) &= \frac{1}{\sqrt{2}} \left(u^{(\omega f +)}e^{-i\phi_0} +u^{(\omega f -)}e^{i\phi_0} \right)\\
+\mathbf{u}^{(\omega f \phi_0)}(r\!_\perp,\phi,z) &= \frac{1}{\sqrt{2}} \left(\mathbf{u}^{(\omega f +)}(r\!_\perp,\phi,z)e^{-i\phi_0} +\mathbf{u}^{(\omega f -)}(r\!_\perp,\phi,z)e^{i\phi_0} \right)\\
 &= \sqrt{2}\left[u_{r\!_\perp}(r\!_\perp)\cos(\phi-\phi_0)\hat{\mathbf{r}}\!_\perp + iu_\phi(r\!_\perp)\sin(\phi-\phi_0)\hat{\boldsymbol{\phi}} \right. \nonumber \\
 &\quad\quad \left. + fu_z(r\!_\perp)\cos(\phi-\phi_0)\hat{\mathbf{z}} \right]e^{if\beta z}.
 \end{align}
@@ -803,9 +876,9 @@ One can write down an arbitrary quasilinearly polarized electric field in the fo
 
 Particularly, when $\phi_0=0$ and $\pi/2$, we obtain the $H$ and $V$ fundamental modes as given by
 \begin{align}
-u^{(\omega f H)}(r\!_\perp,\phi,z)
+\mathbf{u}^{(\omega f H)}(r\!_\perp,\phi,z)
 &= \sqrt{2}\left[u_{r\!_\perp}(r\!_\perp)\cos(\phi)\hat{\mathbf{r}}\!_\perp + iu_\phi(r\!_\perp)\sin(\phi)\hat{\boldsymbol{\phi}} + fu_z(r\!_\perp)\cos(\phi)\hat{\mathbf{z}} \right]e^{if\beta z}\\
-u^{(\omega f V)}(r\!_\perp,\phi,z)
+\mathbf{u}^{(\omega f V)}(r\!_\perp,\phi,z)
 &= \sqrt{2}\left[u_{r\!_\perp}(r\!_\perp)\sin(\phi)\hat{\mathbf{r}}\!_\perp - iu_\phi(r\!_\perp)\cos(\phi)\hat{\boldsymbol{\phi}}  + fu_z(r\!_\perp)\sin(\phi)\hat{\mathbf{z}} \right]e^{if\beta z}.
 \end{align}
 
