@@ -343,7 +343,7 @@ By substituting Equ.~\ref{eq:sigma-ain} into the equation above, we obtain the i
 \hat{a}^{out}_\mu(\omega) &= \hat{a}^{in}_\mu (\omega) -i\sum_{\mu'}\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)e^{i(1-f')\omega(t-t_0)}}{\Delta+i2\Gamma^g_{m'f'}}\hat{a}^{in}_{\mu'}(\omega)=\sum_{\mu'}S^\mu_{\mu'}\hat{a}^{in}_{\mu'}(\omega),
 \end{align}
 where the scattering matrix elements
-\begin{align}
+\begin{align}\label{eq:Smfmft}
 S^\mu_{\mu'} &\equiv S^{mf}_{m'f'}=\delta_{mm'}\delta_{ff'}-i\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)e^{i(1-f')\omega(t-t_0)}}{\Delta+i2\Gamma^g_{m'f'}}.
 \end{align}
 
@@ -605,7 +605,7 @@ The phase shift is proportional to the time integral of the path on the emission
 \subsection{Interference due to a one-sided or two-sided atom chain}
 \textcolor{blue}{Effect of an infinite long one-side chain... S matrix, reflectivity... Random filling effect...}
 
-\textcolor{blue}{To include many-atom interference effect, we can use the linear optical transformation matrix formalism. The transformation of modes should be the same for both Green function and Heisenberg picture approaches. Here, I am using the semiclassical Green function results. } 
+\textcolor{blue}{To include many-atom interference effect, we can use the linear optical transformation matrix formalism. The transformation of modes should be the same for both Green function and Heisenberg picture approaches. Here, I am using the semiclassical Green function results first, and then the Heisenberg picture results. } 
 
 
 From Equ.~\ref{eq:Cmf} and the results above, one can generalize the field transformation relationship due to the presence of an atom and an arbitrary incident mode $\mathbf{u}_{m'f'}(\br)$ with mode amplitude $E_{m'f'}$ to give
@@ -639,9 +639,22 @@ where $\mathbf{S}_i=\eta_{i,+} \mathbf{S}(0) +\eta_{i,-}\mathbf{S}(\pi)+(1-\eta_
 For the case that both sides of the atom chain are occupied on a $z$-slice, the scattering matrix elements with the two atoms can be given by
 \begin{align}
 \!\!\!\!\!\!S^{mf}_{m'f'} &= 2\delta_{mm'}\delta_{ff'} + i\pi k_0 n_g\alpha  {\mathbf{u}_{mf}}^*(r'_{\!\perp})\cdot \mathbf{u}_{m'f'}(r'_{\!\perp})[1+e^{i(m'-m)\pi}]\\
-&= 2\delta_{mm'}\delta_{ff'} + i\pi k_0 n_g\alpha  \left[ |u_{r\!_\perp}(r'_{\!\perp})|^2+mm' |u_\phi(r'_{\!\perp})|^2+ff'|u_z(r'_\perp)|^2\right][1+e^{i(m'-m)\pi}].
+&= 2\delta_{mm'}\delta_{ff'} + i\pi k_0 n_g\alpha  \left[ |u_{r\!_\perp}(r'_{\!\perp})|^2+mm' |u_\phi(r'_{\!\perp})|^2+ff'|u_z(r'_\perp)|^2\right][1+e^{i(m'-m)\pi}]\\
+&= 2\delta_{mm'}\delta_{ff'} + i2\pi k_0 n_g\alpha  \left[ |u_{r\!_\perp}(r'_{\!\perp})|^2+mm' |u_\phi(r'_{\!\perp})|^2+ff'|u_z(r'_\perp)|^2\right].
 \end{align}
-We have treated the atomic polarizability as a scalar and used Born approximation here. \textcolor{red}{Notice that, the transformation matrix of the two-side chain configuration prevents Birefringence effect as nondiagonal elements of $\mathbf{S}$ derived above with opposite polarization index $m$ vanish. To generate nontrivial Birefringence effect, it seems we need to consider vector and tensor components of the atomic polarizability or multi-scattering processes.} 
+We have treated the atomic polarizability as a scalar and used Born approximation here. Notice that, the polarization-dependent factor $[1+e^{i(m'-m)\pi}]$ always yields $2$ with $m,m'=\pm 1$ for the $\mathrm{HE}_{11}$ guided modes. If there are high-order guided modes, we expect to see destructive Birefringence effects for odd mode index differences. 
+
+This can also be understood by looking into the equations derived in the Heisenberg picture. The equivalent scattering matrix elements due to an atom positioned at $\br'=(r'_\perp,\phi',z'=0)$ can be obtained by making $t\rightarrow t_0$ from Equ.~\eqref{eq:Smfmft}:
+\begin{align}\label{eq:Smfmfphi_Heisenberg}
+S^{mf}_{m'f'}(\phi') &=\delta_{mm'}\delta_{ff'}-i\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)}{\Delta+i2\Gamma^g_{m'f'}}\\
+&= \delta_{mm'}\delta_{ff'}-i\frac{ \frac{2\pi \omega}{v_g}\mathbf{u}^*_{mf}(\br'_\perp)\cdot\mathbf{d}_{ge} \mathbf{d}_{eg}\cdot\mathbf{u}_{m'f'}(\br'_\perp)e^{i(f'-f)\beta_0 z'}}{\Delta+i2\Gamma^g_{m'f'}}\\
+&=  \delta_{mm'}\delta_{ff'}-i\frac{ \frac{2\pi \omega}{v_g}\mathbf{u}^*_{mf}(r'_\perp)\cdot\mathbf{d}_{ge} \mathbf{d}_{eg}\cdot\mathbf{u}_{m'f'}(r'_\perp)e^{i(m'-m)\phi'}}{\Delta+i2\Gamma^g_{m'f'}}.
+\end{align}
+Therefore, the total scattering transformation matrix for the atom pair on both sides of the $x$-axis can be given by
+\begin{align}\label{eq:Smfmf2_Heisenberg}
+S^{mf}_{m'f'}(\phi') &=S^{mf}_{m'f'}(\phi'=0)+S^{mf}_{m'f'}(\phi'=\pi)\\
+&=  2\delta_{mm'}\delta_{ff'}-i\frac{ \frac{4\pi \omega}{v_g}\mathbf{u}^*_{mf}(r'_\perp)\cdot\mathbf{d}_{ge} \mathbf{d}_{eg}\cdot\mathbf{u}_{m'f'}(r'_\perp)}{\Delta+i2\Gamma^g_{m'f'}}.
+\end{align}
 
 When $\beta_0 L$ is a multiple of $\pi$, the free propagation transformation matrix is proportional to a unitary matrix, and hence can be extracted out from the total transformation matrix formula (Equ.~\eqref{eq:transE}). In that case, the total phase shift for a given input mode can be treated as the sum of the phase shift due to each individual atom or two-side slice of atoms. Otherwise, there will be the asymmetric effect on the phase shifts of the forwarding and backwarding modes. Moreover, under the framework derived above, if we can ignore the backward propagating modes--which is approximately true if it is far from satisfying the Bragg condition, the free propagating transformation matrix $\mathbf{P}(L)$ is also proportional to a unitary matrix, and hence the total phase shifts for individual forwarding modes can still be treated as a sum over all slices of atoms along the propagating direction. Physically, the asymmetric mixing of forward and backward propagating modes may be the major barrier to treat the total phase shift as the sum over all individual elements.  
 
