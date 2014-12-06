@@ -235,7 +235,7 @@ Using the eigenmode expansion of the dyadic Green function, these coefficients b
 \begin{align}
 C_{mf} &= i\pi k_0 n_g\alpha \!\int\! \mathrm{d}^2r\!_\perp n^2 {\mathbf{u}^f_m}^*(\mathbf{r}\!_\perp)\cdot\!\!\!\!\!\! \sum_{f',m'=\pm 1}\!\!\!\! \left[\mathbf{u}_{m'}^{f'}(\mathbf{r}\!_\perp){\mathbf{u}^{f'}_{m'}}^*(\mathbf{r}^\prime\!_\perp) \right]\!\cdot\! \mathbf{u}_1^1(\mathbf{r}^\prime\!_\perp)\nonumber\\
 &\quad\quad\quad e^{if'\beta_0(z-z')} e^{i\beta_0(z'-fz)}\\
-&= i\pi k_0 n_g\alpha  {\mathbf{u}^f_m}^*(r'_{\!\perp})\cdot \mathbf{u}_1^1(r'_{\!\perp})e^{i\beta_0 (1-f)z'+i(1-m)\phi'},
+&= i\pi k_0 n_g\alpha  {\mathbf{u}^f_m}^*(r'_{\!\perp})\cdot \mathbf{u}_1^1(r'_{\!\perp})e^{i\beta_0 (1-f)z'+i(1-m)\phi'},\label{eq:Cmf}
 \end{align}
 where the orthogonality relationship of the fiber modes had been used:
 \begin{align}
@@ -263,7 +263,7 @@ where $ A^g_{mf}=1/n_g| \mathbf{u}_m^f(r'_{\!\perp})|^2 $ is the effective $(m,f
 We use the fact that 
 \begin{align}
 \alpha &=-\frac{|d_{eg}|^2}{\hbar \Delta}, \,\, (\Delta=\omega_{\beta}-\omega_{eg})\\
-\Gamma^{g}_{mf} &= 2\pi \frac{|\mathbf{u}^\mu(\br')\cdot \mathbf{d}_{eg}|^2}{\hbar }\left(\frac{\omega_0}{v_g} \right)= 2\pi \frac{| \mathbf{d}_{eg}|^2}{\hbar A^g_{mf}}\left(\frac{\omega_0}{c} \right)\label{eq:Gammagmf}\\
+\Gamma^{g}_{mf} &= 2\pi \frac{|\mathbf{u}^\mu(\br')\cdot \mathbf{d}_{eg}|^2}{\hbar }\left(\frac{\omega_0}{v_g} \right)\mathbin{\color{red} \neq 2\pi \frac{| \mathbf{d}_{eg}|^2}{\hbar A^g_{mf}}\left(\frac{\omega_0}{c} \right)}\label{eq:Gammagmf}\\
 \Gamma_{vac} &= \frac{4}{3} \left( \frac{\omega_0}{c}\right)^3 \frac{|d_{eg}|^2}{\hbar}\\
 \sigma_0 &= \frac{3\lambda^2}{2\pi} \equiv \text{resonant cross section}
 \end{align}
@@ -319,7 +319,7 @@ In the Markoff approximation that $\int_0^\infty \mathrm{d}\omega e^{-i\omega (t
 \end{align}
 where we have used $\hat{\sigma}_z\hat{\sigma}_-=-\hat{\sigma}_- $, and have used the definition of the \textit{one dimensional} decay rate for the guided mode $\mu=(\beta_0,m,f)$ from Equ.~\ref{eq:Gammagmf} as
 \begin{align}
-\Gamma^g_{mf} &= 2\pi |g_\mu(\omega_{eg})|^2= \frac{2\pi|\mathbf{u}^\mu(\br')\cdot \mathbf{d}_{eg}|^2}{\hbar }\left( \frac{\omega_{eg}}{v_g}\right)= \frac{2\pi|\mathbf{d}_{eg}|^2}{\hbar A^g_{mf} }\left( \frac{\omega_{eg}}{c}\right). 
+\Gamma^g_{mf} &= 2\pi |g_\mu(\omega_{eg})|^2= \frac{2\pi|\mathbf{u}^\mu(\br')\cdot \mathbf{d}_{eg}|^2}{\hbar }\left( \frac{\omega_{eg}}{v_g}\right) \mathbin{\color{red} \neq \frac{2\pi|\mathbf{d}_{eg}|^2}{\hbar A^g_{mf} }\left( \frac{\omega_{eg}}{c}\right)}. 
 \end{align}
 
 What we are interested in is the frequency response of the guided modes at a given $\omega$. We can use the Fourier transformation relationship that 
@@ -362,7 +362,9 @@ where the phase shift in the dispersive regime ($\Delta\gg \Gamma^g_{mf}$) is
 \delta\phi &\approx -\tan^{-1}\left(\frac{\Gamma^g_{mf}}{\Delta} \right)\approx -\frac{\Gamma^g_{mf}}{\Delta}=-2\pi \frac{|d_{eg}|^2}{\hbar\Delta}\frac{\omega}{cA^g_{mf}}=2\pi \frac{\alpha}{A^g_{mf}}\frac{\omega}{c}.
 \end{align}
 
-\todo[inline]{Not consistent with the Green function results? The $C_{mf}$ and $S^{mf}_{m'f'}$ matrices and phase shifts...}
+\textcolor{red}{This is not consistent with the Green function results? There is a factor of 2 missing somewhere.}
+
+\todo[inline]{ To compare the $C_{mf}$ and $S^{mf}_{m'f'}$ matrices and phase shifts derived in different approaches, we may need to check if the modes or operators are normalized properly...}
 
 
 \subsection{Enhancement compared to the vacuum case}
@@ -535,7 +537,7 @@ N^{min}_A &= \frac{1}{C_{j'}^{(0)}}\sqrt{\frac{A_{e\!f\!f}^2}{A_{in}\sigma_0}}.
 
 
 \subsection{Connect to the Schrodinger picture?}
-
+\textcolor{blue}{This has been done by Ben in one of his recent notes. }
 
 
 
@@ -603,10 +605,47 @@ The phase shift is proportional to the time integral of the path on the emission
 \subsection{Interference due to a one-sided or two-sided atom chain}
 \textcolor{blue}{Effect of an infinite long one-side chain... S matrix, reflectivity... Random filling effect...}
 
-\textcolor{blue}{Effect of the two-side chain:
-The symmetry or antisymmetry nature (TBD) of the radiation surface at the opposite sides along the $ r\!_\perp $ axis will yield a constructive/destructive interference of the two-side chain.} 
+\textcolor{blue}{To include many-atom interference effect, we can use the linear optical transformation matrix formalism. The transformation of modes should be the same for both Green function and Heisenberg picture approaches. Here, I am using the semiclassical Green function results. } 
 
-\textcolor{blue}{There could be a polarization transformation effect for the forward or backward propagating guided modes, which has been studied in literature.} 
+
+From Equ.~\ref{eq:Cmf} and the results above, one can generalize the field transformation relationship due to the presence of an atom and an arbitrary incident mode $\mathbf{u}_{m'f'}(\br)$ with mode amplitude $E_{m'f'}$ to give
+\begin{align}
+\mathbf{E}^{out}(\br) &= \sum_{mf}E_{mf}\mathbf{u}_{m'f'}(\br),\\
+E_{mf} &= \left[\delta_{mm'}\delta_{ff'}+C_{m'f'}^{mf}\right]E_{m'f'},
+\end{align}
+with 
+\begin{align}
+C^{mf}_{m'f'}
+&= i\pi k_0 n_g\alpha  {\mathbf{u}^{mf}}^*(r'_{\!\perp})\cdot \mathbf{u}_{m'f'}(r'_{\!\perp})e^{i\beta_0 (f'-f)z'+i(m'-m)\phi'}.\label{eq:Cmfmf}
+\end{align}
+Therefore, one can define the scattering matrix $\mathbf{S}\equiv \left\{S^{mf}_{m'f'}|\,m,f,m',f'=\pm 1 \right\}$ with elements $S^{mf}_{m'f'}=\delta_{mm'}\delta_{ff'}+C_{m'f'}^{mf}$. 
+
+Notice that, $\br'=(r\!_\perp^\prime,\phi',z')$ indicates where the atom is sitting. If there are many atoms which are sitting at different positions, one should sum over all atom indexes to obtain the total scattering matrix. In our case, the atoms can sit at some random positions of either $\phi'=0$ or $\phi'=\pi$ two sides of a periodic chain. For simplicity, we always use $z'=0$ for the scattering matrix $\mathbf{S}(\phi')$ calculation due to the presence of the one or two atoms in the $z$-slice. We define the free propagating transformation matrix, $\mathbf{P}(L)\equiv \left\{P^{mf}_{m'f'}(L)|\,m,f,m',f'=\pm 1 \right\}$, by
+\begin{align}
+P^{mf}_{m'f'}(L) &= \delta_{mm'}\delta_{ff'}e^{if\beta_0 L},
+\end{align}
+where $L$ is the minimum distance between two atoms along the propagating direction of the guided light. The total field amplitude after the interaction with the last atom along the nanofiber due to the random occupied two-side chain of atoms can be given by
+\begin{align}
+\left( E_{mf}^{out}\right) &= [\eta_{N,+} \mathbf{S}(0) +\eta_{N,-}\mathbf{S}(\pi) +(1-\eta_{N,+})(1-\eta_{N,-})\eye] \mathbf{P}(L)\nonumber\\
+&\quad [\eta_{N-1,+} \mathbf{S}(0) +\eta_{N-1,-}\mathbf{S}(\pi)+(1-\eta_{N-1,+})(1-\eta_{N-1,-})\eye ] \mathbf{P}(L)\nonumber\\
+&\quad \ldots [\eta_{2,+} \mathbf{S}(0) +\eta_{2,-}\mathbf{S}(\pi)+(1-\eta_{2,+})(1-\eta_{2,-})\eye ] \mathbf{P}(L)\nonumber\\
+&\quad [\eta_{1,+} \mathbf{S}(0) +\eta_{1,-}\mathbf{S}(\pi) +(1-\eta_{1,+})(1-\eta_{1,-})\eye] \left( E_{m'f'}^{in}\right)\\
+&= \left\{ \prod_{i=N}^2 [\eta_{i,+} \mathbf{S}(0) +\eta_{i,-}\mathbf{S}(\pi)+(1-\eta_{i,+})(1-\eta_{i,-})\eye ] \mathbf{P}(L)\right\} \nonumber\\
+&\quad [\eta_{1,+} \mathbf{S}(0) +\eta_{1,-}\mathbf{S}(\pi)+(1-\eta_{1,+})(1-\eta_{1,-})\eye ]\left( E_{m'f'}^{in}\right)\\
+&= \left\{ \prod_{i=N}^2 \mathbf{S}_i \mathbf{P}(L)\right\} \mathbf{S}_1 \left( E_{m'f'}^{in}\right),\label{eq:transE}
+\end{align}
+where $\mathbf{S}_i=\eta_{i,+} \mathbf{S}(0) +\eta_{i,-}\mathbf{S}(\pi)+(1-\eta_{i,+})(1-\eta_{i,-})\eye $ denotes the scattering matrix due to the randomly occupied atoms at the $i^{\mathrm{th}}$ $z$-slice with random occupation variables $\eta_{i,\pm}=0$ or $1$ on both sides of the atom chain. The distribution of the random variables $\eta_{i,\pm}$ reflects how the atom chain sites are occupied. 
+
+For the case that both sides of the atom chain are occupied on a $z$-slice, the scattering matrix elements with the two atoms can be given by
+\begin{align}
+\!\!\!\!\!\!S^{mf}_{m'f'} &= 2\delta_{mm'}\delta_{ff'} + i\pi k_0 n_g\alpha  {\mathbf{u}_{mf}}^*(r'_{\!\perp})\cdot \mathbf{u}_{m'f'}(r'_{\!\perp})[1+e^{i(m'-m)\pi}]\\
+&= 2\delta_{mm'}\delta_{ff'} + i\pi k_0 n_g\alpha  \left[ |u_{r\!_\perp}(r'_{\!\perp})|^2+mm' |u_\phi(r'_{\!\perp})|^2+ff'|u_z(r'_\perp)|^2\right][1+e^{i(m'-m)\pi}].
+\end{align}
+We have treated the atomic polarizability as a scalar and used Born approximation here. \textcolor{red}{Notice that, the transformation matrix of the two-side chain configuration prevents Birefringence effect as nondiagonal elements of $\mathbf{S}$ derived above with opposite polarization index $m$ vanish. To generate nontrivial Birefringence effect, it seems we need to consider vector and tensor components of the atomic polarizability or multi-scattering processes.} 
+
+When $\beta_0 L$ is a multiple of $\pi$, the free propagation transformation matrix is proportional to a unitary matrix, and hence can be extracted out from the total transformation matrix formula (Equ.~\eqref{eq:transE}). In that case, the total phase shift for a given input mode can be treated as the sum of the phase shift due to each individual atom or two-side slice of atoms. Otherwise, there will be the asymmetric effect on the phase shifts of the forwarding and backwarding modes. Moreover, under the framework derived above, if we can ignore the backward propagating modes--which is approximately true if it is far from satisfying the Bragg condition, the free propagating transformation matrix $\mathbf{P}(L)$ is also proportional to a unitary matrix, and hence the total phase shifts for individual forwarding modes can still be treated as a sum over all slices of atoms along the propagating direction. Physically, the asymmetric mixing of forward and backward propagating modes may be the major barrier to treat the total phase shift as the sum over all individual elements.  
+
+\todo[inline]{Energy is not conserving under the Born approximation. How does the radiation power goes after every event of scattering? A better model to explain what we should observe for the Birefringence effect.}
 
 \section{Conclusions}
 
