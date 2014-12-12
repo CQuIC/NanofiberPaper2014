@@ -314,12 +314,13 @@ where we have defined $\hat{a}^{in}_\mu(\omega)=\hat{a}_\mu(\omega, t_0)$. We ca
 \end{align}
 In the Markoff approximation that $\int_0^\infty \mathrm{d}\omega e^{-i\omega (t-t')} |g_\mu(\omega)|^2\approx \pi \delta(t-t')|g_\mu(\omega_{eg})|^2$, one can obtain
 \begin{align}
-\dt{\hat{\sigma}_-} &= -i\omega_{eg} \hat{\sigma}_- + \mathbin{\color{red}{4}}\pi |g_\mu(\omega_{eg})|^2 \hat{\sigma}_z(t)\hat{\sigma}_-(t) - i\sum_\mu\int_0^\infty \mathrm{d}\omega g_\mu(\omega) \hat{a}^{in}_\mu(\omega)\hat{\sigma}_z(t) e^{-if\omega (t-t_0)}\\
-&= (-i\omega_{eg}-2\Gamma^g_{mf})\hat{\sigma}_-(t) -i\sum_\mu\int_0^\infty \mathrm{d}\omega g_\mu(\omega) \hat{a}^{in}_\mu(\omega)\hat{\sigma}_z(t) e^{-if\omega (t-t_0)}, \label{eq:dsigma-t}
+\dt{\hat{\sigma}_-} &= -i\omega_{eg} \hat{\sigma}_- + \sum_\mu \pi |g_\mu(\omega_{eg})|^2 \hat{\sigma}_z(t)\hat{\sigma}_-(t) - i\sum_\mu\int_0^\infty \mathrm{d}\omega g_\mu(\omega) \hat{a}^{in}_\mu(\omega)\hat{\sigma}_z(t) e^{-if\omega (t-t_0)}\\
+&= (-i\omega_{eg}-\frac{\Gamma^g}{2})\hat{\sigma}_-(t) -i\sum_\mu\int_0^\infty \mathrm{d}\omega g_\mu(\omega) \hat{a}^{in}_\mu(\omega)\hat{\sigma}_z(t) e^{-if\omega (t-t_0)}, \label{eq:dsigma-t}
 \end{align}
-where we have used $\hat{\sigma}_z\hat{\sigma}_-=-\hat{\sigma}_- $, and have used the definition of the \textit{one dimensional} decay rate for the guided mode $\mu=(\beta_0,m,f)$ from Equ.~\ref{eq:Gammagmf} as
+where we have used $\hat{\sigma}_z\hat{\sigma}_-=-\hat{\sigma}_- $, and have used the definition of the \textit{one dimensional} decay rate for the guided mode $\mu=(\beta_0,m,f)$ from Equ.~\ref{eq:Gammagmf}, $ \Gamma^g_{mf} $, and the total decay rate for the guided modes, $ \Gamma^g $, as
 \begin{align}
-\Gamma^g_{mf} &= 2\pi |g_\mu(\omega_{eg})|^2= \frac{2\pi|\mathbf{u}^\mu(\br')\cdot \mathbf{d}_{eg}|^2}{\hbar }\left( \frac{\omega_{eg}}{v_g}\right) \mathbin{\color{red} \neq \frac{2\pi|\mathbf{d}_{eg}|^2}{\hbar A^g_{mf} }\left( \frac{\omega_{eg}}{c}\right)}. 
+\Gamma^g_{mf} &= 2\pi |g_\mu(\omega_{eg})|^2= \frac{2\pi|\mathbf{u}^\mu(\br')\cdot \mathbf{d}_{eg}|^2}{\hbar }\left( \frac{\omega_{eg}}{v_g}\right) \mathbin{\color{red} \neq \frac{2\pi|\mathbf{d}_{eg}|^2}{\hbar A^g_{mf} }\left( \frac{\omega_{eg}}{c}\right)}\\
+\Gamma^g &= \sum_{m,f}\Gamma^g_{mf}. 
 \end{align}
 
 What we are interested in is the frequency response of the guided modes at a given $\omega$. We can use the Fourier transformation relationship that 
@@ -328,11 +329,11 @@ What we are interested in is the frequency response of the guided modes at a giv
 \end{align}
 and considering the weak saturation case that $\hat{\sigma}_z\approx -1$ or almost all atoms are in the ground state, Equ.~\ref{eq:dsigma-t} becomes
 \begin{align}
--i\omega \hat{\sigma}_-(\omega) &= \left[-i\omega_{eg}-2\Gamma^g_{mf} \right]\hat{\sigma}_-(\omega) +i\sum_\mu \sqrt{2\pi}g_\mu(\omega) \hat{a}^{in}_\mu(\omega)e^{i(1-f)\omega(t-t_0)}.
+-i\omega \hat{\sigma}_-(\omega) &= \left[-i\omega_{eg}-\frac{\Gamma^g}{2} \right]\hat{\sigma}_-(\omega) +i\sum_\mu \sqrt{2\pi}g_\mu(\omega) \hat{a}^{in}_\mu(\omega)e^{i(1-f)\omega(t-t_0)}.
 \end{align}
 Therefore, we can obtain the linear response relationship between $\hat{\sigma}_-(\omega)$ and $\hat{a}_{in}(\omega)$ as
 \begin{align}\label{eq:sigma-ain}
-\hat{\sigma}_-(\omega) &= -\sum_\mu \frac{\sqrt{2\pi}g_\mu(\omega)e^{i(1-f)\omega(t-t_0)}}{\Delta+i2\Gamma^g_{mf}}\hat{a}^{in}_\mu(\omega),
+\hat{\sigma}_-(\omega) &= -\sum_\mu \frac{\sqrt{2\pi}g_\mu(\omega)e^{i(1-f)\omega(t-t_0)}}{\Delta+i\frac{\Gamma^g}{2}}\hat{a}^{in}_\mu(\omega),
 \end{align}
 where the detuning $\Delta=\omega-\omega_{eg}$. Similarly, Equ.~\ref{eq:aout1} implies the input-output relationship in the frequency domain $(t\gg t_0)$ that
 \begin{align}
@@ -340,18 +341,20 @@ where the detuning $\Delta=\omega-\omega_{eg}$. Similarly, Equ.~\ref{eq:aout1} i
 \end{align}
 By substituting Equ.~\ref{eq:sigma-ain} into the equation above, we obtain the input-output relationship of the guided modes due to an atom close to the nanofiber as
 \begin{align}
-\hat{a}^{out}_\mu(\omega) &= \hat{a}^{in}_\mu (\omega) -i\sum_{\mu'}\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)e^{i(1-f')\omega(t-t_0)}}{\Delta+i2\Gamma^g_{m'f'}}\hat{a}^{in}_{\mu'}(\omega)=\sum_{\mu'}S^\mu_{\mu'}\hat{a}^{in}_{\mu'}(\omega),
+\hat{a}^{out}_\mu(\omega) &= \hat{a}^{in}_\mu (\omega) -i\sum_{\mu'}\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)e^{i(1-f')\omega(t-t_0)}}{\Delta+i\frac{\Gamma^g}{2}}\hat{a}^{in}_{\mu'}(\omega)=\sum_{\mu'}S^\mu_{\mu'}\hat{a}^{in}_{\mu'}(\omega),
 \end{align}
 where the scattering matrix elements
 \begin{align}\label{eq:Smfmft}
-S^\mu_{\mu'} &\equiv S^{mf}_{m'f'}=\delta_{mm'}\delta_{ff'}-i\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)e^{i(1-f')\omega(t-t_0)}}{\Delta+i2\Gamma^g_{m'f'}}.
+S^\mu_{\mu'} &\equiv S^{mf}_{m'f'}=\delta_{mm'}\delta_{ff'}-i\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)e^{i(1-f')\omega(t-t_0)}}{\Delta+i\frac{\Gamma^g}{2}}.
 \end{align}
 
 For the $m=1,f=1$ mode, for instance, if we ignore the portions scattered to all the other modes, we will have 
 \begin{align}
-\hat{a}_{\mu}^{out}(\omega) &\approx \left[ 1- i\frac{\Gamma^g_{mf}}{\Delta+i2\Gamma^g_{mf}}\right] \hat{a}^{in}_\mu(\omega) \\
-&= \left(\frac{\Delta+i\Gamma^g_{mf}}{\Delta+i2\Gamma^g_{mf}} \right)\hat{a}^{in}_\mu(\omega).
+\hat{a}_{\mu}^{out}(\omega) &\approx \left[ 1- i\frac{\Gamma^g_{mf}}{\Delta+i\Gamma^g/2}\right] \hat{a}^{in}_\mu(\omega) \\
+&= \left(\frac{\Delta+i(\Gamma^g/2-\Gamma^g_{mf})}{\Delta+i\frac{\Gamma^g}{2}} \right)\hat{a}^{in}_\mu(\omega).
 \end{align}
+\textcolor{blue}{Notice that, if we consider the decay into the radiative modes as well, the $\Gamma^g$ on the bottom of the equation above should be replaced into the total decay rate $\Gamma$ (see Ben's note on phase shift).}
+
 In absence of scattering, the transmitted guided mode has a phase shift effect that 
 the transmission coefficient is
 \begin{align}
@@ -362,9 +365,20 @@ where the phase shift in the dispersive regime ($\Delta\gg \Gamma^g_{mf}$) is
 \delta\phi &\approx -\tan^{-1}\left(\frac{\Gamma^g_{mf}}{\Delta} \right)\approx -\frac{\Gamma^g_{mf}}{\Delta}=-2\pi \frac{|d_{eg}|^2}{\hbar\Delta}\frac{\omega}{cA^g_{mf}}=2\pi \frac{\alpha}{A^g_{mf}}\frac{\omega}{c}.
 \end{align}
 
-\textcolor{red}{This is not consistent with the Green function results? There is a factor of 2 missing somewhere.}
+\textcolor{red}{This is not consistent with the Green function results? There is a factor of 2 missing somewhere?}
 
 \todo[inline]{ To compare the $C_{mf}$ and $S^{mf}_{m'f'}$ matrices and phase shifts derived in different approaches, we may need to check if the modes or operators are normalized properly...}
+
+To generalize our results to a real atom case, we need to replace the two-level dipole operator with
+\begin{align}
+	\hat{ \mathbf{d} }_{f' f}^\dagger  & = \sum_q \sum_{m, m'}  \bra{f' m'} d_{f',f}^q \ket{f m} \op{f' m'}{f m} \mathbf{e}_q^* \\
+	& = \bra{ f' }| d | \ket{ f } \sum_q \sum_{m, m'}  \bravket{f m; 1 q}{f' m'} \op{f' m'}{f m} \mathbf{e}_q^*,
+\end{align}
+which raises the atom from the ground hyperfine state $f$ to the excited state $f'$. Correspondingly, the raising operator should be defined as
+\begin{align}
+\hat{\sigma}_+^{f'm'fm} = \op{f' m'}{f m}.
+\end{align}
+\todo[inline]{To further generalize to the real atom case.}
 
 
 \subsection{Enhancement compared to the vacuum case}
@@ -947,6 +961,51 @@ Particularly, when $\phi_0=0$ and $\pi/2$, we obtain the $H$ and $V$ fundamental
 
 \todo[inline]{To show $v_g=\frac{P}{W}$ using the formulas above?}
 
+\section{Light-atom interaction in the dispersive regime}
+\textcolor{blue}{Single mode calculation is from Ben's dissertation (chapter 4). }
+
+
+The dispersive light shift interaction describes an atom's effective response to an electric field when the excited states can be adiabatically eliminated from the dynamics.  This reduced description applies when the saturation parameter is small,
+	\begin{align} \label{Eq::SatParameter}
+		s = \frac{ \Omega^2/4}{\Delta^2 + \Gamma^2/4} \ll 1,  
+	\end{align}
+where $\Omega$ is the Rabi frequency, $\Gamma$ is the spontaneous emission rate, and $\Delta = \omega_0 - \omega_{eg}$ is the probe detuning from the atomic resonance frequency $\omega_{eg}$. As the saturation parameter is proportional to the ratio of the Rabi frequency to the detuning, $\Omega/\Delta$, physically this allows condition \erf{Eq::SatParameter} to be satisfied even for large driving power (Rabi frequency) so long as the probe laser is far enough detuned.  In this limit, the atom-light coupling is described by the dispersive light-shift interaction,
+	\begin{align} \label{Eq::LightShiftHam}
+		\hat{H}_{\rm eff} & = - \hat{\mathbf{E}}^{(-)}(\mathbf{r}' ) \cdot \tensor{\alpha} \cdot \hat{\mathbf{E}}^{(+)}(\mathbf{r}' ), 
+	\end{align}
+where the electric field operator is evaluated at the atomic position $\mathbf{r}'$.   
+
+Now, we consider to rewrite the Hamiltonian in terms of the Stokes vector operators and the collective spin operators with the total atom number of $ N_A $. We assume the photon number, $ N_L $, is large and all atoms interact with the photon package at the same time, and hence interactions among atoms and the interference effect due to photon propagation are ignored during every measurement time step. 
+
+The polarization state of the light can be represented on the Poincare sphere via Stokes vector $ \mathbf{S} $. The quantized operators in the Schwinger representation with respect to the three Poincare sphere axes are defined as  
+\begin{align}
+\hat{S}_1&= \frac{1}{2} \Big( \hat{a}_H\dg \hat{a}_H -  \hat{a}_V\dg \hat{a}_V \Big) \\
+\hat{S}_2&= \frac{1}{2} \Big( \hat{a}_H\dg \hat{a}_V +  \hat{a}_V\dg \hat{a}_H \Big)\\
+\hat{S}_3&= \frac{1}{2i} \Big( \hat{a}_H\dg \hat{a}_V -  \hat{a}_V\dg \hat{a}_H \Big)
+\end{align}
+satisfying the $ SU(2) $ algebra $ [S_i,S_j]=i\varepsilon_{ijk}S_k $. The total number operator is defined as
+\begin{align}
+\hat{S}_0&= \frac{1}{2} \Big( \hat{a}_H\dg \hat{a}_H +  \hat{a}_V\dg \hat{a}_V \Big).
+\end{align}
+
+Using these definitions in the real part of the light shift interaction, \erf{Eq::LightShiftHam}, gives a coherent Hamiltonian of the form,
+	\begin{align} \label{Eq::StokesHam}
+		\hat{H}_{\rm coh} = \hbar \chi_0 \sum_{F'} \frac{1}{1+ \delta_{f'}/\Delta} \Big( & \hat{A}_0 \hat{S}_0 +\hat{A}_1 \hat{S}_1  +\hat{A}_2 \hat{S}_2  +\hat{A}_3 \hat{S}_3  \Big), 
+	\end{align}
+where the atomic operators that couple to the Stokes components at the atom's position $z'$ are
+	\begin{subequations} \label{Eq::StokesSpinOps}
+	\begin{align}
+		\hat{A}_0 = & C^{(0)}_{j'f f'} \hat{I} + C^{(2)}_{j'ff'} \left( \frac{3 \hat{f}_z^{2} - \hat{\bf{f}} \cdot  \hat{\mbf{f}} }{6} \right) \\
+		\hat{A}_1 = & C^{(2)}_{j'f f'} \left( \frac{\hat{f}_x^{2} - \hat{f}_y^{2} }{2} \right) \\
+		\hat{A}_2 = & C^{(2)}_{j'f f'} \left( \frac{\hat{f}_x \hat{f}_y + \hat{f}_y \hat{f}_x }{2} \right) \\
+		\hat{A}_3 = & - C^{(1)}_{j'f f'} \hat{f}_z.
+	\end{align}
+	\end{subequations}
+The dimensionless coupling constant,
+	\begin{align} \label{Eq::FaradayAngle}
+		\chi_0 = - \left(\frac{4\pi \omega_0}{A c} \right) \alpha_0(\Delta) = \Big( \frac{\sigma_0}{A} \Big)\Big( \frac{\Gamma}{2 \Delta} \Big),
+	\end{align} 
+is a measure of the strength of the light-matter interaction.  It is proportional to the detuning, $\Delta^{-1}$, but more importantly to the ratio of the resonant atomic cross section, $\sigma_0 = 3 \lambda_{j j'}^2/2 \pi$, to the transverse mode area $A$.  This ratio sets the strength of the single-atom coupling, as it roughly describes the amount of light scattered from the atom back into the probe mode.  The form of the real part of the interaction, \erf{Eq::StokesHam}, assumes we are working in a regime where the detuning is much greater than the linewidth, $\Delta_{f,f'} \gg \Gamma$, for all excited hyperfine states.  Note that the sign of $\hat{A}_3$ is opposite that found in Ref. \cite{Deutsch2010}.
 
 
 \section{Junk: Effects of the evanescent field and the multilevel structure of the atom}
