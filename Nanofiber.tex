@@ -962,20 +962,34 @@ Particularly, when $\phi_0=0$ and $\pi/2$, we obtain the $H$ and $V$ fundamental
 \todo[inline]{To show $v_g=\frac{P}{W}$ using the formulas above?}
 
 \section{Light-atom interaction in the dispersive regime}
-\textcolor{blue}{Single mode calculation is from Ben's dissertation (chapter 4). }
+\textcolor{blue}{Detailed derivation can be found in Qi's notes on \textit{Dispersive field-atom interaction Hamiltonian}. The special case for a single homogeneous mode can be found in Ben's dissertation (chapter 4). }
 
 
-The dispersive light shift interaction describes an atom's effective response to an electric field when the excited states can be adiabatically eliminated from the dynamics.  This reduced description applies when the saturation parameter is small,
+The dispersive light shift interaction describes an atom's effective response to an electric field when the excited states can be adiabatically eliminated from the quantum dynamics.  This reduced description applies when the saturation parameter is much smaller than 1:
 	\begin{align} \label{Eq::SatParameter}
 		s = \frac{ \Omega^2/4}{\Delta^2 + \Gamma^2/4} \ll 1,  
 	\end{align}
-where $\Omega$ is the Rabi frequency, $\Gamma$ is the spontaneous emission rate, and $\Delta = \omega_0 - \omega_{eg}$ is the probe detuning from the atomic resonance frequency $\omega_{eg}$. As the saturation parameter is proportional to the ratio of the Rabi frequency to the detuning, $\Omega/\Delta$, physically this allows condition \erf{Eq::SatParameter} to be satisfied even for large driving power (Rabi frequency) so long as the probe laser is far enough detuned.  In this limit, the atom-light coupling is described by the dispersive light-shift interaction,
-	\begin{align} \label{Eq::LightShiftHam}
-		\hat{H}_{\rm eff} & = - \hat{\mathbf{E}}^{(-)}(\mathbf{r}' ) \cdot \tensor{\alpha} \cdot \hat{\mathbf{E}}^{(+)}(\mathbf{r}' ), 
-	\end{align}
-where the electric field operator is evaluated at the atomic position $\mathbf{r}'$.   
+where $\Omega$ is the Rabi frequency, $\Gamma$ is the total spontaneous emission rate, and $\Delta = \omega_0 - \omega_{eg}$ is the probe detuning from the atomic resonance frequency $\omega_{eg}$ of the given excited and ground states. As the saturation parameter is proportional to the ratio of the Rabi frequency to the detuning, $\Omega/\Delta$, physically this allows condition \erf{Eq::SatParameter} to be satisfied even for large driving power (Rabi frequency) as long as the probe laser is far enough detuned.  In this limit, the atom-light coupling can be described by the dispersive light-shift interaction,
+\begin{align} 
+	\hat{H}_{\rm eff} & = \sum_{F,F'}\hat{H}_{\rm eff}^{FF'} =- \sum_{F,F'}\hat{\mathbf{E}}^{(-)}_F(\mathbf{r}' ) \cdot \tensor{\alpha} \cdot \hat{\mathbf{E}}^{(+)}_{F'}(\mathbf{r}' )\\
+	&= - \hat{\mathbf{E}}^{(-)}_+(\mathbf{r}' ) \cdot \tensor{\alpha} \cdot \hat{\mathbf{E}}^{(+)}_+(\mathbf{r}' )
+	- \hat{\mathbf{E}}^{(-)}_+(\mathbf{r}' ) \cdot \tensor{\alpha} \cdot \hat{\mathbf{E}}^{(+)}_-(\mathbf{r}' )\nonumber\\
+	&\quad - \hat{\mathbf{E}}^{(-)}_-(\mathbf{r}' ) \cdot \tensor{\alpha} \cdot \hat{\mathbf{E}}^{(+)}_+(\mathbf{r}' )
+	- \hat{\mathbf{E}}^{(-)}_-(\mathbf{r}' ) \cdot \tensor{\alpha} \cdot \hat{\mathbf{E}}^{(+)}_-(\mathbf{r}' ), \label{Eq::LightShiftHam}
+\end{align}
+where the electric field operator is evaluated at the atomic position $\mathbf{r}'$, and the electric component of the guided field can be given by
+\begin{align}
+\hat{\mathbf{E}} &= (\hat{\mathbf{E}}^{(+)}e^{-i\omega t}+c.c.)/2
+\end{align}   
+with
+\begin{align}
+\hat{\mathbf{E}}^{(+)}(\br) &= \sum_{F=\pm 1} \hat{\mathbf{E}}^{(+)}_F(\br) = \sqrt{\frac{2\pi \hbar \omega_0}{v_g\tau}}\sum_{F=\pm 1} \left[E_H \mathbf{u}_{HF}(\br\!_\perp)\hat{a}_H + E_V \mathbf{u}_{VF}(\br\!_\perp)\hat{a}_V \right]e^{iF\beta z},
+\end{align}
+where $ E_{H/V} $ and $\mathbf{u}_{HF/VF}$ are the field amplitude and the polarization vector of the $H/V$ guided mode with propagation direction $F=\pm 1$. 
 
-Now, we consider to rewrite the Hamiltonian in terms of the Stokes vector operators and the collective spin operators with the total atom number of $ N_A $. We assume the photon number, $ N_L $, is large and all atoms interact with the photon package at the same time, and hence interactions among atoms and the interference effect due to photon propagation are ignored during every measurement time step. 
+Each term of the effective Hamiltonian $\hat{H}_{\rm eff}^{FF'}$ in Equ.~\eqref{Eq::LightShiftHam} corresponds to the physics process with $F'$-propagating input field and $F$-propagating output field. For the case that only the forward-propagating fields are detected, the first two terms of the Hamiltonian yield the output we care about and the last two terms are losses. If the scattering among atoms can be ignored, then only the first term of the Hamiltonian is important. 
+
+Now, we consider to rewrite the Hamiltonian in terms of the Stokes vector operators and the collective spin operators with the total atom number of $ N_A $. We assume the photon number, $ N_L $, is large and all atoms interact with the photon package indistinguishably in the measurement time step, $\tau$, and interactions among atoms and the interference effect due to photon propagation are ignored crossing different measurement time steps. The total atomic angular momentum is $\mathbf{f}=\sum^{N_A}_i\mathbf{f}^{(i)}$. 
 
 The polarization state of the light can be represented on the Poincare sphere via Stokes vector $ \mathbf{S} $. The quantized operators in the Schwinger representation with respect to the three Poincare sphere axes are defined as  
 \begin{align}
@@ -988,24 +1002,49 @@ satisfying the $ SU(2) $ algebra $ [S_i,S_j]=i\varepsilon_{ijk}S_k $. The total 
 \hat{S}_0&= \frac{1}{2} \Big( \hat{a}_H\dg \hat{a}_H +  \hat{a}_V\dg \hat{a}_V \Big).
 \end{align}
 
-Using these definitions in the real part of the light shift interaction, \erf{Eq::LightShiftHam}, gives a coherent Hamiltonian of the form,
-	\begin{align} \label{Eq::StokesHam}
-		\hat{H}_{\rm coh} = \hbar \chi_0 \sum_{F'} \frac{1}{1+ \delta_{f'}/\Delta} \Big( & \hat{A}_0 \hat{S}_0 +\hat{A}_1 \hat{S}_1  +\hat{A}_2 \hat{S}_2  +\hat{A}_3 \hat{S}_3  \Big), 
-	\end{align}
-where the atomic operators that couple to the Stokes components at the atom's position $z'$ are
-	\begin{subequations} \label{Eq::StokesSpinOps}
-	\begin{align}
-		\hat{A}_0 = & C^{(0)}_{j'f f'} \hat{I} + C^{(2)}_{j'ff'} \left( \frac{3 \hat{f}_z^{2} - \hat{\bf{f}} \cdot  \hat{\mbf{f}} }{6} \right) \\
-		\hat{A}_1 = & C^{(2)}_{j'f f'} \left( \frac{\hat{f}_x^{2} - \hat{f}_y^{2} }{2} \right) \\
-		\hat{A}_2 = & C^{(2)}_{j'f f'} \left( \frac{\hat{f}_x \hat{f}_y + \hat{f}_y \hat{f}_x }{2} \right) \\
-		\hat{A}_3 = & - C^{(1)}_{j'f f'} \hat{f}_z.
-	\end{align}
-	\end{subequations}
+Using these definitions in Equ.~\eqref{Eq::LightShiftHam}, the effective Hamiltonian terms can be rewritten as
+\begin{align}
+\!\!\!\! \hat{H}_{\rm eff}^{FF'} &\!=\! \sum_{f} \hbar \chi_{0f}\! \sum_{f'}\frac{1}{1+\delta_{f'}/\Delta_f+i\gamma_{ff'}/2\Delta_f}\left[\hat{A}_0^{FF'}\hat{S}_0 \!+\! \hat{A}_1^{FF'}\hat{S}_1 \!+\! \hat{A}_2^{FF'}\hat{S}_2 \!+\!\hat{A}_3^{FF'}\hat{S}_3 \right]. 
+\end{align}
+Correspondingly, for all $\Delta_{ff'}\gg \Gamma$, the real part of the light shift interaction gives a coherent Hamiltonian of the form,
+\begin{align} \label{Eq::StokesHam}
+	\hat{H}_{\rm coh}^{FF'} &= \sum_f \hbar \chi_0 \sum_{f'} \frac{1}{1+ \delta_{f'}/\Delta} \left[\hat{A}_0^{FF'}\hat{S}_0 +\hat{A}_1^{FF'}\hat{S}_1 +\hat{A}_2^{FF'}\hat{S}_2 +\hat{A}_3^{FF'}\hat{S}_3 \right]. 
+\end{align}
+We have made the atomic operators that couple to the Stokes components at the atom's position, $\br'=(r_\perp^\prime,\phi'=0\,\mathrm{or}\, \pi, z')$, are
+\begin{subequations} \label{Eq::StokesSpinOps}
+\begin{align}
+	\hat{A}_0^{FF'} = & C^{(0)}_{\rm j'f f'} \left[|E_H|^2\mathbf{u}_{HF}^*(\br'_\perp)\cdot\mathbf{u}_{HF'}(\br'_\perp)+ |E_V|^2\mathbf{u}_{VF}^*(\br'_\perp)\cdot\mathbf{u}_{VF'}(\br'_\perp) \right]\hat{I}_f \nonumber\\
+	&+2iC^{(1)}_{\rm j'ff'}|E_H|^2\left[Fu_z^*(r_\perp^\prime)u_{r\!_\perp}(r_\perp^\prime)-F'u_{r\!_\perp}^*(r^\prime_\perp)u_z(r_\perp^\prime) \right]\hat{f}_\phi \nonumber\\
+	&+ C^{(2)}_{\rm j'ff'} |E_H|^2 \left[Fu_z^*(r_\perp^\prime)u_{r\!_\perp}(r_\perp^\prime)+F'u_{r\!_\perp}^*(r^\prime_\perp)u_z(r_\perp^\prime) \right]\big(\hat{f}_{r\!_\perp}\hat{f}_z+\hat{f}_z\hat{f}_{r\!_\perp} \big)\nonumber\\
+	&+ C^{(2)}_{\rm j'ff'}\!\sum_i \left[|E_H|^2u^{i^*}_{HF}(\!\br'_\perp\!)u^i_{HF'}(\!\br'_\perp\!)+ |E_V|^2u^{i^*}_{VF}(\!\br'_\perp\!)u^i_{VF'}(\!\br'_\perp\!) \right] \left(  \hat{f}_i^{2}\! -\! \frac{1}{3}\hat{\bf{f}}\! \cdot\!  \hat{\bf{f}} \right) \\
+	% A1
+	\hat{A}_1^{FF'} = & C^{(0)}_{\rm j'f f'} \left[|E_H|^2\mathbf{u}_{HF}^*(\br'_\perp)\cdot\mathbf{u}_{HF'}(\br'_\perp)- |E_V|^2\mathbf{u}_{VF}^*(\br'_\perp)\cdot\mathbf{u}_{VF'}(\br'_\perp) \right]\hat{I}_f \nonumber\\
+	&+2iC^{(1)}_{\rm j'ff'} |E_H|^2\left[Fu_z^*(r_\perp^\prime)u_{r\!_\perp}(r_\perp^\prime)-F'u_{r\!_\perp}^*(r^\prime_\perp)u_z(r_\perp^\prime) \right]\hat{f}_\phi \nonumber\\
+	&+ C^{(2)}_{\rm j'ff'} |E_H|^2 \left[Fu_z^*(r_\perp^\prime)u_{r\!_\perp}(r_\perp^\prime)+F'u_{r\!_\perp}^*(r^\prime_\perp)u_z(r_\perp^\prime) \right]\big(\hat{f}_{r\!_\perp}\hat{f}_z+\hat{f}_z\hat{f}_{r\!_\perp} \big)\nonumber\\
+	&+ C^{(2)}_{\rm j'ff'}\!\sum_i \left[|E_H|^2u^{i^*}_{HF}(\!\br'_\perp\!)u^i_{HF'}(\!\br'_\perp\!)- |E_V|^2u^{i^*}_{VF}(\!\br'_\perp\!)u^i_{VF'}(\!\br'_\perp\!) \right] \left(  \hat{f}_i^{2}\! -\! \frac{1}{3}\hat{\bf{f}}\! \cdot\!  \hat{\bf{f}} \right) \\
+	% A2
+	\hat{A}_2^{FF'} = & 2C^{(1)}_{\rm j'ff'} \left[ 2\mathrm{Re} \left(E_H^*E_Vu_{r\!_\perp}^*(r_\perp^\prime)u_\phi(r_\perp^\prime) \right)\hat{f}_z \right.\nonumber\\
+	&\quad\quad \left. -\left( FE_H^*E_Vu_\phi(r_\perp^\prime) u_z^*(r_\perp^\prime)+F'E_HE_V^*u_\phi^*(r^\prime_\perp)u_z(r_\perp^\prime) \right)\hat{f}_{r\!_\perp}\right] \nonumber\\
+	&-i C^{(2)}_{\rm j'ff'} \left[ 2i\mathrm{Im} \left(E_H^*E_V u_{r\!_\perp}^*(r_\perp^\prime)u_\phi(r_\perp^\prime) \right)\left(\hat{f}_{r\!_\perp}\hat{f}_\phi +\hat{f}_\phi\hat{f}_{r\!_\perp} \right)\right.\nonumber\\
+	&\quad \quad \left. + \left(FE_H^*E_V u_\phi(r_\perp^\prime) u_z^*(r_\perp^\prime) -F'E_HE_V^*u_\phi^*(r^\prime_\perp)u_z(r_\perp^\prime) \right)\big(\hat{f}_\phi\hat{f}_z+\hat{f}_z\hat{f}_\phi \big)\right] \\
+	% A3
+	\hat{A}_3^{FF'} = & -2iC^{(1)}_{\rm j'ff'} \left[ 2i\mathrm{Im} \left(E_HE_V^*u_{r\!_\perp}(r_\perp^\prime)u_\phi^*(r_\perp^\prime) \right)\hat{f}_z \right.\nonumber\\
+	&\quad\quad \left. +\left( FE_H^*E_Vu_\phi(r_\perp^\prime) u_z^*(r_\perp^\prime)-F'E_HE_V^*u_\phi^*(r^\prime_\perp)u_z(r_\perp^\prime) \right)\hat{f}_{r\!_\perp}\right] \nonumber\\
+	&+ C^{(2)}_{\rm j'ff'} \left[ 2\mathrm{Re} \left(E_HE_V^* u_{r\!_\perp}(r_\perp^\prime)u_\phi^*(r_\perp^\prime) \right)\left(\hat{f}_{r\!_\perp}\hat{f}_\phi +\hat{f}_\phi\hat{f}_{r\!_\perp} \right)\right.\nonumber\\
+	&\quad \quad \left. + \left(FE_H^*E_V u_\phi(r_\perp^\prime) u_z^*(r_\perp^\prime) +F'E_HE_V^*u_\phi^*(r^\prime_\perp)u_z(r_\perp^\prime) \right)\big(\hat{f}_\phi\hat{f}_z+\hat{f}_z\hat{f}_\phi \big)\right].
+\end{align}
+\end{subequations}
 The dimensionless coupling constant,
-	\begin{align} \label{Eq::FaradayAngle}
-		\chi_0 = - \left(\frac{4\pi \omega_0}{A c} \right) \alpha_0(\Delta) = \Big( \frac{\sigma_0}{A} \Big)\Big( \frac{\Gamma}{2 \Delta} \Big),
-	\end{align} 
-is a measure of the strength of the light-matter interaction.  It is proportional to the detuning, $\Delta^{-1}$, but more importantly to the ratio of the resonant atomic cross section, $\sigma_0 = 3 \lambda_{j j'}^2/2 \pi$, to the transverse mode area $A$.  This ratio sets the strength of the single-atom coupling, as it roughly describes the amount of light scattered from the atom back into the probe mode.  The form of the real part of the interaction, \erf{Eq::StokesHam}, assumes we are working in a regime where the detuning is much greater than the linewidth, $\Delta_{f,f'} \gg \Gamma$, for all excited hyperfine states.  Note that the sign of $\hat{A}_3$ is opposite that found in Ref. \cite{Deutsch2010}.
+\begin{align}
+\chi_{0f} &= -\frac{2\pi\omega_0}{v_g\tau}\alpha(\Delta_f) =\frac{2\pi\omega_0}{v_g\tau} \frac{|d_{f'_{max}f}|^2}{\hbar \Delta_f} =n_g\sigma_0\frac{\Gamma}{4\Delta_f}
+\end{align}
+%\begin{align} \label{Eq::FaradayAngle}
+%	\chi_0 = - \left(\frac{4\pi \omega_0}{A c} \right) \alpha_0(\Delta) = \Big( \frac{\sigma_0}{A} \Big)\Big( \frac{\Gamma}{2 \Delta} \Big),
+%\end{align} 
+is a measure of the strength of the light-matter interaction.  It is proportional to the detuning, $\Delta_f^{-1}$, but more importantly to the ratio of the resonant atomic cross section, $\sigma_0 = 3 \lambda_{f f'}^2/2 \pi$, \textcolor{red}{to the transverse mode area $A$}.  This ratio sets the strength of the single-atom coupling, as it roughly describes the amount of light scattered from the atom back into the probe mode.  
+%The form of the real part of the interaction, \erf{Eq::StokesHam}, assumes we are working in a regime where the detuning is much greater than the linewidth, $\Delta_{f,f'} \gg \Gamma$, for all excited hyperfine states.  Note that the sign of $\hat{A}_3$ is opposite that found in Ref. \cite{Deutsch2010}.
+
+For a psuedo-spin system, the spin operator $\mathbf{f}=\mathbf{J}=\sum_i^{N_A}\hat{\boldsymbol{\sigma}}/2$ and satisfies the $\mathrm{SU}(2)$ symmetry that $[J_i,J_j]=i\epsilon_{ijk}J_k$ and hence, in Equs.~\eqref{Eq::StokesSpinOps}, the common factor $J_iJ_j+J_jJ_i=2J_iJ_j-i\epsilon_{ijk}J_k$. 
 
 
 \section{Junk: Effects of the evanescent field and the multilevel structure of the atom}
