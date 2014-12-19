@@ -348,30 +348,29 @@ What we are interested in is the frequency response of the guided modes at a giv
 and considering the weak saturation case that $\hat{\sigma}_z\approx -1$ or almost all atoms are in the ground state, Equ.~\ref{eq:dsigma-t} becomes
 \begin{align}
 -i\omega \hat{\sigma}_-(\omega) &= \left[-i\omega_{eg}-\frac{\Gamma_{\rm fiber}}{2} \right]\hat{\sigma}_-(\omega) \nonumber\\
-&\quad +i\sqrt{2\pi}\left[ \sum_{m,f} g_\mu(\omega) \hat{a}_\mu(\omega)e^{i\omega(t-t_0)}+\sum_{m,p} g_\nu(\omega) \hat{a}_\nu(\omega)e^{i2\omega(t-t_0)}\right],
+&\quad +i\sqrt{2\pi}\left[ \sum_{m,f} g_\mu(\omega) \hat{a}^{in}_\mu(\omega)e^{i\omega(t-t_0)}+\sum_{m,p} g_\nu(\omega) \hat{a}^{in}_\nu(\omega)e^{i\omega(t-t_0)}\right],
 \end{align}
 where we have defined $\hat{a}^{in}_\mu(\omega)\equiv \hat{a}_\mu(\omega, t_0)e^{-if\omega(t-t_0)}$ and $\hat{a}^{in}_\nu(\omega)\equiv \hat{a}_\nu(\omega, t_0)e^{-i\omega(t-t_0)}$. 
 Therefore, we can obtain the linear response relationship between $\hat{\sigma}_-(\omega)$ and $\hat{a}^{in}(\omega)$ as
-\begin{align}\label{eq:sigma-ain0}
-\hat{\sigma}_-(\omega) &= -\sum_{m,f} \frac{\sqrt{2\pi}g_\mu(\omega)e^{i\omega(t-t_0)}}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}}\hat{a}^{in}_\mu(\omega)-\sum_{m,p} \frac{\sqrt{2\pi}g_\nu(\omega)e^{i2\omega(t-t_0)}}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}}\hat{a}^{in}_\nu(\omega),
-\end{align}
-where the detuning $\Delta=\omega-\omega_{eg}$. As can be seen that the second term on the right-hand-side of the equation above is a sum over a lot of high-frequency oscillation terms, which may be ignored for our analysis purpose. With this saying, we have 
 \begin{align}\label{eq:sigma-ain}
-\hat{\sigma}_-(\omega) &\approx -\sum_{m,f} \frac{\sqrt{2\pi}g_\mu(\omega)e^{i\omega(t-t_0)}}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}}\hat{a}^{in}_\mu(\omega).
+\hat{\sigma}_-(\omega) &= -\sum_{m,f} \frac{\sqrt{2\pi}g_\mu(\omega)e^{i\omega(t-t_0)}}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}}\hat{a}^{in}_\mu(\omega)-\sum_{m,p} \frac{\sqrt{2\pi}g_\nu(\omega)e^{i\omega(t-t_0)}}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}}\hat{a}^{in}_\nu(\omega),
 \end{align}
+where the detuning $\Delta=\omega-\omega_{eg}$. The factor of $e^{i\omega(t-t_0)}$ is the accumulated phase factor due to the free evolution of light from time $t_0$ to $t$.
 
-On the other hand, Equ.~\ref{eq:aout1} implies the input-output relationship in the frequency domain $(t\gg t_0)$ that
+On the other hand, Equ.~\ref{eq:aout1} implies the input-output relationship in the frequency domain $\mathbin{\color{red}{(t\gg t_0)}}$ that
 \begin{align}
 \hat{a}^{out}_\mu(\omega ) &= \hat{a}^{in}_\mu(\omega) +i \sqrt{2\pi}g_\mu^*(\omega)\hat{\sigma}_-(\omega). 
 \end{align}
 By substituting Equ.~\ref{eq:sigma-ain} into the equation above, we obtain the input-output relationship of the guided modes due to an atom close to the nanofiber as
 \begin{align}
-\hat{a}^{out}_\mu(\omega) &\approx \hat{a}^{in}_\mu (\omega) -i\sum_{\mu'}\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)e^{i\omega(t-t_0)}}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}}\hat{a}^{in}_{\mu'}(\omega)=\sum_{\mu'}S^\mu_{\mu'}\hat{a}^{in}_{\mu'}(\omega),
+\hat{a}^{out}_\mu(\omega) &= \hat{a}^{in}_\mu (\omega) \!-\! i\sum_{m',f'}\!\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)e^{i\omega(t-t_0)}}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}}\hat{a}^{in}_{\mu'}(\omega) \!-\! i\sum_{m,p}\!\frac{2\pi g_\mu^*(\omega)g_{\nu}(\omega)e^{i\omega(t-t_0)}}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}}\hat{a}^{in}_{\nu}(\omega)\\
+&\approx \hat{a}^{in}_\mu (\omega) \!-\! i\sum_{m',f'}\!\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)e^{i\omega(t-t_0)}}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}}\hat{a}^{in}_{\mu'}(\omega)=\sum_{\mu'}S^\mu_{\mu'}\hat{a}^{in}_{\mu'}(\omega),
 \end{align}
 where the scattering matrix elements
 \begin{align}\label{eq:Smfmft}
-S^\mu_{\mu'} &\equiv S^{mf}_{m'f'}=\delta_{mm'}\delta_{ff'}-i\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)e^{i\omega(t-t_0)}}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}}.
+S^\mu_{\mu'} &\equiv S^{mf}_{m'f'}=\delta_{mm'}\delta_{ff'}-i\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)e^{i\omega(t-t_0)}}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}},
 \end{align}
+and \textcolor{red}{we have ignored the crossing terms between the guided modes and radiative modes due to orthogonality.} 
 
 For the $m=1,f=1$ mode, for instance, if we ignore the portions scattered to all the other modes and the time-dependent phase factor, we will have 
 \begin{align}
