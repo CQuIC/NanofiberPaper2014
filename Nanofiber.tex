@@ -207,15 +207,16 @@ The Born approximation has been used in the last step, which should be a good ap
 
 Since the Maxwell equation of a bare fiber has a similar form to the time-independent Schrodinger equation, one can reference to the division of bound and scattering problems of the Schrodinger equation to define guided and radiation modes according to the value of the propagation constant $ \beta $. If $ n_2^2k^2<\beta^2<n_1^2k^2 $ with $ k=\omega/c $, the propagating mode of the fiber described by $ \beta $ is called a guided mode. If $ \beta^2<n_2^2k^2 $, the corresponding mode is called a radiation mode. There are finite guided modes with discrete $ \beta $ values for a given nanofiber; yet, radiation modes have continuous $ \beta $ and are countless. Correspondingly, the dyadic Green function can be decomposed into guided mode components and radiation mode components. Details regarding calculating the radiation and guided components for the fields and hence the dyadic Green functions are given in Appendix~(\ref{app:fieldcalculation}).   
 
-For our problem, we only care about the guided mode contributions which are the dominate components detected at the end of a long nanofiber (a few centimeters long). We are interested in the single mode fibers for this paper. The only allowed guided mode for a single-mode fiber is called \textit{$\mathrm{HE}_{11}$} mode which has degeneracies of two propagating directions and two polarization patterns. One can show that the dyadic Green function for the guided modes can be written as \textcolor{red}{(Check the factor of 2 from this equation.)}
+For our problem, we only care about the guided mode contributions which are the dominate components detected at the end of a long nanofiber (a few centimeters long). We are interested in the single mode fibers for this paper. The only allowed guided mode for a single-mode fiber is called \textit{$\mathrm{HE}_{11}$} mode which has degeneracies of two propagating directions and two polarization patterns. One can show that the dyadic Green function for the guided modes can be written as~\cite{Sondergaard2001a} \textcolor{red}{(Check the factor of 2 from this equation.)}
 \begin{align}
-\mathbf{G}_g(\br,\br') = -\frac{i\mathbin{\color{blue}{n_g}}}{4k_0} \sum_{m,f=\pm 1} \mathbf{u}_{\mu}(r\!_\perp)\mathbf{u}^*_{\mu}(r_{\!\perp}^\prime)e^{if\beta_0(z-z')+im(\phi-\phi')}.
+\mathbf{G}_g(\br,\br') &=-\frac{in_g}{4k_0} \sum_{m,f=\pm 1} \mathbf{u}_{\mu}(r\!_\perp)\mathbf{u}_{\tilde{\mu}}(r_{\!\perp}^\prime)e^{if\beta_0(z-z')+im(\phi-\phi')}\\
+&= -\frac{in_g}{4k_0} \sum_{m,f=\pm 1} \mathbf{u}_{\mu}(r\!_\perp)\mathbf{u}^*_{\mu}(r_{\!\perp}^\prime)e^{if\beta_0(z-z')+im(\phi-\phi')}.
 \end{align}
 In the equation above, the transverse modes of the nanofiber, $\mathbf{u}_{\mu}(\br)$, are defined by
 \begin{align}
 [-\nabla\times\nabla + \frac{\omega_{\mu}^2}{c^2}n^2(\br)]  \mathbf{u}_{\mu}(\br) &=0,
 \end{align}
-where the mode index $\mu=(\beta_0,m,f)$ with angular moment quantum number $ m $ and propagation index $ f $. We have used the circularly polarized modes as the basis for the eigenmode expansion for the dyadic Green function. One should be able to expand the dyadic Green functions in terms of any orthonormal basis, and replace the $m$ index with any other polarization indices. 
+where the mode index $\mu=(\beta_0,m,f)$ with angular moment quantum number $ m $ and propagation index $ f $. The adjoint mode index $\tilde{\mu}=(\beta_0,-m,-f)$ and we have defined the orthonormal modes $\mathbf{u}_{\mu}(\br)=\mathbf{u}_{\mu}(r_{\!\perp})e^{if\beta_0z+im\phi}$ so that $\mathbf{u}_{\tilde{\mu}}(r_{\!\perp})=\mathbf{u}^*_{\mu}(r_{\!\perp})$ (see Appendix~\ref{ch:guidedmodes}). For simplicity, we have used the circularly polarized modes as the basis for the eigenmode expansion for the dyadic Green function. One should be able to expand the dyadic Green functions in terms of linear or circular polarization basis, and replace the $m$ index with corresponding polarization indices. 
 
 To retrieve the formula for the phase shift of an input mode in presence of a dipole, we consider the input field is
 \begin{align}
@@ -879,7 +880,7 @@ where the first integral yield the radiation mode contribution and the last two 
 
 
 
-\section{Group index of refraction and mode functions of the fundamental guided modes}
+\section{Group index of refraction and mode functions of the fundamental guided modes}\label{ch:guidedmodes}
 The longitudinal propagation constant $\beta$ of the fundamental $\mathrm{HE}_{11}$ guided mode is determined by the fiber eigenvalue equation~\cite{LeKien2005}
 \begin{align}
 f(h,q,k,\beta) &=0,
@@ -903,7 +904,7 @@ Therefore, the group index of refraction of the fundamental modes of the nanofib
 
 \todo[inline]{Frequency stability, linearity and such of the group index of refraction.}
 
-The fundamental mode functions, $\mathbf{u}^{(\mu)}(r\!_\perp,\phi,z)$, of the electric components of the fiber~\cite{LeKien2005,Lacroute2012} can be separated into $r\!_\perp-$, $\phi-$ and $z-$ dependent parts, and are characterized by the mode index $\mu=(\omega,f,\xi)$, where $f=\pm 1$ indicates forward and backward propagating directions and $\xi $ indicates the polarization state of the mode. For a quasicircularly polarized fundamental mode, we use $\xi=m=\pm $ to indicate the counterclockwise and clockwise rotations, respectively; for a quasilinearly polarized fundamental mode, we usually use $\xi=\phi_0$ to indicate the polarization axis is rotated by $\phi_0$ from the $x$-axis; specially, we use $\xi=H$ or $V$ when the quasilinear polarization axis is along the $x$-axis or $y$-axis, respectively. For the circularly polarized case, the fundamental mode can be written as 
+The fundamental mode functions, $\mathbf{u}^{(\mu)}(r\!_\perp,\phi,z)$, of the electric components of the fiber~\cite{LeKien2005,Lacroute2012} can be separated into $r\!_\perp-$, $\phi-$ and $z-$dependent parts, and are characterized by the mode index $\mu=(\omega,f,\xi)$, where $f=\pm 1$ indicates forward and backward propagating directions and $\xi $ indicates the polarization state of the mode. For a quasicircularly polarized fundamental mode, we use $\xi=m=\pm $ to indicate the counterclockwise and clockwise rotations, respectively; for a quasilinearly polarized fundamental mode, we usually use $\xi=\phi_0$ to indicate the polarization axis is rotated by $\phi_0$ from the $x$-axis; specially, we use $\xi=H$ or $V$ when the quasilinear polarization axis is along the $x$-axis or $y$-axis, respectively. For the circularly polarized case, the fundamental mode can be written as 
 \begin{align}
 \mathbf{u}^{(\mu)}(r\!_\perp,\phi,z) &=u^{(\mu)}_{r\!_\perp}(r\!_\perp) e^{if\beta z+im\phi }\hat{r}\!_\perp +u^{(\mu)}_{\phi}(r\!_\perp) e^{if\beta z+im\phi } \hat{\phi} +u^{(\mu)}_{z}(r\!_\perp)e^{if\beta z+im\phi }\hat{z}\\
 &=u_{r\!_\perp}(r\!_\perp) e^{if\beta z+im\phi }\hat{r}\!_\perp + m u_{\phi}(r\!_\perp) e^{if\beta z+im\phi }\hat{\phi} + f u_z (r\!_\perp) e^{if\beta z+im\phi }\hat{z},
@@ -912,18 +913,18 @@ where the forwarding, counterclockwise rotating guided mode components, $\mathbf
 \begin{subequations}
 \label{urtcrla}
 \begin{align}
-u_{r\!_\perp}(r\!_\perp) &=iA\frac{\beta_0}{2h} \left[ (1-s)J_0(hr\!_\perp)-(1+s)J_2(hr\!_\perp) \right]\\
-u_\phi(r\!_\perp) &=  -mA \frac{\beta_0}{2h} \left[ (1-s)J_0(hr\!_\perp) +(1+s)J_2(hr\!_\perp) \right] \\
-u_z(r\!_\perp) &= fA J_1(hr\!_\perp),
+u_{r\!_\perp}(r\!_\perp) &=-A\frac{\beta_0}{2h} \left[ (1-s)J_0(hr\!_\perp)-(1+s)J_2(hr\!_\perp) \right]\\
+u_\phi(r\!_\perp) &=  -imA \frac{\beta_0}{2h} \left[ (1-s)J_0(hr\!_\perp) +(1+s)J_2(hr\!_\perp) \right] \\
+u_z(r\!_\perp) &= ifA J_1(hr\!_\perp),
 \end{align}
 \end{subequations}
 and, for $ r_\perp>a $, by
 \begin{subequations}
 \label{urtcrga}
 \begin{align}
-u_{r\!_\perp}(r\!_\perp) &=iA\frac{\beta_0}{2h}\frac{J_1(ha)}{K_1(qa)} \left[ (1-s)K_0(qr\!_\perp)+(1+s)K_2(qr\!_\perp) \right]\\
-u_\phi(r\!_\perp) &=  -mA \frac{\beta_0}{2h} \frac{J_1(ha)}{K_1(qa)} \left[ (1-s)K_0(qr\!_\perp) - (1+s)K_2(qr\!_\perp) \right] \\
-u_z(r\!_\perp) &= fA \frac{J_1(ha)}{K_1(qa)} K_1(qr\!_\perp),
+u_{r\!_\perp}(r\!_\perp) &=-A\frac{\beta_0}{2h}\frac{J_1(ha)}{K_1(qa)} \left[ (1-s)K_0(qr\!_\perp)+(1+s)K_2(qr\!_\perp) \right]\\
+u_\phi(r\!_\perp) &=  -imA \frac{\beta_0}{2h} \frac{J_1(ha)}{K_1(qa)} \left[ (1-s)K_0(qr\!_\perp) - (1+s)K_2(qr\!_\perp) \right] \\
+u_z(r\!_\perp) &= ifA \frac{J_1(ha)}{K_1(qa)} K_1(qr\!_\perp),
 \end{align}
 \end{subequations}
 with
