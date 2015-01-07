@@ -423,7 +423,7 @@ In the vacuum case, the strongest mode is given by $ |\mathbf{u}_{00}(r_\perp^{v
 
 
 \subsection{Quantum interface for the nanofiber with clock state}
-We present a general theory on light-atom interaction in presence of a nanofiber in Appendix~\ref{sec:lightatominteract}. Here, we consider a simple case that all trapped Cesium atoms are initially pumped and restricted to the clock states of the ground state ($6S_{1/2}$) sublevels, in which the atomic magnetic quantum number $M=0$ while the total atomic angular momentum quantum number can be $F=3$ and $F=4$. Therefore, we only care about the atomic polarizability components
+We present a general theory on light-atom interaction in presence of a nanofiber in Appendix~\ref{sec:lightatominteract}. Here, we consider a simple case that all trapped cesium atoms are initially pumped and restricted to the clock states of the ground state ($6S_{1/2}$) sublevels, in which the atomic magnetic quantum number $M=0$ while the total atomic angular momentum quantum number can be $F=3$ and $F=4$. Therefore, we only care about the atomic polarizability components
 \begin{align}
 \tensor{\alpha}_{\uparrow} &=\bra{F=4,M=0}\tensor{\alpha}\ket{F=4,M=0}\\
 \tensor{\alpha}_{\downarrow} &=\bra{F=3,M=0}\tensor{\alpha}\ket{F=3,M=0}.
@@ -490,6 +490,7 @@ H_{\rm eff}
 + & \left[ \big( \chi_{H,\uparrow} - \chi_{H,\downarrow}\big) + \big(\chi_{V,\uparrow} - \chi_{V,\downarrow} \big) \right] \hat{J}_z \hat{S}_0 \nonumber \\
 + & \left[ \big( \chi_{H,\uparrow} - \chi_{H,\downarrow}\big) - \big(\chi_{V,\uparrow} - \chi_{V,\downarrow} \big) \right]  \hat{J}_z \hat{S}_1\Big\}.
 \end{align}
+\missingfigure{Poincare sphere diagram with spin squeezing effect.}
 The first term is an overall scalar shift and thus does not contribute to the relative dynamics.  The second term is a constant birefringence and can be canceled with a compensating waveplate as long as the atom number remains constant which is usually the case when the trapping time is fairly large compared to the measurement time. The first two terms can also be canceled when we have the detuning approximately equally biased for the $ F=3 $ and $ F=4 $ ground states. 
 For example, we  can choose $ \Delta_3=-4.6 $ GHz and $ \Delta_4=4.6 $ GHz to the $ 6P_{1/2} $ excited state sublevels of cesium atoms to satisfy this condition, where the hyperfine splitting of the excited state can be ignored ($ ~500 $ MHz) compared to the detuning. However, we would like to leave the choice of detuning to control the third and fourth terms as will be discussed consequently. 
 
@@ -524,11 +525,12 @@ where $ \Delta J_{out}^2 =\frac{\Delta J_{in}^2}{1+\xi}=\frac{J}{2(1+\xi)} $, $ 
 
 \textcolor{blue}{Discuss the homodyne detection and sensitivity to the atom number and operating frequency in the shot noise limit.  It relates to (i) the phase shift and (ii) the shot noise resolution of the polarimeter. Should cover expectation value and fluctuation measurements.}
 
-For the birefringence measurement of the clock states discussed above, the fluctuation of the $ S_3 $ measurement is a combination effect of the shot noise fluctuation of the photon detector and the projection noise as the signal to determine the collective spin state:
+For the birefringence measurement of the clock states discussed above, the fluctuation of the $ S_3 $ measurement is a combined effect of the shot noise fluctuation of the photon detector and the projection noise as the signal to determine the collective spin state. The square variance of the measurement is
 \begin{align}
-\Delta L^2 &= \Delta P^2_{SN} + \Delta P^2_S .
+\Delta L^2 &= \Delta P^2_{SN} + \Delta P^2_S ,
 \end{align}
-The smallest detectable spin polarization is determined by the shot noise limit condition that 
+where $ \Delta P^2_{SN} $ and $ \Delta P^2_{S} $ are the square variances of the shot noise and the signal, respectively. 
+The smallest detectable spin polarization change from the input state is determined by the shot noise limit condition that 
 \begin{align}
 \Delta P_S = \Delta P_{SN},
 \end{align}
@@ -536,25 +538,28 @@ where the standard variance of the signal can be estimated by
 \begin{align}
 \Delta P_S=P_0 \sin(\varphi_{_N}) \approx P_0 \varphi_{_N}
 \end{align}
-and the shot noise variance is determined by
+and the shot noise variance is determined by~\cite{Smith2003a}
 \begin{align}
 \Delta P_{SN} = \sqrt{\frac{P_0 \hbar \omega_0 }{2\eta \tau_{pd}}}.
 \end{align}
-We estimate the phase difference is
-We estimate the phase difference is
+Above, we have defined $P_0$ as the power of the input laser field, $\varphi_{_N}$ as the angle change of the output light on the Poincare sphere due to $N_A$ atoms, $\eta$ as the quantum efficiency of the photon detector, and $\tau_{pd}$ as the time constant of the detector. 
+We estimate the angle change by
 \begin{align}
 \varphi_{_N} &= N_A \chi_{e\!f\!f}=N_A [(\chi_{H,\uparrow}-\chi_{H,\downarrow})-(\chi_{V,\uparrow}-\chi_{V,\downarrow})]\\
-&= 2N_AC_{j'}^{(0)}(\Gamma_{H}^{1D}-\Gamma_V^{1D})\frac{1}{\Delta}=\frac{C_{j'}^{(0)}\sigma_0\Gamma_{vac}}{2}(\frac{1}{A^H_{e\!f\!f}}-\frac{1}{A^V_{e\!f\!f}})\frac{1}{\Delta}\\
-&=N_AC_{j'}^{(0)}n_g\sigma_0\frac{\Gamma_{vac}}{2\Delta}\left[| \mathbf{u}_H(r'_{\!\perp})|^2- | \mathbf{u}_V(r'_{\!\perp})|^2 \right],
+&= 2N_AC_{J'}^{(0)}(\Gamma_{H}^{1D}-\Gamma_V^{1D})\frac{1}{\Delta}=\frac{C_{J'}^{(0)}\sigma_0\Gamma_{vac}}{2}(\frac{1}{A^H_{e\!f\!f}}-\frac{1}{A^V_{e\!f\!f}})\frac{1}{\Delta}\\
+&=N_AC_{J'}^{(0)}n_g\sigma_0\frac{\Gamma_{vac}}{2\Delta}\left[| \mathbf{u}_H(r'_{\!\perp})|^2- | \mathbf{u}_V(r'_{\!\perp})|^2 \right],
 \end{align}
-where $\frac{1}{\Delta}=\frac{1}{2}\sum_{f'}(\frac{1}{\Delta_{f',4}}-\frac{1}{\Delta_{f',3}})\approx \frac{1}{\Delta_{f',4}}$.
+where $\frac{1}{\Delta}=\frac{1}{2}\sum_{F'}(\frac{1}{\Delta_{F',4}}-\frac{1}{\Delta_{F',3}})\approx \frac{1}{\Delta_{F',4}}$ and $ \sigma_0=3\lambda^2/2\pi $ is the resonant photon scattering cross-section of the atoms.
 
-Now, we consider the critical case: $\eta =100\%$ and $\tau_{pd} = \frac{1}{\gamma_s}$, where the photon scattering rate
+Now, we consider the critical case that $\eta =100\%$ and $\tau_{pd} = \frac{1}{\gamma_s}$, where the photon scattering rate
 \begin{align}
-\gamma_s &= \sigma(\Delta) \frac{I(\br')}{\hbar \omega_0} \\
+\gamma_s &= \sigma(\Delta) \frac{I(\br')}{\hbar \omega_0}, 
+\end{align}
+where $ I $ is the intensity of the light, and the photon scattering cross-section
+\begin{align}
 \sigma(\Delta) &=\frac{\sigma_0}{1+\frac{4\Delta^2}{\Gamma^2_{vac}}}\approx \sigma_0 \frac{\Gamma_{vac}^2}{4\Delta^2} \quad \text{(far detuning.)}
 \end{align}
-We can rewrite 
+Hence, we can rewrite 
 \begin{align}
 \Delta P_{SN} &=P_0\sqrt{\frac{ \sigma_0 }{2A_{in}}}\frac{\Gamma_{vac}}{2\Delta},\\
 \Delta P_S &= N_A C_{j'}^{(0)}P_0 \frac{\sigma_0}{A_{e\!f\!f}}\frac{\Gamma_{vac}}{2\Delta}, 
@@ -566,8 +571,10 @@ A_{e\!f\!f} &= \frac{1}{n_g\left[ | \mathbf{u}_H(r'_{\!\perp})|^2- | \mathbf{u}_
 \end{align}
 Therefore, the $ \Delta P_S = \Delta P_{SN}$ condition gives the resolution of the birefringence measurement in terms of the minimum atom number as
 \begin{align}
-N^{min}_A &= \frac{1}{C_{j'}^{(0)}}\sqrt{\frac{A_{e\!f\!f}^2}{A_{in}\sigma_0}}.
+N^{min}_A &= \frac{1}{C_{J'}^{(0)}}\sqrt{\frac{A_{e\!f\!f}^2}{A_{in}\sigma_0}}.
 \end{align}
+
+\missingfigure{Plots for $N^{min}_A$.}
 
 \subsection{Other applications?} 
 
@@ -583,16 +590,16 @@ N^{min}_A &= \frac{1}{C_{j'}^{(0)}}\sqrt{\frac{A_{e\!f\!f}^2}{A_{in}\sigma_0}}.
 
 %\subsection{Group velocity}
 
-\subsection{Achievable phase shift with scalar atomic polarizabilities}
+\subsection{Achievable phase shift with scalar atomic polarizabilities?}
 
-\textcolor{blue}{Show the phase shift and the decay rate is a result of the interference between the free dipole radiation and the reflection from the nanofiber interface. Discuss the phase shift control landscape and the difference with the vacuum case.}
+\textcolor{blue}{Show the phase shift and the decay rate are results of the combination effect of the free dipole radiation and the reflection from the nanofiber interface. Discuss the phase shift control landscape and the difference with the vacuum case. Apply to a phase gate.}
 \begin{align}
 \delta\phi &= -\frac{\Gamma_{1D}^\mu}{2\Delta},\\
 \frac{\Gamma_{1D}^\mu}{\Gamma_0} &= \frac{6\pi c}{\omega}\frac{\sum_g\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}_g^\mu(\br',\br') \right]\cdot\mathbf{d}_{eg}^* }{\sum_g|\mathbf{d}_{eg}|^2} = 1+ \frac{3}{2} \frac{\mathrm{Im}\left[\sum_g\mathbf{d}_{eg}^*\cdot \mathbf{E}^{(R,\mu)}_g(\br') \right]}{\sum_g|\mathbf{d}_{eg}|^2 k^3}\nonumber\\
 &=\frac{3\pi}{2}\left(\frac{c}{\omega}\right)^2\frac{c}{v_g} \frac{\sum_{g}|\mathbf{d}_{eg}\cdot \mathbf{u}^\mu(\br')|^2}{\sum_g|\mathbf{d}_{eg}|^2}\\
 \mathbf{E}^{(R,\mu)}_g(\br') &= -\frac{1}{4\pi k^2} \mathbf{G}^{(R,\mu)}_g(\br',\br')\cdot \mathbf{d}_{eg}.
 \end{align}
-The index $ R $ indicates the reflected component, and $\mu=(m,f,\beta)  $ identifies the normalized fiber mode $ \mathbf{u}^\mu(\br') $. 
+The index $ R $ indicates the reflected component, and $\mu=(\beta,m,f)  $ identifies the normalized fiber mode $ \mathbf{u}^\mu(\br') $. 
 
 We can write 
 \begin{align}
