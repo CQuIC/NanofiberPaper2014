@@ -217,65 +217,67 @@ In the equation above, the wave number $k_0=\frac{\omega_0}{c}$ for a given angu
 \end{align}
 where the mode index $\mu=(\beta_0,m,f)$ with angular moment quantum number $ m $ and propagation index $ f $. The adjoint mode index $\tilde{\mu}=(\beta_0,-m,-f)$ and we have defined the orthonormal modes $\mathbf{u}^{(\mu)}(\br)=\mathbf{u}^{(\mu)}(r_{\!\perp})e^{if\beta_0z+im\phi}$ so that $\mathbf{u}^{(\tilde{\mu})}(r_{\!\perp})={\mathbf{u}^{(\mu)}}^*(r_{\!\perp})$ (see Appendix~\ref{ch:guidedmodes}). For simplicity, we have used the circularly polarized modes as the basis for the eigenmode expansion for the dyadic Green function. One should be able to expand the dyadic Green functions in terms of either linear or circular polarization basis, and replace the $m$ index with corresponding polarization indices. 
 
-To calculate the phase shift of an input mode in presence of a dipole, we consider the input field 
+To calculate the phase shift of a given mode in presence of an atom, we consider a simple case that the polarizability of the atom is a scalar $\alpha$ and the input field 
 \begin{align}
-\mathbf{E}_0(\br) &= E_0 \mathbf{u}_{m=1}^{f=1} (\br) = E_0 \mathbf{u}_1^1 (\mathbf{r}\!_\perp)e^{i\phi+i\beta_0 z}. 
+\mathbf{E}_0(\br) &= E_0 \mathbf{u}^{(\beta_0,m=1,f=1)} (\br) = E_0 \mathbf{u}^{(\beta_0,1,1)} (\mathbf{r}\!_\perp)e^{i\phi+i\beta_0 z}. 
 \end{align}
-The output can be retrieved as
+The output field can be expressed as
 $\mathbf{E}(\br)  = \mathbf{E}_0(\br) -4\pi k_0^2 \alpha \mathbf{G}^g(\br,\br')\cdot\mathbf{E}_0(\br')$.
-The output field can also be expanded as
+Alternatively, the output field can be expanded in terms of the guided fiber modes as
 \begin{align}
-\mathbf{E}(\br) &= E_0\mathbf{u}_{1}^{1} (\br) + \sum_{m,f=\pm 1} C_{mf} E_0 \mathbf{u}_m^f(\br),  
+\mathbf{E}(\br) &= E_0\mathbf{u}_{(\beta_0,1,1)} (\br) + \sum_{m,f=\pm 1} C_{mf} E_0 \mathbf{u}^{(\beta_0,m,f)}(\br),  
 \end{align}
 where the mode projection coefficients are
 \begin{align}
-C_{mf} &= -4\pi k_0^2 \alpha \!\int\! \mathrm{d}^2r\!_\perp n^2(\mathbf{r}\!_\perp){\mathbf{u}^f_m}^*(\mathbf{r})\cdot \mathbf{G}^g(\br,\br') \!\cdot\! \mathbf{u}_1^1(\mathbf{r}^\prime).
+C_{mf} &= -4\pi k_0^2 \alpha \!\int\! \mathrm{d}^2r\!_\perp n^2(\mathbf{r}\!_\perp){\mathbf{u}^{(\beta_0,m,f)}}^*(\mathbf{r})\cdot \mathbf{G}^g(\br,\br') \!\cdot\! \mathbf{u}^{(\beta_0,1,1)}(\mathbf{r}^\prime).
 \end{align}
 Using the eigenmode expansion of the dyadic Green function, these coefficients become
 \begin{align}
-C_{mf} &= i\pi k_0 n_g\alpha \!\int\! \mathrm{d}^2r\!_\perp n^2 {\mathbf{u}^f_m}^*(\mathbf{r}\!_\perp)\cdot\!\!\!\!\!\! \sum_{f',m'=\pm 1}\!\!\!\! \left[\mathbf{u}_{m'}^{f'}(\mathbf{r}\!_\perp){\mathbf{u}^{f'}_{m'}}^*(\mathbf{r}^\prime\!_\perp) \right]\!\cdot\! \mathbf{u}_1^1(\mathbf{r}^\prime\!_\perp)\nonumber\\
+C_{mf} &= i\pi k_0 n_g\alpha \!\int\! \mathrm{d}^2r\!_\perp n^2 {\mathbf{u}^{(\beta_0,m,f)}}^*(\mathbf{r}\!_\perp)\cdot\!\!\!\!\!\! \sum_{f',m'=\pm 1}\!\!\!\! \left[\mathbf{u}^{(\beta_0,m',f')}(\mathbf{r}\!_\perp){\mathbf{u}^{(\beta_0,m',f')}}^*(\mathbf{r}^\prime\!_\perp) \right]\!\cdot\! \mathbf{u}^{(\beta_0,1,1)}(\mathbf{r}^\prime\!_\perp)\nonumber\\
 &\quad\quad\quad e^{if'\beta_0(z-z')} e^{i\beta_0(z'-fz)}\\
-&= i\pi k_0 n_g\alpha  {\mathbf{u}^f_m}^*(r'_{\!\perp})\cdot \mathbf{u}_1^1(r'_{\!\perp})e^{i\beta_0 (1-f)z'+i(1-m)\phi'},\label{eq:Cmf}
+&= i\pi k_0 n_g\alpha  {\mathbf{u}^{(\beta_0,m,f)}}^*(r'_{\!\perp})\cdot \mathbf{u}^{(\beta_0,1,1)}(r'_{\!\perp})e^{i\beta_0 (1-f)z'+i(1-m)\phi'},\label{eq:Cmf}
 \end{align}
 where the orthogonality relationship of the fiber modes had been used:
 \begin{align}
-\int n^2(\br)  \mathbf{u}_{\mathbf{k}}(\br) \cdot \mathbf{u}^*_{\mathbf{k}'}(\br)\mathrm{d} \br\!_\perp &=\delta_{\mathbf{k}\mathbf{k}'}\\
-\Leftrightarrow \int_0^{2\pi}\!\!\!\!\! \mathrm{d}\phi\!\! \int_0^\infty\!\!\!\! r\!_\perp \mathrm{d}r\!_\perp  n^2(r\!_\perp) \mathbf{u}_{m}(r\!_\perp )\!\cdot\!\mathbf{u}_{m'}^*(r\!_\perp )& e^{i(f\!-\!f')\beta z+i(m\! -\! m')\phi}  =\delta_{mm'}e^{i(f\!-\!f')\beta z} \label{eq:orthutrans}.
+\int n^2(\br)  \mathbf{u}^{(\mu)}(\br) \cdot {\mathbf{u}^{(\mu')}}^*(\br)\mathrm{d} \br\!_\perp &=\delta_{\mu\mu'}\\
+\Leftrightarrow \int_0^{2\pi}\!\!\!\!\! \mathrm{d}\phi\!\! \int_0^\infty\!\!\!\! r\!_\perp \mathrm{d}r\!_\perp  n^2(r\!_\perp) \mathbf{u}^{(\beta_0,m,f)}(r\!_\perp )\!\cdot\!{\mathbf{u}^{(\beta_0,m',f')}}^*(r\!_\perp )& e^{i(f\!-\!f')\beta_0 z+i(m\! -\! m')\phi}  =\delta_{mm'}\mathbin{\color{red}e^{i(f\!-\!f')\beta_0 z}} \label{eq:orthutrans}.
 \end{align}
 
-The output forwarding $ m=1 $ $\mathrm{HE}_{11}$ mode component is then given by
+The output forwarding $ m=1 $ $\mathrm{HE}_{11}$ mode component becomes
 \begin{align}
-\mathbf{E}_+(\br) &= (1+C_{11})E_0\mathbf{u}_{1}^{1} (\br)\\
-&\approx \exp\left[i\pi k_0 n_g\alpha  | \mathbf{u}_1^1(r'_{\!\perp})|^2 \right] E_0\mathbf{u}_{1}^{1} (\br)\\
-&= \mathbin{\color{red}{te^{i\delta\phi}}}E_{in}(\br), 
+\mathbf{E}_+(\br) &= (1+C_{11})E_0\mathbf{u}_{(\beta_0,1,1)} (\br)\\
+&\approx \exp\left[i\pi k_0 n_g\alpha  | \mathbf{u}^{(\beta_0,1,1)}(r'_{\!\perp})|^2 \right] E_0\mathbf{u}^{(\beta_0,1,1)} (\br)\\
+&= {te^{i\delta\phi}} E_{in}(\br), 
 \end{align}
-where the factor change of the mode's amplitude is 
+where the attenuation factor of the mode is 
 \begin{align}
-t=\exp\left[\mathrm{Im}[C_{11}]\right]=\exp\left[ -\pi k_0 n_g \mathrm{Im}[\alpha]  | \mathbf{u}_1^1(r'_{\!\perp})|^2 \right]
+t=\exp\left[\mathrm{Im}[C_{11}]\right]=\exp\left[ -\pi k_0 n_g \mathrm{Im}[\alpha]  | \mathbf{u}^{(\beta_0,1,1)}(r'_{\!\perp})|^2 \right]
 \end{align}
 and the phase shift is
 \begin{align}
-\delta\phi &= \mathrm{Re}[C_{11}]= \pi \mathrm{Re}[\alpha] \frac{\omega_0}{v_g}  | \mathbf{u}_1^1(r'_{\!\perp})|^2
+\delta\phi &= \mathrm{Re}[C_{11}]= \pi \mathrm{Re}[\alpha] \frac{\omega_0}{v_g}  | \mathbf{u}^{(\beta_0,1,1)}(r'_{\!\perp})|^2
 = \pi \mathrm{Re}[\alpha] \frac{\omega_0}{cA^g_{11}},
 \end{align}
-where $ A^g_{mf}=1/n_g| \mathbf{u}_m^f(r'_{\!\perp})|^2 $ is the effective $(m,f)$ mode area at the atom position. 
+where $ A^g_{mf}=1/n_g| \mathbf{u}^{(\beta_0,m,f)}(r'_{\!\perp})|^2 $ is the effective $\mu=(\beta_0,m,f)$ mode area at the atom position. 
 
 We use the fact that 
 \begin{align}
 \alpha &=-\frac{|d_{eg}|^2}{\hbar \Delta}, \,\, (\Delta=\omega_{\beta}-\omega_{eg})\\
-\Gamma^{g}_{mf} &= 2\pi \frac{|\mathbf{u}^\mu(\br')\cdot \mathbf{d}_{eg}|^2}{\hbar }\left(\frac{\omega_0}{v_g} \right)\mathbin{\color{red} \neq 2\pi \frac{| \mathbf{d}_{eg}|^2}{\hbar A^g_{mf}}\left(\frac{\omega_0}{c} \right)}\label{eq:Gammagmf}\\
+\Gamma^{g}_{mf} &= 2\pi \frac{|\mathbf{u}^{(\mu)}(\br')\cdot \mathbf{d}_{eg}|^2}{\hbar }\left(\frac{\omega_0}{v_g} \right)\mathbin{\color{red} \neq 2\pi \frac{| \mathbf{d}_{eg}|^2}{\hbar A^g_{mf}}\left(\frac{\omega_0}{c} \right)}\label{eq:Gammagmf}\\
 \Gamma_{vac} &= \frac{4}{3} \left( \frac{\omega_0}{c}\right)^3 \frac{|d_{eg}|^2}{\hbar}\\
 \sigma_0 &= \frac{3\lambda^2}{2\pi} \equiv \text{resonant cross section}
 \end{align}
 the phase shift can be rewritten as
 \begin{align}
-\mathbin{\color{red}{\delta\phi}} &= -\frac{\Gamma^{g}_{11}}{2\Delta} = - \frac{\sigma_0 }{A^g_{mf}} \frac{\Gamma_{vac}}{8\Delta} = -\frac{c}{v_g} \sigma_0 |\mathbf{u}_1^1 (r'_{\!\perp})|^2 \frac{\Gamma_{vac}}{8\Delta}.
+\mathbin{\color{red}{\delta\phi}} &\approx -\frac{\Gamma^{g}_{11}}{2\Delta} = - \frac{\sigma_0 }{A^g_{mf}} \frac{\Gamma_{vac}}{8\Delta} = -\frac{c}{v_g} \sigma_0 |\mathbf{u}_1^1 (r'_{\!\perp})|^2 \frac{\Gamma_{vac}}{8\Delta}.
 \end{align}
 
-If there are two input modes, the Faraday and birefringence effects can be analyzed along this line. 
+If there are two input modes, the Faraday and birefringence effects can be analyzed along this line. \textcolor{blue}{A more generalized result is given in Section~\ref{sec:atomchain}.}
+
+\textcolor{red}{Note: to obtain the final result of the phase shift, we have assumed the orientation of the dipole has no preference of direction, which is the meaning of \textit{scalar polarizability}. There may be a factor of $1/3$ missing in the end. However, it might be better to use the general tensor polarizability and consider a general input field to derive the phase shift and birefringence here. }
 
 \subsection{Connect to the Heisenberg picture}
-We consider a single mode interact with an atom, the Hamiltonian can be given by
+We consider a single mode interact with an atom again, in which the Hamiltonian can be given by
 \begin{align}
 \hat{H} &= \hat{H}_0 + \hat{H}_{int}, 
 \end{align}
@@ -284,28 +286,28 @@ where the free field Hamiltonian can be given by
 \hat{H}_0 &= \sum_{m,f} \int \mathrm{d}\beta \hbar \omega_{\beta} \hat{a}^\dagger_\mu(\beta)\hat{a}_\mu (\beta) +\sum_{m,p} \int \mathrm{d}\beta \hbar \omega_{\beta} \hat{a}^\dagger_\nu(\beta)\hat{a}_\nu (\beta)+ \hat{H}_A \\
 &= \sum_{m,f} f\int \mathrm{d}\omega \hbar \omega \hat{a}^\dagger_\mu(\omega)\hat{a}_\mu (\omega) +\sum_{m,p} \int \mathrm{d}\omega \hbar \omega \hat{a}^\dagger_\nu(\omega)\hat{a}_\nu (\omega)+ \frac{\hbar\omega_{eg}}{2}\hat{\sigma}_z,
 \end{align}
-where $\hat{a}_\mu (\omega)= \sqrt{\left| \frac{\mathrm{d}\beta}{\mathrm{d}\omega}\right| }\hat{a}_\mu (\beta)=\frac{1}{\sqrt{v_g}}\hat{a}_\mu (\beta)$ and $\hat{a}_\nu (\omega)=  \frac{1}{\sqrt{c}}\hat{a}_\nu (\beta)$. For the two-direction propagating guided modes, we have linearized the frequency as $\omega\approx \omega_0+fv_g(\beta-f\beta_0)$. We have defined $\mu=(\omega,f=\pm 1,m=\pm 1)$ to indicate the guided modes and $\nu=(\omega,\beta,m,p)$ for the radiative modes, where for the radiative modes $m=0,\pm 1,\pm 2,\cdots$ is the mode order and $p=\pm 1$ denote the two degrees of freedom of the mode polarizations.  We consider the atomic Hamiltonian $\hat{H}_A = \frac{\hbar\omega_{eg}}{2}\hat{\sigma}_z$ representing a two-level system. The interaction Hamiltonian is
+with $\hat{a}_\mu (\omega)= \sqrt{\left| \frac{\mathrm{d}\beta}{\mathrm{d}\omega}\right| }\hat{a}_\mu (\beta)=\frac{1}{\sqrt{v_g}}\hat{a}_\mu (\beta)$ and $\hat{a}_\nu (\omega)=  \frac{1}{\sqrt{c}}\hat{a}_\nu (\beta)$. For the two-direction propagating guided modes, we have linearized the frequency as $\omega\approx \omega_0+fv_g(\beta-f\beta_0)$. Just for this section, we define $\mu=(\omega,f=\pm 1,m=\pm 1)$ to indicate the guided modes and $\nu=(\omega,\beta,m,p)$ for the radiative modes, where for the radiative modes $m=0,\pm 1,\pm 2,\cdots$ are the mode orders and $p=\pm 1$ denote the two degrees of freedom of the mode polarizations.  We consider the atomic Hamiltonian $\hat{H}_A = \frac{\hbar\omega_{eg}}{2}\hat{\sigma}_z$ to represent a two-level system. The interaction Hamiltonian is
 \begin{align}
 \hat{H}_{int} &= -\hat{\mathbf{d}}\cdot \hat{\mathbf{E}}=-\hat{\mathbf{d}}_{eg}\cdot \hat{\mathbf{E}}^{(+)}(\br')-\hat{\mathbf{d}}_{ge}\cdot \hat{\mathbf{E}}^{(-)}(\br'),
 \end{align}
-where the electric field operator $\hat{\mathbf{E}}^{(+)}=\hat{\mathbf{E}}_g^{(+)}+\hat{\mathbf{E}}_{r}^{(+)}$ with  the guided mode and radiative mode contributions as 
+where the electric field operator $\hat{\mathbf{E}}^{(+)}=\hat{\mathbf{E}}_g^{(+)}+\hat{\mathbf{E}}_{r}^{(+)}$ with  the guided mode and radiative mode contributions expressed respectively as 
 \begin{align}
 \hat{\mathbf{E}}_g^{(+)}(\br) &= \sum_{m,f} \int \mathrm{d}\omega\sqrt{\frac{\hbar \omega}{v_g}} \hat{a}_\mu (\omega) \mathbf{u}^{(\mu)}(\br\!_\perp) e^{if\beta z}\\
 \hat{\mathbf{E}}_r^{(+)}(\br) &= \sum_{m,p} \int \mathrm{d}\omega\int_{-kn_2}^{kn_2}\mathrm{d}\beta \sqrt{\hbar \omega} \hat{a}_\nu (\omega) \mathbf{u}^{(\nu)}(\br\!_\perp) e^{i\beta z}.
 \end{align}
-We define the coupling strength between the electric dipole and the guided electric field $\mathbf{u}^{(\mu)}(\br')$ or the radiative electric field $ \mathbf{u}^{(\nu)}(\br') $ at the dipole position is measured by
+We define the coupling strength between the electric dipole and the guided electric field $\mathbf{u}^{(\mu)}(\br')$ or the radiative electric field $ \mathbf{u}^{(\nu)}(\br') $ at the dipole position as
 \begin{align}
 \hbar g_\mu(\omega) &= \sqrt{\frac{\hbar \omega}{v_g}} \mathbf{d}_{eg}\cdot\mathbf{u}^{(\mu)}(\br') \\
 \hbar g_\nu(\omega) &= \int_{-kn_2}^{kn_2}\mathrm{d}\beta \sqrt{\hbar \omega} \mathbf{d}_{eg}\cdot\mathbf{u}^{(\nu)}(\br').
 \end{align}
 %with effective mode area $A^g_{mf}=\frac{1}{n_g|\mathbf{u}^{(\mu)}(\br')|^2}$. 
-The atomic rising dipole operator $\hat{\mathbf{d}}_{eg}=\mathbf{d}_{eg}\hat{\sigma}_+=\bra{e}\mathbf{D}\ket{g}\hat{\sigma}_+$. Using the relationships defined above, the interaction Hamiltonian can then be simplified as
+The atomic raising dipole operator $\hat{\mathbf{d}}_{eg}=\mathbf{d}_{eg}\hat{\sigma}_+=\bra{e}\mathbf{D}\ket{g}\hat{\sigma}_+$. Using the relationships defined above, the interaction Hamiltonian can then be simplified as
 \begin{align}
 \hat{H}_{int} &= -\sum_{m,f} \int\mathrm{d}\omega \hbar\left[g_\mu(\omega)\hat{a}_\mu\hat{\sigma}_+ +g_\mu^*(\omega)\hat{a}^\dagger_\mu\hat{\sigma}_- \right]
 -\sum_{m,p} \int\mathrm{d}\omega \hbar\left[g_\nu(\omega)\hat{a}_\nu \hat{\sigma}_+ +g_\nu^*(\omega)\hat{a}^\dagger_\nu\hat{\sigma}_- \right]. 
 \end{align}
 
-Assuming all operators are not explicitly time-dependent, the Heisenberg equations of motion can then be given by
+Assuming all operators are not explicitly time-dependent, the Heisenberg equations of motion can then be rewritten as
 \begin{align}
 \dt{\hat{a}_\mu} &= -if\omega \hat{a}_\mu +ig_\mu^*(\omega) \hat{\sigma}_-\label{eq:da}\\
 \dt{\hat{a}_\nu} &= -i\omega \hat{a}_\nu +ig_\nu^*(\omega) \hat{\sigma}_-\label{eq:danu}\\
@@ -320,19 +322,19 @@ We have used the commutators that $ [\hat{a}_\mu(\omega'),\hat{a}_\mu^\dagger(\o
 \hat{a}_\nu(\omega,t)\equiv \hat{a}^{out}_\nu(\omega) &= \hat{a}_\nu(\omega,t_0) e^{-i\omega(t-t_0)} +ig_\nu^*(\omega) \int_{t_0}^t \mathrm{d} t' e^{-i\omega (t-t')}\hat{\sigma}_-(t').
 \end{align}
 \end{subequations}
-We can substitute the formal solution above into Equ.~\ref{eq:dsigma}, and rewrite
+We substitute the formal solution above into Equ.~\eqref{eq:dsigma}, and rewrite
 \begin{align}
 \dt{\hat{\sigma}_-} &= -i\omega_{eg} \hat{\sigma}_- + \int_{t_0}^t\!\! \mathrm{d}t' \int_0^\infty\!\!\!\! \mathrm{d}\omega \left[ \sum_{m,f} |g_\mu(\omega)|^2e^{-if\omega (t-t')} \! +\! \sum_{m,p} |g_\nu(\omega)|^2e^{-i\omega (t-t')} \right] \hat{\sigma}_z(t)\hat{\sigma}_-(t') \nonumber\\
 &\quad -i \int_0^\infty \mathrm{d}\omega \left[ \sum_{m,f} g_\mu(\omega)  \hat{a}_\mu(\omega,t_0) e^{-if\omega(t-t_0)}+\sum_{m,p} g_\nu(\omega)  \hat{a}_\nu(\omega,t_0) e^{-i\omega(t-t_0)}\right]\hat{\sigma}_z(t). 
 \end{align}
-In the Markoff approximation that $\int_0^\infty \mathrm{d}\omega e^{-i\omega f(t-t')} |g_i(\omega)|^2\hat{\sigma}_-(t')\approx \pi \delta(t-t')|g_i(\omega_{eg})|^2\hat{\sigma}_-(t)$ with $ i=\{\mu,\nu \} $, one can obtain
+In the Markoff approximation that $\int_0^\infty \mathrm{d}\omega e^{-i\omega f(t-t')} |g_i(\omega)|^2\hat{\sigma}_-(t')\approx \pi \delta(t-t')|g_i(\omega_{eg})|^2\hat{\sigma}_-(t)$ with $ i=\{\mu,\nu \} $, one can then obtain
 \begin{align}
 \dt{\hat{\sigma}_-} &= -i\omega_{eg} \hat{\sigma}_- + \left[ \sum_{m,f} \pi |g_\mu(\omega_{eg})|^2 +\sum_{m,p} \pi |g_\nu(\omega_{eg})|^2\right] \hat{\sigma}_z(t)\hat{\sigma}_-(t) \nonumber\\
 &\quad - i\int_0^\infty \mathrm{d}\omega \left[ \sum_{m,f} g_\mu(\omega) \hat{a}_\mu(\omega,t_0) e^{-if\omega (t-t_0)}+\sum_{m,p} g_\nu(\omega) \hat{a}_\nu(\omega,t_0) e^{-i\omega (t-t_0)} \right]\hat{\sigma}_z(t)\\
 &= (-i\omega_{eg}-\frac{\Gamma_{\rm fiber}}{2})\hat{\sigma}_-(t) \nonumber \\
 &\quad -i\int_0^\infty \mathrm{d}\omega \left[ \sum_{m,f} g_\mu(\omega) \hat{a}_\mu(\omega,t_0)e^{-if\omega (t-t_0)}+ \sum_{m,p} g_\nu(\omega) \hat{a}_\nu(\omega,t_0)e^{-i\omega (t-t_0)} \right] \hat{\sigma}_z(t) , \label{eq:dsigma-t}
 \end{align}
-where we have used $\hat{\sigma}_z\hat{\sigma}_-=-\hat{\sigma}_- $, and have used the definition of the total decay rate of an atom in the evanescent field of a nanofiber and the component for the \textit{one dimensional} decay rate due to the guided modes, $\Gamma^g_{mf} $, and the decay rate due to the radiative modes, $\Gamma^r_{\nu} $, and the corresponding total decay rate for the guided modes and radiative modes, $ \Gamma^g $ and $ \Gamma^r $, as
+where we have used $\hat{\sigma}_z\hat{\sigma}_-=-\hat{\sigma}_- $. We also used  the definitions as will be shown below for the total decay rate of an atom in presence of a nanofiber, $\Gamma_{\rm fiber}$, a component of the \textit{one dimensional} decay rate due to a guided mode, $\Gamma^g_{mf} $, the decay rate due to a radiative mode, $\Gamma^r_{\nu} $, and the corresponding total decay rate for the guided modes and radiative modes, $ \Gamma^g $ and $ \Gamma^r $, given by
 \begin{align}
 \Gamma^g_{mf} &= 2\pi |g_\mu(\omega_{eg})|^2= \frac{2\pi|\mathbf{u}^{(\mu)}(\br')\cdot \mathbf{d}_{eg}|^2}{\hbar }\left( \frac{\omega_{eg}}{v_g}\right) \mathbin{\color{red} \neq \frac{2\pi|\mathbf{d}_{eg}|^2}{\hbar A^g_{mf} }\left( \frac{\omega_{eg}}{c}\right)}\\
 \Gamma^r_{\nu} &= 2\pi |g_\nu(\omega_{eg})|^2=\int_{-kn_2}^{kn_2}\mathrm{d}\beta \frac{2\pi|\mathbf{u}^{(\nu)}(\br')\cdot \mathbf{d}_{eg}|^2\omega_{eg}}{\hbar } \\
@@ -340,12 +342,12 @@ where we have used $\hat{\sigma}_z\hat{\sigma}_-=-\hat{\sigma}_- $, and have use
 \Gamma_{\rm fiber} &= \Gamma^g+\Gamma^r. 
 \end{align}
 
-What we are interested in is the frequency response of the guided modes at a given $\omega$. We can use the Fourier transformation relationship and the inverse that 
+What we are interested in is the frequency response of the guided modes at a given $\omega$. We can use the definitions of the Fourier transformation and the inverse given by 
 \begin{align}
 \hat{\sigma}_-(t) &= \int_0^{\infty} \frac{\mathrm{d}\omega}{\sqrt{2\pi}} \hat{\sigma}_-(\omega) e^{-i\omega (t-t_0)}\\
 \hat{\sigma}_-(\omega) &= \int_{t_0}^{\infty} \frac{\mathrm{d}t}{\sqrt{2\pi}} \hat{\sigma}_-(t) e^{i\omega (t-t_0)},
 \end{align}
-and considering the weak saturation case that $\hat{\sigma}_z\approx -1$ or almost all atoms are in the ground state, Equ.~\ref{eq:dsigma-t} becomes
+and considering the weak saturation case that $\hat{\sigma}_z\approx -1$ or almost all atoms are in the ground state. Now that Equ.~\eqref{eq:dsigma-t} becomes
 \begin{align}
 -i\omega \hat{\sigma}_-(\omega) &= \left[-i\omega_{eg}-\frac{\Gamma_{\rm fiber}}{2} \right]\hat{\sigma}_-(\omega) \nonumber\\
 &\quad +i\sqrt{2\pi}\left[ \sum_{m,f} g_\mu(\omega) \hat{a}^{in}_\mu(\omega)e^{i\omega(t-t_0)}+\sum_{m,p} g_\nu(\omega) \hat{a}^{in}_\nu(\omega)e^{i\omega(t-t_0)}\right],
@@ -355,18 +357,18 @@ Therefore, we can obtain the linear response relationship between $\hat{\sigma}_
 \begin{align}\label{eq:sigma-ain}
 \hat{\sigma}_-(\omega) &= -\sum_{m,f} \frac{\sqrt{2\pi}g_\mu(\omega)e^{i\omega(t-t_0)}}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}}\hat{a}^{in}_\mu(\omega)-\sum_{m,p} \frac{\sqrt{2\pi}g_\nu(\omega)e^{i\omega(t-t_0)}}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}}\hat{a}^{in}_\nu(\omega),
 \end{align}
-where the detuning $\Delta=\omega-\omega_{eg}$. The factor of $e^{i\omega(t-t_0)}$ is the accumulated phase factor due to the free evolution of light from time $t_0$ to $t$.
+where the detuning $\Delta=\omega-\omega_{eg}$. \textcolor{red}{The factor of $e^{i\omega(t-t_0)}$ is the accumulated phase factor due to the free evolution of light from time $t_0$ to $t$?}
 
-On the other hand, Equ.~\ref{eq:aout1} implies the input-output relationship in the frequency domain $\mathbin{\color{red}{(t\gg t_0)}}$ that
+On the other hand, Equ.~\eqref{eq:aout1} implies the input-output relationship in the frequency domain $\mathbin{\color{red}{(t\gg t_0)}}$ that
 \begin{align}
 \hat{a}^{out}_\mu(\omega ) &= \hat{a}^{in}_\mu(\omega) +i \sqrt{2\pi}g_\mu^*(\omega)\hat{\sigma}_-(\omega). 
 \end{align}
-By substituting Equ.~\ref{eq:sigma-ain} into the equation above, we obtain the input-output relationship of the guided modes due to an atom close to the nanofiber as
+By substituting Equ.~\eqref{eq:sigma-ain} into the equation above, we obtain the input-output relationships of the guided modes due to the presence of an atom close to the nanofiber as
 \begin{align}
 \hat{a}^{out}_\mu(\omega) &= \hat{a}^{in}_\mu (\omega) \!-\! i\sum_{m',f'}\!\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)e^{i\omega(t-t_0)}}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}}\hat{a}^{in}_{\mu'}(\omega) \!-\! i\sum_{m,p}\!\frac{2\pi g_\mu^*(\omega)g_{\nu}(\omega)e^{i\omega(t-t_0)}}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}}\hat{a}^{in}_{\nu}(\omega)\\
 &\approx \hat{a}^{in}_\mu (\omega) \!-\! i\sum_{m',f'}\!\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)e^{i\omega(t-t_0)}}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}}\hat{a}^{in}_{\mu'}(\omega)=\sum_{\mu'}S^\mu_{\mu'}\hat{a}^{in}_{\mu'}(\omega),
 \end{align}
-where the scattering matrix elements
+where the $S$ matrix elements
 \begin{align}\label{eq:Smfmft}
 S^\mu_{\mu'} &\equiv S^{mf}_{m'f'}=\delta_{mm'}\delta_{ff'}-i\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)e^{i\omega(t-t_0)}}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}},
 \end{align}
@@ -377,7 +379,7 @@ For the $m=1,f=1$ mode, for instance, if we ignore the portions scattered to all
 \hat{a}_{\mu}^{out}(\omega) &\approx \left[ 1- i\frac{\Gamma^g_{mf}}{\Delta+i\Gamma_{\rm fiber}/2}\right] \hat{a}^{in}_\mu(\omega) \\
 &= \left(\frac{\Delta+i(\Gamma_{\rm fiber}/2-\Gamma^g_{mf})}{\Delta+i\frac{\Gamma_{\rm fiber}}{2}} \right)\hat{a}^{in}_\mu(\omega).
 \end{align}
-\textcolor{blue}{Notice that, the total decay rate in absence of the nanofiber, $\Gamma_{\rm fiber}$, is different from the total decay rate of the vacuum case. We need to make this clear in writing. Meanwhile, with this derivation, plus another equation of motion for the $\hat{\sigma}_z$ operator, we may be able to do a whole bunch of other relevant calculations for few-photon few-exciton problems. }
+\textcolor{blue}{Notice that, the total decay rate in absence of the nanofiber, $\Gamma_{\rm fiber}$, is different from the total decay rate of the vacuum case. Meanwhile, with this derivation, plus another equation of motion for the $\hat{\sigma}_z$ operator, we may be able to do a whole bunch of other relevant calculations for few-photon few-exciton problems. }
 
 In absence of scattering, the transmitted guided mode has a phase shift effect that 
 the transmission coefficient is
