@@ -414,43 +414,44 @@ Notice that, the phase shift for an atom in vacuum can be given in a similar for
 \end{align}
 where $\mathbf{u}_{00}(\br')  $ is the $\mathrm{TEM}_{00}$ mode of a Gaussian laser field at the atom position, $ A=\frac{\pi W_0^2}{2} $ is the mode area of the Gaussian beam with wist $ W_0 $. Hence, the relative strength of phase shift due to the presence of a nanofiber versus vacuum can be given by
 \begin{align}
-\frac{\delta\phi^{nano}}{\delta\phi^{vac}} &=\frac{A_{e\!f\!f}^{vac'}}{A^g_{11}}= \frac{A}{2} \!n_g\! \frac{|\mathbf{u}^1_1(r_\perp^{nano'})|^2}{|\mathbf{u}_{00}(r_\perp^{vac'})|^2}.
+\frac{\delta\phi^{nano}}{\delta\phi^{vac}} &=\frac{A_{e\!f\!f}^{vac'}}{A^g_{11}}= \frac{A}{2} \!n_g\! \frac{|\mathbf{u}^{(\beta_0,1,1)}(r_\perp^{nano'})|^2}{|\mathbf{u}_{00}(r_\perp^{vac'})|^2}.
 \end{align}
-In the vacuum case, the strongest mode is given by $ |\mathbf{u}_{00}(r_\perp^{vac'})|=1 $ when the atom is placed at the center of the beam waist. 
+In the vacuum case, the strongest mode is given by $ |\mathbf{u}_{00}(r_\perp^{vac'})|=1 $ when the atom is placed at the symmetry center of the beam waist. 
 
 \missingfigure{Figure for the enhancement comparison.}
 
 
 
 \subsection{Quantum interface for the nanofiber with clock state}
-We consider the case that the atoms are pumped to the clock state. Therefore, we only care about the atomic polarizability components
+We present a general theory on light-atom interaction in presence of a nanofiber in Appendix~\ref{sec:lightatominteract}. Here, we consider a simple case that all trapped Cesium atoms are initially pumped and restricted to the clock states of the ground state ($6S_{1/2}$) sublevels, in which the atomic magnetic quantum number $M=0$ while the total atomic angular momentum quantum number can be $F=3$ and $F=4$. Therefore, we only care about the atomic polarizability components
 \begin{align}
-\tensor{\alpha}_{\uparrow} &=\bra{f=4,m=0}\tensor{\alpha}\ket{f=4,m=0}\\
-\tensor{\alpha}_{\downarrow} &=\bra{f=3,m=0}\tensor{\alpha}\ket{f=3,m=0}.
+\tensor{\alpha}_{\uparrow} &=\bra{F=4,M=0}\tensor{\alpha}\ket{F=4,M=0}\\
+\tensor{\alpha}_{\downarrow} &=\bra{F=3,M=0}\tensor{\alpha}\ket{F=3,M=0}.
 \end{align}
-Suppose there are $H$ and $V$ two orthogonal linear polarized mode components. The quantized electric field can be given by
+\missingfigure{Energy levels of cesium atoms.}
+Suppose there are $H$ and $V$ two orthogonal linear polarized mode components. The quantized forward-propagating electric field can be given by
 \begin{align}
-\hat{\mathbf{E}}^{(+)}(r\!_\perp,\phi,z) &= \sqrt{ \frac{2 \pi \hbar \omega_0}{ v_g \tau} } \big( \mathbf{u}_H(r\!_\perp,\phi) \hat{a}_H + \mathbf{u}_V(r\!_\perp,\phi) \hat{a}_V \big) e^{i \beta z}.
+\hat{\mathbf{E}}^{(+)}(r\!_\perp,\phi,z) &= \sqrt{ \frac{2 \pi \hbar \omega_0}{ v_g \tau} } \big( \mathbf{u}_H(r\!_\perp,\phi) \hat{a}_H + \mathbf{u}_V(r\!_\perp,\phi) \hat{a}_V \big) e^{i \beta_0 z}.
 \end{align}
-The Hamiltonian can be given by
+The Hamiltonian due to the light-atom interaction can be written as
 \begin{align}
 H_{\rm eff}   &= -\hat{\mathbf{E}}^{(-)}(r^\prime\!\!_\perp,\phi',z')\cdot \tensor{\alpha}\cdot \hat{\mathbf{E}}^{(+)}(r^\prime\!\!_\perp,\phi',z')\\
- &=- \sum_{f,f'}\alpha_0(\Delta_{f,f'}) \left\{ C_{j'ff}^{(0)} \hat{\mathbf{E}}^{(-)} \cdot \hat{\mathbf{E}}^{(+)} \hat{\mathbbm{1}}_f \phantom{\frac{\hat{1}}{1}}\right. \nonumber\\
-&\quad\quad\quad + i C_{j'ff'}^{(1)} \left(\hat{\mathbf{E}}^{(-)} \times \hat{\mathbf{E}}^{(+)} \right) \cdot \hat{ \mathbf{f}} \nonumber\\
-&\quad\quad\quad  \left. + C_{j'ff}^{(2)} \hat{E}_i^{(-)} \hat{E}_j^{(+)} \left( \frac{ \hat{f}_i \hat{f}_j  + \hat{f}_j \hat{f}_i  }{2} - \frac{1}{3}\delta_{ij} \hat{ \mathbf{f}} \cdot \hat{\mathbf{f}}  \right) \right\}. 
+ &=- \sum_{F,F'}\alpha_0(\Delta_{F,F'}) \left\{ C_{J'FF}^{(0)} \hat{\mathbf{E}}^{(-)} \cdot \hat{\mathbf{E}}^{(+)} \hat{\mathbbm{1}}_F \phantom{\frac{\hat{1}}{1}}\right. \nonumber\\
+&\quad\quad\quad + i C_{J'FF'}^{(1)} \left(\hat{\mathbf{E}}^{(-)} \times \hat{\mathbf{E}}^{(+)} \right) \cdot \hat{ \mathbf{F}} \nonumber\\
+&\quad\quad\quad  \left. + C_{J'FF}^{(2)} \hat{E}_i^{(-)} \hat{E}_j^{(+)} \left( \frac{ \hat{F}_i \hat{F}_j  + \hat{F}_j \hat{F}_i  }{2} - \frac{1}{3}\delta_{ij} \hat{ \mathbf{F}} \cdot \hat{\mathbf{F}}  \right) \right\}. 
 \end{align}
-The characteristic polarizability is given by
+In the equation above, we have defined $ J $ as the total electric angular momentum quantum number, and the characteristic polarizability of the atom can be given by
 \begin{align} \label{Eq::alpha0}
-\alpha_0(\Delta) & =  -\frac{|  \bra{ j' }| d | \ket{ j } |^2}{\hbar \Delta } = - \frac{3 \lambda_{j' j}^3}{32 \pi^3} \frac{ \Gamma }{ \Delta }\quad \text{with}\quad 
-\Gamma = \frac{1}{\hbar} \frac{4}{3} \frac{\omega_{j j'}^3}{c^3} | \bra{ j' }| d | \ket{ j } |^2.
+\alpha_0(\Delta) & =  -\frac{|  \bra{ J' }| d | \ket{ J } |^2}{\hbar \Delta } = - \frac{3 \lambda_{J' J}^3}{32 \pi^3} \frac{ \Gamma }{ \Delta }\quad \text{with}\quad 
+\Gamma = \frac{1}{\hbar} \frac{4}{3} \frac{\omega_{J J'}^3}{c^3} | \bra{ J' }| d | \ket{ J } |^2.
 \end{align}
-In our case, the vector component of the atomic polarizability is zero. We can ignore the tensor component of the atomic polarizability in the far off-resonance regime. The scalar polarizability coefficient is given by
+In our case, the vector component of the atomic polarizability is zero. We can ignore the tensor component of the atomic polarizability in the far off-resonance regime. The scalar polarizability coefficient can be specified for our case as
 \begin{align} \label{Eq::alpha0}
-C_{j' f}^{(0)} &\equiv \sum_{f'} C_{j' f f'}^{(0)} =   \frac{2^{j'-1/2}}{3} =\left\{ \frac{1}{3},\frac{2}{3}\right\}.
+C_{J' F}^{(0)} &\equiv \sum_{F'} C_{J' F F'}^{(0)} =   \frac{2^{J'-1/2}}{3} =\left\{ \frac{1}{3},\frac{2}{3}\right\}.
 \end{align}
-The two values are for the D1 line and D2 line respectively.
+The two values in the brackets are for the $D_1$ and $D_2$ lines, respectively.
 
-The Hamiltonian can be rewritten as
+The Hamiltonian can be further rewritten as
 \begin{align}
 H_{\rm eff} & = \frac{ \hbar }{ \tau}\Big( \chi_{H,\uparrow}\op{\uparrow}{\uparrow} +  \chi_{H,\downarrow} \op{\downarrow}{\downarrow} \Big) \hat{a}_H\dg \hat{a}_H \nonumber\\
 &\quad +  \frac{ \hbar }{ \tau} \Big( \chi_{V,\uparrow}\op{\uparrow}{\uparrow} +  \chi_{V,\downarrow} \op{\downarrow}{\downarrow} \Big) \hat{a}_V\dg \hat{a}_V  ,
@@ -462,22 +463,22 @@ where the coupling strengths are defined as
 \chi_{V,\uparrow} &=  -\frac{2\pi\omega_0}{v_g}  \mathbf{u}^*_{V}(r^\prime\!\!_\perp,\phi') \cdot\tensor{\alpha}_{\uparrow}\cdot \mathbf{u}_{V}(r^\prime\!\!_\perp,\phi')  \\
 \chi_{V,\downarrow} &=  -\frac{2\pi\omega_0}{v_g}  \mathbf{u}^*_{V}(r^\prime\!\!_\perp,\phi') \cdot\tensor{\alpha}_{\downarrow}\cdot \mathbf{u}_{V}(r^\prime\!\!_\perp,\phi'). 
 \end{align}
-with $\tensor{\alpha}_{\uparrow} \approx\sum_{f'=3,4}\frac{\alpha_0(\Delta_{4,f'})}{3}\mathbf{I}$
-and $\tensor{\alpha}_{\downarrow} \approx\sum_{f'=3,4}\frac{\alpha_0(\Delta_{3,f'})}{3}\mathbf{I}$.
-One can use different detuning regime to detect the psuedo-spin state.
+with $\tensor{\alpha}_{\uparrow} \approx\sum_{F'=3,4}\frac{\alpha_0(\Delta_{4,F'})}{3}\mathbf{I}$
+and $\tensor{\alpha}_{\downarrow} \approx\sum_{F'=3,4}\frac{\alpha_0(\Delta_{3,F'})}{3}\mathbf{I}$.
+One can use different detuning regimes to detect the atomic clock state as a psuedo-spin state.
 
 The coupling strength for the $ D_1 $ line probing can then be written as
 \begin{align}
-\chi_{H,\uparrow} &=  \sum_{f'} \frac{\chi_{H0}(f',4)}{3}, \quad
-&\chi_{H,\downarrow} = \sum_{f'} \frac{\chi_{H0}(f',3) }{3}, \\
-\chi_{V,\uparrow} &=  \sum_{f'} \frac{\chi_{V0}(f',4)}{3}, \quad
-&\chi_{V,\downarrow} = \sum_{f'} \frac{\chi_{V0}(f',3) }{3} 
+\chi_{H,\uparrow} &=  \sum_{F'} \frac{\chi_{H0}(F',4)}{3}, \quad
+&\chi_{H,\downarrow} = \sum_{F'} \frac{\chi_{H0}(F',3) }{3}, \\
+\chi_{V,\uparrow} &=  \sum_{F'} \frac{\chi_{V0}(F',4)}{3}, \quad
+&\chi_{V,\downarrow} = \sum_{F'} \frac{\chi_{V0}(F',3) }{3} 
 \end{align}
 and 
 \begin{align}
-\chi_{H0}(f',f) &= \left( \frac{ \sigma_0}{A_{ef\!f}^H} \right) \left( \frac{\Gamma}{4 \Delta_{f,f'}} \right)=\frac{\Gamma_H^{1D}}{\Delta_{f,f'}},\quad
+\chi_{H0}(F',F) &= \left( \frac{ \sigma_0}{A_{ef\!f}^H} \right) \left( \frac{\Gamma}{4 \Delta_{F,F'}} \right)=\frac{\Gamma_H^{1D}}{\Delta_{F,F'}},\quad
 & A_{ef\!f}^H = \frac{1}{n_g|\mathbf{u}_{H}(r^\prime\!\!_\perp,\phi')|^2 },\\
-\chi_{V0}(f',f) &= \left( \frac{ \sigma_0}{A_{ef\!f}^V} \right) \left( \frac{\Gamma}{4 \Delta_{f,f'}} \right)=\frac{\Gamma_V^{1D}}{\Delta_{f,f'}},\quad
+\chi_{V0}(F',F) &= \left( \frac{ \sigma_0}{A_{ef\!f}^V} \right) \left( \frac{\Gamma}{4 \Delta_{F,F'}} \right)=\frac{\Gamma_V^{1D}}{\Delta_{F,F'}},\quad
 & A_{ef\!f}^V = \frac{1}{n_g|\mathbf{u}^*_{V}(r^\prime\!\!_\perp,\phi')|^2 }.
 \end{align}
 
@@ -487,35 +488,34 @@ H_{\rm eff}
 =\frac{\hbar}{\tau} \Big\{ & \left[ \big( \chi_{H,\uparrow} + \chi_{H,\downarrow}\big) + \big(\chi_{V,\uparrow} + \chi_{V,\downarrow}\big) \right] \hat{J}_0 \hat{S}_0 \nonumber \\
 + & \left[ \big( \chi_{H, \uparrow} + \chi_{H,\downarrow}\big) - \big( \chi_{V,\uparrow} + \chi_{V,\downarrow} \big)\right]  \hat{J}_0 \hat{S}_1 \nonumber \\
 + & \left[ \big( \chi_{H,\uparrow} - \chi_{H,\downarrow}\big) + \big(\chi_{V,\uparrow} - \chi_{V,\downarrow} \big) \right] \hat{J}_z \hat{S}_0 \nonumber \\
-+ & \left[ \big( \chi_{H,\uparrow} - \chi_{H,\downarrow}\big) - \big(\chi_{V,\uparrow} - \chi_{V,\downarrow} \big) \right]  \hat{J}_z \hat{S}_1\Big\}
++ & \left[ \big( \chi_{H,\uparrow} - \chi_{H,\downarrow}\big) - \big(\chi_{V,\uparrow} - \chi_{V,\downarrow} \big) \right]  \hat{J}_z \hat{S}_1\Big\}.
 \end{align}
-The first term is an overall scalar shift and thus does not contribute to the relative dynamics.  The second term is a constant birefringence and can be canceled with a compensating waveplate as long as the atom number remains constant which is usually the case when the trapping time is fairly large compared to the measurement time. The first two terms can be also be canceled when we have the detuning approximately equally biased for the $ f=3 $ and $ f=4 $ ground states. 
-For example, we  can choose $ \Delta_3=-4.6 $ GHz and $ \Delta_4=4.6 $ GHz to the $ 6P_{1/2} $ excited state sublevels to satisfy this condition, where the hyperfine splitting of the excited state can be ignored ($ ~500 $ MHz) compared to the detuning. However, we would like to leave the choice of detuning to control the third and fourth terms as will be discussed consequently. 
+The first term is an overall scalar shift and thus does not contribute to the relative dynamics.  The second term is a constant birefringence and can be canceled with a compensating waveplate as long as the atom number remains constant which is usually the case when the trapping time is fairly large compared to the measurement time. The first two terms can also be canceled when we have the detuning approximately equally biased for the $ F=3 $ and $ F=4 $ ground states. 
+For example, we  can choose $ \Delta_3=-4.6 $ GHz and $ \Delta_4=4.6 $ GHz to the $ 6P_{1/2} $ excited state sublevels of cesium atoms to satisfy this condition, where the hyperfine splitting of the excited state can be ignored ($ ~500 $ MHz) compared to the detuning. However, we would like to leave the choice of detuning to control the third and fourth terms as will be discussed consequently. 
 
 The final term describes the QND Faraday interaction we wish to isolate (similar to the Faraday interaction since we choose to use the $ x $-axis as the quantization axis), but this requires dealing with the third term that describes the effect of the scalar light shift on the rotation of the pseudo-spin.  Canceling the third term amounts to enforcing the condition that
-	\begin{align}
-		\chi_{H,\uparrow} - \chi_{H,\downarrow} = \chi_{V,\downarrow} - \chi_{V,\uparrow} ,
-	\end{align}
-which can be satisfied if we carefully choose the detuning of the probe light. The wavelength to choose to cancel the third term is atom position related, since the condition is determined by the effective mode areas which may have different ratios for the $ H $ and $ V $ modes at different locals. We can the exact wavelength to satisfy this condition as the \textit{magic wavelength}\index{magic wavelength}. If this condition can be met, then we can achieve an interaction of the form,
-	\begin{align}
-		H_{\rm eff} = \frac{\hbar}{\tau} \chi_{\rm eff} \hat{J}_z \hat{S}_1
-	\end{align}
+\begin{align}
+	\chi_{H,\uparrow} - \chi_{H,\downarrow} = \chi_{V,\downarrow} - \chi_{V,\uparrow} ,
+\end{align}
+which can be satisfied if we carefully choose the detuning of the probe light. The wavelength to choose to cancel the third term is atom position related, since the condition is determined by the effective mode areas which may have different ratios for the $ H $ and $ V $ modes at different locations. We can refer the exact wavelength to satisfy this condition as the \textit{magic wavelength}\index{magic wavelength}. If this condition can be met, then we can achieve an interaction of the form,
+\begin{align}
+	H_{\rm eff} = \frac{\hbar}{\tau} \chi_{\rm eff} \hat{J}_z \hat{S}_1
+\end{align}
 where $\chi_{\rm eff} = 2(\chi_{H,\uparrow} - \chi_{H,\downarrow})$.  
 
-Using this, we can prepare the spins in $ D $ state on the Bloch sphere and characterize the collective spin state along the $ z $-axis after the rotation along $ S_1 $ axis due to the photon-atom interaction. To achieve this, we use the $ \hat{S}_3 $ Stokes vector component measurement. As a result of the backaction of the polarization measurement, there is a squeezing to the collective spin state which results in a reduced uncertainty of measurement output. To see this, we assume the photon number is large and apply the Holstein-Primakoff approximation to set $ \hat{S}_1=\sqrt{\frac{N_L}{2}}\hat{P}_L $ and $ \hat{S}_3=\sqrt{\frac{N_L}{2}}\hat{X}_L $. Now the effective Hamiltonian can be written as
+Using this, we can prepare the spins in $ D $ state on the Bloch sphere and characterize the collective spin state along the $ z $-axis after the rotation along $ S_1 $ axis due to the photon-atom interaction. To achieve this, we use the $ \hat{S}_3 $ Stokes vector component measurement. As a result of the backaction of the polarization measurement, there is a squeezing to the collective spin state which results in a reduced uncertainty of measurement output. To see this, we assume the photon number, $N_L$, is large and apply the Holstein-Primakoff approximation to set $ \hat{S}_1=\sqrt{\frac{N_L}{2}}\hat{P}_L $ and $ \hat{S}_3=\sqrt{\frac{N_L}{2}}\hat{X}_L $, where $ \hat{X}_L$ and $\hat{P}_L $ are two photonic quadratures satisfying the commutation relationship that $ [\hat{X}_L,\hat{P}_L]=i $. Now the effective Hamiltonian can be written as
 \begin{align}
 H_{\rm eff} = \frac{\hbar}{\tau} \chi_{\rm eff} \sqrt{\frac{N_L}{2}}\hat{J}_z \hat{P}_L. 
 \end{align}
-The $ \hat{S}_3 $ measurement is achieved through sending the signal light to one input port of a beam splitter along as a vacuum input on the other input port and then performing a balanced Homodyne measurement of the $ X_L $ quadrature. The equivalent Kraus operator conditional on this measurement is 
+The $ \hat{S}_3 $ measurement is achieved through sending the signal light to one input port of a beam splitter along with a vacuum input on the other input port and then performing a balanced Homodyne measurement of the $ X_L $ quadrature. The equivalent Kraus operator conditional on this measurement is 
 \begin{align}
-\hat{A}_{X_L} &= \bra{X_L} e^{-i\chi_{\rm eff} \sqrt{\frac{N_L}{2}}\hat{J}_z \hat{P}_L} \ket{0_L}\propto \exp\left\{ -\frac{\kappa T}{4}(m-\hat{J}_z)^2 \right\},
+\hat{A}_{X_L} &= \bra{X_L} e^{-i\chi_{\rm eff} \sqrt{\frac{N_L}{2}}\hat{J}_z \hat{P}_L} \ket{0_L}\propto \exp\left\{ -\frac{\kappa T}{4}(l-\hat{J}_z)^2 \right\},
 \end{align} 
-where $ m=\frac{X_L}{\chi_{\rm eff} \sqrt{N_L/2}} $ is the measurement outcome in angular momentum units, and $ \kappa T=\chi_{\rm eff}^2N_L $ is the integrated measurement strength per spin. The shot noise resolution of the QND measurement is $ \sigma^2=\frac{1}{\kappa T} $. The Kraus operator is exactly the same as Equ.~\eqref{KrausOpSq} to generate a spin squeezing
- state. For a SCS input state, the output state probability distribution is given by 
+where $ l=\frac{X_L}{\chi_{\rm eff} \sqrt{N_L/2}} $ is the measurement outcome in angular momentum units, and $ \kappa T=\chi_{\rm eff}^2N_L $ is the integrated measurement strength per spin. The shot noise resolution of the QND measurement is $ \sigma^2=\frac{1}{\kappa T} $. The Kraus operator $\hat{A}_{X_L}$ yields a backaction and generates a spin squeezing state\textcolor{blue}{[Reference]}. Given a spin coherent state (SCS) input, the output state probability distribution can be given by 
 \begin{align}
-P_{M|m} \propto e^{-\frac{(M-\bar{M}(m))^2}{2\Delta J_{out}^2}},
+P_{L|l} \propto e^{-\frac{(L-\bar{L}(l))^2}{2\Delta J_{out}^2}},
 \end{align}
-where $ \Delta J_{out}^2 =\frac{\Delta J_{in}^2}{1+\xi}=\frac{J}{2(1+\xi)} $, $ \bar{M}(m)=\frac{m}{1+\xi} $, and $ \xi\equiv \frac{\Delta J_{in}^2}{\sigma^2}=\frac{J}{2\sigma^2}=\frac{\chi_{e\!f\!f}^2}{4}N_AN_L $ is the measurement strength which characterizes the measurement backaction and the squeezing effect. The ability to resolve the initial quantum variance of $ J_z $ within the resolution of the meter is the key to QND squeezing.
+where $ \Delta J_{out}^2 =\frac{\Delta J_{in}^2}{1+\xi}=\frac{J}{2(1+\xi)} $, $ \bar{L}(l)=\frac{l}{1+\xi} $, and $ \xi\equiv \frac{\Delta J_{in}^2}{\sigma^2}=\frac{J}{2\sigma^2}=\frac{\chi_{e\!f\!f}^2}{4}N_AN_L $ is the measurement strength which characterizes the measurement backaction and the squeezing effect. The ability to resolve the initial quantum variance of $ J_z $ within the resolution of the meter is the key to QND squeezing.
 
 
 
@@ -526,7 +526,7 @@ where $ \Delta J_{out}^2 =\frac{\Delta J_{in}^2}{1+\xi}=\frac{J}{2(1+\xi)} $, $ 
 
 For the birefringence measurement of the clock states discussed above, the fluctuation of the $ S_3 $ measurement is a combination effect of the shot noise fluctuation of the photon detector and the projection noise as the signal to determine the collective spin state:
 \begin{align}
-\Delta M^2 &= \Delta P^2_{SN} + \Delta P^2_S .
+\Delta L^2 &= \Delta P^2_{SN} + \Delta P^2_S .
 \end{align}
 The smallest detectable spin polarization is determined by the shot noise limit condition that 
 \begin{align}
@@ -987,7 +987,7 @@ Particularly, when $\phi_0=0$ and $\pi/2$, we obtain the $H$ and $V$ fundamental
 
 \todo[inline]{To show $v_g=\frac{P}{W}$ using the formulas above?}
 
-\section{Light-atom interaction in the dispersive regime}
+\section{Light-atom interaction in the dispersive regime}\label{sec:lightatominteract}
 \textcolor{blue}{Detailed derivation can be found in Qi's notes on \textit{Dispersive field-atom interaction Hamiltonian}. The special case for a single homogeneous mode can be found in Ben's dissertation (chapter 4). }
 
 
