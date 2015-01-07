@@ -179,46 +179,45 @@ the output field can be written as
 The ratio of the attenuation coefficients, $t_x$ and $t_y$, indicates the helicity of the polarization of the light. $\phi_x$ and $\phi_y$ represent the phase shifts in the $x$- and $y$-modes. We will consider the phase shift for one input mode first, and then present our theory for the birefringence effect with two orthogonal input modes. 
 
 \subsection{Nanofiber mode scattering due to an atom using the dyadic Green function method}\label{sec:GFmethod}
-\textcolor{blue}{Start from the Maxwell equation with a dipole source and the corresponding equation of the dyadic Green function. Describe the framework of solving the fiber fields in presence of an atom using the dyadic Green function method.}
 
-\textcolor{blue}{Sketch out the \textit{reflection-transmission decomposition} approach to solve the dyadic Green functions for the boundary value problem, and how to distinguish the radiation and guided modes through separating different integral paths. Detailed solutions should be given in the appendix. For the guided mode contribution to the dyadic Green function, give the explicit expression using the eigenmode decomposition method and make a clear link to the field quantization result. }
-
-The Maxwell equation with dipole sources:
+The radiation from $N_A$ atoms in the evanescent field of a nanofiber obeys the Maxwell equation given by
 \begin{align}\label{eq:Maxwellwithsource2}
-\left[\! -\! \nabla\!\!\times\!\nabla\!\!\times + n^2\!(\br)\frac{\omega^2}{c^2} \right]\!\! \boldsymbol{\mathcal{E}}(\br) &\!=\! -4\pi\! \frac{\omega^2}{c^2}\! \boldsymbol{\chi}(\br)\! \cdot\! \boldsymbol{\mathcal{E}}(\br)=\!-4\pi\! \frac{\omega^2}{c^2}\!\sum_{\br'}\delta(\br-\br')\boldsymbol{\alpha} \, (\br')\cdot \boldsymbol{\mathcal{E}}(\br).
+\left[\! -\! \nabla\!\!\times\!\nabla\!\!\times + n^2\!(\br)\frac{\omega^2}{c^2} \right]\!\! \boldsymbol{\mathcal{E}}(\br) &\!=\! -4\pi\! \frac{\omega^2}{c^2}\! \boldsymbol{\chi}(\br)\! \cdot\! \boldsymbol{\mathcal{E}}(\br)=\!-4\pi\! \frac{\omega^2}{c^2}\!\sum_{\br'}\delta(\br-\br')\boldsymbol{\alpha} \, (\br')\cdot \boldsymbol{\mathcal{E}}(\br),
 \end{align}
-The corresponding Green function for one dipole source satisfies
+where the atoms are treated as electric dipole sources positioned at $\br'$ on the right-hand-side of the equation. We denote $\boldsymbol{\mathcal{E}}(\br)$ as the electric field, $\boldsymbol{\chi}(\br)$ as the electric susceptibility and $\boldsymbol{\alpha} \, (\br')$ as the polarizability due to the dipole source at $\br'$. In this paper, we first only consider the radiation from one atom, and then the many-atom case will be naturally extended in consequent sections (see, for example, Section~\ref{sec:atomchain}). 
+
+The corresponding dyadic Green function for one dipole source satisfies
 \begin{align}
 \left[ -\nabla\times\nabla\times + n^2\frac{\omega^2}{c^2} \right] \mathbf{G}(\br,\br') &= \mathbf{I}\delta(\mathbf{r}-\mathbf{r}'). 
 \end{align}
-Each column can be expressed as
+Each column of the equation above can be expressed as
 \begin{align}\label{eq:GFcolumneq}
 \left[ -\nabla\times\nabla\times + n^2\frac{\omega^2}{c^2} \right] \mathbf{G}_i(\mathbf{r},\mathbf{r}') &= \mathbf{e}_i\delta(\mathbf{r}-\mathbf{r}'), 
 \end{align}
-where the subscription $ i=r\!_\perp,\phi,z $ denotes the coordinate components. Compared with Equ.~\eqref{eq:Maxwellwithsource2}, one can find that each column of the dyadic function is equivalent to the electric filed solution in Equ.~\eqref{eq:Maxwellwithsource2} with a dipole source of $-\frac{\mathbf{e}_i}{4\pi k^2}$. Therefore, one can solve the dyadic Green function by solving the radiation problem from a dipole source satisfying the boundary condition of the nanofiber.
+where the subscription $ i=r\!_\perp,\phi,z $ denotes the cylindrical coordinate components. Compared with Equ.~\eqref{eq:Maxwellwithsource2}, one can find that each column of the dyadic function, $\mathbf{G}_i(\mathbf{r},\mathbf{r}')$, defined above is equivalent to the electric filed solution in Equ.~\eqref{eq:Maxwellwithsource2} with a single dipole source of $-\frac{\mathbf{e}_i}{4\pi k^2}$. Therefore, one can solve the dyadic Green function by solving the radiation problem from a dipole source satisfying the boundary condition of the nanofiber. Details regarding calculating the radiation and guided components for the fields and hence the dyadic Green functions have been heavily studied~\cite{Klimov2004,Nha1997,Maslov2006} and are summarized in Appendix~\ref{app:fieldcalculation}.
 
 Once we obtain the dyadic Green function of the nanofiber system, the total electric field with an input field $\mathbf{E}_0(\br)$ and in presence of a dipole source $\mathbf{d}(\br')$ positioned at $\br'$ can be given by
 \begin{align}
 \mathbf{E}(\br) &= \mathbf{E}_0(\br)-4\pi k^2\mathbf{G}(\br,\br')\cdot \mathbf{d}(\br')\\
 &=\mathbf{E}_0(\br)-4\pi k^2 \mathbf{G}(\br,\br')\cdot \boldsymbol{\alpha}\cdot \mathbf{E}(\br')\\
-&=\mathbf{E}_0(\br)-4\pi k^2 \mathbf{G}(\br,\br')\cdot \boldsymbol{\alpha}\cdot \mathbf{E}_0(\br').
+&\approx \mathbf{E}_0(\br)-4\pi k^2 \mathbf{G}(\br,\br')\cdot \boldsymbol{\alpha}\cdot \mathbf{E}_0(\br').
 \end{align}
-The Born approximation has been used in the last step, which should be a good approximation for the far-detuning case we are interested in. 
+The Born approximation has been used in the last step, which should be a good approximation for the dispersive regime we are interested in. 
 
-Since the Maxwell equation of a bare fiber has a similar form to the time-independent Schrodinger equation, one can reference to the division of bound and scattering problems of the Schrodinger equation to define guided and radiation modes according to the value of the propagation constant $ \beta $. If $ n_2^2k^2<\beta^2<n_1^2k^2 $ with $ k=\omega/c $, the propagating mode of the fiber described by $ \beta $ is called a guided mode. If $ \beta^2<n_2^2k^2 $, the corresponding mode is called a radiation mode. There are finite guided modes with discrete $ \beta $ values for a given nanofiber; yet, radiation modes have continuous $ \beta $ and are countless. Correspondingly, the dyadic Green function can be decomposed into guided mode components and radiation mode components. Details regarding calculating the radiation and guided components for the fields and hence the dyadic Green functions are given in Appendix~(\ref{app:fieldcalculation}).   
+Since the Maxwell equation of a bare fiber has a similar form to the time-independent Schrodinger equation, one can reference to the division of bound and scattering states problems of the Schrodinger equation to define guided and radiation modes based on the range of the propagation constant $ \beta $. If $ n_2^2k^2<\beta^2<n_1^2k^2 $ with $ k=\omega/c $, the propagating mode of the fiber described by $ \beta $ is called a guided mode. If $ \beta^2<n_2^2k^2 $, the corresponding mode is called a radiation mode. There are finite guided modes with discrete $ \beta $ values for a given nanofiber; radiation modes, however, have continuous $ \beta $ and are countless. Correspondingly, the dyadic Green function can be decomposed into guided mode components and radiation mode components.    
 
-For our problem, we only care about the guided mode contributions which are the dominate components detected at the end of a long nanofiber (a few centimeters long). We are interested in the single mode fibers for this paper. The only allowed guided mode for a single-mode fiber is called \textit{$\mathrm{HE}_{11}$} mode which has degeneracies of two propagating directions and two polarization patterns. One can show that the dyadic Green function for the guided modes can be written as~\cite{Sondergaard2001a} \textcolor{red}{(Check the factor of 2 from this equation.)}
+One can also use the eigenmode expansion method~\cite{Glauber1991,Sondergaard2001a} to expand the Green functions in terms of bare-fiber modes. For our problem, we only care about the guided mode contributions which are the dominant components detected at the end of a long nanofiber. We use single mode fibers for this study. The only allowed guided mode for a single-mode fiber is called \textit{$\mathrm{HE}_{11}$} mode which has degeneracies of two propagating directions and two polarization patterns. The propagation constant $\beta_0$ is fixed once the wavelength and the geometry of the nanofiber are given. One can show that the dyadic Green function for the guided modes can be written as~\cite{Sondergaard2001a} \textcolor{red}{(Check the factor of 2 from this equation.)}
 \begin{align}
-\mathbf{G}_g(\br,\br') &=-\frac{in_g}{4k_0} \sum_{m,f=\pm 1} \mathbf{u}_{\mu}(r\!_\perp)\mathbf{u}_{\tilde{\mu}}(r_{\!\perp}^\prime)e^{if\beta_0(z-z')+im(\phi-\phi')}\\
-&= -\frac{in_g}{4k_0} \sum_{m,f=\pm 1} \mathbf{u}_{\mu}(r\!_\perp)\mathbf{u}^*_{\mu}(r_{\!\perp}^\prime)e^{if\beta_0(z-z')+im(\phi-\phi')}.
+\mathbf{G}_g(\br,\br') &=-\frac{in_g}{4k_0} \sum_{m,f=\pm 1} \mathbf{u}^{(\mu)}(r\!_\perp)\mathbf{u}^{(\tilde{\mu})}(r_{\!\perp}^\prime)e^{if\beta_0(z-z')+im(\phi-\phi')}\\
+&= -\frac{in_g}{4k_0} \sum_{m,f=\pm 1} \mathbf{u}^{(\mu)}(r\!_\perp){\mathbf{u}^{(\mu)}}^*(r_{\!\perp}^\prime)e^{if\beta_0(z-z')+im(\phi-\phi')}.
 \end{align}
-In the equation above, the transverse modes of the nanofiber, $\mathbf{u}_{\mu}(\br)$, are defined by
+In the equation above, the wave number $k_0=\frac{\omega_0}{c}$ for a given angular frequency $\omega_0$, and the transverse modes of the nanofiber, $\mathbf{u}^{(\mu)}(\br)$, are defined by
 \begin{align}
-[-\nabla\times\nabla + \frac{\omega_{\mu}^2}{c^2}n^2(\br)]  \mathbf{u}_{\mu}(\br) &=0,
+[-\nabla\times\nabla + \frac{\omega_0^2}{c^2}n^2(\br)]  \mathbf{u}^{(\mu)}(\br) &=0,
 \end{align}
-where the mode index $\mu=(\beta_0,m,f)$ with angular moment quantum number $ m $ and propagation index $ f $. The adjoint mode index $\tilde{\mu}=(\beta_0,-m,-f)$ and we have defined the orthonormal modes $\mathbf{u}_{\mu}(\br)=\mathbf{u}_{\mu}(r_{\!\perp})e^{if\beta_0z+im\phi}$ so that $\mathbf{u}_{\tilde{\mu}}(r_{\!\perp})=\mathbf{u}^*_{\mu}(r_{\!\perp})$ (see Appendix~\ref{ch:guidedmodes}). For simplicity, we have used the circularly polarized modes as the basis for the eigenmode expansion for the dyadic Green function. One should be able to expand the dyadic Green functions in terms of linear or circular polarization basis, and replace the $m$ index with corresponding polarization indices. 
+where the mode index $\mu=(\beta_0,m,f)$ with angular moment quantum number $ m $ and propagation index $ f $. The adjoint mode index $\tilde{\mu}=(\beta_0,-m,-f)$ and we have defined the orthonormal modes $\mathbf{u}^{(\mu)}(\br)=\mathbf{u}^{(\mu)}(r_{\!\perp})e^{if\beta_0z+im\phi}$ so that $\mathbf{u}^{(\tilde{\mu})}(r_{\!\perp})={\mathbf{u}^{(\mu)}}^*(r_{\!\perp})$ (see Appendix~\ref{ch:guidedmodes}). For simplicity, we have used the circularly polarized modes as the basis for the eigenmode expansion for the dyadic Green function. One should be able to expand the dyadic Green functions in terms of either linear or circular polarization basis, and replace the $m$ index with corresponding polarization indices. 
 
-To retrieve the formula for the phase shift of an input mode in presence of a dipole, we consider the input field is
+To calculate the phase shift of an input mode in presence of a dipole, we consider the input field 
 \begin{align}
 \mathbf{E}_0(\br) &= E_0 \mathbf{u}_{m=1}^{f=1} (\br) = E_0 \mathbf{u}_1^1 (\mathbf{r}\!_\perp)e^{i\phi+i\beta_0 z}. 
 \end{align}
@@ -641,7 +640,7 @@ $\Gamma = \int \frac{\mathrm{\Omega}}{4\pi}\Gamma(\theta,\phi)=\frac{1}{3}(\Gamm
 The phase shift is proportional to the time integral of the path on the emission rate surface. The range of the decay rates determines the achievable phase shift in a unit time. However, the emission rate surface for the vacuum case is a uniform sphere and the corresponding phase shift in a given time is a constant independent from the orientation of the dipole with a scalar atomic polarizability. Therefore, it is possible to use the scalar atomic polarizability to realize a wide controllable phase shift range in the off-resonance regime that the vacuum configuration can hardly achieve. 
 
 
-\subsection{Interference due to a one-sided or two-sided atom chain}
+\subsection{Interference due to a one-sided or two-sided atom chain}\label{sec:atomchain}
 \textcolor{blue}{Effect of an infinite long one-side chain... S matrix, reflectivity... Random filling effect...}
 
 \textcolor{blue}{To include many-atom interference effect, we can use the linear optical transformation matrix formalism. The transformation of modes should be the same for both Green function and Heisenberg picture approaches. Here, I am using the semiclassical Green function results first, and then the Heisenberg picture results. } 
@@ -881,7 +880,7 @@ where the first integral yield the radiation mode contribution and the last two 
 
 
 \section{Group index of refraction and mode functions of the fundamental guided modes}\label{ch:guidedmodes}
-The longitudinal propagation constant $\beta$ of the fundamental $\mathrm{HE}_{11}$ guided mode is determined by the fiber eigenvalue equation~\cite{LeKien2005}
+The longitudinal propagation constant $\beta_0$ of the fundamental $\mathrm{HE}_{11}$ guided mode is the solution of $\beta$ determined by the fiber eigenvalue equation~\cite{LeKien2005}
 \begin{align}
 f(h,q,k,\beta) &=0,
 \end{align}
@@ -904,10 +903,10 @@ Therefore, the group index of refraction of the fundamental modes of the nanofib
 
 \todo[inline]{Frequency stability, linearity and such of the group index of refraction.}
 
-The fundamental mode functions, $\mathbf{u}^{(\mu)}(r\!_\perp,\phi,z)$, of the electric components of the fiber~\cite{LeKien2005,Lacroute2012} can be separated into $r\!_\perp-$, $\phi-$ and $z-$dependent parts, and are characterized by the mode index $\mu=(\omega,f,\xi)$, where $f=\pm 1$ indicates forward and backward propagating directions and $\xi $ indicates the polarization state of the mode. For a quasicircularly polarized fundamental mode, we use $\xi=m=\pm $ to indicate the counterclockwise and clockwise rotations, respectively; for a quasilinearly polarized fundamental mode, we usually use $\xi=\phi_0$ to indicate the polarization axis is rotated by $\phi_0$ from the $x$-axis; specially, we use $\xi=H$ or $V$ when the quasilinear polarization axis is along the $x$-axis or $y$-axis, respectively. For the circularly polarized case, the fundamental mode can be written as 
+The fundamental mode functions, $\mathbf{u}^{(\mu)}(r\!_\perp,\phi,z)$, of the electric components of the fiber~\cite{LeKien2005,Lacroute2012} can be separated into $r\!_\perp-$, $\phi-$ and $z-$dependent parts, and are characterized by the mode index $\mu=(\beta_0,f,\xi)$, where $f=\pm 1$ indicates forward and backward propagating directions and $\xi $ indicates the polarization state of the mode. For a quasicircularly polarized fundamental mode, we use $\xi=m=\pm $ to indicate the counterclockwise and clockwise rotations, respectively; for a quasilinearly polarized fundamental mode, we usually use $\xi=\phi_0$ to indicate the polarization axis is rotated by $\phi_0$ from the $x$-axis; specially, we use $\xi=H$ or $V$ when the quasilinear polarization axis is along the $x$-axis or $y$-axis, respectively. For the circularly polarized case, the fundamental mode can be written as 
 \begin{align}
-\mathbf{u}^{(\mu)}(r\!_\perp,\phi,z) &=u^{(\mu)}_{r\!_\perp}(r\!_\perp) e^{if\beta z+im\phi }\hat{r}\!_\perp +u^{(\mu)}_{\phi}(r\!_\perp) e^{if\beta z+im\phi } \hat{\phi} +u^{(\mu)}_{z}(r\!_\perp)e^{if\beta z+im\phi }\hat{z}\\
-&=u_{r\!_\perp}(r\!_\perp) e^{if\beta z+im\phi }\hat{r}\!_\perp + m u_{\phi}(r\!_\perp) e^{if\beta z+im\phi }\hat{\phi} + f u_z (r\!_\perp) e^{if\beta z+im\phi }\hat{z},
+\mathbf{u}^{(\mu)}(r\!_\perp,\phi,z) &=u^{(\mu)}_{r\!_\perp}(r\!_\perp) e^{if\beta_0 z+im\phi }\hat{r}\!_\perp +u^{(\mu)}_{\phi}(r\!_\perp) e^{if\beta_0 z+im\phi } \hat{\phi} +u^{(\mu)}_{z}(r\!_\perp)e^{if\beta_0 z+im\phi }\hat{z}\\
+&=u_{r\!_\perp}(r\!_\perp) e^{if\beta_0 z+im\phi }\hat{r}\!_\perp + m u_{\phi}(r\!_\perp) e^{if\beta_0 z+im\phi }\hat{\phi} + f u_z (r\!_\perp) e^{if\beta_0 z+im\phi }\hat{z},
 \end{align}
 where the forwarding, counterclockwise rotating guided mode components, $\mathbf{u}(r\!_\perp)$, are determined, for $r\!_\perp<a$, by
 \begin{subequations}
@@ -939,15 +938,15 @@ The normalization factor, $A$, is determined by the normalized energy that
 where the stored energy distribution factors are given by
 \begin{align}
 \!\!\!\!\! P_1
-&= \frac{\beta^2}{4h^2}\!\left\{(1\!-\! s)^2\!\left[J_0^2(ha)\!+\! J_1^2(ha) \right] \!+\!(1\!+\!s)^2\!\left[J_2^2(ha)\!-\!J_1(ha)J_3(ha) \right]\right\}\nonumber\\
+&= \frac{\beta_0^2}{4h^2}\!\left\{(1\!-\! s)^2\!\left[J_0^2(ha)\!+\! J_1^2(ha) \right] \!+\!(1\!+\!s)^2\!\left[J_2^2(ha)\!-\!J_1(ha)J_3(ha) \right]\right\}\nonumber\\
 &\quad +\frac{1}{2}\left[J_1^2(ha)-J_0(ha)J_2(ha) \right] \\
 \!\!\!\!\! P_2
-&= \frac{\beta^2J_1^2(ha)}{4q^2K_1^2(qa)}\!\left\{\phantom{\frac{1}{1}}\!\!\!\!(1\!-\!s)^2\!\left[K_1^2(qa)\!-\!K_0^2(qa) \right]\right.\nonumber\\
+&= \frac{\beta_0^2J_1^2(ha)}{4q^2K_1^2(qa)}\!\left\{\phantom{\frac{1}{1}}\!\!\!\!(1\!-\!s)^2\!\left[K_1^2(qa)\!-\!K_0^2(qa) \right]\right.\nonumber\\
 &\quad\left. \!+(1\!+\!s)^2\!\!\left[K\!_1\!(qa)K\!_3\!(qa)\!-\! K_2^2\!(qa) \right]\!+\!\frac{2q^2}{\beta^2}\!\!\left[K\!_0\!(qa)K\!_2\!(qa)\!-\!K_1^2\!(qa) \right]  \right\}.
 \end{align}
-Using this basis, the electric part of a guided field with quasicircularly propagating mode index $\mu=(\omega f m)$ can be written as 
+Using this basis, the electric part of a guided field with quasicircularly propagating mode index $\mu=(\beta_0, f, m)$ can be written as 
 \begin{align}
-E^{(\mu)}(r\!_\perp,\phi,z,t) &=E_0(u_{r\!_\perp}(r\!_\perp) e^{if\beta z+im\phi-i\omega t }\hat{r}\!_\perp + m u_{\phi}(r\!_\perp) e^{if\beta z+im\phi-i\omega t }\hat{\phi} + f u_z (r\!_\perp) e^{if\beta z+im\phi-i\omega t }\hat{z}).
+E^{(\mu)}(r\!_\perp,\phi,z,t) &=E_0\left[u_{r\!_\perp}\!(r\!_\perp) \hat{r}\!_\perp \!+\! m u_{\phi}(r\!_\perp) \hat{\phi} \!+\! f u_z (r\!_\perp) \hat{z}\right]e^{if\beta_0 z+im\phi-i\omega t }.
 \end{align}
 By using the power propagating inside and outside the fiber can be given in terms of the time averaged Poynting vector along the propagation direction, $\left< S_z \right>$, by
 \begin{align}
@@ -970,18 +969,18 @@ D_{out} &= \frac{J_1^2(ha)}{K_1^2(qa)}\left\{ (1-s)\left[ 1-(1-s)\frac{\beta_0^2
 
 For a quasilinearly polarized fundamental guided mode, the electric part of the mode can be written as 
 \begin{align}
-\mathbf{u}^{(\omega f \phi_0)}(r\!_\perp,\phi,z) &= \frac{1}{\sqrt{2}} \left(\mathbf{u}^{(\omega f +)}(r\!_\perp,\phi,z)e^{-i\phi_0} +\mathbf{u}^{(\omega f -)}(r\!_\perp,\phi,z)e^{i\phi_0} \right)\\
+\mathbf{u}^{(\beta_0, f, \phi_0)}(r\!_\perp,\phi,z) &= \frac{1}{\sqrt{2}} \left(\mathbf{u}^{(\beta_0, f, +)}(r\!_\perp,\phi,z)e^{-i\phi_0} +\mathbf{u}^{(\beta_0, f, -)}(r\!_\perp,\phi,z)e^{i\phi_0} \right)\\
 &= \sqrt{2}\left[u_{r\!_\perp}(r\!_\perp)\cos(\phi-\phi_0)\hat{\mathbf{r}}\!_\perp + iu_\phi(r\!_\perp)\sin(\phi-\phi_0)\hat{\boldsymbol{\phi}} \right. \nonumber \\
-&\quad\quad \left. + fu_z(r\!_\perp)\cos(\phi-\phi_0)\hat{\mathbf{z}} \right]e^{if\beta z}.
+&\quad\quad \left. + fu_z(r\!_\perp)\cos(\phi-\phi_0)\hat{\mathbf{z}} \right]e^{if\beta_0 z}.
 \end{align}
 One can write down an arbitrary quasilinearly polarized electric field in the form similar to the quasicircularly polarized case with $E_0A$ satisfying the same relationship defined in Equ.~\eqref{eq:EA}. 
 
-Particularly, when $\phi_0=0$ and $\pi/2$, we obtain the $H$ and $V$ fundamental modes as given by
+Particularly, when $\phi_0=0$ and $\pi/2$, we obtain the $H$ and $V$ fundamental modes as
 \begin{align}
-\mathbf{u}^{(\omega f H)}(r\!_\perp,\phi,z)
-&= \sqrt{2}\left[u_{r\!_\perp}(r\!_\perp)\cos(\phi)\hat{\mathbf{r}}\!_\perp + iu_\phi(r\!_\perp)\sin(\phi)\hat{\boldsymbol{\phi}} + fu_z(r\!_\perp)\cos(\phi)\hat{\mathbf{z}} \right]e^{if\beta z}\\
-\mathbf{u}^{(\omega f V)}(r\!_\perp,\phi,z)
-&= \sqrt{2}\left[u_{r\!_\perp}(r\!_\perp)\sin(\phi)\hat{\mathbf{r}}\!_\perp - iu_\phi(r\!_\perp)\cos(\phi)\hat{\boldsymbol{\phi}}  + fu_z(r\!_\perp)\sin(\phi)\hat{\mathbf{z}} \right]e^{if\beta z}.
+\mathbf{u}^{(\beta_0, f, H)}(r\!_\perp,\phi,z)
+&= \sqrt{2}\left[u_{r\!_\perp}(r\!_\perp)\cos(\phi)\hat{\mathbf{r}}\!_\perp + iu_\phi(r\!_\perp)\sin(\phi)\hat{\boldsymbol{\phi}} + fu_z(r\!_\perp)\cos(\phi)\hat{\mathbf{z}} \right]e^{if\beta_0 z}\\
+\mathbf{u}^{(\beta_0, f, V)}(r\!_\perp,\phi,z)
+&= \sqrt{2}\left[u_{r\!_\perp}(r\!_\perp)\sin(\phi)\hat{\mathbf{r}}\!_\perp - iu_\phi(r\!_\perp)\cos(\phi)\hat{\boldsymbol{\phi}}  + fu_z(r\!_\perp)\sin(\phi)\hat{\mathbf{z}} \right]e^{if\beta_0 z}.
 \end{align}
 
 \todo[inline]{To show $v_g=\frac{P}{W}$ using the formulas above?}

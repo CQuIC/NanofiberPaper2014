@@ -7,12 +7,10 @@ Ivan~H. Deutsch and Poul~S. Jessen.
 \newblock {\em Optics Communications}, 283(5):681 -- 694, 2010.
 \newblock Quo vadis Quantum Optics?
 
-\bibitem{Sondergaard2001a}
-Thomas S{\o}ndergaard and Bjarne Tromborg.
-\newblock General theory for spontaneous emission in active dielectric
-  microstructures: Example of a fiber amplifier, green function, green's
-  function.
-\newblock {\em Physical Review A}, 64(3):033812, 2001.
+\bibitem{Klimov2004}
+Vasily~V Klimov and Martial Ducloy.
+\newblock Spontaneous emission rate of an excited atom placed near a nanofiber.
+\newblock {\em Physical Review A}, 69(1):013812, 2004.
 
 \bibitem{Nha1997}
 H~Nha and W~Jhe.
@@ -20,10 +18,23 @@ H~Nha and W~Jhe.
   dielectric and near a solid dielectric cylinder.
 \newblock {\em Physical Review A}, 56(3):2213, 1997.
 
-\bibitem{Klimov2004}
-Vasily~V Klimov and Martial Ducloy.
-\newblock Spontaneous emission rate of an excited atom placed near a nanofiber.
-\newblock {\em Physical Review A}, 69(1):013812, 2004.
+\bibitem{Maslov2006}
+A.~V. Maslov, M.~I. Bakunov, and C.~Z. Ning.
+\newblock Distribution of optical emission between guided modes and free space
+  in a semiconductor nanowire.
+\newblock {\em Journal of Applied Physics}, 99(2):--, 2006.
+
+\bibitem{Glauber1991}
+Roy~J. Glauber and M.~Lewenstein.
+\newblock Quantum optics of dielectric media.
+\newblock {\em Phys. Rev. A}, 43:467--491, Jan 1991.
+
+\bibitem{Sondergaard2001a}
+Thomas S{\o}ndergaard and Bjarne Tromborg.
+\newblock General theory for spontaneous emission in active dielectric
+  microstructures: Example of a fiber amplifier, green function, green's
+  function.
+\newblock {\em Physical Review A}, 64(3):033812, 2001.
 
 \bibitem{LeKien2005}
 Fam Le~Kien, S.~Dutta Gupta, K.~P. Nayak, and K.~Hakuta.
