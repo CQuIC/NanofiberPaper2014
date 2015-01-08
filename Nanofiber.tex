@@ -482,13 +482,13 @@ and
 & A_{ef\!f}^V = \frac{1}{n_g|\mathbf{u}^*_{V}(r^\prime\!\!_\perp,\phi')|^2 }.
 \end{align}
 
-The Hamiltonian can also be rewritten as below using the Stokes operators and collective spin operators.
+The Hamiltonian can also be rewritten as below using the Stokes operators, $ \hat{S}_q $, and collective spin operators, $ \hat{J}_q $, with $ q=0,1,2,3 $.
 \begin{align}
 H_{\rm eff} 
 =\frac{\hbar}{\tau} \Big\{ & \left[ \big( \chi_{H,\uparrow} + \chi_{H,\downarrow}\big) + \big(\chi_{V,\uparrow} + \chi_{V,\downarrow}\big) \right] \hat{J}_0 \hat{S}_0 \nonumber \\
 + & \left[ \big( \chi_{H, \uparrow} + \chi_{H,\downarrow}\big) - \big( \chi_{V,\uparrow} + \chi_{V,\downarrow} \big)\right]  \hat{J}_0 \hat{S}_1 \nonumber \\
-+ & \left[ \big( \chi_{H,\uparrow} - \chi_{H,\downarrow}\big) + \big(\chi_{V,\uparrow} - \chi_{V,\downarrow} \big) \right] \hat{J}_z \hat{S}_0 \nonumber \\
-+ & \left[ \big( \chi_{H,\uparrow} - \chi_{H,\downarrow}\big) - \big(\chi_{V,\uparrow} - \chi_{V,\downarrow} \big) \right]  \hat{J}_z \hat{S}_1\Big\}.
++ & \left[ \big( \chi_{H,\uparrow} - \chi_{H,\downarrow}\big) + \big(\chi_{V,\uparrow} - \chi_{V,\downarrow} \big) \right] \hat{J}_3 \hat{S}_0 \nonumber \\
++ & \left[ \big( \chi_{H,\uparrow} - \chi_{H,\downarrow}\big) - \big(\chi_{V,\uparrow} - \chi_{V,\downarrow} \big) \right]  \hat{J}_3 \hat{S}_1\Big\}.
 \end{align}
 \missingfigure{Poincare sphere diagram with spin squeezing effect.}
 The first term is an overall scalar shift and thus does not contribute to the relative dynamics.  The second term is a constant birefringence and can be canceled with a compensating waveplate as long as the atom number remains constant which is usually the case when the trapping time is fairly large compared to the measurement time. The first two terms can also be canceled when we have the detuning approximately equally biased for the $ F=3 $ and $ F=4 $ ground states. 
@@ -500,23 +500,23 @@ The final term describes the QND Faraday interaction we wish to isolate (similar
 \end{align}
 which can be satisfied if we carefully choose the detuning of the probe light. The wavelength to choose to cancel the third term is atom position related, since the condition is determined by the effective mode areas which may have different ratios for the $ H $ and $ V $ modes at different locations. We can refer the exact wavelength to satisfy this condition as the \textit{magic wavelength}\index{magic wavelength}. If this condition can be met, then we can achieve an interaction of the form,
 \begin{align}
-	H_{\rm eff} = \frac{\hbar}{\tau} \chi_{\rm eff} \hat{J}_z \hat{S}_1
+	H_{\rm eff} = \frac{\hbar}{\tau} \chi_{\rm eff} \hat{J}_3 \hat{S}_1
 \end{align}
 where $\chi_{\rm eff} = 2(\chi_{H,\uparrow} - \chi_{H,\downarrow})$.  
 
 Using this, we can prepare the spins in $ D $ state on the Bloch sphere and characterize the collective spin state along the $ z $-axis after the rotation along $ S_1 $ axis due to the photon-atom interaction. To achieve this, we use the $ \hat{S}_3 $ Stokes vector component measurement. As a result of the backaction of the polarization measurement, there is a squeezing to the collective spin state which results in a reduced uncertainty of measurement output. To see this, we assume the photon number, $N_L$, is large and apply the Holstein-Primakoff approximation to set $ \hat{S}_1=\sqrt{\frac{N_L}{2}}\hat{P}_L $ and $ \hat{S}_3=\sqrt{\frac{N_L}{2}}\hat{X}_L $, where $ \hat{X}_L$ and $\hat{P}_L $ are two photonic quadratures satisfying the commutation relationship that $ [\hat{X}_L,\hat{P}_L]=i $. Now the effective Hamiltonian can be written as
 \begin{align}
-H_{\rm eff} = \frac{\hbar}{\tau} \chi_{\rm eff} \sqrt{\frac{N_L}{2}}\hat{J}_z \hat{P}_L. 
+H_{\rm eff} = \frac{\hbar}{\tau} \chi_{\rm eff} \sqrt{\frac{N_L}{2}}\hat{J}_3 \hat{P}_L. 
 \end{align}
-The $ \hat{S}_3 $ measurement is achieved through sending the signal light to one input port of a beam splitter along with a vacuum input on the other input port and then performing a balanced Homodyne measurement of the $ X_L $ quadrature. The equivalent Kraus operator conditional on this measurement is 
+The $ \hat{S}_3 $ measurement is achieved through sending the signal light to one input port of a beam splitter along with a vacuum input on the other input port and then performing a balanced Homodyne measurement of the $ X_L $ quadrature. The equivalent Kraus operator conditional on this measurement can be defined by 
 \begin{align}
-\hat{A}_{X_L} &= \bra{X_L} e^{-i\chi_{\rm eff} \sqrt{\frac{N_L}{2}}\hat{J}_z \hat{P}_L} \ket{0_L}\propto \exp\left\{ -\frac{\kappa T}{4}(l-\hat{J}_z)^2 \right\},
+\hat{A}_{X_L} &= \bra{X_L} e^{-i\chi_{\rm eff} \sqrt{\frac{N_L}{2}}\hat{J}_3 \hat{P}_L} \ket{0_L}\propto \exp\left\{ -\frac{\kappa T}{4}(l-\hat{J}_3)^2 \right\},
 \end{align} 
-where $ l=\frac{X_L}{\chi_{\rm eff} \sqrt{N_L/2}} $ is the measurement outcome in angular momentum units, and $ \kappa T=\chi_{\rm eff}^2N_L $ is the integrated measurement strength per spin. The shot noise resolution of the QND measurement is $ \sigma^2=\frac{1}{\kappa T} $. The Kraus operator $\hat{A}_{X_L}$ yields a backaction and generates a spin squeezing state\textcolor{blue}{[Reference]}. Given a spin coherent state (SCS) input, the output state probability distribution can be given by 
+where $ l=\frac{X_L}{\chi_{\rm eff} \sqrt{N_L/2}} $ is the measurement outcome in angular momentum units, and $ \kappa T=\chi_{\rm eff}^2N_L $ is the integrated measurement strength per spin. The shot noise resolution of the QND measurement is $ \sigma^2=\frac{1}{\kappa T} $. The Kraus operator $\hat{A}_{X_L}$ yields a backaction and generates a spin squeezing state\textcolor{blue}{[Reference]}. Given a spin coherent state (SCS) input with total spin quantum number $ J=N_A/2 $, the output state probability distribution can be given by 
 \begin{align}
 P_{L|l} \propto e^{-\frac{(L-\bar{L}(l))^2}{2\Delta J_{out}^2}},
 \end{align}
-where $ \Delta J_{out}^2 =\frac{\Delta J_{in}^2}{1+\xi}=\frac{J}{2(1+\xi)} $, $ \bar{L}(l)=\frac{l}{1+\xi} $, and $ \xi\equiv \frac{\Delta J_{in}^2}{\sigma^2}=\frac{J}{2\sigma^2}=\frac{\chi_{e\!f\!f}^2}{4}N_AN_L $ is the measurement strength which characterizes the measurement backaction and the squeezing effect. The ability to resolve the initial quantum variance of $ J_z $ within the resolution of the meter is the key to QND squeezing.
+where $ \Delta J_{out}^2 =\frac{\Delta J_{in}^2}{1+\xi}=\frac{J}{2(1+\xi)} $, $ \bar{L}(l)=\frac{l}{1+\xi} $, and $ \xi\equiv \frac{\Delta J_{in}^2}{\sigma^2}=\frac{J}{2\sigma^2}=\frac{\chi_{e\!f\!f}^2}{4}N_AN_L $ is the measurement strength which characterizes the measurement backaction and the squeezing effect. The ability to resolve the initial quantum variance of $ J_3 $ within the resolution of the meter is the key to QND squeezing.
 
 
 
@@ -594,19 +594,19 @@ N^{min}_A &= \frac{1}{C_{J'}^{(0)}}\sqrt{\frac{A_{e\!f\!f}^2}{A_{in}\sigma_0}}.
 
 \textcolor{blue}{Show the phase shift and the decay rate are results of the combination effect of the free dipole radiation and the reflection from the nanofiber interface. Discuss the phase shift control landscape and the difference with the vacuum case. Apply to a phase gate.}
 \begin{align}
-\delta\phi &= -\frac{\Gamma_{1D}^\mu}{2\Delta},\\
-\frac{\Gamma_{1D}^\mu}{\Gamma_0} &= \frac{6\pi c}{\omega}\frac{\sum_g\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}_g^\mu(\br',\br') \right]\cdot\mathbf{d}_{eg}^* }{\sum_g|\mathbf{d}_{eg}|^2} = 1+ \frac{3}{2} \frac{\mathrm{Im}\left[\sum_g\mathbf{d}_{eg}^*\cdot \mathbf{E}^{(R,\mu)}_g(\br') \right]}{\sum_g|\mathbf{d}_{eg}|^2 k^3}\nonumber\\
+\delta\phi &= -\frac{\Gamma^{1D}_\mu}{2\Delta},\\
+\frac{\Gamma^{1D}_\mu}{\Gamma_0} &= \frac{6\pi c}{\omega}\frac{\sum_g\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}_g^\mu(\br',\br') \right]\cdot\mathbf{d}_{eg}^* }{\sum_g|\mathbf{d}_{eg}|^2} = 1+ \frac{3}{2} \frac{\mathrm{Im}\left[\sum_g\mathbf{d}_{eg}^*\cdot \mathbf{E}^{(R,\mu)}_g(\br') \right]}{\sum_g|\mathbf{d}_{eg}|^2 k^3}\nonumber\\
 &=\frac{3\pi}{2}\left(\frac{c}{\omega}\right)^2\frac{c}{v_g} \frac{\sum_{g}|\mathbf{d}_{eg}\cdot \mathbf{u}^\mu(\br')|^2}{\sum_g|\mathbf{d}_{eg}|^2}\\
 \mathbf{E}^{(R,\mu)}_g(\br') &= -\frac{1}{4\pi k^2} \mathbf{G}^{(R,\mu)}_g(\br',\br')\cdot \mathbf{d}_{eg}.
 \end{align}
-The index $ R $ indicates the reflected component, and $\mu=(\beta,m,f)  $ identifies the normalized fiber mode $ \mathbf{u}^\mu(\br') $. 
+The index $ R $ indicates the component of reflection, and $\mu=(\beta,m,f)  $ identifies the normalized fiber mode $ \mathbf{u}^\mu(\br') $. 
 
 We can write 
 \begin{align}
 \Gamma_{vac} &= \frac{4\omega_0^3|\mathbf{d}|^2}{3\hbar c^3}=-\frac{8\pi \omega_0^2}{\hbar c^2}\left[ \mathbf{d}\cdot \mathrm{Im}[\mathbin{\color{red}{\mathbf{G}^{(0)}}}(\br',\br')]\cdot \mathbf{d}^* \right]\\
 \Gamma &= -\frac{8\pi \omega_0^2}{\hbar c^2}\left[ \mathbf{d}\cdot \mathrm{Im}[\mathbf{G}(\br',\br')]\cdot \mathbf{d}^* \right]=-\frac{8\pi \omega_0^2}{\hbar c^2}\left[ \mathbf{d}\cdot \mathrm{Im}[\mathbin{\color{red}{\mathbf{G}^{(0)}}}(\br',\br')+\mathbin{\color{red}{\mathbf{G}^{(R)}}}(\br'\br')]\cdot \mathbf{d}^* \right]\\
 \end{align}
-The decay rate is result of the interference between the free dipole radiation and the reflection from the nanofiber interface.
+The decay rate is a result of the superposition of the free dipole radiation and the reflection from the nanofiber interface.
 
 \begin{align}
 \Gamma &\propto -\mathbf{d}\cdot \mathrm{Im}[\mathbf{G}(\br',\br')]\cdot \mathbf{d}^* \\
@@ -655,7 +655,7 @@ The phase shift is proportional to the time integral of the path on the emission
 \textcolor{blue}{To include many-atom interference effect, we can use the linear optical transformation matrix formalism. The transformation of modes should be the same for both Green function and Heisenberg picture approaches. Here, I am using the semiclassical Green function results first, and then the Heisenberg picture results. } 
 
 
-From Equ.~\ref{eq:Cmf} and the results above, one can generalize the field transformation relationship due to the presence of an atom and an arbitrary incident mode $\mathbf{u}_{m'f'}(\br)$ with mode amplitude $E_{m'f'}$ to give
+From Equ.~\eqref{eq:Cmf} and the results above, one can generalize the field transformation relationship due to the presence of an atom and an arbitrary incident mode $\mathbf{u}_{m'f'}(\br)$ with mode amplitude $E_{m'f'}$ to give
 \begin{align}
 \mathbf{E}^{out}(\br) &= \sum_{mf}E_{mf}\mathbf{u}_{m'f'}(\br),\\
 E_{mf} &= \left[\delta_{mm'}\delta_{ff'}+C_{m'f'}^{mf}\right]E_{m'f'},
@@ -667,29 +667,29 @@ C^{mf}_{m'f'}
 \end{align}
 Therefore, one can define the scattering matrix $\mathbf{S}\equiv \left\{S^{mf}_{m'f'}|\,m,f,m',f'=\pm 1 \right\}$ with elements $S^{mf}_{m'f'}=\delta_{mm'}\delta_{ff'}+C_{m'f'}^{mf}$. 
 
-Notice that, $\br'=(r\!_\perp^\prime,\phi',z')$ indicates where the atom is sitting. If there are many atoms which are sitting at different positions, one should sum over all atom indexes to obtain the total scattering matrix. In our case, the atoms can sit at some random positions of either $\phi'=0$ or $\phi'=\pi$ two sides of a periodic chain. For simplicity, we always use $z'=0$ for the scattering matrix $\mathbf{S}(\phi')$ calculation due to the presence of the one or two atoms in the $z$-slice. We define the free propagating transformation matrix, $\mathbf{P}(L)\equiv \left\{P^{mf}_{m'f'}(L)|\,m,f,m',f'=\pm 1 \right\}$, by
+Notice that, $\br'=(r\!_\perp^\prime,\phi',z')$ indicates where the atom is sitting. If there are many atoms which are sitting at one transverse plane with the same $z'$ position, one should sum over all those atom indexes to obtain the total scattering matrix at a $z$-slice. In our case, the atoms can sit at some random positions of either $\phi'=0$ or $\phi'=\pi$ two sides of a periodic chain. For simplicity, we always use $z=z'=0$ for the scattering matrix $\mathbf{S}(\phi')$ calculation on one $z$-slice. We define the free propagating transformation matrix, $\mathbf{P}(\Lambda)\equiv \left\{P^{mf}_{m'f'}(\Lambda)|\,m,f,m',f'=\pm 1 \right\}$, by
 \begin{align}
-P^{mf}_{m'f'}(L) &= \delta_{mm'}\delta_{ff'}e^{if\beta_0 L},
+P^{mf}_{m'f'}(\Lambda) &= \delta_{mm'}\delta_{ff'}e^{if\beta_0 \Lambda},
 \end{align}
-where $L$ is the minimum distance between two atoms along the propagating direction of the guided light. The total field amplitude after the interaction with the last atom along the nanofiber due to the random occupied two-side chain of atoms can be given by
+where $\Lambda$ is the minimum distance or geometric period between atoms along the propagating direction of the guided light. The total field amplitude after the interaction with the last atom along the nanofiber due to the random occupied two-side chain of atoms can be given by
 \begin{align}
-\left( E_{mf}^{out}\right) &= [\eta_{N,+} \mathbf{S}(0) +\eta_{N,-}\mathbf{S}(\pi) +(1-\eta_{N,+})(1-\eta_{N,-})\eye] \mathbf{P}(L)\nonumber\\
-&\quad [\eta_{N-1,+} \mathbf{S}(0) +\eta_{N-1,-}\mathbf{S}(\pi)+(1-\eta_{N-1,+})(1-\eta_{N-1,-})\eye ] \mathbf{P}(L)\nonumber\\
-&\quad \ldots [\eta_{2,+} \mathbf{S}(0) +\eta_{2,-}\mathbf{S}(\pi)+(1-\eta_{2,+})(1-\eta_{2,-})\eye ] \mathbf{P}(L)\nonumber\\
+\left( E_{mf}^{out}\right) &= [\eta_{N,+} \mathbf{S}(0) +\eta_{N,-}\mathbf{S}(\pi) +(1-\eta_{N,+})(1-\eta_{N,-})\eye] \mathbf{P}(\Lambda)\nonumber\\
+&\quad [\eta_{N-1,+} \mathbf{S}(0) +\eta_{N-1,-}\mathbf{S}(\pi)+(1-\eta_{N-1,+})(1-\eta_{N-1,-})\eye ] \mathbf{P}(\Lambda)\nonumber\\
+&\quad \ldots [\eta_{2,+} \mathbf{S}(0) +\eta_{2,-}\mathbf{S}(\pi)+(1-\eta_{2,+})(1-\eta_{2,-})\eye ] \mathbf{P}(\Lambda)\nonumber\\
 &\quad [\eta_{1,+} \mathbf{S}(0) +\eta_{1,-}\mathbf{S}(\pi) +(1-\eta_{1,+})(1-\eta_{1,-})\eye] \left( E_{m'f'}^{in}\right)\\
-&= \left\{ \prod_{i=N}^2 [\eta_{i,+} \mathbf{S}(0) +\eta_{i,-}\mathbf{S}(\pi)+(1-\eta_{i,+})(1-\eta_{i,-})\eye ] \mathbf{P}(L)\right\} \nonumber\\
+&= \left\{ \prod_{i=N}^2 [\eta_{i,+} \mathbf{S}(0) +\eta_{i,-}\mathbf{S}(\pi)+(1-\eta_{i,+})(1-\eta_{i,-})\eye ] \mathbf{P}(\Lambda)\right\} \nonumber\\
 &\quad [\eta_{1,+} \mathbf{S}(0) +\eta_{1,-}\mathbf{S}(\pi)+(1-\eta_{1,+})(1-\eta_{1,-})\eye ]\left( E_{m'f'}^{in}\right)\\
-&= \left\{ \prod_{i=N}^2 \mathbf{S}_i \mathbf{P}(L)\right\} \mathbf{S}_1 \left( E_{m'f'}^{in}\right),\label{eq:transE}
+&= \left\{ \prod_{i=N}^2 \mathbf{S}_i \mathbf{P}(\Lambda)\right\} \mathbf{S}_1 \left( E_{m'f'}^{in}\right),\label{eq:transE}
 \end{align}
-where $\mathbf{S}_i=\eta_{i,+} \mathbf{S}(0) +\eta_{i,-}\mathbf{S}(\pi)+(1-\eta_{i,+})(1-\eta_{i,-})\eye $ denotes the scattering matrix due to the randomly occupied atoms at the $i^{\mathrm{th}}$ $z$-slice with random occupation variables $\eta_{i,\pm}=0$ or $1$ on both sides of the atom chain. The distribution of the random variables $\eta_{i,\pm}$ reflects how the atom chain sites are occupied. 
+where $\mathbf{S}_i=\eta_{i,+} \mathbf{S}(0) +\eta_{i,-}\mathbf{S}(\pi)+(1-\eta_{i,+})(1-\eta_{i,-})\eye $ denote the scattering matrix due to the randomly occupied atoms at the $i^{\mathrm{th}}$ $z$-slice with random occupation variables $\eta_{i,\pm}=0$ or $1$ on both sides of the atom chain. The distribution of the random variables $\eta_{i,\pm}$ reflects how the atom chain is occupied. 
 
-For the case that both sides of the atom chain are occupied on a $z$-slice, the scattering matrix elements with the two atoms can be given by
+For the case that both sides ($ \phi'=0 $ and $\pi  $) of the atom chain are fully occupied along the $z$-direction, the scattering matrix elements can be given by
 \begin{align}
 \!\!\!\!\!\!S^{mf}_{m'f'} &= 2\delta_{mm'}\delta_{ff'} + i\pi k_0 n_g\alpha  {\mathbf{u}_{mf}}^*(r'_{\!\perp})\cdot \mathbf{u}_{m'f'}(r'_{\!\perp})[1+e^{i(m'-m)\pi}]\\
 &= 2\delta_{mm'}\delta_{ff'} + i\pi k_0 n_g\alpha  \left[ |u_{r\!_\perp}(r'_{\!\perp})|^2+mm' |u_\phi(r'_{\!\perp})|^2+ff'|u_z(r'_\perp)|^2\right][1+e^{i(m'-m)\pi}]\\
 &= 2\delta_{mm'}\delta_{ff'} + i2\pi k_0 n_g\alpha  \left[ |u_{r\!_\perp}(r'_{\!\perp})|^2+mm' |u_\phi(r'_{\!\perp})|^2+ff'|u_z(r'_\perp)|^2\right].
 \end{align}
-We have treated the atomic polarizability as a scalar and used Born approximation here. Notice that, the polarization-dependent factor $[1+e^{i(m'-m)\pi}]$ always yields $2$ with $m,m'=\pm 1$ for the $\mathrm{HE}_{11}$ guided modes. If there are high-order guided modes, we expect to see destructive Birefringence effects for odd mode index differences. 
+We have treated the atomic polarizability as a scalar and used Born approximation here. Notice that, the polarization-dependent factor $[1+e^{i(m'-m)\pi}]$ always yields $2$ with $m,m'=\pm 1$ for the $\mathrm{HE}_{11}$ guided modes. If there are high-order guided modes, we expect to see destructive Birefringence effects for modes with odd modal index gaps. 
 
 This can also be understood by looking into the equations derived in the Heisenberg picture. The equivalent scattering matrix elements due to an atom positioned at $\br'=(r'_\perp,\phi',z'=0)$ can be obtained by making $t\rightarrow t_0$ from Equ.~\eqref{eq:Smfmft}:
 \begin{align}\label{eq:Smfmfphi_Heisenberg}
@@ -703,9 +703,9 @@ S^{mf}_{m'f'}(\phi') &=S^{mf}_{m'f'}(\phi'=0)+S^{mf}_{m'f'}(\phi'=\pi)\\
 &=  2\delta_{mm'}\delta_{ff'}-i\frac{ \frac{4\pi \omega}{v_g}\mathbf{u}^*_{mf}(r'_\perp)\cdot\mathbf{d}_{ge} \mathbf{d}_{eg}\cdot\mathbf{u}_{m'f'}(r'_\perp)}{\Delta+i2\Gamma^g_{m'f'}}.
 \end{align}
 
-When $\beta_0 L$ is a multiple of $\pi$, the free propagation transformation matrix is proportional to a unitary matrix, and hence can be extracted out from the total transformation matrix formula (Equ.~\eqref{eq:transE}). In that case, the total phase shift for a given input mode can be treated as the sum of the phase shift due to each individual atom or two-side slice of atoms. Otherwise, there will be the asymmetric effect on the phase shifts of the forwarding and backwarding modes. Moreover, under the framework derived above, if we can ignore the backward propagating modes--which is approximately true if it is far from satisfying the Bragg condition, the free propagating transformation matrix $\mathbf{P}(L)$ is also proportional to a unitary matrix, and hence the total phase shifts for individual forwarding modes can still be treated as a sum over all slices of atoms along the propagating direction. Physically, the asymmetric mixing of forward and backward propagating modes may be the major barrier to treat the total phase shift as the sum over all individual elements.  
+When $\beta_0 L$ is a multiple of $\pi$, the free propagation transformation matrix is proportional to a unitary matrix, and hence can be extracted out from the total transformation matrix formula (Equ.~\eqref{eq:transE}). In that case, the total phase shift for a given input mode can be treated as the sum of the phase shift due to each individual atoms on both sides of the $z$-slices. Otherwise, there will be the asymmetric effect on the phase shifts of the forwarding and backwarding modes. Moreover, under the framework derived above, if we can ignore the backward propagating modes--which is approximately true if it is far from satisfying the geometric Bragg condition that $ \beta_0\Lambda=n\pi $, the free propagating transformation matrix $\mathbf{P}(\Lambda)$ is also proportional to a unitary matrix, and hence the total phase shifts for individual forwarding modes can still be treated as a sum over all slices of atoms along the propagating direction. Physically, the asymmetric mixing of forward and backward propagating modes may be the major barrier to treat the total phase shift as the sum over all individual elements.  
 
-\todo[inline]{Energy is not conserving under the Born approximation. How does the radiation power goes after every event of scattering? A better model to explain what we should observe for the Birefringence effect.}
+\todo[inline]{Energy is not conserving under the Born approximation. How does the radiation power distribute after every event of scattering? A better model to explain what we should observe for the Birefringence effect.}
 
 \section{Conclusions}
 
