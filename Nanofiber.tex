@@ -277,6 +277,7 @@ If there are two input modes, the Faraday and birefringence effects can be analy
 \textcolor{red}{Note: to obtain the final result of the phase shift, we have assumed the orientation of the dipole has no preference of direction, which is the meaning of \textit{scalar polarizability}. There may be a factor of $1/3$ missing in the end. However, it might be better to use the general tensor polarizability and consider a general input field to derive the phase shift and birefringence here. }
 
 \subsection{Connect to the Heisenberg picture}
+\todo[inline]{Need to decide if we should put the detailed derivations to the appendix.}
 We consider a single mode interact with an atom again, in which the Hamiltonian can be given by
 \begin{align}
 \hat{H} &= \hat{H}_0 + \hat{H}_{int}, 
@@ -423,6 +424,7 @@ In the vacuum case, the strongest mode is given by $ |\mathbf{u}_{00}(r_\perp^{v
 
 
 \subsection{Quantum interface for the nanofiber with clock state}
+\todo[inline]{Need to decide if we should put the detailed derivations to the appendix.}
 We present a general theory on light-atom interaction in presence of a nanofiber in Appendix~\ref{sec:lightatominteract}. Here, we consider a simple case that all trapped cesium atoms are initially pumped and restricted to the clock states of the ground state ($6S_{1/2}$) sublevels, in which the atomic magnetic quantum number $M=0$ while the total atomic angular momentum quantum number can be $F=3$ and $F=4$. Therefore, we only care about the atomic polarizability components
 \begin{align}
 \tensor{\alpha}_{\uparrow} &=\bra{F=4,M=0}\tensor{\alpha}\ket{F=4,M=0}\\
@@ -591,7 +593,7 @@ N^{min}_A &= \frac{1}{C_{J'}^{(0)}}\sqrt{\frac{A_{e\!f\!f}^2}{A_{in}\sigma_0}}.
 %\subsection{Group velocity}
 
 \subsection{Achievable phase shift with scalar atomic polarizabilities?}
-
+\todo[inline]{To be deleted for this paper.}
 \textcolor{blue}{Show the phase shift and the decay rate are results of the combination effect of the free dipole radiation and the reflection from the nanofiber interface. Discuss the phase shift control landscape and the difference with the vacuum case. Apply to a phase gate.}
 \begin{align}
 \delta\phi &= -\frac{\Gamma^{1D}_\mu}{2\Delta},\\
@@ -898,28 +900,28 @@ where the first integral yield the radiation mode contribution and the last two 
 \section{Group index of refraction and mode functions of the fundamental guided modes}\label{ch:guidedmodes}
 The longitudinal propagation constant $\beta_0$ of the fundamental $\mathrm{HE}_{11}$ guided mode is the solution of $\beta$ determined by the fiber eigenvalue equation~\cite{LeKien2005}
 \begin{align}
-f(h,q,k,\beta) &=0,
+f(\kappa_1,q,k,\beta) &=0,
 \end{align}
 where
 \begin{align}
-f(h,q,k,\beta) &=\frac{J_0(ha)}{haJ_1(ha)}+\frac{n_1^2+n_2^2}{2n_1^2}\frac{K_1^\prime(qa)}{qaK_1(qa)}-\frac{1}{h^2a^2} \\
-&+\left\{\left[\frac{n_1^2-n_2^2}{2n_1^2}\frac{K_1^\prime(qa)}{qaK_1(qa)} \right]^2 +\frac{\beta^2}{n_1^2k^2}\left(\frac{1}{q^2a^2}+\frac{1}{h^2a^2} \right)^2 \right\}^{1/2}
+f(\kappa_1,q,k,\beta) &=\frac{J_0(\kappa_1a)}{\kappa_1aJ_1(\kappa_1a)}+\frac{n_1^2+n_2^2}{2n_1^2}\frac{K_1^\prime(qa)}{qaK_1(qa)}-\frac{1}{\kappa_1^2a^2} \\
+&+\left\{\left[\frac{n_1^2-n_2^2}{2n_1^2}\frac{K_1^\prime(qa)}{qaK_1(qa)} \right]^2 +\frac{\beta^2}{n_1^2k^2}\left(\frac{1}{q^2a^2}+\frac{1}{\kappa_1^2a^2} \right)^2 \right\}^{1/2}
 \end{align}
-and the transverse propagation parameters $h=\sqrt{n_1^2k^2-\beta^2}$ and $q=\sqrt{\beta^2-n_2^2k^2}=\sqrt{\beta^2-k^2}$. $J_n$ and $K_n$ stand for the Bessel functions of the first kind and the modified Bessel functions of the second kind, respectively. 
+and the transverse propagation constants $\kappa_1=\sqrt{n_1^2k^2-\beta^2}$ and $q=\sqrt{\beta^2-n_2^2k^2}=\sqrt{\beta^2-k^2}$. $J_n$ and $K_n$ stand for the Bessel functions of the first kind and the modified Bessel functions of the second kind, respectively. 
 
 We differentiate the fiber eigenvalue equation above with respect to $ \beta $ on both sides, and obtain
 \begin{align}
-\dd{f}{\beta} &= \pp{f}{h} \left(\pp{h}{k}\dd{k}{\beta}+\pp{h}{\beta} \right) + \pp{f}{q}\left(\pp{q}{k}\dd{k}{\beta}+\pp{q}{\beta} \right) +\pp{f}{k}\dd{k}{\beta}+\pp{f}{\beta}=0
+\dd{f}{\beta} &= \pp{f}{\kappa_1} \left(\pp{\kappa_1}{k}\dd{k}{\beta}+\pp{\kappa_1}{\beta} \right) + \pp{f}{q}\left(\pp{q}{k}\dd{k}{\beta}+\pp{q}{\beta} \right) +\pp{f}{k}\dd{k}{\beta}+\pp{f}{\beta}=0
 \end{align}
 Therefore, the group index of refraction of the fundamental modes of the nanofiber can be given by
 \begin{align}
- n_g &= \dd{\beta}{k} = -\frac{\pp{f}{h}\pp{h}{k}+\pp{f}{q}\pp{q}{k}+\pp{f}{k}}
-{\pp{f}{h}\pp{h}{\beta}+\pp{f}{q}\pp{q}{\beta}+\pp{f}{\beta}}.
+ n_g &= \dd{\beta}{k} = -\frac{\pp{f}{\kappa_1}\pp{\kappa_1}{k}+\pp{f}{q}\pp{q}{k}+\pp{f}{k}}
+{\pp{f}{\kappa_1}\pp{\kappa_1}{\beta}+\pp{f}{q}\pp{q}{\beta}+\pp{f}{\beta}}.
 \end{align}
 
-\todo[inline]{Frequency stability, linearity and such of the group index of refraction.}
+\missingfigure{Frequency stability, linearity and maybe other aspects of the group index of refraction.}
 
-The fundamental mode functions, $\mathbf{u}^{(\mu)}(r\!_\perp,\phi,z)$, of the electric components of the fiber~\cite{LeKien2005,Lacroute2012} can be separated into $r\!_\perp-$, $\phi-$ and $z-$dependent parts, and are characterized by the mode index $\mu=(\beta_0,f,\xi)$, where $f=\pm 1$ indicates forward and backward propagating directions and $\xi $ indicates the polarization state of the mode. For a quasicircularly polarized fundamental mode, we use $\xi=m=\pm $ to indicate the counterclockwise and clockwise rotations, respectively; for a quasilinearly polarized fundamental mode, we usually use $\xi=\phi_0$ to indicate the polarization axis is rotated by $\phi_0$ from the $x$-axis; specially, we use $\xi=H$ or $V$ when the quasilinear polarization axis is along the $x$-axis or $y$-axis, respectively. For the circularly polarized case, the fundamental mode can be written as 
+The fundamental mode functions, $\mathbf{u}^{(\mu)}(r\!_\perp,\phi,z)$, of the electric components of the fiber~\cite{LeKien2005,Lacroute2012} can be separated into $r\!_\perp-$, $\phi-$ and $z-$dependent parts, and are characterized by the mode index $\mu=(\beta_0,f,\xi)$, where $f=\pm 1$ indicates forward and backward propagating directions and $\xi $ indicates the polarization state of the mode. For a quasicircularly polarized fundamental mode, we use $\xi=m=\pm $ to indicate the counterclockwise and clockwise rotations, respectively; for a quasilinearly polarized fundamental mode, we usually use $\xi=\phi_0$ to indicate the rotation angle, $\phi_0$, of the polarization axis from the $x$-axis; specially, we use $\xi=H$ or $V$ when the quasilinear polarization axis is along the $x$-axis or $y$-axis, respectively. For the circularly polarized case, the fundamental mode can be written as 
 \begin{align}
 \mathbf{u}^{(\mu)}(r\!_\perp,\phi,z) &=u^{(\mu)}_{r\!_\perp}(r\!_\perp) e^{if\beta_0 z+im\phi }\hat{r}\!_\perp +u^{(\mu)}_{\phi}(r\!_\perp) e^{if\beta_0 z+im\phi } \hat{\phi} +u^{(\mu)}_{z}(r\!_\perp)e^{if\beta_0 z+im\phi }\hat{z}\\
 &=u_{r\!_\perp}(r\!_\perp) e^{if\beta_0 z+im\phi }\hat{r}\!_\perp + m u_{\phi}(r\!_\perp) e^{if\beta_0 z+im\phi }\hat{\phi} + f u_z (r\!_\perp) e^{if\beta_0 z+im\phi }\hat{z},
@@ -928,56 +930,56 @@ where the forwarding, counterclockwise rotating guided mode components, $\mathbf
 \begin{subequations}
 \label{urtcrla}
 \begin{align}
-u_{r\!_\perp}(r\!_\perp) &=-A\frac{\beta_0}{2h} \left[ (1-s)J_0(hr\!_\perp)-(1+s)J_2(hr\!_\perp) \right]\\
-u_\phi(r\!_\perp) &=  -imA \frac{\beta_0}{2h} \left[ (1-s)J_0(hr\!_\perp) +(1+s)J_2(hr\!_\perp) \right] \\
-u_z(r\!_\perp) &= ifA J_1(hr\!_\perp),
+u_{r\!_\perp}(r\!_\perp) &=-A\frac{\beta_0}{2\kappa_1} \left[ (1-s)J_0(\kappa_1r\!_\perp)-(1+s)J_2(\kappa_1r\!_\perp) \right]\\
+u_\phi(r\!_\perp) &=  -imA \frac{\beta_0}{2\kappa_1} \left[ (1-s)J_0(\kappa_1r\!_\perp) +(1+s)J_2(\kappa_1r\!_\perp) \right] \\
+u_z(r\!_\perp) &= ifA J_1(\kappa_1r\!_\perp),
 \end{align}
 \end{subequations}
 and, for $ r_\perp>a $, by
 \begin{subequations}
 \label{urtcrga}
 \begin{align}
-u_{r\!_\perp}(r\!_\perp) &=-A\frac{\beta_0}{2h}\frac{J_1(ha)}{K_1(qa)} \left[ (1-s)K_0(qr\!_\perp)+(1+s)K_2(qr\!_\perp) \right]\\
-u_\phi(r\!_\perp) &=  -imA \frac{\beta_0}{2h} \frac{J_1(ha)}{K_1(qa)} \left[ (1-s)K_0(qr\!_\perp) - (1+s)K_2(qr\!_\perp) \right] \\
-u_z(r\!_\perp) &= ifA \frac{J_1(ha)}{K_1(qa)} K_1(qr\!_\perp),
+u_{r\!_\perp}(r\!_\perp) &=-A\frac{\beta_0}{2\kappa_1}\frac{J_1(\kappa_1a)}{K_1(qa)} \left[ (1-s)K_0(qr\!_\perp)+(1+s)K_2(qr\!_\perp) \right]\\
+u_\phi(r\!_\perp) &=  -imA \frac{\beta_0}{2\kappa_1} \frac{J_1(\kappa_1a)}{K_1(qa)} \left[ (1-s)K_0(qr\!_\perp) - (1+s)K_2(qr\!_\perp) \right] \\
+u_z(r\!_\perp) &= ifA \frac{J_1(\kappa_1a)}{K_1(qa)} K_1(qr\!_\perp),
 \end{align}
 \end{subequations}
 with
 \begin{align}
-s &= \left[\frac{1}{(ha)^2}+ \frac{1}{(qa)^2} \right] \left[ \frac{J_1'(ha)}{haJ_1(ha)} + \frac{K'_1(qa)}{qaK_1(qa)} \right],\\
-h &= \sqrt{k^2 n_1^2-\beta_0^2}.
+s &= \left[\frac{1}{(\kappa_1a)^2}+ \frac{1}{(qa)^2} \right] \left[ \frac{J_1'(\kappa_1a)}{\kappa_1aJ_1(\kappa_1a)} + \frac{K'_1(qa)}{qaK_1(qa)} \right],\\
+\kappa_1 &= \sqrt{k^2 n_1^2-\beta_0^2}.
 \end{align}
 The normalization factor, $A$, is determined by the normalized energy that 
 \begin{align}
 1 &= \int_0^{2\pi} \!\!\mathrm{d} \phi \int_0^\infty\!\!\mathrm{d}r\!_\perp r\!_\perp\,  n^2(\br\!_\perp)|\boldsymbol{\mathcal{E}}^g(\br\!_\perp)|^2 = 2\pi A^2 a^2 (n_1^2P_1 + n_2^2P_2),
 \end{align}
-where the stored energy distribution factors are given by
+where the stored energy distribution factors are
 \begin{align}
 \!\!\!\!\! P_1
-&= \frac{\beta_0^2}{4h^2}\!\left\{(1\!-\! s)^2\!\left[J_0^2(ha)\!+\! J_1^2(ha) \right] \!+\!(1\!+\!s)^2\!\left[J_2^2(ha)\!-\!J_1(ha)J_3(ha) \right]\right\}\nonumber\\
-&\quad +\frac{1}{2}\left[J_1^2(ha)-J_0(ha)J_2(ha) \right] \\
+&= \frac{\beta_0^2}{4\kappa_1^2}\!\left\{(1\!-\! s)^2\!\left[J_0^2(\kappa_1a)\!+\! J_1^2(\kappa_1a) \right] \!+\!(1\!+\!s)^2\!\left[J_2^2(\kappa_1a)\!-\!J_1(\kappa_1a)J_3(\kappa_1a) \right]\right\}\nonumber\\
+&\quad +\frac{1}{2}\left[J_1^2(\kappa_1a)-J_0(\kappa_1a)J_2(\kappa_1a) \right] \\
 \!\!\!\!\! P_2
-&= \frac{\beta_0^2J_1^2(ha)}{4q^2K_1^2(qa)}\!\left\{\phantom{\frac{1}{1}}\!\!\!\!(1\!-\!s)^2\!\left[K_1^2(qa)\!-\!K_0^2(qa) \right]\right.\nonumber\\
+&= \frac{\beta_0^2J_1^2(\kappa_1a)}{4q^2K_1^2(qa)}\!\left\{\phantom{\frac{1}{1}}\!\!\!\!(1\!-\!s)^2\!\left[K_1^2(qa)\!-\!K_0^2(qa) \right]\right.\nonumber\\
 &\quad\left. \!+(1\!+\!s)^2\!\!\left[K\!_1\!(qa)K\!_3\!(qa)\!-\! K_2^2\!(qa) \right]\!+\!\frac{2q^2}{\beta^2}\!\!\left[K\!_0\!(qa)K\!_2\!(qa)\!-\!K_1^2\!(qa) \right]  \right\}.
 \end{align}
 Using this basis, the electric part of a guided field with quasicircularly propagating mode index $\mu=(\beta_0, f, m)$ can be written as 
 \begin{align}
 E^{(\mu)}(r\!_\perp,\phi,z,t) &=E_0\left[u_{r\!_\perp}\!(r\!_\perp) \hat{r}\!_\perp \!+\! m u_{\phi}(r\!_\perp) \hat{\phi} \!+\! f u_z (r\!_\perp) \hat{z}\right]e^{if\beta_0 z+im\phi-i\omega t }.
 \end{align}
-By using the power propagating inside and outside the fiber can be given in terms of the time averaged Poynting vector along the propagation direction, $\left< S_z \right>$, by
+The power propagating inside and outside the fiber can be given in terms of the time averaged Poynting vector along the propagation direction, $\left< S_z \right>$, by
 \begin{align}
 P_{in} &= \int_0^{2\pi} \mathrm{d}\phi \int_0^a \left< S_z \right> r\!_\perp \mathrm{d}r\!_\perp\\
-P_{out} &= \int_0^{2\pi} \mathrm{d}\phi \int_a^\infty \left< S_z \right> r\!_\perp \mathrm{d}r\!_\perp,
+P_{out} &= \int_0^{2\pi} \mathrm{d}\phi \int_a^\infty \left< S_z \right> r\!_\perp \mathrm{d}r\!_\perp.
 \end{align}
-and the total power $ P=P_{in}+P_{out} $, one can show that the normalization constant $ E_0 A $ reads
+The total power $ P=P_{in}+P_{out} $. One can show that the normalization constant $ E_0 A $ reads
 \begin{align}\label{eq:EA}
 E_0 A=\sqrt{\frac{4\mu_0\omega P}{\pi a^2 \beta_0}}\left(D_{in} + D_{out} \right)^{-1/2},
 \end{align}
 where
 \begin{align}
-D_{in} &= (1-s)\left[ 1+(1-s)\frac{\beta_0^2}{h^2}\right] \left(J_0^2(ha) + J_1^2(ha) \right) \nonumber\\
-&\quad + (1+s)\left[ 1+(1+s)\frac{\beta_0^2}{h^2}\right] \left(J_2^2(ha)- J_1(ha)J_3(ha) \right)\\
-D_{out} &= \frac{J_1^2(ha)}{K_1^2(qa)}\left\{ (1-s)\left[ 1-(1-s)\frac{\beta_0^2}{q^2}\right] \left(K_0^2(qa) - K_1^2(qa) \right)\right. \nonumber\\
+D_{in} &= (1-s)\left[ 1+(1-s)\frac{\beta_0^2}{\kappa_1^2}\right] \left(J_0^2(\kappa_1a) + J_1^2(\kappa_1a) \right) \nonumber\\
+&\quad + (1+s)\left[ 1+(1+s)\frac{\beta_0^2}{\kappa_1^2}\right] \left(J_2^2(\kappa_1a)- J_1(\kappa_1a)J_3(\kappa_1a) \right)\\
+D_{out} &= \frac{J_1^2(\kappa_1a)}{K_1^2(qa)}\left\{ (1-s)\left[ 1-(1-s)\frac{\beta_0^2}{q^2}\right] \left(K_0^2(qa) - K_1^2(qa) \right)\right. \nonumber\\
 &\quad \left. + (1\!+\! s)\left[ 1\!-\! (1\!+\! s)\frac{\beta_0^2}{q^2}\right] \left(K_2^2(qa)\! -\! K_1(qa)K_3(qa) \right) \right\}.
 \end{align}
 
@@ -1002,16 +1004,16 @@ Particularly, when $\phi_0=0$ and $\pi/2$, we obtain the $H$ and $V$ fundamental
 \todo[inline]{To show $v_g=\frac{P}{W}$ using the formulas above?}
 
 \section{Light-atom interaction in the dispersive regime}\label{sec:lightatominteract}
-\textcolor{blue}{Detailed derivation can be found in Qi's notes on \textit{Dispersive field-atom interaction Hamiltonian}. The special case for a single homogeneous mode can be found in Ben's dissertation (chapter 4). }
+\textcolor{blue}{Detailed derivation can be found in Qi's hand-written notes on \textit{Dispersive field-atom interaction Hamiltonian}. The special case of a single mode propagating in a homogeneous medium can be found in Ben's dissertation (chapter 4). }
 
 
-The dispersive light shift interaction describes an atom's effective response to an electric field when the excited states can be adiabatically eliminated from the quantum dynamics.  This reduced description applies when the saturation parameter is much smaller than 1:
-	\begin{align} \label{Eq::SatParameter}
-		s = \frac{ \Omega^2/4}{\Delta^2 + \Gamma^2/4} \ll 1,  
-	\end{align}
-where $\Omega$ is the Rabi frequency, $\Gamma$ is the total spontaneous emission rate, and $\Delta = \omega_0 - \omega_{eg}$ is the probe detuning from the atomic resonance frequency $\omega_{eg}$ of the given excited and ground states. As the saturation parameter is proportional to the ratio of the Rabi frequency to the detuning, $\Omega/\Delta$, physically this allows condition \erf{Eq::SatParameter} to be satisfied even for large driving power (Rabi frequency) as long as the probe laser is far enough detuned.  In this limit, the atom-light coupling can be described by the dispersive light-shift interaction,
+The dispersive light shift interaction describes an atom's effective response to an electric field when the excited states can be adiabatically eliminated from the quantum dynamics.  This reduced description applies when the saturation parameter of atoms is much smaller than 1:
+\begin{align} \label{Eq::SatParameter}
+	s = \frac{ \Omega^2/4}{\Delta^2 + \Gamma^2/4} \ll 1,  
+\end{align}
+where $\Omega$ is the Rabi frequency, $\Gamma$ is the total spontaneous emission rate of the atoms, and $\Delta = \omega_0 - \omega_{eg}$ is the probe detuning from the atomic resonance frequency $\omega_{eg}$ of the given excited and ground states. As the saturation parameter is proportional to the ratio of the Rabi frequency to the detuning, $\Omega/\Delta$, physically this allows condition \erf{Eq::SatParameter} to be satisfied even for large driving power (Rabi frequency) as long as the probe laser is far enough detuned.  In this limit, the atom-light coupling can be described by the dispersive light-shift interaction,
 \begin{align} 
-	\hat{H}_{\rm eff} & = \sum_{F,F'}\hat{H}_{\rm eff}^{FF'} =- \sum_{F,F'}\hat{\mathbf{E}}^{(-)}_F(\mathbf{r}' ) \cdot \tensor{\alpha} \cdot \hat{\mathbf{E}}^{(+)}_{F'}(\mathbf{r}' )\\
+	\hat{H}_{\rm eff} & = \sum_{f,f'=\pm 1}\hat{H}_{\rm eff}^{ff'} =- \sum_{f,f'=\pm 1}\hat{\mathbf{E}}^{(-)}_f(\mathbf{r}' ) \cdot \tensor{\alpha} \cdot \hat{\mathbf{E}}^{(+)}_{f'}(\mathbf{r}' )\\
 	&= - \hat{\mathbf{E}}^{(-)}_+(\mathbf{r}' ) \cdot \tensor{\alpha} \cdot \hat{\mathbf{E}}^{(+)}_+(\mathbf{r}' )
 	- \hat{\mathbf{E}}^{(-)}_+(\mathbf{r}' ) \cdot \tensor{\alpha} \cdot \hat{\mathbf{E}}^{(+)}_-(\mathbf{r}' )\nonumber\\
 	&\quad - \hat{\mathbf{E}}^{(-)}_-(\mathbf{r}' ) \cdot \tensor{\alpha} \cdot \hat{\mathbf{E}}^{(+)}_+(\mathbf{r}' )
@@ -1019,17 +1021,17 @@ where $\Omega$ is the Rabi frequency, $\Gamma$ is the total spontaneous emission
 \end{align}
 where the electric field operator is evaluated at the atomic position $\mathbf{r}'$, and the electric component of the guided field can be given by
 \begin{align}
-\hat{\mathbf{E}} &= (\hat{\mathbf{E}}^{(+)}e^{-i\omega t}+c.c.)/2
+\hat{\mathbf{E}} &= (\hat{\mathbf{E}}^{(+)}e^{-i\omega_0 t}+c.c.)/2
 \end{align}   
 with
 \begin{align}
-\hat{\mathbf{E}}^{(+)}(\br) &= \sum_{F=\pm 1} \hat{\mathbf{E}}^{(+)}_F(\br) = \sqrt{\frac{2\pi \hbar \omega_0}{v_g\tau}}\sum_{F=\pm 1} \left[ \mathbf{u}_{HF}(\br\!_\perp)\hat{a}_{HF} + \mathbf{u}_{VF}(\br\!_\perp)\hat{a}_{VF} \right]e^{iF\beta z},
+\hat{\mathbf{E}}^{(+)}(\br) &= \sum_{f=\pm 1} \hat{\mathbf{E}}^{(+)}_f(\br) = \sqrt{\frac{2\pi \hbar \omega_0}{v_g\tau}}\sum_{f=\pm 1} \left[ \mathbf{u}_{Hf}(\br\!_\perp)\hat{a}_{Hf} + \mathbf{u}_{Vf}(\br\!_\perp)\hat{a}_{Vf} \right]e^{if\beta_0 z},
 \end{align}
-where $\mathbf{u}_{HF/VF}$ are the polarization vectors of the $H/V$ guided modes with propagation direction $F=\pm 1$. 
+where $\mathbf{u}_{Hf/Vf}$ are the polarization vectors of the $H/V$ guided modes with propagation direction parameter $f=\pm 1$. 
 
-Each term of the effective Hamiltonian $\hat{H}_{\rm eff}^{FF'}$ in Equ.~\eqref{Eq::LightShiftHam} corresponds to the physics process with $F'$-propagating input field and $F$-propagating output field. For the case that only the forward-propagating fields are detected, the first two terms of the Hamiltonian yield the output we care about and the last two terms are losses. If the scattering among atoms can be ignored, then only the first term of the Hamiltonian is important. For now, we only consider the first term and ignore the propagation direction indexes $F$ and $F'$ since they both equal to $1$. 
+Each of the four effective Hamiltonian $\hat{H}_{\rm eff}^{ff'}$ terms in Equ.~\eqref{Eq::LightShiftHam} corresponds to the physics process with $f'$-propagating input field and $f$-propagating output field. For the case that only the forward-propagating fields are detected, the first two terms of the Hamiltonian yield the output we care about and the last two terms are losses. If the scattering among atoms can be ignored, then only the first term of the Hamiltonian is important. For now, we only consider the first term and ignore the propagation direction indexes $f$ and $f'$ as they both equal to $1$. 
 
-We consider to rewrite the Hamiltonian in terms of the Stokes vector operators and the collective spin operators with the total atom number of $ N_A $. We assume the photon number, $ N_L $, is large and all atoms interact with the photon package indistinguishably in the measurement time step, $\tau$, and interactions among atoms and the interference effect due to photon propagation are ignored crossing different measurement time steps. The total atomic angular momentum is $\mathbf{f}=\sum^{N_A}_i\mathbf{f}^{(i)}$. 
+We consider to rewrite the Hamiltonian in terms of the Stokes vector operators and the collective spin operators with the total atom number of $ N_A $. We assume the photon number, $ N_L $, is large and all atoms interact with the photon package indistinguishably in the measurement time period, $\tau$, and interactions among atoms and the interference effect due to photon propagation are negligible crossing different measurement time steps. The total atomic angular momentum is $\mathbf{F}=\sum^{N_A}_i\mathbf{F}^{(i)}$. 
 
 The polarization state of the light can be represented on the Poincare sphere via Stokes vector $ \mathbf{S} $. The quantized operators in the Schwinger representation with respect to the three Poincare sphere axes are defined as  
 \begin{align}
@@ -1037,70 +1039,78 @@ The polarization state of the light can be represented on the Poincare sphere vi
 \hat{S}_2&= \frac{1}{2} \Big( \hat{a}_H\dg \hat{a}_V +  \hat{a}_V\dg \hat{a}_H \Big)\\
 \hat{S}_3&= \frac{1}{2i} \Big( \hat{a}_H\dg \hat{a}_V -  \hat{a}_V\dg \hat{a}_H \Big)
 \end{align}
-satisfying the $ SU(2) $ algebra $ [S_i,S_j]=i\varepsilon_{ijk}S_k $. The total number operator is defined as
+satisfying the $ SU(2) $ algebra $ [S_i,S_j]=i\varepsilon_{ijk}S_k $. The total photon number operator is defined as
 \begin{align}
 \hat{S}_0&= \frac{1}{2} \Big( \hat{a}_H\dg \hat{a}_H +  \hat{a}_V\dg \hat{a}_V \Big).
 \end{align}
 
-Using these definitions in Equ.~\eqref{Eq::LightShiftHam}, the effective Hamiltonian terms can be rewritten as
+Using these definitions in Equ.~\eqref{Eq::LightShiftHam}, the effective Hamiltonian term can be rewritten as
 \begin{align}
-\!\!\!\! \hat{H}_{\rm eff}^{F,F'=1} &\!=\! \sum_{f} \hbar \chi_{0f}\! \sum_{f'}\frac{1}{1+\delta_{f'}/\Delta_f+i\gamma_{ff'}/2\Delta_f}\left[\hat{A}_0\hat{S}_0 \!+\! \hat{A}_1\hat{S}_1 \!+\! \hat{A}_2\hat{S}_2 \!+\!\hat{A}_3\hat{S}_3 \right]. 
+\!\!\!\! \hat{H}_{\rm eff}^{f,f'=1} &\!=\! \sum_{F} \hbar \chi_{0F}\! \sum_{F'}\frac{1}{1+\delta_{F'}/\Delta_F+i\Gamma_{FF'}/2\Delta_F}\left[\hat{A}_0\hat{S}_0 \!+\! \hat{A}_1\hat{S}_1 \!+\! \hat{A}_2\hat{S}_2 \!+\!\hat{A}_3\hat{S}_3 \right]. 
 \end{align}
-Correspondingly, for all $\Delta_{ff'}\gg \Gamma$, the real part of the light shift interaction gives a coherent Hamiltonian of the form,
+We have written the detuning from a particular hyperfine transition as
+\begin{align}
+	\Delta_{F,F'} = \Delta_F + \delta_{F'}=\omega_0-(\omega_F'-\omega_F),
+\end{align}
+where we have factored out the detuning relative to the largest hyperfine excited state under $ J' $ splittings,
+\begin{align} \label{Eq::DetuningChoice}
+	\Delta_F \equiv \Delta_{F,F'_{\rm max}} = \omega_0 - ( \omega_{F'_{\rm max}} - \omega_F),
+\end{align} 
+and $\delta_{F'} \equiv \Delta_{F,F'} - \Delta_F$ is the residual detuning for the other hyperfine excited states. Correspondingly, for all $\Delta_{F,F'}\gg \Gamma_{FF'}$, the real part of the light shift interaction gives a coherent Hamiltonian of the form,
 \begin{align} \label{Eq::StokesHam}
-	\hat{H}_{\rm coh}^{F,F'=1} &= \sum_f \hbar \chi_0 \sum_{f'} \frac{1}{1+ \delta_{f'}/\Delta} \left[\hat{A}_0\hat{S}_0 +\hat{A}_1\hat{S}_1 +\hat{A}_2\hat{S}_2 +\hat{A}_3\hat{S}_3 \right]. 
+	\hat{H}_{\rm coh}^{f,f'=1} &= \sum_F \hbar \chi_{0F} \sum_{F'} \frac{1}{1+ \delta_{F'}/\Delta_F} \left[\hat{A}_0\hat{S}_0 +\hat{A}_1\hat{S}_1 +\hat{A}_2\hat{S}_2 +\hat{A}_3\hat{S}_3 \right]. 
 \end{align}
-We have made the atomic operators that couple to the Stokes components at the atom's position, $\br'=(r_\perp^\prime,\phi'=0\,\mathrm{or}\, \pi, z')$, are
+We have made the atomic operators that couple to the Stokes components at the atoms' positions, $\br'=(r_\perp^\prime,\phi'=0\,\mathrm{or}\, \pi, z')$, are
 \begin{subequations} \label{Eq::StokesSpinOps}
 \begin{align}
-	\hat{A}_0 = & C^{(0)}_{\rm j'f f'} \left[|\mathbf{u}_{H}(\br'_\perp)|^2+ |\mathbf{u}_{V}(\br'_\perp)|^2 \right]\hat{I}_f \nonumber\\
-	&-4C^{(1)}_{\rm j'ff'} \mathrm{Im}\left[u_z^*(r_\perp^\prime)u_{r\!_\perp}(r_\perp^\prime) \right]\hat{f}_\phi \nonumber\\
-	&+ 2C^{(2)}_{\rm j'ff'}  \mathrm{Re}\left[u_z^*(r_\perp^\prime)u_{r\!_\perp}(r_\perp^\prime) \right]\big(\hat{f}_{r\!_\perp}\hat{f}_z+\hat{f}_z\hat{f}_{r\!_\perp} \big)\nonumber\\
-	&+ C^{(2)}_{\rm j'ff'}\!\sum_i \left[|u^{i}_{H}(\br'_\perp)|^2 + |u^{i}_{V}(\br'_\perp)|^2 \right] \left(  \hat{f}_i^{2}\! -\! \frac{1}{3}\hat{\bf{f}}\! \cdot\!  \hat{\bf{f}} \right) \\
+	\hat{A}_0 = & C^{(0)}_{\rm J'F F'} \left[|\mathbf{u}_{H}(\br'_\perp)|^2+ |\mathbf{u}_{V}(\br'_\perp)|^2 \right]\hat{I}_F \nonumber\\
+	&-4C^{(1)}_{\rm J'FF'} \mathrm{Im}\left[u_z^*(r_\perp^\prime)u_{r\!_\perp}(r_\perp^\prime) \right]\hat{F}_\phi \nonumber\\
+	&+ 2C^{(2)}_{\rm J'FF'}  \mathrm{Re}\left[u_z^*(r_\perp^\prime)u_{r\!_\perp}(r_\perp^\prime) \right]\big(\hat{F}_{r\!_\perp}\hat{F}_z+\hat{F}_z\hat{F}_{r\!_\perp} \big)\nonumber\\
+	&+ C^{(2)}_{\rm J'FF'}\!\sum_i \left[|u^{i}_{H}(\br'_\perp)|^2 + |u^{i}_{V}(\br'_\perp)|^2 \right] \left(  \hat{F}_i^{2}\! -\! \frac{1}{3}\hat{\bf{F}}\! \cdot\!  \hat{\bf{F}} \right) \\
 	% A1
-	\hat{A}_1 = & C^{(0)}_{\rm j'f f'} \left[|\mathbf{u}_{H}(\br'_\perp)|^2- |\mathbf{u}_{V}(\br'_\perp)|^2 \right]\hat{I}_f \nonumber\\
-	& -4C^{(1)}_{\rm j'ff'} \mathrm{Im}\left[u_z^*(r_\perp^\prime)u_{r\!_\perp}(r_\perp^\prime) \right]\hat{f}_\phi \nonumber\\
-	&+2 C^{(2)}_{\rm j'ff'}  \mathrm{Re}\left[u_z^*(r_\perp^\prime)u_{r\!_\perp}(r_\perp^\prime) \right]\big(\hat{f}_{r\!_\perp}\hat{f}_z+\hat{f}_z\hat{f}_{r\!_\perp} \big)\nonumber\\
-	&+ C^{(2)}_{\rm j'ff'}\!\sum_i \left[|u^{i}_{H}(\br'_\perp)|^2- |u^{i}_{V}(\br'_\perp)|^2 \right] \left(  \hat{f}_i^{2}\! -\! \frac{1}{3}\hat{\bf{f}}\! \cdot\!  \hat{\bf{f}} \right) \\
+	\hat{A}_1 = & C^{(0)}_{\rm J'F F'} \left[|\mathbf{u}_{H}(\br'_\perp)|^2- |\mathbf{u}_{V}(\br'_\perp)|^2 \right]\hat{I}_F \nonumber\\
+	& -4C^{(1)}_{\rm J'FF'} \mathrm{Im}\left[u_z^*(r_\perp^\prime)u_{r\!_\perp}(r_\perp^\prime) \right]\hat{F}_\phi \nonumber\\
+	&+2 C^{(2)}_{\rm J'FF'}  \mathrm{Re}\left[u_z^*(r_\perp^\prime)u_{r\!_\perp}(r_\perp^\prime) \right]\big(\hat{F}_{r\!_\perp}\hat{F}_z+\hat{F}_z\hat{F}_{r\!_\perp} \big)\nonumber\\
+	&+ C^{(2)}_{\rm J'FF'}\!\sum_i \left[|u^{i}_{H}(\br'_\perp)|^2- |u^{i}_{V}(\br'_\perp)|^2 \right] \left(  \hat{F}_i^{2}\! -\! \frac{1}{3}\hat{\bf{F}}\! \cdot\!  \hat{\bf{F}} \right) \\
 	% A2
-	\hat{A}_2 = & 4C^{(1)}_{\rm j'ff'} \left[ \mathrm{Re} \left(u_{r\!_\perp}^*(r_\perp^\prime)u_\phi(r_\perp^\prime) \right)\hat{f}_z  -\mathrm{Re}\left( u_\phi^*(r_\perp^\prime) u_z(r_\perp^\prime) \right)\hat{f}_{r\!_\perp}\right] \nonumber\\
-	&+2 C^{(2)}_{\rm j'ff'} \left[ \mathrm{Im} \left( u_{r\!_\perp}^*(r_\perp^\prime)u_\phi(r_\perp^\prime) \right)\left(\hat{f}_{r\!_\perp}\hat{f}_\phi +\hat{f}_\phi\hat{f}_{r\!_\perp} \right)\right.\nonumber\\
-	&\quad \quad \left. + \mathrm{Im}\left( u_\phi(r_\perp^\prime) u_z^*(r_\perp^\prime) \right)\big(\hat{f}_\phi\hat{f}_z+\hat{f}_z\hat{f}_\phi \big)\right] \\
+	\hat{A}_2 = & 4C^{(1)}_{\rm J'FF'} \left[ \mathrm{Re} \left(u_{r\!_\perp}^*(r_\perp^\prime)u_\phi(r_\perp^\prime) \right)\hat{F}_z  -\mathrm{Re}\left( u_\phi^*(r_\perp^\prime) u_z(r_\perp^\prime) \right)\hat{F}_{r\!_\perp}\right] \nonumber\\
+	&+2 C^{(2)}_{\rm J'FF'} \left[ \mathrm{Im} \left( u_{r\!_\perp}^*(r_\perp^\prime)u_\phi(r_\perp^\prime) \right)\left(\hat{F}_{r\!_\perp}\hat{F}_\phi +\hat{F}_\phi\hat{F}_{r\!_\perp} \right)\right.\nonumber\\
+	&\quad \quad \left. + \mathrm{Im}\left( u_\phi(r_\perp^\prime) u_z^*(r_\perp^\prime) \right)\big(\hat{F}_\phi\hat{F}_z+\hat{F}_z\hat{F}_\phi \big)\right] \\
 	% A3
-	\hat{A}_3 = & 4C^{(1)}_{\rm j'ff'} \left[\mathrm{Im} \left(u_{r\!_\perp}(r_\perp^\prime)u_\phi^*(r_\perp^\prime) \right)\hat{f}_z  +\mathrm{Im}\left( u_\phi(r_\perp^\prime) u_z^*(r_\perp^\prime) \right)\hat{f}_{r\!_\perp}\right] \nonumber\\
-	&+ 2C^{(2)}_{\rm j'ff'} \left[ \mathrm{Re} \left( u_{r\!_\perp}^*(r_\perp^\prime)u_\phi(r_\perp^\prime) \right)\left(\hat{f}_{r\!_\perp}\hat{f}_\phi +\hat{f}_\phi\hat{f}_{r\!_\perp} \right)\right.\nonumber\\
-	&\quad \quad \left. + \mathrm{Re}\left( u_\phi^*(r_\perp^\prime) u_z(r_\perp^\prime) \right)\big(\hat{f}_\phi\hat{f}_z+\hat{f}_z\hat{f}_\phi \big)\right].
+	\hat{A}_3 = & 4C^{(1)}_{\rm J'FF'} \left[\mathrm{Im} \left(u_{r\!_\perp}(r_\perp^\prime)u_\phi^*(r_\perp^\prime) \right)\hat{F}_z  +\mathrm{Im}\left( u_\phi(r_\perp^\prime) u_z^*(r_\perp^\prime) \right)\hat{F}_{r\!_\perp}\right] \nonumber\\
+	&+ 2C^{(2)}_{\rm J'FF'} \left[ \mathrm{Re} \left( u_{r\!_\perp}^*(r_\perp^\prime)u_\phi(r_\perp^\prime) \right)\left(\hat{F}_{r\!_\perp}\hat{F}_\phi +\hat{F}_\phi\hat{F}_{r\!_\perp} \right)\right.\nonumber\\
+	&\quad \quad \left. + \mathrm{Re}\left( u_\phi^*(r_\perp^\prime) u_z(r_\perp^\prime) \right)\big(\hat{F}_\phi\hat{F}_z+\hat{F}_z\hat{F}_\phi \big)\right].
 \end{align}
 \end{subequations}
 The dimensionless coupling constant,
 \begin{align}
-\chi_{0f} &= -\frac{2\pi\omega_0}{v_g\tau}\alpha(\Delta_f) =\frac{2\pi\omega_0}{v_g\tau} \frac{|d_{f'_{max}f}|^2}{\hbar \Delta_f} =n_g\sigma_0\frac{\Gamma}{4\Delta_f}
+\chi_{0F} &= -\frac{2\pi\omega_0}{v_g\tau}\alpha(\Delta_F) =\frac{2\pi\omega_0}{v_g\tau} \frac{|d_{F'_{max}F}|^2}{\hbar \Delta_F} =n_g\sigma_0\frac{\Gamma}{4\Delta_F}
 \end{align}
 %\begin{align} \label{Eq::FaradayAngle}
 %	\chi_0 = - \left(\frac{4\pi \omega_0}{A c} \right) \alpha_0(\Delta) = \Big( \frac{\sigma_0}{A} \Big)\Big( \frac{\Gamma}{2 \Delta} \Big),
 %\end{align} 
-is a measure of the strength of the light-matter interaction.  It is proportional to the detuning, $\Delta_f^{-1}$, but more importantly to the ratio of the resonant atomic cross section, $\sigma_0 = 3 \lambda_{f f'}^2/2 \pi$, \textcolor{red}{to the transverse mode area $A$}.  This ratio sets the strength of the single-atom coupling, as it roughly describes the amount of light scattered from the atom back into the probe mode.  
+is a measure of the strength of the light-matter interaction.  It is proportional to the detuning, $\Delta_F^{-1}$, but more importantly to the ratio of the resonant atomic cross section, $\sigma_0 = 3 \lambda_{F F'}^2/2 \pi$, \textcolor{red}{to the transverse mode area $A$}.  This ratio sets the strength of the single-atom coupling, as it roughly describes the amount of light scattered from the atom back into the probe mode.  
 %The form of the real part of the interaction, \erf{Eq::StokesHam}, assumes we are working in a regime where the detuning is much greater than the linewidth, $\Delta_{f,f'} \gg \Gamma$, for all excited hyperfine states.  Note that the sign of $\hat{A}_3$ is opposite that found in Ref. \cite{Deutsch2010}.
 
-For a psuedo-spin system, the spin operator $\mathbf{f}=\mathbf{J}=\sum_i^{N_A}\hat{\boldsymbol{\sigma}}/2$ and satisfies the $\mathrm{SU}(2)$ symmetry that $[J_i,J_j]=i\epsilon_{ijk}J_k$ and hence, in Equs.~\eqref{Eq::StokesSpinOps}, the common factor $J_iJ_j+J_jJ_i=2J_iJ_j-i\epsilon_{ijk}J_k$. 
+For a psuedo-spin system, the spin operator $\mathbf{F}=\mathbf{J}=\sum_i^{N_A}\hat{\boldsymbol{\sigma}}/2$ and satisfies the $\mathrm{SU}(2)$ symmetry that $[J_i,J_j]=i\epsilon_{ijk}J_k$ and hence, in Equs.~\eqref{Eq::StokesSpinOps}, the common factor $J_iJ_j+J_jJ_i=2J_iJ_j-i\epsilon_{ijk}J_k$. 
 
 
 \section{Junk: Effects of the evanescent field and the multilevel structure of the atom}
 In general, 
 \begin{align}
-\Gamma \propto \mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}(\br',\br') \right]\cdot\mathbf{d}_{eg}^*=\mathrm{tr}\left[\mathbf{d}_{eg}^*\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}(\br',\br') \right] \right]\propto \mathrm{tr}\left[\boldsymbol{\alpha}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}(\br',\br') \right] \right]
+\Gamma \propto \mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}^*(\br',\br') \right]\cdot\mathbf{d}_{eg}^*=\mathrm{tr}\left[\mathbf{d}_{eg}^*\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}^*(\br',\br') \right] \right]\propto \mathrm{tr}\left[\boldsymbol{\alpha}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}^*(\br',\br') \right] \right]
 \end{align}
-where $ \boldsymbol{\alpha}_{eg} $ is the polarizability of the atom due to the transition between levels labeled by $ eg $. Therefore, the phase shift effect can be treated as a combination effect of the atomic internal structure and the external field properties. 
+where $ \boldsymbol{\alpha}_{eg} $ is the polarizability of the atom due to the transition between levels labeled by $ e$ and $g $. Therefore, the phase shift effect can be treated as a combined result of the atomic internal structure and the external field properties. 
 
 Since 
 \begin{align}
-\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}(\br',\br') \right]\cdot\mathbf{d}_{eg}^*>0
+\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}^*(\br',\br') \right]\cdot\mathbf{d}_{eg}^*>0
 \end{align}
-for a physical decay rate, $\mathrm{Im}\left[\mathbf{G}(\br',\br')\right]$ is positive definite and should always has three positive eigenvalues which indicate the range of $ \Gamma $ and phase shift at the atom position. The 3 corresponding eigenvectors indicate the 3 orthogonal principal axes of the radiation/emission surface. Case studies...
+for a physical decay rate, $\mathrm{Im}\left[\mathbf{G}^*(\br',\br')\right]$ is positive definite and should always has three positive eigenvalues which indicate the range of $ \Gamma $ and phase shift at the atom position. The 3 corresponding eigenvectors indicate the 3 orthogonal principal axes of the radiation/emission surface. Case studies...
 
 Radiation surface theory for the effective orientation of dipoles, elementary transitions ($ \pi $ and $ \sigma_\pm $ transitions) and the example of completely mixed state case. 
 \begin{align}
-\Gamma_{mix} &\propto \frac{1}{3} \mathrm{tr}\left[ \mathrm{Im}\left[\mathbf{G}(\br',\br')\right] \right].
+\Gamma_{mix} &\propto \frac{1}{3} \mathrm{tr}\left[ \mathrm{Im}\left[\mathbf{G}^*(\br',\br')\right] \right].
 \end{align}
 
 For the atomic internal structure, we have the irreducible tensor decompositions that 
@@ -1109,11 +1119,11 @@ For the atomic internal structure, we have the irreducible tensor decompositions
 \end{align}
 The scalar component will yield a decay rate equivalent to the completely mixed state case. 
 
-Another way to look at this problem is that we can decompose the guided mode Green function tensor into the scalar, vector and tensor parts as well, since it is irreducible.
+Another way to look at this problem is that we can decompose the guided mode Green function tensor into the scalar, vector and tensor parts as well, since the Green function tensor is reducible.
 \begin{align}
 \mathbf{G}^g=\mathbf{G}^S+\mathbf{G}^V+\mathbf{G}^T.
 \end{align}
-Therefore, where the position of the atom relative to the fiber mode yields a strong scalar component, the atomic response is more independent of the atom state... 
+Therefore, where the position of the atom relative to the fiber mode yields a strong scalar component, the atomic response is more relatively independent of the atomic states... 
 
 Some interesting examples of state-dependent decay and phase shift...
 
