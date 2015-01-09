@@ -723,114 +723,121 @@ One can separate the electric and magnetic fields into free-dipole radiation, re
 \boldsymbol{\mathcal{E}}^{(R)}(\br)+\boldsymbol{\mathcal{E}}^{(T)}(\br)\\
 &=
 	\begin{cases}
-	  \boldsymbol{\mathcal{E}}^{(0)} (\br)+ \boldsymbol{\mathcal{E}}^{(R)}(\br) & r\!_\perp \geq a,\\
-	  \boldsymbol{\mathcal{E}}^{(T)}(\br) & r\!_\perp<a.
+	  \boldsymbol{\mathcal{E}}^{(0)} (\br)+ \boldsymbol{\mathcal{E}}^{(R)}(\br), & r\!_\perp > a,\\
+	  \boldsymbol{\mathcal{E}}^{(T)}(\br), & r\!_\perp\leq a.
 	\end{cases} \label{Etotalfiber}
 \end{align}
-where the superscripts $^0$, $^R$ and $^T$ indicate the free-dipole radiation, reflection and transmission of the field. For a translationally invariant waveguide, which means the index of refraction of waveguide is independent of the propagating axis $z$, the electric and magnetic fields can be written as 
+where the superscripts $0$, $R$ and $T$ indicate the free-dipole radiation, reflection and transmission components of the field, and $ a $ is the radius of the nanofiber. For a translationally invariant waveguide, which means the index of refraction of the waveguide is independent of the propagating axis $z$, the electric and magnetic fields can be written as 
 \begin{align}
 \bmc{E}(\br) &= \bmc{E}(\br\!_\perp)\exp(i\beta z), & \bmc{H}(\br) &= \bmc{H}(\br\!_\perp)\exp(i\beta 
 z),
 \end{align}
 where $ \beta $ is the propagation constant and $ \br\!_\perp $ is the position vector in the transverse 
-plane perpendicular to the $ z $-axis.
-In this case, we only need to calculate the longitudinal components (the $z$-components) of the fields, the rest components can be obtained using the following relationships:
+plane perpendicular to the $ z $-axis. We let the index of refraction of the nanofiber be
+\begin{align}
+n=n(r\!_\perp)&=\begin{cases}
+	  n_2=1, & r\!_\perp > a,\\
+	  n_1, & r\!_\perp\leq a.
+	\end{cases} \label{nfiber}
+\end{align}
+To find the fields, we need to calculate the longitudinal components (the $z$-components) of the fields, and the transverse components can be obtained through $z$-components using the following relationships:
 \begin{subequations}\label{EHzgauss}
 \begin{align}
-\mathcal{E}_{r\!_\perp} &= \frac{i}{h^2} \left[ \beta \pp{\mathcal{E}_z }{r\!_\perp} + 
+\mathcal{E}_{r\!_\perp} &= \frac{i}{\kappa_i^2} \left[ \beta \pp{\mathcal{E}_z }{r\!_\perp} + 
   \frac{k}{r\!_\perp} 
-\pp{\mathcal{H}_z}{\phi} \right]= \frac{i\beta}{h^2} \pp{\mathcal{E}_z }{r\!_\perp} - 
-  \frac{km}{r\!_\perp h^2} {\mathcal{H}_z}, \\
-\mathcal{E}_\phi &= \frac{i}{h^2} \left[\frac{\beta}{r\!_\perp} 
+\pp{\mathcal{H}_z}{\phi} \right]= \frac{i\beta}{\kappa_i^2} \pp{\mathcal{E}_z }{r\!_\perp} - 
+  \frac{km}{r\!_\perp \kappa_i^2} {\mathcal{H}_z}, \\
+\mathcal{E}_\phi &= \frac{i}{\kappa_i^2} \left[\frac{\beta}{r\!_\perp} 
 \pp{\mathcal{E}_z}{\phi} - k 
 \pp{\mathcal{H}_z}{r\!_\perp} 
-\right] = -\frac{\beta m}{r\!_\perp h^2} 
-{\mathcal{E}_z} - \frac{ik}{h^2} 
+\right] = -\frac{\beta m}{r\!_\perp \kappa_i^2} 
+{\mathcal{E}_z} - \frac{ik}{\kappa_i^2} 
 \pp{\mathcal{H}_z}{r\!_\perp},\\
-\mathcal{H}_{r\!_\perp} &= \frac{i}{h^2} \left[ \beta \pp{\mathcal{H}_z}{r\!_\perp} 
-- \frac{kn^2}{r\!_\perp}\pp{\mathcal{E}_z}{\phi} \right]= \frac{i\beta}{h^2} \pp{\mathcal{H}_z}{r\!_\perp} 
-+ \frac{kn^2m}{r\!_\perp h^2} {\mathcal{E}_z},\\
-\mathcal{H}_\phi &= \frac{i}{h^2} \left[ \frac{\beta}{r\!_\perp} \pp{\mathcal{H}_z}{\phi} + 
- kn^2 \pp{\mathcal{E}_z}{r\!_\perp} \right] = -\frac{\beta m}{r\!_\perp h^2} {\mathcal{H}_z} + 
-  \frac{ikn^2}{h^2} \pp{\mathcal{E}_z}{r\!_\perp}.
+\mathcal{H}_{r\!_\perp} &= \frac{i}{\kappa_i^2} \left[ \beta \pp{\mathcal{H}_z}{r\!_\perp} 
+- \frac{kn^2}{r\!_\perp}\pp{\mathcal{E}_z}{\phi} \right]= \frac{i\beta}{\kappa_i^2} \pp{\mathcal{H}_z}{r\!_\perp} 
++ \frac{kn^2m}{r\!_\perp \kappa_i^2} {\mathcal{E}_z},\\
+\mathcal{H}_\phi &= \frac{i}{\kappa_i^2} \left[ \frac{\beta}{r\!_\perp} \pp{\mathcal{H}_z}{\phi} + 
+ kn^2 \pp{\mathcal{E}_z}{r\!_\perp} \right] = -\frac{\beta m}{r\!_\perp \kappa_i^2} {\mathcal{H}_z} + 
+  \frac{ikn^2}{\kappa_i^2} \pp{\mathcal{E}_z}{r\!_\perp}
 \end{align}
 \end{subequations}
+with $ \kappa_i=\kappa_1 $ or $ \kappa_2 $ and $ n=n_1 $ or $ n_2 $ for the corresponding space region. 
 We use Gauss units in this paper, and assume the material of the nanofiber is non-magnetic, and hence $ 
-\boldsymbol{\mathcal{B}}= \mu\boldsymbol{\mathcal{H}}\approx \boldsymbol{\mathcal{H}} $. We have also defined the transverse propagation constant inside of the nanofiber, $ h $, by $h^2=n_1^2k-\beta^2$. Similarly, one can define the transverse propagation constant outside of the nanofiber, $ p $, by $ p^2=n_2^2k-\beta^2=k^2-\beta^2 $.
+\boldsymbol{\mathcal{B}}= \mu_r\boldsymbol{\mathcal{H}}\approx \boldsymbol{\mathcal{H}} $ with the relative permeability $ \mu_r\approx 1 $. We have also defined the transverse propagation constant inside of the nanofiber, $ \kappa_1 $, by $\kappa_1^2=n_1^2k-\beta^2$. Similarly, one can define the transverse propagation constant outside of the nanofiber, $ \kappa_2 $, by $ \kappa_2^2=n_2^2k-\beta^2=k^2-\beta^2 $.
 
-Now that the longitudinal components of the electrical and magnetic fields can be expanded as Fourier transformations over the $ \beta $ space,
+The longitudinal components of the electrical and magnetic fields can be expanded as Fourier transformations over the $ \beta $ space,
 \begin{subequations}\label{ET0Rexpand}
 \begin{align}
 \mathcal{E}^{(T)}_z
-&= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} c_{m\beta} J_m (hr\!_\perp),\\
+&= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} c_{m\beta} J_m (\kappa_1r\!_\perp),\\
 \mathcal{E}^{(0)}_{z} &= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} \mathcal{E}^{(0)}_{z,m\beta}(r\!_\perp)\\
 \mathcal{E}^{(R)}_z 
-&= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} a_{m\beta} H_m^{(1)} (pr\!_\perp),
+&= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} a_{m\beta} H_m^{(1)} (\kappa_2r\!_\perp),
 \end{align}
 \end{subequations}
 \begin{subequations}\label{BT0Rexpand}
 \begin{align}
 \mathcal{B}^{(T)}_z 
-&= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} d_{m\beta} J_m (hr\!_\perp),\\
+&= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} d_{m\beta} J_m (\kappa_1r\!_\perp),\\
 % + E_{m\beta} Y_m(hr\!_\perp)\right],\\
 \mathcal{B}^{(0)}_{z} &= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} \mathcal{B}^{(0)}_{z,m\beta}(r\!_\perp)\\
 \mathcal{B}^{(R)}_z 
-&= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} b_{m\beta} H_m^{(1)} (pr\!_\perp),
+&= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} b_{m\beta} H_m^{(1)} (\kappa_2r\!_\perp),
 \end{align}
 \end{subequations}
-in which $J$ and $H$ indicate the first kind of the Bessel function and the Hankel function as the basis of the cylindrical harmonics; the atom is positioned at $\br'=(r^\prime\!_\perp,\phi',z')$ with an electric dipole moment $\mathbf{d}_0=(d^0_{r\!_\perp}, d^0_\phi,d^0_z)$ in the atom's coordinate system. In the fiber's coordinate system, the dipole moment observed at an arbitrary position $\br$ is defined by the three components defined below:
+in which $J$ and $H$ indicate the first kind of the Bessel function and the Hankel function as the cylindrical harmonics; the atom is positioned at $\br'=(r^\prime\!_\perp,\phi',z')$ with an electric dipole moment $\mathbf{d}_0=(d^0_{r\!_\perp}, d^0_\phi,d^0_z)$ in the atom's coordinate system. In the fiber's coordinate system, the dipole moment observed at an arbitrary position $\br$ is defined by the three components defined below:
 \begin{align}
 d_{r\!_\perp}\! &= \cos(\phi\!-\!\phi')d^0_{r\!_\perp}\!\!+\!\sin(\phi\!-\!\phi')d^0_\phi=\frac{1}{\sqrt{2}}\left(-e^{-i(\phi\!-\!\phi')}d_++e^{i(\phi\!-\!\phi')}d_- \right),\\
 d_\phi &=\cos(\phi\!-\!\phi')d^0_\phi\!-\!\sin(\phi\!-\!\phi')d^0_{r\!_\perp}=\frac{i}{\sqrt{2}}\left(e^{-i(\phi\!-\!\phi')}d_++e^{i(\phi\!-\!\phi')}d_- \right),\\
 d_z &= d^0_z,
 \end{align}
-where we have defined the position-independent reduced dipole vector components
+where we have defined the position-independent reduced dipole components
 \begin{align}
 d_\pm \equiv \mp \frac{1}{\sqrt{2}}(d^0_{r\!_\perp}\pm id^0_{\phi}).
 \end{align}
-The terms associated with $d_\pm$ in the dipole moment formula lower or raise the mode index or the angular momentum quantum number, $m$, of the fiber modes by $1$. Notice that we have used $\phi\!-\!\phi'$ as the projected angle between $\mathbf{r}$ and $\mathbf{r}'$ to make the relationship work in general. In most of our calculations, we usually position the atom on the $x$-axis of the fiber coordinate and make $z'=0$.
+The terms associated with $d_\pm$ in the dipole moment formula lower or raise the mode index or the angular momentum quantum number, $m$, of the interacting fiber modes by $1$. Notice that we have used $\phi\!-\!\phi'$ as the projected angle between $\mathbf{r}$ and $\mathbf{r}'$ on the transverse plane to make the relationship valid in general. In most of our calculations, we usually position the atom on the $x$-axis of the fiber coordinate and set $z'=0$.
 
 
-The free radiation field components associated with the $ e^{im\phi+i\beta z} $ term (the $m$-th mode components) for the $r\!_\perp<r'\!_\perp$ region can be given by
+The free radiation field components associated with the $ e^{im(\phi-\phi')+i\beta (z-z')} $ term (the $m$-th mode components) for the $r\!_\perp<r'\!_\perp$ region can be given by
 \begin{align}
-\mathcal{B}_{z,m\beta}^{(0)} &= \frac{ikp}{2\sqrt{2}}J_m(pr\!_\perp)\left[ d_{+} H_{m+1}^{(1)}(pr'\!\!_\perp) \!-\! d_- H_{m-1}^{(1)}(pr'\!_\perp) \right],\\
-\mathcal{B}_{\phi,m\beta}^{(0)} &= \frac{ik}{2}\left[ \frac{\beta d_{-}}{\sqrt{2}} J_{m-1}\left( pr\!_\perp \right)H_{m-1}^{(1)}\left( {pr\!_\perp^{\prime} }\right) -\frac{\beta d_+}{\sqrt{2}} J_{m+1}\left( pr\!_\perp \right)H_{m+1}^{(1)}\left( {pr\!_\perp^{\prime} }\right)\right. \nonumber\\ 
-&\qquad\quad \left. + \frac{ipd^0_z}{2}\left(J_{m-1}(pr\!_\perp)-J_{m+1}(pr\!_\perp) \right)H_m^{(1)}(pr\!_\perp^{\prime}) \right],\\
-\mathcal{B}_{r\!_\perp, m\beta}^{(0)} &= \frac{k}{2}\left[\frac{i m d^0_z}{r\!_\perp} J_m\left( pr\!_\perp \right) H_m^{(1)}\left( {pr\!_\perp^{\prime} }\right) \right. \nonumber\\
-&\qquad \left. +\frac{\beta d_+}{\sqrt{2}} J_{m\!+\!1}(pr\!_\perp) H_{m\!+\! 1}^{(1)}(pr\!_\perp^{\prime}) \!+\! \frac{\beta d_-}{\sqrt{2}} J_{m\!-\! 1}(pr\!_\perp)H_{m\!-\!1}^{(1)}(pr\!_\perp^{\prime})   \right],\\
+\mathcal{B}_{z,m\beta}^{(0)} &= \frac{ik\kappa_2}{2\sqrt{2}}J_m(pr\!_\perp)\left[ d_{+} H_{m+1}^{(1)}(\kappa_2r'\!\!_\perp) \!-\! d_- H_{m-1}^{(1)}(\kappa_2r'\!_\perp) \right],\\
+\mathcal{B}_{\phi,m\beta}^{(0)} &= \frac{ik}{2}\left[ \frac{\beta d_{-}}{\sqrt{2}} J_{m-1}\left( \kappa_2r\!_\perp \right)H_{m-1}^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right) -\frac{\beta d_+}{\sqrt{2}} J_{m+1}\left( \kappa_2r\!_\perp \right)H_{m+1}^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right)\right. \nonumber\\ 
+&\qquad\quad \left. + \frac{i\kappa_2d^0_z}{2}\left(J_{m-1}(\kappa_2r\!_\perp)-J_{m+1}(\kappa_2r\!_\perp) \right)H_m^{(1)}(\kappa_2r\!_\perp^{\prime}) \right],\\
+\mathcal{B}_{r\!_\perp, m\beta}^{(0)} &= \frac{k}{2}\left[\frac{i m d^0_z}{r\!_\perp} J_m\left( \kappa_2r\!_\perp \right) H_m^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right) \right. \nonumber\\
+&\qquad \left. +\frac{\beta d_+}{\sqrt{2}} J_{m\!+\!1}(\kappa_2r\!_\perp) H_{m\!+\! 1}^{(1)}(\kappa_2r\!_\perp^{\prime}) \!+\! \frac{\beta d_-}{\sqrt{2}} J_{m\!-\! 1}(\kappa_2r\!_\perp)H_{m\!-\!1}^{(1)}(\kappa_2r\!_\perp^{\prime})   \right],\\
 \mathcal{E}_{z,m\beta}^{(0)} 
-&= \frac{p}{2}J_{m}\left( pr\!_\perp \right)\left[  id^0_z p H_m^{(1)}\left( {pr\!_\perp^{\prime} }\right) \phantom{\frac{d^0_z}{\sqrt{2}}} \right. \nonumber\\
-&\qquad\qquad\qquad \left. + \frac{\beta d_{+}}{\sqrt{2}} H_{m+1}^{(1)}\left( {pr\!_\perp^{\prime} }\right) +\frac{\beta d_-}{\sqrt{2}} H_{m-1}^{(1)}\left( {pr\!_\perp^{\prime} }\right) \right], \\
+&= \frac{\kappa_2}{2}J_{m}\left( \kappa_2r\!_\perp \right)\left[  id^0_z \kappa_2 H_m^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right) \phantom{\frac{d^0_z}{\sqrt{2}}} \right. \nonumber\\
+&\qquad\qquad\qquad \left. + \frac{\beta d_{+}}{\sqrt{2}} H_{m+1}^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right) +\frac{\beta d_-}{\sqrt{2}} H_{m-1}^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right) \right], \\
 \mathcal{E}_{\phi,m\beta}^{(0)} 
-&= -\frac{im\beta d^0_z}{2r\!_\perp} J_{m}\left( pr\!_\perp \right) H_m^{(1)}\left( {pr\!_\perp^{\prime} }\right) \nonumber\\
-&\quad+\frac{d_+}{2\sqrt{2}} \left[ \frac{mp}{r\!_\perp}J_{m}\left( pr\!_\perp \right)-k^2 J_{m+1}\left( pr\!_\perp \right)\right] H_{m+1}^{(1)}\left( {pr\!_\perp^{\prime} }\right) \nonumber\\
-&\quad+ \frac{d_-}{2\sqrt{2}}\left[\frac{mp}{r\!_\perp}J_m\!\left( pr_\perp \right)-k^2J_{m-1}\!\left( pr_\perp \right) \right] H_{m-1}^{(1)}\!\left( {pr\!_\perp^{\prime} }\right),\\
+&= -\frac{im\beta d^0_z}{2r\!_\perp} J_{m}\left( \kappa_2r\!_\perp \right) H_m^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right) \nonumber\\
+&\quad+\frac{d_+}{2\sqrt{2}} \left[ \frac{m\kappa_2}{r\!_\perp}J_{m}\left( \kappa_2r\!_\perp \right)-k^2 J_{m+1}\left( \kappa_2r\!_\perp \right)\right] H_{m+1}^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right) \nonumber\\
+&\quad+ \frac{d_-}{2\sqrt{2}}\left[\frac{m\kappa_2}{r\!_\perp}J_m\!\left( \kappa_2r_\perp \right)-k^2J_{m-1}\!\left( \kappa_2r_\perp \right) \right] H_{m-1}^{(1)}\!\left( {\kappa_2r\!_\perp^{\prime} }\right),\\
 \mathcal{E}_{r\!_\perp,m\beta}^{(0)} 
-&= \frac{\beta pd^0_z}{4}\left[ J_{m+1}\!\left( pr\!_\perp \right)-J_{m-1}\!\left( pr_\perp \right)\right] H_m^{(1)}\left( {pr\!_\perp^{\prime} }\right)\nonumber\\ 
-&\quad -\frac{d_+}{2\sqrt{2}}\left[ i\beta^2J_{m+1}\!\left( pr_\perp \right) +\frac{imp}{r\!_\perp}J_m\!\left( pr_\perp \right)\right] H_{m+1}^{(1)}\!\left( {pr\!_\perp^{\prime} }\right)\nonumber\\
-&\quad + \frac{d_-}{2\sqrt{2}}\left[ i\beta^2J_{m-1}\!\left( pr_\perp \right) +\frac{imp}{r\!_\perp}J_m\!\left( pr_\perp \right)\right] H_{m-1}^{(1)}\!\left( {pr\!_\perp^{\prime} }\right).
+&= \frac{\beta \kappa_2d^0_z}{4}\left[ J_{m+1}\!\left( \kappa_2r\!_\perp \right)-J_{m-1}\!\left( \kappa_2r_\perp \right)\right] H_m^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right)\nonumber\\ 
+&\quad -\frac{d_+}{2\sqrt{2}}\left[ i\beta^2J_{m+1}\!\left( \kappa_2r_\perp \right) +\frac{im\kappa_2}{r\!_\perp}J_m\!\left( \kappa_2r_\perp \right)\right] H_{m+1}^{(1)}\!\left( {\kappa_2r\!_\perp^{\prime} }\right)\nonumber\\
+&\quad + \frac{d_-}{2\sqrt{2}}\left[ i\beta^2J_{m-1}\!\left( \kappa_2r_\perp \right) +\frac{im\kappa_2}{r\!_\perp}J_m\!\left( \kappa_2r_\perp \right)\right] H_{m-1}^{(1)}\!\left( {\kappa_2r\!_\perp^{\prime} }\right).
 \end{align}
-The magnetic and electrical fields components for $ \br\!_\perp>\br'\!_\perp $ are 
+The magnetic and electrical fields components for $ r\!_\perp>r'\!_\perp $ are 
 \begin{align}
-\mathcal{B}_{z,m\beta}^{(0)} &= \frac{ikp}{2\sqrt{2}}H^{(1)}_m(pr\!_\perp)\left[ d_{+} J_{m+1}(pr'\!\!_\perp) \!-\! d_- J_{m-1}(pr'\!_\perp) \right],\\
-\mathcal{B}_{\phi,m\beta}^{(0)} &= \frac{ik}{2}\left[ \frac{\beta d_{-}}{\sqrt{2}} H^{(1)}_{m-1}\left( pr\!_\perp \right)J_{m-1}\left( {pr\!_\perp^{\prime} }\right) -\frac{\beta d_+}{\sqrt{2}} H^{(1)}_{m+1}\left( pr\!_\perp \right)J_{m+1}\left( {pr\!_\perp^{\prime} }\right)\right. \nonumber\\ 
-&\qquad\quad \left. + \frac{ipd^0_z}{2}\left(H^{(1)}_{m-1}(pr\!_\perp)-H^{(1)}_{m+1}(pr\!_\perp) \right)J_m(pr\!_\perp^{\prime}) \right],\\
-\mathcal{B}_{r\!_\perp, m\beta}^{(0)} &= \frac{k}{2}\left[\frac{i m d^0_z}{r\!_\perp} H^{(1)}_m\left( pr\!_\perp \right) J_m\left( {pr\!_\perp^{\prime} }\right) \right. \nonumber\\
-&\qquad \left. +\frac{\beta d_+}{\sqrt{2}} H^{(1)}_{m\!+\!1}(pr\!_\perp) J_{m\!+\! 1}(pr\!_\perp^{\prime}) \!+\! \frac{\beta d_-}{\sqrt{2}} H^{(1)}_{m\!-\! 1}(pr\!_\perp) J_{m\!-\!1}(pr\!_\perp^{\prime})   \right],\\
+\mathcal{B}_{z,m\beta}^{(0)} &= \frac{ik\kappa_2}{2\sqrt{2}}H^{(1)}_m(\kappa_2r\!_\perp)\left[ d_{+} J_{m+1}(\kappa_2r'\!\!_\perp) \!-\! d_- J_{m-1}(\kappa_2r'\!_\perp) \right],\\
+\mathcal{B}_{\phi,m\beta}^{(0)} &= \frac{ik}{2}\left[ \frac{\beta d_{-}}{\sqrt{2}} H^{(1)}_{m-1}\left( \kappa_2r\!_\perp \right)J_{m-1}\left( {\kappa_2r\!_\perp^{\prime} }\right) -\frac{\beta d_+}{\sqrt{2}} H^{(1)}_{m+1}\left( \kappa_2r\!_\perp \right)J_{m+1}\left( {\kappa_2r\!_\perp^{\prime} }\right)\right. \nonumber\\ 
+&\qquad\quad \left. + \frac{i\kappa_2d^0_z}{2}\left(H^{(1)}_{m-1}(\kappa_2r\!_\perp)-H^{(1)}_{m+1}(\kappa_2r\!_\perp) \right)J_m(\kappa_2r\!_\perp^{\prime}) \right],\\
+\mathcal{B}_{r\!_\perp, m\beta}^{(0)} &= \frac{k}{2}\left[\frac{i m d^0_z}{r\!_\perp} H^{(1)}_m\left( \kappa_2r\!_\perp \right) J_m\left( {\kappa_2r\!_\perp^{\prime} }\right) \right. \nonumber\\
+&\qquad \left. +\frac{\beta d_+}{\sqrt{2}} H^{(1)}_{m\!+\!1}(\kappa_2r\!_\perp) J_{m\!+\! 1}(\kappa_2r\!_\perp^{\prime}) \!+\! \frac{\beta d_-}{\sqrt{2}} H^{(1)}_{m\!-\! 1}(\kappa_2r\!_\perp) J_{m\!-\!1}(\kappa_2r\!_\perp^{\prime})   \right],\\
 \mathcal{E}_{z,m\beta}^{(0)} 
-&= \frac{p}{2}H^{(1)}_{m}\left( pr\!_\perp \right)\left[  id^0_z p J_m\left( {pr\!_\perp^{\prime} }\right) \phantom{\frac{d^0_z}{\sqrt{2}}} \right. \nonumber\\
-&\qquad\qquad\qquad \left. + \frac{\beta d_{+}}{\sqrt{2}} J_{m+1}\left( {pr\!_\perp^{\prime} }\right) +\frac{\beta d_-}{\sqrt{2}} J_{m-1}\left( {pr\!_\perp^{\prime} }\right) \right], \\
+&= \frac{\kappa_2}{2}H^{(1)}_{m}\left( \kappa_2r\!_\perp \right)\left[  id^0_z \kappa_2 J_m\left( {\kappa_2r\!_\perp^{\prime} }\right) \phantom{\frac{d^0_z}{\sqrt{2}}} \right. \nonumber\\
+&\qquad\qquad\qquad \left. + \frac{\beta d_{+}}{\sqrt{2}} J_{m+1}\left( {\kappa_2r\!_\perp^{\prime} }\right) +\frac{\beta d_-}{\sqrt{2}} J_{m-1}\left( {\kappa_2r\!_\perp^{\prime} }\right) \right], \\
 \mathcal{E}_{\phi,m\beta}^{(0)} 
-&= -\frac{im\beta d^0_z}{2r\!_\perp} H^{(1)}_{m}\left( pr\!_\perp \right) J_m\left( {pr\!_\perp^{\prime} }\right) \nonumber\\
-&\quad+\frac{d_+}{2\sqrt{2}} \left[ \frac{mp}{r\!_\perp}H^{(1)}_{m}\left( pr\!_\perp \right)-k^2 H^{(1)}_{m+1}\left( pr\!_\perp \right)\right] J_{m+1}\left( {pr\!_\perp^{\prime} }\right) \nonumber\\
-&\quad+ \frac{d_-}{2\sqrt{2}}\left[\frac{mp}{r\!_\perp}H^{(1)}_m\!\left( pr_\perp \right)-k^2 H^{(1)}_{m-1}\!\left( pr_\perp \right) \right] J_{m-1}\!\left( {pr\!_\perp^{\prime} }\right),\\
+&= -\frac{im\beta d^0_z}{2r\!_\perp} H^{(1)}_{m}\left( \kappa_2r\!_\perp \right) J_m\left( {\kappa_2r\!_\perp^{\prime} }\right) \nonumber\\
+&\quad+\frac{d_+}{2\sqrt{2}} \left[ \frac{m\kappa_2}{r\!_\perp}H^{(1)}_{m}\left( \kappa_2r\!_\perp \right)-k^2 H^{(1)}_{m+1}\left( \kappa_2r\!_\perp \right)\right] J_{m+1}\left( {\kappa_2r\!_\perp^{\prime} }\right) \nonumber\\
+&\quad+ \frac{d_-}{2\sqrt{2}}\left[\frac{m\kappa_2}{r\!_\perp}H^{(1)}_m\!\left( \kappa_2r_\perp \right)-k^2 H^{(1)}_{m-1}\!\left( \kappa_2r_\perp \right) \right] J_{m-1}\!\left( {\kappa_2r\!_\perp^{\prime} }\right),\\
 \mathcal{E}_{r\!_\perp,m\beta}^{(0)} 
-&= \frac{\beta pd^0_z}{4}\left[ H^{(1)}_{m+1}\!\left( pr\!_\perp \right)-H^{(1)}_{m-1}\!\left( pr_\perp \right)\right] J_m\left( {pr\!_\perp^{\prime} }\right)\nonumber\\ 
-&\quad -\frac{d_+}{2\sqrt{2}}\left[ i\beta^2H^{(1)}_{m+1}\!\left( pr_\perp \right) +\frac{imp}{r\!_\perp}H^{(1)}_m\!\left( pr_\perp \right)\right] J_{m+1}\!\left( {pr\!_\perp^{\prime} }\right)\nonumber\\
-&\quad + \frac{d_-}{2\sqrt{2}}\left[ i\beta^2H^{(1)}_{m-1}\!\left( pr_\perp \right) +\frac{imp}{r\!_\perp}H^{(1)}_m\!\left( pr_\perp \right)\right] J_{m-1}\!\left( {pr\!_\perp^{\prime} }\right).
+&= \frac{\beta \kappa_2d^0_z}{4}\left[ H^{(1)}_{m+1}\!\left( \kappa_2r\!_\perp \right)-H^{(1)}_{m-1}\!\left( \kappa_2r_\perp \right)\right] J_m\left( {\kappa_2r\!_\perp^{\prime} }\right)\nonumber\\ 
+&\quad -\frac{d_+}{2\sqrt{2}}\left[ i\beta^2H^{(1)}_{m+1}\!\left( \kappa_2r_\perp \right) +\frac{im\kappa_2}{r\!_\perp}H^{(1)}_m\!\left( \kappa_2r_\perp \right)\right] J_{m+1}\!\left( {\kappa_2r\!_\perp^{\prime} }\right)\nonumber\\
+&\quad + \frac{d_-}{2\sqrt{2}}\left[ i\beta^2H^{(1)}_{m-1}\!\left( \kappa_2r_\perp \right) +\frac{im\kappa_2}{r\!_\perp}H^{(1)}_m\!\left( \kappa_2r_\perp \right)\right] J_{m-1}\!\left( {\kappa_2r\!_\perp^{\prime} }\right).
 \end{align}
 
-By using the boundary conditions at $ r\!_\perp=a $ and Equ.~\ref{Etotalfiber} that
+By using the boundary conditions at $ r\!_\perp=a $ and Equ.~\eqref{Etotalfiber} that
 \begin{align}
 %\varepsilon_f \mathcal{E}_{r\!_\perp}(r\!_\perp =a^> ) = \mathcal{E}_{r\!_\perp}(r\!_\perp =a^< ),\\
 \mathcal{E}_{z}(r\!_\perp =a^> ) = \mathcal{E}_{z}(r\!_\perp =a^< ),\\
@@ -843,28 +850,28 @@ where $ a^< $ and $ a^> $ denote the boundaries at the sides less and larger tha
 \begin{align}
 a_{m\beta} &= \frac{na}{P^2+QR},\\
 b_{m\beta} &= \frac{nb}{P^2+QR},\\
-c_{m\beta} &= \frac{\mathcal{E}_{z,m\beta}^{(0)}(r\!_\perp\!=\!a)+ H_m^{(1)}(pa)a_{m\beta}}{J_m(ha)},\\
-d_{m\beta} &= \frac{\mathcal{H}_{z,m\beta}^{(0)}(r\!_\perp\!=\!a)+ H_m^{(1)}(pa)b_{m\beta}}{J_m(ha)},
+c_{m\beta} &= \frac{\mathcal{E}_{z,m\beta}^{(0)}(r\!_\perp\!=\!a)+ H_m^{(1)}(\kappa_2a)a_{m\beta}}{J_m(\kappa_1a)},\\
+d_{m\beta} &= \frac{\mathcal{H}_{z,m\beta}^{(0)}(r\!_\perp\!=\!a)+ H_m^{(1)}(\kappa_2a)b_{m\beta}}{J_m(\kappa_1a)},
 \end{align}
 where
 \begin{align}
-na &= h^2p^2aJ_m(ha)PE_{\phi,m\beta}^{(0)}(r\!_\perp\!=\!a) \nonumber\\
-&\quad + p^2\left[J_m(ha)\beta mP+kan_1^2h \dd{}{(ha)}J_m(ha)Q \right] E_{z,m\beta}^{(0)} \nonumber\\
-&\quad + ih^2p^2 aJ_m(ha)QB_{\phi,m\beta}^{(0)}(r\!_\perp\!\!=\!a) \!-\! im\beta hpJ_m(ha)SB_{z,m\beta}^{(0)}(r\!_\perp\!\!=\!a),\\
-nb &= h^2p^2aJ_m(ha)PB_{\phi,m\beta}^{(0)}(r\!_\perp\!=\!a) \nonumber\\
-&\quad + p^2\left[J_m(ha)\beta mP-kah \dd{}{(ha)}J_m(ha)R \right] B_{z,m\beta}^{(0)} \nonumber\\
-&\quad + ih^2p^2 aJ_m(ha)RE_{\phi,m\beta}^{(0)}(r\!_\perp\!\!=\!a) \!+\! im\beta hpJ_m(ha)TE_{z,m\beta}^{(0)}(r\!_\perp\!\!=\!a),
+na &= \kappa_1^2\kappa_2^2aJ_m(\kappa_1a)PE_{\phi,m\beta}^{(0)}(r\!_\perp\!=\!a) \nonumber\\
+&\quad + \kappa_2^2\left[J_m(\kappa_1a)\beta mP+kan_1^2\kappa_1 \dd{}{(\kappa_1a)}J_m(\kappa_1a)Q \right] E_{z,m\beta}^{(0)} \nonumber\\
+&\quad + i\kappa_1^2\kappa_2^2 aJ_m(\kappa_1a)QB_{\phi,m\beta}^{(0)}(r\!_\perp\!\!=\!a) \!-\! im\beta \kappa_1\kappa_2J_m(\kappa_1a)SB_{z,m\beta}^{(0)}(r\!_\perp\!\!=\!a),\\
+nb &= \kappa_1^2\kappa_2^2aJ_m(\kappa_1a)PB_{\phi,m\beta}^{(0)}(r\!_\perp\!=\!a) \nonumber\\
+&\quad + \kappa_2^2\left[J_m(\kappa_1a)\beta mP-ka\kappa_1 \dd{}{(\kappa_1a)}J_m(\kappa_1a)R \right] B_{z,m\beta}^{(0)} \nonumber\\
+&\quad + i\kappa_1^2\kappa_2^2 aJ_m(\kappa_1a)RE_{\phi,m\beta}^{(0)}(r\!_\perp\!\!=\!a) \!+\! im\beta \kappa_1\kappa_2J_m(\kappa_1a)TE_{z,m\beta}^{(0)}(r\!_\perp\!\!=\!a),
 \end{align} 
 and
 \begin{align}
-P &=m\beta k^2J_m(ha)H_m^{(1)}(pa)(n_1^2-1),\\
-Q &=-hpak\left[ hJ_m(ha)\dd{}{(pa)}H_m^{(1)}(pa)-pH_m^{(1)}(pa)\dd{}{(ha)}J_m(ha) \right],\\
-R &=hpak\left[ hJ_m(ha)\dd{}{(pa)}H_m^{(1)}(pa)-pn_1^2H_m^{(1)}(pa)\dd{}{(ha)}J_m(ha) \right],\\
-S &=hpak\left[ pJ_m(ha)\dd{}{(pa)}H_m^{(1)}(pa)-hH_m^{(1)}(pa)\dd{}{(ha)}J_m(ha) \right],\\
-T &=hpak\left[ pJ_m(ha)\dd{}{(pa)}H_m^{(1)}(pa)-hn_1^2H_m^{(1)}(pa)\dd{}{(ha)}J_m(ha) \right].
+P &=m\beta k^2J_m(\kappa_1a)H_m^{(1)}(\kappa_2a)(n_1^2-1),\\
+Q &=-\kappa_1\kappa_2ak\left[ \kappa_1J_m(\kappa_1a)\dd{}{(\kappa_2a)}H_m^{(1)}(\kappa_2a)-\kappa_2H_m^{(1)}(\kappa_2a)\dd{}{(\kappa_1a)}J_m(\kappa_1a) \right],\\
+R &=\kappa_1\kappa_2ak\left[ \kappa_1J_m(\kappa_1a)\dd{}{(\kappa_2a)}H_m^{(1)}(\kappa_2a)-\kappa_2n_1^2H_m^{(1)}(\kappa_2a)\dd{}{(\kappa_1a)}J_m(\kappa_1a) \right],\\
+S &=\kappa_1\kappa_2ak\left[ \kappa_2J_m(\kappa_1a)\dd{}{(\kappa_2a)}H_m^{(1)}(\kappa_2a)-\kappa_1H_m^{(1)}(\kappa_2a)\dd{}{(\kappa_1a)}J_m(\kappa_1a) \right],\\
+T &=\kappa_1\kappa_2ak\left[ \kappa_2J_m(\kappa_1a)\dd{}{(\kappa_2a)}H_m^{(1)}(\kappa_2a)-\kappa_1n_1^2H_m^{(1)}(\kappa_2a)\dd{}{(\kappa_1a)}J_m(\kappa_1a) \right].
 \end{align}
 
-The integral in Equs.~\eqref{EHzgauss} should be chosen along path $C_1$ as shown in Fig.~\ref{fig:integralpath} to detour the branch cuts and singularities of integrands. The branch cuts are determined by $ \mathrm{Im}[p],\mathrm{Im}[h]>0 $ to ensure the integrands single-valued and remain on the Riemann sheet where the radiation fields decrease at the infinities. Note that there are only two branch cuts along the $ y $-axis and within $ [-n_2k,n_2k] $ on the $ x $-axis originated from $ \mathrm{Im}[p]=0 $. The $ \mathrm{Im}[h]=0 $ condition does not yield any other new branch cuts where the integrands discontinue. Approximately, we use dashed lines to indicate the branch cuts on the left subplots in Fig.~\ref{fig:integralpath}. There are also poles on the complex plane of $ \beta $, and are located at $ \pm\beta_0 $ characterizing the guided modes ($\mathrm{HE}_{11}$ modes for the single-mode nanofiber). We exclude the singularities by closing the integration contours on the upper-half complex plane of $ \beta $ when $ z>0 $ and the lower-half plane when $ z<0 $ to ensure the Fourier transform convergent at infinities. Since the closed contour integrals vanish, the integrals along $ C_1 $ can be transformed to the contour integrals detouring the branch cuts and around the poles which generate the radiation mode and the guided mode components, respectively. We have used the fact that the integrands vanish at infinities (red solid contour paths). Along the contour paths, we choose $ h $ always positive real while $ p $ being negative real in the first and third quadrants and being positive real in the second and forth quadrants. 
+The integral in Equs.~\eqref{EHzgauss} should be chosen along path $C_1$ as shown in Fig.~\ref{fig:integralpath} to detour the branch cuts and singularities of integrands. The branch cuts are determined by $ \mathrm{Im}[\kappa_2],\mathrm{Im}[\kappa_1]>0 $ to ensure the integrands single-valued and remain on the Riemann sheet where the radiation fields decrease at the infinities. Note that there are only two branch cuts along the $ y $-axis and within $ [-n_2k,n_2k] $ on the $ x $-axis originated from $ \mathrm{Im}[\kappa_2]=0 $. The $ \mathrm{Im}[\kappa_1]=0 $ condition does not yield any other new branch cuts where the integrands discontinue. Approximately, we use dashed lines to indicate the branch cuts on the left subplots in Fig.~\ref{fig:integralpath}. There are also poles on the complex plane of $ \beta $, and are located at $ \pm\beta_0 $ characterizing the guided modes ($\mathrm{HE}_{11}$ modes for the single-mode nanofiber). We exclude the singularities by closing the integration contours on the upper-half complex plane of $ \beta $ when $ z>0 $ and the lower-half plane when $ z<0 $ to ensure the Fourier transform convergent at infinities. Since the closed contour integrals vanish, the integrals along $ C_1 $ can be transformed to the contour integrals detouring the branch cuts and around the poles which correspond to the radiation mode and the guided mode components, respectively. We have used the fact that the integrands vanish at infinities (red solid contour paths). Along the contour paths, we choose $ \kappa_1 $ always positive real while $ \kappa_2 $ being negative real in the first and third quadrants and being positive real in the second and forth quadrants. 
 
 \begin{figure}
 \begin{minipage}{.91\linewidth}
@@ -876,15 +883,15 @@ The integral in Equs.~\eqref{EHzgauss} should be chosen along path $C_1$ as show
 \centering
 \subfloat[]{\label{contourplot_lower}\includegraphics[scale=0.75]{./Figs/contourplot_lower}}
 \end{minipage}
-\caption{Equivalent integration paths to calculate the radiation and guided fields. For $ z>0 $, we can use the zero-valued contour integral path drawn in subfig.~\ref{contourplot_upper} to calculate the integration along path $ C_1 $. The simplified integration path by ignoring waveguide losses is given on the right-hand-side. It only contains the forward propagating mode contributions with radiation and guided mode components as divided through the real-axis integral and the loop-hole integral. For the $ z<0 $ case, the contour integral analysis is given in subfig.~\ref{contourplot_lower}, which only includes the backward propagating mode contributions.}
+\caption{Equivalent integration paths to calculate the radiation and guided fields. For $ z>0 $, we can use the zero-valued contour integral path drawn in subfig.~\ref{contourplot_upper} to calculate the integration along path $ C_1 $. The simplified integration path by ignoring waveguide losses is given in the top-right plot. It only contains the forward propagating mode contributions with radiation and guided mode components as divided through the real-axis integral and the residual of the pole. For the $ z<0 $ case, the contour integral analysis is given in subfig.~\ref{contourplot_lower}, which only includes the backward propagating mode contributions.}
 \label{fig:integralpath}
 \end{figure}
 
-\textcolor{blue}{More information: Physics meaning of the sections detouring the branch cuts and poles...} The integrals along the vertical sections of the contour paths, $ a $ and $ d $, cancel. The integrals along the horizontal sections, $ b $ and $ c $, double one the other. In the end, the contour integral detouring the branch cuts yields $ 2\int_0^k\mathrm{d}\beta $ for $ z>0 $ or $ 2\int_{-k}^0\mathrm{d}\beta $ for $ z<0 $ with $ n_2=1 $. Similarly, one can show that the contour integrals around the poles with separated segments of positive and negative real $ p $'s are equivalent to $ \pm 2\oint_{\pm \beta_0}\!\!\mathrm{d}\beta $ with positive real $ p $. When $ z=0 $, the full integral along path $ C_1 $ can be rewritten as the average value of the $ z>0 $ and $ z<0 $ limits. Therefore, we have 
+\textcolor{blue}{More information: Physics meaning of the sections detouring the branch cuts and poles...} The integrals along the vertical sections of the contour paths, $ a $ and $ d $, cancel. The integrals along the horizontal sections, $ b $ and $ c $, double one the other. In the end, the contour integral detouring the branch cuts yields $ 2\int_0^k\mathrm{d}\beta $ for $ z>0 $ or $ 2\int_{-k}^0\mathrm{d}\beta $ for $ z<0 $ with $ n_2=1 $. Similarly, one can show that the contour integrals around the poles with separated segments of positive and negative real $ \kappa_2 $'s are equivalent to $ \pm 2\oint_{\pm \beta_0}\!\!\mathrm{d}\beta $ with positive real $ \kappa_2 $. When $ z=0 $, the full integral along path $ C_1 $ can be rewritten as the average value of the $ z>0 $ and $ z<0 $ limits. Therefore, we have 
 \begin{align}
 \int_{C_1}\mathrm{d}\beta =\int_{-k}^k\mathrm{d}\beta +\oint_{\beta_0}\mathrm{d}\beta -\oint_{-\beta_0}\!\!\mathrm{d}\beta,
 \end{align}
-where the first integral yield the radiation mode contribution and the last two terms yield the guided mode contribution in two respective propagation directions. When we calculate the decay rates or phase shift due to the presence of atoms, we can use this decomposition relationship of integrals. Notice that, the guided mode contribution part should only include the $ m=\pm 1 $ $\mathrm{HE}_{11}$ modes when summing over mode index $ m $ for a single-mode nanofiber. 
+where the first integral yield the radiation mode contribution and the last two terms yield the guided mode contribution in two respective propagation directions. When we calculate the decay rates or phase shift due to the presence of atoms along a nanofiber, we can use this decomposition relationship of integrals. Notice that, the guided mode contribution part should only include the $ m=\pm 1 $ $\mathrm{HE}_{11}$ modes when summing over mode index $ m $ for a single-mode nanofiber. 
 
 
 
