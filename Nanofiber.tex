@@ -456,7 +456,8 @@ Suppose there are $H$ and $V$ two orthogonal linear polarized mode components. T
 \end{align}
 The Hamiltonian due to the light-atom interaction can be written as
 \begin{align}
-H_{\rm eff}   &= -\hat{\mathbf{E}}^{(-)}(r^\prime\!\!_\perp,\phi',z')\cdot \tensor{\alpha}\cdot \hat{\mathbf{E}}^{(+)}(r^\prime\!\!_\perp,\phi',z')\\
+H_{\rm eff}   &= -\hat{\mathbf{E}}^{(-)}(r^\prime\!\!_\perp,\phi',z')\cdot \tensor{\alpha}\cdot 
+\hat{\mathbf{E}}^{(+)}(r^\prime\!\!_\perp,\phi',z') \label{eq:Heff_0}\\
  &=- \sum_{F,F'}\alpha_0(\Delta_{F,F'}) \left\{ C_{J'FF}^{(0)} \hat{\mathbf{E}}^{(-)} \cdot \hat{\mathbf{E}}^{(+)} \hat{\mathbbm{1}}_F \phantom{\frac{\hat{1}}{1}}\right. \nonumber\\
 &\quad\quad\quad + i C_{J'FF'}^{(1)} \left(\hat{\mathbf{E}}^{(-)} \times \hat{\mathbf{E}}^{(+)} \right) \cdot \hat{ \mathbf{F}} \nonumber\\
 &\quad\quad\quad  \left. + C_{J'FF}^{(2)} \hat{E}_i^{(-)} \hat{E}_j^{(+)} \left( \frac{ \hat{F}_i \hat{F}_j  + \hat{F}_j \hat{F}_i  }{2} - \frac{1}{3}\delta_{ij} \hat{ \mathbf{F}} \cdot \hat{\mathbf{F}}  \right) \right\}. 
@@ -1111,7 +1112,132 @@ The dimensionless coupling constant,
 is a measure of the strength of the light-matter interaction.  It is proportional to the detuning, $\Delta_F^{-1}$, but more importantly to the ratio of the resonant atomic cross section, $\sigma_0 = 3 \lambda_{F F'}^2/2 \pi$, \textcolor{red}{to the transverse mode area $A$}.  This ratio sets the strength of the single-atom coupling, as it roughly describes the amount of light scattered from the atom back into the probe mode.  
 %The form of the real part of the interaction, \erf{Eq::StokesHam}, assumes we are working in a regime where the detuning is much greater than the linewidth, $\Delta_{f,f'} \gg \Gamma$, for all excited hyperfine states.  Note that the sign of $\hat{A}_3$ is opposite that found in Ref. \cite{Deutsch2010}.
 
-For a psuedo-spin system, the spin operator $\mathbf{F}=\mathbf{J}=\sum_i^{N_A}\hat{\boldsymbol{\sigma}}/2$ and satisfies the $\mathrm{SU}(2)$ symmetry that $[J_i,J_j]=i\epsilon_{ijk}J_k$ and hence, in Equs.~\eqref{Eq::StokesSpinOps}, the common factor $J_iJ_j+J_jJ_i=2J_iJ_j-i\epsilon_{ijk}J_k$. 
+For a psuedo-spin system, the spin operator 
+$\mathbf{F}=\mathbf{J}=\sum_i^{N_A}\hat{\boldsymbol{\sigma}}/2$ and satisfies the $\mathrm{SU}(2)$ 
+symmetry that $[J_i,J_j]=i\epsilon_{ijk}J_k$ and hence, in Equs.~\eqref{Eq::StokesSpinOps}, the common 
+factor $J_iJ_j+J_jJ_i=2J_iJ_j-i\epsilon_{ijk}J_k$. 
+
+\section{Full Hamiltonian of Light-atom coupling}
+From Equ.~\eqref{eq:Heff_0}, the effective Hamiltonian of the light-atom interaction can also be given by
+\begin{align}  
+	H_{\rm eff}   = \frac{2\pi \hbar \omega_0}{ v_g \tau} &\Big( \mathbf{u}^*_H(r^\prime\!_\perp, \phi') 
+	\!\cdot\! 
+	\tensor{\alpha} \!\cdot\! \mathbf{u}_{H}(r^\prime\!_\perp, \phi') \hat{a}\dg_H \hat{a}_H +  
+	\mathbf{u}^*_V(r^\prime\!_\perp, \phi')\! \cdot\! 
+	\tensor{\alpha} \!\cdot\! \mathbf{u}_{V}(r^\prime\!_\perp, \phi') \hat{a}\dg_V \hat{a}_V \nonumber\\
+	&\!\! + \mathbf{u}^*_H(r^\prime\!_\perp, \phi')\! \cdot\! \tensor{\alpha}\! \cdot\! 
+	\mathbf{u}_{V}(r^\prime\!_\perp, \phi') \hat{a}\dg_H \hat{a}_V 
+	+ \mathbf{u}^*_V(r^\prime\!_\perp, \phi') \!\cdot\! \tensor{\alpha}\! \cdot\! 
+	\mathbf{u}_{H}(r^\prime\!_\perp, 
+	\phi') \hat{a}\dg_V \hat{a}_H 
+	\Big).  \label{eq:LightShiftHam_CG}
+\end{align}
+The atomic polarizability tensor $\tensor{\alpha}$ is composed of a dyad of vector dipole operators,    
+\begin{align}
+	\tensor{\alpha} & =  - \frac{1}{\hbar}  \sum_{F,F'} \frac{ \mathbf{d}_{FF'} \mathbf{d}^\dagger_{F'F} 
+	}{\Delta_{FF'}+i\frac{\Gamma}{2} } \\
+		& = \sum_{q,q'}  \sum_{F,F'} \sum_{m_1, m_2, m'} \alpha_0(F,F') \mathbf{e}_q \otimes 
+		\mathbf{e}^*_{q'} | o^{J'F'}_{JF} |^2 C^{Fm_2;1q}_{F'm'} C^{Fm_1;1q'}_{F'm'} \op{F m_2}{F m_1},
+\end{align}
+with the vector raising  dipole operator,
+\begin{align}
+	\mathbf{d}^\dagger_{F'F} =  \bra{P_{J'}}| d |\ket{S_{1/2}} \sum_q \sum_{m,m'} \mathbf{e}_q^* 
+	o^{J'F'}_{JF} C^{Fm;1q}_{F'm'} \op{F'm'}{Fm}
+\end{align}
+where $o^{J'F'}_{JF}$ is the oscillator strength from Ref. \cite{Deutsch2010a} and $C^{Fm;1q}_{F'm'} 
+\equiv 
+\ip{F'm'}{Fm;1q}$ is a Clebsch-Gordan coefficient. 
+Notice that $m' = m_1 + q'$ and $m' = m_2 + q$ and thus
+\begin{align}
+	m_2 - m_1 = q-q'.
+\end{align}
+The characteristic polarizability is
+\begin{align} \label{eq:CharacteristicPolarizability}
+	\alpha_0(F,F') = - \frac{ |\bra{P_{J'}}| d |\ket{S_{1/2}}|^2 }{\hbar (\Delta_{F,F'}+i\frac{\Gamma}{2})} = - 
+	\frac{3 
+	\lambda_{J'}^3}{32 \pi^3} \frac{\Gamma}{\Delta_{F,F'}+i\frac{\Gamma}{2}}.
+\end{align}
+and the detuning is defined as
+\begin{align}
+	\Delta_{FF'} \equiv \omega - (\omega_{F'} - \omega_{F}).
+\end{align}
+Due to the hyperfine ground splitting in Cs$^{133}$ of approximately 9.2 GHz, the characteristic 
+polarizabilities for the two ground hyperfine manifolds, \erf{eq:CharacteristicPolarizability}, can in 
+general have different magnitudes and signs.  Implied in the expression above is that we have chosen a 
+$J'$ transition - generally $S \rightarrow P_{1/2}$ (D1) or $S \rightarrow P_{3/2}$ (D2), which are 
+separated by tens of THz and thus quite resolvable.   
+
+Now suppose that rather than using the magnetic sublevels within a single ground hyperfine state $F$ as 
+in Refs. \cite{Deutsch2010a}, we begin with a dispersive interface defined on the $m=0$ ``clock" states 
+between the $F=3$ and $F=4$ hyperfine states.  To first order such states are insensitive to ambient 
+magnetic field fluctuations.  In the clock-state subspace, we designate the qubit states
+\begin{align} 
+	\ket{\uparrow} &\equiv \ket{F = 4,m_F = 0} \\
+ 	\ket{\downarrow} &\equiv \ket{F = 3,m_F=0}.
+\end{align}
+The light shift Hamiltonian, \erf{eq:LightShiftHam_CG}, can then be expressed in this basis by finding 
+the 
+matrix elements between our relevant states.  Since the atomic polarizability tensor is block-diagonal in 
+the ground hyperfine states, we need only consider coupling between the states within the same 
+manifold.  
+For instance, we may have a $H-V$ mode crossing term like
+\begin{align} \label{eq:ClockMatrixElement}
+	&\bra{F,0} \mathbf{u}^*_H(r^\prime\!_\perp, \phi') \cdot \tensor{\alpha} \cdot 
+	\mathbf{u}_{V}(r^\prime\!_\perp, \phi') \ket{F,0}\nonumber\\
+  =& 
+	\sum_{F'} \sum_{m'} \sum_{q, q'} \alpha_0(F,F') \big( \mathbf{e}_q \cdot 
+	\mathbf{u}^*_H(r^\prime\!_\perp, \phi') \big) 
+	\big( \mathbf{e}^*_{q'} \cdot \mathbf{u}_V(r^\prime\!_\perp, \phi') \big) |o^{J'F'}_{JF} |^2 C^{F 0;1 
+	q}_{F' m'} C^{F 
+	0;1q'}_{F' m'} \\
+ = & \sum_{F'} \sum_{q} \alpha_0(F,F') \big( \mathbf{e}_q \cdot \mathbf{u}^*_H(r^\prime\!_\perp, \phi') 
+	\big) \big( 
+	\mathbf{e}^*_{q} \cdot \mathbf{u}_V(r^\prime\!_\perp, \phi') \big) |o^{J'F'}_{JF} |^2 C^{F 0;1q}_{F' q} 
+	C^{F 0;1q}_{F' q}.
+\end{align}
+since $q+q' = 0$ and for the clock states $m' = q'$. By the nature of the nanofiber modes, if we choose 
+$H$-mode polarization axis or the $x$-axis to be the quantization axis, then with the atoms positioned 
+along the $x$-axis, the crossing term above cancels. The same conclusion casts to other mode crossing 
+terms. 
+Based on our choice of quantization axis, we have
+\begin{align}
+H_{\rm eff} & = \frac{ \hbar }{ \tau}\Big( \chi_{H,\uparrow}\op{\uparrow}{\uparrow} +  
+\chi_{H,\downarrow} \op{\downarrow}{\downarrow} \Big) \hat{a}_H\dg \hat{a}_H \nonumber\\
+&\quad +  \frac{ \hbar }{ \tau} \Big( \chi_{V,\uparrow}\op{\uparrow}{\uparrow} +  \chi_{V,\downarrow} 
+\op{\downarrow}{\downarrow} \Big) \hat{a}_V\dg \hat{a}_V  ,
+\end{align}
+where the coupling strengths are defined as
+\begin{align}
+\chi_{H,\uparrow} &=  -\frac{2\pi\omega_0}{v_g} \bra{F=4,m=0} 
+\mathbf{u}^*_{H}(r^\prime\!\!_\perp,\phi') \cdot\tensor{\alpha}\cdot 
+\mathbf{u}_{H}(r^\prime\!\!_\perp,\phi') \ket{F=4,m=0}\\
+\chi_{H,\downarrow} &=  -\frac{2\pi\omega_0}{v_g}  \bra{F=3,m=0} 
+\mathbf{u}^*_{H}(r^\prime\!\!_\perp,\phi') \cdot\tensor{\alpha}\cdot 
+\mathbf{u}_{H}(r^\prime\!\!_\perp,\phi') \ket{F=3,m=0} \\
+\chi_{V,\uparrow} &=  -\frac{2\pi\omega_0}{v_g}   \bra{F=4,m=0} 
+\mathbf{u}^*_{V}(r^\prime\!\!_\perp,\phi') \cdot\tensor{\alpha}\cdot 
+\mathbf{u}_{V}(r^\prime\!\!_\perp,\phi') \ket{F=4,m=0}  \\
+\chi_{V,\downarrow} &=  -\frac{2\pi\omega_0}{v_g}  \bra{F=3,m=0} 
+\mathbf{u}^*_{V}(r^\prime\!\!_\perp,\phi') \cdot\tensor{\alpha}\cdot 
+\mathbf{u}_{V}(r^\prime\!\!_\perp,\phi') \ket{F=3,m=0}. 
+\end{align}
+
+To write down the Hamiltonian in the clock space,
+\begin{align}
+\chi_{H,\uparrow/\downarrow} & \equiv \chi_{H,F} = \frac{2\pi \omega_0}{v_g} \bra{F,0} 
+	\mathbf{u}^*_H(r^\prime\!_\perp, \phi') \cdot \tensor{\alpha} \cdot 
+	\mathbf{u}_{H}(r^\prime\!_\perp, 
+	\phi') \ket{F,0} \\
+	& = \frac{2\pi \omega_0}{v_g} \sum_{F'} \sum_q \alpha_0\left( F,F'  \right) |\mathbf{e}_q \cdot 
+	\mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 |o^{J'F'}_{JF} |^2 
+	|C^{F 0;1q}_{F' q}|^2\\
+	& \approx  -\frac{1}{2} \left( \sigma_0 n_g  \right) \sum_{F'} \sum_q\left( 
+		\frac{\Gamma}{2 
+		\left(\Delta_{F,F'}+i\Gamma/2\right) }  \right) |\mathbf{e}_q \cdot 
+		\mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 |o^{J'F'}_{JF} |^2 
+		|C^{F 0;1q}_{F' q}|^2
+\end{align}
+where we have approximated $ \lambda_{J'}\approx \lambda = \frac{2\pi c}{\omega_0} $. 
 
 
 \section{Junk: Effects of the evanescent field and the multilevel structure of the atom}
