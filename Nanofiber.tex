@@ -125,7 +125,15 @@
 
 
 \begin{abstract}
-We analyze the tensor interaction of atoms and quantized modes of the electromagnetic field in the presence of a guiding nanophotonic optical fiber.  When detuned from resonance, the tensor linear response yields phase shifts and polarization transformations conditional on the atomic spin.  Such interactions can lead to strong entanglement between the collective atomic spin and the guided photonic modes with a few thousand atoms, even in a regime where $\Gamma_{\rm 1D}$, the rate of spontaneous emission rate into the guided mode, is not much larger than the free space $\Gamma$.  We apply this to study QND measurement-induced squeezing  of the pseudospin associated with the clock transition of atomic cesium, as well as squeezing of the physical atomic spin for applications in magnetometry.  We find \textcolor{red}{x dB} of squeezing.
+We analyze the tensor interaction of atoms and quantized modes of the electromagnetic field in the 
+presence of a guiding nanophotonic optical fiber.  When detuned from resonance, the tensor linear 
+response yields phase shifts and polarization transformations conditional on the atomic spin.  Such 
+interactions can lead to strong entanglement between the collective atomic spin and the guided 
+photonic modes with a few thousand atoms, even in a regime where $\Gamma_{\rm 1D}$, the rate of 
+spontaneous emission into the guided mode, is not much larger than the free space $\Gamma$.  We 
+apply this to study QND measurement-induced squeezing  of the pseudospin associated with the clock 
+transition of atomic cesium, as well as squeezing of the physical atomic spin for applications in 
+magnetometry.  We find \textcolor{red}{x dB} of squeezing.
 \end{abstract}
 
 \maketitle
@@ -1224,18 +1232,30 @@ where the coupling strengths are defined as
 
 To write down the Hamiltonian in the clock space,
 \begin{align}
-\chi_{H,\uparrow/\downarrow} & \equiv \chi_{H,F} = \frac{2\pi \omega_0}{v_g} \bra{F,0} 
+\chi_{H,\uparrow/\downarrow} & \equiv \chi_{H,F} =- \frac{2\pi \omega_0}{v_g} \bra{F,0} 
 	\mathbf{u}^*_H(r^\prime\!_\perp, \phi') \cdot \tensor{\alpha} \cdot 
 	\mathbf{u}_{H}(r^\prime\!_\perp, 
 	\phi') \ket{F,0} \\
-	& = \frac{2\pi \omega_0}{v_g} \sum_{F'} \sum_q \alpha_0\left( F,F'  \right) |\mathbf{e}_q \cdot 
+	& =- \frac{2\pi \omega_0}{v_g} \sum_{F'} \sum_q \alpha_0\left( F,F'  \right) |\mathbf{e}_q \cdot 
 	\mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 |o^{J'F'}_{JF} |^2 
 	|C^{F 0;1q}_{F' q}|^2\\
-	& \approx  -\frac{1}{2} \left( \sigma_0 n_g  \right) \sum_{F'} \sum_q\left( 
+	& \approx  \frac{1}{2} \left( \sigma_0 n_g  \right) \sum_{F'} \sum_q\left( 
 		\frac{\Gamma}{2 
 		\left(\Delta_{F,F'}+i\Gamma/2\right) }  \right) |\mathbf{e}_q \cdot 
 		\mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 |o^{J'F'}_{JF} |^2 
-		|C^{F 0;1q}_{F' q}|^2
+		|C^{F 0;1q}_{F' q}|^2,\\
+\chi_{V,\uparrow/\downarrow} & \equiv \chi_{V,F} =- \frac{2\pi \omega_0}{v_g} \bra{F,0} 
+	\mathbf{u}^*_V(r^\prime\!_\perp, \phi') \cdot \tensor{\alpha} \cdot 
+	\mathbf{u}_{V}(r^\prime\!_\perp, 
+	\phi') \ket{F,0} \\
+	& =- \frac{2\pi \omega_0}{v_g} \sum_{F'} \sum_q \alpha_0\left( F,F'  \right) |\mathbf{e}_q \cdot 
+	\mathbf{u}_V^*(r^\prime\!_\perp,\phi')|^2 |o^{J'F'}_{JF} |^2 
+	|C^{F 0;1q}_{F' q}|^2\\
+	& \approx  \frac{1}{2} \left( \sigma_0 n_g  \right) \sum_{F'} \sum_q\left( 
+		\frac{\Gamma}{2 
+		\left(\Delta_{F,F'}+i\Gamma/2\right) }  \right) |\mathbf{e}_q \cdot 
+		\mathbf{u}_V^*(r^\prime\!_\perp,\phi')|^2 |o^{J'F'}_{JF} |^2 
+		|C^{F 0;1q}_{F' q}|^2,\\
 \end{align}
 where we have approximated $ \lambda_{J'}\approx \lambda = \frac{2\pi c}{\omega_0} $. 
 
