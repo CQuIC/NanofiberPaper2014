@@ -233,10 +233,19 @@ The Born approximation has been used in the last step, which should be a good ap
 
 Since the Maxwell equation of a bare fiber has a similar form to the time-independent Schrodinger equation, one can reference to the division of bound and scattering states problems of the Schrodinger equation to define guided and radiation modes based on the range of the propagation constant $ \beta $. If $ n_2^2k^2<\beta^2<n_1^2k^2 $ with $ k=\omega/c $, the propagating mode of the fiber described by $ \beta $ is called a guided mode. If $ \beta^2<n_2^2k^2 $, the corresponding mode is called a radiation mode. There are finite guided modes with discrete $ \beta $ values for a given nanofiber; radiation modes, however, have continuous $ \beta $ and are countless. Correspondingly, the dyadic Green function can be decomposed into guided mode components and radiation mode components.    
 
-One can also use the eigenmode expansion method~\cite{Glauber1991,Sondergaard2001a} to expand the Green functions in terms of bare-fiber modes. For our problem, we only care about the guided mode contributions which are the dominant components detected at the end of a long nanofiber. We use single mode fibers for this study. The only allowed guided mode for a single-mode fiber is called \textit{$\mathrm{HE}_{11}$} mode which has degeneracies of two propagating directions and two polarization patterns. The propagation constant $\beta_0$ is fixed once the wavelength and the geometry of the nanofiber are given. One can show that the dyadic Green function for the guided modes can be written as~\cite{Sondergaard2001a} \textcolor{red}{(Check the factor of 2 from this equation.)}
+One can also use the eigenmode expansion method~\cite{Glauber1991,Sondergaard2001a} to expand the 
+Green functions in terms of bare-fiber modes. For our problem, we only care about the guided mode 
+contributions which are the dominant components detected at the end of a long nanofiber. We use 
+single mode fibers for this study. The only allowed guided mode for a single-mode fiber is called 
+\textit{$\mathrm{HE}_{11}$} mode which has degeneracies of two propagating directions and two 
+polarization patterns. The propagation constant $\beta_0$ is fixed once the wavelength and the 
+geometry of the nanofiber are given. One can show that the dyadic Green function for the guided modes 
+can be written as~\cite{Sondergaard2001a}
 \begin{align}
-\mathbf{G}_g(\br,\br') &=-\frac{in_g}{4k_0} \sum_{m,f=\pm 1} \mathbf{u}^{(\mu)}(r\!_\perp)\mathbf{u}^{(\tilde{\mu})}(r_{\!\perp}^\prime)e^{if\beta_0(z-z')+im(\phi-\phi')}\\
-&= -\frac{in_g}{4k_0} \sum_{m,f=\pm 1} \mathbf{u}^{(\mu)}(r\!_\perp){\mathbf{u}^{(\mu)}}^*(r_{\!\perp}^\prime)e^{if\beta_0(z-z')+im(\phi-\phi')}.
+\mathbf{G}_g(\br,\br') &=-\frac{in_g}{2k_0} \sum_{m,f=\pm 1} 
+\mathbf{u}^{(\mu)}(r\!_\perp)\mathbf{u}^{(\tilde{\mu})}(r_{\!\perp}^\prime)e^{if\beta_0(z-z')+im(\phi-\phi')}\\
+&= -\frac{in_g}{2k_0} \sum_{m,f=\pm 1} 
+\mathbf{u}^{(\mu)}(r\!_\perp){\mathbf{u}^{(\mu)}}^*(r_{\!\perp}^\prime)e^{if\beta_0(z-z')+im(\phi-\phi')}.
 \end{align}
 In the equation above, the wave number $k_0=\frac{\omega_0}{c}$ for a given angular frequency $\omega_0$, and the transverse modes of the nanofiber, $\mathbf{u}^{(\mu)}(\br)$, are defined by
 \begin{align}
@@ -260,9 +269,13 @@ C_{mf} &= -4\pi k_0^2 \alpha \!\int\! \mathrm{d}^2r\!_\perp n^2(\mathbf{r}\!_\pe
 \end{align}
 Using the eigenmode expansion of the dyadic Green function, these coefficients become
 \begin{align}
-C_{mf} &= i\pi k_0 n_g\alpha \!\int\! \mathrm{d}^2r\!_\perp n^2 {\mathbf{u}^{(\beta_0,m,f)}}^*(\mathbf{r}\!_\perp)\cdot\!\!\!\!\!\! \sum_{f',m'=\pm 1}\!\!\!\! \left[\mathbf{u}^{(\beta_0,m',f')}(\mathbf{r}\!_\perp){\mathbf{u}^{(\beta_0,m',f')}}^*(\mathbf{r}^\prime\!_\perp) \right]\!\cdot\! \mathbf{u}^{(\beta_0,1,1)}(\mathbf{r}^\prime\!_\perp)\nonumber\\
+C_{mf} &= i2\pi k_0 n_g\alpha \!\int\! \mathrm{d}^2r\!_\perp n^2 
+{\mathbf{u}^{(\beta_0,m,f)}}^*(\mathbf{r}\!_\perp)\cdot\!\!\!\!\!\! \sum_{f',m'=\pm 1}\!\!\!\! 
+\left[\mathbf{u}^{(\beta_0,m',f')}(\mathbf{r}\!_\perp){\mathbf{u}^{(\beta_0,m',f')}}^*(\mathbf{r}^\prime\!_\perp)
+ \right]\!\cdot\! \mathbf{u}^{(\beta_0,1,1)}(\mathbf{r}^\prime\!_\perp)\nonumber\\
 &\quad\quad\quad e^{if'\beta_0(z-z')} e^{i\beta_0(z'-fz)}\\
-&= i\pi k_0 n_g\alpha  {\mathbf{u}^{(\beta_0,m,f)}}^*(r'_{\!\perp})\cdot \mathbf{u}^{(\beta_0,1,1)}(r'_{\!\perp})e^{i\beta_0 (1-f)z'+i(1-m)\phi'},\label{eq:Cmf}
+&= i2\pi k_0 n_g\alpha  {\mathbf{u}^{(\beta_0,m,f)}}^*(r'_{\!\perp})\cdot 
+\mathbf{u}^{(\beta_0,1,1)}(r'_{\!\perp})e^{i\beta_0 (1-f)z'+i(1-m)\phi'},\label{eq:Cmf}
 \end{align}
 where the orthogonality relationship of the fiber modes had been used:
 \begin{align}
@@ -273,35 +286,55 @@ where the orthogonality relationship of the fiber modes had been used:
 The output forwarding $ m=1 $ $\mathrm{HE}_{11}$ mode component becomes
 \begin{align}
 \mathbf{E}_+(\br) &= (1+C_{11})E_0\mathbf{u}_{(\beta_0,1,1)} (\br)\\
-&\approx \exp\left[i\pi k_0 n_g\alpha  | \mathbf{u}^{(\beta_0,1,1)}(r'_{\!\perp})|^2 \right] E_0\mathbf{u}^{(\beta_0,1,1)} (\br)\\
+&\approx \exp\left[i2\pi k_0 n_g\alpha  | \mathbf{u}^{(\beta_0,1,1)}(r'_{\!\perp})|^2 \right] 
+E_0\mathbf{u}^{(\beta_0,1,1)} (\br)\\
 &= {te^{i\delta\phi}} E_{in}(\br), 
 \end{align}
 where the attenuation factor of the mode is 
 \begin{align}
-t=\exp\left[\mathrm{Im}[C_{11}]\right]=\exp\left[ -\pi k_0 n_g \mathrm{Im}[\alpha]  | \mathbf{u}^{(\beta_0,1,1)}(r'_{\!\perp})|^2 \right]
+t=\exp\left[\mathrm{Im}[C_{11}]\right]=\exp\left[ -2\pi k_0 n_g \mathrm{Im}[\alpha]  | 
+\mathbf{u}^{(\beta_0,1,1)}(r'_{\!\perp})|^2 \right]
 \end{align}
 and the phase shift is
 \begin{align}
-\delta\phi &= \mathrm{Re}[C_{11}]= \pi \mathrm{Re}[\alpha] \frac{\omega_0}{v_g}  | \mathbf{u}^{(\beta_0,1,1)}(r'_{\!\perp})|^2
-= \pi \mathrm{Re}[\alpha] \frac{\omega_0}{cA^g_{11}},
+\delta\phi &= \mathrm{Re}[C_{11}]= 2\pi \mathrm{Re}[\alpha] \frac{\omega_0}{v_g}  | 
+\mathbf{u}^{(\beta_0,1,1)}(r'_{\!\perp})|^2
+= 2\pi \mathrm{Re}[\alpha] \frac{\omega_0}{cA^g_{11}},
 \end{align}
 where $ A^g_{mf}=1/n_g| \mathbf{u}^{(\beta_0,m,f)}(r'_{\!\perp})|^2 $ is the effective $\mu=(\beta_0,m,f)$ mode area at the atom position. 
 
 We use the fact that 
 \begin{align}
-\alpha &=-\frac{|d_{eg}|^2}{\hbar \Delta}, \,\, (\Delta=\omega_{\beta}-\omega_{eg})\\
-\Gamma^{g}_{mf} &= 2\pi \frac{|\mathbf{u}^{(\mu)}(\br')\cdot \mathbf{d}_{eg}|^2}{\hbar }\left(\frac{\omega_0}{v_g} \right)\mathbin{\color{red} \neq 2\pi \frac{| \mathbf{d}_{eg}|^2}{\hbar A^g_{mf}}\left(\frac{\omega_0}{c} \right)}\label{eq:Gammagmf}\\
-\Gamma_{vac} &= \frac{4}{3} \left( \frac{\omega_0}{c}\right)^3 \frac{|d_{eg}|^2}{\hbar}\\
+\alpha &=-\frac{|d_{eg}|^2}{\hbar \Delta}, \,\, (\Delta=\omega_0-\omega_{eg})\\
+\Gamma^{g}_{mf} &= 2\pi \frac{|\mathbf{u}^{(\mu)}(\br')\cdot \mathbf{d}_{eg}|^2}{\hbar 
+}\left(\frac{\omega_0}{v_g} \right) \label{eq:Gammagmf}\\
+\Gamma  &= \frac{4}{3} \left( \frac{\omega_0}{c}\right)^3 \frac{|d_{eg}|^2}{\hbar}\\
 \sigma_0 &= \frac{3\lambda^2}{2\pi} \equiv \text{resonant cross section}
 \end{align}
 the phase shift can be rewritten as
 \begin{align}
-\mathbin{\color{red}{\delta\phi}} &\approx -\frac{\Gamma^{g}_{11}}{2\Delta} = - \frac{\sigma_0 }{A^g_{mf}} \frac{\Gamma_{vac}}{8\Delta} = -\frac{c}{v_g} \sigma_0 |\mathbf{u}_1^1 (r'_{\!\perp})|^2 \frac{\Gamma_{vac}}{8\Delta}.
+\mathbin{\color{red}{\delta\phi}} &= -\frac{\Gamma^{g}_{11}}{\Delta} = - \frac{\sigma_0 
+}{A^g_{mf}} \frac{\Gamma}{4\Delta} = -n_g \sigma_0 |\mathbf{u}_1^1 (r'_{\!\perp})|^2 
+\frac{\Gamma}{4\Delta}.\label{eq:deltaphiGamma1D}
 \end{align}
+Notice that, the phase shift result is valid for scalar polarizability atoms, in which the induced dipole 
+moment $ \mathbf{d}_{eg} = \alpha \mathbf{u}^{(\mu)}(\br') $ along the same direction as the guided 
+field, and hence $ \Gamma^{g}_{mf} = 2\pi 
+\frac{| \mathbf{d}_{eg}|^2}{\hbar A^g_{mf}}\left(\frac{\omega_0}{c} \right)  $. For a more general case 
+where the atomic polarizability can be a tensor, the phase shift can be given by 
+\begin{align}
+\delta\phi &= 2\pi  \frac{\omega_0}{v_g}   
+\mathbf{u}^{(\beta_0,1,1)}(r'_{\!\perp})\cdot \mathrm{Re}[\boldsymbol{\alpha}] \cdot 
+\mathbf{u}^{(\beta_0,1,1)^*}(r'_{\!\perp})
+= -2\pi  \frac{\omega_0}{v_g}  \frac{|\mathbf{u}^{(\mu)}(\br')\cdot 
+\mathbf{d}_{eg}|^2}{\hbar \Delta} =-\frac{\Gamma_{11}^g}{\Delta}.
+\end{align}
+Therefore, Equ.~\ref{eq:deltaphiGamma1D} is valid for a generalized atomic polarizability. 
 
-If there are two input modes, the Faraday and birefringence effects can be analyzed along this line. \textcolor{blue}{A more generalized result is given in Section~\ref{sec:atomchain}.}
+If there are two input modes, the Faraday and birefringence effects can be analyzed along this line. 
+\textcolor{blue}{A more generalized result for a two-side chain case is given in 
+Section~\ref{sec:atomchain}.}
 
-\textcolor{red}{Note: to obtain the final result of the phase shift, we have assumed the orientation of the dipole has no preference of direction, which is the meaning of \textit{scalar polarizability}. There may be a factor of $1/3$ missing in the end. However, it might be better to use the general tensor polarizability and consider a general input field to derive the phase shift and birefringence here. }
 
 \subsection{Connect to the Heisenberg picture}
 \todo[inline]{Need to decide if we should put the detailed derivations to the appendix.}
@@ -438,11 +471,20 @@ Therefore, to generalize the input-output formalism derived above to the real at
 \subsection{Enhancement compared to the vacuum case}
 Notice that, the phase shift for an atom in vacuum can be given in a similar form by
 \begin{align}
-\delta\phi^{vac} &= 2\pi \frac{\omega_0}{cA} \Re[\alpha] |\mathbf{u}_{00}(\br')|^2 =  2\pi \frac{\omega_0}{c A^{vac'}_{e\!f\!f}} \Re[\alpha]=-\frac{1}{A} \sigma_0 |\mathbf{u}_{00} (r'_{\!\perp})|^2 \frac{\Gamma_{vac}}{4\Delta},
+\delta\phi^{vac} &= 2\pi \frac{\omega_0}{cA} \Re[\alpha] |\mathbf{u}_{00}(\br')|^2 =  2\pi 
+\frac{\omega_0}{c A^{vac'}_{e\!f\!f}} \Re[\alpha]=-\frac{1}{A} \sigma_0 |\mathbf{u}_{00} (r'_{\!\perp})|^2 
+\frac{\Gamma_{vac}}{4\Delta}=\frac{\Gamma_{1D}}{\Delta},
 \end{align}
-where $\mathbf{u}_{00}(\br')  $ is the $\mathrm{TEM}_{00}$ mode of a Gaussian laser field at the atom position, $ A=\frac{\pi W_0^2}{2} $ is the mode area of the Gaussian beam with wist $ W_0 $. Hence, the relative strength of phase shift due to the presence of a nanofiber versus vacuum can be given by
+where $\mathbf{u}_{00}(\br')  $ is the $\mathrm{TEM}_{00}$ mode of a Gaussian laser field at the atom 
+position, $ A=\frac{\pi W_0^2}{2} $ is the mode area of the Gaussian beam with wist $ W_0 $, and $ 
+\Gamma_{1D}=2\pi \frac{|d_{eg}|^2|\mathbf{u}_{00}(\br')|^2}{\hbar A}\left( \frac{\omega_0}{c}\right) 
+$. We can define the effective mode area $A_{e\!f\!f}^{vac'}=\frac{A}{|\mathbf{u}_{00}(\br')|^2}  $, and 
+then everything here is comparable to the fiber case. Hence, the relative strength of phase shift due to 
+the presence of a nanofiber versus vacuum can be 
+given by
 \begin{align}
-\frac{\delta\phi^{nano}}{\delta\phi^{vac}} &=\frac{A_{e\!f\!f}^{vac'}}{A^g_{11}}= \frac{A}{2} \!n_g\! \frac{|\mathbf{u}^{(\beta_0,1,1)}(r_\perp^{nano'})|^2}{|\mathbf{u}_{00}(r_\perp^{vac'})|^2}.
+\frac{\delta\phi^{nano}}{\delta\phi^{vac}} &=\frac{A_{e\!f\!f}^{vac'}}{A^g_{11}}=  A n_g\! \frac{ 
+|\mathbf{u}^{(\beta_0,1,1)}(r_\perp^{nano'})|^2}{|\mathbf{u}_{00}(r_\perp^{vac'})|^2}.
 \end{align}
 In the vacuum case, the strongest mode is given by $ |\mathbf{u}_{00}(r_\perp^{vac'})|=1 $ when the atom is placed at the symmetry center of the beam waist. 
 
@@ -693,7 +735,8 @@ E_{mf} &= \left[\delta_{mm'}\delta_{ff'}+C_{m'f'}^{mf}\right]E_{m'f'},
 with 
 \begin{align}
 C^{mf}_{m'f'}
-&= i\pi k_0 n_g\alpha  {\mathbf{u}^{mf}}^*(r'_{\!\perp})\cdot \mathbf{u}_{m'f'}(r'_{\!\perp})e^{i\beta_0 (f'-f)z'+i(m'-m)\phi'}.\label{eq:Cmfmf}
+&= i2\pi k_0 n_g\alpha  {\mathbf{u}^{mf}}^*(r'_{\!\perp})\cdot \mathbf{u}_{m'f'}(r'_{\!\perp})e^{i\beta_0 
+(f'-f)z'+i(m'-m)\phi'}.\label{eq:Cmfmf}
 \end{align}
 Therefore, one can define the scattering matrix $\mathbf{S}\equiv \left\{S^{mf}_{m'f'}|\,m,f,m',f'=\pm 1 \right\}$ with elements $S^{mf}_{m'f'}=\delta_{mm'}\delta_{ff'}+C_{m'f'}^{mf}$. 
 
@@ -715,22 +758,34 @@ where $\mathbf{S}_i=\eta_{i,+} \mathbf{S}(0) +\eta_{i,-}\mathbf{S}(\pi)+(1-\eta_
 
 For the case that both sides ($ \phi'=0 $ and $\pi  $) of the atom chain are fully occupied along the $z$-direction, the scattering matrix elements can be given by
 \begin{align}
-\!\!\!\!\!\!S^{mf}_{m'f'} &= 2\delta_{mm'}\delta_{ff'} + i\pi k_0 n_g\alpha  {\mathbf{u}_{mf}}^*(r'_{\!\perp})\cdot \mathbf{u}_{m'f'}(r'_{\!\perp})[1+e^{i(m'-m)\pi}]\\
-&= 2\delta_{mm'}\delta_{ff'} + i\pi k_0 n_g\alpha  \left[ |u_{r\!_\perp}(r'_{\!\perp})|^2+mm' |u_\phi(r'_{\!\perp})|^2+ff'|u_z(r'_\perp)|^2\right][1+e^{i(m'-m)\pi}]\\
-&= 2\delta_{mm'}\delta_{ff'} + i2\pi k_0 n_g\alpha  \left[ |u_{r\!_\perp}(r'_{\!\perp})|^2+mm' |u_\phi(r'_{\!\perp})|^2+ff'|u_z(r'_\perp)|^2\right].
+\!\!\!\!\!\!S^{mf}_{m'f'} &= 2\delta_{mm'}\delta_{ff'} + i2\pi k_0 n_g\alpha  
+{\mathbf{u}_{mf}}^*(r'_{\!\perp})\cdot \mathbf{u}_{m'f'}(r'_{\!\perp})[1+e^{i(m'-m)\pi}]\\
+&= 2\delta_{mm'}\delta_{ff'} + i2\pi k_0 n_g\alpha  \left[ |u_{r\!_\perp}(r'_{\!\perp})|^2+mm' 
+|u_\phi(r'_{\!\perp})|^2+ff'|u_z(r'_\perp)|^2\right][1+e^{i(m'-m)\pi}]\\
+&= 2\delta_{mm'}\delta_{ff'} + i4\pi k_0 n_g\alpha  \left[ |u_{r\!_\perp}(r'_{\!\perp})|^2+mm' 
+|u_\phi(r'_{\!\perp})|^2+ff'|u_z(r'_\perp)|^2\right].
 \end{align}
 We have treated the atomic polarizability as a scalar and used Born approximation here. Notice that, the polarization-dependent factor $[1+e^{i(m'-m)\pi}]$ always yields $2$ with $m,m'=\pm 1$ for the $\mathrm{HE}_{11}$ guided modes. If there are high-order guided modes, we expect to see destructive Birefringence effects for modes with odd modal index gaps. 
 
 This can also be understood by looking into the equations derived in the Heisenberg picture. The equivalent scattering matrix elements due to an atom positioned at $\br'=(r'_\perp,\phi',z'=0)$ can be obtained by making $t\rightarrow t_0$ from Equ.~\eqref{eq:Smfmft}:
 \begin{align}\label{eq:Smfmfphi_Heisenberg}
-S^{mf}_{m'f'}(\phi') &=\delta_{mm'}\delta_{ff'}-i\frac{2\pi g_\mu^*(\omega)g_{\mu'}(\omega)}{\Delta+i2\Gamma^g_{m'f'}}\\
-&= \delta_{mm'}\delta_{ff'}-i\frac{ \frac{2\pi \omega}{v_g}\mathbf{u}^*_{mf}(\br'_\perp)\cdot\mathbf{d}_{ge} \mathbf{d}_{eg}\cdot\mathbf{u}_{m'f'}(\br'_\perp)e^{i(f'-f)\beta_0 z'}}{\Delta+i2\Gamma^g_{m'f'}}\\
-&=  \delta_{mm'}\delta_{ff'}-i\frac{ \frac{2\pi \omega}{v_g}\mathbf{u}^*_{mf}(r'_\perp)\cdot\mathbf{d}_{ge} \mathbf{d}_{eg}\cdot\mathbf{u}_{m'f'}(r'_\perp)e^{i(m'-m)\phi'}}{\Delta+i2\Gamma^g_{m'f'}}.
+S^{mf}_{m'f'}(\phi') &=\delta_{mm'}\delta_{ff'}-i\frac{2\pi 
+g_\mu^*(\omega)g_{\mu'}(\omega)}{\Delta+i\Gamma_{fiber}/2}\\
+&= \delta_{mm'}\delta_{ff'}-i\frac{ \frac{2\pi 
+\omega}{v_g}\mathbf{u}^*_{mf}(\br'_\perp)\cdot\mathbf{d}_{ge} 
+\mathbf{d}_{eg}\cdot\mathbf{u}_{m'f'}(\br'_\perp)e^{i(f'-f)\beta_0 z'}}{\Delta+i\Gamma_{fiber}/2}\\
+&=  \delta_{mm'}\delta_{ff'}-i\frac{ \frac{2\pi 
+\omega}{v_g}\mathbf{u}^*_{mf}(r'_\perp)\cdot\mathbf{d}_{ge} 
+\mathbf{d}_{eg}\cdot\mathbf{u}_{m'f'}(r'_\perp)e^{i(m'-m)\phi'}}{\Delta+i\Gamma_{fiber}/2}.
 \end{align}
 Therefore, the total scattering transformation matrix for the atom pair on both sides of the $x$-axis can be given by
 \begin{align}\label{eq:Smfmf2_Heisenberg}
 S^{mf}_{m'f'}(\phi') &=S^{mf}_{m'f'}(\phi'=0)+S^{mf}_{m'f'}(\phi'=\pi)\\
-&=  2\delta_{mm'}\delta_{ff'}-i\frac{ \frac{4\pi \omega}{v_g}\mathbf{u}^*_{mf}(r'_\perp)\cdot\mathbf{d}_{ge} \mathbf{d}_{eg}\cdot\mathbf{u}_{m'f'}(r'_\perp)}{\Delta+i2\Gamma^g_{m'f'}}.
+&=  2\delta_{mm'}\delta_{ff'}-i\frac{ \frac{4\pi 
+\omega}{v_g}\mathbf{u}^*_{mf}(r'_\perp)\cdot\mathbf{d}_{ge} 
+\mathbf{d}_{eg}\cdot\mathbf{u}_{m'f'}(r'_\perp)}{\Delta+i\Gamma_{fiber}/2}\\
+&= 2\delta_{mm'}\delta_{ff'}-i 4\pi k_0 
+n_g\mathbf{u}^*_{mf}(r'_\perp)\cdot\boldsymbol{\alpha}\cdot\mathbf{u}_{m'f'}(r'_\perp) .
 \end{align}
 
 When $\beta_0 L$ is a multiple of $\pi$, the free propagation transformation matrix is proportional to a unitary matrix, and hence can be extracted out from the total transformation matrix formula (Equ.~\eqref{eq:transE}). In that case, the total phase shift for a given input mode can be treated as the sum of the phase shift due to each individual atoms on both sides of the $z$-slices. Otherwise, there will be the asymmetric effect on the phase shifts of the forwarding and backwarding modes. Moreover, under the framework derived above, if we can ignore the backward propagating modes--which is approximately true if it is far from satisfying the geometric Bragg condition that $ \beta_0\Lambda=n\pi $, the free propagating transformation matrix $\mathbf{P}(\Lambda)$ is also proportional to a unitary matrix, and hence the total phase shifts for individual forwarding modes can still be treated as a sum over all slices of atoms along the propagating direction. Physically, the asymmetric mixing of forward and backward propagating modes may be the major barrier to treat the total phase shift as the sum over all individual elements.  
