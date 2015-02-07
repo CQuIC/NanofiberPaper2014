@@ -525,7 +525,8 @@ We present a general theory on light-atom interaction in presence of a nanofiber
 \centering
 \subfloat[]{\label{fig:D1line_F3}\includegraphics[scale=0.99]{./Figs/D1line_F3}}
 \end{minipage}
-\caption{Hyperfine level structure of the $ D_1 $ line transitions involving the clock states in $ 6S_{1/2} $ ground levels, and their transition probabilities (numbers on the transition lines). Subfig.~\ref{fig:D1line_F4} shows the transitions only involving the $ F=4,m=0 $ manifold. Subfig.~\ref{fig:D1line_F3} shows the transitions only involving the $ F=3,m=0 $ manifold. }
+\caption{Hyperfine level structure of the $ D_1 $ line transitions involving the clock states in $ 6S_{1/2} $ ground levels, their transition probabilities (numbers on the straight transition lines) and the two magic wavelength positions (wiggled lines). 
+Subfig.~\ref{fig:D1line_F4} shows the transitions only involving the $ F=4,m=0 $ manifold. Subfig.~\ref{fig:D1line_F3} shows the transitions only involving the $ F=3,m=0 $ manifold.  }
 \label{fig:D1line}
 \end{figure}
 
@@ -598,7 +599,7 @@ H_{\rm eff}
 The first term is an overall scalar shift and thus does not contribute to the relative dynamics.  The second term is a constant birefringence and can be canceled with a compensating waveplate as long as the atom number remains constant which is usually the case when the trapping time is fairly large compared to the measurement time. The first two terms can also be canceled when we have the detuning approximately equally biased for the $ F=3 $ and $ F=4 $ ground states. 
 For example, we  can choose $ \Delta_3=-4.6 $ GHz and $ \Delta_4=4.6 $ GHz to the $ 6P_{1/2} $ excited state sublevels of cesium atoms to satisfy this condition, where the hyperfine splitting of the excited state can be ignored ($ ~500 $ MHz) compared to the detuning. However, we would like to leave the choice of detuning to control the third and fourth terms as will be discussed consequently. 
 
-The final term describes the QND Faraday interaction we wish to isolate (similar to the Faraday interaction since we choose to use the $ x $-axis as the quantization axis), but this requires dealing with the third term that describes the effect of the scalar light shift on the rotation of the pseudo-spin.  Canceling the third term amounts to enforcing the condition that
+The final term describes the QND Faraday interaction we wish to isolate (similar to the Faraday interaction since we choose to use the $ y $-axis as the quantization axis), but this requires dealing with the third term that describes the effect of the scalar light shift on the rotation of the pseudo-spin.  Canceling the third term amounts to enforcing the condition that
 \begin{align}
 	\chi_{H,\uparrow} - \chi_{H,\downarrow} = \chi_{V,\downarrow} - \chi_{V,\uparrow} ,
 \end{align}
@@ -665,68 +666,55 @@ or, in the dyadic Green function language from Equ.~\ref{eq:chiHGalpha},
 \boldsymbol{\alpha}^{40;40} - \boldsymbol{\alpha}^{30;30} \right) 
 \right\} . 
 \end{align}
-For the $ D_1 $ line transition, for example, there are two magic wavelengths which close to the $ F=3 
-\leftrightarrow F'=3 $ and $ F=4\leftrightarrow F'=4 $ transitions, respectively. Since the energy splitting 
-between the $ F=3 $ and $ F=4 $ ground states is far large than the energy splitting for the excited states 
-$ F'=3 $ and $ F'=4 $, we can ignore the coupling terms related to the far detuned ground state. That is to 
-say, if we use the magic frequency, $ \omega_3^{\rm magic} $, which close to the $ F=3\leftrightarrow 
-F'=3 $ 
+For the $ D_1 $ line transition, for example, there are two magic frequencies at $ \omega_3^m $ and $ \omega_4^m $ which close to the $ F=3 
+\leftrightarrow F'=3 $ and $ F=4\leftrightarrow F'=4 $ transitions, respectively. In general, if we use the magic frequency, $ \omega_F^{\rm magic} $, which close to the $ F\leftrightarrow 
+F'=F $ 
 transition, we would have
 \begin{align}
-\chi_{\rm eff} (\omega_3^{\rm magic}) &= - 8\pi k_0^2 \tr \left\{ \mathrm{Im}\left[ 
-\mathbf{G}^*_{HH}(\br^\prime\!_\perp,\br^\prime\!_\perp) \right] \cdot  \boldsymbol{\alpha}^{30;30}
+\chi_{\rm eff} (\omega_F^m) &= 8\pi k_0^2 \tr \left\{ \mathrm{Im}\left[ 
+\mathbf{G}^*_{HH}(\br^\prime\!_\perp,\br^\prime\!_\perp) \right] \cdot \left( \boldsymbol{\alpha}^{40;40}(\omega_F^m) -   \boldsymbol{\alpha}^{30;30}(\omega_F^m) \right) 
 \right\}\\
-&= - \sigma_0 n_g \frac{\Gamma}{2} \sum_q |\mathbf{e}_q\cdot 
+&= \sigma_0 n_g \frac{\Gamma}{2} \sum_q |\mathbf{e}_q\cdot 
 \mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 \sum_{F'} 
- \left(  
-\frac{|o^{J'F'}_{J3} C^{3 0;1q}_{F' q}|^2 }{\Delta_{3F'}+i\Gamma/2}  \right),
+ \left( \frac{|o^{J'F'}_{J4} C^{4 0;1q}_{F' q}|^2 }{\Delta_{4F'}+i\Gamma/2} - 
+ \frac{|o^{J'F'}_{J3} C^{3 0;1q}_{F' q}|^2 }{\Delta_{3F'}+i\Gamma/2}  \right),
 \end{align}
-otherwise, for the magic frequency close to the $F=4\leftrightarrow F'=4  $ transition, $ \omega_4^{\rm 
-magic} $,
+The angle change on the Poincare sphere using the probe light at the magic frequency $ \omega_F^m $ can be given by
 \begin{align}
-\chi_{\rm eff} (\omega_4^{\rm magic}) &=  8\pi k_0^2 \tr \left\{ \mathrm{Im}\left[ 
-\mathbf{G}^*_{HH}(\br^\prime\!_\perp,\br^\prime\!_\perp) \right] \cdot  \boldsymbol{\alpha}^{40;40}
-\right\}\\
-&=  \sigma_0 n_g \frac{\Gamma}{2} \sum_q |\mathbf{e}_q\cdot 
-\mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 \sum_{F'}  \left(  
-\frac{|o^{J'F'}_{J4} C^{4 0;1q}_{F' q}|^2 }{\Delta_{4F'}+i\Gamma/2}  \right).
-\end{align}
-The angle change on the Poincare sphere using the probe light at the magic frequency $ \omega_F^{\rm 
-magic} $ can be given by
-\begin{align}
-\varphi_{_N} (\omega_F^{\rm magic}) &= N_A \chi_{e\!f\!f} (\omega_F^{\rm magic})\\
-&= (-1)^F  N_A \sigma_0 n_g\frac{\Gamma}{2} \sum_q |\mathbf{e}_q\cdot 
+\varphi_{_N} (\omega_F^m) &= N_A \left| \chi_{e\!f\!f} (\omega_F^m) \right| \\
+&=   N_A \sigma_0 n_g\frac{\Gamma}{2} \sum_q |\mathbf{e}_q\cdot 
 \mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 
-\sum_{F'}  \left(  
-\frac{|o^{J'F'}_{JF} C^{F 0;1q}_{F' q}|^2 }{\Delta_{FF'}+i\Gamma/2}  \right).
+\sum_{F'}  \left( \frac{|o^{J'F'}_{J3} C^{3 0;1q}_{F' q}|^2 }{\Delta_{3F'} } - 
+ \frac{|o^{J'F'}_{J4} C^{4 0;1q}_{F' q}|^2 }{\Delta_{4F'}}  \right).
 \end{align} 
+\textcolor{red}{We have ignored the decay rate whenever it is summed with the detuning terms.}
 
 Now, we consider the critical case that $\eta =100\%$ and $\tau_{pd} = \frac{1}{\gamma_s}$, where the 
 photon scattering rate
 \begin{align}
-\gamma_s &=\gamma_s (\omega_F)= \sum_{F,F'}\sigma(\Delta_{FF'}) \frac{I(\br')}{\hbar \omega_0} 
-\approx \sum_{F'}\sigma(\Delta_{FF'}) \frac{I(\br')}{\hbar \omega_0}  , 
+\gamma_s &=\gamma_s (\omega_F)= \sum_{F,F'}\sigma(\Delta_{FF'}) \frac{I(\br')}{\hbar \omega_0}, 
+%\approx \sum_{F'}\sigma(\Delta_{FF'}) \frac{I(\br')}{\hbar \omega_0}  , 
 \end{align}
 where $ I $ is the intensity of the light, and the photon scattering cross-section
 \begin{align}
-\sigma(\Delta_{FF'}) &=\frac{\sigma_0}{1+\frac{4\Delta^2_{FF'}}{\Gamma^2}}\approx \sigma_0 
-\frac{\Gamma^2}{4\Delta^2_{FF'}} \quad \text{(far detuning.)}
+\sigma(\Delta_{FF'}) &=\frac{\sigma_0}{1+\frac{4\Delta^2_{FF'}}{\Gamma^2}}=\frac{\sigma_0\Gamma^2}{\Gamma^2+4\Delta^2_{FF'}} \mathbin{\color{red} \approx \sigma_0 
+\frac{\Gamma^2}{4\Delta^2_{FF'}} \quad \text{(far detuning.)}}
 \end{align}
-Hence, we can rewrite 
+Hence, by using the relationships given above, we can rewrite 
 \begin{align}
-\Delta P_{SN} (\omega_F^{\rm magic}) &=\frac{P_0\Gamma}{2}\sqrt{\frac{ \sigma_0 }{2A_{in}}}\sum_{F'} 
-\frac{1}{\Delta_{FF'}},\\
-\Delta P_S (\omega_F^{\rm magic}) &= P_0  \varphi_{_N} (\omega_F^{\rm magic}) \nonumber\\
-&=  (-1)^F  P_0 N_A 
+\Delta P_{SN} (\omega_F^m) &=\frac{P_0\Gamma}{2}\sqrt{\frac{ \sigma_0 }{2A_{in}} \mathbin{\color{red}\sum_{F'} 
+\left( \frac{1}{\Delta_{3F'}^2}+\frac{1}{\Delta_{4F'}^2}\right) }},\\
+\Delta P_S (\omega_F^m) &= P_0  \varphi_{_N} (\omega_F^m) \nonumber\\
+&\approx  P_0 N_A 
 \sigma_0 n_g\frac{\Gamma}{2} 
 \sum_q 
 |\mathbf{e}_q\cdot 
 \mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 
-\sum_{F'}  \left(  
-\frac{|o^{J'F'}_{JF} C^{F 0;1q}_{F' q}|^2 }{\Delta_{FF'}+i\Gamma/2}  \right)\\
-&\approx  (-1)^F  \frac{P_0 \Gamma}{2} N_A \sigma_0 n_g 
-\sum_q |\mathbf{e}_q\cdot \mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 
-\sum_{F'} \frac{|o^{J'F'}_{JF} C^{F 0;1q}_{F' q}|^2 }{\Delta_{FF'}}  , 
+\sum_{F'}  \left( \frac{|o^{J'F'}_{J3} C^{3 0;1q}_{F' q}|^2 }{\Delta_{3F'} } - 
+ \frac{|o^{J'F'}_{J4} C^{4 0;1q}_{F' q}|^2 }{\Delta_{4F'}}  \right) \\
+%&\approx  \frac{P_0 \Gamma}{2} N_A \sigma_0 n_g 
+%\sum_q |\mathbf{e}_q\cdot \mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 
+%\sum_{F'} \frac{|o^{J'F'}_{JF} C^{F 0;1q}_{F' q}|^2 }{\Delta_{FF'}}  , 
 \end{align}
 with the effective mode areas
 \begin{align}
@@ -736,10 +724,14 @@ A_{in } &= \frac{P_0}{I(\br')}=\frac{2}{| \mathbf{u}_H(r'_{\!\perp})|^2+ |
 Therefore, the minimum detectable atom number, $ N_A^{min} $, can be obtained by forcing $ \Delta 
 P_s = \Delta P_{SN} $ as
 \begin{align}
-N_A^{min}(\omega_F^{\rm magic}) &= \sqrt{\frac{(-1)^F}{2A_{in}\sigma_0}} 
-\frac{\sum_{F'}\frac{1}{\Delta_{FF'}}}{ n_g 
+N_A^{min}(\omega_F^m) &= \sqrt{\frac{A_{\rm eff}^2}{2A_{in}\sigma_0}} 
+\end{align}
+with the effective mode area defined as
+\begin{align}
+A_{\rm eff} &= \frac{ \sqrt{\sum_{F'}\left( \frac{1}{\Delta_{3F'}^2}+\frac{1}{\Delta_{4F'}^2}\right) }}{ n_g 
 \sum_q |\mathbf{e}_q\cdot \mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 
-\sum_{F'} \frac{|o^{J'F'}_{JF} C^{F 0;1q}_{F' q}|^2 }{\Delta_{FF'}}   }
+\sum_{F'}  \left( \frac{|o^{J'F'}_{J3} C^{3 0;1q}_{F' q}|^2 }{\Delta_{3F'} } - 
+ \frac{|o^{J'F'}_{J4} C^{4 0;1q}_{F' q}|^2 }{\Delta_{4F'}}  \right) }.
 \end{align}
 
 
@@ -1404,8 +1396,8 @@ For instance, we may have a $H-V$ mode crossing term like
 	C^{F 0;1q}_{F' q}.
 \end{align}
 since $q+q' = 0$ and for the clock states $m' = q'$. By the nature of the nanofiber modes, if we choose 
-$H$-mode polarization axis or the $x$-axis to be the quantization axis, then with the atoms positioned 
-along the $x$-axis, the crossing term above cancels. The same conclusion casts to other mode crossing 
+$V$-mode polarization axis or the $y$-axis to be the quantization axis, then with the atoms positioned 
+along the $x$-axis, the crossing term above always cancels. The same conclusion casts to other mode crossing 
 terms. In fact, the conclusion above does not depend on the choice of basis. We can show that by 
 rewriting the equations above as
 \begin{align}
