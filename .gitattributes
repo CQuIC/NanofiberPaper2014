@@ -3,3 +3,5 @@
 *.bib text eol=lf
 README text eol=lf
 .git* text eol=lf
+
+*.pdf binary
