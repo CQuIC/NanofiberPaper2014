@@ -9,4 +9,7 @@
 *.out
 *.blg
 *.dvi
+*~
+
+Nanofiber.pdf
 
