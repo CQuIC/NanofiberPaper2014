@@ -827,11 +827,38 @@ which is important for us to choose $ \hat{S}_1 $ as the rotation axis and $ \ha
 
 Similarly, when the atom number is large, one can also map the angular momentum/spin operators to the quadrature operators. However, we will try to avoid applying this approximation to the spin operators, since the total number of the atoms are not too large in the context of the nanofiber platform. 
 
-Master equation and jump operators...
+Suppose the measurement is weak, and we can follow the procedure used in free-space spin-squeezing analysis to estimate the spin squeezing parameter for the nanofiber configuration. 
+The expectation value of the $ \hat{J}_3 $ operator, $ \Delta J_3^2 $, in the first-order approximation may obey the differential equation given by 
+\begin{align}
+\dt{\Delta J_3^2} &= -\kappa \left(\Delta J_3^2 \right)^2 -\gamma_s^+ \Delta J_3^2 + \gamma_+\frac{N_A}{4},
+\end{align}
+where $ \kappa=\dot{N}_A |\chi_{\rm eff}|^2$. 
+Even only with $1000$ atoms initially prepared along $ J_1 $-axis, one may be able to achieve $ \sim 20 $ dB of squeezing based on the Wineland squeezing parameter ($ \xi\approx \Delta J_3^2 \expect{\hat{N}_A}/\expect{\hat{J}_1}^2 $) estimation shown in Fig.~\ref{fig:xi_magic}. 
 
-Squeezing parameters and solutions...
+\begin{figure}[ht]
+\begin{minipage}{.45\linewidth}
+\centering
+\subfloat[]{\label{fig:xi_magic33_yq}\includegraphics[scale=0.55]{./Figs/xi_magic33_yq}}
+\end{minipage}
+\begin{minipage}{.45\linewidth}
+\centering
+\subfloat[]{\label{fig:xi_magic44_yq}\includegraphics[scale=0.55]{./Figs/xi_magic44_yq}}
+\end{minipage}
+\par\medskip
+\begin{minipage}{.45\linewidth}
+\centering
+\subfloat[]{\label{fig:xi_magic33_zq}\includegraphics[scale=0.55]{./Figs/xi_magic33_zq}}
+\end{minipage}
+\begin{minipage}{.45\linewidth}
+\centering
+\subfloat[]{\label{fig:xi_magic44_zq}\includegraphics[scale=0.55]{./Figs/xi_magic44_zq}}
+\end{minipage}
+%\centering\makebox[\textwidth]{
+%\includegraphics[width=0.65\textwidth]{./Figs/xi_magic44_yq}}
+\caption{Spin squeezing evolution as a function of time with $ N_A=1000 $ atoms trapped at $ r'\!_\perp =1.5a $ along the $ H/x $-axis of the nanofiber. Subfigs.~\protect\subref{fig:xi_magic33_yq} and~\protect\subref{fig:xi_magic33_zq} use the magic frequencies close to the $ F=3\leftrightarrow F'=3 $ transition frequency $ \omega_{33'} $. Subfigs.~\protect\subref{fig:xi_magic44_yq} and~\protect\subref{fig:xi_magic44_zq} used the magic frequencies close to $ \omega_{44'} $. The magic frequencies and spin squeezing parameters are different for different choices of quantization axis. Subfigs.~\protect\subref{fig:xi_magic33_yq} and~\protect\subref{fig:xi_magic44_yq} define $ \phi $-axis as the quantization axis. In contrast, subfigs.~\protect\subref{fig:xi_magic33_zq} and~\protect\subref{fig:xi_magic44_zq} use $ z $-axis as the quantization axis. As can be seen, when the quantization axis close to the local field direction, the spin squeezing parameter can reach to a higher value. Other parameters used: $ \Omega/2\pi=52 $ MHz (does not matter). }\label{fig:xi_magic}
+\end{figure}
 
-$ \Delta J_{out}^2 =\frac{\Delta J_{in}^2}{1+\xi}=\frac{J}{2(1+\xi)} $, $ \bar{L}(l)=\frac{l}{1+\xi} $, and $ \xi\equiv \frac{\Delta J_{in}^2}{\sigma^2}=\frac{J}{2\sigma^2}=\frac{\chi_{e\!f\!f}^2}{4}N_A\dot{N}_L $ is the measurement strength which characterizes the measurement backaction and the squeezing effect. The ability to resolve the initial quantum variance of $ J_3 $ within the resolution of the meter is the key to QND squeezing.
+%$ \Delta J_{out}^2 =\frac{\Delta J_{in}^2}{1+\xi}=\frac{J}{2(1+\xi)} $, $ \bar{L}(l)=\frac{l}{1+\xi} $, and $ \xi\equiv \frac{\Delta J_{in}^2}{\sigma^2}=\frac{J}{2\sigma^2}=\frac{\chi_{e\!f\!f}^2}{4}N_A\dot{N}_L $ is the measurement strength which characterizes the measurement backaction and the squeezing effect. The ability to resolve the initial quantum variance of $ J_3 $ within the resolution of the meter is the key to QND squeezing.
 
 
 
