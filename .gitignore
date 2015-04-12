@@ -1,5 +1,5 @@
 #Not tracked folders and files
-
+NanoFiberPaper_Ivan
 
 #TempFiles for tex.
 *.aux
@@ -9,4 +9,7 @@
 *.out
 *.blg
 *.dvi
+*.bak
+*~
 
+Nanofiber.pdf
