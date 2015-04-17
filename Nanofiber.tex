@@ -573,12 +573,36 @@ We round out the definitions with
 which represents the total flux of photons propagating in the guided mode.
 
  
-We explore QND measurement of cesium atoms in the hyperfine manifold of the of the electronic ground state, $6S_{1/2}$ via polarization spectroscopy.  
+We explore a QND measurement of cesium atoms in the hyperfine manifold of the electronic ground state, $6S_{1/2}$ via polarization spectroscopy.  The polarizability tensor decomposes into irreducible components depending on detuning near the D1 or D2 resonance $6P_{J'}$,
+\begin{align}
+\hat{\alpha}_{ij} &= \hat{\alpha}_{ij}^{(0)}(F',F)+\hat{\alpha}_{ij}^{(1)}(F',F)+\hat{\alpha}_{ij}^{(2)}(F',F)\\
+&=\sum_{F,F'} \alpha_0 \left[ C_{J'FF'}^{(0)} \delta_{ij}+ iC_{J'FF'}^{(1)}\epsilon_{ijk}\hat{F}_k+ C_{J'FF'}^{(2)}\left(\frac{1}{2} ( \hat{F}_i\hat{F}_j +\hat{F}_j\hat{F}_i )-\frac{1}{3}\hat{\mathbf{F}}^2 \delta_{ij} \right) \right],
+\end{align}
+where $\hat{\mathbf{F}}$ is the hyperfine spin operator, $\alpha_0 = -c \sigma_0\Gamma/(4\pi\omega_0 \Delta_{F'F})$ is the characteristic dynamic polarizability for a scattering cross section $\sigma_0 = 3 \lambda^2/2\pi$, and $C_{J'FF'}^{(K)}$ are the tensor expansion coefficients~\cite{?}.  The nanofiber geometry gives rise to unique features of polarization spectroscopy not appearing in free space.  In addition to the polarization-dependent phase shifts arising from the atomic polarizability tensor in Eq. (?), the anisotropy of the  intensity for quasi-linearly polarized guide modes  leads to anisotropic atomic scattering of the $H$ and $V$ modes, giving rise to intrinsic birefringence, even for a purely scalar atomic polarizability.  In particular, choosing the quasi-$H$ axis, along the radial direction of the trapped atom leads to a phase delay of this mode relative the fast quasi-V axis.  This birefringence was exploited by Dawkins {\em et al.}~\cite{?} as mechanism implementing a QND measurement of the number of atoms trapped around the nanofiber, as we treat here.
 
+Consider $N_A$ atoms, each in a completely mixed state.  In that case the $\langle \hat{\alpha}_{ij} \rangle = \sum_{F,F'} \alpha_0 C_{J'FF'}^{(0)} \delta_{ij}$.  With atoms trapped along the quasi-H axis,  $\langle \hat{\alpha}_{HV} \rangle = \langle \hat{\alpha}_{HV} \rangle =0$, but  $\langle \hat{\alpha}_{HH} \rangle \neq  \langle \hat{\alpha}_{VV} \rangle$.  The resulting Hamiltonian, Eq. (?), takes the form
+\begin{equation}
+\hat{H} = \hbar \chi \frac{N_A}{2} \hat{S}_1(0,t),
+\end{equation}
+where we have excluded the coupling to $\hat{S}_0$, which plays no role in the polarization spectroscopy, and have neglected the retardation associated with the different positions of the atoms along $z$.  The rotation angle on the Poincar\'{e} sphere is
+\begin{equation}
+\chi = \frac{c}{v_g} \frac{\sigma_0}{\tilde{A}}  \sum_{F,F'}  C_{J'FF'}^{(0)} \frac{\Gamma}{2\Delta_{F'F}} .
+\end{equation}
+where we have defined $\tilde{A} \equiv \left(|\mathbf{u}_{HH}(\br'_\perp)|^2 - |\mathbf{u}_{VV}(\br'_\perp)| ^2 \right)^{-1}$, as inverse the effective area that characterizes birefringence coupling constant. The effective optical density per atom is $\sigma_0/\tilde{A}$.  {\color{red}  Give some characteristic numbers.}  
 
- prepared in the ``clock states", $\ket{\up} = \ket{6S_{1/2}, F=4, M_F=0}$ 
-
-
+To use this interaction to measure $N_A$, Dawkins {\em et al.} launched linearly polarized light at 45$^\circ$, i.e. along the Stoke $S_2$ axis, and measured the $S_3$ output component according to the input-output relation dictated by Hamiltonian Eq(?),
+\begin{equation}
+\hat{S}_3^{\rm out} = \hat{S}_3^{\rm in} + \chi \frac{N_A}{2} \hat{S}_2^{\rm in}.
+\end{equation}
+The minimum atom number detectable by this type of QND measurement is set by the shot noise is the probe, i.e.,
+\begin{equation}
+\chi \frac{N_{\rm min}}{2} \langle \hat{S}_2^{\rm in}\rangle =  \langle \Delta \hat{S}_3^{\rm in}\rangle,
+\end{equation}
+where $\langle \hat{S}_2^{\rm in}\rangle  =N_L/2$ in the input Stokes vector magnitude and  $\langle  \Delta\hat{S}_3^{\rm in}\rangle = \sqrt{N_L/2}$ is the input shot noise rms for $N_L = P_{\rm in}\tau/\hbar\omega$ photons, given an input power, $ P_{\rm in}$.  This resolution is determined by the integration time of the signal, $\tau$, which in turn is limited by photon scattering into reflected and unguided modes. As a coarse approximation, we take this time to be $\tau=\gamma_s^{-1}$, where $\gamma_s$ is the photon scattering rate in free space.  For a detuning $\Delta$ large compared to the hyperfine splitting on the D2 line, $\gamma_s \hbar \omega_0=  \sigma \frac{\Gamma^2}{4 \Delta^2}\frac{P_{\rm in}}{A_{\rm in}}$, where $\sigma = (2/3) \sigma_0$ is the resonant scattering cross section arising from the scalar polarizability and $A_{\rm in}=|\mathbf{u}_{HH}(\br'_\perp)|^{-2}$ is the effective area defined by the input intensity at the position of the atom.  The rotation angle, $\chi = \frac{\sigma}{\tilde{A}}\frac{\Gamma}{2\Delta}\frac{c}{v_g}$.  Thus, the minimum detectable number of atoms within the shot-noise resolution is on the order of
+\begin{equation}
+N_{\rm min} = \frac{2}{\chi}\sqrt{\frac{2}{N_L}} = \frac{v_g}{c}\sqrt {\frac{A_{\rm in}}{\sigma}} \frac{  2 \sqrt{2}}{1-r},
+\end{equation}
+where the ratio $r \equiv |\mathbf{u}_{VV}(\br'_\perp)| ^2/|\mathbf{u}_{HH}(\br'_\perp)|^2$ characterizes the birefringence. {\color{red}  Give numbers}.
 
 The atomic polarizability tensor $\tensor{\alpha}$ is composed of a dyad of vector dipole operators,    
 \begin{align}
