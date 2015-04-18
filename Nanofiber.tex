@@ -596,49 +596,16 @@ To use this interaction to measure $N_A$, Dawkins {\em et al.} launched linearly
 \end{equation}
 The minimum atom number detectable by this type of QND measurement is set by the shot noise is the probe, i.e.,
 \begin{equation}
-\chi \frac{N_{\rm min}}{2} \langle \hat{S}_2^{\rm in}\rangle =  \langle \Delta \hat{S}_3^{\rm in}\rangle,
+\chi \frac{N_{\rm A, min}}{2} \langle \hat{S}_2^{\rm in}\rangle =  \langle \Delta \hat{S}_3^{\rm in}\rangle,
 \end{equation}
 where $\langle \hat{S}_2^{\rm in}\rangle  =N_L/2$ in the input Stokes vector magnitude and  $\langle  \Delta\hat{S}_3^{\rm in}\rangle = \sqrt{N_L/2}$ is the input shot noise rms for $N_L = P_{\rm in}\tau/\hbar\omega$ photons, given an input power, $ P_{\rm in}$.  This resolution is determined by the integration time of the signal, $\tau$, which in turn is limited by photon scattering into reflected and unguided modes. As a coarse approximation, we take this time to be $\tau=\gamma_s^{-1}$, where $\gamma_s$ is the photon scattering rate in free space.  For a detuning $\Delta$ large compared to the hyperfine splitting on the D2 line, $\gamma_s \hbar \omega_0=  \sigma \frac{\Gamma^2}{4 \Delta^2}\frac{P_{\rm in}}{A_{\rm in}}$, where $\sigma = (2/3) \sigma_0$ is the resonant scattering cross section arising from the scalar polarizability and $A_{\rm in}=|\mathbf{u}_{HH}(\br'_\perp)|^{-2}$ is the effective area defined by the input intensity at the position of the atom.  The rotation angle, $\chi = \frac{\sigma}{\tilde{A}}\frac{\Gamma}{2\Delta}\frac{c}{v_g}$.  Thus, the minimum detectable number of atoms within the shot-noise resolution is on the order of
 \begin{equation}
-N_{\rm min} = \frac{2}{\chi}\sqrt{\frac{2}{N_L}} = \frac{v_g}{c}\sqrt {\frac{A_{\rm in}}{\sigma}} \frac{  2 \sqrt{2}}{1-r},
+N_{\rm A, min} = \frac{2}{\chi}\sqrt{\frac{2}{N_L}} = \frac{v_g}{c}\sqrt {\frac{A_{\rm in}}{\sigma}} \frac{  2 \sqrt{2}}{1-r},
 \end{equation}
 where the ratio $r \equiv |\mathbf{u}_{VV}(\br'_\perp)| ^2/|\mathbf{u}_{HH}(\br'_\perp)|^2$ characterizes the birefringence. {\color{red}  Give numbers}.
 
-The atomic polarizability tensor $\tensor{\alpha}$ is composed of a dyad of vector dipole operators,    
-\begin{align}
-	\tensor{\alpha} & =  - \frac{1}{\hbar}  \sum_{F,F'} \frac{ \mathbf{d}_{FF'} \mathbf{d}^\dagger_{F'F} 
-	}{\Delta_{FF'}+i\frac{\Gamma}{2} } \\
-		& = \sum_{q,q'}  \sum_{F,F'} \sum_{m_1, m_2, m'} \!\!\!\!\!\! \alpha_0(F,F') \mathbf{e}_q \otimes 
-		\mathbf{e}^*_{q'} | o^{J'F'}_{JF} |^2 C^{Fm_2;1q}_{F'm'} C^{Fm_1;1q'}_{F'm'} \op{F m_2}{F m_1},
-\end{align}
-with the vector raising  dipole operator,
-\begin{align}
-	\mathbf{d}^\dagger_{F'F} =  \bra{P_{J'}}| d |\ket{S_{1/2}} \sum_q \sum_{m,m'} \mathbf{e}_q^* 
-	o^{J'F'}_{JF} C^{Fm;1q}_{F'm'} \op{F'm'}{Fm}
-\end{align}
-where $o^{J'F'}_{JF}$ is the oscillator strength from Ref. \cite{Deutsch2010a} and $C^{Fm;1q}_{F'm'} 
-\equiv 
-\ip{F'm'}{Fm;1q}$ is a Clebsch-Gordan coefficient. 
-Notice that $m' = m_1 + q'$ and $m' = m_2 + q$ and thus
-\begin{align}
-	m_2 - m_1 = q-q'.
-\end{align}
-The characteristic polarizability is
-\begin{align} \label{eq:CharacteristicPolarizability}
-	\alpha_0(F,F') = - \frac{ |\bra{P_{J'}}| d |\ket{S_{1/2}}|^2 }{\hbar (\Delta_{F,F'}+i\frac{\Gamma}{2})} = - 
-	\frac{3 
-	\lambda_{J'}^3}{32 \pi^3} \frac{\Gamma}{\Delta_{F,F'}+i\frac{\Gamma}{2}}.
-\end{align}
-and the detuning is defined as
-\begin{align}
-	\Delta_{FF'} \equiv \omega - (\omega_{F'} - \omega_{F}).
-\end{align}
-Due to the hyperfine ground splitting in Cs$^{133}$ of approximately 9.2 GHz, the characteristic 
-polarizabilities for the two ground hyperfine manifolds, \erf{eq:CharacteristicPolarizability}, can in 
-general have different magnitudes and signs.  Implied in the expression above is that we have chosen a 
-$J'$ transition - generally $S_{1/2} \rightarrow P_{1/2}$ ($D_1$) or $S_{1/2} \rightarrow P_{3/2}$ ($D_2$), 
-which are 
-separated by tens of THz and thus quite resolvable.   
+The same birefringent interaction can be employed in a QND measurement to squeeze the projection noise of the collective spin degrees of freedom of the atom ensemble.  In particular, consider squeezing of the uncertainty associated with the ``clock transition" of cesium.  Defining $\ket{\uparrow} = \ket{6S_{1/2}, F=4, M=0}$ and $\ket{\downarrow} = \ket{6S_{1/2}, F=3, M=0}$, quantum uncertainty in the collective pseudo-spin $J_z = \sum_{i=1}^{N_A} \sigma_z^{(i)}$ fundamentally limits the precision of atomic clocks.  Consider, the Hamiltonian, Eq. (?), but not restrict to the clock-state subspace. Again the  rank-1 ``vector light shift" vanishes since $\langle F, M=0 | \hat{F}_k | F, M=0 \rangle = 0$ for any choice of quantization axis. Thus, the terms in the Hamiltonian that give rise to Faraday effect vanish, leaving only birefringences.  The resulting Hamiltonian takes the form
+
 
 Now suppose that rather than using the magnetic sublevels within a single ground hyperfine state $F$ as 
 in Ref.~\cite{Deutsch2010a}, we begin with a dispersive interface defined on the $m=0$ ``\textit{clock}" states 
