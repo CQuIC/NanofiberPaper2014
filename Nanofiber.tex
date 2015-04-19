@@ -578,7 +578,7 @@ We explore a QND measurement of cesium atoms in the hyperfine manifold of the el
 \hat{\alpha}_{ij} &= \hat{\alpha}_{ij}^{(0)}(F',F)+\hat{\alpha}_{ij}^{(1)}(F',F)+\hat{\alpha}_{ij}^{(2)}(F',F)\\
 &=\sum_{F,F'} \alpha_0 \left[ C_{J'FF'}^{(0)} \delta_{ij}+ iC_{J'FF'}^{(1)}\epsilon_{ijk}\hat{F}_k+ C_{J'FF'}^{(2)}\left(\frac{1}{2} ( \hat{F}_i\hat{F}_j +\hat{F}_j\hat{F}_i )-\frac{1}{3}\hat{\mathbf{F}}^2 \delta_{ij} \right) \right],
 \end{align}
-where $\hat{\mathbf{F}}$ is the hyperfine spin operator, $\alpha_0 = -c \sigma_0\Gamma/(4\pi\omega_0 \Delta_{F'F})$ is the characteristic dynamic polarizability for a scattering cross section $\sigma_0 = 3 \lambda^2/2\pi$, and $C_{J'FF'}^{(K)}$ are the tensor expansion coefficients~\cite{?}.  The nanofiber geometry gives rise to unique features of polarization spectroscopy not appearing in free space.  In addition to the polarization-dependent phase shifts arising from the atomic polarizability tensor in Eq. (?), the anisotropy of the  intensity for quasi-linearly polarized guide modes  leads to anisotropic atomic scattering of the $H$ and $V$ modes, giving rise to intrinsic birefringence, even for a purely scalar atomic polarizability.  In particular, choosing the quasi-$H$ axis, along the radial direction of the trapped atom leads to a phase delay of this mode relative the fast quasi-V axis.  This birefringence was exploited by Dawkins {\em et al.}~\cite{?} as mechanism implementing a QND measurement of the number of atoms trapped around the nanofiber, as we treat here.
+where $\hat{\mathbf{F}}$ is the hyperfine spin operator, $\alpha_0 = -(\sigma_0/4\pi k_0) (\Gamma/ \Delta_{F'F})$ is the characteristic dynamic polarizability for a scattering cross section $\sigma_0 = 3 \lambda^2/2\pi$, and $C_{J'FF'}^{(K)}$ are the tensor expansion coefficients~\cite{?}.  The nanofiber geometry gives rise to unique features of polarization spectroscopy not appearing in free space.  In addition to the polarization-dependent phase shifts arising from the atomic polarizability tensor in Eq. (?), the anisotropy of the  intensity for quasi-linearly polarized guide modes  leads to anisotropic atomic scattering of the $H$ and $V$ modes, giving rise to intrinsic birefringence, even for a purely scalar atomic polarizability.  In particular, choosing the quasi-$H$ axis, along the radial direction of the trapped atom leads to a phase delay of this mode relative the fast quasi-V axis.  This birefringence was exploited by Dawkins {\em et al.}~\cite{?} as mechanism implementing a QND measurement of the number of atoms trapped around the nanofiber, as we treat here.
 
 Consider $N_A$ atoms, each in a completely mixed state.  In that case the $\langle \hat{\alpha}_{ij} \rangle = \sum_{F,F'} \alpha_0 C_{J'FF'}^{(0)} \delta_{ij}$.  With atoms trapped along the quasi-H axis,  $\langle \hat{\alpha}_{HV} \rangle = \langle \hat{\alpha}_{HV} \rangle =0$, but  $\langle \hat{\alpha}_{HH} \rangle \neq  \langle \hat{\alpha}_{VV} \rangle$.  The resulting Hamiltonian, Eq. (?), takes the form
 \begin{equation}
@@ -586,9 +586,9 @@ Consider $N_A$ atoms, each in a completely mixed state.  In that case the $\lang
 \end{equation}
 where we have excluded the coupling to $\hat{S}_0$, which plays no role in the polarization spectroscopy, and have neglected the retardation associated with the different positions of the atoms along $z$.  The rotation angle on the Poincar\'{e} sphere is
 \begin{equation}
-\chi = \frac{c}{v_g} \frac{\sigma_0}{\tilde{A}}  \sum_{F,F'}  C_{J'FF'}^{(0)} \frac{\Gamma}{2\Delta_{F'F}} .
+\chi = n_g  \frac{\sigma_0}{\tilde{A}}  \sum_{F,F'}  C_{J'FF'}^{(0)} \frac{\Gamma}{2\Delta_{F'F}}.
 \end{equation}
-where we have defined $\tilde{A} \equiv \left(|\mathbf{u}_{HH}(\br'_\perp)|^2 - |\mathbf{u}_{VV}(\br'_\perp)| ^2 \right)^{-1}$, as inverse the effective area that characterizes birefringence coupling constant. The effective optical density per atom is $\sigma_0/\tilde{A}$.  {\color{red}  Give some characteristic numbers.}  
+where we have defined $\tilde{A} \equiv \left(|\mathbf{u}_{HH}(\br'_\perp)|^2 - |\mathbf{u}_{VV}(\br'_\perp)| ^2 \right)^{-1}$, as the inverse the effective area that characterizes birefringence coupling constant. The effective optical density per atom is $\sigma_0/\tilde{A}$.  {\color{red}  Give some characteristic numbers.}  
 
 To use this interaction to measure $N_A$, Dawkins {\em et al.} launched linearly polarized light at 45$^\circ$, i.e. along the Stoke $S_2$ axis, and measured the $S_3$ output component according to the input-output relation dictated by Hamiltonian Eq(?),
 \begin{equation}
@@ -598,209 +598,36 @@ The minimum atom number detectable by this type of QND measurement is set by the
 \begin{equation}
 \chi \frac{N_{\rm A, min}}{2} \langle \hat{S}_2^{\rm in}\rangle =  \langle \Delta \hat{S}_3^{\rm in}\rangle,
 \end{equation}
-where $\langle \hat{S}_2^{\rm in}\rangle  =N_L/2$ in the input Stokes vector magnitude and  $\langle  \Delta\hat{S}_3^{\rm in}\rangle = \sqrt{N_L/2}$ is the input shot noise rms for $N_L = P_{\rm in}\tau/\hbar\omega$ photons, given an input power, $ P_{\rm in}$.  This resolution is determined by the integration time of the signal, $\tau$, which in turn is limited by photon scattering into reflected and unguided modes. As a coarse approximation, we take this time to be $\tau=\gamma_s^{-1}$, where $\gamma_s$ is the photon scattering rate in free space.  For a detuning $\Delta$ large compared to the hyperfine splitting on the D2 line, $\gamma_s \hbar \omega_0=  \sigma \frac{\Gamma^2}{4 \Delta^2}\frac{P_{\rm in}}{A_{\rm in}}$, where $\sigma = (2/3) \sigma_0$ is the resonant scattering cross section arising from the scalar polarizability and $A_{\rm in}=|\mathbf{u}_{HH}(\br'_\perp)|^{-2}$ is the effective area defined by the input intensity at the position of the atom.  The rotation angle, $\chi = \frac{\sigma}{\tilde{A}}\frac{\Gamma}{2\Delta}\frac{c}{v_g}$.  Thus, the minimum detectable number of atoms within the shot-noise resolution is on the order of
+where $\langle \hat{S}_2^{\rm in}\rangle  =N_L/2$ in the input Stokes vector magnitude and  $\langle  \Delta\hat{S}_3^{\rm in}\rangle = \sqrt{N_L/2}$ is the input shot noise rms for $N_L = P_{\rm in}\tau/\hbar\omega$ photons, given an input power, $ P_{\rm in}$.  This resolution is determined by the integration time of the signal, $\tau$, which in turn is limited by photon scattering into reflected and unguided modes. As a coarse approximation, we take this time to be $\tau=\gamma_s^{-1}$, where $\gamma_s$ is the photon scattering rate in free space.  For a detuning $\Delta$ large compared to the hyperfine splitting on the D2 line, $\gamma_s \hbar \omega_0=  \sigma \frac{\Gamma^2}{4 \Delta^2}\frac{P_{\rm in}}{A_{\rm in}}$, where $\sigma = (2/3) \sigma_0$ is the resonant scattering cross section arising from the scalar polarizability and $A_{\rm in}=|\mathbf{u}_{HH}(\br'_\perp)|^{-2}$ is the effective area defined by the input intensity at the position of the atom.  The rotation angle, $\chi =n_g  \frac{\sigma}{\tilde{A}}\frac{\Gamma}{2\Delta}$.  Thus, the minimum detectable number of atoms within the shot-noise resolution is on the order of
 \begin{equation}
-N_{\rm A, min} = \frac{2}{\chi}\sqrt{\frac{2}{N_L}} = \frac{v_g}{c}\sqrt {\frac{A_{\rm in}}{\sigma}} \frac{  2 \sqrt{2}}{1-r},
+N_{\rm A, min} = \frac{2}{\chi}\sqrt{\frac{2}{N_L}} = n_g \sqrt {\frac{A_{\rm in}}{\sigma}} \frac{  2 \sqrt{2}}{1-r},
 \end{equation}
 where the ratio $r \equiv |\mathbf{u}_{VV}(\br'_\perp)| ^2/|\mathbf{u}_{HH}(\br'_\perp)|^2$ characterizes the birefringence. {\color{red}  Give numbers}.
 
-The same birefringent interaction can be employed in a QND measurement to squeeze the projection noise of the collective spin degrees of freedom of the atom ensemble.  In particular, consider squeezing of the uncertainty associated with the ``clock transition" of cesium.  Defining $\ket{\uparrow} = \ket{6S_{1/2}, F=4, M=0}$ and $\ket{\downarrow} = \ket{6S_{1/2}, F=3, M=0}$, quantum uncertainty in the collective pseudo-spin $J_z = \sum_{i=1}^{N_A} \sigma_z^{(i)}$ fundamentally limits the precision of atomic clocks.  Consider, the Hamiltonian, Eq. (?), but not restrict to the clock-state subspace. Again the  rank-1 ``vector light shift" vanishes since $\langle F, M=0 | \hat{F}_k | F, M=0 \rangle = 0$ for any choice of quantization axis. Thus, the terms in the Hamiltonian that give rise to Faraday effect vanish, leaving only birefringences.  The resulting Hamiltonian takes the form
-
-
-Now suppose that rather than using the magnetic sublevels within a single ground hyperfine state $F$ as 
-in Ref.~\cite{Deutsch2010a}, we begin with a dispersive interface defined on the $m=0$ ``\textit{clock}" states 
-between the $F=3$ and $F=4$ hyperfine states.  To first order such states are insensitive to ambient 
-magnetic field fluctuations.  In the clock-state subspace, we designate the qubit states
-\begin{align} 
-	\ket{\uparrow} &\equiv \ket{F = 4,m_F = 0} \\
- 	\ket{\downarrow} &\equiv \ket{F = 3,m_F=0}.
-\end{align}
-
-\begin{figure}
-\centering
-\begin{minipage}{.49\linewidth}
-\centering
-\subfloat[]{\label{fig:D1line_F3}\includegraphics[scale=0.99]{./Figs/D1line_F3}}
-\end{minipage}
-\begin{minipage}{.49\linewidth}
-\centering
-\subfloat[]{\label{fig:D1line_F4}\includegraphics[scale=0.99]{./Figs/D1line_F4}}
-\end{minipage}
-\caption{Hyperfine level structure of the $ D_1 $ line transitions involving the clock states in $ 6S_{1/2} $ ground levels, their transition probabilities (numbers on the straight transition lines) and the two magic wavelength positions (wiggled lines). 
-Subfig.~\ref{fig:D1line_F3} shows the transitions only involving the $ F=3,m=0 $ manifold. Subfig.~\ref{fig:D1line_F4} shows the transitions only involving the $ F=4,m=0 $ manifold.  }
-\label{fig:D1line}
-\end{figure}
-
-The light shift Hamiltonian, \erf{eq:LightShiftHam_CG}, can then be expressed in this basis by finding the matrix elements between our relevant states. 
-Since the atomic polarizability tensor is block-diagonal in 
-the ground hyperfine states, we need only consider coupling between the states within the same 
-manifold.  
-For instance, we may have a $H-V$ mode crossing term like
-\begin{align} \label{eq:ClockMatrixElement}
-	&\bra{F,0} \mathbf{u}^*_H(r^\prime\!_\perp, \phi') \cdot \tensor{\alpha} \cdot 
-	\mathbf{u}_{V}(r^\prime\!_\perp, \phi') \ket{F,0}\nonumber\\
-  =& 
-	\sum_{F'} \sum_{m'} \sum_{q, q'} \alpha_0(F,F') \big( \mathbf{e}_q \cdot 
-	\mathbf{u}^*_H(r^\prime\!_\perp, \phi') \big) 
-	\big( \mathbf{e}^*_{q'} \cdot \mathbf{u}_V(r^\prime\!_\perp, \phi') \big) |o^{J'F'}_{JF} |^2 C^{F 0;1 
-	q}_{F' m'} C^{F 
-	0;1q'}_{F' m'} \\
- = & \sum_{F'} \sum_{q} \alpha_0(F,F') \big( \mathbf{e}_q \cdot \mathbf{u}^*_H(r^\prime\!_\perp, \phi') 
-	\big) \big( 
-	\mathbf{e}^*_{q} \cdot \mathbf{u}_V(r^\prime\!_\perp, \phi') \big) |o^{J'F'}_{JF} |^2 C^{F 0;1q}_{F' q} 
-	C^{F 0;1q}_{F' q}.
-\end{align}
-since $q+q' = 0$ and for the clock states $m' = q'$. We have defined the characteristic polarizability of the atom by
-\begin{align} \label{Eq::alpha0}
-\alpha_0(\Delta) & =  -\frac{|  \bra{ J' }| d | \ket{ J } |^2}{\hbar \Delta } = - \frac{3 \lambda_{J' J}^3}{32 \pi^3} \frac{ \Gamma }{ \Delta }\quad \text{with}\quad 
-\Gamma = \frac{1}{\hbar} \frac{4}{3} \frac{\omega_{J J'}^3}{c^3} | \bra{ J' }| d | \ket{ J } |^2.
-\end{align}
-By the nature of the nanofiber modes, if we choose 
-$V$-mode polarization axis or the $y$-axis to be the quantization axis, then with the atoms positioned 
-along the $x$-axis, the crossing term above always cancels. The same conclusion casts to other mode crossing 
-terms. In fact, the conclusion above does not depend on the choice of basis. We can show that by 
-rewriting the equations above as
+The same birefringent interaction can be employed in a QND measurement to squeeze the projection noise of the collective spin degrees of freedom of the atom ensemble.  In particular, consider squeezing of the uncertainty associated with the ``clock transition" of cesium.  Defining $\ket{\uparrow} = \ket{6S_{1/2}, F=4, M=0}$ and $\ket{\downarrow} = \ket{6S_{1/2}, F=3, M=0}$, the quantum uncertainty in the collective pseudo-spin $J_3 = \sum_{i=1}^{N_A} \sigma_z^{(i)}/2$ fundamentally limits the precision of atomic clocks.  Consider, the Hamiltonian, Eq. (?), but now restrict to the clock-state subspace. Again the  rank-1 ``vector light shift" vanishes since $\langle \uparrow | \hat{F}_k |\uparrow \rangle =\langle \downarrow | \hat{F}_k |\downarrow \rangle = 0$ for any choice of quantization axis. Thus, the terms in the Hamiltonian that give rise to Faraday effect vanish, leaving only birefringent coupling.  The resulting Hamiltonian takes the form
 \begin{align}
-&\bra{F,0} \mathbf{u}^*_H(r^\prime\!_\perp, \phi') \cdot \tensor{\alpha} \cdot 
-	\mathbf{u}_{V}(r^\prime\!_\perp, \phi') \ket{F,0}\nonumber\\
-=& \mathbf{u}^*_H(r^\prime\!_\perp, 
- \phi')\cdot \left[  \sum_{q} \sum_{F'}\alpha_0(F,F') 
-   |o^{J'F'}_{JF} |^2 C^{F 	0;1q}_{F' q} C^{F 0;1q}_{F' q}
-     	  \mathbf{e}_q \mathbf{e}^*_{q}  \right]\cdot \mathbf{u}_V(r^\prime\!_\perp, \phi') \\
-=& \mathbf{u}^*_H(r^\prime\!_\perp,  \phi')\cdot \boldsymbol{\alpha}^{F0;F0}]\cdot 
-\mathbf{u}_V(r^\prime\!_\perp, \phi') \\
-=& \tr\left[ \left(  \mathbf{u}_V(r^\prime\!_\perp, \phi')  \mathbf{u}^*_H(r^\prime\!_\perp,  \phi')\right)
-\cdot  \boldsymbol{\alpha}^{F0;F0} \right],
-\end{align}
-where $  \boldsymbol{\alpha}^{F0;F0} = \bra{F,0}\boldsymbol{\alpha}\ket{F,0} = \sum_{q} 
-\sum_{F'}\alpha_0(F,F') 
-   |o^{J'F'}_{JF} |^2 C^{F 	0;1q}_{F' q} C^{F 0;1q}_{F' q}
-     	  \mathbf{e}_q \mathbf{e}^*_{q} $ is the atomic 
-polarizability tensor restricted to the $ (F,m_F=0) $ atomic space. The first block inside of the big bracket 
-is a dyad. Obviously, the result as a trace does not depend on how we rotate the basis inside. 
-% by 
-%$\tr\left[ \mathbf{P} \left(  \mathbf{u}_V(r^\prime\!_\perp, \phi')  \mathbf{u}^*_H(r^\prime\!_\perp,  
-%\phi')\right) \mathbf{P}^{-1}
-%\cdot \mathbf{P}  \boldsymbol{\alpha}^{F0;F0}\mathbf{P}^{-1} \right]  $, where $ \mathbf{P} $ is the 
-%rotation matrix. 
- 
-We stick to the choice of quantization axis used above, and have
-\begin{align}
-H_{\rm eff} & =  \hbar \Big( \chi_{H,\uparrow}\op{\uparrow}{\uparrow} +  
-\chi_{H,\downarrow} \op{\downarrow}{\downarrow} \Big) \hat{a}_H\dg(t) \hat{a}_H(t) \nonumber\\
-&\quad +  \hbar  \Big( \chi_{V,\uparrow}\op{\uparrow}{\uparrow} +  \chi_{V,\downarrow} 
-\op{\downarrow}{\downarrow} \Big) \hat{a}_V\dg(t) \hat{a}_V(t)  ,
-\end{align}
-where the coupling strengths are defined as
-\begin{align}
-\chi_{H,\uparrow} &=  -\frac{2\pi\omega_0}{v_g} \bra{F=4,m_F=0} 
-\mathbf{u}^*_{H}(r^\prime\!\!_\perp,\phi') \!\cdot\!\tensor{\alpha}\!\cdot\! 
-\mathbf{u}_{H}(r^\prime\!\!_\perp,\phi') \ket{F=4,m_F=0}\\
-\chi_{H,\downarrow} &=  -\frac{2\pi\omega_0}{v_g}  \bra{F=3,m_F=0} 
-\mathbf{u}^*_{H}(r^\prime\!\!_\perp,\phi') \!\cdot\!\tensor{\alpha}\!\cdot\! 
-\mathbf{u}_{H}(r^\prime\!\!_\perp,\phi') \ket{F=3,m_F=0} \\
-\chi_{V,\uparrow} &=  -\frac{2\pi\omega_0}{v_g}   \bra{F=4,m_F=0} 
-\mathbf{u}^*_{V}(r^\prime\!\!_\perp,\phi') \!\cdot\!\tensor{\alpha}\!\cdot\! 
-\mathbf{u}_{V}(r^\prime\!\!_\perp,\phi') \ket{F=4,m_F=0}  \\
-\chi_{V,\downarrow} &=  -\frac{2\pi\omega_0}{v_g}  \bra{F=3,m_F=0} 
-\mathbf{u}^*_{V}(r^\prime\!\!_\perp,\phi') \!\cdot\!\tensor{\alpha}\!\cdot\! 
-\mathbf{u}_{V}(r^\prime\!\!_\perp,\phi') \ket{F=3,m_F=0}. 
-\end{align}
-
-Alternatively,
-\begin{align}
-\chi_{H,\uparrow/\downarrow} & \equiv \chi_{H,F} =- \frac{2\pi \omega_0}{v_g} \bra{F,0} 
-	\mathbf{u}^*_H(r^\prime\!_\perp, \phi') \cdot \tensor{\alpha} \cdot 
-	\mathbf{u}_{H}(r^\prime\!_\perp, 
-	\phi') \ket{F,0} \\
-	& =- \frac{2\pi \omega_0}{v_g} \sum_{F'} \sum_q \alpha_0\left( F,F'  \right) |\mathbf{e}_q \cdot 
-	\mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 |o^{J'F'}_{JF} |^2 
-	|C^{F 0;1q}_{F' q}|^2\\
-	& \approx  \left( \sigma_0 n_g  \right)  \sum_q \sum_{F'} \left( 
-		\frac{\Gamma}{4 
-		\left(\Delta_{F,F'}+i\Gamma/2\right) }  \right) |\mathbf{e}_q \cdot 
-		\mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 |o^{J'F'}_{JF} |^2 
-		|C^{F 0;1q}_{F' q}|^2,\label{eq:chiHeu}\\
-\chi_{V,\uparrow/\downarrow} & \equiv \chi_{V,F} =- \frac{2\pi \omega_0}{v_g} \bra{F,0} 
-	\mathbf{u}^*_V(r^\prime\!_\perp, \phi') \cdot \tensor{\alpha} \cdot 
-	\mathbf{u}_{V}(r^\prime\!_\perp, 
-	\phi') \ket{F,0} \\
-	& =- \frac{2\pi \omega_0}{v_g} \sum_{F'} \sum_q \alpha_0\left( F,F'  \right) |\mathbf{e}_q \cdot 
-	\mathbf{u}_V^*(r^\prime\!_\perp,\phi')|^2 |o^{J'F'}_{JF} |^2 
-	|C^{F 0;1q}_{F' q}|^2\\
-	& \approx   \left( \sigma_0 n_g  \right)  \sum_q\sum_{F'} \left( 
-		\frac{\Gamma}{4 
-		\left(\Delta_{F,F'}+i\Gamma/2\right) }  \right) |\mathbf{e}_q \cdot 
-		\mathbf{u}_V^*(r^\prime\!_\perp,\phi')|^2 |o^{J'F'}_{JF} |^2 
-		|C^{F 0;1q}_{F' q}|^2,\label{eq:chiVeu}
-\end{align}
-where we have approximated $ \lambda_{J'}\approx \lambda = \frac{2\pi c}{\omega_0} $.  We can also 
-rewrite the result above in terms of dyadic Green functions and tensor polarizabilities as
-\begin{align}
-\chi_{H,\uparrow/\downarrow} & \equiv \chi_{H,F} = 4\pi k_0^2 \tr \left\{ \mathrm{Im}\left[ 
-\mathbf{G}^*_{HH}(\br^\prime\!_\perp,\br^\prime\!_\perp) \right] \cdot \boldsymbol{\alpha}^{F0;F0} 
-\right\}\label{eq:chiHGalpha}\\
-\chi_{V,\uparrow/\downarrow} & \equiv \chi_{V,F} = 4\pi k_0^2 \tr \left\{ \mathrm{Im}\left[ 
-\mathbf{G}^*_{VV}(\br^\prime\!_\perp,\br^\prime\!_\perp) \right] \cdot \boldsymbol{\alpha}^{F0;F0} 
-\right\},\label{eq:chiGalpha}
+\hat{H} = \hbar \Big\{ & \left[ \big( \chi_{H,\uparrow} + \chi_{H,\downarrow}\big) + \big(\chi_{V,\uparrow} + \chi_{V,\downarrow}\big) \right] \frac{N_A}{2} \hat{S}_0 \nonumber \\
++ & \left[ \big( \chi_{H, \uparrow} + \chi_{H,\downarrow}\big) - \big( \chi_{V,\uparrow} + \chi_{V,\downarrow} \big)\right]  \frac{N_A}{2}\hat{S}_1 \nonumber \\
++ & \left[ \big( \chi_{H,\uparrow} - \chi_{H,\downarrow}\big) + \big(\chi_{V,\uparrow} - \chi_{V,\downarrow} \big) \right] \hat{J}_3 \hat{S}_0 \nonumber \\
++ & \left[ \big( \chi_{H,\uparrow} - \chi_{H,\downarrow}\big) - \big(\chi_{V,\uparrow} - \chi_{V,\downarrow} \big) \right]  \hat{J}_3 \hat{S}_1\Big\},
 \end{align}
 where 
-\begin{align} 
-\!\!\!\! \mathbf{G}_{HH/VV}(\br',\br') &= -\frac{in_g}{2k_0} 
-\mathbf{u}_{H/V}(r^\prime\!_\perp,\phi')\mathbf{u}_{H/V}^*(r^\prime\!_\perp,\phi')\\
-\boldsymbol{\alpha}^{F0;F0} &\equiv \boldsymbol{\alpha}_{\uparrow/\downarrow} \approx \frac{\sigma_0\lambda_{J'}}{4\pi^2}  \sum_q \sum_{F'} \left( 
-		\frac{\Gamma}{4 
-		\left(\Delta_{F,F'}+i\Gamma/2\right) }  \right)   |o^{J'F'}_{JF} |^2 
-		|C^{F 0;1q}_{F' q}|^2  \mathbf{e}_q \mathbf{e}_q^*.
-\end{align}
-
-
-Now, we consider to rewrite the Hamiltonian in terms of the Stokes vector operators and the collective spin operators with the total atom number of $ N_A $. We assume the photon flux, $ \dot{N}_L $, is so large that $ \dot{N}_L\gg \sqrt{\dot{N}_L}\gg 1 $. 
-The polarization state of the light can be represented on the Poincare sphere via Stokes vector operator $ \mathbf{S} $. The quantized operators in the Schwinger representation with respect to the three Poincare sphere axes are defined as  
 \begin{align}
-\hat{S}_1(z,t)&= \frac{1}{2} \Big( \hat{a}_H\dg(z,t) \hat{a}_H(z,t) -  \hat{a}_V\dg(z,t) \hat{a}_V(z,t) \Big) \\
-\hat{S}_2(z,t)&= \frac{1}{2} \Big( \hat{a}_H\dg(z,t) \hat{a}_V(z,t) +  \hat{a}_V\dg(z,t) \hat{a}_H(z,t) \Big)\\
-\hat{S}_3(z,t)&= \frac{1}{2i} \Big( \hat{a}_H\dg(z,t) \hat{a}_V(z,t) -  \hat{a}_V\dg(z,t) \hat{a}_H(z,t) \Big)
+\chi_{\mu,F} &=- \frac{4\pi \omega_0}{v_g} \bra{F,0}\hat{\alpha}_{\mu \mu}  \ket{F,0}=   n_g \sum_q  \sum_{F'} |o_{J'F'F;q} |^2 \left(\frac{\sigma_0}{\tilde{A}_{\mu,q}}\right) \left( \frac{\Gamma}{2 \Delta_{F,F'}}\right) ,\label{eq:chiHeu}
 \end{align}
-satisfying the $ SU(2) $ algebra $ [S_i(z,t),S_j(z',t')]=i\varepsilon_{ijk}S_k(z,t)\delta (t-t' - (z-z')/c ) $. The total number operator is defined as
-\begin{align}
-\hat{S}_0(z,t)&= \frac{1}{2} \Big( \hat{a}_H\dg(z,t) \hat{a}_H(z,t) +  \hat{a}_V\dg(z,t) \hat{a}_V(z,t) \Big).
-\end{align}
-
-We also define the pseudo-spin operator for the atomic clock-state subspace for one atom is defined as $ \mathbf{j}=\frac{\boldsymbol{\sigma}}{2} $. We will use  the following spin components, which can be expressed as
-\begin{align}
-\hat{j}_z &= \frac{1}{2} \Big( \op{\uparrow}{\uparrow} - \op{\downarrow}{\downarrow}  \Big), \\
-\hat{j}_0 &= \frac{1}{2} \Big( \op{\uparrow}{\uparrow} + \op{\downarrow}{\downarrow}  \Big).
-\end{align}
-The quantization axis is chosen to be the $ x $-axis. For a collective spin system with $ N_A $ atoms, the pseudo-spin angular momentum operator can be defined as
-\begin{align}
-\mathbf{J} &=\sum_i^{N_A}\mathbf{j}^{(i)}=\frac{1}{2}\sum_i^{N_A} \boldsymbol{\sigma}^{(i)}\\
-\mathbf{J}_+ &=\sum_i^{N_A} \boldsymbol{\sigma}^{(i)}_+.
-\end{align}
-The maximum possible angular momentum is $ J=\frac{N_A}{2} $. Each $ J_z $ measurement will yield an eigenvalue ranging from $ -\frac{N_A}{2} $ to $ \frac{N_A}{2} $.  This subspace is unique with dimension $ D=2J+1=N_A+1 $, and is symmetric with respect to exchange of any two individual spins. The different total $ J $'s of the collective spin-$ \frac{1}{2} $ system support "irreducible" matrix representation of the $ SU(2) $ group. The spin operator components satisfy the commutator relationship that $ [J_i,J_j]=i\varepsilon_{ijk}J_k $. 
-
-
-Therefore, the effective Hamiltonian can be rewritten as 
-\begin{align}
-H_{\rm eff} = \hbar \Big\{ & \left[ \big( \chi_{H,\uparrow} + \chi_{H,\downarrow}\big) + \big(\chi_{V,\uparrow} + \chi_{V,\downarrow}\big) \right] \hat{J}_0 \hat{S}_0 \nonumber \\
-+ & \left[ \big( \chi_{H, \uparrow} + \chi_{H,\downarrow}\big) - \big( \chi_{V,\uparrow} + \chi_{V,\downarrow} \big)\right]  \hat{J}_0 \hat{S}_1 \nonumber \\
-+ & \left[ \big( \chi_{H,\uparrow} - \chi_{H,\downarrow}\big) + \big(\chi_{V,\uparrow} - \chi_{V,\downarrow} \big) \right] \hat{J}_z \hat{S}_0 \nonumber \\
-+ & \left[ \big( \chi_{H,\uparrow} - \chi_{H,\downarrow}\big) - \big(\chi_{V,\uparrow} - \chi_{V,\downarrow} \big) \right]  \hat{J}_z \hat{S}_1\Big\}
-\end{align}
+is the rotation angle on the Poincar\'{e} sphere for an atom in the clock state with $F=4,3$ labeling $\uparrow,\downarrow$ and photon with polarization $\mu = H,V$.  Here we have decomposed the polarizability tensor in in spherical basis components.  The relative oscillator strengths for driving $\sigma_\pm, \pi$ transitions between ground and excited hyperfine levels, $\ket{6S_{1/2}, F,M=0}\rightarrow \ket{6P_{J'},F',M'=q}$, including Wigner-6J and Clebsch-Gordan coefficients are
+\begin{equation}
+ |o_{J'F'F;q} |^2 = (2J'+1)(2F+1) \left\{ \begin{array}{ccc} F'&7/2&J'\\ 1/2&1&F \end{array} \right\}^2 \left| \langle F' q | 1 q ;F 0 \rangle \right|^2
+\end{equation}
+The effective area of mode area,
+\begin{equation}
+\tilde{A}_{\mu,q} = |\mathbf{e}^*_q \cdot   \mathbf{u}_\mu(r^\prime\!_\perp,\phi')|^{-2},
+\end{equation}
+defines this interaction relative to the unit-oscillator strength scattering cross section.
 
 \missingfigure{Poincare sphere diagram with spin squeezing effect.}
-The first term is an overall scalar shift and thus does not contribute to the relative dynamics.  The second term is a constant birefringence and can be canceled with a compensating waveplate as long as the atom number remains constant which is usually the case when the trapping time is fairly large compared to the measurement time. The first two terms can also be canceled when we have the detuning approximately equally biased for the $ F=3 $ and $ F=4 $ ground states. 
-For example, we  can choose $ \Delta_3=-4.6 $ GHz and $ \Delta_4=4.6 $ GHz to the $ 6P_{1/2} $ excited state sublevels of cesium atoms to satisfy this condition, where the hyperfine splitting of the excited state can be ignored ($ ~500 $ MHz) compared to the detuning. However, we would like to leave the choice of detuning to control the third and fourth terms as will be discussed consequently. 
 
-The final term describes the QND Faraday interaction we wish to isolate (similar to the Faraday interaction since we choose to use the $ y $-axis as the quantization axis), but this requires dealing with the third term that describes the effect of the scalar light shift on the rotation of the pseudo-spin.  Canceling the third term amounts to enforcing the condition that
-\begin{align}
-	\chi_{H,\uparrow} - \chi_{H,\downarrow} = \chi_{V,\downarrow} - \chi_{V,\uparrow} ,
-\end{align}
-which can be satisfied if we carefully choose the detuning of the probe light. The wavelength to choose to cancel the third term is atom position related, since the condition is determined by the effective mode areas which may have different ratios for the $ H $ and $ V $ modes at different locations. We can refer the exact wavelength to satisfy this condition as the \textit{magic wavelength}\index{magic wavelength}. If this condition can be met, the effective Hamiltonian we care about can be simplified as
-\begin{align}
-	H_{\rm eff} = \hbar \chi_{\rm eff} \hat{J}_3 \hat{S}_1
-\end{align}
-where $\chi_{\rm eff} = 2(\chi_{H,\uparrow} - \chi_{H,\downarrow})$.  
+The first term in the Hamiltonian, Eq. (?), is an overall scalar shift and thus does not contribute to the relative dynamics.  The second term is a constant birefringence, independent of the atomic state, that we discussed above in the QND measurement of atom number.  In the context of squeezing, it can be canceled with a compensating waveplate as long as the atom number remains constant. The third term does not affect polarization spectroscopy, but will act to rotate the pseudo-spin around the $\mathbf{3}$-axis of the Bloch sphere.  
 
 Using the magic frequencies and eliminating the other noise terms of the Hamiltonian, we can prepare the atoms in a \textit{spin coherent state}, $ \ket{\Psi_A}=\left(\frac{\ket{\uparrow}+\ket{\downarrow}}{\sqrt{2}}\right)^{\otimes N_A} $, and the input light in the $ D $ state, $ \vec{D}=\left( \vec{H}+\vec{V}\right)/\sqrt{2} $, which is pointing along $ S_2 $ direction on the Poincare sphere. We apply a \textit{quantum non-demolition} (QND) measurement of the polarization state of the output light along the $ S_3 $-axis after the photon-atom interaction.
 The measurement result will reflect the rotating angle, $ \varphi_{_N} = N_A \left| \chi_{e\!f\!f} \right| $, due to the photon-atom interaction, and hence we can calculate the atom number.
