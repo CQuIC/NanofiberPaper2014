@@ -231,7 +231,7 @@ is given by the Lipmann-Schwinger equation
 \mathbf{E}_{out}(\br) &=\mathbf{E}_{in}(\br)+\tensor{\mathbf{G}}^{(+)}(\br , \br'; \omega_0)\cdot 
 \tensor{\boldsymbol{\alpha}}\cdot \mathbf{E}_{out}(\br')\\
 &\approx \mathbf{E}_{in}(\br)+ \tensor{\mathbf{G}}^{(+)}(\br , \br'; \omega_0) \cdot 
-\tensor{\boldsymbol{\alpha}}\cdot \mathbf{E}_{in}(\br'),
+\tensor{\boldsymbol{\alpha}}\cdot \mathbf{E}_{in}(\br'),\label{eq:LipmannSchwingerBornApprox}
 \end{align}
 where $\mathbf{E}_{in}(\br)$ is the asymptotic input field, $\tensor{\mathbf{G}}^{(+)}$ is the retarded 
 Green's function solution, and in the second line we made the Born approximation valid for weak 
@@ -357,7 +357,7 @@ and
  transformations as a means to measure atoms and perform collective spin squeezing.
 
 \subsection{Heisenberg-Langevin picture solution and atomic response}
-The Lippmann-Schwinger solution, Eq. (?) determines the input-output relation given linear atomic 
+The Lippmann-Schwinger solution, Eq.~\eqref{eq:LipmannSchwingerBornApprox} determines the input-output relation given linear atomic 
 response as expressed by the polarizability tensor $\tensor{\alpha}$.  In this section we derive the 
 dispersive atomic response and quantized mode input-ouput relations using the Heisenberg-Langevin 
 picture for one-dimensional systems following the formalism laid out in~\cite{Haikuta}.  The positive 
@@ -508,7 +508,7 @@ in a particular ground sublevel $\ket{g}$, this can be expressed
 \delta  \phi_{p,g} =2\pi k_0 \frac{c}{v_g}\mathbf{u}^*_{+, p}(\br'_\perp) \cdot \bra{g} 
 \hat{\tensor{\boldsymbol{\alpha}}} \ket{g} \cdot \mathbf{u}_{+, p}(\br'_\perp) = -\sum_e \frac{2 \pi 
 |\bra{e}\hat{\mathbf{d}}\ket{g} \cdot \mathbf{u}_{+,p}(\br'_\perp)|^2}{\hbar \Delta_{eg}} 
-\left(\frac{\omega}{v_g}\right).
+\left(\frac{\omega}{v_g}\right).\label{eq:phaseshift_tensoralpha}
 \end{equation}
 
 In relation to Eq. (?) we see that $\delta \phi \propto (\sigma_0/\tilde{A}) (\Gamma_{1D}/\Delta)$, where 
@@ -532,7 +532,7 @@ explore below.
 
 
 \section{QND measurement of atoms}
-The dispersive interaction between the atoms and nanofiber guided photons provides a mechanism with which to perform a QND measurement on the atoms. The Lipmann-Schwinger input-ouput scattering equation, Eq. (?), follows in the time domain as the evolution of coarse-grained time modes.  We restricted here to two quasi-linear polarizations, $\mu =\{H,V\}$, of the single HE$_{11}$ guided mode propagating in the positive $z$-direction, with annihilation operator~\cite{},
+The dispersive interaction between the atoms and nanofiber guided photons provides a mechanism with which to perform a QND measurement on the atoms. The Lipmann-Schwinger input-ouput scattering equation, Eq.~\eqref{eq:LipmannSchwingerBornApprox}, follows in the time domain as the evolution of coarse-grained time modes.  We restricted here to two quasi-linear polarizations, $\mu =\{H,V\}$, of the single HE$_{11}$ guided mode propagating in the positive $z$-direction, with annihilation operator~\cite{},
 \begin{equation}
 \hat{a}_\mu(z,t) = \int \frac{d \omega}{\sqrt{2 \pi}} \; \hat{a}_\mu e^{i(n_\mu(\omega) kz-\omega t)},
 \end{equation}
@@ -578,7 +578,7 @@ We explore a QND measurement of cesium atoms in the hyperfine manifold of the el
 \hat{\alpha}_{ij} &= \hat{\alpha}_{ij}^{(0)}(F',F)+\hat{\alpha}_{ij}^{(1)}(F',F)+\hat{\alpha}_{ij}^{(2)}(F',F)\\
 &=\sum_{F,F'} \alpha_0 \left[ C_{J'FF'}^{(0)} \delta_{ij}+ iC_{J'FF'}^{(1)}\epsilon_{ijk}\hat{F}_k+ C_{J'FF'}^{(2)}\left(\frac{1}{2} ( \hat{F}_i\hat{F}_j +\hat{F}_j\hat{F}_i )-\frac{1}{3}\hat{\mathbf{F}}^2 \delta_{ij} \right) \right],
 \end{align}
-where $\hat{\mathbf{F}}$ is the hyperfine spin operator, $\alpha_0 = -(\sigma_0/4\pi k_0) (\Gamma/ \Delta_{F'F})$ is the characteristic dynamic polarizability for a scattering cross section $\sigma_0 = 3 \lambda^2/2\pi$, and $C_{J'FF'}^{(K)}$ are the tensor expansion coefficients~\cite{?}.  The nanofiber geometry gives rise to unique features of polarization spectroscopy not appearing in free space.  In addition to the polarization-dependent phase shifts arising from the atomic polarizability tensor in Eq. (?), the anisotropy of the  intensity for quasi-linearly polarized guide modes  leads to anisotropic atomic scattering of the $H$ and $V$ modes, giving rise to intrinsic birefringence, even for a purely scalar atomic polarizability.  In particular, choosing the quasi-$H$ axis, along the radial direction of the trapped atom leads to a phase delay of this mode relative the fast quasi-V axis.  This birefringence was exploited by Dawkins {\em et al.}~\cite{?} as mechanism implementing a QND measurement of the number of atoms trapped around the nanofiber, as we treat here.
+where $\hat{\mathbf{F}}$ is the hyperfine spin operator, $\alpha_0 = -(\sigma_0/4\pi k_0) (\Gamma/ \Delta_{F'F})$ is the characteristic dynamic polarizability for a scattering cross section $\sigma_0 = 3 \lambda^2/2\pi$, and $C_{J'FF'}^{(K)}$ are the tensor expansion coefficients~\cite{?}.  The nanofiber geometry gives rise to unique features of polarization spectroscopy not appearing in free space.  In addition to the polarization-dependent phase shifts arising from the atomic polarizability tensor in Eq.~\eqref{eq:phaseshift_tensoralpha}, the anisotropy of the  intensity for quasi-linearly polarized guide modes  leads to anisotropic atomic scattering of the $H$ and $V$ modes, giving rise to intrinsic birefringence, even for a purely scalar atomic polarizability.  In particular, choosing the quasi-$H$ axis, along the radial direction of the trapped atom leads to a phase delay of this mode relative the fast quasi-V axis.  This birefringence was exploited by Dawkins {\em et al.}~\cite{?} as mechanism implementing a QND measurement of the number of atoms trapped around the nanofiber, as we treat here.
 
 Consider $N_A$ atoms, each in a completely mixed state.  In that case the $\langle \hat{\alpha}_{ij} \rangle = \sum_{F,F'} \alpha_0 C_{J'FF'}^{(0)} \delta_{ij}$.  With atoms trapped along the quasi-H axis,  $\langle \hat{\alpha}_{HV} \rangle = \langle \hat{\alpha}_{HV} \rangle =0$, but  $\langle \hat{\alpha}_{HH} \rangle \neq  \langle \hat{\alpha}_{VV} \rangle$.  The resulting Hamiltonian, Eq. (?), takes the form
 \begin{equation}
@@ -594,7 +594,7 @@ To use this interaction to measure $N_A$, Dawkins {\em et al.} launched linearly
 \begin{equation}
 \hat{S}_3^{\rm out} = \hat{S}_3^{\rm in} + \chi \frac{N_A}{2} \hat{S}_2^{\rm in}.
 \end{equation}
-The minimum atom number detectable by this type of QND measurement is set by the shot noise is the probe, i.e.,
+The minimum atom number detectable by this type of QND measurement is set by the shot noise of the probe, i.e.,
 \begin{equation}
 \chi \frac{N_{\rm A, min}}{2} \langle \hat{S}_2^{\rm in}\rangle =  \langle \Delta \hat{S}_3^{\rm in}\rangle,
 \end{equation}
@@ -615,7 +615,7 @@ where
 \begin{align}
 \chi_{\mu,F} &=- \frac{4\pi \omega_0}{v_g} \bra{F,0}\hat{\alpha}_{\mu \mu}  \ket{F,0}=   n_g \sum_q  \sum_{F'} |o_{J'F'F;q} |^2 \left(\frac{\sigma_0}{\tilde{A}_{\mu,q}}\right) \left( \frac{\Gamma}{2 \Delta_{F,F'}}\right) ,\label{eq:chiHeu}
 \end{align}
-is the rotation angle on the Poincar\'{e} sphere for an atom in the clock state with $F=4,3$ labeling $\uparrow,\downarrow$ and photon with polarization $\mu = H,V$.  Here we have decomposed the polarizability tensor in in spherical basis components.  The relative oscillator strengths for driving $\sigma_\pm, \pi$ transitions between ground and excited hyperfine levels, $\ket{6S_{1/2}, F,M=0}\rightarrow \ket{6P_{J'},F',M'=q}$, including Wigner-6J and Clebsch-Gordan coefficients are
+is the rotation angle on the Poincar\'{e} sphere for an atom in the clock state with $F=4,3$ labeling $\uparrow,\downarrow$ and photon with polarization $\mu = H,V$.  Here we have decomposed the polarizability tensor into spherical basis components.  The relative oscillator strengths for driving $\sigma_\pm, \pi$ transitions between ground and excited hyperfine levels, $\ket{6S_{1/2}, F,M=0}\rightarrow \ket{6P_{J'},F',M'=q}$, including Wigner-6J and Clebsch-Gordan coefficients are
 \begin{equation}
  |o_{J'F'F;q} |^2 = (2J'+1)(2F+1) \left\{ \begin{array}{ccc} F'&7/2&J'\\ 1/2&1&F \end{array} \right\}^2 \left| \langle F' q | 1 q ;F 0 \rangle \right|^2
 \end{equation}
