@@ -1,15 +1,32 @@
 #Not tracked folders and files
+
 NanoFiberPaper_Ivan
+NanoFiberPaper_Ben
+NanoFiberPaper_Qi
+
+
 
 #TempFiles for tex.
+
 *.aux
+
 *.ilg
+
 *.log
+
 *.synctex.gz
+
 *.out
+
 *.blg
+
 *.dvi
+
 *.bak
+
 *~
 
+
 Nanofiber.pdf
+*_edited.*
+*.rtf
