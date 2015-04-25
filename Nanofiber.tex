@@ -231,7 +231,7 @@ is given by the Lipmann-Schwinger equation
 \mathbf{E}_{out}(\br) &=\mathbf{E}_{in}(\br)+\tensor{\mathbf{G}}^{(+)}(\br , \br'; \omega_0)\cdot 
 \tensor{\boldsymbol{\alpha}}\cdot \mathbf{E}_{out}(\br')\\
 &\approx \mathbf{E}_{in}(\br)+ \tensor{\mathbf{G}}^{(+)}(\br , \br'; \omega_0) \cdot 
-\tensor{\boldsymbol{\alpha}}\cdot \mathbf{E}_{in}(\br'),\label{eq:LipmannSchwingerBornApprox}
+\tensor{\boldsymbol{\alpha}}\cdot \mathbf{E}_{in}(\br'),
 \end{align}
 where $\mathbf{E}_{in}(\br)$ is the asymptotic input field, $\tensor{\mathbf{G}}^{(+)}$ is the retarded 
 Green's function solution, and in the second line we made the Born approximation valid for weak 
@@ -357,7 +357,7 @@ and
  transformations as a means to measure atoms and perform collective spin squeezing.
 
 \subsection{Heisenberg-Langevin picture solution and atomic response}
-The Lippmann-Schwinger solution, Eq.~\eqref{eq:LipmannSchwingerBornApprox} determines the input-output relation given linear atomic 
+The Lippmann-Schwinger solution, Eq. (?) determines the input-output relation given linear atomic 
 response as expressed by the polarizability tensor $\tensor{\alpha}$.  In this section we derive the 
 dispersive atomic response and quantized mode input-ouput relations using the Heisenberg-Langevin 
 picture for one-dimensional systems following the formalism laid out in~\cite{Haikuta}.  The positive 
@@ -508,7 +508,7 @@ in a particular ground sublevel $\ket{g}$, this can be expressed
 \delta  \phi_{p,g} =2\pi k_0 \frac{c}{v_g}\mathbf{u}^*_{+, p}(\br'_\perp) \cdot \bra{g} 
 \hat{\tensor{\boldsymbol{\alpha}}} \ket{g} \cdot \mathbf{u}_{+, p}(\br'_\perp) = -\sum_e \frac{2 \pi 
 |\bra{e}\hat{\mathbf{d}}\ket{g} \cdot \mathbf{u}_{+,p}(\br'_\perp)|^2}{\hbar \Delta_{eg}} 
-\left(\frac{\omega}{v_g}\right).\label{eq:phaseshift_tensoralpha}
+\left(\frac{\omega}{v_g}\right).
 \end{equation}
 
 In relation to Eq. (?) we see that $\delta \phi \propto (\sigma_0/\tilde{A}) (\Gamma_{1D}/\Delta)$, where 
@@ -532,7 +532,19 @@ explore below.
 
 
 \section{QND measurement of atoms}
-The dispersive interaction between the atoms and nanofiber guided photons provides a mechanism with which to perform a QND measurement on the atoms. The Lipmann-Schwinger input-ouput scattering equation, Eq.~\eqref{eq:LipmannSchwingerBornApprox}, follows in the time domain as the evolution of coarse-grained time modes.  We restricted here to two quasi-linear polarizations, $\mu =\{H,V\}$, of the single HE$_{11}$ guided mode propagating in the positive $z$-direction, with annihilation operator~\cite{},
+The dispersive interaction between the atoms and nanofiber guided photons provides a mechanism with which to perform a QND measurement on the atoms.  We take the atoms to be trapped along the $x$-axis at position $(r'_\perp =a, \phi' =0)$.  We restrict here to two quasi-linear polarizations, $\mu =\{H,V\}$, of the single HE$_{11}$ guided mode propagating in the positive $z$-direction.  Outside the fiber, the transverse mode functions are~\cite{?}
+\begin{align}
+u_{H,x}(r_\perp,\phi) &= u_0 \frac{\beta_0}{2 q}[(1-s)K_0(q r_\perp) - (1+s)K_2(q r_\perp) \cos(2 \phi)], \\
+u_{H,y}(r_\perp,\phi) &=-u_0 \frac{\beta_0}{2 h}  (1+s)K_2(q r_\perp) \sin(2 \phi) ,\\
+u_{H,z}(r_\perp,\phi) &=iu_0 \frac{J_1(ha)}{K_1{qa}} K_1(q r_\perp) \cos(\phi), \\
+u_{V,x}(r_\perp,\phi) &= u_0 \frac{\beta_0}{2 q}(1+s)K_2(q r_\perp) \sin(2 \phi)] ,\\
+u_{V,y}(r_\perp,\phi) &=u_0 \frac{\beta_0}{2 h} [(1-s)K_0(q r_\perp) - (1+s)K_2(q r_\perp) \cos(2 \phi)], \\
+u_{V,z}(r_\perp,\phi) &=iu_0 \frac{J_1(ha)}{K_1{qa}}K_1(q r_\perp) \sin(\phi), 
+\end{align}
+where $u_0$ is set by the normalization condition, $\int d^2 r_\perp n(r_\perp) | \mathbf{u}_\mu(\br_\perp)|^2=1$, $J_n$ and $K_n$ are Bessel functions of the first and second kind, $h=\sqrt{n^2 k_0^2 - \beta_0^2}$, $q=\sqrt{\beta_0^2- k_0^2}$, and $s = [(q a)^{-2} + (h a)^{-2}]/[J'_1(ha)/haJ_1(ha) + K'_1(qa)/qaK_1(qa)]$.  Note, the $\mathbf{u}_H$ and $\mathbf{u}_y$ adiabatically connect through the fiber taper to $x$- and $y$-linearly polarized plane wave modes.  In the nanofiber region $\mathbf{u}_H$ is purely $x$-polarized at $\phi = \phi/2$ and the  $\mathbf{u}_V$ is purely $y$-polarized at $\phi = 0$.  At all other $\phi$ the electric field is generally rotating along an ellipse.  
+
+
+The Lipmann-Schwinger input-ouput scattering equation, Eq. (?), follows in the time domain as the evolution of coarse-grained time modes.  For each  $\mu =\{H,V\}$, HE$_{11}$ mode, we define propagating annihilation operators~\cite{},
 \begin{equation}
 \hat{a}_\mu(z,t) = \int \frac{d \omega}{\sqrt{2 \pi}} \; \hat{a}_\mu e^{i(n_\mu(\omega) kz-\omega t)},
 \end{equation}
@@ -546,17 +558,17 @@ The quantized electric field operator for these guided modes, Eq. (?), is then
 \end{equation}
 whose interaction with atoms in the dispersive regime is governed by  light-shift Hamiltonian~\cite{Deutsch2010a}
 \begin{equation}  
-	\hat{H}_{LS}   = - \sum_i \hat{\mathbf{E}}^{(-)}(\mathbf{r}'_i ; t ) \cdot \hat{\tensor{\boldsymbol{\alpha}}}^{(i)} \cdot \hat{\mathbf{E}}^{(+)}(\mathbf{r}'_i;t ).
+	\hat{H}_{LS}   = - \sum_i \hat{\mathbf{E}}^{(-)}(\mathbf{r}'_i ; t ) \cdot \hat{\tensor{\boldsymbol{\alpha}}}(i) \cdot \hat{\mathbf{E}}^{(+)}(\mathbf{r}'_i;t ).
 \end{equation}
-Here $\hat{\tensor{\boldsymbol{\alpha}}}^{(i)}$ is the polarizability tensor operator, Eq. (?), for an atom trapped near the nanofiber surface at position $\mathbf{r}'_i$. The Hamiltonian thus takes the form,
+Here $\hat{\tensor{\boldsymbol{\alpha}}}(i)$ is the polarizability tensor operator, Eq. (?), for an atom trapped near the nanofiber surface at position $\mathbf{r}'_i$. The Hamiltonian thus takes the form,
 \begin{align}  
-	\hat{H}_{LS}   &= -\frac{2 \pi \hbar \omega_0}{v_g} &\sum_i &\sum_{\mu,\nu} \hat{\alpha}^{(i)}_{\mu \nu}\; \hat{a}_{\mu}^\dag(z_i,t)  \hat{a}_{ \nu}(z_i,t) \\
-	&= -\frac{2 \pi \hbar \omega_0}{v_g} &\sum_i &  \left[\frac{\hat{\alpha}^{(i)}_{HH}+\hat{\alpha}^{(i)}_{VV}}{2} \right] \hat{S}_0(z_i,t) +  \left[\frac{\hat{\alpha}^{(i)}_{HH}-\hat{\alpha}^{(i)}_{VV}}{2} \right] \hat{S}_1(z_i,t) \nonumber \\
-	&&+ &\left[\frac{\hat{\alpha}^{(i)}_{HV}+\hat{\alpha}^{(i)}_{HV}}{2} \right] \hat{S}_2(z_i,t) +  \left[\frac{\hat{\alpha}^{(i)}_{HV}-\hat{\alpha}^{(i)}_{VH}}{2i} \right] \hat{S}_3(z_i,t)  \nonumber \\
+	\hat{H}_{LS}   &= -\frac{2 \pi \hbar \omega_0}{v_g} &\sum_i &\sum_{\mu,\nu} \hat{\alpha}_{\mu \nu}\; \hat{a}_{\mu}^\dag(z_i,t)  \hat{a}_{ \nu}(z_i,t) \\
+	&= -\frac{2 \pi \hbar \omega_0}{v_g} &\sum_i &  \left[\hat{\alpha}_{HH}+\hat{\alpha}_{VV} \right]_i \hat{S}_0(z_i,t) +  \left[\hat{\alpha}_{HH}-\hat{\alpha}_{VV} \right]_i \hat{S}_1(z_i,t) \nonumber \\
+	&&+ &\left[\hat{\alpha}_{HV}+\hat{\alpha}_{HV} \right]_i \hat{S}_2(z_i,t) + i  \left[\hat{\alpha}_{HV}-\hat{\alpha}_{VH} \right]_i \hat{S}_3(z_i,t)  \nonumber \\
 	\end{align}
 where
 \begin{equation}  
-\hat{\alpha}^{(i)}_{\mu \nu}= \mathbf{u}^*_\mu(r'_\perp,\phi')  \cdot \hat{\tensor{\boldsymbol{\alpha}}}^{(i)} \cdot \mathbf{u}_\nu(r'_\perp,\phi'),
+\hat{\alpha}_{\mu \nu}(i)= \mathbf{u}^*_\mu(r'_{\perp i},\phi'_i)  \cdot \hat{\tensor{\boldsymbol{\alpha}}}(i) \cdot \mathbf{u}_\nu(r'_{\perp i},\phi'_i),
 \end{equation}
 and 
 \begin{align}
@@ -578,275 +590,84 @@ We explore a QND measurement of cesium atoms in the hyperfine manifold of the el
 \hat{\alpha}_{ij} &= \hat{\alpha}_{ij}^{(0)}(F',F)+\hat{\alpha}_{ij}^{(1)}(F',F)+\hat{\alpha}_{ij}^{(2)}(F',F)\\
 &=\sum_{F,F'} \alpha_0 \left[ C_{J'FF'}^{(0)} \delta_{ij}+ iC_{J'FF'}^{(1)}\epsilon_{ijk}\hat{F}_k+ C_{J'FF'}^{(2)}\left(\frac{1}{2} ( \hat{F}_i\hat{F}_j +\hat{F}_j\hat{F}_i )-\frac{1}{3}\hat{\mathbf{F}}^2 \delta_{ij} \right) \right],
 \end{align}
-where $\hat{\mathbf{F}}$ is the hyperfine spin operator, $\alpha_0 = -(\sigma_0/4\pi k_0) (\Gamma/ \Delta_{F'F})$ is the characteristic dynamic polarizability for a scattering cross section $\sigma_0 = 3 \lambda^2/2\pi$, and $C_{J'FF'}^{(K)}$ are the tensor expansion coefficients~\cite{?}.  The nanofiber geometry gives rise to unique features of polarization spectroscopy not appearing in free space.  In addition to the polarization-dependent phase shifts arising from the atomic polarizability tensor in Eq.~\eqref{eq:phaseshift_tensoralpha}, the anisotropy of the  intensity for quasi-linearly polarized guide modes  leads to anisotropic atomic scattering of the $H$ and $V$ modes, giving rise to intrinsic birefringence, even for a purely scalar atomic polarizability.  In particular, choosing the quasi-$H$ axis, along the radial direction of the trapped atom leads to a phase delay of this mode relative the fast quasi-V axis.  This birefringence was exploited by Dawkins {\em et al.}~\cite{?} as mechanism implementing a QND measurement of the number of atoms trapped around the nanofiber, as we treat here.
+where $\hat{\mathbf{F}}$ is the hyperfine spin operator, $\alpha_0 = -(\sigma_0/8\pi k_0) (\Gamma/\Delta_{F'F})$ is the characteristic dynamic polarizability for a scattering cross section $\sigma_0 = 3 \lambda^2/2\pi$, and $C_{J'FF'}^{(K)}$ are the tensor expansion coefficients~\cite{?}.  The nanofiber geometry gives rise to unique features of polarization spectroscopy not appearing in free space.  In addition to the polarization-dependent phase shifts arising from the atomic polarizability tensor in Eq. (?), the anisotropy of the  intensity for quasi-linearly polarized guide modes  leads to anisotropic atomic scattering of the $H$ and $V$ modes, giving rise to intrinsic birefringence, even for a purely scalar atomic polarizability.  In particular, choosing the quasi-$H$ axis, along the radial direction of the trapped atom leads to a phase delay of this mode relative the fast quasi-V axis.  This birefringence was exploited by Dawkins {\em et al.}~\cite{?} as mechanism implementing a QND measurement of the number of atoms trapped around the nanofiber, as we treat here.
 
 Consider $N_A$ atoms, each in a completely mixed state.  In that case the $\langle \hat{\alpha}_{ij} \rangle = \sum_{F,F'} \alpha_0 C_{J'FF'}^{(0)} \delta_{ij}$.  With atoms trapped along the quasi-H axis,  $\langle \hat{\alpha}_{HV} \rangle = \langle \hat{\alpha}_{HV} \rangle =0$, but  $\langle \hat{\alpha}_{HH} \rangle \neq  \langle \hat{\alpha}_{VV} \rangle$.  The resulting Hamiltonian, Eq. (?), takes the form
 \begin{equation}
-\hat{H} = \hbar \chi \frac{N_A}{2} \hat{S}_1(0,t),
+\hat{H} = -2\pi \hbar  n_g k_0 N_A \left(\hat{\alpha}_{HH} - \hat{\alpha}_{VV}\right) =\hbar \chi N_A \hat{S}_1(0,t),
 \end{equation}
 where we have excluded the coupling to $\hat{S}_0$, which plays no role in the polarization spectroscopy, and have neglected the retardation associated with the different positions of the atoms along $z$.  The rotation angle on the Poincar\'{e} sphere is
 \begin{equation}
-\chi = n_g  \frac{\sigma_0}{\tilde{A}}  \sum_{F,F'}  C_{J'FF'}^{(0)} \frac{\Gamma}{2\Delta_{F'F}}.
+\chi = n_g  \frac{\sigma_0}{\tilde{A}}  \sum_{F,F'}  C_{J'FF'}^{(0)} \frac{\Gamma}{4 \Delta_{F'F}}.
 \end{equation}
-where we have defined $\tilde{A} \equiv \left(|\mathbf{u}_{HH}(\br'_\perp)|^2 - |\mathbf{u}_{VV}(\br'_\perp)| ^2 \right)^{-1}$, as the inverse the effective area that characterizes birefringence coupling constant. The effective optical density per atom is $\sigma_0/\tilde{A}$.  {\color{red}  Give some characteristic numbers.}  
+where we have defined $\tilde{A}^{-1} \equiv |\mathbf{u}_{H}(\br'_\perp)|^2 - |\mathbf{u}_{V}(\br'_\perp)| ^2 $ as the inverse the effective area that characterizes the birefringence coupling constant. The effective optical density per atom is $\sigma_0/\tilde{A}$.  {\color{red}  Give some characteristic numbers.}  
 
 To use this interaction to measure $N_A$, Dawkins {\em et al.} launched linearly polarized light at 45$^\circ$, i.e. along the Stoke $S_2$ axis, and measured the $S_3$ output component according to the input-output relation dictated by Hamiltonian Eq(?),
 \begin{equation}
-\hat{S}_3^{\rm out} = \hat{S}_3^{\rm in} + \chi \frac{N_A}{2} \hat{S}_2^{\rm in}.
+\hat{S}_3^{\rm out} = \hat{S}_3^{\rm in} + N_A \hat{S}_2^{\rm in}.
 \end{equation}
-The minimum atom number detectable by this type of QND measurement is set by the shot noise of the probe, i.e.,
+The minimum atom number detectable by this type of QND measurement is set by the shot noise is the probe, i.e.,
 \begin{equation}
-\chi \frac{N_{\rm A, min}}{2} \langle \hat{S}_2^{\rm in}\rangle =  \langle \Delta \hat{S}_3^{\rm in}\rangle,
+\chi N_{\rm A, min} \langle \hat{S}_2^{\rm in}\rangle =  \langle \Delta \hat{S}_3^{\rm in}\rangle,
 \end{equation}
-where $\langle \hat{S}_2^{\rm in}\rangle  =N_L/2$ in the input Stokes vector magnitude and  $\langle  \Delta\hat{S}_3^{\rm in}\rangle = \sqrt{N_L/2}$ is the input shot noise rms for $N_L = P_{\rm in}\tau/\hbar\omega$ photons, given an input power, $ P_{\rm in}$.  This resolution is determined by the integration time of the signal, $\tau$, which in turn is limited by photon scattering into reflected and unguided modes. As a coarse approximation, we take this time to be $\tau=\gamma_s^{-1}$, where $\gamma_s$ is the photon scattering rate in free space.  For a detuning $\Delta$ large compared to the hyperfine splitting on the D2 line, $\gamma_s \hbar \omega_0=  \sigma \frac{\Gamma^2}{4 \Delta^2}\frac{P_{\rm in}}{A_{\rm in}}$, where $\sigma = (2/3) \sigma_0$ is the resonant scattering cross section arising from the scalar polarizability and $A_{\rm in}=|\mathbf{u}_{HH}(\br'_\perp)|^{-2}$ is the effective area defined by the input intensity at the position of the atom.  The rotation angle, $\chi =n_g  \frac{\sigma}{\tilde{A}}\frac{\Gamma}{2\Delta}$.  Thus, the minimum detectable number of atoms within the shot-noise resolution is on the order of
+where $\langle \hat{S}_2^{\rm in}\rangle  =N_L/2$ in the input Stokes vector magnitude and  $\langle  \Delta\hat{S}_3^{\rm in}\rangle = \sqrt{N_L/2}$ is the input shot noise rms for $N_L = P_{\rm in}\tau/\hbar\omega$ photons, given an input power, $ P_{\rm in}$.  This resolution is determined by the integration time of the signal, $\tau$, which in turn is limited by photon scattering into reflected and unguided modes. As a coarse approximation, we take this time to be $\tau=\gamma_s^{-1}$, where $\gamma_s$ is the photon scattering rate in free space.  For a detuning $\Delta$ large compared to the hyperfine splitting on the D2 line, $\gamma_s \hbar \omega_0=  \sigma \frac{\Gamma^2}{4 \Delta^2}\frac{P_{\rm in}}{A_{\rm in}}$, where $\sigma = (2/3) \sigma_0$ is the resonant scattering cross section arising from the scalar polarizability and $A_{\rm in}=|\mathbf{u}_{H}(\br'_\perp)|^{-2}$ is the effective area defined by the input intensity at the position of the atom.  The rotation angle, $\chi =n_g  \frac{\sigma}{\tilde{A}}\frac{\Gamma}{2\Delta}$.  Thus, the minimum detectable number of atoms within the shot-noise resolution is on the order of
 \begin{equation}
-N_{\rm A, min} = \frac{2}{\chi}\sqrt{\frac{2}{N_L}} = n_g \sqrt {\frac{A_{\rm in}}{\sigma}} \frac{  2 \sqrt{2}}{1-r},
+N_{\rm A, min} = \frac{1}{\chi}\sqrt{\frac{2}{N_L}} = n_g \sqrt {\frac{A_{\rm in}}{\sigma}} \frac{  2 \sqrt{2}}{1-r},
 \end{equation}
-where the ratio $r \equiv |\mathbf{u}_{VV}(\br'_\perp)| ^2/|\mathbf{u}_{HH}(\br'_\perp)|^2$ characterizes the birefringence. {\color{red}  Give numbers}.
+where the ratio $r \equiv |\mathbf{u}_{V}(\br'_\perp)| ^2/|\mathbf{u}_{H}(\br'_\perp)|^2$ characterizes the birefringence. {\color{red}  Give numbers}.
 
-The same birefringent interaction can be employed in a QND measurement to squeeze the projection noise of the collective spin degrees of freedom of the atom ensemble.  In particular, consider squeezing of the uncertainty associated with the ``clock transition" of cesium.  Defining $\ket{\uparrow} = \ket{6S_{1/2}, F=4, M=0}$ and $\ket{\downarrow} = \ket{6S_{1/2}, F=3, M=0}$, the quantum uncertainty in the collective pseudo-spin $J_3 = \sum_{i=1}^{N_A} \sigma_z^{(i)}/2$ fundamentally limits the precision of atomic clocks.  Consider, the Hamiltonian, Eq. (?), but now restrict to the clock-state subspace. Again the  rank-1 ``vector light shift" vanishes since $\langle \uparrow | \hat{F}_k |\uparrow \rangle =\langle \downarrow | \hat{F}_k |\downarrow \rangle = 0$ for any choice of quantization axis. Thus, the terms in the Hamiltonian that give rise to Faraday effect vanish, leaving only birefringent coupling.  The resulting Hamiltonian takes the form
+The same birefringent interaction can be employed in a QND measurement to squeeze the projection noise of the collective spin degrees of freedom of the atom ensemble.  In particular, consider squeezing of the uncertainty associated with the ``clock transition" of cesium.  Defining $\ket{\uparrow} = \ket{6S_{1/2}, F=4, M=0}$ and $\ket{\downarrow} = \ket{6S_{1/2}, F=3, M=0}$, the quantum uncertainty in the collective pseudo-spin $J_3 = \sum_{i=1}^{N_A} \sigma_z^{(i)}/2$ fundamentally limits the precision of atomic clocks.  Consider, the Hamiltonian, Eq. (?), but now restrict to the clock-state subspace. Again the  rank-1 ``vector light shift" vanishes since $\langle \uparrow | \hat{F}_k |\uparrow \rangle =\langle \downarrow | \hat{F}_k |\downarrow \rangle = 0$ for any choice of quantization axis. Thus, the terms in the Hamiltonian that give rise to Faraday effect vanish, leaving only birefringent coupling. The resulting Hamiltonian takes the form
 \begin{align}
-\hat{H} = \hbar \Big\{ & \left[ \big( \chi_{H,\uparrow} + \chi_{H,\downarrow}\big) + \big(\chi_{V,\uparrow} + \chi_{V,\downarrow}\big) \right] \frac{N_A}{2} \hat{S}_0 \nonumber \\
-+ & \left[ \big( \chi_{H, \uparrow} + \chi_{H,\downarrow}\big) - \big( \chi_{V,\uparrow} + \chi_{V,\downarrow} \big)\right]  \frac{N_A}{2}\hat{S}_1 \nonumber \\
-+ & \left[ \big( \chi_{H,\uparrow} - \chi_{H,\downarrow}\big) + \big(\chi_{V,\uparrow} - \chi_{V,\downarrow} \big) \right] \hat{J}_3 \hat{S}_0 \nonumber \\
-+ & \left[ \big( \chi_{H,\uparrow} - \chi_{H,\downarrow}\big) - \big(\chi_{V,\uparrow} - \chi_{V,\downarrow} \big) \right]  \hat{J}_3 \hat{S}_1\Big\},
+\hat{H}_{LS} = \hbar \Big\{ & \left[ \big( \chi_{H,\uparrow} +\chi_{V,\uparrow} \big) + \big( \chi_{H,\downarrow}+ \chi_{V,\downarrow}\big) \right] \frac{N_A}{2} \hat{S}_0 \nonumber \\
++ & \left[ \big( \chi_{H, \uparrow} - \chi_{V,\uparrow} \big) + \big(\chi_{H,\downarrow} - \chi_{V,\downarrow} \big)\right]  \frac{N_A}{2}\hat{S}_1 \nonumber \\
++ & \left[ \big( \chi_{H,\uparrow} +\chi_{V,\uparrow} \big) - \big( \chi_{H,\downarrow} + \chi_{V,\downarrow}\big) \right] \hat{J}_3 \hat{S}_0 \nonumber \\
++ & \left[  \big( \chi_{H, \uparrow} - \chi_{V,\uparrow} \big) - \big(\chi_{H,\downarrow} - \chi_{V,\downarrow} \big) \right]  \hat{J}_3 \hat{S}_1\Big\},
 \end{align}
 where 
+\begin{equation}
+\chi_{\mu,F} = - 2\pi n_g k_0 \bra{F,0}\hat{\alpha}_{\mu \mu}  \ket{F,0}
+\end{equation}
+is the rotation angle on the Poincar\'{e} sphere for an atom in the clock state with $F=4,3$ labeling $\uparrow,\downarrow$ and photon with polarization $\mu = H,V$. 
+
+
+The first term in the Hamiltonian, Eq. (?), is an overall scalar shift and thus does not contribute to the relative dynamics.  The second term is a constant birefringence, independent of the atomic state, that we discussed above in the QND measurement of atom number.  In the context of squeezing, it can be canceled with a compensating waveplate as long as the atom number remains constant. The third term does not affect polarization spectroscopy, but will act to rotate the pseudo-spin around the $\mathbf{3}$-axis of the Bloch sphere.  While this does not affect the squeezing of project noise in $J_3$, it adds to uncertainty in the mean spin direction, which affects the metrologically relevant squeezing.   This term can, however, be canceled by choosing a ``magic wavelength" at which the light shift on $\ket{\uparrow}$ equals that on $\ket{\downarrow}$, i.e., 
+$\chi_{H,\uparrow} +\chi_{V,\uparrow}  = \chi_{H,\downarrow} + \chi_{V,\downarrow}.$ The remaining QND interaction Hamiltonian is
+\begin{equation}
+\hat{H}_{LS} = \hbar \chi_{eff} \hat{J}_3 \hat{S}_1,
+\end{equation}
+where $\chi_{eff} = \big( \chi_{H, \uparrow} - \chi_{V,\uparrow} \big) - \big(\chi_{H,\downarrow} - \chi_{V,\downarrow} \big) = 2(\chi_{H, \uparrow}-\chi_{H, \downarrow})$ is the effective rotation angle at the magic wavelength.
+
+The magnitude of the coupling angle, $\chi_{eff}$ depends on the maximizing the difference in the response of the atom to $H$ and $V$ modes in a way that depends on its spin-state.  This response will depend on the quantization axis that defines the clock state with projection $M=0$.  We obtain an compact expression for this by using the irreducible tensor decomposition of the atomic polarizability, Eq. (?).  Let $\mathbf{e}_\pi$ define the quantization axis and $\mathbf{e}_{1}$, $\mathbf{e}_{2}$ define two orthogonal linear $\sigma$ polarizations.  Then, because of the azimuthal symmetry of clock state around the $\mathbf{e}_\pi$ axis, the polarizability tensor is diagonal in the basis.  Note, $\langle F,0 | \hat{F}_{\pi}^2| F,0 \rangle =0$, $\langle F,0 | \hat{F}_{1}^2| F,0 \rangle = \langle F,0 | \hat{F}_{2}^2| F,0 \rangle = \langle F,0 | \hat{\mathbf{F}}^2| F,0 \rangle /2 =F(F+1)/2$.  It thus follows that the expectation value of the  irreducible rank-2 polarizability tensor is
+\begin{equation}
+\langle F,0 | \hat{\tensor{\boldsymbol{\alpha}}}^{(2)}| F,0 \rangle  = -\frac{\sigma_0}{8\pi k_0} F(F+1) \left\{ \frac{\tensor{\boldsymbol{1}} - 3 \mathbf{e}_\pi \mathbf{e}_\pi }{6} \right\} \sum_{F'} C^{(2)}_{J'F'F} \frac{\Gamma}{ \Delta_{F'F}},
+\end{equation}
+and from Eq. (?),
 \begin{align}
-\chi_{\mu,F} &=- \frac{4\pi \omega_0}{v_g} \bra{F,0}\hat{\alpha}_{\mu \mu}  \ket{F,0}=   n_g \sum_q  \sum_{F'} |o_{J'F'F;q} |^2 \left(\frac{\sigma_0}{\tilde{A}_{\mu,q}}\right) \left( \frac{\Gamma}{2 \Delta_{F,F'}}\right) ,\label{eq:chiHeu}
+\chi_{\mu,F} &= n_g \sigma_0 \sum_{F'}  \left\{C^{(0)}_{J'F'F}\left|\mathbf{u}_\mu(\br'_\perp)\right|^2+ C^{(2)}_{J'F'F} \frac{F(F+1)}{6}\left[\left|\mathbf{u}_\mu(\br'_\perp)\right|^2- 3 \left|\mathbf{e}_\pi \cdot \mathbf{u}_\mu(\br'_\perp)\right|^2 \right]\right\}   \frac{\Gamma}{4 \Delta_{F'F}} \nonumber \\
+&  = n_g \sigma_0\left(  a_{F} \left|\mathbf{u}_\mu(\br'_\perp)\right|^2 + b_{F} \left|\mathbf{e}_\pi \cdot \mathbf{u}_\mu(\br'_\perp)\right|^2 \right),
 \end{align}
-is the rotation angle on the Poincar\'{e} sphere for an atom in the clock state with $F=4,3$ labeling $\uparrow,\downarrow$ and photon with polarization $\mu = H,V$.  Here we have decomposed the polarizability tensor into spherical basis components.  The relative oscillator strengths for driving $\sigma_\pm, \pi$ transitions between ground and excited hyperfine levels, $\ket{6S_{1/2}, F,M=0}\rightarrow \ket{6P_{J'},F',M'=q}$, including Wigner-6J and Clebsch-Gordan coefficients are
+where
 \begin{equation}
- |o_{J'F'F;q} |^2 = (2J'+1)(2F+1) \left\{ \begin{array}{ccc} F'&7/2&J'\\ 1/2&1&F \end{array} \right\}^2 \left| \langle F' q | 1 q ;F 0 \rangle \right|^2
+a_F = \sum_{F'}  C^{(0)}_{J'F'F} \frac{\Gamma}{4 \Delta_{F'F}},\; \;\; b_F = \frac{F(F+1)}{6}\sum_{F'} C^{(2)}_{J'F'F}  \frac{\Gamma}{4 \Delta_{F'F}}.
 \end{equation}
-The effective area of mode area,
+Birefringence arises from the first term due to the anisotropy of the intensity of the $H$ and $V$ modes and in the second term due to the anisotropy of tensor atomic response, which depends on the quantization axis of the atom.  At the magic wavelength the effective rotation angle $\chi_{eff}$ can then be written
 \begin{equation}
-\tilde{A}_{\mu,q} = |\mathbf{e}^*_q \cdot   \mathbf{u}_\mu(r^\prime\!_\perp,\phi')|^{-2},
+\chi_{eff} = n_g\frac{\sigma_0}{A_{eff}} \frac{\Gamma}{4\Delta_{eff}}
 \end{equation}
-defines this interaction relative to the unit-oscillator strength scattering cross section.
+where
+\begin{equation} 
+\frac{\Gamma}{4\Delta_{eff}} = b_5 - b_4 = \sum_{F'}  \left( C^{(2)}_{J'F'5}\frac{5\Gamma}{4\Delta_{F',5}} -  C^{(2)}_{J'F'4}\frac{5\Gamma}{6 \Delta_{F',4} } \right),
+\end{equation}
+and
+\begin{equation}
+\frac{1}{A_{eff}} = \frac{\left|\mathbf{e}_\pi \cdot \mathbf{u}_H(\br'_\perp)\right|^2 \left|\mathbf{u}_V(\br'_\perp)\right|^2 - 
+\left|\mathbf{e}_\pi \cdot \mathbf{u}_V(\br'_\perp)\right|^2 \left|\mathbf{u}_H(\br'_\perp)\right|^2}
+{ \left|\mathbf{u}_H(\br'_\perp)\right|^2 +\left|\mathbf{u}_V(\br'_\perp)\right|^2 }.
+\end{equation}
+The quantization axis that maximizes $\chi_{eff}$ is that which minimizes $A_{eff}$.
+
 
 \missingfigure{Poincare sphere diagram with spin squeezing effect.}
-
-The first term in the Hamiltonian, Eq. (?), is an overall scalar shift and thus does not contribute to the relative dynamics.  The second term is a constant birefringence, independent of the atomic state, that we discussed above in the QND measurement of atom number.  In the context of squeezing, it can be canceled with a compensating waveplate as long as the atom number remains constant. The third term does not affect polarization spectroscopy, but will act to rotate the pseudo-spin around the $\mathbf{3}$-axis of the Bloch sphere.  
-
-Using the magic frequencies and eliminating the other noise terms of the Hamiltonian, we can prepare the atoms in a \textit{spin coherent state}, $ \ket{\Psi_A}=\left(\frac{\ket{\uparrow}+\ket{\downarrow}}{\sqrt{2}}\right)^{\otimes N_A} $, and the input light in the $ D $ state, $ \vec{D}=\left( \vec{H}+\vec{V}\right)/\sqrt{2} $, which is pointing along $ S_2 $ direction on the Poincare sphere. We apply a \textit{quantum non-demolition} (QND) measurement of the polarization state of the output light along the $ S_3 $-axis after the photon-atom interaction.
-The measurement result will reflect the rotating angle, $ \varphi_{_N} = N_A \left| \chi_{e\!f\!f} \right| $, due to the photon-atom interaction, and hence we can calculate the atom number.
-
-As a result of the backaction of the polarization measurement, there is a squeezing to the collective spin state which results in a reduced uncertainty of measurement output. To see this, we assume the photon For now, we consider the birefringence measurement with an initial input laser polarization state of . For a large number of photon incidence, we can set 
-\begin{align}
-\hat{a}_H \rightarrow i\sqrt{\frac{\dot{N}_L}{2}} + \hat{a}_H, &\quad\quad
-\hat{a}_V \rightarrow i\sqrt{\frac{\dot{N}_L}{2}} + \hat{a}_V,
-\end{align}
-where each operator has a classical photon flux number and a quantum operator to indicate the quantum fluctuation of the photon flux. In the case of large input photon flux, one can show that the Stokes operators can be given by
-\begin{align}
-\hat{S}_0 \approx \frac{\dot{N}_L}{2}, &\quad 
-\hat{S}_1 
-\approx \sqrt{\frac{\dot{N}_L}{2}} \hat{P}_{\bar{D}}, \\ 
-\hat{S}_2 \approx \frac{\dot{N}_L}{2}, &\quad
-\hat{S}_3 
-\approx \sqrt{\frac{\dot{N}_L}{2}} \hat{X}_{\bar{D}},
-\end{align}
-where we have defined $ \hat{a}_{\bar{D}} = \frac{\hat{a}_H -\hat{a}_V}{\sqrt{2}} $ as the photon annihilation operator of the anti-diagonal linearly polarized light modes, and $ \hat{P}_{\bar{D}}=\frac{\hat{a}_{\bar{D}}-\hat{a}_{\bar{D}\dg}}{\sqrt{i2}} $ and $ \hat{X}_{\bar{D}}=\frac{\hat{a}_{\bar{D}}+\hat{a}_{\bar{D}\dg}}{\sqrt{2}} $ as the two quadratures in the phase space of the complex amplitude represented by $ \hat{a}_{\bar{D}} $. The approximation we made above is known as \textit{Holstein-Primakoff approximation}\index{approximation!Holstein-Primakoff approximation}. Using this approximation, the uncertainty area on the Poincare sphere can be mapped to a flat phase plane. 
-
-Notice that, the $ \hat{S}_1 $ and $ \hat{S}_3 $ still satisfy the usual $ SU(2) $ Lie algebra relationship that 
-\begin{align}
-[\hat{S}_3,\hat{S}_1] = i \hat{S}_2 \approx i\frac{\dot{N}_L}{2}
-\end{align}
-which is important for us to choose $ \hat{S}_1 $ as the rotation axis and $ \hat{S}_3 $ as the observation axis on the Poincare sphere for our QND measurement as will be discussed later. 
-
-Similarly, when the atom number is large, one can also map the angular momentum/spin operators to the quadrature operators. However, we will try to avoid applying this approximation to the spin operators, since the total number of the atoms are not too large in the context of the nanofiber platform. 
-
-Suppose the measurement is weak, and we can follow the procedure used in free-space spin-squeezing analysis to estimate the spin squeezing parameter for the nanofiber configuration. 
-The expectation value of the $ \hat{J}_3 $ operator, $ \Delta J_3^2 $, in the first-order approximation may obey the differential equation given by 
-\begin{align}
-\dt{\Delta J_3^2} &= -\kappa \left(\Delta J_3^2 \right)^2 -\gamma_s^+ \Delta J_3^2 + \gamma_+\frac{N_A}{4},
-\end{align}
-where $ \kappa=\dot{N}_A |\chi_{\rm eff}|^2$. 
-Even only with $1000$ atoms initially prepared along $ J_1 $-axis, one may be able to achieve $ \sim 20 $ dB of squeezing based on the Wineland squeezing parameter ($ \xi\approx \Delta J_3^2 \expect{\hat{N}_A}/\expect{\hat{J}_1}^2 $) estimation shown in Fig.~\ref{fig:xi_magic}. 
-
-\begin{figure}[ht]
-\begin{minipage}{.45\linewidth}
-\centering
-\subfloat[]{\label{fig:xi_magic33_yq}\includegraphics[scale=0.55]{./Figs/xi_magic33_yq}}
-\end{minipage}
-\begin{minipage}{.45\linewidth}
-\centering
-\subfloat[]{\label{fig:xi_magic44_yq}\includegraphics[scale=0.55]{./Figs/xi_magic44_yq}}
-\end{minipage}
-\par\medskip
-\begin{minipage}{.45\linewidth}
-\centering
-\subfloat[]{\label{fig:xi_magic33_zq}\includegraphics[scale=0.55]{./Figs/xi_magic33_zq}}
-\end{minipage}
-\begin{minipage}{.45\linewidth}
-\centering
-\subfloat[]{\label{fig:xi_magic44_zq}\includegraphics[scale=0.55]{./Figs/xi_magic44_zq}}
-\end{minipage}
-%\centering\makebox[\textwidth]{
-%\includegraphics[width=0.65\textwidth]{./Figs/xi_magic44_yq}}
-\caption{Spin squeezing evolution as a function of time with $ N_A=1000 $ atoms trapped at $ r'\!_\perp =1.5a $ along the $ H/x $-axis of the nanofiber. Subfigs.~\protect\subref{fig:xi_magic33_yq} and~\protect\subref{fig:xi_magic33_zq} use the magic frequencies close to the $ F=3\leftrightarrow F'=3 $ transition frequency $ \omega_{33'} $. Subfigs.~\protect\subref{fig:xi_magic44_yq} and~\protect\subref{fig:xi_magic44_zq} used the magic frequencies close to $ \omega_{44'} $. The magic frequencies and spin squeezing parameters are different for different choices of quantization axis. Subfigs.~\protect\subref{fig:xi_magic33_yq} and~\protect\subref{fig:xi_magic44_yq} define $ \phi $-axis as the quantization axis. In contrast, subfigs.~\protect\subref{fig:xi_magic33_zq} and~\protect\subref{fig:xi_magic44_zq} use $ z $-axis as the quantization axis. As can be seen, when the quantization axis close to the local field direction, the spin squeezing parameter can reach to a higher value. Other parameters used: $ \Omega/2\pi=52 $ MHz (does not matter). }\label{fig:xi_magic}
-\end{figure}
-
-%$ \Delta J_{out}^2 =\frac{\Delta J_{in}^2}{1+\xi}=\frac{J}{2(1+\xi)} $, $ \bar{L}(l)=\frac{l}{1+\xi} $, and $ \xi\equiv \frac{\Delta J_{in}^2}{\sigma^2}=\frac{J}{2\sigma^2}=\frac{\chi_{e\!f\!f}^2}{4}N_A\dot{N}_L $ is the measurement strength which characterizes the measurement backaction and the squeezing effect. The ability to resolve the initial quantum variance of $ J_3 $ within the resolution of the meter is the key to QND squeezing.
-
-
-
-
-\subsection{Birefringence and Faraday spectroscopies}
-
-\textcolor{blue}{Discuss the homodyne detection and sensitivity to the atom number and operating frequency in the shot noise limit.  It relates to (i) the phase shift and (ii) the shot noise resolution of the polarimeter. Should cover expectation value and fluctuation measurements.}
-
-For the birefringence measurement of the clock states discussed above, the fluctuation of the $ S_3 $ measurement is a combined effect of the shot noise fluctuation of the photon detector and the projection noise as the signal to determine the collective spin state. The square variance of the measurement is
-\begin{align}
-\Delta L^2 &= \Delta P^2_{SN} + \Delta P^2_S ,
-\end{align}
-where $ \Delta P^2_{SN} $ and $ \Delta P^2_{S} $ are the square variances of the shot noise and the signal, respectively. 
-The smallest detectable spin polarization change from the input state is determined by the shot noise limit condition that 
-\begin{align}
-\Delta P_S = \Delta P_{SN},
-\end{align}
-where the standard variance of the signal can be estimated by
-\begin{align}
-\Delta P_S=P_0 \sin(\varphi_{_N}) \approx P_0 \varphi_{_N}
-\end{align}
-and the shot noise variance is determined by~\cite{Smith2003a}
-\begin{align}
-\Delta P_{SN} = \sqrt{\frac{P_0 \hbar \omega_0 }{2\eta \tau_{pd}}}.
-\end{align}
-Above, we have defined $P_0$ as the power of the input laser field, $\varphi_{_N}$ as the angle change 
-of the output light on the Poincare sphere due to $N_A$ atoms, $\eta$ as the quantum efficiency of the 
-photon detector, and $\tau_{pd}$ as the time constant of the detector. 
-
-Using the magic wavelengths, we have 
-\begin{align}
-\chi_{\rm eff} (\omega) &= 2\left( \chi_{H,\uparrow} -\chi_{H,\downarrow} \right)\\
-&= 2\sigma_0 n_g \sum_q |\mathbf{e}_q\cdot \mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 \sum_{F'} 
-\frac{\Gamma}{4} \left( \frac{|o^{J'F'}_{J4} C^{4 0;1q}_{F' q}|^2 }{\Delta_{4F'}+i\Gamma/2} - 
-\frac{|o^{J'F'}_{J3} C^{3 0;1q}_{F' q}|^2 }{\Delta_{3F'}+i\Gamma/2}  \right),
-\end{align}
-or, in the dyadic Green function language from Equ.~\ref{eq:chiHGalpha}, 
-\begin{align}
-\chi_{\rm eff} (\omega)
-&=  8\pi k_0^2 \tr \left\{ \mathrm{Im}\left[ 
-\mathbf{G}^*_{HH}(\br^\prime\!_\perp,\br^\prime\!_\perp) \right] \cdot \left( 
-\boldsymbol{\alpha}^{40;40} - \boldsymbol{\alpha}^{30;30} \right) 
-\right\} . 
-\end{align}
-For the $ D_1 $ line transition, for example, there are two magic frequencies at $ \omega_3^m $ and $ \omega_4^m $ which close to the $ F=3 
-\leftrightarrow F'=3 $ and $ F=4\leftrightarrow F'=4 $ transitions, respectively. In general, if we use the magic frequency, $ \omega_F^{\rm magic} $, which close to the $ F\leftrightarrow 
-F'=F $ 
-transition, we would have
-\begin{align}
-\chi_{\rm eff} (\omega_F^m) &= 8\pi k_0^2 \tr \left\{ \mathrm{Im}\left[ 
-\mathbf{G}^*_{HH}(\br^\prime\!_\perp,\br^\prime\!_\perp) \right] \cdot \left( \boldsymbol{\alpha}^{40;40}(\omega_F^m) -   \boldsymbol{\alpha}^{30;30}(\omega_F^m) \right) 
-\right\}\\
-&= \sigma_0 n_g \frac{\Gamma}{2} \sum_q |\mathbf{e}_q\cdot 
-\mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 \sum_{F'} 
- \left( \frac{|o^{J'F'}_{J4} C^{4 0;1q}_{F' q}|^2 }{\Delta_{4F'}+i\Gamma/2} - 
- \frac{|o^{J'F'}_{J3} C^{3 0;1q}_{F' q}|^2 }{\Delta_{3F'}+i\Gamma/2}  \right),
-\end{align}
-The angle change on the Poincare sphere using the probe light at the magic frequency $ \omega_F^m $ can be given by
-\begin{align}
-\varphi_{_N} (\omega_F^m) &= N_A \left| \chi_{e\!f\!f} (\omega_F^m) \right| \\
-&=   N_A \sigma_0 n_g\frac{\Gamma}{2} \sum_q |\mathbf{e}_q\cdot 
-\mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 
-\sum_{F'}  \left( \frac{|o^{J'F'}_{J3} C^{3 0;1q}_{F' q}|^2 }{\Delta_{3F'} } - 
- \frac{|o^{J'F'}_{J4} C^{4 0;1q}_{F' q}|^2 }{\Delta_{4F'}}  \right).
-\end{align} 
-\textcolor{red}{We have ignored the decay rate whenever it is summed with the detuning terms.}
-
-Now, we consider the critical case that $\eta =100\%$ and $\tau_{pd} = \frac{1}{\gamma_s}$, where the 
-photon scattering rate
-\begin{align}
-\gamma_s &=\gamma_s (\omega_F)= \sum_{F,F'}\sigma(\Delta_{FF'}) \frac{I(\br')}{\hbar \omega_0}, 
-%\approx \sum_{F'}\sigma(\Delta_{FF'}) \frac{I(\br')}{\hbar \omega_0}  , 
-\end{align}
-where $ I $ is the intensity of the light, and the photon scattering cross-section
-\begin{align}
-\sigma(\Delta_{FF'}) &=\frac{\sigma_0}{1+\frac{4\Delta^2_{FF'}}{\Gamma^2}}=\frac{\sigma_0\Gamma^2}{\Gamma^2+4\Delta^2_{FF'}} \mathbin{\color{red} \approx \sigma_0 
-\frac{\Gamma^2}{4\Delta^2_{FF'}} \quad \text{(far detuning.)}}
-\end{align}
-Hence, by using the relationships given above, we can rewrite 
-\begin{align}
-\Delta P_{SN} (\omega_F^m) &=\frac{P_0\Gamma}{2}\sqrt{\frac{ \sigma_0 }{2A_{in}} \mathbin{\color{red}\sum_{F'} 
-\left( \frac{1}{\Delta_{3F'}^2}+\frac{1}{\Delta_{4F'}^2}\right) }},\\
-\Delta P_S (\omega_F^m) &= P_0  \varphi_{_N} (\omega_F^m) \nonumber\\
-&\approx  P_0 N_A 
-\sigma_0 n_g\frac{\Gamma}{2} 
-\sum_q 
-|\mathbf{e}_q\cdot 
-\mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 
-\sum_{F'}  \left( \frac{|o^{J'F'}_{J3} C^{3 0;1q}_{F' q}|^2 }{\Delta_{3F'} } - 
- \frac{|o^{J'F'}_{J4} C^{4 0;1q}_{F' q}|^2 }{\Delta_{4F'}}  \right) \\
-%&\approx  \frac{P_0 \Gamma}{2} N_A \sigma_0 n_g 
-%\sum_q |\mathbf{e}_q\cdot \mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 
-%\sum_{F'} \frac{|o^{J'F'}_{JF} C^{F 0;1q}_{F' q}|^2 }{\Delta_{FF'}}  , 
-\end{align}
-with the effective mode areas
-\begin{align}
-A_{in } &= \frac{P_0}{I(\br')}=\frac{2}{| \mathbf{u}_H(r'_{\!\perp})|^2+ | 
-\mathbf{u}_V(r'_{\!\perp})|^2}.
-\end{align}
-Therefore, the minimum detectable atom number, $ N_A^{min} $, can be obtained by forcing $ \Delta 
-P_s = \Delta P_{SN} $ as
-\begin{align}
-N_A^{min}(\omega_F^m) &= \sqrt{\frac{A_{\rm eff}^2}{2A_{in}\sigma_0}} 
-\end{align}
-with the effective mode area defined as
-\begin{align}
-A_{\rm eff} &= \frac{ \sqrt{\sum_{F'}\left( \frac{1}{\Delta_{3F'}^2}+\frac{1}{\Delta_{4F'}^2}\right) }}{ n_g 
-\sum_q |\mathbf{e}_q\cdot \mathbf{u}_H^*(r^\prime\!_\perp,\phi')|^2 
-\sum_{F'}  \left( \frac{|o^{J'F'}_{J3} C^{3 0;1q}_{F' q}|^2 }{\Delta_{3F'} } - 
- \frac{|o^{J'F'}_{J4} C^{4 0;1q}_{F' q}|^2 }{\Delta_{4F'}}  \right) }.
-\end{align}
-
-
-\textcolor{blue}{Aside--only considering the scalar polarizability effect:} If we choose a detuning far-off 
-the 
-transition lines due to the hyperfine splitting 
-of the excited states and ignore the tensor effect of the atomic polarizability, we will recover the 
-simplified 
-result given by Dawkins and coworkers~\cite{Dawkins2011}. 
-The prove follows. Since the vector 
-atomic polarizability vanish for the clock states, ignoring the tensor atomic polarizability means there is 
-only scalar atomic polarizability left.
-Therefore, the effective coupling strength can be given by 
-\begin{align}
-\chi_{e\!f\!f} &=[(\chi_{H,\uparrow}-\chi_{H,\downarrow})-(\chi_{V,\uparrow}-\chi_{V,\downarrow})]\\
-&= 2C_{J'}^{(0)}(\Gamma_{H}^{1D}-\Gamma_V^{1D})\frac{1}{\Delta}
-=\frac{C_{J'}^{(0)}\sigma_0\Gamma}{2}(\frac{1}{A^H_{e\!f\!f}}-\frac{1}{A^V_{e\!f\!f}})\frac{1}{\Delta},
-\end{align} 
-and the angle change by
-\begin{align}
-\varphi_{_N} &= N_A \chi_{e\!f\!f}\\
-&=N_AC_{J'}^{(0)}n_g\sigma_0\frac{\Gamma}{2\Delta}\left[| \mathbf{u}_H(r'_{\!\perp})|^2- | 
-\mathbf{u}_V(r'_{\!\perp})|^2 \right],
-\end{align}
-where $\frac{1}{\Delta}=\frac{1}{2}\sum_{F'}(\frac{1}{\Delta_{F',4}}-\frac{1}{\Delta_{F',3}})\approx \frac{1}{\Delta_{F',4}}$ and $ \sigma_0=3\lambda^2/2\pi $ is the resonant photon scattering cross-section of the atoms.
-
-Now, we consider the critical case that $\eta =100\%$ and $\tau_{pd} = \frac{1}{\gamma_s}$, where the photon scattering rate
-\begin{align}
-\gamma_s &= \sigma(\Delta) \frac{I(\br')}{\hbar \omega_0}, 
-\end{align}
-where $ I $ is the intensity of the light, and the photon scattering cross-section
-\begin{align}
-\sigma(\Delta) &=\frac{\sigma_0}{1+\frac{4\Delta^2}{\Gamma^2}}\approx \sigma_0 
-\frac{\Gamma^2}{4\Delta^2} \quad \text{(far detuning.)}
-\end{align}
-Hence, we can rewrite 
-\begin{align}
-\Delta P_{SN} &=P_0\sqrt{\frac{ \sigma_0 }{2A_{in}}}\frac{\Gamma}{2\Delta},\\
-\Delta P_S &= N_A C_{j'}^{(0)}P_0 \frac{\sigma_0}{A_{e\!f\!f}}\frac{\Gamma}{2\Delta}, 
-\end{align}
-with the effective mode areas
-\begin{align}
-A_{in } &= \frac{P_0}{I(\br')}=\frac{2}{| \mathbf{u}_H(r'_{\!\perp})|^2+ | \mathbf{u}_V(r'_{\!\perp})|^2},\\
-A_{e\!f\!f} &= \frac{1}{n_g\left[ | \mathbf{u}_H(r'_{\!\perp})|^2- | \mathbf{u}_V(r'_{\!\perp})|^2\right]}.
-\end{align}
-Therefore, the $ \Delta P_S = \Delta P_{SN}$ condition gives the resolution of the birefringence measurement in terms of the minimum atom number as
-\begin{align}
-N^{min}_A &= \frac{1}{C_{J'}^{(0)}}\sqrt{\frac{A_{e\!f\!f}^2}{A_{in}\sigma_0}}.
-\end{align}
 
 \missingfigure{Plots for $N^{min}_A$.}
 
@@ -855,566 +676,6 @@ N^{min}_A &= \frac{1}{C_{J'}^{(0)}}\sqrt{\frac{A_{e\!f\!f}^2}{A_{in}\sigma_0}}.
 
 \section{Discussions}
 
-
-
-\subsection{Connect to the Schrodinger picture?}
-\textcolor{blue}{This has been done by Ben in one of his recent notes. }
-
-
-
-%\subsection{Group velocity}
-
-\subsection{Achievable phase shift with scalar atomic polarizabilities?}
-\todo[inline]{To be deleted for this paper.}
-\textcolor{blue}{Show the phase shift and the decay rate are results of the combination effect of the free dipole radiation and the reflection from the nanofiber interface. Discuss the phase shift control landscape and the difference with the vacuum case. Apply to a phase gate.}
-\begin{align}
-\delta\phi &= -\frac{\Gamma^{1D}_\mu}{2\Delta},\\
-\frac{\Gamma^{1D}_\mu}{\Gamma_0} &= \frac{6\pi c}{\omega}\frac{\sum_g\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}_g^\mu(\br',\br') \right]\cdot\mathbf{d}_{eg}^* }{\sum_g|\mathbf{d}_{eg}|^2} = 1+ \frac{3}{2} \frac{\mathrm{Im}\left[\sum_g\mathbf{d}_{eg}^*\cdot \mathbf{E}^{(R,\mu)}_g(\br') \right]}{\sum_g|\mathbf{d}_{eg}|^2 k^3}\nonumber\\
-&=\frac{3\pi}{2}\left(\frac{c}{\omega}\right)^2\frac{c}{v_g} \frac{\sum_{g}|\mathbf{d}_{eg}\cdot \mathbf{u}^\mu(\br')|^2}{\sum_g|\mathbf{d}_{eg}|^2}\\
-\mathbf{E}^{(R,\mu)}_g(\br') &= -\frac{1}{4\pi k^2} \mathbf{G}^{(R,\mu)}_g(\br',\br')\cdot \mathbf{d}_{eg}.
-\end{align}
-The index $ R $ indicates the component of reflection, and $\mu=(\beta,m,f)  $ identifies the normalized fiber mode $ \mathbf{u}^\mu(\br') $. 
-
-We can write 
-\begin{align}
-\Gamma_{vac} &= \frac{4\omega_0^3|\mathbf{d}|^2}{3\hbar c^3}=-\frac{8\pi \omega_0^2}{\hbar c^2}\left[ \mathbf{d}\cdot \mathrm{Im}[\mathbin{\color{red}{\mathbf{G}^{(0)}}}(\br',\br')]\cdot \mathbf{d}^* \right]\\
-\Gamma &= -\frac{8\pi \omega_0^2}{\hbar c^2}\left[ \mathbf{d}\cdot \mathrm{Im}[\mathbf{G}(\br',\br')]\cdot \mathbf{d}^* \right]=-\frac{8\pi \omega_0^2}{\hbar c^2}\left[ \mathbf{d}\cdot \mathrm{Im}[\mathbin{\color{red}{\mathbf{G}^{(0)}}}(\br',\br')+\mathbin{\color{red}{\mathbf{G}^{(R)}}}(\br'\br')]\cdot \mathbf{d}^* \right]\\
-\end{align}
-The decay rate is a result of the superposition of the free dipole radiation and the reflection from the nanofiber interface.
-
-\begin{align}
-\Gamma &\propto -\mathbf{d}\cdot \mathrm{Im}[\mathbf{G}(\br',\br')]\cdot \mathbf{d}^* \\
-&=\mathrm{tr}\left[ \mathbin{\color{red}{(\mathbf{d}^*\mathbf{d})}}\cdot\mathbin{\color{blue}{ \mathrm{Im}[\mathbf{G}^*(\br',\br')]}}  \right]\\
-&= \mathrm{tr}\left[ \boldsymbol{\rho} \cdot \mathrm{Im}[\mathbf{G}^{*}(\br',\br')]  \right]\ge 0
-\end{align}
-where $\boldsymbol{\rho}=(\mathbf{d}^*\mathbf{d})$ is defined as the dipole orientation tensor which is merely a property of the atoms. The dyadic Green function part is only a property of the waveguide.  
-
-By mathematical definition, $\mathrm{Im}[\mathbf{G}^{*}(\br',\br')]$ is positive definite. 
-\begin{align}
-\mathrm{Im}[\mathbf{G}^{*}(\br',\br')] &= \sum_{i=1,2,3} \mathbin{\color{red}{g_i}}\hat{\mathbf{v}}_i\hat{\mathbf{v}}_i,\,\text{with}\, g_i>0.
-\end{align}
-$\hat{\mathbf{v}}_i$ form the principal axes of the decay rate. The principal axes indicate the dipole orientations along which the interference between the free dipole radiation and the reflected field (equivalent to the radiation from the image dipole) is most constructive and destructive.   
-\begin{align}
-\Gamma &= C(\omega)\sum_i g_i(\hat{\mathbf{v}}_i\cdot \boldsymbol{\rho}\cdot \hat{\mathbf{v}}_i) 
-= \sum_i \mathbin{\color{blue}{(d'_i)^2}} \mathbin{\color{red}{g_i}} \\
-&= \mathbin{\color{red}{\Gamma_1}}\cos^2\phi\sin^2\theta+\mathbin{\color{red}{\Gamma_2}}\sin^2\phi\sin^2\theta+\mathbin{\color{red}{\Gamma_3}}\cos^2\theta,
-\end{align}
-where $ d'_i=\sqrt{\hat{\mathbf{v}}_i\cdot \boldsymbol{\rho}\cdot \hat{\mathbf{v}}_i}$ and $\mathbf{d}'=\sum_i d'_i\hat{\mathbf{v}}_i$ defines the equivalent dipole orientation of the atomic polarizability transition.
-
-The range of decay rates:
-$$\mathbin{\color{red}{\Gamma_1}}=\Gamma_{max}\mathbin{\color{red}{\ge \Gamma (\theta,\phi) \ge}} \Gamma_{min}=\mathbin{\color{red}{\Gamma_3}}$$
-
-Quantum transitions and dipole orientations correspondence:
-\begin{align}
-\sigma_+ &\leftrightarrow \mathbf{d}_+\propto \frac{1}{\sqrt{2}}(i\mathbf{e}_{r\!_\perp}+\mathbf{e}_\phi)\\
-\pi &\leftrightarrow \mathbf{d}_0 \propto \mathbf{e}_z\\
-\sigma_- &\leftrightarrow \mathbf{d}_-\propto \frac{1}{\sqrt{2}}(-i\mathbf{e}_{r\!_\perp}+\mathbf{e}_\phi).
-\end{align}
-Example: completely mixed state decay rate calculation:
-\begin{align}
-\boldsymbol{\rho} &=\frac{1}{3}(\boldsymbol{\rho}_++\boldsymbol{\rho}_0+\boldsymbol{\rho}_-)=\frac{d_0^2}{3}\boldsymbol{I}\\
-\Gamma &=\frac{C(\omega)}{3}d_0^2 \mathrm{tr}\left[ \mathrm{Im}[\mathbf{G}^*(\br',\br')] \right]=\frac{1}{3}(\Gamma_1+\Gamma_2+\Gamma_3).
-\end{align}
-This is equivalent to assume the dipole is uniformly pointing to any direction, and hence
-$\Gamma = \int \frac{\mathrm{\Omega}}{4\pi}\Gamma(\theta,\phi)=\frac{1}{3}(\Gamma_1+\Gamma_2+\Gamma_3)$.
-
-\missingfigure{Some plots for emission surfaces here.}
-
-The phase shift is proportional to the time integral of the path on the emission rate surface. The range of the decay rates determines the achievable phase shift in a unit time. However, the emission rate surface for the vacuum case is a uniform sphere and the corresponding phase shift in a given time is a constant independent from the orientation of the dipole with a scalar atomic polarizability. Therefore, it is possible to use the scalar atomic polarizability to realize a wide controllable phase shift range in the off-resonance regime that the vacuum configuration can hardly achieve. 
-
-
-\subsection{Interference due to a one-sided or two-sided atom chain}\label{sec:atomchain}
-\textcolor{blue}{Effect of an infinite long one-side chain... S matrix, reflectivity... Random filling effect...}
-
-\textcolor{blue}{To include many-atom interference effect, we can use the linear optical transformation matrix formalism. The transformation of modes should be the same for both Green function and Heisenberg picture approaches. Here, I am using the semiclassical Green function results first, and then the Heisenberg picture results. } 
-
-
-From Equ.~\eqref{eq:Cmf} and the results above, one can generalize the field transformation relationship due to the presence of an atom and an arbitrary incident mode $\mathbf{u}_{m'f'}(\br)$ with mode amplitude $E_{m'f'}$ to give
-\begin{align}
-\mathbf{E}^{out}(\br) &= \sum_{mf}E_{mf}\mathbf{u}_{m'f'}(\br),\\
-E_{mf} &= \left[\delta_{mm'}\delta_{ff'}+C_{m'f'}^{mf}\right]E_{m'f'},
-\end{align}
-with 
-\begin{align}
-C^{mf}_{m'f'}
-&= i2\pi k_0 n_g\alpha  {\mathbf{u}^{mf}}^*(r'_{\!\perp})\cdot \mathbf{u}_{m'f'}(r'_{\!\perp})e^{i\beta_0 
-(f'-f)z'+i(m'-m)\phi'}.\label{eq:Cmfmf}
-\end{align}
-Therefore, one can define the scattering matrix $\mathbf{S}\equiv \left\{S^{mf}_{m'f'}|\,m,f,m',f'=\pm 1 \right\}$ with elements $S^{mf}_{m'f'}=\delta_{mm'}\delta_{ff'}+C_{m'f'}^{mf}$. 
-
-Notice that, $\br'=(r\!_\perp^\prime,\phi',z')$ indicates where the atom is sitting. If there are many atoms which are sitting at one transverse plane with the same $z'$ position, one should sum over all those atom indexes to obtain the total scattering matrix at a $z$-slice. In our case, the atoms can sit at some random positions of either $\phi'=0$ or $\phi'=\pi$ two sides of a periodic chain. For simplicity, we always use $z=z'=0$ for the scattering matrix $\mathbf{S}(\phi')$ calculation on one $z$-slice. We define the free propagating transformation matrix, $\mathbf{P}(\Lambda)\equiv \left\{P^{mf}_{m'f'}(\Lambda)|\,m,f,m',f'=\pm 1 \right\}$, by
-\begin{align}
-P^{mf}_{m'f'}(\Lambda) &= \delta_{mm'}\delta_{ff'}e^{if\beta_0 \Lambda},
-\end{align}
-where $\Lambda$ is the minimum distance or geometric period between atoms along the propagating direction of the guided light. The total field amplitude after the interaction with the last atom along the nanofiber due to the random occupied two-side chain of atoms can be given by
-\begin{align}
-\left( E_{mf}^{out}\right) &= [\eta_{N,+} \mathbf{S}(0) +\eta_{N,-}\mathbf{S}(\pi) +(1-\eta_{N,+})(1-\eta_{N,-})\eye] \mathbf{P}(\Lambda)\nonumber\\
-&\quad [\eta_{N-1,+} \mathbf{S}(0) +\eta_{N-1,-}\mathbf{S}(\pi)+(1-\eta_{N-1,+})(1-\eta_{N-1,-})\eye ] \mathbf{P}(\Lambda)\nonumber\\
-&\quad \ldots [\eta_{2,+} \mathbf{S}(0) +\eta_{2,-}\mathbf{S}(\pi)+(1-\eta_{2,+})(1-\eta_{2,-})\eye ] \mathbf{P}(\Lambda)\nonumber\\
-&\quad [\eta_{1,+} \mathbf{S}(0) +\eta_{1,-}\mathbf{S}(\pi) +(1-\eta_{1,+})(1-\eta_{1,-})\eye] \left( E_{m'f'}^{in}\right)\\
-&= \left\{ \prod_{i=N}^2 [\eta_{i,+} \mathbf{S}(0) +\eta_{i,-}\mathbf{S}(\pi)+(1-\eta_{i,+})(1-\eta_{i,-})\eye ] \mathbf{P}(\Lambda)\right\} \nonumber\\
-&\quad [\eta_{1,+} \mathbf{S}(0) +\eta_{1,-}\mathbf{S}(\pi)+(1-\eta_{1,+})(1-\eta_{1,-})\eye ]\left( E_{m'f'}^{in}\right)\\
-&= \left\{ \prod_{i=N}^2 \mathbf{S}_i \mathbf{P}(\Lambda)\right\} \mathbf{S}_1 \left( E_{m'f'}^{in}\right),\label{eq:transE}
-\end{align}
-where $\mathbf{S}_i=\eta_{i,+} \mathbf{S}(0) +\eta_{i,-}\mathbf{S}(\pi)+(1-\eta_{i,+})(1-\eta_{i,-})\eye $ denote the scattering matrix due to the randomly occupied atoms at the $i^{\mathrm{th}}$ $z$-slice with random occupation variables $\eta_{i,\pm}=0$ or $1$ on both sides of the atom chain. The distribution of the random variables $\eta_{i,\pm}$ reflects how the atom chain is occupied. 
-
-For the case that both sides ($ \phi'=0 $ and $\pi  $) of the atom chain are fully occupied along the $z$-direction, the scattering matrix elements can be given by
-\begin{align}
-\!\!\!\!\!\!S^{mf}_{m'f'} &= 2\delta_{mm'}\delta_{ff'} + i2\pi k_0 n_g\alpha  
-{\mathbf{u}_{mf}}^*(r'_{\!\perp})\cdot \mathbf{u}_{m'f'}(r'_{\!\perp})[1+e^{i(m'-m)\pi}]\\
-&= 2\delta_{mm'}\delta_{ff'} + i2\pi k_0 n_g\alpha  \left[ |u_{r\!_\perp}(r'_{\!\perp})|^2+mm' 
-|u_\phi(r'_{\!\perp})|^2+ff'|u_z(r'_\perp)|^2\right][1+e^{i(m'-m)\pi}]\\
-&= 2\delta_{mm'}\delta_{ff'} + i4\pi k_0 n_g\alpha  \left[ |u_{r\!_\perp}(r'_{\!\perp})|^2+mm' 
-|u_\phi(r'_{\!\perp})|^2+ff'|u_z(r'_\perp)|^2\right].
-\end{align}
-We have treated the atomic polarizability as a scalar and used Born approximation here. Notice that, the polarization-dependent factor $[1+e^{i(m'-m)\pi}]$ always yields $2$ with $m,m'=\pm 1$ for the $\mathrm{HE}_{11}$ guided modes. If there are high-order guided modes, we expect to see destructive Birefringence effects for modes with odd modal index gaps. 
-
-This can also be understood by looking into the equations derived in the Heisenberg picture. The equivalent scattering matrix elements due to an atom positioned at $\br'=(r'_\perp,\phi',z'=0)$ can be obtained by making $t\rightarrow t_0$ from Equ.~\eqref{eq:Smfmft}:
-\begin{align}\label{eq:Smfmfphi_Heisenberg}
-S^{mf}_{m'f'}(\phi') &=\delta_{mm'}\delta_{ff'}-i\frac{2\pi 
-g_\mu^*(\omega)g_{\mu'}(\omega)}{\Delta+i\Gamma/2}\\
-&= \delta_{mm'}\delta_{ff'}-i\frac{ \frac{2\pi 
-\omega}{v_g}\mathbf{u}^*_{mf}(\br'_\perp)\cdot\mathbf{d}_{ge} 
-\mathbf{d}_{eg}\cdot\mathbf{u}_{m'f'}(\br'_\perp)e^{i(f'-f)\beta_0 z'}}{\Delta+i\Gamma/2}\\
-&=  \delta_{mm'}\delta_{ff'}-i\frac{ \frac{2\pi 
-\omega}{v_g}\mathbf{u}^*_{mf}(r'_\perp)\cdot\mathbf{d}_{ge} 
-\mathbf{d}_{eg}\cdot\mathbf{u}_{m'f'}(r'_\perp)e^{i(m'-m)\phi'}}{\Delta+i\Gamma/2}.
-\end{align}
-Therefore, the total scattering transformation matrix for the atom pair on both sides of the $x$-axis can be given by
-\begin{align}\label{eq:Smfmf2_Heisenberg}
-S^{mf}_{m'f'}(\phi') &=S^{mf}_{m'f'}(\phi'=0)+S^{mf}_{m'f'}(\phi'=\pi)\\
-&=  2\delta_{mm'}\delta_{ff'}-i\frac{ \frac{4\pi 
-\omega}{v_g}\mathbf{u}^*_{mf}(r'_\perp)\cdot\mathbf{d}_{ge} 
-\mathbf{d}_{eg}\cdot\mathbf{u}_{m'f'}(r'_\perp)}{\Delta+i\Gamma/2}\\
-&= 2\delta_{mm'}\delta_{ff'}-i 4\pi k_0 
-n_g\mathbf{u}^*_{mf}(r'_\perp)\cdot\boldsymbol{\alpha}\cdot\mathbf{u}_{m'f'}(r'_\perp) .
-\end{align}
-
-When $\beta_0 L$ is a multiple of $\pi$, the free propagation transformation matrix is proportional to a unitary matrix, and hence can be extracted out from the total transformation matrix formula (Equ.~\eqref{eq:transE}). In that case, the total phase shift for a given input mode can be treated as the sum of the phase shift due to each individual atoms on both sides of the $z$-slices. Otherwise, there will be the asymmetric effect on the phase shifts of the forwarding and backwarding modes. Moreover, under the framework derived above, if we can ignore the backward propagating modes--which is approximately true if it is far from satisfying the geometric Bragg condition that $ \beta_0\Lambda=n\pi $, the free propagating transformation matrix $\mathbf{P}(\Lambda)$ is also proportional to a unitary matrix, and hence the total phase shifts for individual forwarding modes can still be treated as a sum over all slices of atoms along the propagating direction. Physically, the asymmetric mixing of forward and backward propagating modes may be the major barrier to treat the total phase shift as the sum over all individual elements.  
-
-\todo[inline]{Energy is not conserving under the Born approximation. How does the radiation power distribute after every event of scattering? A better model to explain what we should observe for the Birefringence effect.}
-
-\section{Conclusions}
-
-\begin{acknowledgments}
-X.Q. would like to particularly thank Ninnat Dangniam, Tzu-Cheng Wu and Matthew Chase for their inspiring discussions. We thank the UNM Center for Advanced Research Computing for computational resources used in this work.
-\end{acknowledgments}
-
-\appendix
-\section{Radiation fields from an atom close to a nanofiber}\label{app:fieldcalculation}
-As discussed in section~\ref{sec:GFmethod}, the 9 elements of a dyadic electric Green function is proportional to the local electric field components due to the radiation from an electric dipole orientated in some basis directions. The spontaneous radiation field components can be calculated through decomposing the field into reflected and transmitted field components and matching up the boundary conditions of the nanofiber which can be treated as an infinitely long cylindrical dielectric medium. The detailed calculations have been conducted by Nha, Klimov and others in their earlier publications~\cite{Nha1997,Klimov2004}. We summarize some of those results in this section. 
-
-One can separate the electric and magnetic fields into free-dipole radiation, reflected and transmitted parts. For example, the electric field can be written as 
-\begin{align}
-\boldsymbol{\mathcal{E}}(\br) &= \boldsymbol{\mathcal{E}}^{(0)}(\br) + 
-\boldsymbol{\mathcal{E}}^{(R)}(\br)+\boldsymbol{\mathcal{E}}^{(T)}(\br)\\
-&=
-	\begin{cases}
-	  \boldsymbol{\mathcal{E}}^{(0)} (\br)+ \boldsymbol{\mathcal{E}}^{(R)}(\br), & r\!_\perp > a,\\
-	  \boldsymbol{\mathcal{E}}^{(T)}(\br), & r\!_\perp\leq a.
-	\end{cases} \label{Etotalfiber}
-\end{align}
-where the superscripts $0$, $R$ and $T$ indicate the free-dipole radiation, reflection and transmission components of the field, and $ a $ is the radius of the nanofiber. For a translationally invariant waveguide, which means the index of refraction of the waveguide is independent of the propagating axis $z$, the electric and magnetic fields can be written as 
-\begin{align}
-\bmc{E}(\br) &= \bmc{E}(\br\!_\perp)\exp(i\beta z), & \bmc{H}(\br) &= \bmc{H}(\br\!_\perp)\exp(i\beta 
-z),
-\end{align}
-where $ \beta $ is the propagation constant and $ \br\!_\perp $ is the position vector in the transverse 
-plane perpendicular to the $ z $-axis. We let the index of refraction of the nanofiber be
-\begin{align}
-n=n(r\!_\perp)&=\begin{cases}
-	  n_2=1, & r\!_\perp > a,\\
-	  n_1, & r\!_\perp\leq a.
-	\end{cases} \label{nfiber}
-\end{align}
-To find the fields, we need to calculate the longitudinal components (the $z$-components) of the fields, and the transverse components can be obtained through $z$-components using the following relationships:
-\begin{subequations}\label{EHzgauss}
-\begin{align}
-\mathcal{E}_{r\!_\perp} &= \frac{i}{\kappa_i^2} \left[ \beta \pp{\mathcal{E}_z }{r\!_\perp} + 
-  \frac{k}{r\!_\perp} 
-\pp{\mathcal{H}_z}{\phi} \right]= \frac{i\beta}{\kappa_i^2} \pp{\mathcal{E}_z }{r\!_\perp} - 
-  \frac{km}{r\!_\perp \kappa_i^2} {\mathcal{H}_z}, \\
-\mathcal{E}_\phi &= \frac{i}{\kappa_i^2} \left[\frac{\beta}{r\!_\perp} 
-\pp{\mathcal{E}_z}{\phi} - k 
-\pp{\mathcal{H}_z}{r\!_\perp} 
-\right] = -\frac{\beta m}{r\!_\perp \kappa_i^2} 
-{\mathcal{E}_z} - \frac{ik}{\kappa_i^2} 
-\pp{\mathcal{H}_z}{r\!_\perp},\\
-\mathcal{H}_{r\!_\perp} &= \frac{i}{\kappa_i^2} \left[ \beta \pp{\mathcal{H}_z}{r\!_\perp} 
-- \frac{kn^2}{r\!_\perp}\pp{\mathcal{E}_z}{\phi} \right]= \frac{i\beta}{\kappa_i^2} \pp{\mathcal{H}_z}{r\!_\perp} 
-+ \frac{kn^2m}{r\!_\perp \kappa_i^2} {\mathcal{E}_z},\\
-\mathcal{H}_\phi &= \frac{i}{\kappa_i^2} \left[ \frac{\beta}{r\!_\perp} \pp{\mathcal{H}_z}{\phi} + 
- kn^2 \pp{\mathcal{E}_z}{r\!_\perp} \right] = -\frac{\beta m}{r\!_\perp \kappa_i^2} {\mathcal{H}_z} + 
-  \frac{ikn^2}{\kappa_i^2} \pp{\mathcal{E}_z}{r\!_\perp}
-\end{align}
-\end{subequations}
-with $ \kappa_i=\kappa_1 $ or $ \kappa_2 $ and $ n=n_1 $ or $ n_2 $ for the corresponding space region. 
-We use Gauss units in this paper, and assume the material of the nanofiber is non-magnetic, and hence $ 
-\boldsymbol{\mathcal{B}}= \mu_r\boldsymbol{\mathcal{H}}\approx \boldsymbol{\mathcal{H}} $ with the relative permeability $ \mu_r\approx 1 $. We have also defined the transverse propagation constant inside of the nanofiber, $ \kappa_1 $, by $\kappa_1^2=n_1^2k-\beta^2$. Similarly, one can define the transverse propagation constant outside of the nanofiber, $ \kappa_2 $, by $ \kappa_2^2=n_2^2k-\beta^2=k^2-\beta^2 $.
-
-The longitudinal components of the electrical and magnetic fields can be expanded as Fourier transformations over the $ \beta $ space,
-\begin{subequations}\label{ET0Rexpand}
-\begin{align}
-\mathcal{E}^{(T)}_z
-&= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} c_{m\beta} J_m (\kappa_1r\!_\perp),\\
-\mathcal{E}^{(0)}_{z} &= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} \mathcal{E}^{(0)}_{z,m\beta}(r\!_\perp)\\
-\mathcal{E}^{(R)}_z 
-&= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} a_{m\beta} H_m^{(1)} (\kappa_2r\!_\perp),
-\end{align}
-\end{subequations}
-\begin{subequations}\label{BT0Rexpand}
-\begin{align}
-\mathcal{B}^{(T)}_z 
-&= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} d_{m\beta} J_m (\kappa_1r\!_\perp),\\
-% + E_{m\beta} Y_m(hr\!_\perp)\right],\\
-\mathcal{B}^{(0)}_{z} &= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} \mathcal{B}^{(0)}_{z,m\beta}(r\!_\perp)\\
-\mathcal{B}^{(R)}_z 
-&= \sum_{m=-\infty}^\infty \int \mathrm{d}\beta e^{im(\phi-\phi') + i\beta (z-z')} b_{m\beta} H_m^{(1)} (\kappa_2r\!_\perp),
-\end{align}
-\end{subequations}
-in which $J$ and $H$ indicate the first kind of the Bessel function and the Hankel function as the cylindrical harmonics; the atom is positioned at $\br'=(r^\prime\!_\perp,\phi',z')$ with an electric dipole moment $\mathbf{d}_0=(d^0_{r\!_\perp}, d^0_\phi,d^0_z)$ in the atom's coordinate system. In the fiber's coordinate system, the dipole moment observed at an arbitrary position $\br$ is defined by the three components defined below:
-\begin{align}
-d_{r\!_\perp}\! &= \cos(\phi\!-\!\phi')d^0_{r\!_\perp}\!\!+\!\sin(\phi\!-\!\phi')d^0_\phi=\frac{1}{\sqrt{2}}\left(-e^{-i(\phi\!-\!\phi')}d_++e^{i(\phi\!-\!\phi')}d_- \right),\\
-d_\phi &=\cos(\phi\!-\!\phi')d^0_\phi\!-\!\sin(\phi\!-\!\phi')d^0_{r\!_\perp}=\frac{i}{\sqrt{2}}\left(e^{-i(\phi\!-\!\phi')}d_++e^{i(\phi\!-\!\phi')}d_- \right),\\
-d_z &= d^0_z,
-\end{align}
-where we have defined the position-independent reduced dipole components
-\begin{align}
-d_\pm \equiv \mp \frac{1}{\sqrt{2}}(d^0_{r\!_\perp}\pm id^0_{\phi}).
-\end{align}
-The terms associated with $d_\pm$ in the dipole moment formula lower or raise the mode index or the angular momentum quantum number, $m$, of the interacting fiber modes by $1$. Notice that we have used $\phi\!-\!\phi'$ as the projected angle between $\mathbf{r}$ and $\mathbf{r}'$ on the transverse plane to make the relationship valid in general. In most of our calculations, we usually position the atom on the $x$-axis of the fiber coordinate and set $z'=0$.
-
-
-The free radiation field components associated with the $ e^{im(\phi-\phi')+i\beta (z-z')} $ term (the $m$-th mode components) for the $r\!_\perp<r'\!_\perp$ region can be given by
-\begin{align}
-\mathcal{B}_{z,m\beta}^{(0)} &= \frac{ik\kappa_2}{2\sqrt{2}}J_m(pr\!_\perp)\left[ d_{+} H_{m+1}^{(1)}(\kappa_2r'\!\!_\perp) \!-\! d_- H_{m-1}^{(1)}(\kappa_2r'\!_\perp) \right],\\
-\mathcal{B}_{\phi,m\beta}^{(0)} &= \frac{ik}{2}\left[ \frac{\beta d_{-}}{\sqrt{2}} J_{m-1}\left( \kappa_2r\!_\perp \right)H_{m-1}^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right) -\frac{\beta d_+}{\sqrt{2}} J_{m+1}\left( \kappa_2r\!_\perp \right)H_{m+1}^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right)\right. \nonumber\\ 
-&\qquad\quad \left. + \frac{i\kappa_2d^0_z}{2}\left(J_{m-1}(\kappa_2r\!_\perp)-J_{m+1}(\kappa_2r\!_\perp) \right)H_m^{(1)}(\kappa_2r\!_\perp^{\prime}) \right],\\
-\mathcal{B}_{r\!_\perp, m\beta}^{(0)} &= \frac{k}{2}\left[\frac{i m d^0_z}{r\!_\perp} J_m\left( \kappa_2r\!_\perp \right) H_m^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right) \right. \nonumber\\
-&\qquad \left. +\frac{\beta d_+}{\sqrt{2}} J_{m\!+\!1}(\kappa_2r\!_\perp) H_{m\!+\! 1}^{(1)}(\kappa_2r\!_\perp^{\prime}) \!+\! \frac{\beta d_-}{\sqrt{2}} J_{m\!-\! 1}(\kappa_2r\!_\perp)H_{m\!-\!1}^{(1)}(\kappa_2r\!_\perp^{\prime})   \right],\\
-\mathcal{E}_{z,m\beta}^{(0)} 
-&= \frac{\kappa_2}{2}J_{m}\left( \kappa_2r\!_\perp \right)\left[  id^0_z \kappa_2 H_m^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right) \phantom{\frac{d^0_z}{\sqrt{2}}} \right. \nonumber\\
-&\qquad\qquad\qquad \left. + \frac{\beta d_{+}}{\sqrt{2}} H_{m+1}^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right) +\frac{\beta d_-}{\sqrt{2}} H_{m-1}^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right) \right], \\
-\mathcal{E}_{\phi,m\beta}^{(0)} 
-&= -\frac{im\beta d^0_z}{2r\!_\perp} J_{m}\left( \kappa_2r\!_\perp \right) H_m^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right) \nonumber\\
-&\quad+\frac{d_+}{2\sqrt{2}} \left[ \frac{m\kappa_2}{r\!_\perp}J_{m}\left( \kappa_2r\!_\perp \right)-k^2 J_{m+1}\left( \kappa_2r\!_\perp \right)\right] H_{m+1}^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right) \nonumber\\
-&\quad+ \frac{d_-}{2\sqrt{2}}\left[\frac{m\kappa_2}{r\!_\perp}J_m\!\left( \kappa_2r_\perp \right)-k^2J_{m-1}\!\left( \kappa_2r_\perp \right) \right] H_{m-1}^{(1)}\!\left( {\kappa_2r\!_\perp^{\prime} }\right),\\
-\mathcal{E}_{r\!_\perp,m\beta}^{(0)} 
-&= \frac{\beta \kappa_2d^0_z}{4}\left[ J_{m+1}\!\left( \kappa_2r\!_\perp \right)-J_{m-1}\!\left( \kappa_2r_\perp \right)\right] H_m^{(1)}\left( {\kappa_2r\!_\perp^{\prime} }\right)\nonumber\\ 
-&\quad -\frac{d_+}{2\sqrt{2}}\left[ i\beta^2J_{m+1}\!\left( \kappa_2r_\perp \right) +\frac{im\kappa_2}{r\!_\perp}J_m\!\left( \kappa_2r_\perp \right)\right] H_{m+1}^{(1)}\!\left( {\kappa_2r\!_\perp^{\prime} }\right)\nonumber\\
-&\quad + \frac{d_-}{2\sqrt{2}}\left[ i\beta^2J_{m-1}\!\left( \kappa_2r_\perp \right) +\frac{im\kappa_2}{r\!_\perp}J_m\!\left( \kappa_2r_\perp \right)\right] H_{m-1}^{(1)}\!\left( {\kappa_2r\!_\perp^{\prime} }\right).
-\end{align}
-The magnetic and electrical fields components for $ r\!_\perp>r'\!_\perp $ are 
-\begin{align}
-\mathcal{B}_{z,m\beta}^{(0)} &= \frac{ik\kappa_2}{2\sqrt{2}}H^{(1)}_m(\kappa_2r\!_\perp)\left[ d_{+} J_{m+1}(\kappa_2r'\!\!_\perp) \!-\! d_- J_{m-1}(\kappa_2r'\!_\perp) \right],\\
-\mathcal{B}_{\phi,m\beta}^{(0)} &= \frac{ik}{2}\left[ \frac{\beta d_{-}}{\sqrt{2}} H^{(1)}_{m-1}\left( \kappa_2r\!_\perp \right)J_{m-1}\left( {\kappa_2r\!_\perp^{\prime} }\right) -\frac{\beta d_+}{\sqrt{2}} H^{(1)}_{m+1}\left( \kappa_2r\!_\perp \right)J_{m+1}\left( {\kappa_2r\!_\perp^{\prime} }\right)\right. \nonumber\\ 
-&\qquad\quad \left. + \frac{i\kappa_2d^0_z}{2}\left(H^{(1)}_{m-1}(\kappa_2r\!_\perp)-H^{(1)}_{m+1}(\kappa_2r\!_\perp) \right)J_m(\kappa_2r\!_\perp^{\prime}) \right],\\
-\mathcal{B}_{r\!_\perp, m\beta}^{(0)} &= \frac{k}{2}\left[\frac{i m d^0_z}{r\!_\perp} H^{(1)}_m\left( \kappa_2r\!_\perp \right) J_m\left( {\kappa_2r\!_\perp^{\prime} }\right) \right. \nonumber\\
-&\qquad \left. +\frac{\beta d_+}{\sqrt{2}} H^{(1)}_{m\!+\!1}(\kappa_2r\!_\perp) J_{m\!+\! 1}(\kappa_2r\!_\perp^{\prime}) \!+\! \frac{\beta d_-}{\sqrt{2}} H^{(1)}_{m\!-\! 1}(\kappa_2r\!_\perp) J_{m\!-\!1}(\kappa_2r\!_\perp^{\prime})   \right],\\
-\mathcal{E}_{z,m\beta}^{(0)} 
-&= \frac{\kappa_2}{2}H^{(1)}_{m}\left( \kappa_2r\!_\perp \right)\left[  id^0_z \kappa_2 J_m\left( {\kappa_2r\!_\perp^{\prime} }\right) \phantom{\frac{d^0_z}{\sqrt{2}}} \right. \nonumber\\
-&\qquad\qquad\qquad \left. + \frac{\beta d_{+}}{\sqrt{2}} J_{m+1}\left( {\kappa_2r\!_\perp^{\prime} }\right) +\frac{\beta d_-}{\sqrt{2}} J_{m-1}\left( {\kappa_2r\!_\perp^{\prime} }\right) \right], \\
-\mathcal{E}_{\phi,m\beta}^{(0)} 
-&= -\frac{im\beta d^0_z}{2r\!_\perp} H^{(1)}_{m}\left( \kappa_2r\!_\perp \right) J_m\left( {\kappa_2r\!_\perp^{\prime} }\right) \nonumber\\
-&\quad+\frac{d_+}{2\sqrt{2}} \left[ \frac{m\kappa_2}{r\!_\perp}H^{(1)}_{m}\left( \kappa_2r\!_\perp \right)-k^2 H^{(1)}_{m+1}\left( \kappa_2r\!_\perp \right)\right] J_{m+1}\left( {\kappa_2r\!_\perp^{\prime} }\right) \nonumber\\
-&\quad+ \frac{d_-}{2\sqrt{2}}\left[\frac{m\kappa_2}{r\!_\perp}H^{(1)}_m\!\left( \kappa_2r_\perp \right)-k^2 H^{(1)}_{m-1}\!\left( \kappa_2r_\perp \right) \right] J_{m-1}\!\left( {\kappa_2r\!_\perp^{\prime} }\right),\\
-\mathcal{E}_{r\!_\perp,m\beta}^{(0)} 
-&= \frac{\beta \kappa_2d^0_z}{4}\left[ H^{(1)}_{m+1}\!\left( \kappa_2r\!_\perp \right)-H^{(1)}_{m-1}\!\left( \kappa_2r_\perp \right)\right] J_m\left( {\kappa_2r\!_\perp^{\prime} }\right)\nonumber\\ 
-&\quad -\frac{d_+}{2\sqrt{2}}\left[ i\beta^2H^{(1)}_{m+1}\!\left( \kappa_2r_\perp \right) +\frac{im\kappa_2}{r\!_\perp}H^{(1)}_m\!\left( \kappa_2r_\perp \right)\right] J_{m+1}\!\left( {\kappa_2r\!_\perp^{\prime} }\right)\nonumber\\
-&\quad + \frac{d_-}{2\sqrt{2}}\left[ i\beta^2H^{(1)}_{m-1}\!\left( \kappa_2r_\perp \right) +\frac{im\kappa_2}{r\!_\perp}H^{(1)}_m\!\left( \kappa_2r_\perp \right)\right] J_{m-1}\!\left( {\kappa_2r\!_\perp^{\prime} }\right).
-\end{align}
-
-By using the boundary conditions at $ r\!_\perp=a $ and Equ.~\eqref{Etotalfiber} that
-\begin{align}
-%\varepsilon_f \mathcal{E}_{r\!_\perp}(r\!_\perp =a^> ) = \mathcal{E}_{r\!_\perp}(r\!_\perp =a^< ),\\
-\mathcal{E}_{z}(r\!_\perp =a^> ) = \mathcal{E}_{z}(r\!_\perp =a^< ),\\
-%\mathcal{B}_{r\!_\perp}(r\!_\perp =a^> ) = \mathcal{B}_{r\!_\perp}(r\!_\perp =a^< ),\\
-\mathcal{B}_{z}(r\!_\perp =a^> ) = \mathcal{B}_{z}(r\!_\perp =a^< ),\\
-\mathcal{E}_{\phi}(r\!_\perp =a^> ) = \mathcal{E}_{\phi}(r\!_\perp =a^< ),\\
-\mathcal{B}_{\phi}(r\!_\perp =a^> ) = \mathcal{B}_{\phi}(r\!_\perp =a^< ),
-\end{align}
-where $ a^< $ and $ a^> $ denote the boundaries at the sides less and larger than $ a $, and the connections between field components (Equ.~\eqref{EHzgauss}), we can obtain all unknown coefficients. To summarize, we have~\cite{Klimov2004}
-\begin{align}
-a_{m\beta} &= \frac{na}{P^2+QR},\\
-b_{m\beta} &= \frac{nb}{P^2+QR},\\
-c_{m\beta} &= \frac{\mathcal{E}_{z,m\beta}^{(0)}(r\!_\perp\!=\!a)+ H_m^{(1)}(\kappa_2a)a_{m\beta}}{J_m(\kappa_1a)},\\
-d_{m\beta} &= \frac{\mathcal{H}_{z,m\beta}^{(0)}(r\!_\perp\!=\!a)+ H_m^{(1)}(\kappa_2a)b_{m\beta}}{J_m(\kappa_1a)},
-\end{align}
-where
-\begin{align}
-na &= \kappa_1^2\kappa_2^2aJ_m(\kappa_1a)PE_{\phi,m\beta}^{(0)}(r\!_\perp\!=\!a) \nonumber\\
-&\quad + \kappa_2^2\left[J_m(\kappa_1a)\beta mP+kan_1^2\kappa_1 \dd{}{(\kappa_1a)}J_m(\kappa_1a)Q \right] E_{z,m\beta}^{(0)} \nonumber\\
-&\quad + i\kappa_1^2\kappa_2^2 aJ_m(\kappa_1a)QB_{\phi,m\beta}^{(0)}(r\!_\perp\!\!=\!a) \!-\! im\beta \kappa_1\kappa_2J_m(\kappa_1a)SB_{z,m\beta}^{(0)}(r\!_\perp\!\!=\!a),\\
-nb &= \kappa_1^2\kappa_2^2aJ_m(\kappa_1a)PB_{\phi,m\beta}^{(0)}(r\!_\perp\!=\!a) \nonumber\\
-&\quad + \kappa_2^2\left[J_m(\kappa_1a)\beta mP-ka\kappa_1 \dd{}{(\kappa_1a)}J_m(\kappa_1a)R \right] B_{z,m\beta}^{(0)} \nonumber\\
-&\quad + i\kappa_1^2\kappa_2^2 aJ_m(\kappa_1a)RE_{\phi,m\beta}^{(0)}(r\!_\perp\!\!=\!a) \!+\! im\beta \kappa_1\kappa_2J_m(\kappa_1a)TE_{z,m\beta}^{(0)}(r\!_\perp\!\!=\!a),
-\end{align} 
-and
-\begin{align}
-P &=m\beta k^2J_m(\kappa_1a)H_m^{(1)}(\kappa_2a)(n_1^2-1),\\
-Q &=-\kappa_1\kappa_2ak\left[ \kappa_1J_m(\kappa_1a)\dd{}{(\kappa_2a)}H_m^{(1)}(\kappa_2a)-\kappa_2H_m^{(1)}(\kappa_2a)\dd{}{(\kappa_1a)}J_m(\kappa_1a) \right],\\
-R &=\kappa_1\kappa_2ak\left[ \kappa_1J_m(\kappa_1a)\dd{}{(\kappa_2a)}H_m^{(1)}(\kappa_2a)-\kappa_2n_1^2H_m^{(1)}(\kappa_2a)\dd{}{(\kappa_1a)}J_m(\kappa_1a) \right],\\
-S &=\kappa_1\kappa_2ak\left[ \kappa_2J_m(\kappa_1a)\dd{}{(\kappa_2a)}H_m^{(1)}(\kappa_2a)-\kappa_1H_m^{(1)}(\kappa_2a)\dd{}{(\kappa_1a)}J_m(\kappa_1a) \right],\\
-T &=\kappa_1\kappa_2ak\left[ \kappa_2J_m(\kappa_1a)\dd{}{(\kappa_2a)}H_m^{(1)}(\kappa_2a)-\kappa_1n_1^2H_m^{(1)}(\kappa_2a)\dd{}{(\kappa_1a)}J_m(\kappa_1a) \right].
-\end{align}
-
-The integral in Equs.~\eqref{EHzgauss} should be chosen along path $C_1$ as shown in Fig.~\ref{fig:integralpath} to detour the branch cuts and singularities of integrands. The branch cuts are determined by $ \mathrm{Im}[\kappa_2],\mathrm{Im}[\kappa_1]>0 $ to ensure the integrands single-valued and remain on the Riemann sheet where the radiation fields decrease at the infinities. Note that there are only two branch cuts along the $ y $-axis and within $ [-n_2k,n_2k] $ on the $ x $-axis originated from $ \mathrm{Im}[\kappa_2]=0 $. The $ \mathrm{Im}[\kappa_1]=0 $ condition does not yield any other new branch cuts where the integrands discontinue. Approximately, we use dashed lines to indicate the branch cuts on the left subplots in Fig.~\ref{fig:integralpath}. There are also poles on the complex plane of $ \beta $, and are located at $ \pm\beta_0 $ characterizing the guided modes ($\mathrm{HE}_{11}$ modes for the single-mode nanofiber). We exclude the singularities by closing the integration contours on the upper-half complex plane of $ \beta $ when $ z>0 $ and the lower-half plane when $ z<0 $ to ensure the Fourier transform convergent at infinities. Since the closed contour integrals vanish, the integrals along $ C_1 $ can be transformed to the contour integrals detouring the branch cuts and around the poles which correspond to the radiation mode and the guided mode components, respectively. We have used the fact that the integrands vanish at infinities (red solid contour paths). Along the contour paths, we choose $ \kappa_1 $ always positive real while $ \kappa_2 $ being negative real in the first and third quadrants and being positive real in the second and forth quadrants. 
-
-\begin{figure}
-\begin{minipage}{.91\linewidth}
-\centering
-\subfloat[]{\label{contourplot_upper}\includegraphics[scale=0.75]{./Figs/contourplot_upper}}
-\end{minipage}
-\par\medskip
-\begin{minipage}{.91\linewidth}
-\centering
-\subfloat[]{\label{contourplot_lower}\includegraphics[scale=0.75]{./Figs/contourplot_lower}}
-\end{minipage}
-\caption{Equivalent integration paths to calculate the radiation and guided fields. For $ z>0 $, we can use the zero-valued contour integral path drawn in subfig.~\ref{contourplot_upper} to calculate the integration along path $ C_1 $. The simplified integration path by ignoring waveguide losses is given in the top-right plot. It only contains the forward propagating mode contributions with radiation and guided mode components as divided through the real-axis integral and the residual of the pole. For the $ z<0 $ case, the contour integral analysis is given in subfig.~\ref{contourplot_lower}, which only includes the backward propagating mode contributions.}
-\label{fig:integralpath}
-\end{figure}
-
-\textcolor{blue}{More information: Physics meaning of the sections detouring the branch cuts and poles...} The integrals along the vertical sections of the contour paths, $ a $ and $ d $, cancel. The integrals along the horizontal sections, $ b $ and $ c $, double one the other. In the end, the contour integral detouring the branch cuts yields $ 2\int_0^k\mathrm{d}\beta $ for $ z>0 $ or $ 2\int_{-k}^0\mathrm{d}\beta $ for $ z<0 $ with $ n_2=1 $. Similarly, one can show that the contour integrals around the poles with separated segments of positive and negative real $ \kappa_2 $'s are equivalent to $ \pm 2\oint_{\pm \beta_0}\!\!\mathrm{d}\beta $ with positive real $ \kappa_2 $. When $ z=0 $, the full integral along path $ C_1 $ can be rewritten as the average value of the $ z>0 $ and $ z<0 $ limits. Therefore, we have 
-\begin{align}
-\int_{C_1}\mathrm{d}\beta =\int_{-k}^k\mathrm{d}\beta +\oint_{\beta_0}\mathrm{d}\beta -\oint_{-\beta_0}\!\!\mathrm{d}\beta,
-\end{align}
-where the first integral yield the radiation mode contribution and the last two terms yield the guided mode contribution in two respective propagation directions. When we calculate the decay rates or phase shift due to the presence of atoms along a nanofiber, we can use this decomposition relationship of integrals. Notice that, the guided mode contribution part should only include the $ m=\pm 1 $ $\mathrm{HE}_{11}$ modes when summing over mode index $ m $ for a single-mode nanofiber. 
-
-
-
-\section{Group index of refraction and mode functions of the fundamental guided modes}\label{ch:guidedmodes}
-The longitudinal propagation constant $\beta_0$ of the fundamental $\mathrm{HE}_{11}$ guided mode is the solution of $\beta$ determined by the fiber eigenvalue equation~\cite{LeKien2005}
-\begin{align}
-f(\kappa_1,q,k,\beta) &=0,
-\end{align}
-where
-\begin{align}
-f(\kappa_1,q,k,\beta) &=\frac{J_0(\kappa_1a)}{\kappa_1aJ_1(\kappa_1a)}+\frac{n_1^2+n_2^2}{2n_1^2}\frac{K_1^\prime(qa)}{qaK_1(qa)}-\frac{1}{\kappa_1^2a^2} \\
-&+\left\{\left[\frac{n_1^2-n_2^2}{2n_1^2}\frac{K_1^\prime(qa)}{qaK_1(qa)} \right]^2 +\frac{\beta^2}{n_1^2k^2}\left(\frac{1}{q^2a^2}+\frac{1}{\kappa_1^2a^2} \right)^2 \right\}^{1/2}
-\end{align}
-and the transverse propagation constants $\kappa_1=\sqrt{n_1^2k^2-\beta^2}$ and $q=\sqrt{\beta^2-n_2^2k^2}=\sqrt{\beta^2-k^2}$. $J_n$ and $K_n$ stand for the Bessel functions of the first kind and the modified Bessel functions of the second kind, respectively. 
-
-We differentiate the fiber eigenvalue equation above with respect to $ \beta $ on both sides, and obtain
-\begin{align}
-\dd{f}{\beta} &= \pp{f}{\kappa_1} \left(\pp{\kappa_1}{k}\dd{k}{\beta}+\pp{\kappa_1}{\beta} \right) + \pp{f}{q}\left(\pp{q}{k}\dd{k}{\beta}+\pp{q}{\beta} \right) +\pp{f}{k}\dd{k}{\beta}+\pp{f}{\beta}=0
-\end{align}
-Therefore, the group index of refraction of the fundamental modes of the nanofiber can be given by
-\begin{align}
- n_g &= \dd{\beta}{k} = -\frac{\pp{f}{\kappa_1}\pp{\kappa_1}{k}+\pp{f}{q}\pp{q}{k}+\pp{f}{k}}
-{\pp{f}{\kappa_1}\pp{\kappa_1}{\beta}+\pp{f}{q}\pp{q}{\beta}+\pp{f}{\beta}}.
-\end{align}
-
-\missingfigure{Frequency stability, linearity and maybe other aspects of the group index of refraction.}
-
-The fundamental mode functions, $\mathbf{u}^{(\mu)}(r\!_\perp,\phi,z)$, of the electric components of the fiber~\cite{LeKien2005,Lacroute2012} can be separated into $r\!_\perp-$, $\phi-$ and $z-$dependent parts, and are characterized by the mode index $\mu=(\beta_0,f,\xi)$, where $f=\pm 1$ indicates forward and backward propagating directions and $\xi $ indicates the polarization state of the mode. For a quasicircularly polarized fundamental mode, we use $\xi=m=\pm $ to indicate the counterclockwise and clockwise rotations, respectively; for a quasilinearly polarized fundamental mode, we usually use $\xi=\phi_0$ to indicate the rotation angle, $\phi_0$, of the polarization axis from the $x$-axis; specially, we use $\xi=H$ or $V$ when the quasilinear polarization axis is along the $x$-axis or $y$-axis, respectively. For the circularly polarized case, the fundamental mode can be written as 
-\begin{align}
-\mathbf{u}^{(\mu)}(r\!_\perp,\phi,z) &=u^{(\mu)}_{r\!_\perp}(r\!_\perp) e^{if\beta_0 z+im\phi }\hat{r}\!_\perp +u^{(\mu)}_{\phi}(r\!_\perp) e^{if\beta_0 z+im\phi } \hat{\phi} +u^{(\mu)}_{z}(r\!_\perp)e^{if\beta_0 z+im\phi }\hat{z}\\
-&=u_{r\!_\perp}(r\!_\perp) e^{if\beta_0 z+im\phi }\hat{r}\!_\perp + m u_{\phi}(r\!_\perp) e^{if\beta_0 z+im\phi }\hat{\phi} + f u_z (r\!_\perp) e^{if\beta_0 z+im\phi }\hat{z},
-\end{align}
-where the forwarding, counterclockwise rotating guided mode components, $\mathbf{u}(r\!_\perp)$, are determined, for $r\!_\perp<a$, by
-\begin{subequations}
-\label{urtcrla}
-\begin{align}
-u_{r\!_\perp}(r\!_\perp) &=-A\frac{\beta_0}{2\kappa_1} \left[ (1-s)J_0(\kappa_1r\!_\perp)-(1+s)J_2(\kappa_1r\!_\perp) \right]\\
-u_\phi(r\!_\perp) &=  -imA \frac{\beta_0}{2\kappa_1} \left[ (1-s)J_0(\kappa_1r\!_\perp) +(1+s)J_2(\kappa_1r\!_\perp) \right] \\
-u_z(r\!_\perp) &= ifA J_1(\kappa_1r\!_\perp),
-\end{align}
-\end{subequations}
-and, for $ r_\perp>a $, by
-\begin{subequations}
-\label{urtcrga}
-\begin{align}
-u_{r\!_\perp}(r\!_\perp) &=-A\frac{\beta_0}{2\kappa_1}\frac{J_1(\kappa_1a)}{K_1(qa)} \left[ (1-s)K_0(qr\!_\perp)+(1+s)K_2(qr\!_\perp) \right]\\
-u_\phi(r\!_\perp) &=  -imA \frac{\beta_0}{2\kappa_1} \frac{J_1(\kappa_1a)}{K_1(qa)} \left[ (1-s)K_0(qr\!_\perp) - (1+s)K_2(qr\!_\perp) \right] \\
-u_z(r\!_\perp) &= ifA \frac{J_1(\kappa_1a)}{K_1(qa)} K_1(qr\!_\perp),
-\end{align}
-\end{subequations}
-with
-\begin{align}
-s &= \left[\frac{1}{(\kappa_1a)^2}+ \frac{1}{(qa)^2} \right] \left[ \frac{J_1'(\kappa_1a)}{\kappa_1aJ_1(\kappa_1a)} + \frac{K'_1(qa)}{qaK_1(qa)} \right],\\
-\kappa_1 &= \sqrt{k^2 n_1^2-\beta_0^2}.
-\end{align}
-The normalization factor, $A$, is determined by the normalized energy that 
-\begin{align}
-1 &= \int_0^{2\pi} \!\!\mathrm{d} \phi \int_0^\infty\!\!\mathrm{d}r\!_\perp r\!_\perp\,  n^2(\br\!_\perp)|\boldsymbol{\mathcal{E}}^g(\br\!_\perp)|^2 = 2\pi A^2 a^2 (n_1^2P_1 + n_2^2P_2),
-\end{align}
-where the stored energy distribution factors are
-\begin{align}
-\!\!\!\!\! P_1
-&= \frac{\beta_0^2}{4\kappa_1^2}\!\left\{(1\!-\! s)^2\!\left[J_0^2(\kappa_1a)\!+\! J_1^2(\kappa_1a) \right] \!+\!(1\!+\!s)^2\!\left[J_2^2(\kappa_1a)\!-\!J_1(\kappa_1a)J_3(\kappa_1a) \right]\right\}\nonumber\\
-&\quad +\frac{1}{2}\left[J_1^2(\kappa_1a)-J_0(\kappa_1a)J_2(\kappa_1a) \right] \\
-\!\!\!\!\! P_2
-&= \frac{\beta_0^2J_1^2(\kappa_1a)}{4q^2K_1^2(qa)}\!\left\{\phantom{\frac{1}{1}}\!\!\!\!(1\!-\!s)^2\!\left[K_1^2(qa)\!-\!K_0^2(qa) \right]\right.\nonumber\\
-&\quad\left. \!+(1\!+\!s)^2\!\!\left[K\!_1\!(qa)K\!_3\!(qa)\!-\! K_2^2\!(qa) \right]\!+\!\frac{2q^2}{\beta^2}\!\!\left[K\!_0\!(qa)K\!_2\!(qa)\!-\!K_1^2\!(qa) \right]  \right\}.
-\end{align}
-Using this basis, the electric part of a guided field with quasicircularly propagating mode index $\mu=(\beta_0, f, m)$ can be written as 
-\begin{align}
-E^{(\mu)}(r\!_\perp,\phi,z,t) &=E_0\left[u_{r\!_\perp}\!(r\!_\perp) \hat{r}\!_\perp \!+\! m u_{\phi}(r\!_\perp) \hat{\phi} \!+\! f u_z (r\!_\perp) \hat{z}\right]e^{if\beta_0 z+im\phi-i\omega t }.
-\end{align}
-The power propagating inside and outside the fiber can be given in terms of the time averaged Poynting vector along the propagation direction, $\left< S_z \right>$, by
-\begin{align}
-P_{in} &= \int_0^{2\pi} \mathrm{d}\phi \int_0^a \left< S_z \right> r\!_\perp \mathrm{d}r\!_\perp\\
-P_{out} &= \int_0^{2\pi} \mathrm{d}\phi \int_a^\infty \left< S_z \right> r\!_\perp \mathrm{d}r\!_\perp.
-\end{align}
-The total power $ P=P_{in}+P_{out} $. One can show that the normalization constant $ E_0 A $ reads
-\begin{align}\label{eq:EA}
-E_0 A=\sqrt{\frac{4\mu_0\omega P}{\pi a^2 \beta_0}}\left(D_{in} + D_{out} \right)^{-1/2},
-\end{align}
-where
-\begin{align}
-D_{in} &= (1-s)\left[ 1+(1-s)\frac{\beta_0^2}{\kappa_1^2}\right] \left(J_0^2(\kappa_1a) + J_1^2(\kappa_1a) \right) \nonumber\\
-&\quad + (1+s)\left[ 1+(1+s)\frac{\beta_0^2}{\kappa_1^2}\right] \left(J_2^2(\kappa_1a)- J_1(\kappa_1a)J_3(\kappa_1a) \right)\\
-D_{out} &= \frac{J_1^2(\kappa_1a)}{K_1^2(qa)}\left\{ (1-s)\left[ 1-(1-s)\frac{\beta_0^2}{q^2}\right] \left(K_0^2(qa) - K_1^2(qa) \right)\right. \nonumber\\
-&\quad \left. + (1\!+\! s)\left[ 1\!-\! (1\!+\! s)\frac{\beta_0^2}{q^2}\right] \left(K_2^2(qa)\! -\! K_1(qa)K_3(qa) \right) \right\}.
-\end{align}
-
-
-
-For a quasilinearly polarized fundamental guided mode, the electric part of the mode can be written as 
-\begin{align}
-\mathbf{u}^{(\beta_0, f, \phi_0)}(r\!_\perp,\phi,z) &= \frac{1}{\sqrt{2}} \left(\mathbf{u}^{(\beta_0, f, +)}(r\!_\perp,\phi,z)e^{-i\phi_0} +\mathbf{u}^{(\beta_0, f, -)}(r\!_\perp,\phi,z)e^{i\phi_0} \right)\\
-&= \sqrt{2}\left[u_{r\!_\perp}(r\!_\perp)\cos(\phi-\phi_0)\hat{\mathbf{r}}\!_\perp + iu_\phi(r\!_\perp)\sin(\phi-\phi_0)\hat{\boldsymbol{\phi}} \right. \nonumber \\
-&\quad\quad \left. + fu_z(r\!_\perp)\cos(\phi-\phi_0)\hat{\mathbf{z}} \right]e^{if\beta_0 z}.
-\end{align}
-One can write down an arbitrary quasilinearly polarized electric field in the form similar to the quasicircularly polarized case with $E_0A$ satisfying the same relationship defined in Equ.~\eqref{eq:EA}. 
-
-Particularly, when $\phi_0=0$ and $\pi/2$, we obtain the $H$ and $V$ fundamental modes as
-\begin{align}
-\mathbf{u}^{(\beta_0, f, H)}(r\!_\perp,\phi,z)
-&= \sqrt{2}\left[u_{r\!_\perp}(r\!_\perp)\cos(\phi)\hat{\mathbf{r}}\!_\perp + iu_\phi(r\!_\perp)\sin(\phi)\hat{\boldsymbol{\phi}} + fu_z(r\!_\perp)\cos(\phi)\hat{\mathbf{z}} \right]e^{if\beta_0 z}\\
-\mathbf{u}^{(\beta_0, f, V)}(r\!_\perp,\phi,z)
-&= \sqrt{2}\left[u_{r\!_\perp}(r\!_\perp)\sin(\phi)\hat{\mathbf{r}}\!_\perp - iu_\phi(r\!_\perp)\cos(\phi)\hat{\boldsymbol{\phi}}  + fu_z(r\!_\perp)\sin(\phi)\hat{\mathbf{z}} \right]e^{if\beta_0 z}.
-\end{align}
-
-\todo[inline]{To show $v_g=\frac{P}{W}$ using the formulas above?}
-
-\section{Light-atom interaction in the dispersive regime}\label{sec:lightatominteract}
-\textcolor{blue}{Detailed derivation can be found in Qi's hand-written notes on \textit{Dispersive field-atom interaction Hamiltonian}. The special case of a single mode propagating in a homogeneous medium can be found in Ben's dissertation (chapter 4). }
-
-
-The dispersive light shift interaction describes an atom's effective response to an electric field when the excited states can be adiabatically eliminated from the quantum dynamics.  This reduced description applies when the saturation parameter of atoms is much smaller than 1:
-\begin{align} \label{Eq::SatParameter}
-	s = \frac{ \Omega^2/4}{\Delta^2 + \Gamma^2/4} \ll 1,  
-\end{align}
-where $\Omega$ is the Rabi frequency, $\Gamma$ is the total spontaneous emission rate of the atoms, and $\Delta = \omega_0 - \omega_{eg}$ is the probe detuning from the atomic resonance frequency $\omega_{eg}$ of the given excited and ground states. As the saturation parameter is proportional to the ratio of the Rabi frequency to the detuning, $\Omega/\Delta$, physically this allows condition \erf{Eq::SatParameter} to be satisfied even for large driving power (Rabi frequency) as long as the probe laser is far enough detuned.  In this limit, the atom-light coupling can be described by the dispersive light-shift interaction,
-\begin{align} 
-	\hat{H}_{\rm eff} & = \sum_{f,f'=\pm 1}\hat{H}_{\rm eff}^{ff'} =- \sum_{f,f'=\pm 1}\hat{\mathbf{E}}^{(-)}_f(\mathbf{r}' ) \cdot \tensor{\alpha} \cdot \hat{\mathbf{E}}^{(+)}_{f'}(\mathbf{r}' )\\
-	&= - \hat{\mathbf{E}}^{(-)}_+(\mathbf{r}' ) \cdot \tensor{\alpha} \cdot \hat{\mathbf{E}}^{(+)}_+(\mathbf{r}' )
-	- \hat{\mathbf{E}}^{(-)}_+(\mathbf{r}' ) \cdot \tensor{\alpha} \cdot \hat{\mathbf{E}}^{(+)}_-(\mathbf{r}' )\nonumber\\
-	&\quad - \hat{\mathbf{E}}^{(-)}_-(\mathbf{r}' ) \cdot \tensor{\alpha} \cdot \hat{\mathbf{E}}^{(+)}_+(\mathbf{r}' )
-	- \hat{\mathbf{E}}^{(-)}_-(\mathbf{r}' ) \cdot \tensor{\alpha} \cdot \hat{\mathbf{E}}^{(+)}_-(\mathbf{r}' ), \label{Eq::LightShiftHam}
-\end{align}
-where the electric field operator is evaluated at the atomic position $\mathbf{r}'$, and the electric component of the guided field can be given by
-\begin{align}
-\hat{\mathbf{E}} &= (\hat{\mathbf{E}}^{(+)}e^{-i\omega_0 t}+c.c.)/2
-\end{align}   
-with
-\begin{align}
-\hat{\mathbf{E}}^{(+)}(\br) &= \sum_{f=\pm 1} \hat{\mathbf{E}}^{(+)}_f(\br) = \sqrt{\frac{2\pi \hbar \omega_0}{v_g\tau}}\sum_{f=\pm 1} \left[ \mathbf{u}_{Hf}(\br\!_\perp)\hat{a}_{Hf} + \mathbf{u}_{Vf}(\br\!_\perp)\hat{a}_{Vf} \right]e^{if\beta_0 z},
-\end{align}
-where $\mathbf{u}_{Hf/Vf}$ are the polarization vectors of the $H/V$ guided modes with propagation direction parameter $f=\pm 1$. 
-
-Each of the four effective Hamiltonian $\hat{H}_{\rm eff}^{ff'}$ terms in Equ.~\eqref{Eq::LightShiftHam} corresponds to the physics process with $f'$-propagating input field and $f$-propagating output field. For the case that only the forward-propagating fields are detected, the first two terms of the Hamiltonian yield the output we care about and the last two terms are losses. If the scattering among atoms can be ignored, then only the first term of the Hamiltonian is important. For now, we only consider the first term and ignore the propagation direction indexes $f$ and $f'$ as they both equal to $1$. 
-
-We consider to rewrite the Hamiltonian in terms of the Stokes vector operators and the collective spin operators with the total atom number of $ N_A $. We assume the photon number, $ N_L $, is large and all atoms interact with the photon package indistinguishably in the measurement time period, $\tau$, and interactions among atoms and the interference effect due to photon propagation are negligible crossing different measurement time steps. The total atomic angular momentum is $\mathbf{F}=\sum^{N_A}_i\mathbf{F}^{(i)}$. 
-
-The polarization state of the light can be represented on the Poincare sphere via Stokes vector $ \mathbf{S} $. The quantized operators in the Schwinger representation with respect to the three Poincare sphere axes are defined as  
-\begin{align}
-\hat{S}_1&= \frac{1}{2} \Big( \hat{a}_H\dg \hat{a}_H -  \hat{a}_V\dg \hat{a}_V \Big) \\
-\hat{S}_2&= \frac{1}{2} \Big( \hat{a}_H\dg \hat{a}_V +  \hat{a}_V\dg \hat{a}_H \Big)\\
-\hat{S}_3&= \frac{1}{2i} \Big( \hat{a}_H\dg \hat{a}_V -  \hat{a}_V\dg \hat{a}_H \Big)
-\end{align}
-satisfying the $ SU(2) $ algebra $ [S_i,S_j]=i\varepsilon_{ijk}S_k $. The total photon number operator is defined as
-\begin{align}
-\hat{S}_0&= \frac{1}{2} \Big( \hat{a}_H\dg \hat{a}_H +  \hat{a}_V\dg \hat{a}_V \Big).
-\end{align}
-
-Using these definitions in Equ.~\eqref{Eq::LightShiftHam}, the effective Hamiltonian term can be rewritten as
-\begin{align}
-\!\!\!\! \hat{H}_{\rm eff}^{f,f'=1} &\!=\! \sum_{F} \hbar \chi_{0F}\! \sum_{F'}\frac{1}{1+\delta_{F'}/\Delta_F+i\Gamma_{FF'}/2\Delta_F}\left[\hat{A}_0\hat{S}_0 \!+\! \hat{A}_1\hat{S}_1 \!+\! \hat{A}_2\hat{S}_2 \!+\!\hat{A}_3\hat{S}_3 \right]. 
-\end{align}
-We have written the detuning from a particular hyperfine transition as
-\begin{align}
-	\Delta_{F,F'} = \Delta_F + \delta_{F'}=\omega_0-(\omega_F'-\omega_F),
-\end{align}
-where we have factored out the detuning relative to the largest hyperfine excited state under $ J' $ splittings,
-\begin{align} \label{Eq::DetuningChoice}
-	\Delta_F \equiv \Delta_{F,F'_{\rm max}} = \omega_0 - ( \omega_{F'_{\rm max}} - \omega_F),
-\end{align} 
-and $\delta_{F'} \equiv \Delta_{F,F'} - \Delta_F$ is the residual detuning for the other hyperfine excited states. Correspondingly, for all $\Delta_{F,F'}\gg \Gamma_{FF'}$, the real part of the light shift interaction gives a coherent Hamiltonian of the form,
-\begin{align} \label{Eq::StokesHam}
-	\hat{H}_{\rm coh}^{f,f'=1} &= \sum_F \hbar \chi_{0F} \sum_{F'} \frac{1}{1+ \delta_{F'}/\Delta_F} \left[\hat{A}_0\hat{S}_0 +\hat{A}_1\hat{S}_1 +\hat{A}_2\hat{S}_2 +\hat{A}_3\hat{S}_3 \right]. 
-\end{align}
-We have made the atomic operators that couple to the Stokes components at the atoms' positions, $\br'=(r_\perp^\prime,\phi'=0\,\mathrm{or}\, \pi, z')$, are
-\begin{subequations} \label{Eq::StokesSpinOps}
-\begin{align}
-	\hat{A}_0 = & C^{(0)}_{\rm J'F F'} \left[|\mathbf{u}_{H}(\br'_\perp)|^2+ |\mathbf{u}_{V}(\br'_\perp)|^2 \right]\hat{I}_F \nonumber\\
-	&-4C^{(1)}_{\rm J'FF'} \mathrm{Im}\left[u_z^*(r_\perp^\prime)u_{r\!_\perp}(r_\perp^\prime) \right]\hat{F}_\phi \nonumber\\
-	&+ 2C^{(2)}_{\rm J'FF'}  \mathrm{Re}\left[u_z^*(r_\perp^\prime)u_{r\!_\perp}(r_\perp^\prime) \right]\big(\hat{F}_{r\!_\perp}\hat{F}_z+\hat{F}_z\hat{F}_{r\!_\perp} \big)\nonumber\\
-	&+ C^{(2)}_{\rm J'FF'}\!\sum_i \left[|u^{i}_{H}(\br'_\perp)|^2 + |u^{i}_{V}(\br'_\perp)|^2 \right] \left(  \hat{F}_i^{2}\! -\! \frac{1}{3}\hat{\bf{F}}\! \cdot\!  \hat{\bf{F}} \right) \\
-	% A1
-	\hat{A}_1 = & C^{(0)}_{\rm J'F F'} \left[|\mathbf{u}_{H}(\br'_\perp)|^2- |\mathbf{u}_{V}(\br'_\perp)|^2 \right]\hat{I}_F \nonumber\\
-	& -4C^{(1)}_{\rm J'FF'} \mathrm{Im}\left[u_z^*(r_\perp^\prime)u_{r\!_\perp}(r_\perp^\prime) \right]\hat{F}_\phi \nonumber\\
-	&+2 C^{(2)}_{\rm J'FF'}  \mathrm{Re}\left[u_z^*(r_\perp^\prime)u_{r\!_\perp}(r_\perp^\prime) \right]\big(\hat{F}_{r\!_\perp}\hat{F}_z+\hat{F}_z\hat{F}_{r\!_\perp} \big)\nonumber\\
-	&+ C^{(2)}_{\rm J'FF'}\!\sum_i \left[|u^{i}_{H}(\br'_\perp)|^2- |u^{i}_{V}(\br'_\perp)|^2 \right] \left(  \hat{F}_i^{2}\! -\! \frac{1}{3}\hat{\bf{F}}\! \cdot\!  \hat{\bf{F}} \right) \\
-	% A2
-	\hat{A}_2 = & 4C^{(1)}_{\rm J'FF'} \left[ \mathrm{Re} \left(u_{r\!_\perp}^*(r_\perp^\prime)u_\phi(r_\perp^\prime) \right)\hat{F}_z  -\mathrm{Re}\left( u_\phi^*(r_\perp^\prime) u_z(r_\perp^\prime) \right)\hat{F}_{r\!_\perp}\right] \nonumber\\
-	&+2 C^{(2)}_{\rm J'FF'} \left[ \mathrm{Im} \left( u_{r\!_\perp}^*(r_\perp^\prime)u_\phi(r_\perp^\prime) \right)\left(\hat{F}_{r\!_\perp}\hat{F}_\phi +\hat{F}_\phi\hat{F}_{r\!_\perp} \right)\right.\nonumber\\
-	&\quad \quad \left. + \mathrm{Im}\left( u_\phi(r_\perp^\prime) u_z^*(r_\perp^\prime) \right)\big(\hat{F}_\phi\hat{F}_z+\hat{F}_z\hat{F}_\phi \big)\right] \\
-	% A3
-	\hat{A}_3 = & 4C^{(1)}_{\rm J'FF'} \left[\mathrm{Im} \left(u_{r\!_\perp}(r_\perp^\prime)u_\phi^*(r_\perp^\prime) \right)\hat{F}_z  +\mathrm{Im}\left( u_\phi(r_\perp^\prime) u_z^*(r_\perp^\prime) \right)\hat{F}_{r\!_\perp}\right] \nonumber\\
-	&+ 2C^{(2)}_{\rm J'FF'} \left[ \mathrm{Re} \left( u_{r\!_\perp}^*(r_\perp^\prime)u_\phi(r_\perp^\prime) \right)\left(\hat{F}_{r\!_\perp}\hat{F}_\phi +\hat{F}_\phi\hat{F}_{r\!_\perp} \right)\right.\nonumber\\
-	&\quad \quad \left. + \mathrm{Re}\left( u_\phi^*(r_\perp^\prime) u_z(r_\perp^\prime) \right)\big(\hat{F}_\phi\hat{F}_z+\hat{F}_z\hat{F}_\phi \big)\right].
-\end{align}
-\end{subequations}
-The dimensionless coupling constant,
-\begin{align}
-\chi_{0F} &= -\frac{2\pi\omega_0}{v_g\tau}\alpha(\Delta_F) =\frac{2\pi\omega_0}{v_g\tau} \frac{|d_{F'_{max}F}|^2}{\hbar \Delta_F} =n_g\sigma_0\frac{\Gamma}{4\Delta_F}
-\end{align}
-%\begin{align} \label{Eq::FaradayAngle}
-%	\chi_0 = - \left(\frac{4\pi \omega_0}{A c} \right) \alpha_0(\Delta) = \Big( \frac{\sigma_0}{A} \Big)\Big( \frac{\Gamma}{2 \Delta} \Big),
-%\end{align} 
-is a measure of the strength of the light-matter interaction.  It is proportional to the detuning, $\Delta_F^{-1}$, but more importantly to the ratio of the resonant atomic cross section, $\sigma_0 = 3 \lambda_{F F'}^2/2 \pi$, \textcolor{red}{to the transverse mode area $A$}.  This ratio sets the strength of the single-atom coupling, as it roughly describes the amount of light scattered from the atom back into the probe mode.  
-%The form of the real part of the interaction, \erf{Eq::StokesHam}, assumes we are working in a regime where the detuning is much greater than the linewidth, $\Delta_{f,f'} \gg \Gamma$, for all excited hyperfine states.  Note that the sign of $\hat{A}_3$ is opposite that found in Ref. \cite{Deutsch2010}.
-
-For a psuedo-spin system, the spin operator 
-$\mathbf{F}=\mathbf{J}=\sum_i^{N_A}\hat{\boldsymbol{\sigma}}/2$ and satisfies the $\mathrm{SU}(2)$ 
-symmetry that $[J_i,J_j]=i\epsilon_{ijk}J_k$ and hence, in Equs.~\eqref{Eq::StokesSpinOps}, the common 
-factor $J_iJ_j+J_jJ_i=2J_iJ_j-i\epsilon_{ijk}J_k$. 
-
-
-
-\section{Junk: Effects of the evanescent field and the multilevel structure of the atom}
-In general, 
-\begin{align}
-\Gamma \propto \mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}^*(\br',\br') \right]\cdot\mathbf{d}_{eg}^*=\mathrm{tr}\left[\mathbf{d}_{eg}^*\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}^*(\br',\br') \right] \right]\propto \mathrm{tr}\left[\boldsymbol{\alpha}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}^*(\br',\br') \right] \right]
-\end{align}
-where $ \boldsymbol{\alpha}_{eg} $ is the polarizability of the atom due to the transition between levels labeled by $ e$ and $g $. Therefore, the phase shift effect can be treated as a combined result of the atomic internal structure and the external field properties. 
-
-Since 
-\begin{align}
-\mathbf{d}_{eg}\cdot \mathrm{Im}\left[\mathbf{G}^*(\br',\br') \right]\cdot\mathbf{d}_{eg}^*>0
-\end{align}
-for a physical decay rate, $\mathrm{Im}\left[\mathbf{G}^*(\br',\br')\right]$ is positive definite and should always has three positive eigenvalues which indicate the range of $ \Gamma $ and phase shift at the atom position. The 3 corresponding eigenvectors indicate the 3 orthogonal principal axes of the radiation/emission surface. Case studies...
-
-Radiation surface theory for the effective orientation of dipoles, elementary transitions ($ \pi $ and $ \sigma_\pm $ transitions) and the example of completely mixed state case. 
-\begin{align}
-\Gamma_{mix} &\propto \frac{1}{3} \mathrm{tr}\left[ \mathrm{Im}\left[\mathbf{G}^*(\br',\br')\right] \right].
-\end{align}
-
-For the atomic internal structure, we have the irreducible tensor decompositions that 
-\begin{align}
-\boldsymbol{\alpha}_{eg} = \boldsymbol{\alpha}^S + \boldsymbol{\alpha}^V + \boldsymbol{\alpha}^T.
-\end{align}
-The scalar component will yield a decay rate equivalent to the completely mixed state case. 
-
-Another way to look at this problem is that we can decompose the guided mode Green function tensor into the scalar, vector and tensor parts as well, since the Green function tensor is reducible.
-\begin{align}
-\mathbf{G}^g=\mathbf{G}^S+\mathbf{G}^V+\mathbf{G}^T.
-\end{align}
-Therefore, where the position of the atom relative to the fiber mode yields a strong scalar component, the atomic response is more relatively independent of the atomic states... 
-
-Some interesting examples of state-dependent decay and phase shift...
 
 
 %\begin{center}
