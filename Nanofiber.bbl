@@ -34,6 +34,12 @@ Fam Le~Kien and A.~Rauschenbeutel.
 \newblock Propagation of nanofiber-guided light through an array of atoms.
 \newblock {\em Phys. Rev. A}, 90(6):063816, December 2014.
 
+\bibitem{wubs_multiple-scattering_2004}
+Martijn Wubs, L.~G. Suttorp, and A.~Lagendijk.
+\newblock Multiple-scattering approach to interatomic interactions and
+  superradiance in inhomogeneous dielectrics.
+\newblock {\em Phys. Rev. A}, 70(5):053823, November 2004.
+
 \bibitem{sakoda_optical_1996}
 Kazuaki Sakoda and Kazuo Ohtaka.
 \newblock Optical response of three-dimensional photonic lattices: {Solutions}
@@ -51,6 +57,12 @@ Roy~J. Glauber and M.~Lewenstein.
 \newblock Quantum optics of dielectric media.
 \newblock {\em Phys. Rev. A}, 43(1):467--491, January 1991.
 
+\bibitem{le_kien_spontaneous_2005}
+Fam Le~Kien, S.~Dutta~Gupta, V.~I. Balykin, and K.~Hakuta.
+\newblock Spontaneous emission of a cesium atom near a nanofiber: {Efficient}
+  coupling of light to guided modes.
+\newblock {\em Phys. Rev. A}, 72(3):032509, September 2005.
+
 \bibitem{le_kien_anisotropy_2014}
 Fam Le~Kien and A.~Rauschenbeutel.
 \newblock Anisotropy in scattering of light from an atom into the guided modes
@@ -63,11 +75,34 @@ Fam~Le Kien, J.~Q. Liang, K.~Hakuta, and V.~I. Balykin.
   vacuum-clad subwavelength-diameter optical fiber.
 \newblock {\em Optics Communications}, 242(4–6):445--455, December 2004.
 
-\bibitem{wubs_multiple-scattering_2004}
-Martijn Wubs, L.~G. Suttorp, and A.~Lagendijk.
-\newblock Multiple-scattering approach to interatomic interactions and
-  superradiance in inhomogeneous dielectrics.
-\newblock {\em Phys. Rev. A}, 70(5):053823, November 2004.
+\bibitem{fussell_decay_2005}
+D.~P. Fussell, R.~C. McPhedran, and C.~Martijn~de Sterke.
+\newblock Decay rate and level shift in a circular dielectric waveguide.
+\newblock {\em Phys. Rev. A}, 71(1):013815, January 2005.
+
+\bibitem{yao_ultrahigh_2009}
+Peijun Yao, C.~Van~Vlack, A.~Reza, M.~Patterson, M.~M. Dignam, and S.~Hughes.
+\newblock Ultrahigh {Purcell} factors and {Lamb} shifts in slow-light
+  metamaterial waveguides.
+\newblock {\em Phys. Rev. B}, 80(19):195106, November 2009.
+
+\bibitem{domokos_quantum_2002}
+Peter Domokos, Peter Horak, and Helmut Ritsch.
+\newblock Quantum description of light-pulse scattering on a single atom in
+  waveguides.
+\newblock {\em Phys. Rev. A}, 65(3):033832, March 2002.
+
+\bibitem{bures_power_1999}
+Jacques Bures and René Ghosh.
+\newblock Power density of the evanescent field in the vicinity of a tapered
+  fiber.
+\newblock {\em Journal of the Optical Society of America A}, 16(8):1992, 1999.
+
+\bibitem{le_kien_scattering_2006}
+Fam Le~Kien, V.~I. Balykin, and K.~Hakuta.
+\newblock Scattering of an evanescent light field by a single cesium atom near
+  a nanofiber.
+\newblock {\em Phys. Rev. A}, 73(1):013819, January 2006.
 
 \bibitem{le_kien_correlations_2008}
 Fam Le~Kien and K.~Hakuta.
@@ -75,17 +110,22 @@ Fam Le~Kien and K.~Hakuta.
   nanofiber.
 \newblock {\em Phys. Rev. A}, 77(3):033826, March 2008.
 
-\bibitem{le_kien_spontaneous_2005}
-Fam Le~Kien, S.~Dutta~Gupta, V.~I. Balykin, and K.~Hakuta.
-\newblock Spontaneous emission of a cesium atom near a nanofiber: {Efficient}
-  coupling of light to guided modes.
-\newblock {\em Phys. Rev. A}, 72(3):032509, September 2005.
+\bibitem{nha_cavity_1997}
+H.~Nha and W.~Jhe.
+\newblock Cavity quantum electrodynamics for a cylinder: {Inside} a hollow
+  dielectric and near a solid dielectric cylinder.
+\newblock {\em Phys. Rev. A}, 56(3):2213--2220, September 1997.
 
-\bibitem{domokos_quantum_2002}
-Peter Domokos, Peter Horak, and Helmut Ritsch.
-\newblock Quantum description of light-pulse scattering on a single atom in
-  waveguides.
-\newblock {\em Phys. Rev. A}, 65(3):033832, March 2002.
+\bibitem{klimov_spontaneous_2004}
+V.~V. Klimov and M.~Ducloy.
+\newblock Spontaneous emission rate of an excited atom placed near a nanofiber.
+\newblock {\em Phys. Rev. A}, 69(1):013812, January 2004.
+
+\bibitem{maslov_distribution_2006}
+A.~V. Maslov, M.~I. Bakunov, and C.~Z. Ning.
+\newblock Distribution of optical emission between guided modes and free space
+  in a semiconductor nanowire.
+\newblock {\em Journal of Applied Physics}, 99(2):024314, January 2006.
 
 \bibitem{fan_input-output_2010}
 Shanhui Fan, Şükrü~Ekin Kocabaş, and Jung-Tsung Shen.
@@ -143,5 +183,11 @@ Greg~A. Smith, Souma Chaudhury, and Poul~S. Jessen.
 \newblock Faraday spectroscopy in an optical lattice: a continuous probe of
   atom dynamics.
 \newblock {\em J. Opt. B: Quantum Semiclass. Opt.}, 5(4):323, August 2003.
+
+\bibitem{yalla_cavity_2014}
+Ramachandrarao Yalla, Mark Sadgrove, Kali~P. Nayak, and Kohzo Hakuta.
+\newblock Cavity {Quantum} {Electrodynamics} on a {Nanofiber} {Using} a
+  {Composite} {Photonic} {Crystal} {Cavity}.
+\newblock {\em Phys. Rev. Lett.}, 113(14):143601, September 2014.
 
 \end{thebibliography}
