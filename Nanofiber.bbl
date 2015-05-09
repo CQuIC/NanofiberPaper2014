@@ -16,6 +16,13 @@ C.-L. Hung, S.~M. Meenehan, D.~E. Chang, O.~Painter, and H.~J. Kimble.
 \newblock Trapped atoms in one-dimensional photonic crystals.
 \newblock {\em New J. Phys.}, 15(8):083026, August 2013.
 
+\bibitem{baragiola_three-dimensional_2014}
+Ben~Q. Baragiola, Leigh~M. Norris, Enrique Montaño, Pascal~G. Mickelson,
+  Poul~S. Jessen, and Ivan~H. Deutsch.
+\newblock Three-dimensional light-matter interface for collective spin
+  squeezing in atomic ensembles.
+\newblock {\em Phys. Rev. A}, 89(3):033850, March 2014.
+
 \bibitem{vetsch_nanofiber-based_2012}
 E.~Vetsch, S.T. Dawkins, R.~Mitsch, D.~Reitz, P.~Schneeweiss, and
   A.~Rauschenbeutel.
@@ -57,12 +64,6 @@ Roy~J. Glauber and M.~Lewenstein.
 \newblock Quantum optics of dielectric media.
 \newblock {\em Phys. Rev. A}, 43(1):467--491, January 1991.
 
-\bibitem{le_kien_spontaneous_2005}
-Fam Le~Kien, S.~Dutta~Gupta, V.~I. Balykin, and K.~Hakuta.
-\newblock Spontaneous emission of a cesium atom near a nanofiber: {Efficient}
-  coupling of light to guided modes.
-\newblock {\em Phys. Rev. A}, 72(3):032509, September 2005.
-
 \bibitem{le_kien_anisotropy_2014}
 Fam Le~Kien and A.~Rauschenbeutel.
 \newblock Anisotropy in scattering of light from an atom into the guided modes
@@ -75,11 +76,65 @@ Fam~Le Kien, J.~Q. Liang, K.~Hakuta, and V.~I. Balykin.
   vacuum-clad subwavelength-diameter optical fiber.
 \newblock {\em Optics Communications}, 242(4–6):445--455, December 2004.
 
+\bibitem{fussell_decay_2005}
+D.~P. Fussell, R.~C. McPhedran, and C.~Martijn~de Sterke.
+\newblock Decay rate and level shift in a circular dielectric waveguide.
+\newblock {\em Phys. Rev. A}, 71(1):013815, January 2005.
+
+\bibitem{dung_spontaneous_2000}
+Ho~Trung Dung, Ludwig Knöll, and Dirk-Gunnar Welsch.
+\newblock Spontaneous decay in the presence of dispersing and absorbing
+  bodies:{\textbackslash}quad\{\}{General} theory and application to a
+  spherical cavity.
+\newblock {\em Phys. Rev. A}, 62(5):053804, October 2000.
+
+\bibitem{chen_finite-element_2010}
+Yuntian Chen, Torben~Roland Nielsen, Niels Gregersen, Peter Lodahl, and Jesper
+  Mørk.
+\newblock Finite-element modeling of spontaneous emission of a quantum emitter
+  at nanoscale proximity to plasmonic waveguides.
+\newblock {\em Phys. Rev. B}, 81(12):125431, March 2010.
+
+\bibitem{le_kien_spontaneous_2005}
+Fam Le~Kien, S.~Dutta~Gupta, V.~I. Balykin, and K.~Hakuta.
+\newblock Spontaneous emission of a cesium atom near a nanofiber: {Efficient}
+  coupling of light to guided modes.
+\newblock {\em Phys. Rev. A}, 72(3):032509, September 2005.
+
+\bibitem{klimov_spontaneous_2004}
+V.~V. Klimov and M.~Ducloy.
+\newblock Spontaneous emission rate of an excited atom placed near a nanofiber.
+\newblock {\em Phys. Rev. A}, 69(1):013812, January 2004.
+
+\bibitem{yao_ultrahigh_2009}
+Peijun Yao, C.~Van~Vlack, A.~Reza, M.~Patterson, M.~M. Dignam, and S.~Hughes.
+\newblock Ultrahigh {Purcell} factors and {Lamb} shifts in slow-light
+  metamaterial waveguides.
+\newblock {\em Phys. Rev. B}, 80(19):195106, November 2009.
+
+\bibitem{yao_-chip_2010}
+P.~Yao, V.s.c. Manga~Rao, and S.~Hughes.
+\newblock On-chip single photon sources using planar photonic crystals and
+  single quantum dots.
+\newblock {\em Laser \& Photon. Rev.}, 4(4):499--516, June 2010.
+
 \bibitem{domokos_quantum_2002}
 Peter Domokos, Peter Horak, and Helmut Ritsch.
 \newblock Quantum description of light-pulse scattering on a single atom in
   waveguides.
 \newblock {\em Phys. Rev. A}, 65(3):033832, March 2002.
+
+\bibitem{bures_power_1999}
+Jacques Bures and René Ghosh.
+\newblock Power density of the evanescent field in the vicinity of a tapered
+  fiber.
+\newblock {\em Journal of the Optical Society of America A}, 16(8):1992, 1999.
+
+\bibitem{le_kien_scattering_2006}
+Fam Le~Kien, V.~I. Balykin, and K.~Hakuta.
+\newblock Scattering of an evanescent light field by a single cesium atom near
+  a nanofiber.
+\newblock {\em Phys. Rev. A}, 73(1):013819, January 2006.
 
 \bibitem{le_kien_correlations_2008}
 Fam Le~Kien and K.~Hakuta.
@@ -87,38 +142,40 @@ Fam Le~Kien and K.~Hakuta.
   nanofiber.
 \newblock {\em Phys. Rev. A}, 77(3):033826, March 2008.
 
+\bibitem{nha_cavity_1997}
+H.~Nha and W.~Jhe.
+\newblock Cavity quantum electrodynamics for a cylinder: {Inside} a hollow
+  dielectric and near a solid dielectric cylinder.
+\newblock {\em Phys. Rev. A}, 56(3):2213--2220, September 1997.
+
+\bibitem{maslov_distribution_2006}
+A.~V. Maslov, M.~I. Bakunov, and C.~Z. Ning.
+\newblock Distribution of optical emission between guided modes and free space
+  in a semiconductor nanowire.
+\newblock {\em Journal of Applied Physics}, 99(2):024314, January 2006.
+
+\bibitem{vos_orientation-dependent_2009}
+Willem~L. Vos, A.~Femius Koenderink, and Ivan~S. Nikolaev.
+\newblock Orientation-dependent spontaneous emission rates of a two-level
+  quantum emitter in any nanophotonic environment.
+\newblock {\em Phys. Rev. A}, 80(5):053802, November 2009.
+
+\bibitem{mitsch_quantum_2014}
+R.~Mitsch, C.~Sayrin, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
+\newblock Quantum state-controlled directional spontaneous emission of photons
+  into a nanophotonic waveguide.
+\newblock {\em Nat Commun}, 5, December 2014.
+
 \bibitem{fan_input-output_2010}
 Shanhui Fan, Şükrü~Ekin Kocabaş, and Jung-Tsung Shen.
 \newblock Input-output formalism for few-photon transport in one-dimensional
   nanophotonic waveguides coupled to a qubit.
 \newblock {\em Phys. Rev. A}, 82(6):063821, December 2010.
 
-\bibitem{tanji-suzuki_chapter_2011}
-Haruka Tanji-Suzuki, Ian~D. Leroux, Monika~H. Schleier-Smith, Marko Cetina,
-  Andrew~T. Grier, Jonathan Simon, and Vladan Vuletić.
-\newblock Chapter 4 - {Interaction} between {Atomic} {Ensembles} and {Optical}
-  {Resonators}: {Classical} {Description}.
-\newblock In P.~R. Berman {and} C. C.~Lin E.~Arimondo, editor, {\em Advances
-  {In} {Atomic}, {Molecular}, and {Optical} {Physics}}, volume~60 of {\em
-  Advances in {Atomic}, {Molecular}, and {Optical} {Physics}}, pages 201--237.
-  Academic Press, 2011.
-
-\bibitem{tong_single-mode_2004}
-Limin Tong, Jingyi Lou, and Eric Mazur.
-\newblock Single-mode guiding properties of subwavelength-diameter silica and
-  silicon wire waveguides.
-\newblock {\em Opt. Express}, 12(6):1025--1035, March 2004.
-
-\bibitem{gardiner_input_1985}
-C.~W. Gardiner and M.~J. Collett.
-\newblock Input and output in damped quantum systems: {Quantum} stochastic
-  differential equations and the master equation.
-\newblock {\em Phys. Rev. A}, 31(6):3761--3774, June 1985.
-
-\bibitem{blow_continuum_1990}
-K.~J. Blow, Rodney Loudon, Simon J.~D. Phoenix, and T.~J. Shepherd.
-\newblock Continuum fields in quantum optics.
-\newblock {\em Phys. Rev. A}, 42(7):4102--4114, October 1990.
+\bibitem{buhmann_casimir-polder_2004}
+Stefan~Yoshi Buhmann, Ludwig Knöll, Dirk-Gunnar Welsch, and Ho~Trung Dung.
+\newblock Casimir-{Polder} forces: {A} nonperturbative approach.
+\newblock {\em Phys. Rev. A}, 70(5):052117, November 2004.
 
 \bibitem{deutsch_quantum_2010}
 Ivan~H. Deutsch and Poul~S. Jessen.
@@ -132,16 +189,117 @@ Fam~Le Kien, Philipp Schneeweiss, and Arno Rauschenbeutel.
   theory and application to cesium.
 \newblock {\em Eur. Phys. J. D}, 67(5):1--16, May 2013.
 
+\bibitem{tanji-suzuki_chapter_2011}
+Haruka Tanji-Suzuki, Ian~D. Leroux, Monika~H. Schleier-Smith, Marko Cetina,
+  Andrew~T. Grier, Jonathan Simon, and Vladan Vuletić.
+\newblock Chapter 4 - {Interaction} between {Atomic} {Ensembles} and {Optical}
+  {Resonators}: {Classical} {Description}.
+\newblock In P.~R. Berman {and} C. C.~Lin E.~Arimondo, editor, {\em Advances
+  {In} {Atomic}, {Molecular}, and {Optical} {Physics}}, volume~60 of {\em
+  Advances in {Atomic}, {Molecular}, and {Optical} {Physics}}, pages 201--237.
+  Academic Press, 2011.
+
+\bibitem{geremia_tensor_2006}
+J.~M. Geremia, John~K. Stockton, and Hideo Mabuchi.
+\newblock Tensor polarizability and dispersive quantum measurement of
+  multilevel atoms.
+\newblock {\em Phys. Rev. A}, 73(4):042112, April 2006.
+
+\bibitem{hammerer_quantum_2010}
+Klemens Hammerer, Anders~S. Sørensen, and Eugene~S. Polzik.
+\newblock Quantum interface between light and atomic ensembles.
+\newblock {\em Rev. Mod. Phys.}, 82(2):1041--1093, April 2010.
+
+\bibitem{chaudhury_continuous_2006}
+Souma Chaudhury, Greg~A. Smith, Kevin Schulz, and Poul~S. Jessen.
+\newblock Continuous {Nondemolition} {Measurement} of the {Cs} {Clock}
+  {Transition} {Pseudospin}.
+\newblock {\em Phys. Rev. Lett.}, 96(4):043001, January 2006.
+
 \bibitem{dawkins_dispersive_2011}
 S.~T. Dawkins, R.~Mitsch, D.~Reitz, E.~Vetsch, and A.~Rauschenbeutel.
 \newblock Dispersive {Optical} {Interface} {Based} on {Nanofiber}-{Trapped}
   {Atoms}.
 \newblock {\em Phys. Rev. Lett.}, 107(24):243601, December 2011.
 
+\bibitem{beguin_generation_2014}
+J.-B. Béguin, E. M. Bookjans, S. L. Christensen, H. L. Sørensen,
+  J. H. Müller, E. S. Polzik, and J.~Appel.
+\newblock Generation and {Detection} of a {Sub}-{Poissonian} {Atom} {Number}
+  {Distribution} in a {One}-{Dimensional} {Optical} {Lattice}.
+\newblock {\em Phys. Rev. Lett.}, 113(26):263603, December 2014.
+
+\bibitem{smith_quantum_2013}
+A.~Smith, C.~A. Riofrío, B.~E. Anderson, H.~Sosa-Martinez, I.~H. Deutsch, and
+  P.~S. Jessen.
+\newblock Quantum state tomography by continuous measurement and compressed
+  sensing.
+\newblock {\em Phys. Rev. A}, 87(3):030102, March 2013.
+
+\bibitem{kuzmich_generation_2000}
+A.~Kuzmich, L.~Mandel, and N.~P. Bigelow.
+\newblock Generation of {Spin} {Squeezing} via {Continuous} {Quantum}
+  {Nondemolition} {Measurement}.
+\newblock {\em Phys. Rev. Lett.}, 85(8):1594--1597, August 2000.
+
+\bibitem{takano_spin_2009}
+T.~Takano, M.~Fuyama, R.~Namiki, and Y.~Takahashi.
+\newblock Spin {Squeezing} of a {Cold} {Atomic} {Ensemble} with the {Nuclear}
+  {Spin} of {One}-{Half}.
+\newblock {\em Phys. Rev. Lett.}, 102(3):033601, January 2009.
+
+\bibitem{mitsch_exploiting_2014}
+R.~Mitsch, C.~Sayrin, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
+\newblock Exploiting the local polarization of strongly confined light for
+  sub-micrometer-resolution internal state preparation and manipulation of cold
+  atoms.
+\newblock {\em Phys. Rev. A}, 89(6):063829, June 2014.
+
+\bibitem{sayrin_storage_2015}
+C.~Sayrin, C.~Clausen, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
+\newblock Storage of fiber-guided light in a nanofiber-trapped ensemble of cold
+  atoms.
+\newblock {\em Optica}, 2(4):353--356, April 2015.
+
+\bibitem{gardiner_input_1985}
+C.~W. Gardiner and M.~J. Collett.
+\newblock Input and output in damped quantum systems: {Quantum} stochastic
+  differential equations and the master equation.
+\newblock {\em Phys. Rev. A}, 31(6):3761--3774, June 1985.
+
+\bibitem{blow_continuum_1990}
+K.~J. Blow, Rodney Loudon, Simon J.~D. Phoenix, and T.~J. Shepherd.
+\newblock Continuum fields in quantum optics.
+\newblock {\em Phys. Rev. A}, 42(7):4102--4114, October 1990.
+
 \bibitem{smith_faraday_2003}
 Greg~A. Smith, Souma Chaudhury, and Poul~S. Jessen.
 \newblock Faraday spectroscopy in an optical lattice: a continuous probe of
   atom dynamics.
 \newblock {\em J. Opt. B: Quantum Semiclass. Opt.}, 5(4):323, August 2003.
+
+\bibitem{yalla_cavity_2014}
+Ramachandrarao Yalla, Mark Sadgrove, Kali~P. Nayak, and Kohzo Hakuta.
+\newblock Cavity {Quantum} {Electrodynamics} on a {Nanofiber} {Using} a
+  {Composite} {Photonic} {Crystal} {Cavity}.
+\newblock {\em Phys. Rev. Lett.}, 113(14):143601, September 2014.
+
+\bibitem{hafezi_atomic_2012}
+M.~Hafezi, Z.~Kim, S.~L. Rolston, L.~A. Orozco, B.~L. Lev, and J.~M. Taylor.
+\newblock Atomic interface between microwave and optical photons.
+\newblock {\em Phys. Rev. A}, 85(2):020302, February 2012.
+
+\bibitem{smith_quantum_2013-1}
+A.~Smith, B.~E. Anderson, H.~Sosa-Martinez, C.~A. Riofrío, Ivan~H. Deutsch,
+  and Poul~S. Jessen.
+\newblock Quantum {Control} in the {Cs} \$6\{{S}\}\_\{1/2\}\$ {Ground}
+  {Manifold} {Using} {Radio}-{Frequency} and {Microwave} {Magnetic} {Fields}.
+\newblock {\em Phys. Rev. Lett.}, 111(17):170502, October 2013.
+
+\bibitem{tong_single-mode_2004}
+Limin Tong, Jingyi Lou, and Eric Mazur.
+\newblock Single-mode guiding properties of subwavelength-diameter silica and
+  silicon wire waveguides.
+\newblock {\em Opt. Express}, 12(6):1025--1035, March 2004.
 
 \end{thebibliography}
