@@ -34,6 +34,12 @@ Fam Le~Kien and A.~Rauschenbeutel.
 \newblock Propagation of nanofiber-guided light through an array of atoms.
 \newblock {\em Phys. Rev. A}, 90(6):063816, December 2014.
 
+\bibitem{wubs_multiple-scattering_2004}
+Martijn Wubs, L.~G. Suttorp, and A.~Lagendijk.
+\newblock Multiple-scattering approach to interatomic interactions and
+  superradiance in inhomogeneous dielectrics.
+\newblock {\em Phys. Rev. A}, 70(5):053823, November 2004.
+
 \bibitem{sakoda_optical_1996}
 Kazuaki Sakoda and Kazuo Ohtaka.
 \newblock Optical response of three-dimensional photonic lattices: {Solutions}
@@ -51,6 +57,12 @@ Roy~J. Glauber and M.~Lewenstein.
 \newblock Quantum optics of dielectric media.
 \newblock {\em Phys. Rev. A}, 43(1):467--491, January 1991.
 
+\bibitem{le_kien_spontaneous_2005}
+Fam Le~Kien, S.~Dutta~Gupta, V.~I. Balykin, and K.~Hakuta.
+\newblock Spontaneous emission of a cesium atom near a nanofiber: {Efficient}
+  coupling of light to guided modes.
+\newblock {\em Phys. Rev. A}, 72(3):032509, September 2005.
+
 \bibitem{le_kien_anisotropy_2014}
 Fam Le~Kien and A.~Rauschenbeutel.
 \newblock Anisotropy in scattering of light from an atom into the guided modes
@@ -63,29 +75,17 @@ Fam~Le Kien, J.~Q. Liang, K.~Hakuta, and V.~I. Balykin.
   vacuum-clad subwavelength-diameter optical fiber.
 \newblock {\em Optics Communications}, 242(4–6):445--455, December 2004.
 
-\bibitem{wubs_multiple-scattering_2004}
-Martijn Wubs, L.~G. Suttorp, and A.~Lagendijk.
-\newblock Multiple-scattering approach to interatomic interactions and
-  superradiance in inhomogeneous dielectrics.
-\newblock {\em Phys. Rev. A}, 70(5):053823, November 2004.
+\bibitem{domokos_quantum_2002}
+Peter Domokos, Peter Horak, and Helmut Ritsch.
+\newblock Quantum description of light-pulse scattering on a single atom in
+  waveguides.
+\newblock {\em Phys. Rev. A}, 65(3):033832, March 2002.
 
 \bibitem{le_kien_correlations_2008}
 Fam Le~Kien and K.~Hakuta.
 \newblock Correlations between photons emitted by multiatom fluorescence into a
   nanofiber.
 \newblock {\em Phys. Rev. A}, 77(3):033826, March 2008.
-
-\bibitem{le_kien_spontaneous_2005}
-Fam Le~Kien, S.~Dutta~Gupta, V.~I. Balykin, and K.~Hakuta.
-\newblock Spontaneous emission of a cesium atom near a nanofiber: {Efficient}
-  coupling of light to guided modes.
-\newblock {\em Phys. Rev. A}, 72(3):032509, September 2005.
-
-\bibitem{domokos_quantum_2002}
-Peter Domokos, Peter Horak, and Helmut Ritsch.
-\newblock Quantum description of light-pulse scattering on a single atom in
-  waveguides.
-\newblock {\em Phys. Rev. A}, 65(3):033832, March 2002.
 
 \bibitem{fan_input-output_2010}
 Shanhui Fan, Şükrü~Ekin Kocabaş, and Jung-Tsung Shen.
