@@ -248,6 +248,13 @@ T.~Takano, M.~Fuyama, R.~Namiki, and Y.~Takahashi.
   {Spin} of {One}-{Half}.
 \newblock {\em Phys. Rev. Lett.}, 102(3):033601, January 2009.
 
+\bibitem{sewell_magnetic_2012}
+R.~J. Sewell, M.~Koschorreck, M.~Napolitano, B.~Dubost, N.~Behbood, and M.~W.
+  Mitchell.
+\newblock Magnetic {Sensitivity} {Beyond} the {Projection} {Noise} {Limit} by
+  {Spin} {Squeezing}.
+\newblock {\em Phys. Rev. Lett.}, 109(25):253605, December 2012.
+
 \bibitem{mitsch_exploiting_2014}
 R.~Mitsch, C.~Sayrin, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
 \newblock Exploiting the local polarization of strongly confined light for
@@ -272,11 +279,54 @@ K.~J. Blow, Rodney Loudon, Simon J.~D. Phoenix, and T.~J. Shepherd.
 \newblock Continuum fields in quantum optics.
 \newblock {\em Phys. Rev. A}, 42(7):4102--4114, October 1990.
 
+\bibitem{itah_direct_2010}
+Amir Itah, Hagar Veksler, Oren Lahav, Alex Blumkin, Coral Moreno, Carmit
+  Gordon, and Jeff Steinhauer.
+\newblock Direct {Observation} of a {Sub}-{Poissonian} {Number} {Distribution}
+  of {Atoms} in an {Optical} {Lattice}.
+\newblock {\em Phys. Rev. Lett.}, 104(11):113001, March 2010.
+
 \bibitem{smith_faraday_2003}
 Greg~A. Smith, Souma Chaudhury, and Poul~S. Jessen.
 \newblock Faraday spectroscopy in an optical lattice: a continuous probe of
   atom dynamics.
 \newblock {\em J. Opt. B: Quantum Semiclass. Opt.}, 5(4):323, August 2003.
+
+\bibitem{zhang_collective_2012}
+Hao Zhang, Robert McConnell, Senka Ćuk, Qian Lin, Monika~H. Schleier-Smith,
+  Ian~D. Leroux, and Vladan Vuletić.
+\newblock Collective {State} {Measurement} of {Mesoscopic} {Ensembles} with
+  {Single}-{Atom} {Resolution}.
+\newblock {\em Phys. Rev. Lett.}, 109(13):133603, September 2012.
+
+\bibitem{bohnet_reduced_2014}
+J.~G. Bohnet, K.~C. Cox, M.~A. Norcia, J.~M. Weiner, Z.~Chen, and J.~K.
+  Thompson.
+\newblock Reduced spin measurement back-action for a phase sensitivity ten
+  times beyond the standard quantum limit.
+\newblock {\em Nat Photon}, 8(9):731--736, September 2014.
+
+\bibitem{le_kien_intracavity_2009}
+Fam Le~Kien and K.~Hakuta.
+\newblock Intracavity electromagnetically induced transparency in atoms around
+  a nanofiber with a pair of {Bragg} grating mirrors.
+\newblock {\em Phys. Rev. A}, 79(4):043813, April 2009.
+
+\bibitem{wuttke_nanofiber_2012}
+C.~Wuttke, M.~Becker, S.~Brückner, M.~Rothhardt, and A.~Rauschenbeutel.
+\newblock Nanofiber {Fabry}–{Perot} microresonator for nonlinear optics and
+  cavity quantum electrodynamics.
+\newblock {\em Opt. Lett.}, 37(11):1949--1951, June 2012.
+
+\bibitem{nayak_optical_2014}
+K.~P. Nayak, Pengfei Zhang, and K.~Hakuta.
+\newblock Optical nanofiber-based photonic crystal cavity.
+\newblock {\em Optics Letters}, 39(2):232, January 2014.
+
+\bibitem{hafezi_atomic_2012}
+M.~Hafezi, Z.~Kim, S.~L. Rolston, L.~A. Orozco, B.~L. Lev, and J.~M. Taylor.
+\newblock Atomic interface between microwave and optical photons.
+\newblock {\em Phys. Rev. A}, 85(2):020302, February 2012.
 
 \bibitem{yalla_cavity_2014}
 Ramachandrarao Yalla, Mark Sadgrove, Kali~P. Nayak, and Kohzo Hakuta.
@@ -284,17 +334,46 @@ Ramachandrarao Yalla, Mark Sadgrove, Kali~P. Nayak, and Kohzo Hakuta.
   {Composite} {Photonic} {Crystal} {Cavity}.
 \newblock {\em Phys. Rev. Lett.}, 113(14):143601, September 2014.
 
-\bibitem{hafezi_atomic_2012}
-M.~Hafezi, Z.~Kim, S.~L. Rolston, L.~A. Orozco, B.~L. Lev, and J.~M. Taylor.
-\newblock Atomic interface between microwave and optical photons.
-\newblock {\em Phys. Rev. A}, 85(2):020302, February 2012.
-
 \bibitem{smith_quantum_2013-1}
 A.~Smith, B.~E. Anderson, H.~Sosa-Martinez, C.~A. Riofrío, Ivan~H. Deutsch,
   and Poul~S. Jessen.
 \newblock Quantum {Control} in the {Cs} \$6\{{S}\}\_\{1/2\}\$ {Ground}
   {Manifold} {Using} {Radio}-{Frequency} and {Microwave} {Magnetic} {Fields}.
 \newblock {\em Phys. Rev. Lett.}, 111(17):170502, October 2013.
+
+\bibitem{kumar_autler-townes_2015}
+Ravi Kumar, Vandna Gokhroo, Kieran Deasy, and Síle~Nic Chormaic.
+\newblock Autler-{Townes} splitting via frequency upconversion at ultra-low
+  power levels in cold \${\textasciicircum}\{87\}\${Rb} atoms using an optical
+  nanofiber.
+\newblock {\em arXiv:1502.01123 [physics]}, February 2015.
+\newblock arXiv: 1502.01123.
+
+\bibitem{gonzalez-tudela_deterministic_2015}
+A.~González-Tudela, V.~Paulisch, D.~E. Chang, H.~J. Kimble, and J.~I. Cirac.
+\newblock Deterministic generation of arbitrary photonic states assisted by
+  dissipation.
+\newblock {\em arXiv:1504.07600 [quant-ph]}, April 2015.
+\newblock arXiv: 1504.07600.
+
+\bibitem{gouraud_demonstration_2015}
+B.~Gouraud, D.~Maxein, A.~Nicolas, O.~Morin, and J.~Laurat.
+\newblock Demonstration of a {Memory} for {Tightly} {Guided} {Light} in an
+  {Optical} {Nanofiber}.
+\newblock {\em Phys. Rev. Lett.}, 114(18):180503, May 2015.
+
+\bibitem{oshea_fiber-optical_2013}
+Danny O’Shea, Christian Junge, Jürgen Volz, and Arno Rauschenbeutel.
+\newblock Fiber-{Optical} {Switch} {Controlled} by a {Single} {Atom}.
+\newblock {\em Phys. Rev. Lett.}, 111(19):193601, November 2013.
+
+\bibitem{scheel_directional_2015}
+Stefan Scheel, Stefan~Yoshi Buhmann, Christoph Clausen, and Philipp
+  Schneeweiss.
+\newblock Directional spontaneous emission and lateral {Casimir}-{Polder} force
+  on an atom close to a nanofiber.
+\newblock {\em arXiv:1505.01275 [quant-ph]}, May 2015.
+\newblock arXiv: 1505.01275.
 
 \bibitem{tong_single-mode_2004}
 Limin Tong, Jingyi Lou, and Eric Mazur.
