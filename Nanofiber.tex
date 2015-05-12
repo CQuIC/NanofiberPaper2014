@@ -213,17 +213,17 @@ a 1D-chain with a period of $\Lambda$.}
 The fundamental quantity that captures the modification of of atomic radiation near dielectric surfaces 
 with index of refraction function, $n(\mbf{r})$, is the dyadic Green's function, defined by
  \begin{align}
-\left[ -\nabla\times\nabla\times + n^2(\mbf{r}) k^2 \right] \tensor{\mathbf{G}}(\br, \br';\omega) &= -4 \pi 
-k^2 \delta^{(3)}(\mathbf{r}-\mathbf{r}')\;\tensor{\mathbf{I}},
+\left[ -\nabla\times\nabla\times + n^2(\mbf{r}) \frac{\omega^2}{c^2} \right] \tensor{\mathbf{G}}(\br, \br';\omega) &= -4 \pi 
+\frac{\omega^2}{c^2} \delta^{(3)}(\mathbf{r}-\mathbf{r}')\;\tensor{\mathbf{I}};
 \end{align}
-where $k=\omega/c$; Gaussian-cgs units are used throughout.  On resonance, at $\br=\br'$, 
+Gaussian-cgs units are used throughout.  On resonance, at $\br=\br'$, 
 $\Im\left(\tensor{\mathbf{G}}(\br', \br'; \omega= \omega_A) \right)$ determines the Purcell effect.  We 
 seek here the off-resonance dispersive response.
 
 Given a point particle at position $\br'$ with tensor polarizability $\tensor{\boldsymbol{\alpha}}$, the  
 scattering solution to wave equation at frequency $\omega_0$
 \begin{align}\label{eq:Maxwellwithsource2}
-\left[\! -\! \nabla\!\!\times\!\nabla\!\!\times + n^2\!(\br)k_0^2 \right]\!\! \mathbf{E}(\br) &\!=\! -4\pi\! k_0^2 
+\left[\! -\! \nabla\!\!\times\!\nabla\!\!\times + n^2\!(\br)\frac{\omega_0^2}{c^2}  \right]\!\! \mathbf{E}(\br) &\!=\! -4\pi\! \frac{\omega_0^2}{c^2} 
 \delta^{(3)}(\br-\br')\;  \tensor{\boldsymbol{\alpha}}\cdot \mathbf{E}(\br),
 \end{align}
 is given by the Lipmann-Schwinger equation
@@ -245,10 +245,10 @@ defined according to the procedure of Glauber and Lewenstein~\cite{Glauber1991}.
 $\tilde{\mathbf{F}}_\mu(\br) \equiv n(\br) \mathbf{F}_\mu (\br)$, where $\mathbf{F}_\mu (\br)$ is 
 proportional to the electric field of the corresponding fiber modes.  These form a complete set of 
 (transverse) vector functions as they are eigenfunctions of a Hermitian operator, 
-$\tensor{\mathcal{H}}(k) = -\frac{1}{n(\br)}
-\nabla\times\nabla\times \frac{1}{n(\br)} + k^2 \tensor{\mathbf{I}}$ according to 
-$\tensor{\mathcal{H}}(k_0) \cdot \tilde{\mathbf{F}}_\mu = \lambda_\mu \tilde{\mathbf{F}}_\mu$, where 
-$\lambda_\mu=k_0^2-k_\mu^2$.
+$\tensor{\mathcal{H}}(\omega) = -\frac{1}{n(\br)}
+\nabla\times\nabla\times \frac{1}{n(\br)} + \frac{\omega^2}{c^2} \tensor{\mathbf{I}}$ according to 
+$\tensor{\mathcal{H}}(\omega_0) \cdot \tilde{\mathbf{F}}_\mu = \lambda_\mu \tilde{\mathbf{F}}_\mu$, where 
+$\lambda_\mu=(\omega_0^2-\omega_\mu^2)/c^2$.
 The complete orthonormal modes thus satisfy,
 \begin{align}
 \int \tilde{\mathbf{F}}_\mu^* (\br)\cdot \tilde{\mathbf{F}}_{\mu'}(\br) \mathrm{d}^3\br &= \int n^2(\br) 
@@ -256,15 +256,14 @@ The complete orthonormal modes thus satisfy,
 \mathrm{d}^3\br=\delta_{\mu\mu'},\label{eq:orthutrans}
 \\
 \sum_\mu \tilde{\mathbf{F}}_\mu (\br) \tilde{\mathbf{F}}_\mu^*(\br') &= \sum_\mu n(\br)n(\br') 
-\mathbf{F}_\mu  (\br) \mathbf{F}_\mu^*(\br) =\tensor{\delta}^{(T)}(\br-\br'), 
+\mathbf{F}_\mu  (\br) \mathbf{F}_\mu^*(\br) =\delta(\br-\br') \tensor{\mathbf{I}}, 
 \end{align}
-where $\tensor{\delta}^{(T)}(\br-\br')$ is the  delta function for ``transverse" (divergenceless) vector 
-fields.  It follows that the dyadic (transverse) Green's function can be decomposed as~\cite{Swedishguys}
+It follows from~\cite{Swedishguys, Wubs}that the dyadic Green's function can be decomposed as
 \begin{equation}
 \tensor{\mathbf{G}}(\br,\br'; \omega_0) = -4\pi \sum_{\mu} \frac{\omega_0^2\mathbf{F}_\mu (\br) 
 \mathbf{F}^*_\mu (\br')}{\omega_0^2-\omega_\mu^2},
 \end{equation}
-where $\omega_\mu^2 = c^2 k_\mu^2$.  This sum separates into guided an unguided contributions. 
+{\color{red}  We need to fill in on longitudinal and transverse components} . This sum separates into guided an unguided contributions. 
 
 Given the cylindrical symmetry, the guided modes are defined, $\mathbf{F}_\mu (\br) = \mathbf{u}_\mu 
 (\br_\perp) e^{i\beta z}$, where the mode index $\mu=\{n, \beta, p\}$ for the guided mode $n$, with 
