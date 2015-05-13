@@ -348,7 +348,7 @@ where the $\{p,p'\}$-element of the tensor polarizability is given by
 		\alpha_{pp'} \equiv \mathbf{u}^*_{+,p'}(\br'_\perp) \cdot \tensor{\boldsymbol{\alpha}}\cdot \mathbf{u}_{+, p}(\br'_\perp). 
 	\end{align} 
 
-The phase shift per atom, \erf{Eq::PhaseShift}, is modified over free space in two ways which are both captured by the effective mode area $A_{\rm in}$.  First, due to the tight spatial confinement of the guided mode, trapped atoms experience fields orders of magnitude larger than in free space.  A Further, diffraction in free space limits the number of atoms that can be present in the areas of highest electric field near the focus \cite{baragiola_three-dimensional_2014}.  Second, although material dispersion in an optical fiber is negligible, a dielectric with a small effective mode area can have significant waveguide dispersion. The dispersion relation $\omega(\beta)$ near $\beta_0$ can lead to enhanced atom-light coupling from a reduction in the group velocity. In the nanofiber geometry, this factor leads to a small improvement, \comment{ $n_g \approx ?$. Figure showing effective mode areas and group velocities?}
+The phase shift per atom, \erf{Eq::PhaseShift}, is modified over free space in two ways which are both captured by the effective mode area $A_{\rm in}$.  First, due to the tight spatial confinement of the guided mode, trapped atoms experience fields orders of magnitude larger than in free space.  A Further, diffraction in free space limits the number of atoms that can be present in the areas of highest electric field near the focus \cite{baragiola_three-dimensional_2014}.  Second, although material dispersion in an optical fiber is negligible, a dielectric with a small effective mode area can have significant waveguide dispersion. The dispersion relation $\omega(\beta)$ near $\beta_0$ can lead to enhanced atom-light coupling from a reduction in the group velocity. In the nanofiber geometry, this factor leads to a small improvement, \comment{ $n_g \approx 1.4$. Figure showing effective mode areas and group velocities?}
  
 The off-diagonal terms in the transmission matrix correspond to polarization transformations.  For example, if we take the polarizations to be the quasilinear modes ($p = H,V$) given in \erf{Eq::QuasilinearModes}, then $t_{HV} \equiv \chi_{\rm Far}$ \comment{(check factors of 2)}, the rotation angle of the Faraday effect \cite{}.  In this basis, the phase difference $\delta  \phi_H - \delta \phi_V$ corresponds to birefringence.  Alternatively, analyzed in the quasicircular modes ($p=\pm$) given in \erf{Eq::QuasicircularModes}, $\delta \phi_+ -\delta  \phi_-$ corresponds to Faraday rotation and $t_{+-}$ to birefringence.  We make use of such polarization transformations as a means to nondestructively measure the atoms and generate collective spin squeezing.
 
@@ -486,9 +486,15 @@ Scattering of classical waves follows when the field is in a coherent state.  \c
 where $\Delta_{eg} = \omega_0 - \omega_{eg}$ is the laser detuning from the atomic transition frequency.  For large detuning, $\Gamma_{e}/\Delta_{eg} \ll 1$, the scattering is entirely elastic.  In this case, the absorption/scattering loss can be ignored and \erf{Eq::PhaseShiftMultilevel} describes a pure dispersive phase shift.
 
 
-In relation to \erf{Eq::PhaseShift} we see that $\delta \phi \propto (\sigma_0/A_{\rm in}) (\Gamma_{\oneD}/\Delta)$, where $\sigma_0$ is the resonant scattering cross section, the effective mode area is defined in \erf{Eq::AreaIn}. For comparison, the phase shift on a paraxial laser beam imparted by an atom in vacuum  has the same form as \erf{Eq::PhaseShiftMultilevel}, but with the guided mode replaced by the $\mathrm{TEM}_{00}$ mode of a laser field at the atom position, with area $A= \pi w_0^2/2$ and beam waist $w_0$ \cite{tanji-suzuki_chapter_2011, baragiola_three-dimensional_2014}. The strongest phase shift in free space is achieved when the atom is placed at the center of the beam waist where the intensity is largest. The relative strength of the phase shift is $\delta \phi_{\rm fiber}/\delta \phi_{\vac}\propto A/A_{\rm in}$, as plotted in Fig. \ref{} as a function of the radial position of the atom \comment{(Le Kien's recent paper only considered mixed states; specifically an equal distribution of population among the sublevels for which there was no polarization transformation, only phase shifts)}.  For example, for a quasilinear field, and an atom trapped along the direction of the input polarization  at $r_\perp = ?$, $\delta \phi_{\rm fiber}/\delta \phi_{\vac} = ?$.   Thus we see that, in the nanofiber geometry the Purcell factor does not cause the majority of scattering to be guided, nor is the phase shift enhanced greatly over the phase shift imparted by an atom at the center of a paraxial beam. However, the key feature is that for a chain of atoms trapped along the fiber, the phase shifts add linearly.  Thus, one can achieve an effective optical density, OD$_{\rm eff} = N_A (\sigma_0/\Ain)$, in the fiber geometry with far fewer atoms ($\sim 1000$ atoms) than would be required in free space (\error{ $\sim 10^6$ }).  The result is a much larger average entangling interaction \emph{per atom} whose application in QND measurement we explore in the following section.
+In relation to \erf{Eq::PhaseShift} we see that $\delta \phi \propto (\sigma_0/A_{\rm in}) (\Gamma_{\oneD}/\Delta)$, where $\sigma_0$ is the resonant scattering cross section, the effective mode area is defined in \erf{Eq::AreaIn}. For comparison, the phase shift on a paraxial laser beam imparted by an atom in vacuum  has the same form as \erf{Eq::PhaseShiftMultilevel}, but with the guided mode replaced by the $\mathrm{TEM}_{00}$ mode of a laser field at the atom position, with area $A= \pi w_0^2/2$ and beam waist $w_0$ \cite{tanji-suzuki_chapter_2011, baragiola_three-dimensional_2014}. The strongest phase shift in free space is achieved when the atom is placed at the center of the beam waist where the intensity is largest. The relative strength of the phase shift is $\delta \phi_{\rm fiber}/\delta \phi_{\vac}\propto A/A_{\rm in}$, as plotted in Fig. \ref{fig:RelEnhanceFactor_r_w10micro} as a function of the radial position of the atom \comment{(Le Kien's recent paper only considered mixed states; specifically an equal distribution of population among the sublevels for which there was no polarization transformation, only phase shifts)}.  For example, for a quasilinear field, and an atom trapped along the direction of the input polarization  at $r_\perp = ?$, $\delta \phi_{\rm fiber}/\delta \phi_{\vac} = ?$.   Thus we see that, in the nanofiber geometry the Purcell factor does not cause the majority of scattering to be guided, nor is the phase shift enhanced greatly over the phase shift imparted by an atom at the center of a paraxial beam. However, the key feature is that for a chain of atoms trapped along the fiber, the phase shifts add linearly.  Thus, one can achieve an effective optical density, OD$_{\rm eff} = N_A (\sigma_0/\Ain)$, in the fiber geometry with far fewer atoms ($\sim 1000$ atoms) than would be required in free space (\error{ $\sim 10^6$ }).  The result is a much larger average entangling interaction \emph{per atom} whose application in QND measurement we explore in the following section.
 
-\missingfigure{Figure for the enhancement comparison.}
+\begin{figure}
+\begin{minipage}{.49\linewidth}
+\centering
+\subfloat[]{\label{fig:RelEnhanceFactor_r_w10micro}\includegraphics[scale=0.45]{./Figs/RelEnhanceFactor_r_w10micro}}
+\end{minipage}
+\caption{Subfigure~\protect\subref{fig:RelEnhanceFactor_r_w10micro} shows the relative enhancement factor of phase shift due to one atom in presence of a nanofiber as a function of the radial position of the atom. The enhancement factor is normalized to the phase shift when the atom was trapped at the center of a Gaussian beam with a waist of $ 10\,\mu m $. Quasilinearly and quasicircularly polarized fiber modes are used in this plot. \comment{Better to use an optimized free-space trapping configuration for comparison.}}\label{fig:modeparaperty}
+\end{figure}
 
 
 %===================QND Measurement=====================%
@@ -652,16 +658,17 @@ At the magic wavelength the effective rotation angle $\chi_{\eff}$ can then be w
 	\end{align}
 with ``effective detuning" set by the magic-wavelength condition,
 	\begin{align} 
-		\frac{\Gamma}{4\Delta_{\eff}} = \error{2}(b_4 - b_3) =  \sum_{F'}  \left( C^{(2)}_{J'F'5}\frac{\error{20}\Gamma}{4\Delta_{4F'}} -  C^{(2)}_{J'F'3}\frac{\error{12}\Gamma}{ \Delta_{3F'} } \right),
+		\frac{\Gamma}{4\Delta_{\eff}} = (b_4 - b_3) =  \sum_{F'}  \left( C^{(2)}_{J'F'4}\frac{\error{10}}{\Delta_{4F'}} -  C^{(2)}_{J'F'3}\frac{\error{6}}{ \Delta_{3F'} } \right)\frac{\Gamma}{4},
 	\end{align}
 and effective area given by
 	\begin{equation}
-		A_{\eff}^{-1} = n_g \frac{ |\mathbf{e}_\pi \cdot \mathbf{u}_H(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2 - |\mathbf{e}_\pi \cdot \mathbf{u}_V(\br'_\perp)|^2 |\mathbf{u}_H(\br'_\perp)|^2}{ |\mathbf{u}_H(\br'_\perp)|^2 + |\mathbf{u}_V(\br'_\perp)|^2 }.
+		A_{\eff}^{-1} = \error{2}n_g \frac{ |\mathbf{e}_\pi \cdot \mathbf{u}_H(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2 - |\mathbf{e}_\pi \cdot \mathbf{u}_V(\br'_\perp)|^2 |\mathbf{u}_H(\br'_\perp)|^2}{ |\mathbf{u}_H(\br'_\perp)|^2 + |\mathbf{u}_V(\br'_\perp)|^2 }.
 	\end{equation}	
-The quantization axis that maximizes $\chi_{\eff}$ is that which minimizes $A_{\eff}$. Defining an angle $\theta$ between the orthogonal linear components of $\mbf{u}_H$ and $\mbf{u}_V$, the projection onto the quantization axis gives $|\mathbf{e}_\pi \cdot \mathbf{u}_H(\br'_\perp) |^2 = \cos^2 \theta |\mathbf{u}_H(\br'_\perp) |^2$ and $|\mathbf{e}_\pi \cdot \mathbf{u}_V(\br'_\perp) |^2 = \sin^2 \theta |\mathbf{u}_V(\br'_\perp) |^2$.
+\comment{Check the sign here.}
+The quantization axis that maximizes $\chi_{\eff}$ is that which maximizes $|A_{\eff}^{-1}|$. \comment{Since $\mbf{u}_H$ is orthogonal to $\mbf{u}_V$ at the atom position ($ \phi'=0,\pi $), the optimal quantization axis exists when either $|\mathbf{e}_\pi \cdot \mathbf{u}_H(\br'_\perp) |^2|\mathbf{u}_V(\br'_\perp)|^2$ or $|\mathbf{e}_\pi \cdot \mathbf{u}_V(\br'_\perp) |^2|\mathbf{u}_H(\br'_\perp)|^2$ is $ 0 $ and the other reaches the maximum.} One can show that 
 	\begin{align}
 		 %\cos^2 \theta |\mathbf{u}_H(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2 - \sin^2 \theta | \mathbf{u}_V(\br'_\perp)|^2 |\mathbf{u}_H(\br'_\perp)|^2 = & \cos 2 \theta |\mathbf{u}_H(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2 \\
-		A_{\eff}^{-1} \big|_{\rm opt} = & n_g \frac{|\mathbf{u}_H(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2}{|\mathbf{u}_H(\br'_\perp)|^2 + |\mathbf{u}_V(\br'_\perp)|^2} \quad \text{for} \quad \mbf{e}_\pi = \mbf{e}_x.
+		A_{\eff}^{-1} \big|_{\rm opt} = & \error{2} n_g \frac{|\error{u_H^x}(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2}{|\mathbf{u}_H(\br'_\perp)|^2 + |\mathbf{u}_V(\br'_\perp)|^2} \quad \text{for} \quad \mbf{e}_\pi = \mbf{e}_x.
 	\end{align}
 
 \comment{For varying atom number, $N_A(t) < N_A$, the Hamiltonian at the magic wavelength contains a parasitic term (assuming a waveplate has been inserted to undo the constant rotation from $N_A/2$,
@@ -671,6 +678,14 @@ The quantization axis that maximizes $\chi_{\eff}$ is that which minimizes $A_{\
 where $\chi_{\rm loss} = \chi_{H,\downarrow} - \chi_{V,\uparrow}$.  We may be able to neglect this term, but two questions need to be answered: 1) is $\chi_{\rm loss}/\chieff$ small?  2) Is $N_A(t) - N_A$ small over the squeezing time?	
 
 In their final discussion, Polzik et al. \cite{beguin_generation_2014} extrapolate their experiment to give numerical estimates of spin squeezing for 2500 atoms.  They report 4.2 dB of spin squeezing when the noise channel is ``damping of hyperfine coherence due to photon scattering" and atom loss is neglected. }
+
+\begin{figure}
+\begin{minipage}{.49\linewidth}
+\centering
+\subfloat[]{\label{fig:sigma0A_D1}\includegraphics[scale=0.45]{./Figs/sigma0A_D1}}
+\end{minipage}
+\caption{OD per atom as functions of atoms' radial position $ r\!_\perp $.}
+\end{figure}
 
 \missingfigure{Poincare sphere diagram with spin squeezing effect.}
 
