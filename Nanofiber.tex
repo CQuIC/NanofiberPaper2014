@@ -501,8 +501,9 @@ Scattering of classical waves follows when the field is in a coherent state.  \c
 	\end{equation}
 where $\Delta_{eg} = \omega_0 - \omega_{eg}$ is the laser detuning from the atomic transition frequency.  For large detuning, $\Gamma_{e}/\Delta_{eg} \ll 1$, the scattering is entirely elastic.  In this case, the absorption/scattering loss can be ignored and \erf{Eq::PhaseShiftMultilevel} describes a pure dispersive phase shift.
 
-
-In relation to \erf{Eq::PhaseShift} we see that $\delta \phi \propto (\sigma_0/A_{\rm in}) (\Gamma_{\oneD}/\Delta)$ for resonant scattering cross section $\sigma_0$ and effective mode area $A_\inp$. For comparison, the phase shift on a paraxial laser beam imparted by an atom in free space has the same form, with the $\mathrm{TEM}_{00}$ mode for a beam waist $w_0$ and mode area $A= \pi w_0^2/2$ replacing the guided mode at the atom's position  \cite{tanji-suzuki_chapter_2011, baragiola_three-dimensional_2014}. The strongest phase shift in free space is achieved when the atom is placed at the center of the beam waist where the intensity is largest. The relative strength of the phase shift is $\delta \phi_{\rm fiber}/\delta \phi_{\vac}\propto A/A_{\rm in}$, as plotted in Fig. \ref{} as a function of the radial position of the atom \comment{(Le Kien's recent paper only considered mixed states; specifically an equal distribution of population among the sublevels for which there was no polarization transformation, only phase shifts)}.  For example, for a quasilinear field, and an atom trapped along the direction of the input polarization  at $r_\perp = ?$, $\delta \phi_{\rm fiber}/\delta \phi_{\vac} = ?$.   Thus we see that, in the nanofiber geometry the Purcell factor does not cause the majority of scattering to be guided, nor is the phase shift enhanced greatly over the phase shift imparted by an atom at the center of a paraxial beam. However, the key feature is that for a chain of atoms trapped along the fiber, the phase shifts add linearly.  Thus, one can achieve large optical densities, OD$_{\rm eff} = N_A (\sigma_0/\Ain)$, in the fiber geometry with far fewer atoms ($\sim 1000$ atoms) than are required in free space (\error{ $\sim 10^6$ }).  The result is a much larger average entangling interaction \emph{per atom} whose application in QND measurement we explore in the following section.
+\change{
+In relation to \erf{Eq::PhaseShift} we see that $\delta \phi \propto (\sigma_0/A_{\rm in}) (\Gamma_{\oneD}/\Delta)$ for resonant scattering cross section $\sigma_0$ and effective mode area $A_\inp$. For comparison, the phase shift on a paraxial laser beam imparted by an atom in free space has the same form, with the $\mathrm{TEM}_{00}$ mode for a beam waist $w_0$ and mode area $A= \pi w_0^2/2$ replacing the guided mode at the atom's position  \cite{tanji-suzuki_chapter_2011, baragiola_three-dimensional_2014}. The strongest phase shift in free space is achieved when the atom is placed at the center of the beam waist where the intensity is largest. The relative strength of the phase shift is $\delta \phi_{\rm fiber}/\delta \phi_{\vac}\propto A/A_{\rm in}$, as plotted in Fig. \ref{} as a function of the radial position of the atom \comment{(Le Kien's recent paper only considered mixed states; specifically an equal distribution of population among the sublevels for which there was no polarization transformation, only phase shifts)}.  For example, for a quasilinear field, and an atom trapped along the direction of the input polarization  at $r_\perp = ?$, $\delta \phi_{\rm fiber}/\delta \phi_{\vac} = ?$.   Thus we see that, in the nanofiber geometry the Purcell factor does not cause the majority of scattering to be guided, nor is the phase shift enhanced greatly over the phase shift imparted by an atom at the center of a paraxial beam. However, the key feature is that for a chain of atoms trapped along the fiber, the phase shifts add linearly.  Thus, one can achieve large optical densities, OD$_{\rm eff} = N_A (\sigma_0/\Ain)$ \comment{Decide how to properly define OD}, in the fiber geometry with far fewer atoms ($\sim 1000$ atoms) than are required in free space (\error{ $\sim 10^6$ }).  The result is a much larger average entangling interaction \emph{per atom} whose application in QND measurement we explore in the following section.
+}
 
 \missingfigure{Figure for the enhancement comparison.}
 
@@ -604,7 +605,7 @@ The field quadratures, $\hat{X}_L = (\hat{a}_{\bar{D}} + \hat{a}_{\bar{D}})/\sqr
 Continuous monitoring of the output $S_3$-component implements a homodyne measurement of the $X_L$-quadrature, where the input polarization mode plays the role of the local oscillator.  $\hat{\mathcal{M}} = \int_0^t dt' \hat{S}^{\rm out}_3(t')$. In the absence of atom and photon loss, i.e. the interaction is purely QND, the integrated measurement operator for an input probe pulse of duration $t$ is \cite{hammerer_quantum_2010}
 	\begin{align} \label{Eq::OutputS3}
 		\hat{\mathcal{M}} & = \int_0^t dt' \hat{S}^{\rm in}_3(t') + \chibir N_A \int_0^t dt' \hat{S}^{\rm in}_2(t') \\
-		& = \sqrt{\dot{N}_L/2} \, \int_0^t dt' \hat{X}_L^{\rm in}(t') + \big( \	chibir N_L N_A \big)/2 
+		& = \sqrt{\dot{N}_L/2} \, \int_0^t dt' \hat{X}_L^{\rm in}(t') + \big( \chibir N_L N_A \big)/2 
 	\end{align}
 where the operators in \erf{Eq::OutputS3} are integrated over the pulse duration $t$, $\hat{A}^{\rm in/out} = \int_0^t dt' \hat{A}(t')$. The fluctuations in the integrated polarimetry signal are found using \erf{Eq::XPcommutator}, 
 	\begin{align}
@@ -675,18 +676,18 @@ Birefringence emerges from the first term in \erf{Eq::CouplingAngleMagic} due to
 At the magic wavelength the effective rotation angle in \erf{Eq::FaradayHam}, $\chi_{\eff}$, can then be written
 	\begin{align}
 		\chi_{\eff} %& = \frac{\sigma_0}{A_\eff} 2\Delta b \\
-			& =\frac{\sigma_0}{A_{\eff}} \frac{\Gamma}{4\Delta_{\eff}},
+			& = - \frac{\sigma_0}{A_{\eff}} \frac{\Gamma}{4\Delta_{\eff}},
 	\end{align}
 with an ``effective detuning" set by the magic-wavelength condition,
 	\begin{align} 
-		\frac{\Gamma}{4\Delta_{\eff}} \equiv (b_4 - b_3) =  \sum_{F'}  \left( C^{(2)}_{J'F'4}\frac{10\Gamma}{4\Delta_{4F'}} -  C^{(2)}_{J'F'3}\frac{6\Gamma}{ \Delta_{3F'} } \right),
+		\frac{\Gamma}{4\Delta_{\eff}} \equiv (b_4 - b_3) =  \frac{\Gamma}{4} \sum_{F'}  \left( C^{(2)}_{J'F'4}\frac{10}{\Delta_{4F'}} -  C^{(2)}_{J'F'3}\frac{6}{ \Delta_{3F'} } \right),
 	\end{align}
 and an effective area given by
 	\begin{align}
-		A_{\eff}^{-1} & = \frac{n_g}{2} \frac{ |\mathbf{e}_\pi \cdot \mathbf{u}_H(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2 - |\mathbf{e}_\pi \cdot \mathbf{u}_V(\br'_\perp)|^2 |\mathbf{u}_H(\br'_\perp)|^2}{ |\mathbf{u}_H(\br'_\perp)|^2 + |\mathbf{u}_V(\br'_\perp)|^2 } \\
+		A_{\eff}^{-1} & = 2 n_g \frac{ |\mathbf{e}_\pi \cdot \mathbf{u}_H(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2 - |\mathbf{e}_\pi \cdot \mathbf{u}_V(\br'_\perp)|^2 |\mathbf{u}_H(\br'_\perp)|^2}{ |\mathbf{u}_H(\br'_\perp)|^2 + |\mathbf{u}_V(\br'_\perp)|^2 } \\
 		& \change{ = n^2_g A_\inp \Big[ |\mathbf{e}_\pi \cdot \mathbf{u}_H(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2 - |\mathbf{e}_\pi \cdot \mathbf{u}_V(\br'_\perp)|^2 |\mathbf{u}_H(\br'_\perp)|^2 \Big]. }
 	\end{align}	
-The quantization axis that maximizes $\chi_{\eff}$ is that which minimizes $A_{\eff}$. 
+The quantization axis that maximizes $\chi_{\eff}$ is that which minimizes $A_{\eff}$.  \comment{Discuss effective OD}.
 
 Just as in \srf{Sec::AtomNumberMeasurement}, the input light is prepared along the $S_2$-axis of the Poincare sphere. 
 
