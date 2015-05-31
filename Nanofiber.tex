@@ -440,7 +440,7 @@ and the small energy shift is absorbed into the transition frequency $\omega_{eg
 This agrees with the expected expression following from the guided-mode contribution to the dyadic Green's function, \erf{Eq::GreensGuided},
 	\begin{equation}
 		\Gamma_e^{\oneD} =  \frac{2}{\hbar} \sum_{g}  \bra{g}\hat{\mathbf{d}}\ket{e}\cdot 
-\Im \Big[\tensor{\mathbf{G}}^{(+)}_g(\br', \br'; \omega ) \big] \cdot \bra{e}\hat{\mathbf{d}}\ket{g} \; \delta(\omega - \omega_{eg}),
+\Im \Big[\tensor{\mathbf{G}}^{(+)}_g(\br', \br'; \omega_{eg} ) \big] \cdot \bra{e}\hat{\mathbf{d}}\ket{g} ,
 	\end{equation}
 enhanced over the free-space rate by the Purcell factor.  In general, the decay rate into a given mode depends on the dipole orientation \cite{klimov_spontaneous_2004, vos_orientation-dependent_2009}. Recently, it was predicted \cite{le_kien_anisotropy_2014} and demonstrated \cite{mitsch_quantum_2014} that the decay rates into the forward and backward modes are not always equal.  Specifically, when the atomic dipole has a component rotating in the plane defined by the atom and nanofiber, the relative decay rates can differ due to the longitudinal component of the guided modes. \comment{Maybe we should include a plot of $\Gamma_{\rm 1D}/\Gamma_0$.  This is the \emph{first} thing people ask.  We must make the point that while it's not so large, we can benefit from many atoms much more easily than other systems, such as those alligator waveguide photonic crystals.}
 
@@ -476,8 +476,8 @@ where the guided-mode dyadic Green's function is given in \erf{Eq::GreensGuided}
 	
 Scattering of classical waves follows when the field is in a coherent state.  \comment{Explaining this well is of critical importance - while injection of a classical field does not change the Purcell effect or decay rate (which is tied to the atomic transition frequency) it does scatter into all field modes with the same frequency, thus promoting them from vacuum}.  The phase-shift on a guided mode with a given polarization $p$, \erf{Eq::PhaseShift}, now depends on the internal state of the atom.  Given an atom in a particular ground sublevel $\ket{g}$, this can be expressed \cite{le_kien_propagation_2014}
 	\begin{equation} \label{Eq::PhaseShiftMultilevel}
-		\delta  \phi_{p,g} =2\pi \frac{\omega_0}{v_g} \mathbf{u}^*_{+, p}(\br'_\perp) \cdot \Re \big[\bra{g} 
-\hat{\tensor{\boldsymbol{\alpha}}} \ket{g} \big] \cdot \mathbf{u}_{+, p}(\br'_\perp) = -\frac{1}{\hbar}\frac{ \comment{ \omega_{0} } }{v_g} \sum_e \frac{2 \pi |\bra{e}\hat{\mathbf{d}}\ket{g} \cdot \mathbf{u}_{+,p}(\br'_\perp)|^2}{ \Delta_{eg} } ,
+		\delta  \phi_{p,g} =2\pi \frac{\comment{ \omega_{0}}}{v_g} \mathbf{u}^*_{+, p}(\br'_\perp) \cdot \Re \big[\bra{g} 
+\hat{\tensor{\boldsymbol{\alpha}}} \ket{g} \big] \cdot \mathbf{u}_{+, p}(\br'_\perp) = -\frac{1}{\hbar} \sum_e \frac{ \comment{ \omega_{eg} } }{v_g} \frac{2 \pi |\bra{e}\hat{\mathbf{d}}\ket{g} \cdot \mathbf{u}_{+,p}(\br'_\perp)|^2}{ \Delta_{eg} } ,
 	\end{equation}
 where $\Delta_{eg} = \omega_0 - \omega_{eg}$ is the laser detuning from the atomic transition frequency.  For large detuning, $\Gamma_{e}/\Delta_{eg} \ll 1$, the scattering is entirely elastic.  In this case, the absorption/scattering loss can be ignored and \erf{Eq::PhaseShiftMultilevel} describes a pure dispersive phase shift.
 
