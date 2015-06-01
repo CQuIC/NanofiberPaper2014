@@ -576,7 +576,7 @@ where exclude the coupling to $\hat{S}_0$, as it plays no role in polarization s
 	\begin{equation} \label{Eq::RotationAngle}
 		\chibir = - \frac{\sigma_0}{\Abiref}  \sum_{F,F'}  C_{J'FF'}^{(0)} \frac{\Gamma}{4 \Delta_{FF'}},
 	\end{equation}
-where we have defined the effective area characterizing the birefringence coupling, $\Abiref^{-1} \equiv n_g \big[ |\mathbf{u}_{H}(\br'_\perp)|^2 - |\mathbf{u}_{V}(\br'_\perp)| ^2 \big]$, in analogy with the effective area for a classical input field, \erf{Eq::AreaIn}.  \comment{This area arises as a purely geometric factor independent of the input field - in fact the atom number resolution below might be better written as OD$_{\rm bir}\big( \smallfrac{A_\inp}{\Abiref} \big)$.}  The effective optical density per atom that quantifies the collective birefringent coupling strength, OD$_{\rm bir} = \sigma_0/\Abiref$.  As illustrated in \frf{}, the OD$_{\rm bir}$.  \comment{Extrapolating, would we then define an effective Faraday area as $A_{\rm Far} = n_g\big( |\mathbf{u}_{+}(\br'_\perp)|^2 - |\mathbf{u}_{-}(\br'_\perp)| ^2 \big)$?}
+where we have defined the effective area characterizing the birefringence coupling, $\Abiref^{-1} \equiv n_g \big[ |\mathbf{u}_{H}(\br'_\perp)|^2 - |\mathbf{u}_{V}(\br'_\perp)| ^2 \big]$, in analogy with the effective area for a classical input field, \erf{Eq::AreaIn}.  \comment{This area arises as a purely geometric factor independent of the input field - in fact the atom number resolution below might be better written as OD$_{\rm bir}\big( \smallfrac{A_\inp}{\Abiref} \big)$.}  The effective optical density per atom that quantifies the collective birefringent coupling strength, OD$_{\rm bir} = \sigma_0/\Abiref$.  As illustrated in \frf{}, the OD$_{\rm bir}$.  \comment{This suggests that we would then define an effective Faraday area as $A_{\rm Far} = n_g\big( |\mathbf{u}_{+}(\br'_\perp)|^2 - |\mathbf{u}_{-}(\br'_\perp)| ^2 \big)/sqrt{2}$?}
 
 Dawkins {\em et al.} \cite{dawkins_dispersive_2011} used this interaction to make a dispersive measurement of $N_A$ by launching linearly polarized light at 45$^\circ$ to the quasi-$H$ axis; i.e. $\mbf{u}_\inp = (\mbf{u}_H + \mbf{u}_V )/\sqrt{2}$ in \erf{Eq::uin}.  From the perspective of the Stokes vector components, \erf{Eq::StokesComponents}, the propagating Stokes vector rotates around the $S_1$-axis on the Poincar\'{e} sphere through an angle $\chibir$.  The polarization rotation is detected by measuring the output $S_3$-Stokes component, whose evolution follows from the scattering solution in \erf{Eq::ScatteringSolution}; $\hat{S}_3^{\rm out}(t) = \hat{S}_3^{\rm in}(t) + \chibir N_A \hat{S}_2^{\rm in}(t)$ \cite{hammerer_quantum_2010}.  It is convenient to treat the input as a classical field by displacing the diagonal mode: $\hat{a}_D = (\hat{a}_H + \hat{a}_V)/\sqrt{2} \rightarrow \sqrt{\dot{N}_L}$. Under this displacement $\hat{S}_2(t) \rightarrow \dot{N}_L/2$ and the orthogonal Stokes components are associated with quadratures in the anti-diagonal mode, $\hat{a}_{\bar{D}} = (\hat{a}_H - \hat{a}_V)/\sqrt{2}$:
 	\begin{align}
@@ -692,7 +692,6 @@ quantifies the rate at which squeezing occurs.  That is, in the absence of photo
 \change{
 where we have defined $ \hat{a}_{\bar{D}} = \frac{\hat{a}_H -\hat{a}_V}{\sqrt{2}} $ as the photon annihilation operator of the anti-diagonal linearly polarized light modes, and $ \hat{P}_{\bar{D}}=\frac{\hat{a}_{\bar{D}}-\hat{a}_{\bar{D}\dg}}{\sqrt{i2}} $ and $ \hat{X}_{\bar{D}}=\frac{\hat{a}_{\bar{D}}+\hat{a}_{\bar{D}\dg}}{\sqrt{2}} $ as the two quadratures in the phase space of the complex amplitude represented by $ \hat{a}_{\bar{D}} $. The approximation we made above is known as \textit{Holstein-Primakoff approximation}\index{approximation!Holstein-Primakoff approximation}. Using this approximation, the uncertainty area on the Poincare sphere can be mapped to a flat phase plane. }
 
-
 The full dynamics of the conditional collective state of the atomic ensemble, including are described by the stochastic master equation,
 	\begin{align}
 		d \hat{\rho} = \error{\pm}\sqrt{\frac{\kappa}{4}} \mathcal{H}[\hat{\rho}] dW + \frac{\kappa}{4} \mathcal{L}[\hat{\rho}] dt + \mathcal{D} [\hat{\rho}] dt.
@@ -713,6 +712,32 @@ where $ \kappa=\dot{N}_A |\chi_{\rm eff}|^2$.
 
 \comment{ In their final discussion, Polzik et al. \cite{beguin_generation_2014} extrapolate their experiment to give numerical estimates of spin squeezing for 2500 atoms.  They report 4.2 dB of spin squeezing when the noise channel is ``damping of hyperfine coherence due to photon scattering" and atom loss is neglected. }
 
+\comment{
+\emph{Figure}: Nanofiber schematic \\
+
+\emph{Figure}: Phase shift \\
+
+\emph{Figure}: Atom number resolution \\
+
+\emph{Figure}: Atomic structure \\
+a) clock-state level structure and $H,V$-transitions \\
+b) magic wavelength (in detuning) as a function of quantization axis $\phi_Q$ in $x,y$-plane \\
+c) magic wavelength (in detuning) as a function of distance from the fiber $r_\perp/a$ for fixed $\phi_Q$ 
+
+\emph{Figure}: Choosing a quantization axis\\
+a) measurement strength $\kappa$ as a function of quantization axis phi in $x,y$-plane\\
+b) peak squeezing as a function of quantization axis $\phi_Q$ in $x,y$-plane
+
+\emph{Figure}:  Squeezing dynamics ($N=2500$, $r_\perp/a = 2$) for two choices of quantization axes--along $x$-axis and optimal\\
+a) dynamics of metrological squeezing parameter \\
+b) dynamics of conditional variance $\Delta J_z^2$ \\
+c) dynamics of mean spin along $\expt{\hat{J}_x}$
+
+\emph{Figure}:  Scaling of peak squeezing\\
+a) peak squeezing as a function of distance from the fiber for a list of atom numbers $N= \{1000,1500,2000,2500,...\}$
+}
+
+%================
 \begin{figure}
 \begin{minipage}{.49\linewidth}
 \centering
@@ -767,6 +792,7 @@ where $ \kappa=\dot{N}_A |\chi_{\rm eff}|^2$.
 \end{minipage}
 \caption{QND measurement properties using the magic frequency $ \omega_{44} $. Subfigure~\protect\subref{fig:xi_optimal_NA1000to5000_omega44} shows the optimal peak spin squeezing parameter as a function of the radial position of the atom. Different atom numbers have been indicated in different types of lines. Subfigure~\ref{fig:OD_optimal_rp} shows the OD per atom parameter, $ \mathrm{OD}/{\mathrm{atom}}\equiv \kappa/\gamma_s= \sigma_0A_{\rm in}/4A_{\rm eff}^2 $, as a function of atoms' radial position when the optimal quantization axis is chosen to plot Subfig.~\protect\subref{fig:xi_optimal_NA1000to5000_omega44}. \comment{Need to extend $ r'\!_\perp $ to $ [1.1,2.5]a $.}}\label{fig:QNDproperty_magic44}
 \end{figure}
+%================
 
 
 \begin{figure}
