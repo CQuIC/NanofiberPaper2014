@@ -345,8 +345,14 @@ where $n_g = c/v_g$ is the group index of refraction.  We focus here on the tran
 	\end{align}
 where the $\{p,p'\}$-element of the tensor polarizability is given by 
 	\begin{align} \label{Eq::PolarizabilityElementsClassical}
-		\alpha_{pp'} \equiv \mathbf{u}^*_{+,p'}(\br'_\perp) \cdot \tensor{\boldsymbol{\alpha}}\cdot \mathbf{u}_{+, p}(\br'_\perp). 
+		\change{\alpha_{pp'} \equiv \mathbf{u}^*_{+,p'}(\br'_\perp) \cdot \tensor{\boldsymbol{\alpha}}\cdot \mathbf{u}_{+, p}(\br'_\perp). }
 	\end{align} 
+\comment{I think we should take out the mode functions and instead use the normalized polarization vectors, $\mathbf{e}_p = \mathbf{u}_{+,p'}(\br'_\perp)/|\mathbf{u}_{+,p'}(\br'_\perp)|$. Then, this equation is \emph{actually} the $\{p,p'\}$-element of the tensor polarizability and the effective area has been entirely factored out,
+	\begin{align}
+		\delta \phi_p &= \frac{2 \pi k_0}{A_{\rm in}} \Re(\alpha_{pp}),  \\
+		R_p &=  \frac{4 \pi k_0}{A_{\rm in}} \Im(\alpha_{pp}) .
+	  \end{align} 
+}
 
 The phase shift per atom, \erf{Eq::PhaseShift}, is modified over free space in two ways which are both captured by the effective mode area $A_{\rm in}$.  First, due to the tight spatial confinement of the guided mode, trapped atoms experience fields orders of magnitude larger than in free space.  Further, diffraction in free space limits the number of atoms that can be present in the areas of highest electric field near the focus \cite{baragiola_three-dimensional_2014}.  Second, although material dispersion in an optical fiber is negligible, a dielectric with a small effective mode area can have significant waveguide dispersion. The dispersion relation $\omega(\beta)$ near $\beta_0$ can lead to enhanced atom-light coupling from a reduction in the group velocity. In the nanofiber geometry, this factor leads to a small improvement, \comment{ $n_g \approx 1.4$. Figure showing effective mode areas and group velocities?}
  
@@ -708,12 +714,16 @@ and the ``measurement backaction" by the collective Lindblad map,
 	\begin{align}
 		\mathcal{L}[\hat{\rho}] = \hat{J}_z \hat{\rho} \hat{J}_z - \smallfrac{1}{2} \hat{J}_z^2 \hat{\rho} - \smallfrac{1}{2} \hat{\rho}  \hat{J}_z^2 .
 	\end{align}
+	
+\change{Optical pumping drives two processes that limit the amount of spin squeezing that can be produced.  The first is atom loss, which results from atoms being pumped out of the clock subspace into other magnetic sublevels \comment{(why do we not have to worry that these sublevels might affect the birefringence?)}. The second is spin flips, where at atom is pumped between the two states of the pseudospin.  Due to the ground hyperfine splitting of 9.2 GHz, spin flips are dominated by the processs $\ket{\uparrow} \rightarrow \ket{\downarrow}$.
+	
 The expectation value of the $ \hat{J}_3 $ operator, $ \Delta J_3^2 $, in the first-order approximation may obey the differential equation given by 
 \begin{align}
 \dt{\Delta J_3^2} &= -\kappa \left(\Delta J_3^2 \right)^2 -\gamma_s^+ \Delta J_3^2 + \gamma_+\frac{N_A}{4},
 \end{align}
 where $ \kappa=\dot{N}_A |\chi_{\rm eff}|^2$. 
 
+}t
 \comment{ In their final discussion, Polzik et al. \cite{beguin_generation_2014} extrapolate their experiment to give numerical estimates of spin squeezing for 2500 atoms.  They report 4.2 dB of spin squeezing when the noise channel is ``damping of hyperfine coherence due to photon scattering" and atom loss is neglected. }
 
 \comment{
