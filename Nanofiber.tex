@@ -123,6 +123,7 @@
 \newcommand{\inp}{{\rm in}}
 \newcommand{\out}{{\rm out}}
  \newcommand{\inter}{{\rm int}}
+ \newcommand{\scs}{{\rm SCS}}
  
 \newcommand{\der}[1]{\frac{d {#1}}{dt}}
 \newcommand{\poltens}{\hat{\tensor{\boldsymbol{\alpha}}}}
@@ -211,6 +212,12 @@ for application in magnetometry.  To do so, we unify a variety of different appr
 literature, including direct calculation of the dyadic Greens function for photon scattering [] and the 
 input-output formalism study for one-dimensional field theories based on the Heisenberg-Langevin 
 equations [].
+
+A SCS exhibits fluctuations in its orthogonal components that minimize the Heisenberg uncertainty product, which sets the \emph{standard quantum limit} for spin projection measurements.
+	\begin{align}
+		\Delta J_\perp^2 \Delta J_\perp^2 = \smallfrac{1}{4} |\expt{\hat{J}_{||}}|^2
+	\end{align}
+
 
 \change{The remainder of this article is organized as follows ...}
 
@@ -595,7 +602,6 @@ The propagating field quadratures, $\hat{X}_L = (\hat{a}_{\bar{D}} + \hat{a}_{\b
 	\end{align}
  \comment{This area arises as a purely geometric factor independent of the input field - in fact the atom number resolution below might be better written as OD$_{\rm bir}\big( \smallfrac{A_\inp}{\Abiref} \big)$.}  The effective optical density per atom that quantifies the collective birefringent coupling strength, OD$_{\rm bir} = \sigma_0/\Abiref$.  As illustrated in \frf{}, the OD$_{\rm bir}$. 
 
-
 Continuous monitoring of the output $S_3$-component implements a homodyne measurement of the $X_L$-quadrature, where the input polarization mode plays the role of the local oscillator.  $\hat{\mathcal{M}} = \int_0^t dt' \hat{S}^{\rm out}_3(t')$. In the absence of atom and photon loss, i.e. the interaction is purely QND, the integrated measurement operator for an input probe pulse of duration $t$ is \cite{vasilyev_quantum_2012}
 	\begin{align} \label{Eq::OutputS3}
 		%\hat{\mathcal{M}} & = \int_0^t dt' \hat{S}^{\rm in}_3(t') + \chibir N_A \int_0^t dt' \hat{S}^{\rm in}_2(t') \\
@@ -615,20 +621,25 @@ In the absence of trapped atoms, the shot-to-shot fluctuations arise entirely fr
 	\end{align}
 \comment{Give numbers. Final thoughts about Arno's experiment.} 
 
-In experimental situations, loss and decoherence cannot be ignored \cite{dawkins_dispersive_2011, zhang_collective_2012}. One consequence is that \erf{Eq::OutputS3} must be modified to include the loss channels. Recently, a scheme similar to the one described here was employed by \emph{B\'{e}guin et al.} to perform nondestructive atom number measurements in a nanofiber geometry \cite{beguin_generation_2014}.  Using a Bayesian estimator \comment{(they use a discrete-time Gaussian filter)} which accounts for various sources of noise including detector inefficiency and diffuse photon scattering, they report an atom number resolution of $\delta N_A \pm 8$, corresponding to a Fano factor, $\mathcal{F} = \delta N_A^2/\expt{N_A}$ of $-14$ dB for $\expt{N_A}\sim2500$ trapped atoms.  \comment{This may be way too much detail.  More comments, comparisons. Their squeezing estimate, $\zeta^2 = 1/(1+R^2)e^{-2\eta}$, where $\eta$ is the decay rate of the mean spin does not include loss or noise injection in the variance.}
+In experimental situations, loss and decoherence cannot be ignored \cite{dawkins_dispersive_2011, zhang_collective_2012}. One consequence is that \erf{Eq::OutputS3} must be modified to include the loss channels. Recently, a scheme similar to the one described here was employed by \emph{B\'{e}guin et al.} to perform nondestructive atom number measurements in a nanofiber geometry \cite{beguin_generation_2014}.  Using a Bayesian estimator which accounts for various sources of noise including detector inefficiency and diffuse photon scattering, they report an atom number resolution of $\delta N_A \pm 8$ for $\expt{N_A}\sim2500$ trapped atoms.  
 
 
 	%===================QND spin squeezing=====================%
 	\subsection{QND squeezing of collective atomic projection noise}
 
-The same birefringent interaction, \erf{Eq::GenHamiltonian}, can be utilized in a QND measurement to squeeze the projection noise of the collective atomic spin.  In particular, we consider squeezing of the uncertainty associated with the ``clock" transition of cesium, which to first order is insensitive to external magnetic fields.  The clock states, $\ket{\uparrow} = \ket{6S_{1/2}, F=4, M=0}$ and $\ket{\downarrow} \equiv \ket{6S_{1/2}, F=3, M=0}$, define a pseudospin within each atom, $\hat{\sigma}_z \equiv \op{\uparrow}{\uparrow} - \op{\downarrow}{\downarrow}$.  The quantum uncertainty in the collective pseudo-spin,
+The same birefringent interaction, \erf{Eq::GenHamiltonian}, can be utilized in a QND measurement to squeeze the projection noise of the collective atomic spin.  We consider squeezing of the uncertainty associated with the ``clock" transition of cesium, which to first order is insensitive to external magnetic fields.  The clock states, $\ket{\uparrow} = \ket{6S_{1/2}, F=4, M=0}$ and $\ket{\downarrow} = \ket{6S_{1/2}, F=3, M=0}$, define a pseudospin within each atom, $\hat{\sigma}_z \equiv \op{\uparrow}{\uparrow} - \op{\downarrow}{\downarrow}$.  The quantum uncertainty in the collective pseudospin,
 	\begin{align}
-		\hat{J}_3 = \frac{1}{2} \sum_{i=1}^{N_A} \hat{\sigma}_z(\mbf{r}_i) = \frac{1}{2} \big( \hat{N}_\uparrow - \hat{N}_\downarrow \big)
+		\hat{J}_3 = \frac{1}{2} \sum_{n=1}^{N_A} \hat{\sigma}_z(\mbf{r}_n),  
 	\end{align}
-fundamentally limits the precision of atomic clocks \cite{wineland_spin_1992}. Within the clock-state subspace the rank-1 vector light shift in the dispersive Hamiltonian, \erf{Eq::GenHamiltonian}, vanishes since $\bra{\uparrow} \hat{F}_k \ket{\uparrow} =\bra{\downarrow} \hat{F}_k \ket{\downarrow} = 0$ for any choice of quantization axis. Further, as shown below, atoms on either side of the nanofiber experience the same birefringent coupling. The resulting Hamiltonian arises from the combination of scalar and tensor light shifts \cite{chaudhury_continuous_2006},
+fundamentally limits the precision of atomic clocks \cite{wineland_spin_1992}. For atoms prepared in an unentangled SCS the projection noise, $\Delta J_3^2 \big|_{\scs} = N_A/4$, sets the limit for spin measurements. A spin squeezed state (SSS) exhibits reduced fluctuations, $ \Delta J_3^2  < N_A/4$, due to  negative pairwise correlations between the atoms. The reduced fluctuations provide improvement for phase estimation when the spin squeezing parameter $\xi^2$ as defined by \emph{Wineland et al.} \cite{wineland_spin_1992}, satisfies
+	\begin{align}
+		\xi^2 \equiv N_A \frac{ \Delta J_3^2 }{ \expt{\hat{J}_{||}}^2 } < 1.
+	\end{align}
+	
+Within the clock-state subspace the rank-1 vector light shift in the dispersive Hamiltonian, \erf{Eq::GenHamiltonian}, vanishes since $\bra{\uparrow} \hat{F}_k \ket{\uparrow} =\bra{\downarrow} \hat{F}_k \ket{\downarrow} = 0$ for any choice of quantization axis. Further, as shown below, atoms on either side of the nanofiber experience the same birefringent coupling. The resulting Hamiltonian arises from the combination of scalar and tensor light shifts \cite{chaudhury_continuous_2006},
 	\begin{align} \label{Eq::ClockHamiltonian}
 		\hat{H}_{LS} = \hbar \Big\{ %& \error{ \big[ \big( \chi_{H,\uparrow} +\chi_{V,\uparrow} \big) + \big( \chi_{H,\downarrow}+ \chi_{V,\downarrow}\big) \big] \frac{N_A}{2} \hat{S}_0(t) } \\
-		 & \big[ \big( \chi_{H, \uparrow} - \chi_{V,\uparrow} \big) + \big(\chi_{H,\downarrow} - \chi_{V,\downarrow} \big)\big]  \frac{N_A}{2}\hat{S}_1(t)  \\
+		 & \big[ \error{ \big( \chi_{H, \uparrow} - \chi_{V,\uparrow} \big) + \big(\chi_{H,\downarrow} - \chi_{V,\downarrow} \big)\big]  \frac{N_A}{2}\hat{S}_1(t) } \\
 		+ & \big[ \big( \chi_{H,\uparrow} +\chi_{V,\uparrow} \big) - \big( \chi_{H,\downarrow} + \chi_{V,\downarrow}\big) \big] \hat{J}_3 \hat{S}_0(t) \nonumber \\
 		+ & \big[  \big( \chi_{H, \uparrow} - \chi_{V,\uparrow} \big) - \big(\chi_{H,\downarrow} - \chi_{V,\downarrow} \big) \big]  \hat{J}_3 \hat{S}_1(t) \Big\}, \nonumber
 	\end{align}
@@ -636,9 +647,7 @@ where the coupling strength between an atom in the clock subspace and a photon w
 	\begin{equation} \label{Eq::ClockCouplingStrength}
 		\chi_{p,F} \equiv - 2\pi k_0 n_g  \bra{F,0}\hat{\alpha}_{pp}  \ket{F,0},
 	\end{equation}
-where $F = \{4,3\}$ labels $\{\uparrow,\downarrow\}$.
-
-The first term in \erf{Eq::ClockHamiltonian} is a constant birefringence, independent of the atomic state, that was discussed above in the QND measurement of atom number.  In the context of squeezing, it can be canceled with a compensating waveplate \change{ as long as the atom number remains constant}. The second term does not affect polarization spectroscopy, but will act to rotate the pseudo-spin around the $J_3$-axis of the Bloch sphere.  While this does not affect the squeezing of projection noise in $\hat{J}_3$, it affects the metrologically relevant squeezing by adding uncertainty in the direction of the mean spin.  By choosing a ``magic wavelength" at which the light shifts on the two clock states are equal, $\chi_{H,\uparrow} +\chi_{V,\uparrow}  = \chi_{H,\downarrow} + \chi_{V,\downarrow}$, this term can be cancelled \cite{chaudhury_continuous_2006}. The remaining QND interaction Hamiltonian is
+where $F = \{4,3\}$ labels $\{\uparrow,\downarrow\}$.  The first term in \erf{Eq::ClockHamiltonian} is a constant birefringence, independent of the atomic state, that was discussed above in the QND measurement of atom number.  In the context of squeezing, it can be canceled with a compensating waveplate \change{ as long as the atom number remains constant}. The second term does not affect polarization spectroscopy, but will act to rotate the pseudo-spin around the $J_3$-axis of the Bloch sphere.  While this does not affect the squeezing of projection noise in $\hat{J}_3$, it affects the metrologically relevant squeezing by adding uncertainty in the direction of the mean spin.  By choosing a ``magic wavelength" at which the light shifts on the two clock states are equal, $\chi_{H,\uparrow} +\chi_{V,\uparrow}  = \chi_{H,\downarrow} + \chi_{V,\downarrow}$, this term can be cancelled \cite{chaudhury_continuous_2006}. The remaining QND interaction Hamiltonian is
 	\begin{equation} \label{Eq::FaradayHam}
 		\hat{H}_{LS} = \hbar \chi_{\eff} \hat{J}_3 \hat{S}_1(t),
 	\end{equation}
@@ -653,7 +662,7 @@ where $\chi_{\rm loss} = \chi_{H,\downarrow} - \chi_{V,\uparrow}$.  \comment{We 
 }
 
 
-As the magnitude of $\chi_{\eff}$ is state-dependent, the strength of the Faraday-like interaction in \erf{Eq::FaradayHam} will depend on the quantization axis defining the clock states with projection $M=0$.  We obtain an compact expression for this by using the irreducible tensor decomposition of the atomic polarizability, \erf{Eq::PolarizabilityIrrep}.  Let $\mathbf{e}_\pi$ define the quantization axis and $\mathbf{e}_{1}$, $\mathbf{e}_{2}$ define two orthogonal, linear polarizations.  Because of the azimuthal symmetry of clock state around the $\mathbf{e}_\pi$-axis, the polarizability tensor is diagonal in that basis.  Noting that $\langle F,0 | \hat{F}_{\pi}^2| F,0 \rangle =0$ and $\langle F,0 | \hat{F}_{1}^2| F,0 \rangle = \langle F,0 | \hat{F}_{2}^2| F,0 \rangle = \langle F,0 | \hat{\mathbf{F}}^2| F,0 \rangle /2 =F(F+1)/2$, it follows that the expectation value of the irreducible rank-2 component of the atomic polarizability is
+The strength of the birefringent interaction, \erf{Eq::FaradayHam}, depends on the quantization axis that defines the clock state with projection $M=0$.  We obtain an compact expression for the coupling strength $\chi_{\eff}$ using the irreducible tensor decomposition of the atomic polarizability, \erf{Eq::PolarizabilityIrrep}.  Let $\mathbf{e}_\pi$ define the quantization axis and $\mathbf{e}_{1}$, $\mathbf{e}_{2}$ define two orthogonal, linear polarizations.  Because of the azimuthal symmetry of clock state around the $\mathbf{e}_\pi$-axis, the polarizability tensor is diagonal in that basis.  Noting that $\langle F,0 | \hat{F}_{\pi}^2| F,0 \rangle =0$ and $\langle F,0 | \hat{F}_{1}^2| F,0 \rangle = \langle F,0 | \hat{F}_{2}^2| F,0 \rangle = \langle F,0 | \hat{\mathbf{F}}^2| F,0 \rangle /2 =F(F+1)/2$, it follows that the expectation value of the irreducible rank-2 component of the atomic polarizability is
 	\begin{align} \label{Eq::CouplingAngleMagic}
 		\langle F,0 | \poltens \phantom{}^{(2)}| F,0 \rangle  %= -\frac{\sigma_0}{8\pi k_0} F(F+1) \left( \frac{\unittens - 3\mathbf{e}_\pi \mathbf{e}_\pi}{6}  \right) \sum_{F'} C^{(2)}_{J'FF'}\frac{\Gamma}{ 2 \Delta_{FF'}}, \\
 		= \sum_{F'} \alpha_0(F,F') C^{(2)}_{J'FF'} \frac{F(F+1)}{6} \Big( \unittens - 3\mathbf{e}_\pi \otimes \mathbf{e}_\pi \Big).
@@ -663,14 +672,14 @@ The combined scalar and tensor light shifts yield a coupling strength [\erf{Eq::
 		\chi_{p,F} %&  = n_g \sigma_0 \sum_{F'}  \left\{C^{(0)}_{J'FF'}\left|\mathbf{u}_p(\br'_\perp)\right|^2+ C^{(2)}_{J'FF'} \frac{F(F+1)}{6}\left[\left|\mathbf{u}_p(\br'_\perp)\right|^2- 3 \left|\mathbf{e}_\pi \cdot \mathbf{u}_p(\br'_\perp)\right|^2 \right]\right\}   \frac{\Gamma}{4 \Delta_{FF'}} \nonumber  \\
 		&  = n_g \sigma_0 \big(  a_{F} \left|\mathbf{u}_p(\br'_\perp)\right|^2 \error{-} b_{F} \left|\mathbf{e}_\pi \cdot \mathbf{u}_p(\br'_\perp)\right|^2 \big), \label{Eq::ClockStateCoupling}
 	\end{align}
-with coefficients,
+with coefficients that depend on detunings and atomic structure,
 	\begin{align}
 		%a_F &= \sum_{F'}  C^{(0)}_{J'FF'} \frac{\Gamma}{4 \Delta_{FF'}},\\
 		%b_F &= \frac{F(F+1)}{6}\sum_{F'} C^{(2)}_{J'FF'}  \frac{\Gamma}{4 \Delta_{FF'}}.
 		a_F &= \sum_{F'}  \Big(C^{(0)}_{J'FF'} + \frac{F(F+1)}{6} C^{(2)}_{J'FF'} \Big) \frac{\Gamma}{4 \Delta_{FF'}},\\
 		b_F &= \frac{F(F+1)}{2}\sum_{F'} C^{(2)}_{J'FF'}  \frac{\Gamma}{4 \Delta_{FF'}}.
 	\end{align}
-Birefringence emerges from the first term in \erf{Eq::CouplingAngleMagic} due to the anisotropy of the intensity of the $H$ and $V$ modes and from the second term due to the tensor atomic response, which depends on the quantization axis of the atom.  Note that since the relative phase of the field's $z$-component plays no role in \erf{Eq::ClockStateCoupling}, the coupling strength is identical for atoms above and below the fiber, i.e. for $\phi' = \{0,\pi\}$.
+Birefringence emerges from the anisotropy of the intensity of the $H$ and $V$ modes--the first term--and additionally from the tensor atomic response, which depends on $\mathbf{e}_\pi$.  Note that since the relative phase of the guided-mode $z$-component plays no role in \erf{Eq::ClockStateCoupling}, the coupling strength is identical for atoms above and below the fiber, i.e. for $\phi' = \{0,\pi\}$.
 
 At the magic wavelength the effective rotation angle in \erf{Eq::FaradayHam}, $\chi_{\eff}$, can then be written
 	\begin{align}
@@ -686,22 +695,52 @@ and an effective area given by
 		A_{\eff}^{-1} & = n_g \frac{ |\mathbf{e}_\pi \cdot \mathbf{u}_H(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2 - |\mathbf{e}_\pi \cdot \mathbf{u}_V(\br'_\perp)|^2 |\mathbf{u}_H(\br'_\perp)|^2}{ |\mathbf{u}_H(\br'_\perp)|^2 + |\mathbf{u}_V(\br'_\perp)|^2 } \\
 		& \change{ = n^2_g \frac{A_\inp}{\error{2}} \big( |\mathbf{e}_\pi \cdot \mathbf{u}_H(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2 - |\mathbf{e}_\pi \cdot \mathbf{u}_V(\br'_\perp)|^2 |\mathbf{u}_H(\br'_\perp)|^2 \big). }
 	\end{align}	
-The quantization axis that maximizes $\chi_{\eff}$ is that which minimizes $A_{\eff}$.  \comment{Discuss effective OD}.
+The quantization axis that maximizes $\chi_{\eff}$ is that which minimizes $A_{\eff}$.  \comment{Discuss effective OD. There has been no input state defined yet - where did $A_\inp$ come from???}.
 
-Just as in \srf{Sec::AtomNumberMeasurement}, the input light is prepared along the $S_2$-axis of the Poincare sphere. 
+For the generation of QND squeezing, the atoms are prepared in an unentangled spin-coherent state (SCS) with zero mean projection along $\hat{J}_3$, $ \ket{\Psi_A} = \big(\frac{\ket{\uparrow}+\ket{\downarrow}}{\sqrt{2}}\big) ^{\otimes N_A} $. Measurement of the $S_3$-Stokes component of the output light implements a weak QND measurement of the collective atomic spin, $ \hat{J}_3 $. Just as in \srf{Sec::AtomNumberMeasurement}, the input light is prepared along the $S_2$-axis of the Poincare sphere.  
 
-For the generation of QND squeezing, the atoms are prepared in a spin-coherent state with zero mean projection along $\hat{J}_3$, $ \ket{\Psi_A}=\left(\frac{\ket{\uparrow}+\ket{\downarrow}}{\sqrt{2}}\right)^{\otimes N_A} $. Measurement of the $S_3$-Stokes component of the output light implements a weak QND measurement of the collective atomic spin, $ \hat{J}_3 $. 
 
-The remaining QND interaction Hamiltonian is
-	\begin{equation} \label{Eq::FaradayHam}
-		\hat{H}_{LS} = \hbar \chi_\eff \sqrt{ \frac{\dot{N}_L}{2}} \hat{J}_3 \hat{P}_L(t),
-	\end{equation}
+Continuous monitoring of the output $S_3$-component implements a homodyne measurement of the $X_L$-quadrature, where the input polarization mode plays the role of the local oscillator.  $\hat{\mathcal{M}} = \int_0^t dt' \hat{S}^{\rm out}_3(t')$. In the absence of atom and photon loss, i.e. the interaction is purely QND, the integrated measurement operator for an input probe pulse of duration $t$ is \cite{vasilyev_quantum_2012}
+	\begin{align} \label{Eq::OutputS3Squeeze}
+		\hat{\mathcal{M}} & = \sqrt{\dot{N}_L/2} \big( \hat{X}_L^{\rm in} + \sqrt{\kappa/2} \hat{J}^\inp_3 \big).
+	\end{align}
 The measurement strength, 
 	\begin{align}
-		\kappa = |\chi_\eff|^2 \dot{N}_L 
+		\kappa = |\chi_\eff|^2 \dot{N}_L, 
 	\end{align}
-quantifies the rate at which squeezing occurs.  That is, in the absence of photon scattering, the 
+quantifies the rate at which squeezing occurs. The fluctuations in the integrated polarimetry signal are found using \erf{Eq::XPcommutator}, 
+	\begin{align}
+		\Delta \mathcal{M}^2 &= N_L /4 + ( \chibir N_L /2 )^2 \delta N_A^2\label{Eq::MeasurementVariance}\\
+			&\equiv \shotnoise + \projnoise.
+	\end{align}
 
+In the absence of optical pumping, the projection noise variance
+	\begin{align}
+		\big(\Delta J_3^\out \big)^2 = \big( \Delta J_3^\inp \big)^2 \frac{1}{1+R^2}.
+	\end{align}
+where $R^2 \equiv \Delta \mathcal{M}^2_{\rm PN}/\mathcal{M}^2_{\rm SN}$ is the signal-to-noise ratio in the fluctuations of the measured field \cite{deutsch_quantum_2010, baragiola_three-dimensional_2014}.  
+
+
+	%===================Optical Pumping=====================%
+	\subsection{Optical pumping}
+	
+Optical pumping gives rise to two processes, each of which affects spin squeezing differently \cite{madsen_spin_2004,norris_enhanced_2012}. \emph{Loss} occurs when atoms are pumped out of the clock subspace to other magnetic sublevels \comment{(when atoms are pumped to states within the $F=4$ manifold they can affect birefringence, while atoms pumped to $F=3$ are invisible to the probe. Can we really neglect the possible birefringence from the $F=4$ atoms)}. The effective atom number decreases, which shrinks the size of the collective spin but also reduces the projection noise.  More damaging to metrological spin squeezing are \emph{spin flips}, where atoms are incoherently pumped between the two states of the pseudospin. The loss of coherence reduces the mean spin length, Spin flips inject noise into $\Delta J_z^2$.  In both processes, the loss of coherence reduces the mean spin length but for spin flips the increased projection noise competes with the QND interaction and limits squeezing.
+
+The effects of optical pumping within the clock subspace follow from the full master equation for an off-resonantly driven alkali atom \cite{deutsch_quantum_2010}.  
+	\begin{align}
+		\frac{d \hat{\rho}^{(n)}  }{dt}\Big|_{\rm op} 
+		= & \sum_{F_a,F_b} \Big[ -\frac{\gamma_{F_a}}{2} \Big( \rho_{ab } \op{F_a,0}{F_b,0} + \rho_{ba} \op{F_a,0}{F_b,0} \Big) +  \gamma_{F_a \rightarrow F_b} \rho_{aa} \op{F_b,0}{F_b,0} \Big]
+	\end{align}
+where $\rho_{ab} \equiv \bra{F_a,0} \hat{\rho}^{(n)} \ket{F_b,0} $ are the elements of the single-atom density matrix, $\gamma_F$ is the rate of population loss from state $\ket{F,0}$, and $\gamma_{F_a \rightarrow F_b}$ is the rate of pumping from $F_a$ to $F_b$.  
+
+At the magic wavelength, spin flips are dominated by the incoherent pumping of atoms from $\ket{\uparrow}$ to $\ket{\downarrow}$ as a result of the large ground hyperfine splitting (9.2 GHz in $^{133}$Cs), as seen in Fig. \frf{}. 
+
+Spin flip rate
+	\begin{align}
+		\gamma_{\rm \uparrow \rightarrow \downarrow}
+	\end{align}
+
+Optical pumping acts on individual atoms in the trapped ensemble and induces local decoherence. Local spin flips reduce the peak achievable metrological spin squeezing 
 
 The full dynamics of the conditional collective state of the atomic ensemble including the effects of optical pumping are described by the stochastic master equation,
 	\begin{align}
@@ -716,35 +755,15 @@ and ``measurement backaction" given by the collective Lindblad map,
 		\mathcal{L}[\hat{\rho}] = \hat{J}_z \hat{\rho} \hat{J}_z - \smallfrac{1}{2} \hat{J}_z^2 \hat{\rho} - \smallfrac{1}{2} \hat{\rho}  \hat{J}_z^2 .
 	\end{align}
 Ignoring losses and decoherence, the peak achievable squeezing increases with time at rate $\kappa$.  	
-	
-	%===================Optical Pumping=====================%
-	\subsection{Optical pumping}
-	
-Optical pumping gives rise to two processes, each of which affects spin squeezing differently \cite{norris_enhanced_2012}. \emph{Loss} occurs when atoms are pumped out of the clock subspace to other magnetic sublevels \comment{(when atoms are pumped to states within the $F=4$ manifold they can affect birefringence, while atoms pumped to $F=3$ are essentially invisible to the probe)}. The effective atom number decreases, which shrinks the size of the effective spin but also reduces the projection noise.  More damaging to metrological spin squeezing are \emph{spin flips}, where atoms are incoherently pumped between the two states of the pseudospin. Spin flips inject noise into $\Delta J_z^2$
 
-The effects of optical pumping within the clock subspace follow from the full master equation for an off-resonantly driven alkali atom \cite{deutsch_quantum_2010}.  
-	\begin{align}
-		\frac{d \hat{\rho}^{(n)}  }{dt}\Big|_{\rm op} 
-		= & \sum_{F_a,F_b} \Big[ -\frac{\gamma_{F_a}}{2} \Big( \rho_{ab } \op{F_a,0}{F_b,0} + \rho_{ba} \op{F_a,0}{F_b,0} \Big) +  \gamma_{F_a \rightarrow F_b} \rho_{aa} \op{F_b,0}{F_b,0} \Big]
-	\end{align}
-where $\rho_{ab} \equiv \bra{F_a,0} \hat{\rho}^{(n)} \ket{F_b,0} $ are the elements of the single-atom density matrix, $\gamma_F$ is the rate of population loss from state $\ket{F,0}$, and $\gamma_{F_a \rightarrow F_b}$ is the rate of pumping from $F_a$ to $F_b$.  
-
-Due to the ground hyperfine splitting (9.2 GHz in $^{133}$Cs), spin flips are dominated by the incoherent pumping of atoms from $\ket{\uparrow}$ to $\ket{\downarrow}$. 
-
-\change{	
-
-Spin flip rate
-	\begin{align}
-		\gamma_{\rm \uparrow \rightarrow \downarrow}
-	\end{align}
-	
+\change{		
 The expectation value of the $ \hat{J}_3 $ operator, $ \Delta J_3^2 $, in the first-order approximation may obey the differential equation given by 
 \begin{align}
 \dt{\Delta J_3^2} &= -\kappa \left(\Delta J_3^2 \right)^2 -\gamma_s^+ \Delta J_3^2 + \gamma_+\frac{N_A}{4},
 \end{align}
 where $ \kappa=\dot{N}_A |\chi_{\rm eff}|^2$. 
 
-}t
+}
 \comment{ In their final discussion, Polzik et al. \cite{beguin_generation_2014} extrapolate their experiment to give numerical estimates of spin squeezing for 2500 atoms.  They report 4.2 dB of spin squeezing when the noise channel is ``damping of hyperfine coherence due to photon scattering" and atom loss is neglected. }
 
 \comment{
