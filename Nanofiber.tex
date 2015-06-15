@@ -594,15 +594,15 @@ where define the effective area characterizing the \change{vacuum} birefringent 
 Dawkins {\em et al.} \cite{dawkins_dispersive_2011} used this interaction to make a dispersive measurement of $N_A$ by launching linearly polarized light at 45$^\circ$ to the quasi-$H$ axis; i.e. $\mbf{u}_\inp = (\mbf{u}_H + \mbf{u}_V )/\sqrt{2}$ in \erf{Eq::uin}. The large-amplitude input is treated as a classical field by displacing the diagonal mode, $\hat{a}_D = (\hat{a}_H + \hat{a}_V)/\sqrt{2} \rightarrow i\sqrt{\dot{N}_L}$, with phase chosen such that the transformation resembles the usual Faraday interaction \cite{}. Under this displacement $\hat{S}_2(t) \rightarrow \dot{N}_L/2$ and the orthogonal Stokes components are associated with quadratures in the anti-diagonal guided mode, $\hat{a}_{\bar{D}} = (\hat{a}_H - \hat{a}_V)/\sqrt{2}$:
 	\begin{align}
 		\hat{S}_1(t) \rightarrow & \sqrt{\dot{N}_L/2} \, \hat{P}_L(t), \\ 
-		\hat{S}_3(t) \rightarrow & \sqrt{\dot{N}_L/2} \ \hat{X}_L(t).
+		\hat{S}_3(t) \rightarrow & \sqrt{\dot{N}_L/2} \ \hat{X}_L(t). \label{Eq::Xquad}
 \end{align}
 The propagating field quadratures, $\hat{X}_L = (\hat{a}_{\bar{D}} + \hat{a}_{\bar{D}})/\sqrt{2}$ and $\hat{P}_L = -i(\hat{a}_{\bar{D}} - \hat{a}_{\bar{D}})/\sqrt{2}$, have the commutation relation,
 	\begin{align} \label{Eq::XPcommutator}
-		[ \hat{X}_L(t), \hat{P}_L(t') ] = \delta(t-t')/2.
+		[ \hat{X}_L(t), \hat{P}_L(t') ] =i\delta(t-t').
 	\end{align}
  \comment{This area arises as a purely geometric factor independent of the input field - in fact the atom number resolution below might be better written as OD$_{\rm bir}\big( \smallfrac{A_\inp}{\Abiref} \big)$.}  The effective optical density per atom that quantifies the collective birefringent coupling strength, OD$_{\rm bir} = \sigma_0/\Abiref$.  As illustrated in \frf{}, the OD$_{\rm bir}$. 
 
-Continuous monitoring of the output $S_3$-component implements a homodyne measurement of the $X_L$-quadrature, where the input polarization mode plays the role of the local oscillator.  $\hat{\mathcal{M}} = \int_0^t dt' \hat{S}^{\rm out}_3(t')$. In the absence of atom and photon loss, i.e. the interaction is purely QND, the integrated measurement operator for an input probe pulse of duration $t$ is \cite{vasilyev_quantum_2012}
+Continuous monitoring of the output $S_3$-component implements a homodyne measurement of the $X_L$-quadrature, where the input polarization mode plays the role of the local oscillator.  $\hat{\mathcal{M}} = \int_0^t dt' \hat{S}^{\rm out}_3(t') = $. In the absence of atom and photon loss, i.e. the interaction is purely QND, the integrated measurement operator for an input probe pulse of duration $t$ is \cite{vasilyev_quantum_2012} \comment{include measurement strength $\kappa$ here}
 	\begin{align} \label{Eq::OutputS3}
 		%\hat{\mathcal{M}} & = \int_0^t dt' \hat{S}^{\rm in}_3(t') + \chibir N_A \int_0^t dt' \hat{S}^{\rm in}_2(t') \\
 		%& = \sqrt{\dot{N}_L/2} \, \int_0^t dt' \hat{X}_L^{\rm in}(t') + \big( \chibir N_L N_A \big)/2 
@@ -631,7 +631,7 @@ The same birefringent interaction, \erf{Eq::GenHamiltonian}, can be utilized in 
 	\begin{align}
 		\hat{J}_3 = \frac{1}{2} \sum_{n=1}^{N_A} \hat{\sigma}_z(\mbf{r}_n),  
 	\end{align}
-fundamentally limits the precision of atomic clocks \cite{wineland_spin_1992}. For atoms prepared in an unentangled SCS the projection noise, $\Delta J_3^2 \big|_{\scs} = N_A/4$, sets the limit for spin measurements. A spin squeezed state (SSS) exhibits reduced fluctuations, $ \Delta J_3^2  < N_A/4$, due to  negative pairwise correlations between the atoms. The reduced fluctuations provide improvement for phase estimation when the spin squeezing parameter $\xi^2$ as defined by \emph{Wineland et al.} \cite{wineland_spin_1992}, satisfies
+fundamentally limits the precision of atomic clocks \cite{wineland_spin_1992}. For atoms prepared in an unentangled SCS the projection noise, $\Delta J_3^2 \big|_{\scs} = N_A/4$, sets the limit for spin measurements. A spin squeezed state (SSS) exhibits reduced fluctuations, $ \Delta J_3^2  < N_A/4$, due to  negative pairwise correlations between the atoms \cite{}. The reduced fluctuations provide improvement for phase estimation when the spin squeezing parameter $\xi^2$ as defined by \emph{Wineland et al.} \cite{wineland_spin_1992}, satisfies
 	\begin{align}
 		\xi^2 \equiv N_A \frac{ \Delta J_3^2 }{ \expt{\hat{J}_{||}}^2 } < 1.
 	\end{align}
@@ -682,7 +682,7 @@ with coefficients that depend on detunings and atomic structure,
 Birefringence emerges from the anisotropy of the intensity of the $H$ and $V$ modes--the first term--and additionally from the tensor atomic response, which depends on $\mathbf{e}_\pi$.  Note that since the relative phase of the guided-mode $z$-component plays no role in \erf{Eq::ClockStateCoupling}, the coupling strength is identical for atoms above and below the fiber, i.e. for $\phi' = \{0,\pi\}$.
 
 At the magic wavelength the effective rotation angle in \erf{Eq::FaradayHam}, $\chi_{\eff}$, can then be written
-	\begin{align}
+	\begin{align} \label{Eq::chieff}
 		\chi_{\eff} %& = \frac{\sigma_0}{A_\eff} 2\Delta b \\
 			& = - \frac{\sigma_0}{A_{\eff}} \frac{\Gamma}{\error{2}\Delta_{\eff}},
 	\end{align}
@@ -697,28 +697,27 @@ and an effective area given by
 	\end{align}	
 The quantization axis that maximizes $\chi_{\eff}$ is that which minimizes $A_{\eff}$.  \comment{Discuss effective OD. There has been no input state defined yet - where did $A_\inp$ come from???}.
 
-For the generation of QND squeezing, the atoms are prepared in an unentangled spin-coherent state (SCS) with zero mean projection along $\hat{J}_3$, $ \ket{\Psi_A} = \big(\frac{\ket{\uparrow}+\ket{\downarrow}}{\sqrt{2}}\big) ^{\otimes N_A} $. Measurement of the $S_3$-Stokes component of the output light implements a weak QND measurement of the collective atomic spin, $ \hat{J}_3 $. Just as in \srf{Sec::AtomNumberMeasurement}, the input light is prepared along the $S_2$-axis of the Poincare sphere.  
-
-
-Continuous monitoring of the output $S_3$-component implements a homodyne measurement of the $X_L$-quadrature, where the input polarization mode plays the role of the local oscillator.  $\hat{\mathcal{M}} = \int_0^t dt' \hat{S}^{\rm out}_3(t')$. In the absence of atom and photon loss, i.e. the interaction is purely QND, the integrated measurement operator for an input probe pulse of duration $t$ is \cite{vasilyev_quantum_2012}
+For the generation of QND squeezing, the atoms are prepared in an unentangled spin-coherent state (SCS) with zero mean projection along $\hat{J}_3$, $ \ket{\Psi_A} = \big(\frac{\ket{\uparrow}+\ket{\downarrow}}{\sqrt{2}}\big) ^{\otimes N_A} $. The interaction, \erf{Eq::FaradayHam}, maps the atomic projection noise, $\Delta J_3^2$, onto the light, whose $S_3$-component is continuously monitored. For a probe prepared along $S_2$ with photon flux $\dot{N}_L$, this implements an effective weak QND measurement of the collective atomic spin, $ \hat{J}_3 $. The measurement strength that quantifies the rate at which projection-noise fluctuations are squeezed is given by
+	\begin{align}
+		\kappa \equiv |\chi_\eff|^2 \dot{N}_L, 
+	\end{align}
+where $\chi_\eff$ is given in \erf{Eq::chieff}. As discussed in Sec. \ref{Sec::AtomNumberMeasurement}, for a coherent probe field the operator $\hat{\mathcal{M}}$ describes an integrated homodyne measurement of the $X_L$-quadrature, 
 	\begin{align} \label{Eq::OutputS3Squeeze}
-		\hat{\mathcal{M}} & = \sqrt{\dot{N}_L/2} \big( \hat{X}_L^{\rm in} + \sqrt{\kappa/2} \hat{J}^\inp_3 \big).
+		\hat{\mathcal{M}} & = \sqrt{\dot{N}_L/2} \Big( \hat{X}_L^{\rm in} \error{\pm} \sqrt{\kappa/2} \hat{J}^\inp_3 \Big),
 	\end{align}
-The measurement strength, 
+where the input polarization mode plays the role of the local oscillator  \cite{vasilyev_quantum_2012,baragiola_three-dimensional_2014}. Quantum backaction generates squeezing when the projection noise fluctuations are resolved above the inherent shot noise of the light, as characterized by the parameter
 	\begin{align}
-		\kappa = |\chi_\eff|^2 \dot{N}_L, 
+		R^2 = \frac{\Delta \mathcal{M}^2_{\rm PN}}{ \Delta \mathcal{M}^2_{\rm SN} },
 	\end{align}
-quantifies the rate at which squeezing occurs. The fluctuations in the integrated polarimetry signal are found using \erf{Eq::XPcommutator}, 
-	\begin{align}
-		\Delta \mathcal{M}^2 &= N_L /4 + ( \chibir N_L /2 )^2 \delta N_A^2\label{Eq::MeasurementVariance}\\
-			&\equiv \shotnoise + \projnoise.
-	\end{align}
+interpreted as the signal-to-noise ratio in the fluctuations of the measured field \cite{deutsch_quantum_2010, baragiola_three-dimensional_2014}.  
 
-In the absence of optical pumping, the projection noise variance
+In the absence of decoherence the interaction is purely QND, and the fluctuations in the integrated polarimetry signal, \erf{Eq::OutputS3Squeeze}, yield $R^2 = \kappa t \big( \Delta J_3^\inp \big)^2$.
+
+A large spin ensemble and high photon flux place us in the regime of Gaussian statistics, and a measurement on the light yielding result $\hat{X}_L^{\rm in} \rightarrow x_L$ projects the mean spin along $\expt{F_z}\big|_{x_L}$  . the projection noise variance
 	\begin{align}
 		\big(\Delta J_3^\out \big)^2 = \big( \Delta J_3^\inp \big)^2 \frac{1}{1+R^2}.
 	\end{align}
-where $R^2 \equiv \Delta \mathcal{M}^2_{\rm PN}/\mathcal{M}^2_{\rm SN}$ is the signal-to-noise ratio in the fluctuations of the measured field \cite{deutsch_quantum_2010, baragiola_three-dimensional_2014}.  
+
 
 
 	%===================Optical Pumping=====================%
@@ -894,7 +893,7 @@ a) peak squeezing as a function of distance from the fiber for a list of atom nu
 
 \section{Discussions}
 
-Outside of a waveguide, cavity enhancement can produce drastic increases in atom-number detection, \cite{zhang_collective_2012}, spin squeezing \cite{bohnet_reduced_2014}, and....   Strong coupling to the guided nanofiber modes can be further improved with nanofabricated cavities that, under EIT conditions, substantially slow the group velocity \cite{le_kien_intracavity_2009,wuttke_nanofiber_2012,nayak_optical_2014}.  Additional hybrid approaches \cite{hafezi_atomic_2012, yalla_cavity_2014}.  Coherent quantum control of atoms \cite{smith_quantum_2013-1}.  Quantum sensing \cite{kumar_autler-townes_2015}.  Preparation of nonclassical light using collective dissipation \cite{gonzalez-tudela_deterministic_2015}.  Optical memory (not quite quantum) \cite{sayrin_storage_2015, gouraud_demonstration_2015} Interaction with higher-order modes.  Optical switching using a single atom \cite{oshea_fiber-optical_2013} 
+Outside of a waveguide, cavity enhancement can produce drastic increases in atom-number detection, \cite{zhang_collective_2012}, spin squeezing \cite{bohnet_reduced_2014}, and....   Strong coupling to the guided nanofiber modes can be further improved with nanofabricated cavities that, under EIT conditions, substantially slow the group velocity \cite{le_kien_intracavity_2009,wuttke_nanofiber_2012,nayak_optical_2014}.  Additional hybrid approaches \cite{hafezi_atomic_2012, yalla_cavity_2014}.  Coherent quantum control of atoms \cite{smith_quantum_2013-1}.  Quantum sensing \cite{kumar_autler-townes_2015}.  Preparation of nonclassical light using collective dissipation \cite{gonzalez-tudela_deterministic_2015}.  Optical memory (not quite quantum) \cite{sayrin_storage_2015, gouraud_demonstration_2015} Interaction with higher-order modes.  Optical switching using a single atom \cite{oshea_fiber-optical_2013}. Spin squeezing in NMR?
 
 Optical pumping near the surface of a dielectric that modifies the local density of states, 
 
