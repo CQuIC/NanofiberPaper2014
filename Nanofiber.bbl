@@ -279,6 +279,11 @@ K.~J. Blow, Rodney Loudon, Simon J.~D. Phoenix, and T.~J. Shepherd.
 \newblock Continuum fields in quantum optics.
 \newblock {\em Phys. Rev. A}, 42(7):4102--4114, October 1990.
 
+\bibitem{vasilyev_quantum_2012}
+D.~V. Vasilyev, K.~Hammerer, N.~Korolev, and A.~S. Sørensen.
+\newblock Quantum noise for {Faraday} light–matter interfaces.
+\newblock {\em J. Phys. B: At. Mol. Opt. Phys.}, 45(12):124007, June 2012.
+
 \bibitem{smith_faraday_2003}
 Greg~A. Smith, Souma Chaudhury, and Poul~S. Jessen.
 \newblock Faraday spectroscopy in an optical lattice: a continuous probe of
@@ -296,6 +301,18 @@ Hao Zhang, Robert McConnell, Senka Ćuk, Qian Lin, Monika~H. Schleier-Smith,
 D.~J. Wineland, J.~J. Bollinger, W.~M. Itano, F.~L. Moore, and D.~J. Heinzen.
 \newblock Spin squeezing and reduced quantum noise in spectroscopy.
 \newblock {\em Phys. Rev. A}, 46(11):R6797--R6800, December 1992.
+
+\bibitem{madsen_spin_2004}
+Lars~Bojer Madsen and Klaus Mølmer.
+\newblock Spin squeezing and precision probing with light and samples of atoms
+  in the {Gaussian} description.
+\newblock {\em Phys. Rev. A}, 70(5):052324, November 2004.
+
+\bibitem{norris_enhanced_2012}
+Leigh~M. Norris, Collin~M. Trail, Poul~S. Jessen, and Ivan~H. Deutsch.
+\newblock Enhanced {Squeezing} of a {Collective} {Spin} via {Control} of {Its}
+  {Qudit} {Subsystems}.
+\newblock {\em Phys. Rev. Lett.}, 109(17):173603, October 2012.
 
 \bibitem{bohnet_reduced_2014}
 J.~G. Bohnet, K.~C. Cox, M.~A. Norcia, J.~M. Weiner, Z.~Chen, and J.~K.
@@ -378,5 +395,11 @@ Limin Tong, Jingyi Lou, and Eric Mazur.
 \newblock Single-mode guiding properties of subwavelength-diameter silica and
   silicon wire waveguides.
 \newblock {\em Opt. Express}, 12(6):1025--1035, March 2004.
+
+\bibitem{goban_atomlight_2014}
+A.~Goban, C.-L. Hung, S.-P. Yu, J.~D. Hood, J.~A. Muniz, J.~H. Lee, M.~J.
+  Martin, A.~C. McClung, K.~S. Choi, D.~E. Chang, O.~Painter, and H.~J. Kimble.
+\newblock Atom–light interactions in photonic crystals.
+\newblock {\em Nat Commun}, 5, May 2014.
 
 \end{thebibliography}
