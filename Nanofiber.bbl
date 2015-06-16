@@ -23,6 +23,12 @@ Ben~Q. Baragiola, Leigh~M. Norris, Enrique Montaño, Pascal~G. Mickelson,
   squeezing in atomic ensembles.
 \newblock {\em Phys. Rev. A}, 89(3):033850, March 2014.
 
+\bibitem{kuzmich_generation_2000}
+A.~Kuzmich, L.~Mandel, and N.~P. Bigelow.
+\newblock Generation of {Spin} {Squeezing} via {Continuous} {Quantum}
+  {Nondemolition} {Measurement}.
+\newblock {\em Phys. Rev. Lett.}, 85(8):1594--1597, August 2000.
+
 \bibitem{vetsch_nanofiber-based_2012}
 E.~Vetsch, S.T. Dawkins, R.~Mitsch, D.~Reitz, P.~Schneeweiss, and
   A.~Rauschenbeutel.
@@ -236,12 +242,6 @@ A.~Smith, C.~A. Riofrío, B.~E. Anderson, H.~Sosa-Martinez, I.~H. Deutsch, and
   sensing.
 \newblock {\em Phys. Rev. A}, 87(3):030102, March 2013.
 
-\bibitem{kuzmich_generation_2000}
-A.~Kuzmich, L.~Mandel, and N.~P. Bigelow.
-\newblock Generation of {Spin} {Squeezing} via {Continuous} {Quantum}
-  {Nondemolition} {Measurement}.
-\newblock {\em Phys. Rev. Lett.}, 85(8):1594--1597, August 2000.
-
 \bibitem{takano_spin_2009}
 T.~Takano, M.~Fuyama, R.~Namiki, and Y.~Takahashi.
 \newblock Spin {Squeezing} of a {Cold} {Atomic} {Ensemble} with the {Nuclear}
@@ -279,11 +279,6 @@ K.~J. Blow, Rodney Loudon, Simon J.~D. Phoenix, and T.~J. Shepherd.
 \newblock Continuum fields in quantum optics.
 \newblock {\em Phys. Rev. A}, 42(7):4102--4114, October 1990.
 
-\bibitem{vasilyev_quantum_2012}
-D.~V. Vasilyev, K.~Hammerer, N.~Korolev, and A.~S. Sørensen.
-\newblock Quantum noise for {Faraday} light–matter interfaces.
-\newblock {\em J. Phys. B: At. Mol. Opt. Phys.}, 45(12):124007, June 2012.
-
 \bibitem{smith_faraday_2003}
 Greg~A. Smith, Souma Chaudhury, and Poul~S. Jessen.
 \newblock Faraday spectroscopy in an optical lattice: a continuous probe of
@@ -302,17 +297,22 @@ D.~J. Wineland, J.~J. Bollinger, W.~M. Itano, F.~L. Moore, and D.~J. Heinzen.
 \newblock Spin squeezing and reduced quantum noise in spectroscopy.
 \newblock {\em Phys. Rev. A}, 46(11):R6797--R6800, December 1992.
 
-\bibitem{madsen_spin_2004}
-Lars~Bojer Madsen and Klaus Mølmer.
-\newblock Spin squeezing and precision probing with light and samples of atoms
-  in the {Gaussian} description.
-\newblock {\em Phys. Rev. A}, 70(5):052324, November 2004.
-
 \bibitem{norris_enhanced_2012}
 Leigh~M. Norris, Collin~M. Trail, Poul~S. Jessen, and Ivan~H. Deutsch.
 \newblock Enhanced {Squeezing} of a {Collective} {Spin} via {Control} of {Its}
   {Qudit} {Subsystems}.
 \newblock {\em Phys. Rev. Lett.}, 109(17):173603, October 2012.
+
+\bibitem{vasilyev_quantum_2012}
+D.~V. Vasilyev, K.~Hammerer, N.~Korolev, and A.~S. Sørensen.
+\newblock Quantum noise for {Faraday} light–matter interfaces.
+\newblock {\em J. Phys. B: At. Mol. Opt. Phys.}, 45(12):124007, June 2012.
+
+\bibitem{madsen_spin_2004}
+Lars~Bojer Madsen and Klaus Mølmer.
+\newblock Spin squeezing and precision probing with light and samples of atoms
+  in the {Gaussian} description.
+\newblock {\em Phys. Rev. A}, 70(5):052324, November 2004.
 
 \bibitem{bohnet_reduced_2014}
 J.~G. Bohnet, K.~C. Cox, M.~A. Norcia, J.~M. Weiner, Z.~Chen, and J.~K.
