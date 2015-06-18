@@ -624,7 +624,7 @@ In experimental situations, loss and decoherence degrades the measurement for lo
 
 
 	%===================QND spin squeezing=====================%
-	\subsection{QND squeezing of collective atomic projection noise}
+	\subsection{Collective spin squeezing via QND measurement}
 
 The same birefringent interaction, \erf{Eq::GenHamiltonian}, can be utilized in a QND measurement to squeeze the projection noise of the collective atomic spin.  We consider squeezing of the uncertainty associated with the ``clock" transition of cesium, which to first order is insensitive to external magnetic fields.  The clock states, $\ket{\uparrow} = \ket{6S_{1/2}, F=4, M=0}$ and $\ket{\downarrow} = \ket{6S_{1/2}, F=3, M=0}$, define a pseudospin within each atom, $\hat{\sigma}_z \equiv \op{\uparrow}{\uparrow} - \op{\downarrow}{\downarrow}$.  The quantum uncertainty in the collective pseudospin,
 	\begin{align}
@@ -702,58 +702,54 @@ where $\chi_\eff$ is given in \erf{Eq::chieff}. As discussed in Sec. \ref{Sec::A
 	\begin{align} \label{Eq::OutputS3Squeeze}
 		\hat{\mathcal{M}} & = \sqrt{\dot{N}_L/2} \big( \hat{X}_L^{\rm in} \error{\pm} \sqrt{\kappa/2} \hat{J}^\inp_3 \big),
 	\end{align}
-where the input polarization mode plays the role of the local oscillator  \cite{vasilyev_quantum_2012,baragiola_three-dimensional_2014}. Quantum backaction generates squeezing when the projection noise is resolved above the inherent shotnoise of the light as characterized by the signal-to-noise ratio in the measurement fluctuations \cite{deutsch_quantum_2010, baragiola_three-dimensional_2014},
-	\begin{align}
-		R^2 \equiv \frac{\Delta \mathcal{M}^2_{\rm PN}}{ \Delta \mathcal{M}^2_{\rm SN} }.
-	\end{align}  
-
-For large atom numbers under consideration here, the collective atomic state is Gaussian--entirely described by collective means and covariances. The entangling interaction, \erf{Eq::FaradayHam}, preserves the Gaussian nature \cite{madsen_spin_2004}, and a measurement on the light yielding random result $\hat{X}_L^{\rm out} \rightarrow x_L$ projects the $J_3$-component of the mean spin \comment{$\expt{\hat{J}_3}\big|_{x_L} = $}. In the absence of decoherence the interaction is purely QND the conditional projection noise is squeezed according to \cite{}
+where the input polarization mode plays the role of the local oscillator  \cite{vasilyev_quantum_2012,baragiola_three-dimensional_2014}. Quantum backaction generates squeezing when the projection noise is resolved above the inherent shot noise of the light.  For large atom numbers under consideration here, the collective atomic state is Gaussian--entirely described by collective means and covariances.  In the absence of decoherence the interaction is a QND measurement with finite resolution set by the shot noise on detector, and the conditional projection noise is squeezed according to \cite{}
 	\begin{align} \label{Eq::IdealSqueezing}
-		\big(\Delta J_3^\out \big)^2 = \big( \Delta J_3^\inp \big)^2 \frac{1}{1+R^2},
+		\big(\Delta J_3^\out \big)^2 = \big( \Delta J_3^\inp \big)^2 \frac{1}{1+r},
 	\end{align}
-with $R^2 = \kappa t \big( \Delta J_3^\inp \big){}^2$.  To the extent that the Gaussian approximation holds,  the collective spin can be squeezed indefinitely, even for minuscule measurement strength $\kappa$, by measuring for longer. The weak continuous measurement converges to a projective measurement in the long-time limit, and the collective state limits to a Dicke state of definite spin projection along $J_3$, with probabilities determined by the initial projection noise \cite{Stockton}. 
+with $r = \kappa t \big( \Delta J_3^\inp \big)^2$ is the collective measurement strength.  The shot noise resolution of the measurement $\big(\Delta J^{SN}_3 \big)^2 =1/\kappa t$.  
 
-
-	%===================Optical Pumping=====================%
-	\subsection{Optical pumping}
-
-The situation described above where QND squeezing continues unhindered is not achievable, even in principle. The effective light-shift interaction, \erf{Eq::PropagatingElectricField}, inevitably contains an anti-Hermitian part to satisfy the Kramers-Kronig relationship. Physically, this corresponds to \emph{optical pumping}, whereby atoms throughout the ensemble becoming locally excited and then incoherently emitting photons into both guided and radiation modes.
-	
-Optical pumping gives rise to two processes, each of which affects spin squeezing differently \cite{madsen_spin_2004,norris_enhanced_2012}. First, \emph{loss} occurs when atoms are pumped out of the clock subspace to other magnetic sublevels. The effective atom number decreases, which shrinks the size of the collective spin but also reduces the projection noise. More damaging to metrological spin squeezing are \emph{spin flips}, where atoms are incoherently pumped within the pseudospin. The loss of coherence reduces the mean spin length, Spin flips inject noise into $\Delta J_z^2$.  In both processes, the loss of coherence reduces the mean spin length but for spin flips the increased projection noise competes with the QND interaction and limits squeezing.  \comment{(when atoms are pumped to states within the $F=4$ manifold they can affect birefringence, while atoms pumped to $F=3$ are invisible to the probe. Can we really neglect the possible birefringence from the $F=4$ atoms)}. 
-
-Define characteristic photon scattering rate, which is a function of quantization axis. 
-
-\subsubsection{Discussion of spin flip rate}
-At the magic wavelength, spin flips are dominated by the incoherent pumping of atoms from $\ket{\uparrow}$ to $\ket{\downarrow}$ as a result of the large ground hyperfine splitting (9.2 GHz in $^{133}$Cs), as seen in \frf{}. Spin flip rate
-	\begin{align}
-		\gamma_{\rm \uparrow \rightarrow \downarrow}
+Because of photon scattering in modes other than the forward guided mode, the atom-photon interaction will cause decoherence to the spin.  The maximum squeezing we can generate will be determined by detailed balance of QND measurement and decoherence.  We can fully model this via a stochastic master equation for the collective spin state,
+\begin{align}
+		d \hat{\rho} = \error{\pm}\sqrt{\frac{\kappa}{4}} \mathcal{H}[\hat{\rho}] dW + \frac{\kappa}{4} \mathcal{L}[\hat{\rho}] dt + \sum_n \mathcal{D}_n [\hat{\rho}] dt.
 	\end{align}
-
-Optical pumping acts on individual atoms in the trapped ensemble and induces local decoherence. Local spin flips reduce the peak achievable metrological spin squeezing 
-
-\subsubsection{Master equation description (local)}
-The effects of optical pumping within the clock subspace follow from the full master equation for an off-resonantly driven alkali atom \cite{deutsch_quantum_2010}.  
-	\begin{align}
-		\frac{d \hat{\rho}^{(n)}  }{dt}\Big|_{\rm op} 
-		= & \sum_{F_a,F_b} \Big[ -\frac{\gamma_{F_a}}{2} \Big( \rho_{ab } \op{F_a,0}{F_b,0} + \rho_{ba} \op{F_a,0}{F_b,0} \Big) +  \gamma_{F_a \rightarrow F_b} \rho_{aa} \op{F_b,0}{F_b,0} \Big]
-	\end{align}
-where $\rho_{ab} \equiv \bra{F_a,0} \hat{\rho}^{(n)} \ket{F_b,0} $ are the elements of the single-atom density matrix, $\gamma_F$ is the rate of population loss from state $\ket{F,0}$, and $\gamma_{F_a \rightarrow F_b}$ is the rate of pumping from $F_a$ to $F_b$.  
-
-\subsubsection{Stochastic master equation (collective)}
-The full dynamics of the conditional collective state of the atomic ensemble including the effects of optical pumping are described by the stochastic master equation,
-	\begin{align}
-		d \hat{\rho} = \error{\pm}\sqrt{\frac{\kappa}{4}} \mathcal{H}[\hat{\rho}] dW + \frac{\kappa}{4} \mathcal{L}[\hat{\rho}] dt + \mathcal{D} [\hat{\rho}] dt.
-	\end{align}
-The conditional dynamics that result from the measurement record are described by the superoperator
+The first two terms describe the QNS measurement according at a rate described by the measurement strength $\kappa$. The conditional dynamics that result from the measurement record are described by the superoperator
 	\begin{align}
 		\mathcal{H}[\hat{\rho}] = \hat{J}_z \hat{\rho} + \hat{\rho} \hat{J}_z - 2 \expt{\hat{J}_z} \hat{\rho},
 	\end{align}
-and ``measurement backaction" given by the collective Lindblad map, 
+where $dW$ is a stochastic Weiner interval, and ``measurement backaction" given by the collective Lindblad map, 
 	\begin{align}
 		\mathcal{L}[\hat{\rho}] = \hat{J}_z \hat{\rho} \hat{J}_z - \smallfrac{1}{2} \hat{J}_z^2 \hat{\rho} - \smallfrac{1}{2} \hat{\rho}  \hat{J}_z^2 .
 	\end{align}
-Ignoring losses and decoherence, the peak achievable squeezing increases with time at rate $\kappa$.  	
 
+
+The final term in Eq. (?) describes the effect of optical pumping, acting locally on the $n^{th}$ atom.  For any given atom, restricting to the two-dimensional subspace associated with the clock states,
+	\begin{align}
+		\mathcal{D}[\hat{\rho}] =  &\sum_{F_a=3,4} \Big[ -\frac{\gamma_{F_a}}{2} \Big( \rho \op{F_a,0}{F_a,0} + \op{F_a,0_a}{F,0} \rho  \Big)
+		+  \sum_{F_b=3,4}  \gamma_{F_a \rightarrow F_b} \ket{F_b,0}\bra{F_a,0}\rho\ket{Fa,0}\bra{F_a,0}. \Big],
+	\end{align}
+Here $\gamma_{F_a}$ is the total rate of photon scattering by atoms in the clock state $\ket{F_a,0}$, defined by
+\begin{equation}
+\frac{\hbar \gamma_{F_a}}{2}=- \Im\left(\bra{F_a,0} H_{eff}\ket{F_a,0}\right) ,
+\end{equation}
+where $H_{eff}$ is the effective non-Hermitian light-shift Hamiltonian that accounts for the imaginary part of the atomic polarizability, $\charpol \rightarrow= -(\sigma_0/8\pi k_0) \Gamma/(\Delta_{FF'}-i\Gamma/2)$.   The rates $\gamma_{F_a\rightarrow F_b}$ are the rates of optical pumping from $\ket{F,0} \rightarrow \ket{F',0}$,
+\begin{equation}
+ \gamma_{F_a\rightarrow F_b} =\left| \bra{F_a,0} W_\pi \ket{F_b,0} \right|^2,
+\end{equation}
+where $W_\pi$ is the jump-operator associated with absorption of the probe photon followed by spontaneous emission of a $\pi$-polarized photon.  Expressed in irreducible tensor components, Eq. (?),
+\begin{align}
+\gamma_F &=\dot{N}_L  \sum_{F'} \sigma\left(\Delta_{FF'}\right) \mathbf{u}^*_{D}(\br')\cdot \bra{F,0} \tensor{\mathbf{A}} \ket{F,0}  \cdot \mathbf{u}_{D}(\br'), \\
+\gamma_{F_a \rightarrow F_b}&=  \dot{N}_L  \sum_{F'} \sigma\left(\Delta_{FF'}\right) \left| \mathbf{e}_\pi\cdot \bra{F_b,0} \tensor{\mathbf{A}} \ket{F_a,0}  \cdot \mathbf{u}_{D}(\br')\right|^2 ,
+\end{align}
+
+where $ \sigma\left(\Delta_{FF'}\right)  = \sigma_0 \Gamma^2/4\Delta^2_{FF'}$ is the the scattering cross section at the detuning of probe.  When expressed in terms of Pauli operators on the pseudo-spin-1/2 of clock states $\ket{F=4,M=0} \rightarrow{\uparrow}$,  $\ket{F=3,M=0} \rightarrow{\downarrow}$,
+\begin{align}
+\mathcal{D}[\rho]  = &-\frac{\tilde{\gamma}_\uparrow + \tilde{\gamma}_\downarrow}{2} \rho - \frac{\tilde{\gamma}_\uparrow - \tilde{\gamma}_\downarrow}{2}(\sigma_z \rho + \rho \sigma_z)+\gamma_{\uparrow \rightarrow \downarrow} \; \sigma_- \rho \sigma_+ + \gamma_{\downarrow \rightarrow \uparrow} \;\sigma_+ \rho \sigma_- .
+\end{align}
+Here $\tilde{\gamma}_\uparrow  \equiv \gamma_\uparrow - \gamma_{\uparrow \rightarrow \uparrow}$ is the rate of optical pumping out of the state $\ket{\uparrow}$ and similarly for $\tilde{\gamma}_\downarrow$.
+There are two important features of this map that are not typical in a QND measurement of an ensemble of spin-1/2 particles.  Firstly since $\tilde{\gamma}_\uparrow \neq \gamma_{\uparrow \rightarrow \downarrow}$ and  $\tilde{\gamma}_\downarrow \neq \gamma_{\downarrow \rightarrow \uparrow}$, the map is {\em not trace preserving}.  That is atoms will be optically pumped out of the clock subspace.  In addition since $\tilde{\gamma}_\uparrow \neq \tilde{\gamma}_\downarrow$ optical pumping will lead to a polarization of the mean along $z$, different from the value found in a QND measurement.
+		
+		
+		
 \subsubsection{Equations of motion for the atom number/mean/variance}		
 The expectation value of the $ \hat{J}_3 $ operator, $ \Delta J_3^2 $, in the first-order approximation may obey the differential equation given by 
 \begin{align}
@@ -826,7 +822,7 @@ In their final discussion, Polzik et al. \cite{beguin_generation_2014} extrapola
 \centering
 \subfloat[]{\label{fig:OD_q_xyplane_r1d8a_m44}\includegraphics[scale=0.45]{./Figs/OD_q_xyplane_r1d8a_m44}}
 \end{minipage}
-\caption{Study of squeezing parameters with rotating quantization axis with $2500$ atoms positioned at $ r'\!_\perp=1.8a $. The magic frequency close to the $ F=4 \leftrightarrow F'=4$ transition of $ \mathrm{D}_1 $ line is used. Subfig.~\protect\subref{fig:xi_q_D1_NA2500_r1d8a} shows the squeezing parameter $ \xi^{-2} $ as the quantization axis rotates in the 3D space. Subfig~\protect\subref{fig:ximax_q_D1_xyplane_NA2500_r1d8a} gives the squeezing parameter when the quantization axis rotates on the $ xy $-plane. Subfig.~\protect\subref{fig:gamma34_q_D1_xyplane_NA2500_r1d8a_m44} is the spin flipping rate $ \gamma_{4\rightarrow 3} $ (in arbitrary units) as a function of the orientation of the quantization axis rotating in the $ xy $-plane. $ \gamma_{3\rightarrow 4} $ is very small compared to $ \gamma_{4\rightarrow 3} $ due to its far detuning. Subfig.~\protect\subref{fig:OD_q_xyplane_r1d8a_m44} shows the $ \mathrm{OD}/{\mathrm{atom}}=\kappa/\gamma_s $ when the quantization axis is rotating in the $ xy $-plane.  }\label{fig:squeezing_q_D1_NA2500_r1d8a}
+\caption{Study of squeezing parameters with rotating quantization axis with $2500$ atoms positioned at $ r'\!_\perp=1.8a $. The magic frequency close to the $ F=4 \leftrightarrow F'=4$ transition of $ \mathrm{D}_1 $ line is used. Subfig.~\protect\subref{fig:xi_q_D1_NA2500_r1d8a} shows the squeezing parameter $ \xi^2 $ as the quantization axis rotates in the 3D space. Subfig~\protect\subref{fig:ximax_q_D1_xyplane_NA2500_r1d8a} gives the squeezing parameter when the quantization axis rotates on the $ xy $-plane. Subfig.~\protect\subref{fig:gamma34_q_D1_xyplane_NA2500_r1d8a_m44} is the spin flipping rate $ \gamma_{4\rightarrow 3} $ (in arbitrary units) as a function of the orientation of the quantization axis rotating in the $ xy $-plane. $ \gamma_{3\rightarrow 4} $ is very small compared to $ \gamma_{4\rightarrow 3} $ due to its far detuning. Subfig.~\protect\subref{fig:OD_q_xyplane_r1d8a_m44} shows the $ \mathrm{OD}/{\mathrm{atom}}=\kappa/\gamma_s $ when the quantization axis is rotating in the $ xy $-plane.  }\label{fig:squeezing_q_D1_NA2500_r1d8a}
 \end{figure}
 
 %================
@@ -839,7 +835,7 @@ In their final discussion, Polzik et al. \cite{beguin_generation_2014} extrapola
 \centering
 \subfloat[]{\label{fig:OD_optimal_rp}\includegraphics[scale=0.45]{./Figs/OD_optimal_rp}}
 \end{minipage}
-\caption{QND measurement properties using the magic frequency $ \omega_{44} $. Subfigure~\protect\subref{fig:xi_optimal_NA1000to5000_omega44} shows the optimal peak spin squeezing parameter as a function of the radial position of the atom. Different atom numbers have been indicated in different types of lines. Subfigure~\ref{fig:OD_optimal_rp} shows the OD per atom parameter, $ \mathrm{OD}/{\mathrm{atom}}\equiv \kappa/\gamma_s= \sigma_0A_{\rm in}/A_{\rm eff}^2 $, as a function of atoms' radial position when the optimal quantization axis is chosen to plot Subfig.~\protect\subref{fig:xi_optimal_NA1000to5000_omega44}. }\label{fig:QNDproperty_magic44}
+\caption{QND measurement properties using the magic frequency $ \omega_{44} $. Subfigure~\protect\subref{fig:xi_optimal_NA1000to5000_omega44} shows the optimal peak spin squeezing parameter as a function of the radial position of the atom. Different atom numbers have been indicated in different types of lines. Subfigure~\ref{fig:OD_optimal_rp} shows the OD per atom parameter, $ \mathrm{OD}/{\mathrm{atom}}\equiv \kappa/\gamma_s= \sigma_0A_{\rm in}/4A_{\rm eff}^2 $, as a function of atoms' radial position when the optimal quantization axis is chosen to plot Subfig.~\protect\subref{fig:xi_optimal_NA1000to5000_omega44}. }\label{fig:QNDproperty_magic44}
 \end{figure}
 %================
 
@@ -876,7 +872,7 @@ In their final discussion, Polzik et al. \cite{beguin_generation_2014} extrapola
 \centering
 \subfloat[]{\label{fig:xit_qoptimal_r1d8a_NA1000to5000}\includegraphics[scale=0.45]{./Figs/xit_qoptimal_r1d8a_NA1000to5000}}
 \end{minipage}
-\caption{Dynamics of spin squeezing parameter $ \xi^{-2} $ with atoms placed at $ r'\!_\perp=1.8a $ position for the birefringence metrology. Subfig.~\protect\subref{fig:xit_q_r1d8a_NA2500} uses $ 2500 $ atoms while changing the quantization axis in the $ xy $-plane. Subfig.~\protect\subref{fig:xit_qoptimal_r1d8a_NA1000to5000} uses the optimal spin squeezing quantization axis yet with various atom numbers. }\label{fig:xit_r1d8a}
+\caption{Dynamics of spin squeezing parameter $ \xi^2 $ with atoms placed at $ r'\!_\perp=1.8a $ position for the birefringence metrology. Subfig.~\protect\subref{fig:xit_q_r1d8a_NA2500} uses $ 2500 $ atoms while changing the quantization axis in the $ xy $-plane. Subfig.~\protect\subref{fig:xit_qoptimal_r1d8a_NA1000to5000} uses the optimal spin squeezing quantization axis yet with various atom numbers. }\label{fig:xit_r1d8a}
 \end{figure}
 
 
