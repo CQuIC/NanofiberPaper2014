@@ -17,7 +17,7 @@ C.-L. Hung, S.~M. Meenehan, D.~E. Chang, O.~Painter, and H.~J. Kimble.
 \newblock {\em New J. Phys.}, 15(8):083026, August 2013.
 
 \bibitem{baragiola_three-dimensional_2014}
-Ben~Q. Baragiola, Leigh~M. Norris, Enrique Monta{\~n}o, Pascal~G. Mickelson,
+Ben~Q. Baragiola, Leigh~M. Norris, Enrique Montaño, Pascal~G. Mickelson,
   Poul~S. Jessen, and Ivan~H. Deutsch.
 \newblock Three-dimensional light-matter interface for collective spin
   squeezing in atomic ensembles.
@@ -37,7 +37,7 @@ E.~Vetsch, S.T. Dawkins, R.~Mitsch, D.~Reitz, P.~Schneeweiss, and
   18(6):1763--1770, November 2012.
 
 \bibitem{lacroute_state-insensitive_2012}
-C.~Lacro{\^u}te, K.~S. Choi, A.~Goban, D.~J. Alton, D.~Ding, N.~P. Stern, and
+C.~Lacroûte, K.~S. Choi, A.~Goban, D.~J. Alton, D.~Ding, N.~P. Stern, and
   H.~J. Kimble.
 \newblock A state-insensitive, compensated nanofiber trap.
 \newblock {\em New J. Phys.}, 14(2):023056, February 2012.
@@ -60,7 +60,7 @@ Kazuaki Sakoda and Kazuo Ohtaka.
 \newblock {\em Phys. Rev. B}, 54(8):5732--5741, August 1996.
 
 \bibitem{sondergaard_general_2001}
-T.~S{\o}ndergaard and B.~Tromborg.
+T.~Søndergaard and B.~Tromborg.
 \newblock General theory for spontaneous emission in active dielectric
   microstructures: {Example} of a fiber amplifier.
 \newblock {\em Phys. Rev. A}, 64(3):033812, August 2001.
@@ -80,7 +80,7 @@ Fam Le~Kien and A.~Rauschenbeutel.
 Fam~Le Kien, J.~Q. Liang, K.~Hakuta, and V.~I. Balykin.
 \newblock Field intensity distributions and polarization orientations in a
   vacuum-clad subwavelength-diameter optical fiber.
-\newblock {\em Optics Communications}, 242(4--6):445--455, December 2004.
+\newblock {\em Optics Communications}, 242(4–6):445--455, December 2004.
 
 \bibitem{fussell_decay_2005}
 D.~P. Fussell, R.~C. McPhedran, and C.~Martijn~de Sterke.
@@ -88,7 +88,7 @@ D.~P. Fussell, R.~C. McPhedran, and C.~Martijn~de Sterke.
 \newblock {\em Phys. Rev. A}, 71(1):013815, January 2005.
 
 \bibitem{dung_spontaneous_2000}
-Ho~Trung Dung, Ludwig Kn{\"o}ll, and Dirk-Gunnar Welsch.
+Ho~Trung Dung, Ludwig Knöll, and Dirk-Gunnar Welsch.
 \newblock Spontaneous decay in the presence of dispersing and absorbing
   bodies:{\textbackslash}quad\{\}{General} theory and application to a
   spherical cavity.
@@ -96,7 +96,7 @@ Ho~Trung Dung, Ludwig Kn{\"o}ll, and Dirk-Gunnar Welsch.
 
 \bibitem{chen_finite-element_2010}
 Yuntian Chen, Torben~Roland Nielsen, Niels Gregersen, Peter Lodahl, and Jesper
-  M{\o}rk.
+  Mørk.
 \newblock Finite-element modeling of spontaneous emission of a quantum emitter
   at nanoscale proximity to plasmonic waveguides.
 \newblock {\em Phys. Rev. B}, 81(12):125431, March 2010.
@@ -131,7 +131,7 @@ Peter Domokos, Peter Horak, and Helmut Ritsch.
 \newblock {\em Phys. Rev. A}, 65(3):033832, March 2002.
 
 \bibitem{bures_power_1999}
-Jacques Bures and Ren{\'e} Ghosh.
+Jacques Bures and René Ghosh.
 \newblock Power density of the evanescent field in the vicinity of a tapered
   fiber.
 \newblock {\em Journal of the Optical Society of America A}, 16(8):1992, 1999.
@@ -173,13 +173,13 @@ R.~Mitsch, C.~Sayrin, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
 \newblock {\em Nat Commun}, 5, December 2014.
 
 \bibitem{fan_input-output_2010}
-Shanhui Fan, {\c S}{\"u}kr{\"u}~Ekin Kocaba{\c s}, and Jung-Tsung Shen.
+Shanhui Fan, Şükrü~Ekin Kocabaş, and Jung-Tsung Shen.
 \newblock Input-output formalism for few-photon transport in one-dimensional
   nanophotonic waveguides coupled to a qubit.
 \newblock {\em Phys. Rev. A}, 82(6):063821, December 2010.
 
 \bibitem{buhmann_casimir-polder_2004}
-Stefan~Yoshi Buhmann, Ludwig Kn{\"o}ll, Dirk-Gunnar Welsch, and Ho~Trung Dung.
+Stefan~Yoshi Buhmann, Ludwig Knöll, Dirk-Gunnar Welsch, and Ho~Trung Dung.
 \newblock Casimir-{Polder} forces: {A} nonperturbative approach.
 \newblock {\em Phys. Rev. A}, 70(5):052117, November 2004.
 
@@ -197,7 +197,7 @@ Fam~Le Kien, Philipp Schneeweiss, and Arno Rauschenbeutel.
 
 \bibitem{tanji-suzuki_chapter_2011}
 Haruka Tanji-Suzuki, Ian~D. Leroux, Monika~H. Schleier-Smith, Marko Cetina,
-  Andrew~T. Grier, Jonathan Simon, and Vladan Vuleti{\'c}.
+  Andrew~T. Grier, Jonathan Simon, and Vladan Vuletić.
 \newblock Chapter 4 - {Interaction} between {Atomic} {Ensembles} and {Optical}
   {Resonators}: {Classical} {Description}.
 \newblock In P.~R. Berman {and} C. C.~Lin E.~Arimondo, editor, {\em Advances
@@ -212,7 +212,7 @@ J.~M. Geremia, John~K. Stockton, and Hideo Mabuchi.
 \newblock {\em Phys. Rev. A}, 73(4):042112, April 2006.
 
 \bibitem{hammerer_quantum_2010}
-Klemens Hammerer, Anders~S. S{\o}rensen, and Eugene~S. Polzik.
+Klemens Hammerer, Anders~S. Sørensen, and Eugene~S. Polzik.
 \newblock Quantum interface between light and atomic ensembles.
 \newblock {\em Rev. Mod. Phys.}, 82(2):1041--1093, April 2010.
 
@@ -229,15 +229,15 @@ S.~T. Dawkins, R.~Mitsch, D.~Reitz, E.~Vetsch, and A.~Rauschenbeutel.
 \newblock {\em Phys. Rev. Lett.}, 107(24):243601, December 2011.
 
 \bibitem{beguin_generation_2014}
-J.-B. B{\'e}guin, E. M. Bookjans, S. L. Christensen, H. L. S{\o}rensen,
-  J. H. M{\"u}ller, E. S. Polzik, and J.~Appel.
+J.-B. Béguin, E. M. Bookjans, S. L. Christensen, H. L. Sørensen,
+  J. H. Müller, E. S. Polzik, and J.~Appel.
 \newblock Generation and {Detection} of a {Sub}-{Poissonian} {Atom} {Number}
   {Distribution} in a {One}-{Dimensional} {Optical} {Lattice}.
 \newblock {\em Phys. Rev. Lett.}, 113(26):263603, December 2014.
 
 \bibitem{smith_quantum_2013}
-A.~Smith, C.~A. Riofr{\'\i}o, B.~E. Anderson, H.~Sosa-Martinez, I.~H. Deutsch,
-  and P.~S. Jessen.
+A.~Smith, C.~A. Riofrío, B.~E. Anderson, H.~Sosa-Martinez, I.~H. Deutsch, and
+  P.~S. Jessen.
 \newblock Quantum state tomography by continuous measurement and compressed
   sensing.
 \newblock {\em Phys. Rev. A}, 87(3):030102, March 2013.
@@ -286,8 +286,8 @@ Greg~A. Smith, Souma Chaudhury, and Poul~S. Jessen.
 \newblock {\em J. Opt. B: Quantum Semiclass. Opt.}, 5(4):323, August 2003.
 
 \bibitem{zhang_collective_2012}
-Hao Zhang, Robert McConnell, Senka {\'C}uk, Qian Lin, Monika~H. Schleier-Smith,
-  Ian~D. Leroux, and Vladan Vuleti{\'c}.
+Hao Zhang, Robert McConnell, Senka Ćuk, Qian Lin, Monika~H. Schleier-Smith,
+  Ian~D. Leroux, and Vladan Vuletić.
 \newblock Collective {State} {Measurement} of {Mesoscopic} {Ensembles} with
   {Single}-{Atom} {Resolution}.
 \newblock {\em Phys. Rev. Lett.}, 109(13):133603, September 2012.
@@ -311,8 +311,8 @@ Greg~A. Smith, Souma Chaudhury, Andrew Silberfarb, Ivan~H. Deutsch, and Poul~S.
 \newblock {\em Phys. Rev. Lett.}, 93(16):163602, October 2004.
 
 \bibitem{vasilyev_quantum_2012}
-D.~V. Vasilyev, K.~Hammerer, N.~Korolev, and A.~S. S{\o}rensen.
-\newblock Quantum noise for {Faraday} light--matter interfaces.
+D.~V. Vasilyev, K.~Hammerer, N.~Korolev, and A.~S. Sørensen.
+\newblock Quantum noise for {Faraday} light–matter interfaces.
 \newblock {\em J. Phys. B: At. Mol. Opt. Phys.}, 45(12):124007, June 2012.
 
 \bibitem{bohnet_reduced_2014}
@@ -329,8 +329,8 @@ Fam Le~Kien and K.~Hakuta.
 \newblock {\em Phys. Rev. A}, 79(4):043813, April 2009.
 
 \bibitem{wuttke_nanofiber_2012}
-C.~Wuttke, M.~Becker, S.~Br{\"u}ckner, M.~Rothhardt, and A.~Rauschenbeutel.
-\newblock Nanofiber {Fabry}--{Perot} microresonator for nonlinear optics and
+C.~Wuttke, M.~Becker, S.~Brückner, M.~Rothhardt, and A.~Rauschenbeutel.
+\newblock Nanofiber {Fabry}–{Perot} microresonator for nonlinear optics and
   cavity quantum electrodynamics.
 \newblock {\em Opt. Lett.}, 37(11):1949--1951, June 2012.
 
@@ -351,14 +351,14 @@ Ramachandrarao Yalla, Mark Sadgrove, Kali~P. Nayak, and Kohzo Hakuta.
 \newblock {\em Phys. Rev. Lett.}, 113(14):143601, September 2014.
 
 \bibitem{smith_quantum_2013-1}
-A.~Smith, B.~E. Anderson, H.~Sosa-Martinez, C.~A. Riofr{\'\i}o, Ivan~H.
-  Deutsch, and Poul~S. Jessen.
+A.~Smith, B.~E. Anderson, H.~Sosa-Martinez, C.~A. Riofrío, Ivan~H. Deutsch,
+  and Poul~S. Jessen.
 \newblock Quantum {Control} in the {Cs} \$6\{{S}\}\_\{1/2\}\$ {Ground}
   {Manifold} {Using} {Radio}-{Frequency} and {Microwave} {Magnetic} {Fields}.
 \newblock {\em Phys. Rev. Lett.}, 111(17):170502, October 2013.
 
 \bibitem{kumar_autler-townes_2015}
-Ravi Kumar, Vandna Gokhroo, Kieran Deasy, and S{\'\i}le~Nic Chormaic.
+Ravi Kumar, Vandna Gokhroo, Kieran Deasy, and Síle~Nic Chormaic.
 \newblock Autler-{Townes} splitting via frequency upconversion at ultra-low
   power levels in cold \${\textasciicircum}\{87\}\${Rb} atoms using an optical
   nanofiber.
@@ -366,8 +366,7 @@ Ravi Kumar, Vandna Gokhroo, Kieran Deasy, and S{\'\i}le~Nic Chormaic.
 \newblock arXiv: 1502.01123.
 
 \bibitem{gonzalez-tudela_deterministic_2015}
-A.~Gonz{\'a}lez-Tudela, V.~Paulisch, D.~E. Chang, H.~J. Kimble, and J.~I.
-  Cirac.
+A.~González-Tudela, V.~Paulisch, D.~E. Chang, H.~J. Kimble, and J.~I. Cirac.
 \newblock Deterministic generation of arbitrary photonic states assisted by
   dissipation.
 \newblock {\em arXiv:1504.07600 [quant-ph]}, April 2015.
@@ -380,7 +379,7 @@ B.~Gouraud, D.~Maxein, A.~Nicolas, O.~Morin, and J.~Laurat.
 \newblock {\em Phys. Rev. Lett.}, 114(18):180503, May 2015.
 
 \bibitem{oshea_fiber-optical_2013}
-Danny O'Shea, Christian Junge, J{\"u}rgen Volz, and Arno Rauschenbeutel.
+Danny O’Shea, Christian Junge, Jürgen Volz, and Arno Rauschenbeutel.
 \newblock Fiber-{Optical} {Switch} {Controlled} by a {Single} {Atom}.
 \newblock {\em Phys. Rev. Lett.}, 111(19):193601, November 2013.
 
@@ -398,10 +397,15 @@ Limin Tong, Jingyi Lou, and Eric Mazur.
   silicon wire waveguides.
 \newblock {\em Opt. Express}, 12(6):1025--1035, March 2004.
 
+\bibitem{jacobs_straightforward_2006}
+Kurt Jacobs and Daniel~A. Steck.
+\newblock A straightforward introduction to continuous quantum measurement.
+\newblock {\em Contemporary Physics}, 47(5):279--303, September 2006.
+
 \bibitem{goban_atomlight_2014}
 A.~Goban, C.-L. Hung, S.-P. Yu, J.~D. Hood, J.~A. Muniz, J.~H. Lee, M.~J.
   Martin, A.~C. McClung, K.~S. Choi, D.~E. Chang, O.~Painter, and H.~J. Kimble.
-\newblock Atom--light interactions in photonic crystals.
+\newblock Atom–light interactions in photonic crystals.
 \newblock {\em Nat Commun}, 5, May 2014.
 
 \end{thebibliography}
