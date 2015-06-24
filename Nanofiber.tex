@@ -320,7 +320,7 @@ Radiative properties of a scatterer, the decay rate and energy level shift, are 
 \omega(\beta)).
 \end{equation}
 Only the positive-frequency component contributes to the $\delta$-function, and it follows that the imaginary part of the Green's function at $\br = \br'$ that determines the resonant ($\omega_0 = \omega_{eg}$) Purcell enhancement of spontaneous emission into the guided modes is \cite{dung_spontaneous_2000, fussell_decay_2005, chen_finite-element_2010}
-	\begin{equation}
+	\begin{equation}\label{Eq::ImGreenLocal}
 		\Im \big[\tensor{\mathbf{G}}^{(+)}_g(\br',\br'; \omega_{eg}) \big] = \pi \frac{\omega_{eg}}{v_g } \sum_{f, p} 
 		\mathbf{u}_{f, p} (\br_{\!\perp}^\prime)\mathbf{u}^*_{f , p} (\br_{\!\perp}^\prime).
 	\end{equation}
@@ -402,8 +402,8 @@ We consider here alkali atoms with hyperfine multiplets of ground and excited le
 	\end{equation}
 with atomic transition operators $\hat{\sigma}_{ij} \equiv \ket{i}\bra{j}$.  In the rotating wave approximation, the atom-field interaction Hamiltonian is
 	\begin{align}
-		\hat{H}_{\inter} &= -\hat{\mathbf{d}}\cdot \hat{\mathbf{E}} = -\hat{\mathbf{d}}_{eg}\cdot 
-\hat{\mathbf{E}}^{(+)}(\br')-\hat{\mathbf{d}}_{ge}\cdot \hat{\mathbf{E}}^{(-)}(\br'),
+		\hat{H}_{\inter} &= -\hat{\mathbf{d}}\cdot \hat{\mathbf{E}} =-\error{\sum_{e,g}} \left[ \hat{\mathbf{d}}_{eg}\cdot 
+\hat{\mathbf{E}}^{(+)}(\br')+\hat{\mathbf{d}}_{ge}\cdot \hat{\mathbf{E}}^{(-)}(\br') \right],
 	\end{align}
 where the atomic dipole operator is projected between excited and ground subspaces, $\hat{\mathbf{d}}_{eg}= \hat{P}_e \hat{\mathbf{d}} \hat{P}_g $. The interaction Hamiltonian then takes the form, 
 \begin{equation}
@@ -415,16 +415,16 @@ where the coupling constants between the electric dipole and the guided/radiatio
 \begin{subequations} \label{Eq::CouplingConstants}
 	\begin{align}
 		\hbar g_{\mu, e,g} &= \sqrt{\frac{\hbar \omega}{ v_g  }}\, \bra{e} \hat{\mathbf{d}} \ket{g} 
-\cdot\mathbf{u}_\mu (\br') e^{i f \beta(\omega)z} , \\
-		\hbar g_{\nu, e,g} &= \sqrt{  \hbar \omega } \, \bra{e} \hat{\mathbf{d}} \ket{g} \cdot \mathbf{u}_\nu (\br') e^{i\beta(\omega)z}  .
-\end{align}
-	\end{subequations}
+\cdot\mathbf{u}_\mu ( \error{\br'\!_\perp} ) e^{i f \beta(\omega)z} , \\
+		\hbar g_{\nu, e,g} &= \sqrt{  \hbar \omega } \, \bra{e} \hat{\mathbf{d}} \ket{g} \cdot \mathbf{u}_\nu ( \error{ \br'\!_\perp} ) e^{i\beta(\omega)z}  .
+	\end{align}
+\end{subequations}
 The Heisenberg equations of motion thus follow,
 	\begin{align}
 		\der{\hat{a}_\mu} &= -i\omega \hat{a}_\mu +i\sum_{e,g} g_{\mu, e,g}^* \hat{\sigma}_{ge} \label{eq:da}\\
 		\der{\hat{a}_\nu} &= -i\omega \hat{a}_\nu +i\sum_{e,g} g_{\nu, e,g}^*  \hat{\sigma}_{ge}\label{eq:danu}\\
 		\der{\hat{\sigma}_{ge}} &= -i\omega_{eg} \hat{\sigma}_{ge} \label{Eq::dsigma}  \\
-			&+ i\int_0^{\infty}\mathrm{d}\omega \sum_{e',g'} \bigg[ \big(\delta_{ee'} \hat{\sigma}_{gg'} - \delta_{gg'} \hat{\sigma}_{e'e} \big) \bigg\{ \sum_{f,p}  g_{\mu, e',g'}\hat{a}_\mu (\omega; t) +\sum_{m,p} \int_{-kn_2}^{kn_2}\mathrm{d}\beta \; g_{\nu, e',g'} \hat{a}_\nu(\omega, \beta; t) \bigg\} \bigg]. \nonumber
+			&+ i\!\int_0^{\infty}\!\!\!\!\! \mathrm{d}\omega \sum_{e',g'} \bigg[ \big(\delta_{ee'} \hat{\sigma}_{gg'} \!-\! \delta_{gg'} \hat{\sigma}_{e'e} \big) \bigg\{ \sum_{f,p}  g_{\mu, e',g'}\hat{a}_\mu (\omega; t) \!+\! \sum_{m,p} \!\int_{-kn_2}^{kn_2}\!\!\!\!\!\! \mathrm{d}\beta \; g_{\nu, e',g'} \hat{a}_\nu(\omega, \beta; t) \bigg\} \bigg]. \nonumber
 	\end{align}
 Integrating the field equations, 
 \begin{subequations}\label{eq:aout1}
@@ -442,8 +442,8 @@ substituting into \erf{Eq::dsigma}, and making the usual Markov approximation~\c
 &\dt{\hat{\sigma}_{ge}} =-i\omega_{eg} 
 \hat{\sigma}_{ge}-\sum_{e'}\frac{\Gamma_{ee'}}{2}\hat{\sigma}_{ge'}  \\
 &+i \sum_{e',g'}\bigg[ (\delta_{e,e'} \hat{\sigma}_{gg'} - \delta_{g,g'} 
-\hat{\sigma}_{e'e})\int_0^{\infty}\mathrm{d}\omega \bigg\{\sum_{f,p}  g_{\mu, e',g'} \hat{a}_\mu (t_0) 
-+\sum_{m,p}  \int_{-kn_2}^{kn_2}\mathrm{d}\beta  g_{\nu, e',g'} \hat{a}_\nu(t_0) \bigg\} e^{-i\omega 
+\hat{\sigma}_{e'e})\int_0^{\infty}\!\!\!\!\!\mathrm{d}\omega \bigg\{\sum_{f,p}  g_{\mu, e',g'} \hat{a}_\mu (t_0) 
++\sum_{m,p}  \int_{-kn_2}^{kn_2}\!\!\!\!\!\mathrm{d}\beta  g_{\nu, e',g'} \hat{a}_\nu(t_0) \bigg\} e^{-i\omega 
 (t-t_0)}\bigg], \nonumber
 \end{align}
 where the decay of excited-state correlations is given by 
@@ -455,19 +455,20 @@ and the small energy shift is absorbed into the transition frequency $\omega_{eg
 	\begin{equation}
 		\Gamma_e^{\oneD}= 2\pi \sum_{\mu,g} |g_{\mu,e,g} |^2_{\omega = \omega_{eg}} =  \frac{ 2\pi }{\hbar} \frac{ \comment{\omega_{eg}} }{v_g} \sum_{\mu,g} \big|\bra{e}\hat{\mathbf{d}}\ket{g} \cdot \mathbf{u}_{fp}(\br'_\perp)\big|^2  .
 	\end{equation}
-This agrees with the expected expression following from the guided-mode contribution to the dyadic Green's function, \erf{Eq::GreensGuided},
+This agrees with the expected expression following from the guided-mode contribution to the dyadic Green's function, \erf{Eq::ImGreenLocal},
 	\begin{equation}
 		\Gamma_e^{\oneD} =  \frac{2}{\hbar} \sum_{g}  \bra{g}\hat{\mathbf{d}}\ket{e}\cdot 
 \Im \Big[\tensor{\mathbf{G}}^{(+)}_g(\br', \br'; \omega_{eg} ) \big] \cdot \bra{e}\hat{\mathbf{d}}\ket{g} ,
 	\end{equation}
 enhanced over the free-space rate by the Purcell factor.  In general, the decay rate into a given mode depends on the dipole orientation \cite{klimov_spontaneous_2004, vos_orientation-dependent_2009}. Recently, it was predicted \cite{le_kien_anisotropy_2014} and demonstrated \cite{mitsch_quantum_2014} that the decay rates into the forward and backward modes are not always equal.  Specifically, when the atomic dipole has a component rotating in the plane defined by the atom and nanofiber, the relative decay rates can differ due to the longitudinal component of the guided modes. \comment{Maybe we should include a plot of $\Gamma_{\rm 1D}/\Gamma_0$.  This is the \emph{first} thing people ask.  We must make the point that while it's not so large, we can benefit from many atoms much more easily than other systems, such as those alligator waveguide photonic crystals.}
 
-Here we are interested in linear response for excitation far from resonance.  We follow Ref. \cite{le_kien_propagation_2014} and consider an atom sufficiently far from the fiber surface such that the modification of the spontaneous emission rate is small.   In this case the decay rate is approximated as $\Gamma_{ee'} \approx \delta_{e,e'} \Gamma_{e}$, where $\Gamma_e$ is the total decay rate from excited state $\ket{e}$, given by the diagonal elements of \erf{Eq::TotaleeDecayRate}.  In steady state, the dipole operator in the linear regime ($\hat{\sigma}_{ee'} \rightarrow 0 $) is approximately
+Here we are interested in linear response for excitation far from resonance.  We follow Ref. \cite{le_kien_propagation_2014} and consider an atom sufficiently far from the fiber surface such that the modification of the spontaneous emission rate is small.   In this case the decay rate is approximated as $\Gamma_{ee'} \approx \delta_{e,e'} \Gamma_{e}$ (\comment{it is confusing here -- more details or references?}), where $\Gamma_e$ is the total decay rate from excited state $\ket{e}$, given by the diagonal elements of \erf{Eq::TotaleeDecayRate}.  In steady state, the dipole operator in the linear regime ($\hat{\sigma}_{ee'} \rightarrow 0 $) is approximately
 	\begin{align}
 		\hat{\sigma}_{ge} \approx -\sum_{g'} \hat{\sigma}_{gg'}\int_0^{\infty}\mathrm{d}\omega \bigg( & \sum_{f,p}  
 \frac{g_{\mu, e,g'}}{\omega-\omega_{eg} \error{+} i \Gamma_{e}/2  }\, \hat{a}_\mu (t_0) \\
-	&+\sum_{m,p} \int_{-kn_2}^{kn_2}\mathrm{d}\beta \, \frac{g_{\nu, e,g'}}{\omega-\omega_{eg} \error{+} i \Gamma_{e}/2 } \,\hat{a}_\nu (t_0)  \bigg)e^{-i\omega (t-t_0)} , \nn
+	&+\sum_{m,p} \int_{-kn_2}^{kn_2}\mathrm{d}\beta \, \frac{g_{\nu, e,g'}}{\omega-\omega_{eg} \error{+} i \Gamma_{e}/2 } \,\hat{a}_\nu (t_0)  \bigg)e^{-i\omega (t-t_0)} . \nn
 	\end{align}
+\comment{In fact, this is obtained by defining $ \hat{\sigma}_{ge'}(t)=\int \frac{\mathrm{d}\omega}{\sqrt{2\pi}}\hat{\sigma}_{ge'}(t_0)e^{-i\omega(t-t_0)} $. Can we call it the steady state result for the above equation?}
 By substituting this into \erf{Eq::aguidedEOM} and defining asymptotic modes, \comment{ $\hat{a}^{\inp}(\omega) = \lim_{t_0\rightarrow -\infty} \hat{a}(t_0) e^{i\omega t_0}$, $\hat{a}^{\out}(\omega) = \lim_{t\rightarrow +\infty} \hat{a}(t) e^{i\omega t}$ \cite{fan_input-output_2010}}, we obtain the input-output relationship for the guided modes,
 	\begin{equation} \label{Eq::aout}
 		\hat{a}^{\out}_\mu (\omega) = \hat{a}^{\inp}_\mu (\omega) \!-\! 2\pi i\sum_{p',f'} 
