@@ -140,6 +140,7 @@
 \newcommand{\shotnoise}{\Delta \mathcal{M}^2_{\rm SN}} 
 \newcommand{\projnoise}{\Delta \mathcal{M}^2_{\rm PN}} 
 
+%==== scattering and optical pumping rates ====%
 \newcommand{\gammauu}{\gamma_{\uparrow \rightarrow \uparrow}}
 \newcommand{\gammadd}{\gamma_{\downarrow \rightarrow \downarrow}}
 \newcommand{\gammaud}{\gamma_{\uparrow \rightarrow \downarrow}}
@@ -148,6 +149,12 @@
 \newcommand{\gammad}{\gamma_{\downarrow}}
 \newcommand{\gammap}{\tilde{\gamma}_\uparrow + \tilde{\gamma}_\downarrow}
 \newcommand{\gammam}{\tilde{\gamma}_\uparrow - \tilde{\gamma}_\downarrow}
+
+%==== optical pumping rates for Jz variance ====%	
+\newcommand{\drate}{\Gamma_{\rm d}}
+\newcommand{\frate}{\Gamma_{\rm flip}}
+\newcommand{\lrate}{\Gamma_{\rm loss}}
+\newcommand{\polrate}{\Gamma_{\rm pol}}
 
 %==== effective areas ======
 \newcommand{\Ain}{A_{\rm in}}
@@ -499,6 +506,8 @@ Scattering of classical waves follows when the field is in a coherent state.  \c
 	\end{equation}
 where $\Delta_{eg} = \omega_0 - \omega_{eg}$ is the laser detuning from the atomic transition frequency.  For large detuning, $\Gamma_{e}/\Delta_{eg} \ll 1$, the scattering is entirely elastic.  In this case, the absorption/scattering loss can be ignored and \erf{Eq::PhaseShiftMultilevel} describes a pure dispersive phase shift.
 
+\comment{Do we strive to identify an effective OD that is independent of the atomic state, making it purely a geometric quantity?}
+
 \change{
 In relation to \erf{Eq::PhaseShift} we see that $\delta \phi \propto (\sigma_0/A_{\rm in}) (\Gamma_{\oneD}/\Delta)$ for resonant scattering cross section $\sigma_0$ and effective mode area $A_\inp$. For comparison, the phase shift on a paraxial laser beam imparted by an atom in free space has the same form, with the $\mathrm{TEM}_{00}$ mode for a beam waist $w_0$ and mode area $A= \pi w_0^2/2$ replacing the guided mode at the atom's position  \cite{tanji-suzuki_chapter_2011, baragiola_three-dimensional_2014}. The strongest phase shift in free space is achieved when the atom is placed at the center of the beam waist where the intensity is largest. The relative strength of the phase shift is $\delta \phi_{\rm fiber}/\delta \phi_{\vac}\propto A/A_{\rm in}$, as plotted in Fig. \ref{} as a function of the radial position of the atom \comment{(Le Kien's recent paper only considered mixed states; specifically an equal distribution of population among the sublevels for which there was no polarization transformation, only phase shifts)}.  For example, for a quasilinear field, and an atom trapped along the direction of the input polarization  at $r_\perp = ?$, $\delta \phi_{\rm fiber}/\delta \phi_{\vac} = ?$.   Thus we see that, in the nanofiber geometry the Purcell factor does not cause the majority of scattering to be guided, nor is the phase shift enhanced greatly over the phase shift imparted by an atom at the center of a paraxial beam. However, the key feature is that for a chain of atoms trapped along the fiber, the phase shifts add linearly.  Thus, one can achieve large optical densities, OD$_{\rm eff} = N_A (\sigma_0/\Ain)$ \comment{Decide how to properly define OD}, in the fiber geometry with far fewer atoms ($\sim 1000$ atoms) than are required in free space (\error{ $\sim 10^6$ }).  The result is a much larger average entangling interaction \emph{per atom} whose application in QND measurement we explore in the following section.
 }
@@ -736,28 +745,37 @@ where $\hat{W}_\pi$ is the jump-operator associated with absorption of the probe
 		\gamma_F &=\dot{N}_L  \sum_{F'} \sigma (\Delta_{FF'} ) \mathbf{u}^*_\inp(\br')\cdot \bra{F,0} \tensor{\mathbf{A}}(F,F') \ket{F,0}  \cdot \mathbf{u}_\inp(\br'), \\
 		\gamma_{F \rightarrow \tilde{F}}&=  \dot{N}_L  \sum_{F'} \sigma (\Delta_{FF'}) \big| \mathbf{e}_\pi\cdot \bra{\tilde{F},0} \tensor{\mathbf{A}}(F,F') \ket{F,0}  \cdot \mathbf{u}_\inp(\br') \big|^2 ,
 	\end{align}
-where $ \sigma (\Delta_{FF'} )  = \sigma_0 \Gamma^2/4\Delta^2_{FF'}$ is the the scattering cross section at the probe detuning.  When expressed in terms of Pauli operators on the pseudo-spin-1/2 of the clock states,
-	\change{ \begin{align} \label{Eq::OpticalPumpingMapSchr}
-		\mathcal{D}[\hat{\rho}]   =& -\frac{\gammap +\gammau+  \gammad }{4} \hat{\rho} - \frac{\gammam}{4} \big( \hat{\sigma}_z \hat{\rho} + \hat{\rho} \hat{\sigma}_z \big)+ \frac{\gammauu+\gammadd}{4} \hat{\sigma}_z \hat{\rho} \hat{\sigma}_z \\
-		&+ \gammaud \; \hat{\sigma}_- \hat{\rho} \hat{\sigma}_+ + \gammadu \; \hat{\sigma}_+\hat{\rho} \hat{\sigma}_- . \nn
+where $ \sigma (\Delta_{FF'} )  = \sigma_0 \Gamma^2/4\Delta^2_{FF'}$ is the the scattering cross section at the probe detuning.  
+
+When expressed in terms of Pauli operators on the pseudo-spin-1/2 of the clock states,
+	\begin{align} \label{Eq::OpticalPumpingMapSchr}
+		\mathcal{D}[\hat{\rho}]   =& -\frac{ \lrate }{2} \hat{\rho} - \frac{ \polrate }{4} \big( \hat{\sigma}_z \hat{\rho} + \hat{\rho} \hat{\sigma}_z \big)+ \frac{\gammauu+\gammadd}{4} \hat{\sigma}_z \hat{\rho} \hat{\sigma}_z + \gammaud \; \hat{\sigma}_- \hat{\rho} \hat{\sigma}_+ + \gammadu \; \hat{\sigma}_+\hat{\rho} \hat{\sigma}_- .   
+		%=& -\frac{\gammap +\gammau+  \gammad }{4} \hat{\rho} - \frac{\gammam}{4} \big( \hat{\sigma}_z \hat{\rho} + \hat{\rho} \hat{\sigma}_z \big)+ \frac{\gammauu+\gammadd}{4} \hat{\sigma}_z \hat{\rho} \hat{\sigma}_z \\
+		%&+ \gammaud \; \hat{\sigma}_- \hat{\rho} \hat{\sigma}_+ + \gammadu \; \hat{\sigma}_+\hat{\rho} \hat{\sigma}_- .  \nn \\
 		%& = -\frac{\tilde{\gamma}_\uparrow + \tilde{\gamma}_\downarrow}{2} \hat{\rho} - \frac{\tilde{\gamma}_\uparrow - \tilde{\gamma}_\downarrow}{2} \big( \hat{\sigma}_z \hat{\rho} + \hat{\rho} \hat{\sigma}_z \big)+\gamma_{\uparrow \rightarrow \downarrow} \; \hat{\sigma}_- \hat{\rho} \hat{\sigma}_+ + \gamma_{\downarrow \rightarrow \uparrow} \; \hat{\sigma}_+\hat{\rho} \hat{\sigma}_- .
-	\end{align} }
-Here $\tilde{\gamma}_\uparrow  \equiv \gamma_\uparrow - \gamma_{\uparrow \rightarrow \uparrow}$ is the rate of optical pumping out of the state $\ket{\uparrow}$ and similarly for $\tilde{\gamma}_\downarrow$.
-There are two important features of this map that are not typical in a QND measurement of an ensemble of spin-1/2 particles.  Firstly, since $\tilde{\gamma}_\uparrow \neq \gamma_{\uparrow \rightarrow \downarrow}$ and  $\tilde{\gamma}_\downarrow \neq \gamma_{\downarrow \rightarrow \uparrow}$, the map is {\em not} trace preserving to account for atoms optically pumped out of the clock subspace.  In addition, since $\tilde{\gamma}_\uparrow \neq \tilde{\gamma}_\downarrow$, optical pumping will lead to a polarization of the mean along $\hat{J}_z$, different from the value found in a QND measurement.
-		
-		
-		%=============Equations for the collective moments===============%
-		\subsubsection{Equations of motion for the atom number/mean/variance}		
+	\end{align} 
+There are two important features of this map that are not typical in a QND measurement for spin-1/2 particles.  Firstly, the map is {\em not} trace preserving to account for atoms optically pumped out of the clock subspace with a rate given by $\lrate $.  In addition, unbalanced optical pumping within the clock states can lead to a polarization of the mean along $\hat{J}_z$, different from the value found in a QND measurement, which occurs at rate $\polrate$.	
+
+Optical pumping reduces the number of in the clock states according to $dN_A/dt =  - \lrate N_A$. The atom loss, along with the decay of coherence that accompanies spin flips, shortens the initially macroscopic mean spin that factors into metrological squeezing. Using $\mathcal{D}\dg[\hat{j}_x] = - \frate \hat{j}_x $, 	
+	
+	\begin{align}
+		\frate& =  \gammap 
+	\end{align} the evolution of the mean spin is given by
+ 	\begin{align}
+		\frac{d}{dt} \expt{\hat{J}_x} =& - \frate \expt{\hat{J}_x}.
+	\end{align}
+Note that for $\lrate = 0$ the map is trace-preserving, as would be the case for genuine spin-1/2 ground-state atoms such as $^{171}$Yb.  
+
 
 Equations of motion for the collective moments follow from the optical pumping map in \erf{Eq::OpticalPumpingMapSchr}; details are provided in Appendix \ref{Appendix::OpticalPumping}. The conditionally squeezed variance satisifies 	
 	\begin{align} \label{Eq::J3variance}
-		\frac{d}{dt} \Delta J_3^2 = - \kappa \big( \Delta J_3^2 \big)^2 - C_2 \Delta J_3^2 + \bigg( \frac{D_1 + 2C_2}{8} \bigg) N_A . 
+		\frac{d}{dt} \Delta J_3^2 = - \kappa \big( \Delta J_3^2 \big)^2 - \drate \Delta J_3^2 + \bigg( \frac{D_1}{2} + \drate \bigg) \frac{N_A}{4} . 
 	\end{align}
-which has analytic solution \cite{baragiola_three-dimensional_2014}
+which has analytic solution \cite{baragiola_three-dimensional_2014},
 	\begin{align}
-		\Delta J_3^2(t) = 
+		\Delta J_3^2(t) = \frac{N_A}{4} \frac{\sqrt{1+(\frate \gamma_s /\drate^2) \rm{OD}} - (1-2\frate/\drate) \tanh \big( \sqrt{1+(\frate \gamma_s/\drate^2) \rm{OD}} \frac{\drate}{2} \tau \big)}{ \sqrt{1+(\frate \gamma_s/\drate^2) \rm{OD}} + (\frac{\rm{OD}}{2} + 1) \tanh \big( \sqrt{1+(\frate \gamma_s /\drate^2) \rm{OD}} \frac{\drate}{2} \tau \big) }
 	\end{align}
-where OD$_{\rm eff}$... \erf{Eq::MeasurementStrength}. 
+where OD$_{\rm eff} = (\kappa/\gamma_s) N_A$ with characteristic scattering rate $\gamma_s = (\sigma_0/A_\eff)(\Gamma/2 \Delta_\eff)^2 \dot{N}_L$.
 
 \subsubsection{Choosing the quantization axis for squeezing}
 As discussed above, the choice of quantization axis affects the coupling strength due to the anisotropy of the nanofiber modes at the atomic position. The relative measurement strength (OD/atom) $\kappa/\gamma_s$ for quantization axes chosen in the $x-z$ plane is shown in \frf{}.
@@ -970,57 +988,36 @@ Of particular interest is the $z$-component, \erf{Eq::zprofile}, which can becom
 
 %===================APPENDIX: Mode area =====================%
 \section{Derivation of the equations of motion for the moments} \label{Appendix::OpticalPumping}	
-
-%The master equation that describes optical pumping of an alkali atom driven by an off-resonant monochromatic laser \cite{deutsch_quantum_2010}
-%	\begin{align}
-%		\frac{d \hat{\rho}^{(n)}  }{dt}\Big|_{\rm op} = 
-%		&-\frac{i}{\hbar} \big\{ \hat{H}_{\rm loss},\hat{\rho}^{(n)} \big\}_+ + \sum_q \sum_{F_a,F_b} \hat{W}_{F_aF_b} \hat{\rho}^{(n)} \hat{W}\dg_{F_aF_b} \\
-%		= & \sum_{F} -\frac{\gamma_F}{2} \big\{ \op{F,0}{F,0},\hat{\rho}^{(n)} \big\}_+ + \sum_{F_a,F_b} \gamma_{F_a \rightarrow F_b} \op{F_b,0}{F_a,0} \hat{\rho}^{(n)} \op{F_a,0}{F_b,0} \\
-%	\end{align}	
-		
-%Jump operators
-%	\begin{align}
-%		\hat{W}^q = \sum_{e} \sqrt{ \frac{\Gamma_e \Omega^2(\mathbf{r}')/4}{\Delta^2_{ge} + \Gamma^2_e/4}} \mbf{e}_q^* \cdot \mbf{d}\dg \mbf{d} \cdot \vec{\varepsilon}_\inp
-%		\hat{W}_{g_1,g_2} = \sqrt{\gamma_{g_1 \rightarrow g_2}} \op{g_2}{g_1}
-%	\end{align}
-%Transition rate
-%	\begin{align}
-%		\gamma_{g_1 \rightarrow g_2} = \sum_q \sum_e \Gamma_e \frac{ \Omega^2(\mathbf{r}')/4}{\Delta^2_{eg_1} + \Gamma^2_e/4} \big|  \mbf{e}_q^* \cdot \bra{g_2} \hat{\mbf{D}} \op{e}{e}\hat{\mbf{D}}  \ket{g_1} \cdot \vec{\varepsilon}_\inp \big|^2
-%	\end{align}
-%where the spherical unit vectors, $\mbf{e}_q$, determine the $\{\pi, \sigma_+, \sigma_-\}$-transition rates for the chosen quantization axis.
 			
-The adjoint form of the SME in \erf{Eq::SME} describes the evolution of the collective operators in the Heisenberg picture, with optical pumping given by $d\expt{ \hat{X}}|_{\rm op} = \Tr [\mathcal{D}[\hat{\rho}]\hat{X} ] = \expt{\mathcal{D}\dg[\hat{X}]}$. Optical pumping, which acts locally on atoms along the nanofiber,   decays two-atom correlations according to \cite{baragiola_three-dimensional_2014}
+The adjoint form of the SME in \erf{Eq::SME} describes the evolution of the collective operators in the Heisenberg picture. For a collective operator single-body operator $\hat{X} = \sum_n \hat{x}^{(n)}$ the evolution due to optical pumping $d\expt{ \hat{X}}|_{\rm op} = \sum_n \Tr [\mathcal{D}_n[\hat{\rho}]\hat{X} ] = \sum_n \Tr [\expt{\mathcal{D}_n\dg[\hat{x}^{(n)}]} ] $, where the map, which acts locally on atoms along the nanofiber, is given in \erf{Eq::OpticalPumpingMapSchr}. %Applying the map to the single-atom identity, $\mathcal{D}\dg[\hat{\mathbbm{1}}] = -\smallfrac{1}{2} \big( \Gamma_{\rm loss} \hat{\mathbbm{1}} + D_2\hat{\sigma}_z \big)$, and using the fact that $N_A = \sum_n \hat{\mathbbm{1}}^{(n)}$, 
 	\begin{align}
-		\frac{d}{dt} \expt{ \hat{x}^{(m)} \hat{y}^{(n)} } \Big|_{\rm op}= \expt{ \mathcal{D}\dg[ \hat{x}^{(m)}] \hat{y}^{(n)} } + \expt{ \hat{x}^{(m)} \mathcal{D}\dg[ \hat{y}^{(n)}] }.
+		\lrate &= \big(\gammap - \gammaud - \gammadu \big)/2 \\
+		\polrate& =  \gammam \\
+		\frate& =  \gammap 
 	\end{align}
-Within the pseudospin of a single atom $\mathcal{D}\dg[\hat{\sigma}_z] = -\smallfrac{1}{2} \big( C_1 \hat{\mathbbm{1}} + C_2 \hat{\sigma}_z \big)$ and $\mathcal{D}\dg[\hat{\mathbbm{1}}] 	 = -\smallfrac{1}{2} \big( D_1\hat{\mathbbm{1}} + D_2\hat{\sigma}_z \big)$ with coefficients
-	\begin{subequations} \label{Eq::DecayCoefficients}
+ere $\tilde{\gamma}_\uparrow  \equiv \gamma_\uparrow - \gamma_{\uparrow \rightarrow \uparrow}$ is the rate of optical pumping out of the state $\ket{\uparrow}$ and similarly for $\tilde{\gamma}_\downarrow$.
+There are two important features of this map that are not typical in a QND measurement for spin-1/2 particles.  Firstly, since $\tilde{\gamma}_\uparrow \neq \gamma_{\uparrow \rightarrow \downarrow}$ and  $\tilde{\gamma}_\downarrow \neq \gamma_{\downarrow \rightarrow \uparrow}$, the map is {\em not} trace preserving to account for atoms optically pumped out of the clock subspace.  In addition, since $\tilde{\gamma}_\uparrow \neq \tilde{\gamma}_\downarrow$, optical pumping will lead to a polarization of the mean along $\hat{J}_z$, different from the value found in a QND measurement.	
+
+The two-body correlations that form the basis for spin squeezing decay according to \cite{baragiola_three-dimensional_2014}
+	\begin{align}
+		\frac{d}{dt} \expt{ \hat{x}^{(m)} \hat{y}^{(n)} } \Big|_{\rm op}= &\expt{ \mathcal{D}_m\dg[ \hat{x}^{(m)}] \hat{y}^{(n)} } + \expt{ \hat{x}^{(m)} \mathcal{D}_n\dg[ \hat{y}^{(n)}] },
+	\end{align}
+where the superscript refers to the $m^{th}$ and $n^{th}$ atoms.  Within the pseudospin of a single atom the map gives $\mathcal{D}\dg[\hat{\sigma}_z] = -\smallfrac{1}{2} \big( C_1 \hat{\mathbbm{1}} + C_2 \hat{\sigma}_z \big)$ with coefficients
+	\begin{subequations} \label{Eq::DecayCoefficients2}
 	\begin{align}
 		C_1 =& \gammam - \gammaud + \gammadu  \\ 
-		C_2 =& \gammap + \gammaud + \gammadu  \\
-		D_1 =& \gammap - \gammaud - \gammadu  \\
-		D_2 =& \gammam + \gammaud + \gammadu.    
+		C_2 =& \gammap + \gammaud + \gammadu  
 	\end{align}
 	\end{subequations}	
-The collective Gaussian statistics can be expressed entirely in terms of the first and second moments; using $\expt{J_3^3} = 3\expt{\hat{J}_3^2}\expt{\hat{J}_3}- 2\expt{\hat{J}_3}^3$ \cite{jacobs_straightforward_2006} their equations of motion are
+The equations of motion for the moments of $\hat{J}_z$ are now found from the SME, \erf{Eq::SME}, 
 	\begin{subequations} \label{Eq::J3MomentEquations}
 	\begin{align} 
-		d \expt{\hat{J}_3} =& \error{\pm} \sqrt{\kappa} \Delta J_3^2 \, dW  - \smallfrac{C_1}{4} N_A dt - \smallfrac{C_2}{2} \expt{\hat{J}_3}dt  \\
-		d \expt{\hat{J}_3^2} %=& \error{\pm} \sqrt{\kappa} \expt{\hat{J}_3}\Delta J_3^2 dW -  C_2 \expt{\hat{J}_3^2}dt -  \big( \smallfrac{D_1}{8} + \smallfrac{C_2}{4} \big) N_A dt -  \big[ \smallfrac{D_2}{4} + \smallfrac{C_1}{2}(N_A - 1) \big] \expt{\hat{J}_3}dt  \\
-		=& \error{\pm} \sqrt{\kappa} \expt{\hat{J}_3}\Delta J_3^2 \, dW -  C_2 \expt{\hat{J}_3^2}dt -  \big( \smallfrac{D_1 + 2C_2}{8} \big) N_A dt -  \smallfrac{C_1}{2}\expt{\hat{J}_3} N_Adt . 
+		d \expt{\hat{J}_z} =& \error{\pm} \sqrt{\kappa} \Delta J_z^2 \, dW  - \smallfrac{C_1}{4} N_A dt - \smallfrac{C_2}{2} \expt{\hat{J}_z}dt,  \\
+		d \expt{\hat{J}_z^2} %=& \error{\pm} \sqrt{\kappa} \expt{\hat{J}_z}\Delta J_3^2 dW -  C_2 \expt{\hat{J}_z^2}dt -  \big( \smallfrac{D_1}{8} + \smallfrac{C_2}{4} \big) N_A dt -  \big[ \smallfrac{D_2}{4} + \smallfrac{C_1}{2}(N_A - 1) \big] \expt{\hat{J}_z}dt  \\
+		=& \error{\pm} \sqrt{\kappa} \expt{\hat{J}_z}\Delta J_3^2 \, dW -  C_2 \expt{\hat{J}_z^2}dt -  \big( \smallfrac{D_1 + 2C_2}{8} \big) N_A dt -  \smallfrac{C_1}{2}\expt{\hat{J}_3} N_A dt. 
 	\end{align}
 	\end{subequations}
-Within the It\={o} calculus that governs the stochastically evolving moments, differentials must be taken to second order. For the evolution of the variance this means $d \Delta J_3^2 = d \expt{\hat{J}_3^2} - 2 \expt{\hat{J}_3} d \expt{\hat{J}_3} - \big( d \expt{\hat{J}_3} \big)^2$, and with \erf{Eq::J3MomentEquations} the conditional evolution is given by \erf{Eq::J3variance}.
-
-Optical pumping reduces the total number of atoms in the clock subspace according to
-	\begin{align}
-		\frac{d}{dt} N_A =&  - \smallfrac{D_1}{2} N_A - D_2 \expt{ \hat{J}_3 }.
-	\end{align}
-This atom loss, along with the loss of coherence that accompanies spin flips, decays the initially macroscopic mean spin along $\hat{J}_x$ that factors into metrological squeezing. Using $\mathcal{D}\dg[\hat{\sigma}_x] = - \frac{ \gammau  + \gammad}{2} \hat{\sigma}_x $, the evolution of the mean spin is given by
- 	\begin{align}
-		\frac{d}{dt} \expt{\hat{J}_x} =& - (\gammap) \expt{\hat{J}_x}
-	\end{align}
-Finally, note that for $D_1 = D_2 = 0$ in \erf{Eq::DecayCoefficients} the map is trace-preserving, as would be the case for genuine spin-1/2 atoms such as $^{171}$Yb. 
+The stochastic term in $d\expt{\hat{J}_z^2}$ was simplified using $\expt{J_z^3} = 3\expt{\hat{J}_z^2}\expt{\hat{J}_z}- 2\expt{\hat{J}_z}^3$, which follows from Gaussian statistics \cite{jacobs_straightforward_2006}. Finally, since the It\={o} calculus governing the stochastically evolving moments requires that differentials be taken to second order, the evolution of the variance is found from the relation $d \Delta J_3^2 = d \expt{\hat{J}_3^2} - 2 \expt{\hat{J}_3} d \expt{\hat{J}_3} - \big( d \expt{\hat{J}_3} \big)^2$. The equation of motion for the conditional variance $\Delta J_3^2$ follows from Eqs. (\ref{Eq::J3MomentEquations}) and is given in \erf{Eq::J3variance}.
 
 
 \change{
