@@ -750,20 +750,16 @@ where $ \sigma (\Delta_{FF'} )  = \sigma_0 \Gamma^2/4\Delta^2_{FF'}$ is the the 
 
 When expressed in terms of Pauli operators on the pseudo-spin-1/2 of the clock states,
 	\begin{align} \label{Eq::OpticalPumpingMapSchr}
-		\mathcal{D}[\hat{\rho}]   =& -\frac{ \lrate }{2} \hat{\rho} - \frac{ \polrate }{4} \big( \hat{\sigma}_z \hat{\rho} + \hat{\rho} \hat{\sigma}_z \big)+ \frac{\gammauu+\gammadd}{4} \hat{\sigma}_z \hat{\rho} \hat{\sigma}_z + \gammaud \; \hat{\sigma}_- \hat{\rho} \hat{\sigma}_+ + \gammadu \; \hat{\sigma}_+\hat{\rho} \hat{\sigma}_- .   
-		%=& -\frac{\gammap +\gammau+  \gammad }{4} \hat{\rho} - \frac{\gammam}{4} \big( \hat{\sigma}_z \hat{\rho} + \hat{\rho} \hat{\sigma}_z \big)+ \frac{\gammauu+\gammadd}{4} \hat{\sigma}_z \hat{\rho} \hat{\sigma}_z \\
-		%&+ \gammaud \; \hat{\sigma}_- \hat{\rho} \hat{\sigma}_+ + \gammadu \; \hat{\sigma}_+\hat{\rho} \hat{\sigma}_- .  \nn \\
+		\mathcal{D}[\hat{\rho}]   %=& -\frac{ \lrate }{2} \hat{\rho} - \frac{ \polrate }{4} \big( \hat{\sigma}_z \hat{\rho} + \hat{\rho} \hat{\sigma}_z \big)+ \frac{\gammauu+\gammadd}{4} \hat{\sigma}_z \hat{\rho} \hat{\sigma}_z + \gammaud \; \hat{\sigma}_- \hat{\rho} \hat{\sigma}_+ + \gammadu \; \hat{\sigma}_+\hat{\rho} \hat{\sigma}_- .   
+		=& -\frac{\gammap +\gammau+  \gammad }{4} \hat{\rho} - \frac{\gammam}{4} \big( \hat{\sigma}_z \hat{\rho} + \hat{\rho} \hat{\sigma}_z \big)+ \frac{\gammauu+\gammadd}{4} \hat{\sigma}_z \hat{\rho} \hat{\sigma}_z \\
+		&+ \gammaud \; \hat{\sigma}_- \hat{\rho} \hat{\sigma}_+ + \gammadu \; \hat{\sigma}_+\hat{\rho} \hat{\sigma}_- .  \nn 
 		%& = -\frac{\tilde{\gamma}_\uparrow + \tilde{\gamma}_\downarrow}{2} \hat{\rho} - \frac{\tilde{\gamma}_\uparrow - \tilde{\gamma}_\downarrow}{2} \big( \hat{\sigma}_z \hat{\rho} + \hat{\rho} \hat{\sigma}_z \big)+\gamma_{\uparrow \rightarrow \downarrow} \; \hat{\sigma}_- \hat{\rho} \hat{\sigma}_+ + \gamma_{\downarrow \rightarrow \uparrow} \; \hat{\sigma}_+\hat{\rho} \hat{\sigma}_- .
 	\end{align} 
 There are two important features of this map that are not typical in a QND measurement for spin-1/2 particles.  Firstly, the map is {\em not} trace preserving to account for atoms optically pumped out of the clock subspace with a rate given by $\lrate $.  In addition, unbalanced optical pumping within the clock states can lead to a polarization of the mean along $\hat{J}_z$, different from the value found in a QND measurement, which occurs at rate $\polrate$.	
 
-Optical pumping reduces the number of in the clock states according to $dN_A/dt =  - \lrate N_A$. The atom loss, along with the decay of coherence that accompanies spin flips, shortens the initially macroscopic mean spin that factors into metrological squeezing. Using $\mathcal{D}\dg[\hat{j}_x] = - \frate \hat{j}_x $, 	
-	
-	\begin{align}
-		\frate& =  \gammap 
-	\end{align} the evolution of the mean spin is given by
+Optical pumping reduces the number of in the clock states according to $dN_A/dt =  - \lrate N_A$. The atom loss, along with the decay of coherence that accompanies spin flips, shortens the initially macroscopic mean spin that factors into metrological squeezing, 
  	\begin{align}
-		\frac{d}{dt} \expt{\hat{J}_x} =& - \frate \expt{\hat{J}_x}.
+		\frac{d}{dt} \expt{\hat{J}_x} =& - \big(\lrate + \Gamma_{\rm dec}) \expt{\hat{J}_x}.
 	\end{align}
 Note that for $\lrate = 0$ the map is trace-preserving, as would be the case for genuine spin-1/2 ground-state atoms such as $^{171}$Yb.  
 
@@ -990,14 +986,23 @@ Of particular interest is the $z$-component, \erf{Eq::zprofile}, which can becom
 %===================APPENDIX: Mode area =====================%
 \section{Derivation of the equations of motion for the moments} \label{Appendix::OpticalPumping}	
 			
-The adjoint form of the SME in \erf{Eq::SME} describes the evolution of the collective operators in the Heisenberg picture. For a collective operator single-body operator $\hat{X} = \sum_n \hat{x}^{(n)}$ the evolution due to optical pumping $d\expt{ \hat{X}}|_{\rm op} = \sum_n \Tr [\mathcal{D}_n[\hat{\rho}]\hat{X} ] = \sum_n \Tr [\expt{\mathcal{D}_n\dg[\hat{x}^{(n)}]} ] $, where the map, which acts locally on atoms along the nanofiber, is given in \erf{Eq::OpticalPumpingMapSchr}. %Applying the map to the single-atom identity, $\mathcal{D}\dg[\hat{\mathbbm{1}}] = -\smallfrac{1}{2} \big( \Gamma_{\rm loss} \hat{\mathbbm{1}} + D_2\hat{\sigma}_z \big)$, and using the fact that $N_A = \sum_n \hat{\mathbbm{1}}^{(n)}$, 
+The adjoint form of the SME in \erf{Eq::SME} describes the evolution of the collective operators in the Heisenberg picture. For a collective operator single-body operator $\hat{X} = \sum_n \hat{x}^{(n)}$ the evolution due to optical pumping $d\expt{ \hat{X}}|_{\rm op} = \sum_n \Tr [\mathcal{D}_n[\hat{\rho}]\hat{X} ] = \sum_n \Tr [\expt{\mathcal{D}_n\dg[\hat{x}^{(n)}]} ] $, where the map, which acts locally on atoms along the nanofiber, is given in \erf{Eq::OpticalPumpingMapSchr}. Applying the map to the single-atom operators, 
 	\begin{align}
-		\lrate &= \big(\gammap - \gammaud - \gammadu \big)/2 \\
-		\polrate& =  \gammam \\
-		\frate& =  \gammap 
+		\mathcal{D}\dg[\hat{\mathbbm{1}}] & = - \lrate \hat{\mathbbm{1}} - \Gamma_{1} \hat{\sigma}_z \\
+		\mathcal{D}\dg[\hat{\sigma}_z] & = - \Gamma_{2} \hat{\mathbbm{1}} - \Gamma_3 \hat{\sigma}_z \\
+		\mathcal{D}\dg[\hat{\sigma}_x] & = - (\lrate + \Gamma_4) \hat{\sigma}_x 
+	\end{align}
+with rates	
+	\begin{align}
+		\lrate &= \frac{\gammap - \gammaud - \gammadu }{2} \\
+		\Gamma_{1}  &= \frac{\gammam + \gammaud - \gammadu}{2}  \\
+		\Gamma_2 & =  \frac{\gammam - \gammaud + \gammadu }{2} \\
+		\Gamma_{3} & =  \frac{\gammap + \gammaud + \gammadu }{2} \\
+		\Gamma_4 & =  \frac{\gammauu + \gammadd + \gammaud + \gammadu}{2} \\
+		\Gamma_{\rm pol} & =  \frac{\Gamma_{\rm \uparrow,feed} - \Gamma_{\rm \downarrow, feed}}{2} = \frac{\gammauu + \gammadu - \gammadd - \gammaud}{2} 
 	\end{align}
 ere $\tilde{\gamma}_\uparrow  \equiv \gamma_\uparrow - \gamma_{\uparrow \rightarrow \uparrow}$ is the rate of optical pumping out of the state $\ket{\uparrow}$ and similarly for $\tilde{\gamma}_\downarrow$.
-There are two important features of this map that are not typical in a QND measurement for spin-1/2 particles.  Firstly, since $\tilde{\gamma}_\uparrow \neq \gamma_{\uparrow \rightarrow \downarrow}$ and  $\tilde{\gamma}_\downarrow \neq \gamma_{\downarrow \rightarrow \uparrow}$, the map is {\em not} trace preserving to account for atoms optically pumped out of the clock subspace.  In addition, since $\tilde{\gamma}_\uparrow \neq \tilde{\gamma}_\downarrow$, optical pumping will lead to a polarization of the mean along $\hat{J}_z$, different from the value found in a QND measurement.	
+There are two important features of this map that are not typical in a QND measurement for spin-1/2 particles.  Firstly, since $\tilde{\gamma}_\uparrow \neq \gamma_{\uparrow \rightarrow \downarrow}$ and  $\tilde{\gamma}_\downarrow \neq \gamma_{\downarrow \rightarrow \uparrow}$, the map is {\em not} trace preserving to account for atoms optically pumped out of the clock subspace.  In addition, since $\tilde{\gamma}_\uparrow \neq \tilde{\gamma}_\downarrow$, optical pumping will lead to a polarization of the mean along $\hat{J}_z$, different from the value found in a QND measurement \comment{(this only guarantees polarization for a trace-preserving map; for our case you need to look at feeding rates).}
 
 The two-body correlations that form the basis for spin squeezing decay according to \cite{baragiola_three-dimensional_2014}
 	\begin{align}
