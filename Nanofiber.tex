@@ -429,7 +429,7 @@ The Heisenberg equations of motion thus follow,
 Integrating the field equations, 
 \begin{subequations}\label{eq:aout1}
 \begin{align}
-\hat{a}_\mu(\omega, t) &= \hat{a}_\mu(\omega; t_0) e^{-i\omega (t-t_0)} +i \sum_{e,g} g_{\mu,e,g}^* \int_{t_0}^t 
+\hat{a}_\mu(\omega; t) &= \hat{a}_\mu(\omega; t_0) e^{-i\omega (t-t_0)} +i \sum_{e,g} g_{\mu,e,g}^* \int_{t_0}^t 
 \mathrm{d} t' e^{-i\omega (t-t')}\hat{\sigma}_{ge}(t') \label{Eq::aguidedEOM}
 \end{align}
 \begin{align}
@@ -470,10 +470,11 @@ Here we are interested in linear response for excitation far from resonance.  We
 	\end{align}
 \comment{In fact, this is obtained by defining $ \hat{\sigma}_{ge'}(t)=\int \frac{\mathrm{d}\omega}{\sqrt{2\pi}}\hat{\sigma}_{ge'}(\omega) e^{-i\omega(t-t_0)} $. Can we call it the steady state result for the above equation?}
 By substituting this into \erf{Eq::aguidedEOM} and defining asymptotic modes, \comment{ $\hat{a}^{\inp}(\omega) = \lim_{t_0\rightarrow -\infty} \hat{a}(t_0) e^{i\omega t_0}$, $\hat{a}^{\out}(\omega) = \lim_{t\rightarrow +\infty} \hat{a}(t) e^{i\omega t}$ \cite{fan_input-output_2010}}, we obtain the input-output relationship for the guided modes,
-	\begin{equation} \label{Eq::aout}
-		\hat{a}^{\out}_\mu (\omega) = \hat{a}^{\inp}_\mu (\omega) \!-\! 2\pi i\sum_{p',f'} 
-\sum_{e,g,g'}\!\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\mu',e,g'}}{ \Delta_{eg} \error{+} i \Gamma_{e}/2 }\hat{a}^{\inp}_{\mu'}(\omega) \!-\! 2\pi i\sum_{m,p} \sum_{e,g,g'} \int^{kn_2}_{-kn_2} d\beta \,\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\nu',e,g'}}{ \Delta_{eg} \error{+} i \Gamma_{e}/2 }\hat{a}^{\inp}_{\nu}(\omega),
-	\end{equation}
+	\begin{align} \label{Eq::aout}
+		\hat{a}^{\out}_\mu (\omega) = \hat{a}^{\inp}_\mu (\omega) &- 2\pi i\sum_{p',f'} 
+\sum_{e,g,g'}\!\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\mu',e,g'}}{ \Delta_{eg} \error{+} i \Gamma_{e}/2 }\hat{a}^{\inp}_{\mu'}(\omega) \\
+&- 2\pi i\sum_{m,p} \sum_{e,g,g'} \int^{kn_2}_{-kn_2} d\beta \,\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\nu',e,g'}}{ \Delta_{eg} \error{+} i \Gamma_{e}/2 }\hat{a}^{\inp}_{\nu}(\omega),\nn
+	\end{align}
 where $\Delta_{eg} = \omega - \omega_{eg}$.  The real part this relationship describes the coherent elastic scattering of photons from all modes--guided and radiation--into guided mode $\mu$, mediated by the atomic state.  The imaginary part describes loss from incoherent spontaneous emission into other modes.  For low atomic saturation, elastic scattering dominates and the interaction is purely dispersive. 
 
 Equation (\ref{Eq::aout}) agrees with the expected form given by the Lippmann-Schwinger equation in the first Born approximation,
