@@ -631,7 +631,7 @@ Continuous integrated polarimetry yields an effective homodyne measurement of th
 		\Delta \mathcal{M}^2 &= N_L /4 + ( \chibir N_L /2 )^2 \delta N_A^2 \label{Eq::MeasurementVariance} \\
 			&\equiv \shotnoise + \projnoise.
 	\end{align}
-\comment{(remember that there is \emph{no} projection noise for fixed atom number)} In the absence of trapped atoms, the shot-to-shot fluctuations arise entirely from the intrinsic probe shot noise $\shotnoise$, proportional to the total mean photon number $N_L = \dot{N}_Lt$. The degree to which atomic projection noise, $\projnoise$, is resolvable over the shot noise determines the minimum resolution for atom number detection using this dispersive measurement, $\delta N_A \sim ( \chi^2 \dot{N}_L t )^{-1/2}$ \cite{smith_faraday_2003}.  In an ideal setting, $\delta N_A$ can always be reduced by increasing the measurement time. In practice this time is limited by atom loss from inelastic photon scattering into reflected and unguided modes. As a coarse approximation, we take this time to be $t=\gamma_s^{-1}$, where $\gamma_s$ is the photon scattering rate in free space.  For detuning $\Delta$ large compared to the excited hyperfine splitting on the D2 line, the unit-oscillator scattering rate is $\gamma_s = \frac{\Gamma^2}{4 \Delta^2}\frac{\sigma_0 }{A_{\rm in}} \dot{N}_L $, with effective area given by \erf{Eq::AreaIn}.  In this limit the rotation angle, $\chibir = \frac{2}{3} \frac{\sigma_0}{\Abiref}\frac{\Gamma}{4\Delta}$, yields a shot noise-limited atom number resolution, 
+\comment{(remember that there is \emph{no} projection noise for fixed atom number. The integrated measurement is a deterministic offset proportional to $N_A$ with shotnoise on top)} In the absence of trapped atoms, the shot-to-shot fluctuations arise entirely from the intrinsic probe shot noise $\shotnoise$, proportional to the total mean photon number $N_L = \dot{N}_Lt$. The degree to which atomic projection noise, $\projnoise$, is resolvable over the shot noise determines the minimum resolution for atom number detection using this dispersive measurement, $\delta N_A \sim ( \chi^2 \dot{N}_L t )^{-1/2}$ \cite{smith_faraday_2003}.  In an ideal setting, $\delta N_A$ can always be reduced by increasing the measurement time. In practice this time is limited by atom loss from inelastic photon scattering into reflected and unguided modes. As a coarse approximation, we take this time to be $t=\gamma_s^{-1}$, where $\gamma_s$ is the photon scattering rate in free space.  For detuning $\Delta$ large compared to the excited hyperfine splitting on the D2 line, the unit-oscillator scattering rate is $\gamma_s = \frac{\Gamma^2}{4 \Delta^2}\frac{\sigma_0 }{A_{\rm in}} \dot{N}_L $, with effective area given by \erf{Eq::AreaIn}.  In this limit the rotation angle, $\chibir = \frac{2}{3} \frac{\sigma_0}{\Abiref}\frac{\Gamma}{4\Delta}$, yields a shot noise-limited atom number resolution, 
 	\begin{align} \label{Eq::AtomNumberResolution}
 		\delta N_A  &\sim \sqrt {\frac{\Abiref^2}{A_{\rm in} \sigma_0}}.
 		%&= \sqrt{n_g} \frac{ \sqrt {|\mbf{u}_H(\mbf{r}_\perp)|^2 + |\mbf{u}_V(\mbf{r}_\perp)|^2} }{|\mbf{u}_H(\mbf{r}_\perp)|^2 - |\mbf{u}_V(\mbf{r}_\perp)|^2 }  
@@ -743,7 +743,7 @@ We illustrate inthe effects of geometry and choice of quantization axis on the a
 	\begin{align} \label{Eq::QuantizationAxis}
 		\qaxis = \cos \phi_Q \mbf{e}_x + \sin \phi_Q \mbf{e}_y,
 	\end{align} 
-In \frf{Fig::CouplingStrength}(a) we plot the effective birefringent coupling strength $\chi_\eff$ for varying $\phi_Q$. The anisotropy of $\chi_\eff$ results from several geometric factors, the first of which is the effective mode area $A_\eff$, \erf{Eq::SqueezingModeArea}, which is plotted in \frf{Fig::CouplingStrength}(b). The tensor atomic response influences the magic wavelength, which is set by the condition in \erf{Eq::MagicWavelengthCondition}. For varying $\phi_Q$ the magic wavelength and effective detuning, \erf{Eq::SqueezingEffectiveDetuning}, \erf{Eq::SqueezingEffectiveDetuning}, are plotted in \frf{Fig::CouplingStrength}(c-d).  
+In \frf{Fig::CouplingStrength}(a) we plot the effective birefringent coupling strength $\chi_\eff$ for varying $\phi_Q$. The anisotropy of $\chi_\eff$ results from several geometric factors, the first of which is the effective mode area $A_\eff$, \erf{Eq::SqueezingModeArea}, plotted in \frf{Fig::CouplingStrength}(b). The tensor atomic response influences the magic wavelength, which is set by the condition in \erf{Eq::MagicWavelengthCondition}. For varying $\phi_Q$ the magic wavelength and effective detuning, given by \erf{Eq::SqueezingEffectiveDetuning}, are plotted in \frf{Fig::CouplingStrength}(c-d).  
 
 %========= FIGURE: Geometry (coupling strength, magic wavelength, area and detuning) =========%
 \begin{figure}
@@ -764,7 +764,7 @@ In \frf{Fig::CouplingStrength}(a) we plot the effective birefringent coupling st
 \centering
 \subfloat[]{\label{fig:domega_magic33_qXYoptimal_rp}\includegraphics[scale=0.45]{./Figs/domega_magic33_qXYoptimal_rp}}
 \end{minipage}
-\caption{Dependence of light-matter coupling on choice of quantization axis, \erf{Eq::QuantizationAxis}, for an atom located on the \emph{x}-axis at distance $ r'\!_\perp=1.8a$. (a) Magic detuning, $\Delta_m/2\pi \equiv (\omega_{0}-\omega_{44'})/2\pi $, as a function of the atom's distance from the nanofiber for two choices of $\qaxis$, along the \emph{x} and \emph{y}-axes. (b) $\Delta_m/2\pi$ as a function of $\phi_Q$. }\label{Fig::CouplingStrength}
+\caption{Magic detuning, $\Delta_m/2\pi \equiv (\omega_{0}-\omega_{44'})/2\pi$, for an atom located on the \emph{x}-axis. (a) $\Delta_m/2\pi$ as a function the atom's distance from the nanofiber for two choices of $\qaxis$, along the \emph{x}-axis and \emph{y}-axis. (b) Variation of $\Delta_m/2\pi$ at fixed $ r'\!_\perp=1.8a$ for different choices of quantization axis. }\label{Fig::CouplingStrength}
 \end{figure}
 %=============================================
 
@@ -803,13 +803,17 @@ where $\hat{W}_\pi$ is the jump-operator associated with absorption of the probe
 		\gamma_{F \rightarrow \tilde{F}}&=  \dot{N}_L  \sum_{F'} \sigma (\Delta_{FF'}) \big| \mathbf{e}_\pi\cdot \bra{\tilde{F},0} \tensor{\mathbf{A}}(F,F') \ket{F,0}  \cdot \mathbf{u}_\inp(\br') \big|^2 ,
 	\end{align}
 where $ \sigma (\Delta_{FF'} )  = \sigma_0 \Gamma^2/4\Delta^2_{FF'}$ is the the scattering cross section at the probe detuning.  When expressed in terms of Pauli operators on the pseudo-spin-1/2 of the clock states,
-\change{	\begin{align} \label{Eq::OpticalPumpingMapSchr}
-		\mathcal{D}[\hat{\rho}] =& -\frac{\gammap +\gammau+  \gammad }{4} \hat{\rho} - \frac{\gammam}{4} \big( \hat{\sigma}_z \hat{\rho} + \hat{\rho} \hat{\sigma}_z \big)+ \frac{\gammauu+\gammadd}{4} \hat{\sigma}_z \hat{\rho} \hat{\sigma}_z \\
-		&+ \gammaud \; \hat{\sigma}_- \hat{\rho} \hat{\sigma}_+ + \gammadu \; \hat{\sigma}_+\hat{\rho} \hat{\sigma}_- .  \nn 
+	\begin{align} \label{Eq::OpticalPumpingMapSchr}
+		\mathcal{D}[\hat{\rho}] %=& -\frac{\gammap +\gammau+  \gammad }{4} \hat{\rho} - \frac{\gammam}{4} \big( \hat{\sigma}_z \hat{\rho} + \hat{\rho} \hat{\sigma}_z \big)+ \frac{\gammauu+\gammadd}{4} \hat{\sigma}_z \hat{\rho} \hat{\sigma}_z \\
+		%&+ \gammaud \; \hat{\sigma}_- \hat{\rho} \hat{\sigma}_+ + \gammadu \; \hat{\sigma}_+\hat{\rho} \hat{\sigma}_- .  \nn \\
+		=& - \bigg( \frac{2(\gammau+ \gammad) - \gammauu - \gammadd}{4} \bigg) \hat{\rho} - \frac{ \gammau - \gammad - \gammauu + \gammadd }{4} \big( \hat{\sigma}_z \hat{\rho} + \hat{\rho} \hat{\sigma}_z \big) \\
+		&+ \frac{\gammauu+\gammadd}{4} \hat{\sigma}_z \hat{\rho} \hat{\sigma}_z + \gammaud  \hat{\sigma}_- \hat{\rho} \hat{\sigma}_+ + \gammadu  \hat{\sigma}_+\hat{\rho} \hat{\sigma}_- .  \nn 
+		%=& - \left( \frac{\lrate}{2} + \frac{\gammau +\gammad+  \gammaud + \gammadu }{4} \right) \hat{\rho} - \left( \frac{\prate}{2} +  \frac{\gammaud - \gammadu }{4} \right)\big( \hat{\sigma}_z \hat{\rho} + \hat{\rho} \hat{\sigma}_z \big) \\
+		%& + \frac{\gammauu+\gammadd}{4} \hat{\sigma}_z \hat{\rho} \hat{\sigma}_z + \gammaud \; \hat{\sigma}_- \hat{\rho} \hat{\sigma}_+ + \gammadu \; \hat{\sigma}_+\hat{\rho} \hat{\sigma}_- .  \nn 
 	\end{align} 
-}\comment{(write in terms of the useful rates)}. Here $\Delta_\uparrow \equiv \gamma_\uparrow - \big(\gammauu + \gammadu \big)$ is the total rate of population change for the state $\ket{\uparrow}$ and similarly for $\Delta_\downarrow$. There are two important features of this map that are not typical in a QND measurement for spin-1/2 particles.  Firstly, the map is {\em not} trace preserving, $\Delta_\uparrow + \Delta_\downarrow \neq 0$, to account for atoms pumped out of the clock states. In addition, since $\Delta_\uparrow \neq \Delta_\downarrow$, optical pumping will polarize the mean $\expt{\hat{J}_z}$, different from the value found in a QND measurement.
+There are two important features of this map that are not typical in a QND measurement for spin-1/2 particles.  First, the map is {\em not} trace preserving as atoms are pumped out of the clock states. Second, unequal rates of optical pumping for $\ket{\uparrow}$ and $\ket{\downarrow}$ will polarize the mean $\expt{\hat{J}_z}$, different from the value found in a QND measurement.
 
-Equations of motion for the collective moments follow from the SME, \erf{Eq::SME}, with local optical pumping described by the map in \erf{Eq::OpticalPumpingMapSchr}.  We present the equations here with details of the derivations provided in Appendix \ref{Appendix::OpticalPumping}. The optical pumping competes with the squeezing in two ways. First, optical pumping reduces the number of atoms in the clock states according to $dN_A/dt \approx - \lrate N_A$ [see \erf{Eq::Idecay}]. Second, when an atom returns to the clock states after incoherently scattering a photon, the inter-atomic negative correlations that accumulate from the QND measurement decay at rate 
+Equations of motion for the collective moments follow from the SME, \erf{Eq::SME}, with local optical pumping described by the map in \erf{Eq::OpticalPumpingMapSchr}.  We present the equations here with details of the derivations provided in Appendix \ref{Appendix::OpticalPumping}. The optical pumping competes with the squeezing in two ways. First, optical pumping reduces the number of atoms in the clock states according to $dN_A/dt \approx - \lrate N_A$ [see \erf{Eq::Idecay}]. Second, when an atom returns to the clock-state subspace after incoherently scattering a photon, the inter-atomic negative correlations that accumulate from the QND measurement decay at rate given by
 	\begin{align}
 		\drate \equiv \gammaud + \gammadu.
 	\end{align}
@@ -1006,8 +1010,9 @@ with rates
 		%\zrateB %& =  \frac{\gammap + \gammaud + \gammadu }{2} 
 		%	& = \lrate + \drate , \\
 		\zrateA & = \prate - (\gammaud - \gammadu) \\
-		\frate & =  \frac{\gammauu + \gammadd + \drate}{2}. \label{Eq::frate}
+		\frate & =  \frac{\gammauu + \gammadd + \gammaud + \gammadu}{2}. \label{Eq::frate}
 	\end{align}
+Here $\Delta_\uparrow \equiv \gamma_\uparrow - \big(\gammauu + \gammadu \big)$ is the total rate of population change for the state $\ket{\uparrow}$ and similarly for $\Delta_\downarrow$. Atom loss occurs when population is pumped out of the clock states, $\Delta_\uparrow + \Delta_\downarrow \neq 0$, and the atom becomes incoherently polarizated when $\Delta_\uparrow \neq \Delta_\downarrow$.
 
 Consider a collective two-body operator $\hat{O} = \sum_{m, n \neq m} \hat{x}^{(m)} \hat{y}^{(n)}$. The two-body correlations that form the basis for spin squeezing decay according to \cite{baragiola_three-dimensional_2014}
 	\begin{align}
