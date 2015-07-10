@@ -112,18 +112,6 @@ V.~V. Klimov and M.~Ducloy.
 \newblock Spontaneous emission rate of an excited atom placed near a nanofiber.
 \newblock {\em Phys. Rev. A}, 69(1):013812, January 2004.
 
-\bibitem{yao_ultrahigh_2009}
-Peijun Yao, C.~Van~Vlack, A.~Reza, M.~Patterson, M.~M. Dignam, and S.~Hughes.
-\newblock Ultrahigh {Purcell} factors and {Lamb} shifts in slow-light
-  metamaterial waveguides.
-\newblock {\em Phys. Rev. B}, 80(19):195106, November 2009.
-
-\bibitem{yao_-chip_2010}
-P.~Yao, V.s.c. Manga~Rao, and S.~Hughes.
-\newblock On-chip single photon sources using planar photonic crystals and
-  single quantum dots.
-\newblock {\em Laser \& Photon. Rev.}, 4(4):499--516, June 2010.
-
 \bibitem{domokos_quantum_2002}
 Peter Domokos, Peter Horak, and Helmut Ritsch.
 \newblock Quantum description of light-pulse scattering on a single atom in
@@ -177,6 +165,22 @@ Shanhui Fan, Şükrü~Ekin Kocabaş, and Jung-Tsung Shen.
 \newblock Input-output formalism for few-photon transport in one-dimensional
   nanophotonic waveguides coupled to a qubit.
 \newblock {\em Phys. Rev. A}, 82(6):063821, December 2010.
+
+\bibitem{Note1}
+In a careful derivation of the Lippman-Schwinger scattering equation, it is not
+  the total Green's function that appears in Eq.~(\ref {Eq::ScatteredField})
+  but rather a related dyadic quantity, $\protect \mathbf {K}(\protect \mathbf
+  {r},\protect \mathbf {r}', \omega _0) = \protect \mathbf {G}(\protect \mathbf
+  {r},\protect \mathbf {r}', \omega _0) + \delta (\protect \mathbf {r}-\protect
+  \mathbf {r}')/n^2(\protect \mathbf {r})$ \cite
+  {wubs_multiple-scattering_2004}. This function arises by proper accounting of
+  the scatterer's coupling to the \protect \emph {displacement} rather than the
+  electric field \cite {yao_ultrahigh_2009}. The distinction becomes important
+  at the source point $\protect \mathbf {r} = \protect \mathbf {r}'$; however,
+  for lossless dielectrics $n(\protect \mathbf {r})$ is real and $\Im [\protect
+  \tensor {\protect \mathbf {G}}(\protect \mathbf {r}',\protect \mathbf {r}';
+  \omega )] = \Im [\protect \tensor {\protect \mathbf {K}}(\protect \mathbf
+  {r}',\protect \mathbf {r}'; \omega )]$ \cite {yao_-chip_2010}.
 
 \bibitem{buhmann_casimir-polder_2004}
 Stefan~Yoshi Buhmann, Ludwig Knöll, Dirk-Gunnar Welsch, and Ho~Trung Dung.
@@ -390,6 +394,18 @@ Stefan Scheel, Stefan~Yoshi Buhmann, Christoph Clausen, and Philipp
   on an atom close to a nanofiber.
 \newblock {\em arXiv:1505.01275 [quant-ph]}, May 2015.
 \newblock arXiv: 1505.01275.
+
+\bibitem{yao_ultrahigh_2009}
+Peijun Yao, C.~Van~Vlack, A.~Reza, M.~Patterson, M.~M. Dignam, and S.~Hughes.
+\newblock Ultrahigh {Purcell} factors and {Lamb} shifts in slow-light
+  metamaterial waveguides.
+\newblock {\em Phys. Rev. B}, 80(19):195106, November 2009.
+
+\bibitem{yao_-chip_2010}
+P.~Yao, V.s.c. Manga~Rao, and S.~Hughes.
+\newblock On-chip single photon sources using planar photonic crystals and
+  single quantum dots.
+\newblock {\em Laser \& Photon. Rev.}, 4(4):499--516, June 2010.
 
 \bibitem{tong_single-mode_2004}
 Limin Tong, Jingyi Lou, and Eric Mazur.
