@@ -630,7 +630,7 @@ This birefringent interaction induces a rotation of the Stokes vector  around th
 is characterized by an effective area, $A_N^{-1} \equiv (n_g/2) \big( |\mathbf{u}_{H}(\br'_\perp)|^2 - |\mathbf{u}_{V}(\br'_\perp)| ^2 \big)$.   %\comment{This area arises as a purely geometric factor independent of the input field - in fact the atom number resolution below might be better written as OD$_{\rm bir}\big( \smallfrac{A_\inp}{A_0} \big)$.  The effective optical density per atom that quantifies the collective birefringent coupling strength, OD$_{\rm bir} = \sigma_0/\Abiref$.  As illustrated in \frf{}, the OD$_{\rm bir}$. } 
 %which manifests as in the polarimeter. 
 
-Dawkins {\em et al.} \cite{dawkins_dispersive_2011} used this interaction to make a dispersive measurement of $N_A$ via birefringence polarimetry in the usual way:  launching linearly polarized light at 45$^\circ$ to the quasi-$H$ axis; i.e. $\mbf{u}_\inp = (\mbf{u}_H + \mbf{u}_V )/\sqrt{2}$ in \erf{Eq::uin} and measuring  a differential power between the guided right-and left-circularly polarized photons. 
+Dawkins {\em et al.} \cite{dawkins_dispersive_2011} used this interaction to make a dispersive measurement of $N_A$ via birefringence polarimetry in the usual way:  launching linearly polarized light at 45$^\circ$ to the quasi-$H$ axis; i.e. $\mbf{u}_\inp = (\mbf{u}_H + \mbf{u}_V )/\sqrt{2}$ in \erf{Eq::uin}\comment{(remove the equation label appearing originally in appendix)} and measuring  a differential power between the guided right-and left-circularly polarized photons. 
 Thus, the integrated measurement is described by the operator
 \begin{align} \label{Eq::MeasOpAtomCounting}
 		\hat{\mathcal{M}} & \equiv \int_0^T dt' \hat{S}^{\rm out}_3(t').
@@ -656,7 +656,7 @@ Shot noise determines the fundamental resolution of the polarimeter,.  The shot-
 	\end{align}
 \comment{Give numbers. Final thoughts about Arno's experiment.} 
 
-In experimental situations, loss and decoherence degrades the measurement for long integration times \cite{dawkins_dispersive_2011, zhang_collective_2012}. Recently, a scheme similar to the one described here was employed by \emph{B\'{e}guin et al.} to perform nondestructive atom number measurements in a nanofiber geometry \cite{beguin_generation_2014}.  Using a Bayesian estimator which accounts for various sources of noise including detector inefficiency and diffuse photon scattering, they report an atom number resolution of $\delta N_A \pm 8$ for $\expt{N_A}\sim2500$ trapped atoms.  
+In experimental situations, loss and decoherence degrades the measurement for long integration times \cite{dawkins_dispersive_2011, zhang_collective_2012}. Recently, a scheme similar to the one described here was employed by \emph{B\'{e}guin et al.} to perform nondestructive atom number measurements in a nanofiber geometry \cite{beguin_generation_2014}.  Using a Bayesian estimator which accounts for various sources of noise including detector inefficiency and diffuse photon scattering, they report an atom number resolution of $\delta N_A =\pm 8$ for $\expt{N_A}\sim2500$ trapped atoms.  
 
 
 %=================== FIGURE: Atom number detection ===================%
@@ -678,7 +678,7 @@ fundamentally limits the precision of atomic clocks \cite{wineland_spin_1992}. F
 where $\expt{\hat{J}_{||}}$ is the mean collective spin along the direction of polarization. 
 %An improvement in phase estimation accompanies a SSS provided the condition $\xi^2 < 1$ is fulfilled. Further, for spin-$\half$ ensembles, $\xi^2 < 1$ implies entanglement.
 
-The clock states are defined to have zero projection of angular momentum respect to a bias magnetic field which defines a quantization axis $\mathbf{e}_\pi$.  Within the clock-state subspace the rank-1 vector light shift in the dispersive Hamiltonian, \erf{Eq::GenHamiltonian}, vanishes since $\bra{\uparrow}\hat{F}_k ket{\uparrow} =\bra{\downarrow}\hat{F}_k \ket{\downarrow} = 0$ for any $\mathbf{e}_\pi$. Further, as shown below, atoms on either side of the nanofiber experience the same birefringent coupling. The resulting Hamiltonian, restricted to the clock subspace, and couples to $\hat{J}_3$ component of the collective pseudo spin, arises from the combination of scalar and tensor light shifts,
+The clock states are defined to have zero projection of angular momentum respect to a bias magnetic field which defines a quantization axis $\mathbf{e}_\pi$.  Within the clock-state subspace the rank-1 vector light shift in the dispersive Hamiltonian, \erf{Eq::GenHamiltonian}, vanishes since $\bra{\uparrow}\hat{F}_k \ket{\uparrow} =\bra{\downarrow}\hat{F}_k \ket{\downarrow} = 0$ for any $\mathbf{e}_\pi$. Further, as shown below, atoms on either side of the nanofiber experience the same birefringent coupling. The resulting Hamiltonian, restricted to the clock subspace, and couples to $\hat{J}_3$ component of the collective pseudo spin, arises from the combination of scalar and tensor light shifts,
 	\begin{align} \label{Eq::ClockHamiltonian}
 		\hat{H}_{J_3} = \hbar \Big\{ & \big[ \big( \chi_{H,\uparrow} +\chi_{V,\uparrow} \big) - \big( \chi_{H,\downarrow} + \chi_{V,\downarrow}\big) \big] \jz \hat{S}_0(t) \\
 		+ & \big[  \big( \chi_{H, \uparrow} - \chi_{V,\uparrow} \big) - \big(\chi_{H,\downarrow} - \chi_{V,\downarrow} \big) \big]  \jz \hat{S}_1(t) \Big\}. \nonumber
@@ -687,7 +687,7 @@ Here, the coupling strength between an atom in the clock subspace and a photon w
 	\begin{equation} \label{Eq::ClockCouplingStrength}
 		\chi_{p,F} \equiv - 2\pi k_0 n_g  | \mathbf{u}_p(\mbf{r}_\perp)|^2 \bra{F,0}\hat{\alpha}_{pp}  \ket{F,0},
 	\end{equation}
-where $F = \{4,3\}$ labels $\{\uparrow,\downarrow\}$. In the context of squeezing, the constant birefringence used above for the QND measurement of atom number can be canceled with a compensating waveplate. The first term in \erf{Eq::ClockHamiltonian} does not affect polarization spectroscopy, but will act to rotate the pseudo-spin around the $J_3$-axis of the generalized Bloch sphere.  While this does not affect the squeezing of projection noise in $\hat{J}_3$, it affects the metrologically relevant squeezing by adding uncertainty in the direction of the mean spin.  By choosing a ``magic wavelength" at which the light shifts on the two clock states are equal, 
+where $F = \{4,3\}$ labels $\{\uparrow,\downarrow\}$. In the context of squeezing, the constant birefringence \comment{coupled to $ \hat{J}_1 $ \sout{used above}} for the QND measurement of atom number can be canceled with a compensating waveplate. The first term in \erf{Eq::ClockHamiltonian} does not affect polarization spectroscopy, but will act to rotate the pseudo-spin around the $J_3$-axis of the generalized Bloch sphere.  While this does not affect the squeezing of projection noise in $\hat{J}_3$, it affects the metrologically relevant squeezing by adding uncertainty in the direction of the mean spin.  By choosing a ``magic wavelength" at which the light shifts on the two clock states are equal, 
 	\begin{align} \label{Eq::MagicWavelengthCondition}
 		\chi_{H,\uparrow} +\chi_{V,\uparrow}  = \chi_{H,\downarrow} + \chi_{V,\downarrow},
 	\end{align}
