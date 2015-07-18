@@ -770,7 +770,10 @@ and an effective area given by
 	\end{align}	
 The quantization axis that maximizes $\chi_{J_3}$ is that which minimizes $A_{J_3}$ at a given magic detuning.  
 
-We illustrate the effects of geometry and choice of quantization axis on the atom-light coupling in  \frf{Fig::CouplingStrength} for atoms trapped a typical experimentally-realizable \cite{} distance of $r_\perp'=1.8a$ from the center of the nanofiber. Since the $z$-component of the guided modes is $90^\circ$ out of phase with the transverse components, the quantization axis maximizing the atom-light coupling is specified by angle $\phi_Q$ in the transverse \emph{xy}-plane, $\qaxis = \cos \phi_Q \mbf{e}_x + \sin \phi_Q \mbf{e}_y$. In \frf{Fig::CouplingStrength}(a) we plot the effective birefringent coupling strength $\chi_{J_3}$ as a function of $\phi_Q$. The anisotropy of $\chi_{J_3}$ results from several geometric factors, including the dependence of effective mode area $A_{J_3}$, \erf{Eq::SqueezingModeArea}, plotted in \frf{Fig::CouplingStrength}(b), on $\mathbf{e}_\pi$. In addition, the tensor atomic response influences the value of the magic wavelength according to \erf{Eq::MagicWavelengthCondition}. The magic wavelength and effective detuning $\Delta_{J_3}$, given by \erf{Eq::SqueezingEffectiveDetuning}, are plotted in \frf{Fig::CouplingStrength}(c-d) as a function of $\phi_Q$.  
+We illustrate the effects of geometry and choice of quantization axis on the atom-light coupling in  \frf{Fig::CouplingStrength} for atoms trapped a typical experimentally-realizable \cite{} distance of $r_\perp'=1.8a$ from the center of the nanofiber. 
+Since the $z$-component of the guided modes is $90^\circ$ out of phase with the transverse components, the quantization axis maximizing the atom-light coupling is specified by angle $\phi_Q$ in the transverse \emph{xy}-plane, $\qaxis = \cos \phi_Q \mbf{e}_x + \sin \phi_Q \mbf{e}_y$. 
+In \frf{Fig::CouplingStrength}(a) we plot the effective birefringent coupling strength $\chi_{J_3}$ as a function of $\phi_Q$. 
+The anisotropy of $\chi_{J_3}$ results from several geometric factors, including the dependence of effective mode area $A_{J_3}$, \erf{Eq::SqueezingModeArea}, plotted in \frf{Fig::CouplingStrength}(b), on $\mathbf{e}_\pi$. In addition, the tensor atomic response influences the value of the magic wavelength according to \erf{Eq::MagicWavelengthCondition}. The magic wavelength and effective detuning $\Delta_{J_3}$, given by \erf{Eq::SqueezingEffectiveDetuning}, are plotted in \frf{Fig::CouplingStrength}(c-d) as a function of $\phi_Q$.  
 
 %========= SQUEEZING DYNAMICS: \xi, variance, mean,  N_A =========
 \begin{figure}
@@ -791,7 +794,11 @@ We illustrate the effects of geometry and choice of quantization axis on the ato
 \centering
 \subfloat[]{\label{fig:NAt_qXoptimal_r1d8a_NA2500}\includegraphics[scale=0.45]{./Figs/NAt_qXoptimal_r1d8a_NA2500}}
 \end{minipage}
-\caption{Squeezing dynamics for $2500$ atoms trapped on the \emph{x}-axis at distance $ r'\!_\perp=1.8a$. The optimal quantization axis (black) is compared to quantization along the $x$-axis (green) and \emph{y}-axis (blue). Solid lines indicate simulations with optical pumping and dashed lines without. (a) Metrological spin squeezing parameter $\xi^2$. (b) Conditional squeezed variance $\varz$. (c) Mean spin $\expt{\hat{J}_x}$ and atom number $N_A$.}\label{Fig::Squeezing_Dynamics}
+\caption{Squeezing dynamics for $2500$ atoms trapped on the \emph{x}-axis at distance $ r'\!_\perp=1.8a$. The optimal quantization axis (black) is compared to quantization along the $x$-axis (green) and \emph{y}-axis (blue). 
+Solid lines indicate simulations with optical pumping and dashed lines without. 
+(a) Metrological spin squeezing parameter $\xi^2$. 
+(b) Conditional squeezed variance $\varz$. 
+(c) Mean spin $\expt{\hat{J}_x}$ and atom number $N_A$.}\label{Fig::Squeezing_Dynamics}
 \end{figure}
 %================
 
@@ -799,13 +806,15 @@ We illustrate the effects of geometry and choice of quantization axis on the ato
 	%====== SUBSECTION: Including optical pumping ======%
 	\subsection{Decoherence due to optical pumping}
 
-The treatment above considers an idealized QND interaction. The coupling of the atoms to the probe will always be accompanied by photon scattering into modes other than the forward scattered guided mode.  This results in optical pumping that destroys the entanglement associated with spin squeezing.  In addition it reduces the metrologically useful signal.  The maximum achievable meteorologically relevant squeezing is determined by the balance of this decoherence with the QND measurement. 
+The treatment above considers an idealized QND interaction. The coupling of the atoms to the probe will always be accompanied by photon scattering into modes other than the forward scattered guided mode.  This results in optical pumping that destroys the entanglement associated with spin squeezing.  In addition it reduces the metrologically useful signal.  
+The maximum achievable meteorologically relevant squeezing is determined by the balance of this decoherence with the QND measurement. 
 
 We fully model this based on a first-principles stochastic master equation (SME)~\cite{?},
 	\begin{align} \label{Eq::SME}
 		d \hat{\rho} = s\sqrt{\frac{\kappa}{4}} \mathcal{H}[\hat{\rho}] dW + \frac{\kappa}{4} \mathcal{L}[\hat{\rho}] dt + \sum_n \mathcal{D}_n [\hat{\rho}] dt,
 	\end{align}
-where $s = {\rm sign}(\kappa)$ and $\hat{\rho}$ is the collective atomic state. The first two terms describe the QND measurement with strength $\kappa$ given in \erf{Eq::MeasurementStrength}. The conditional dynamics that result from the measurement are described by the superoperator
+where $s = {\rm sign}(\kappa)$ and $\hat{\rho}$ is the collective atomic state. The first two terms describe the QND measurement with strength $\kappa$ given in \erf{Eq::MeasurementStrength}. 
+The conditional dynamics that result from the measurement are described by the superoperator
 	\begin{align}
 		\mathcal{H}[\hat{\rho}] = \jz \hat{\rho} + \hat{\rho} \jz - 2 \expt{\jz} \hat{\rho},
 	\end{align}
@@ -815,7 +824,8 @@ where $dW$ is a stochastic Weiner increment satisfying $dW^2 = dt$, and ``measur
 	\end{align}
 
 
-The final term in \erf{Eq::SME} describes the effect of optical pumping acting locally on each atom along the nanofiber. Restricting to the two-dimensional subspace associated with the clock states for any given atom, the optical pumping map is governed by a standard master equation~\cite{deutsch_quantum_2010}.  The action on the $n^{th}$ atom is
+The final term in \erf{Eq::SME} describes the effect of optical pumping acting locally on each atom along the nanofiber. 
+Restricting to the two-dimensional subspace associated with the clock states for any given atom, the optical pumping map is governed by a standard master equation~\cite{deutsch_quantum_2010}.  The action on the $n^{th}$ atom is
 	\begin{align}
 		\mathcal{D}[\hat{\rho}^{(n)}] =  \sum_{F=3,4} \Big[& -\frac{\gamma_{F}}{2} \big( \hat{\rho}^{(n)} \op{F,0}{F,0} + \op{F,0}{F,0} \hat{\rho}^{(n)} \big) \\
 		&+  \sum_{\tilde{F} =3,4}  \gamma_{F \rightarrow \tilde{F}} \ket{\tilde{F},0}\bra{F,0} \hat{\rho}^{(n)} \ket{F,0}\bra{\tilde{F},0} \Big].\nonumber
@@ -843,9 +853,15 @@ where $ \sigma (\Delta_{FF'} )  = \sigma_0 \Gamma^2/4\Delta^2_{FF'}$ is the the 
 		%& + \frac{\gammauu+\gammadd}{4} \hat{\sigma}_z \hat{\rho} \hat{\sigma}_z + \gammaud \; \hat{\sigma}_- \hat{\rho} \hat{\sigma}_+ + \gammadu \; \hat{\sigma}_+\hat{\rho} \hat{\sigma}_- .  \nn 
 	\end{align} 
 	
-There are three important features of this map that are not typical in a QND measurement for spin-$\half$ particles.  First, the map is {\em not} trace preserving as atoms are pumped out of the clock states. Second, unequal rates of optical pumping for $\ket{\uparrow}$ and $\ket{\downarrow}$ will polarize the mean $\expt{\jz}$ towards a value different from that found in the QND measurement. Third, owing to the large ground hyperfine splitting, $F' \rightarrow F=3$ and $F' \rightarrow F=4$ photons are distinguishable, thus coherences between $\ket{\uparrow}$ and $\ket{\downarrow}$ are destroyed. \comment{(Should we need comment on these issues  later?)}
+There are three important features of this map that are not typical in a QND measurement for spin-$\half$ particles.  
+First, the map is {\em not} trace preserving as atoms are pumped out of the clock states. 
+Second, unequal rates of optical pumping for $\ket{\uparrow}$ and $\ket{\downarrow}$ will polarize the mean $\expt{\jz}$ towards a value different from that found in the QND measurement. 
+Third, owing to the large ground hyperfine splitting, $F' \rightarrow F=3$ and $F' \rightarrow F=4$ photons are distinguishable, thus coherences between $\ket{\uparrow}$ and $\ket{\downarrow}$ are destroyed. \comment{(Should we need comment on these issues  later?)}
 
-Equations of motion for the collective moments follow from the SME, \erf{Eq::SME}, with local optical pumping described by the map in \erf{Eq::OpticalPumpingMapSchr}.  We present the equations here with details of the derivations provided in Appendix \ref{Appendix::OpticalPumping}. The optical pumping competes with the squeezing in two ways. First, optical pumping reduces the number of atoms in the clock states according to $dN_A/dt \approx - \lrate N_A$ [see \erf{Eq::Idecay}]. Second, when an atom returns to the clock-state subspace after incoherently scattering a photon, the inter-atomic negative correlations that accumulate from the QND measurement decay at rate given by
+Equations of motion for the collective moments follow from the SME, \erf{Eq::SME}, with local optical pumping described by the map in \erf{Eq::OpticalPumpingMapSchr}.  
+We present the equations here with details of the derivations provided in Appendix \ref{Appendix::OpticalPumping}. The optical pumping competes with the squeezing in two ways. 
+First, optical pumping reduces the number of atoms in the clock states according to $dN_A/dt \approx - \lrate N_A$ [see \erf{Eq::Idecay}]. 
+Second, when an atom returns to the clock-state subspace after incoherently scattering a photon, the inter-atomic negative correlations that accumulate from the QND measurement decay at rate given by
 	\begin{align}
 		\zrate \equiv \gammaud + \gammadu.
 	\end{align}
@@ -858,9 +874,13 @@ Optical pumping has an additional effect on metrological squeezing, \erf{Eq::Squ
 		\frac{d}{dt} \expt{\hat{J}_x} =& - \big(\lrate + \xrate ) \expt{\jx}.
 	\end{align}
 
-We determine the metrological spin squeezing parameter $\xi^2$ by integrating the equations for $\varz$ and $\expt{\hat{J}_x}$ whose solutions are then inserted into \erf{Eq::SqueezingParameter}.  For no atom loss, $\lrate = 0$, the map in \erf{Eq::OpticalPumpingMapSchr} is trace-preserving, as would be the case for genuine spin-$\half$ ground-state atoms such as $^{171}$Yb.  In this case \erf{Eq::Jzvariance} can be solved analytically \cite{baragiola_three-dimensional_2014}, and $\varz$ reaches a steady state where the QND squeezing equilibrates with the decoherence. Here, we solve the equation numerically. 
+We determine the metrological spin squeezing parameter $\xi^2$ by integrating the equations for $\varz$ and $\expt{\hat{J}_x}$ whose solutions are then inserted into \erf{Eq::SqueezingParameter}.  
+For no atom loss, $\lrate = 0$, the map in \erf{Eq::OpticalPumpingMapSchr} is trace-preserving, as would be the case for genuine spin-$\half$ ground-state atoms such as $^{171}$Yb.  In this case \erf{Eq::Jzvariance} can be solved analytically \cite{baragiola_three-dimensional_2014}, and $\varz$ reaches a steady state where the QND squeezing equilibrates with the decoherence. Here, we solve the equation numerically. 
 
-Figure \ref{Fig::CouplingStrength} proposes an optimal choice for $\qaxis$ along the $y$-axis, where $\chi_\eff$ reaches a maximum for a probe detuned nearly equidistant from $F'=3$ and $F'=4$. However, in \frf{Fig::Squeezing_QuantizationAxis}(a) we see that when optical pumping is included, the optimal $\qaxis$ is rotated away from the \emph{y}-axis. Insight into the optimal balance between QND measurement and the optical pumping is gained by examining measurement strength and decay rates. The squeezing of $\varz$ is determined by the measurement strength, $\kappa/\gamma_s$, shown in \frf{Fig::Squeezing_QuantizationAxis}(b), where we define a characteristic photon scattering rate $\gamma_s = (\sigma_0/A_\eff)(\Gamma/2 \Delta_\eff)^2 \dot{N}_L$ that follows from \erf{Eq::chieff}. In the context of metrological squeezing, optical pumping affects the mean, $\expt{\hat{J}_x}$, and the variance, $\varz$, in different ways. The relative rates of atom loss, of decoherence in $\varz$, and of spin flips that shorten $\expt{\hat{J}_x}$ are shown in \frf{Fig::Squeezing_QuantizationAxis}(c). 
+Figure \ref{Fig::CouplingStrength} proposes an optimal choice for $\qaxis$ along the $y$-axis, where $\chi_\eff$ reaches a maximum for a probe detuned nearly equidistant from $F'=3$ and $F'=4$. 
+However, in \frf{Fig::Squeezing_QuantizationAxis}(a) we see that when optical pumping is included, the optimal $\qaxis$ is rotated away from the \emph{y}-axis. 
+Insight into the optimal balance between QND measurement and the optical pumping is gained by examining measurement strength and decay rates. The squeezing of $\varz$ is determined by the measurement strength, $\kappa/\gamma_s$, shown in \frf{Fig::Squeezing_QuantizationAxis}(b), where we define a characteristic photon scattering rate $\gamma_s = (\sigma_0/\comment{A_{\rm in}})(\Gamma/2 \Delta_\eff)^2 \dot{N}_L$ that follows from \erf{Eq::chieff}. 
+In the context of metrological squeezing, optical pumping affects the mean, $\expt{\hat{J}_x}$, and the variance, $\varz$, in different ways. The relative rates of atom loss, of decoherence in $\varz$, and of spin flips that shorten $\expt{\hat{J}_x}$ are shown in \frf{Fig::Squeezing_QuantizationAxis}(c). 
 
 %========= FIGURE: Peak squeezing (\xi, measurement strength, scattering rates) =========
 \begin{figure}
@@ -886,7 +906,10 @@ Figure \ref{Fig::CouplingStrength} proposes an optimal choice for $\qaxis$ along
 %================
 
 
-We investigate the dynamics in \frf{Fig::Squeezing_Dynamics} for several choices of $\qaxis$. In \frf{Fig::Squeezing_Dynamics}(a) we investigate the dynamics of the squeezing parameter at the optimal quantization axis $\phi_Q=$ and compare to the idealized situation with no optical pumping where the dynamics results solely from the variations in $\kappa$ in \frf{Fig::Squeezing_QuantizationAxis}(b) and squeezing continues indefinitely (until the failure of the Gaussian approximation). Shown in \frf{Fig::Squeezing_Dynamics}(b) is the decrease in the conditional variance $\varz$. While the decay of correlations, the primary limiting factor for peak achievable squeezing is the decay of the mean $\expt{\hat{J}_x}$ as optical pumping destroys the coherence between $\ket{\uparrow}$ and $\ket{\downarrow}$ within each atom. In \frf{Fig::Squeezing_Dynamics}(c) we plot $\expt{\hat{J}_x}$ and the atom number $N_A$.  
+We investigate the dynamics in \frf{Fig::Squeezing_Dynamics} for several choices of $\qaxis$. 
+In \frf{Fig::Squeezing_Dynamics}(a) we investigate the dynamics of the squeezing parameter at the optimal quantization axis $\phi_Q=$ and compare to the idealized situation with no optical pumping where the dynamics results solely from the variations in $\kappa$ in \frf{Fig::Squeezing_QuantizationAxis}(b) and squeezing continues indefinitely (until the failure of the Gaussian approximation). 
+Shown in \frf{Fig::Squeezing_Dynamics}(b) is the decrease in the conditional variance $\varz$. While the decay of correlations, the primary limiting factor for peak achievable squeezing is the decay of the mean $\expt{\hat{J}_x}$ as optical pumping destroys the coherence between $\ket{\uparrow}$ and $\ket{\downarrow}$ within each atom. 
+In \frf{Fig::Squeezing_Dynamics}(c) we plot $\expt{\hat{J}_x}$ and the atom number $N_A$.  
 
 %========= FIGURE: Geometry (coupling strength, magic wavelength, area and detuning) =========%
 \begin{figure}
@@ -912,7 +935,12 @@ We investigate the dynamics in \frf{Fig::Squeezing_Dynamics} for several choices
 %=============================================
 
 
-As the atoms are trapped closer to the nanofiber surface, they experience higher guided-mode fields and the measurement strength increases exponentially, \frf{Fig::Squeezing_Scaling}(a). As expected, this yields higher peak squeezing, \frf{Fig::Squeezing_Scaling}(b). However, several effects limit the reliability of the simulations near the fiber surface. First, van der Waals interactions  Second, the optical pumping model used here breaks down near the surface where the density of states is significantly modified in the presence of the dielectric nanofiber \cite{}. Figure \ref{Fig::Squeezing_Scaling}(c) shows the total modified spontaneous emission rate and its guided-mode and radiation-mode contributions as the atoms are moved closer to the nanofiber. Thus, we see that at distances beyond $r_\perp \approx ???$ the atoms' local environment is roughly that of unmodified vacuum and a free-space optical pumping model suffices. The full details of optical pumping very close to the nanofiber surface will be investigated in future work.
+As the atoms are trapped closer to the nanofiber surface, they experience higher guided-mode fields and the measurement strength increases exponentially, \frf{Fig::Squeezing_Scaling}(a). 
+As expected, this yields higher peak squeezing, \frf{Fig::Squeezing_Scaling}(b). 
+However, several effects limit the reliability of the simulations near the fiber surface. 
+First, van der Waals interactions  Second, the optical pumping model used here breaks down near the surface where the density of states is significantly modified in the presence of the dielectric nanofiber \cite{}. 
+Figure \ref{Fig::Squeezing_Scaling}(c) shows the total modified spontaneous emission rate and its guided-mode and radiation-mode contributions as the atoms are moved closer to the nanofiber. Thus, we see that at distances beyond $r_\perp \approx ???$ the atoms' local environment is roughly that of unmodified vacuum and a free-space optical pumping model suffices. 
+The full details of optical pumping very close to the nanofiber surface will be investigated in future work.
 
 %========= SQUEEZING: variation with r_perp and N_A =========
 \begin{figure}
@@ -934,10 +962,17 @@ As the atoms are trapped closer to the nanofiber surface, they experience higher
 \section{SUMMARY and OUTLOOK}
 
  
-In their final discussion, Polzik et al. \cite{beguin_generation_2014} extrapolate their experiment to give numerical estimates of spin squeezing for 2500 atoms.  They report 4.2 dB of spin squeezing when the noise channel is ``damping of hyperfine coherence due to photon scattering" and atom loss is neglected. 
+In their final discussion, Polzik et al. \cite{beguin_generation_2014} extrapolate their experiment to give numerical estimates of spin squeezing for 2500 atoms.  
+They report 4.2 dB of spin squeezing when the noise channel is ``damping of hyperfine coherence due to photon scattering" and atom loss is neglected. 
 
 
-Outside of a waveguide, cavity enhancement can produce drastic increases in atom-number detection, \cite{zhang_collective_2012}, spin squeezing \cite{bohnet_reduced_2014}, and....   Strong coupling to the guided nanofiber modes can be further improved with nanofabricated cavities that, under EIT conditions, substantially slow the group velocity \cite{le_kien_intracavity_2009,wuttke_nanofiber_2012,nayak_optical_2014}.  Additional hybrid approaches \cite{hafezi_atomic_2012, yalla_cavity_2014}.  Coherent quantum control of atoms \cite{smith_quantum_2013-1}.  Quantum sensing \cite{kumar_autler-townes_2015}.  Preparation of nonclassical light using collective dissipation \cite{gonzalez-tudela_deterministic_2015}.  Optical memory (not quite quantum) \cite{sayrin_storage_2015, gouraud_demonstration_2015} Interaction with higher-order modes.  Optical switching using a single atom \cite{oshea_fiber-optical_2013} 
+Outside of a waveguide, cavity enhancement can produce drastic increases in atom-number detection, \cite{zhang_collective_2012}, spin squeezing \cite{bohnet_reduced_2014}, and....   
+Strong coupling to the guided nanofiber modes can be further improved with nanofabricated cavities that, under EIT conditions, substantially slow the group velocity \cite{le_kien_intracavity_2009,wuttke_nanofiber_2012,nayak_optical_2014}.  Additional hybrid approaches \cite{hafezi_atomic_2012, yalla_cavity_2014}.  
+Coherent quantum control of atoms \cite{smith_quantum_2013-1}.  
+Quantum sensing \cite{kumar_autler-townes_2015}.  
+Preparation of nonclassical light using collective dissipation \cite{gonzalez-tudela_deterministic_2015}.  
+Optical memory (not quite quantum) \cite{sayrin_storage_2015, gouraud_demonstration_2015} Interaction with higher-order modes.  
+Optical switching using a single atom \cite{oshea_fiber-optical_2013} 
 
 Optical pumping near the surface of a dielectric that modifies the local density of states, 
 
@@ -982,13 +1017,20 @@ c) magic wavelength (in detuning) as a function of distance from the fiber $r_\p
 %=========== APPENDIX: Nanofiber mode functions ===========%
 \section{Guided-mode functions for the optical nanofiber} \label{Appendix::ModeFunctions}
 
-Here we briefly review the guided-mode eigenfunctions for an optical nanofiber.  The nanofiber's distinguishing feature that the diameter is smaller than the operating wavelength of light has several consequences.  First, a significant fraction of the transmitted power resides in evanescent fields that can extend well beyond the nanofiber's surface.  This evanescent field is the tool with which atoms are trapped and manipulated by fiber-guided light.  Second, the guided modes outside the taper region adiabatically transform through the fiber taper into the modes of the nanofiber without significant losses.  Through this transformation, the guided fields acquire a large component along the fiber axis that is out of phase with the transverse components, which makes the nanofiber modes significantly different from the transverse plane waves or paraxial modes in free space.    
+Here we briefly review the guided-mode eigenfunctions for an optical nanofiber.  
+The nanofiber's distinguishing feature that the diameter is smaller than the operating wavelength of light has several consequences.  
+First, a significant fraction of the transmitted power resides in evanescent fields that can extend well beyond the nanofiber's surface.  
+This evanescent field is the tool with which atoms are trapped and manipulated by fiber-guided light.  
+Second, the guided modes outside the taper region adiabatically transform through the fiber taper into the modes of the nanofiber without significant losses.  
+Through this transformation, the guided fields acquire a large component along the fiber axis that is out of phase with the transverse components, which makes the nanofiber modes significantly different from the transverse plane waves or paraxial modes in free space.    
 
-Here, we provide the fundamental HE$_{11}$ solutions to the homogeneous wave equation, \erf{Eq::WaveEquationSource} with $\tensor{\boldsymbol{\alpha}} = 0$, for a cylindrical nanofiber of radius $a$ and index of refraction given by \erf{Eq::IndexofRefraction}.  At a given frequency, $\omega_0 = c k_0$, the magnitudes of the longitudinal and transverse wave vectors for a guided mode are related by $n^2 k_0^2 = \beta_0^2 + k_\perp^2$.  The positive propagation constant, $\beta_0 \equiv \beta(\omega_0)$, is determined from the eigenvalue equation that results from enforcing physical boundary conditions at the fiber surface \cite{Yariv, Marcuse, Snyder and Love},
+Here, we provide the fundamental HE$_{11}$ solutions to the homogeneous wave equation, \erf{Eq::WaveEquationSource} with $\tensor{\boldsymbol{\alpha}} = 0$, for a cylindrical nanofiber of radius $a$ and index of refraction given by \erf{Eq::IndexofRefraction}.  At a given frequency, $\omega_0 = c k_0$, the magnitudes of the longitudinal and transverse wave vectors for a guided mode are related by $n^2 k_0^2 = \beta_0^2 + k_\perp^2$.  
+The positive propagation constant, $\beta_0 \equiv \beta(\omega_0)$, is determined from the eigenvalue equation that results from enforcing physical boundary conditions at the fiber surface \cite{Yariv, Marcuse, Snyder and Love},
 	\begin{align}
 		\frac{J_0(ha)}{ha J_1(ha)} = - \frac{n_1^2+n_2^2}{2n_1^2} \frac{K'(qa)}{qa K_1(qa)} + \frac{1}{h^2 a^2} - \bigg[ \bigg(\frac{n_1^2 - n_2^2}{2 n_1^2} \frac{K'(qa)}{qa K_1(qa)} \bigg)^2  + \frac{\beta_0^2}{n^2_1 k^2} \bigg(\frac{1}{q^2a^2} + \frac{1}{h^2a^2} \bigg)^2 \bigg]^{1/2}.
 	\end{align}
-Inside the nanofiber the transverse wavevector is real, $k_\perp = q$, where $q=\sqrt{\beta_0^2- n_2^2k_0^2}$, and outside the nanofiber it is purely imaginary, $k_\perp = i h$, where $h=\sqrt{n_1^2 k_0^2 - \beta_0^2}$.  The vector eigenfunctions are expressed as $\mbf{f}_{\mu}(\br) = (2\pi)^{-1/2}\mbf{u}_{f,p}(\mbf{r}_\perp) e^{i f \beta_0 z}$, where the modes are indexed by frequency $\omega_0$, propagation direction $f = \pm$, and polarization $p$.
+Inside the nanofiber the transverse wavevector is real, $k_\perp = q$, where $q=\sqrt{\beta_0^2- n_2^2k_0^2}$, and outside the nanofiber it is purely imaginary, $k_\perp = i h$, where $h=\sqrt{n_1^2 k_0^2 - \beta_0^2}$.  
+The vector eigenfunctions are expressed as $\mbf{f}_{\mu}(\br) = (2\pi)^{-1/2}\mbf{u}_{f,p}(\mbf{r}_\perp) e^{i f \beta_0 z}$, where the modes are indexed by frequency $\omega_0$, propagation direction $f = \pm$, and polarization $p$.
 
 A relatively simple form for the guided-mode functions can be expressed in a cylindrical basis $(r_\perp, \phi, z)$ with longitudinal unit vector $\mathbf{e}_z$, oriented along the fiber axis.  The transverse unit vectors are related to their fixed Cartesian counterparts via the relations
 	\begin{align}
@@ -1018,13 +1060,16 @@ where $u_0$ is set by the normalization condition, $\int d^2 \mathbf{r}_\perp n(
 	\begin{align}
 		s = \frac{1/(q^2 a^2)^{2} + 1/(h^2 a^2)^{2}}{[J'_1(ha)/haJ_1(ha) + K'_1(qa)/qaK_1(qa)]}.
 	\end{align}  
-Of particular interest is the $z$-component, \erf{Eq::zprofile}, which can become appreciable.  Note that the phase convention in Eqs. (\ref{Eq::QuasicircularModes}-\ref{Eq::ProfileFunctions}) has been chosen to emphasize properties of the quasilinear modes and differs from that of \emph{Le Kien et al.} -- for instance in Ref. \cite{le_kien_propagation_2014}.  Further details about the guided-mode fields inside the nanofiber ($r_\perp\leq a$), the radiation (unguided) modes, and the quantized form of both can be found in Refs. \cite{sondergaard_general_2001, tong_single-mode_2004, kien_field_2004, le_kien_spontaneous_2005, Vetsch thesis}.
+Of particular interest is the $z$-component, \erf{Eq::zprofile}, which can become appreciable.  
+Note that the phase convention in Eqs. (\ref{Eq::QuasicircularModes}-\ref{Eq::ProfileFunctions}) has been chosen to emphasize properties of the quasilinear modes and differs from that of \emph{Le Kien et al.} -- for instance in Ref. \cite{le_kien_propagation_2014}.  
+Further details about the guided-mode fields inside the nanofiber ($r_\perp\leq a$), the radiation (unguided) modes, and the quantized form of both can be found in Refs. \cite{sondergaard_general_2001, tong_single-mode_2004, kien_field_2004, le_kien_spontaneous_2005, Vetsch thesis}.
 
 
 %===================APPENDIX: Equations of motion =====================%
 \section{Derivation of the equations of motion for the moments} \label{Appendix::OpticalPumping}	
 			
-The adjoint form of the SME in \erf{Eq::SME} describes the evolution of the collective operators in the Heisenberg picture. For a collective operator single-body operator $\hat{X} = \sum_n \hat{x}^{(n)}$ the evolution due to optical pumping is $d\expt{ \hat{X}}|_{\rm op} = \sum_n \Tr [\mathcal{D}_n[\hat{\rho}]\hat{X} ] = \sum_n \Tr [\expt{\mathcal{D}_n\dg[\hat{x}^{(n)}]} ] $, where the map, which acts locally on atoms along the nanofiber, is given in \erf{Eq::OpticalPumpingMapSchr}. Applying the map to the single-atom operators, 
+The adjoint form of the SME in \erf{Eq::SME} describes the evolution of the collective operators in the Heisenberg picture. 
+For a collective operator single-body operator $\hat{X} = \sum_n \hat{x}^{(n)}$ the evolution due to optical pumping is $d\expt{ \hat{X}}|_{\rm op} = \sum_n \Tr [\mathcal{D}_n[\hat{\rho}]\hat{X} ] = \sum_n \Tr [\expt{\mathcal{D}_n\dg[\hat{x}^{(n)}]} ] $, where the map, which acts locally on atoms along the nanofiber, is given in \erf{Eq::OpticalPumpingMapSchr}. Applying the map to the single-atom operators, 
 	\begin{align}
 		\mathcal{D}\dg[\hat{\mathbbm{1}}] & = - \lrate \hat{\mathbbm{1}} + \big( \prate + \gammaud - \gammadu \big)\hat{\sigma}_z \label {Eq::Idecay} \\
 		\mathcal{D}\dg[\hat{\sigma}_z] & = \prate \hat{\mathbbm{1}} - ( \lrate + \zrate ) \hat{\sigma}_z \label{Eq::zdecay} \\
@@ -1043,9 +1088,12 @@ with rates
 		% \zrateA & = \prate - (\gammaud - \gammadu) \\
 		\xrate & =  \frac{\gammauu + \gammadd + \gammaud + \gammadu}{2}. \label{Eq::frate}
 	\end{align}
-Here $\Delta_\uparrow \equiv (\gammauu + \gammadu ) - \gamma_\uparrow$ is the total rate of population change for the state $\ket{\uparrow}$ and similarly for $\Delta_\downarrow$. Atom loss occurs when population is pumped out of the clock states, $\Delta_\uparrow + \Delta_\downarrow \neq 0$, and the atom becomes incoherently polarizated when $\Delta_\uparrow \neq \Delta_\downarrow$. Note that $\lrate, \zrate \ge 0$, while $\prate$ can be positive or negative.
+Here $\Delta_\uparrow \equiv (\gammauu + \gammadu ) - \gamma_\uparrow$ is the total rate of population change for the state $\ket{\uparrow}$ and similarly for $\Delta_\downarrow$. 
+Atom loss occurs when population is pumped out of the clock states, $\Delta_\uparrow + \Delta_\downarrow \neq 0$, and the atom becomes incoherently polarizated when $\Delta_\uparrow \neq \Delta_\downarrow$. 
+Note that $\lrate, \zrate \ge 0$, while $\prate$ can be positive or negative.
 
-Consider a collective two-body operator $\hat{O} = \sum_{m, n \neq m} \hat{x}^{(m)} \hat{y}^{(n)}$. The two-body correlations that form the basis for spin squeezing decay according to \cite{baragiola_three-dimensional_2014}
+Consider a collective two-body operator $\hat{O} = \sum_{m, n \neq m} \hat{x}^{(m)} \hat{y}^{(n)}$. 
+The two-body correlations that form the basis for spin squeezing decay according to \cite{baragiola_three-dimensional_2014}
 	\begin{align}
 		\frac{d}{dt} \expt{ \hat{x}^{(m)} \hat{y}^{(n)} } \Big|_{\rm op}= &\expt{ \mathcal{D}_m\dg[ \hat{x}^{(m)}] \hat{y}^{(n)} } + \expt{ \hat{x}^{(m)} \mathcal{D}_n\dg[ \hat{y}^{(n)}] },
 	\end{align}
@@ -1053,7 +1101,8 @@ where the superscript refers to the $m^{th}$ and $n^{th}$ atoms. The two-body co
 	\begin{align}
 		\frac{d}{dt} \big(\hat{\sigma}_z^{(m)} \otimes \hat{\sigma}_z^{(n)} \big)  \Big|_{\rm op} = - 2 \big( \lrate + \zrate \big)  \hat{\sigma}_z^{(m)} \otimes \hat{\sigma}_z^{(n)} + \prate \big(\hat{\mathbbm{1}}^{(m)} \otimes \hat{\sigma}_z^{(n)} + \hat{\sigma}_z^{(m)} \otimes \hat{\mathbbm{1}}^{(n)}\big),
 	\end{align}
-where the map for optical pumping within the pseudospin of each atom is given by \erf{Eq::zdecay}.  The equations of motion for the moments of $\jz$ are now found from the SME, \erf{Eq::SME}, 
+where the map for optical pumping within the pseudospin of each atom is given by \erf{Eq::zdecay}.  
+The equations of motion for the moments of $\jz$ are now found from the SME, \erf{Eq::SME}, 
 	\begin{subequations} \label{Eq::J3MomentEquations}
 	\begin{align} 
 		d \expt{\jz} =& \error{\pm} \sqrt{\kappa} \varz \, dW - \big( \lrate + \zrate \big) \expt{\jz}dt + \smallfrac{1}{2} \prate N_A dt ,  \\
@@ -1062,7 +1111,9 @@ where the map for optical pumping within the pseudospin of each atom is given by
 		&+ \prate \expt{\jz} N_A dt - \smallfrac{1}{2} \big( \prate - \gammaud + \gammadu \big)\expt{\jz}. \nonumber 
 	\end{align}
 	\end{subequations}
-The stochastic term in $d\expt{\jz^2}$ was simplified using the relation $\expt{\jz^3} = 3\expt{\jz^2}\expt{\jz}- 2\expt{\jz}^3$, which comes from Gaussian statistics \cite{jacobs_straightforward_2006}. Finally, the It\={o} calculus governing the stochastically evolving moments requires that differentials be taken to second order, and the evolution of the variance is given by $d \varz = d \expt{\jz^2} - 2 \expt{\jz} d \expt{\jz} - \big( d \expt{\jz} \big)^2$. In the limit where $\expt{\jz}\ll N_A$ the terms proportional to the stochastically fluctuating mean can be dropped, and the equation of motion for the conditional variance, given in \erf{Eq::Jzvariance}, follows from Eqs. (\ref{Eq::J3MomentEquations}).
+The stochastic term in $d\expt{\jz^2}$ was simplified using the relation $\expt{\jz^3} = 3\expt{\jz^2}\expt{\jz}- 2\expt{\jz}^3$, which comes from Gaussian statistics \cite{jacobs_straightforward_2006}. 
+Finally, the It\={o} calculus governing the stochastically evolving moments requires that differentials be taken to second order, and the evolution of the variance is given by $d \varz = d \expt{\jz^2} - 2 \expt{\jz} d \expt{\jz} - \big( d \expt{\jz} \big)^2$. 
+In the limit where $\expt{\jz}\ll N_A$ the terms proportional to the stochastically fluctuating mean can be dropped, and the equation of motion for the conditional variance, given in \erf{Eq::Jzvariance}, follows from Eqs. (\ref{Eq::J3MomentEquations}).
 
 
 \change{
