@@ -1,272 +1,427 @@
 \begin{thebibliography}{10}
 
-\bibitem{Kuzmich2003}
-A~Kuzmich, WP~Bowen, AD~Boozer, A~Boca, CW~Chou, L-M Duan, and HJ~Kimble.
-\newblock Generation of nonclassical photon pairs for scalable quantum
-  communication with atomic ensembles.
-\newblock {\em Nature}, 423(6941):731--734, 2003.
+\bibitem{manga_rao_single_2007}
+V.~S.~C. Manga~Rao and S.~Hughes.
+\newblock Single quantum-dot {Purcell} factor and
+  \$\${\textbackslash}beta\$\{\}\$ factor in a photonic crystal waveguide.
+\newblock {\em Phys. Rev. B}, 75(20):205437, May 2007.
 
-\bibitem{Peyronel2012}
-Thibault Peyronel, Ofer Firstenberg, Qi-Yu Liang, Sebastian Hofferberth,
-  Alexey~V Gorshkov, Thomas Pohl, Mikhail~D Lukin, and Vladan Vuleti{\'c}.
-\newblock Quantum nonlinear optics with single photons enabled by strongly
-  interacting atoms.
-\newblock {\em Nature}, 488(7409):57--60, 2012.
+\bibitem{hakuta_manipulating_2012}
+Kohzo Hakuta and Kali~Prasanna Nayak.
+\newblock Manipulating single atoms and photons using optical nanofibers.
+\newblock {\em Adv. Nat. Sci: Nanosci. Nanotechnol.}, 3(1):015005, March 2012.
 
-\bibitem{Alton2011}
-DJ~Alton, NP~Stern, Takao Aoki, H~Lee, E~Ostby, KJ~Vahala, and HJ~Kimble.
-\newblock Strong interactions of single atoms and photons near a dielectric
-  boundary.
-\newblock {\em Nature Physics}, 7(2):159--165, 2011.
+\bibitem{hung_trapped_2013}
+C.-L. Hung, S.~M. Meenehan, D.~E. Chang, O.~Painter, and H.~J. Kimble.
+\newblock Trapped atoms in one-dimensional photonic crystals.
+\newblock {\em New J. Phys.}, 15(8):083026, August 2013.
 
-\bibitem{Thompson2013}
-JD~Thompson, TG~Tiecke, NP~de~Leon, J~Feist, AV~Akimov, M~Gullans, AS~Zibrov,
-  V~Vuleti{\'c}, and MD~Lukin.
-\newblock Coupling a single trapped atom to a nanoscale optical cavity.
-\newblock {\em Science}, 340(6137):1202--1205, 2013.
-
-\bibitem{Goban2014}
-A.~{Goban}, C.-L. {Hung}, S.-P. {Yu}, J.~D. {Hood}, J.~A. {Muniz}, J.~H. {Lee},
-  M.~J. {Martin}, A.~C. {McClung}, K.~S. {Choi}, D.~E. {Chang}, O.~{Painter},
-  and H.~J. {Kimble}.
-\newblock {Atom-Light Interactions in Photonic Crystals}.
-\newblock {\em Nature communications}, 5(3808), \#May\# 2014.
-
-\bibitem{Lee2013}
-J~Lee, DH~Park, S~Mittal, M~Dagenais, and SL~Rolston.
-\newblock Integrated optical dipole trap for cold neutral atoms with an optical
-  waveguide coupler.
-\newblock {\em New Journal of Physics}, 15(4):043010, 2013.
-
-\bibitem{Baragiola2014}
-Ben~Q. Baragiola, Leigh~M. Norris, Enrique Monta\~no, Pascal~G. Mickelson,
+\bibitem{baragiola_three-dimensional_2014}
+Ben~Q. Baragiola, Leigh~M. Norris, Enrique Montaño, Pascal~G. Mickelson,
   Poul~S. Jessen, and Ivan~H. Deutsch.
 \newblock Three-dimensional light-matter interface for collective spin
   squeezing in atomic ensembles.
-\newblock {\em Phys. Rev. A}, 89:033850, Mar 2014.
+\newblock {\em Phys. Rev. A}, 89(3):033850, March 2014.
 
-\bibitem{LeKien2004}
-Fam Le~Kien, V.~I. Balykin, and K.~Hakuta.
-\newblock Atom trap and waveguide using a two-color evanescent light field
-  around a subwavelength-diameter optical fiber.
-\newblock {\em Phys. Rev. A}, 70:063403, Dec 2004.
+\bibitem{kuzmich_generation_2000}
+A.~Kuzmich, L.~Mandel, and N.~P. Bigelow.
+\newblock Generation of {Spin} {Squeezing} via {Continuous} {Quantum}
+  {Nondemolition} {Measurement}.
+\newblock {\em Phys. Rev. Lett.}, 85(8):1594--1597, August 2000.
 
-\bibitem{Balykin2004}
-VI~Balykin, K~Hakuta, Fam Le~Kien, JQ~Liang, and M~Morinaga.
-\newblock Atom trapping and guiding with a subwavelength-diameter optical
-  fiber.
-\newblock {\em Physical Review A}, 70(1):011401, 2004.
-
-\bibitem{Nayak2009}
-Kali~Prasanna Nayak.
-\newblock {\em Optical Nanofibers for Manipulating Atoms and Photons}.
-\newblock PhD thesis, University of Electro-Communications, 2009.
-
-\bibitem{Nayak2008}
-Kali~P Nayak and K~Hakuta.
-\newblock Single atoms on an optical nanofibre.
-\newblock {\em New Journal of Physics}, 10(5):053003, 2008.
-
-\bibitem{Fu2008}
-Jian Fu, Xiang Yin, Ningyuan Li, and Limin Tong.
-\newblock Atom waveguide and 1d optical lattice using a two-color evanescent
-  light field around an optical micro/nano-fiber.
-\newblock {\em Chin. Opt. Lett.}, 6(2):112--115, Feb 2008.
-
-\bibitem{Vetsch2010}
-E.~Vetsch, D.~Reitz, G.~Sagu\'e, R.~Schmidt, S.~T. Dawkins, and
+\bibitem{vetsch_nanofiber-based_2012}
+E.~Vetsch, S.T. Dawkins, R.~Mitsch, D.~Reitz, P.~Schneeweiss, and
   A.~Rauschenbeutel.
-\newblock Optical interface created by laser-cooled atoms trapped in the
-  evanescent field surrounding an optical nanofiber.
-\newblock {\em Phys. Rev. Lett.}, 104:203603, May 2010.
+\newblock Nanofiber-{Based} {Optical} {Trapping} of {Cold} {Neutral} {Atoms}.
+\newblock {\em IEEE Journal of Selected Topics in Quantum Electronics},
+  18(6):1763--1770, November 2012.
 
-\bibitem{Dawkins2011}
-S.~T. Dawkins, R.~Mitsch, D.~Reitz, E.~Vetsch, and A.~Rauschenbeutel.
-\newblock Dispersive optical interface based on nanofiber-trapped atoms.
-\newblock {\em Phys. Rev. Lett.}, 107:243601, Dec 2011.
+\bibitem{lacroute_state-insensitive_2012}
+C.~Lacroûte, K.~S. Choi, A.~Goban, D.~J. Alton, D.~Ding, N.~P. Stern, and
+  H.~J. Kimble.
+\newblock A state-insensitive, compensated nanofiber trap.
+\newblock {\em New J. Phys.}, 14(2):023056, February 2012.
 
-\bibitem{Goban2012}
-A.~Goban, K.~S. Choi, D.~J. Alton, D.~Ding, C.~Lacro\^ute, M.~Pototschnig,
-  T.~Thiele, N.~P. Stern, and H.~J. Kimble.
-\newblock Demonstration of a state-insensitive, compensated nanofiber trap.
-\newblock {\em Phys. Rev. Lett.}, 109:033603, Jul 2012.
+\bibitem{le_kien_propagation_2014}
+Fam Le~Kien and A.~Rauschenbeutel.
+\newblock Propagation of nanofiber-guided light through an array of atoms.
+\newblock {\em Phys. Rev. A}, 90(6):063816, December 2014.
 
-\bibitem{Mitsch2014a}
-R~Mitsch, C~Sayrin, B~Albrecht, P~Schneeweiss, and A~Rauschenbeutel.
-\newblock Quantum state-controlled directional spontaneous emission of photons
-  into a nanophotonic waveguide.
-\newblock {\em Nature communications}, 5, 2014.
+\bibitem{wubs_multiple-scattering_2004}
+Martijn Wubs, L.~G. Suttorp, and A.~Lagendijk.
+\newblock Multiple-scattering approach to interatomic interactions and
+  superradiance in inhomogeneous dielectrics.
+\newblock {\em Phys. Rev. A}, 70(5):053823, November 2004.
 
-\bibitem{Domokos2002a}
+\bibitem{sakoda_optical_1996}
+Kazuaki Sakoda and Kazuo Ohtaka.
+\newblock Optical response of three-dimensional photonic lattices: {Solutions}
+  of inhomogeneous {Maxwell}'s equations and their applications.
+\newblock {\em Phys. Rev. B}, 54(8):5732--5741, August 1996.
+
+\bibitem{sondergaard_general_2001}
+T.~Søndergaard and B.~Tromborg.
+\newblock General theory for spontaneous emission in active dielectric
+  microstructures: {Example} of a fiber amplifier.
+\newblock {\em Phys. Rev. A}, 64(3):033812, August 2001.
+
+\bibitem{glauber_quantum_1991}
+Roy~J. Glauber and M.~Lewenstein.
+\newblock Quantum optics of dielectric media.
+\newblock {\em Phys. Rev. A}, 43(1):467--491, January 1991.
+
+\bibitem{le_kien_anisotropy_2014}
+Fam Le~Kien and A.~Rauschenbeutel.
+\newblock Anisotropy in scattering of light from an atom into the guided modes
+  of a nanofiber.
+\newblock {\em Phys. Rev. A}, 90(2):023805, August 2014.
+
+\bibitem{kien_field_2004}
+Fam~Le Kien, J.~Q. Liang, K.~Hakuta, and V.~I. Balykin.
+\newblock Field intensity distributions and polarization orientations in a
+  vacuum-clad subwavelength-diameter optical fiber.
+\newblock {\em Optics Communications}, 242(4–6):445--455, December 2004.
+
+\bibitem{fussell_decay_2005}
+D.~P. Fussell, R.~C. McPhedran, and C.~Martijn~de Sterke.
+\newblock Decay rate and level shift in a circular dielectric waveguide.
+\newblock {\em Phys. Rev. A}, 71(1):013815, January 2005.
+
+\bibitem{dung_spontaneous_2000}
+Ho~Trung Dung, Ludwig Knöll, and Dirk-Gunnar Welsch.
+\newblock Spontaneous decay in the presence of dispersing and absorbing
+  bodies:{\textbackslash}quad\{\}{General} theory and application to a
+  spherical cavity.
+\newblock {\em Phys. Rev. A}, 62(5):053804, October 2000.
+
+\bibitem{chen_finite-element_2010}
+Yuntian Chen, Torben~Roland Nielsen, Niels Gregersen, Peter Lodahl, and Jesper
+  Mørk.
+\newblock Finite-element modeling of spontaneous emission of a quantum emitter
+  at nanoscale proximity to plasmonic waveguides.
+\newblock {\em Phys. Rev. B}, 81(12):125431, March 2010.
+
+\bibitem{le_kien_spontaneous_2005}
+Fam Le~Kien, S.~Dutta~Gupta, V.~I. Balykin, and K.~Hakuta.
+\newblock Spontaneous emission of a cesium atom near a nanofiber: {Efficient}
+  coupling of light to guided modes.
+\newblock {\em Phys. Rev. A}, 72(3):032509, September 2005.
+
+\bibitem{klimov_spontaneous_2004}
+V.~V. Klimov and M.~Ducloy.
+\newblock Spontaneous emission rate of an excited atom placed near a nanofiber.
+\newblock {\em Phys. Rev. A}, 69(1):013812, January 2004.
+
+\bibitem{domokos_quantum_2002}
 Peter Domokos, Peter Horak, and Helmut Ritsch.
 \newblock Quantum description of light-pulse scattering on a single atom in
   waveguides.
-\newblock {\em Phys. Rev. A}, 65:033832, Mar 2002.
+\newblock {\em Phys. Rev. A}, 65(3):033832, March 2002.
 
-\bibitem{LeKien2005}
-Fam Le~Kien, S.~Dutta Gupta, K.~P. Nayak, and K.~Hakuta.
-\newblock Nanofiber-mediated radiative transfer between two distant atoms.
-\newblock {\em Phys. Rev. A}, 72:063815, Dec 2005.
+\bibitem{bures_power_1999}
+Jacques Bures and René Ghosh.
+\newblock Power density of the evanescent field in the vicinity of a tapered
+  fiber.
+\newblock {\em Journal of the Optical Society of America A}, 16(8):1992, 1999.
 
-\bibitem{LeKien2005a}
-Fam Le~Kien, S~Dutta Gupta, VI~Balykin, and K~Hakuta.
-\newblock Spontaneous emission of a cesium atom near a nanofiber: Efficient
-  coupling of light to guided modes.
-\newblock {\em Physical Review A}, 72(3):032509, 2005.
-
-\bibitem{LeKien2006}
+\bibitem{le_kien_scattering_2006}
 Fam Le~Kien, V.~I. Balykin, and K.~Hakuta.
 \newblock Scattering of an evanescent light field by a single cesium atom near
   a nanofiber.
-\newblock {\em Phys. Rev. A}, 73:013819, Jan 2006.
+\newblock {\em Phys. Rev. A}, 73(1):013819, January 2006.
 
-\bibitem{Shen2007}
-Jung-Tsung Shen and Shanhui Fan.
-\newblock Strongly correlated two-photon transport in a one-dimensional
-  waveguide coupled to a two-level system.
-\newblock {\em Physical review letters}, 98(15):153003, 2007.
-
-\bibitem{LeKien2009b}
+\bibitem{le_kien_correlations_2008}
 Fam Le~Kien and K.~Hakuta.
-\newblock Cavity-enhanced channeling of emission from an atom into a nanofiber.
-\newblock {\em Phys. Rev. A}, 80:053826, Nov 2009.
+\newblock Correlations between photons emitted by multiatom fluorescence into a
+  nanofiber.
+\newblock {\em Phys. Rev. A}, 77(3):033826, March 2008.
 
-\bibitem{Das2010}
-Manoj Das, A.~Shirasaki, K.~P. Nayak, M.~Morinaga, Fam~Le Kien, and K.~Hakuta.
-\newblock Measurement of fluorescence emission spectrum of few strongly driven
-  atoms using an optical nanofiber.
-\newblock {\em Opt. Express}, 18(16):17154--17164, Aug 2010.
+\bibitem{nha_cavity_1997}
+H.~Nha and W.~Jhe.
+\newblock Cavity quantum electrodynamics for a cylinder: {Inside} a hollow
+  dielectric and near a solid dielectric cylinder.
+\newblock {\em Phys. Rev. A}, 56(3):2213--2220, September 1997.
 
-\bibitem{LeKien2011}
-Fam Le~Kien and K.~Hakuta.
-\newblock Deterministic generation of a pair of entangled guided photons from a
-  single atom in a nanofiber cavity.
-\newblock {\em Phys. Rev. A}, 84:053801, Nov 2011.
+\bibitem{maslov_distribution_2006}
+A.~V. Maslov, M.~I. Bakunov, and C.~Z. Ning.
+\newblock Distribution of optical emission between guided modes and free space
+  in a semiconductor nanowire.
+\newblock {\em Journal of Applied Physics}, 99(2):024314, January 2006.
 
-\bibitem{Reitz2014}
-D.~Reitz, C.~Sayrin, B.~Albrecht, I.~Mazets, R.~Mitsch, P.~Schneeweiss, and
-  A.~Rauschenbeutel.
-\newblock Backscattering properties of a waveguide-coupled array of atoms in
-  the strongly nonparaxial regime.
-\newblock {\em Phys. Rev. A}, 89:031804, Mar 2014.
+\bibitem{vos_orientation-dependent_2009}
+Willem~L. Vos, A.~Femius Koenderink, and Ivan~S. Nikolaev.
+\newblock Orientation-dependent spontaneous emission rates of a two-level
+  quantum emitter in any nanophotonic environment.
+\newblock {\em Phys. Rev. A}, 80(5):053802, November 2009.
 
-\bibitem{LeKien2014}
-F.~{Le Kien} and A.~{Rauschenbeutel}.
-\newblock Anisotropy in scattering of light from an atom into the guided modes
-  of a nanofiber.
-\newblock {\em Physical Review A}, 90:023805, Aug 2014.
+\bibitem{mitsch_quantum_2014}
+R.~Mitsch, C.~Sayrin, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
+\newblock Quantum state-controlled directional spontaneous emission of photons
+  into a nanophotonic waveguide.
+\newblock {\em Nat Commun}, 5, December 2014.
 
-\bibitem{Mitsch2014}
+\bibitem{fan_input-output_2010}
+Shanhui Fan, Şükrü~Ekin Kocabaş, and Jung-Tsung Shen.
+\newblock Input-output formalism for few-photon transport in one-dimensional
+  nanophotonic waveguides coupled to a qubit.
+\newblock {\em Phys. Rev. A}, 82(6):063821, December 2010.
+
+\bibitem{Note1}
+In a careful derivation of the Lippman-Schwinger scattering equation, it is not
+  the total Green's function that appears in Eq.~(\ref {Eq::ScatteredField})
+  but rather a related dyadic quantity, $\protect \mathbf {K}(\protect \mathbf
+  {r},\protect \mathbf {r}', \omega _0) = \protect \mathbf {G}(\protect \mathbf
+  {r},\protect \mathbf {r}', \omega _0) + \delta (\protect \mathbf {r}-\protect
+  \mathbf {r}')/n^2(\protect \mathbf {r})$ \cite
+  {wubs_multiple-scattering_2004}. This function arises by proper accounting of
+  the scatterer's coupling to the \protect \emph {displacement} rather than the
+  electric field \cite {yao_ultrahigh_2009}. The distinction becomes important
+  at the source point $\protect \mathbf {r} = \protect \mathbf {r}'$; however,
+  for lossless dielectrics $n(\protect \mathbf {r})$ is real and $\Im [\protect
+  \tensor {\protect \mathbf {G}}(\protect \mathbf {r}',\protect \mathbf {r}';
+  \omega )] = \Im [\protect \tensor {\protect \mathbf {K}}(\protect \mathbf
+  {r}',\protect \mathbf {r}'; \omega )]$ \cite {yao_-chip_2010}.
+
+\bibitem{buhmann_casimir-polder_2004}
+Stefan~Yoshi Buhmann, Ludwig Knöll, Dirk-Gunnar Welsch, and Ho~Trung Dung.
+\newblock Casimir-{Polder} forces: {A} nonperturbative approach.
+\newblock {\em Phys. Rev. A}, 70(5):052117, November 2004.
+
+\bibitem{deutsch_quantum_2010}
+Ivan~H. Deutsch and Poul~S. Jessen.
+\newblock Quantum control and measurement of atomic spins in polarization
+  spectroscopy.
+\newblock {\em Optics Communications}, 283(5):681--694, March 2010.
+
+\bibitem{kien_dynamical_2013}
+Fam~Le Kien, Philipp Schneeweiss, and Arno Rauschenbeutel.
+\newblock Dynamical polarizability of atoms in arbitrary light fields: general
+  theory and application to cesium.
+\newblock {\em Eur. Phys. J. D}, 67(5):1--16, May 2013.
+
+\bibitem{tanji-suzuki_chapter_2011}
+Haruka Tanji-Suzuki, Ian~D. Leroux, Monika~H. Schleier-Smith, Marko Cetina,
+  Andrew~T. Grier, Jonathan Simon, and Vladan Vuletić.
+\newblock Chapter 4 - {Interaction} between {Atomic} {Ensembles} and {Optical}
+  {Resonators}: {Classical} {Description}.
+\newblock In P.~R. Berman {and} C. C.~Lin E.~Arimondo, editor, {\em Advances
+  {In} {Atomic}, {Molecular}, and {Optical} {Physics}}, volume~60 of {\em
+  Advances in {Atomic}, {Molecular}, and {Optical} {Physics}}, pages 201--237.
+  Academic Press, 2011.
+
+\bibitem{geremia_tensor_2006}
+J.~M. Geremia, John~K. Stockton, and Hideo Mabuchi.
+\newblock Tensor polarizability and dispersive quantum measurement of
+  multilevel atoms.
+\newblock {\em Phys. Rev. A}, 73(4):042112, April 2006.
+
+\bibitem{hammerer_quantum_2010}
+Klemens Hammerer, Anders~S. Sørensen, and Eugene~S. Polzik.
+\newblock Quantum interface between light and atomic ensembles.
+\newblock {\em Rev. Mod. Phys.}, 82(2):1041--1093, April 2010.
+
+\bibitem{chaudhury_continuous_2006}
+Souma Chaudhury, Greg~A. Smith, Kevin Schulz, and Poul~S. Jessen.
+\newblock Continuous {Nondemolition} {Measurement} of the {Cs} {Clock}
+  {Transition} {Pseudospin}.
+\newblock {\em Phys. Rev. Lett.}, 96(4):043001, January 2006.
+
+\bibitem{dawkins_dispersive_2011}
+S.~T. Dawkins, R.~Mitsch, D.~Reitz, E.~Vetsch, and A.~Rauschenbeutel.
+\newblock Dispersive {Optical} {Interface} {Based} on {Nanofiber}-{Trapped}
+  {Atoms}.
+\newblock {\em Phys. Rev. Lett.}, 107(24):243601, December 2011.
+
+\bibitem{beguin_generation_2014}
+J.-B. Béguin, E. M. Bookjans, S. L. Christensen, H. L. Sørensen,
+  J. H. Müller, E. S. Polzik, and J.~Appel.
+\newblock Generation and {Detection} of a {Sub}-{Poissonian} {Atom} {Number}
+  {Distribution} in a {One}-{Dimensional} {Optical} {Lattice}.
+\newblock {\em Phys. Rev. Lett.}, 113(26):263603, December 2014.
+
+\bibitem{smith_quantum_2013}
+A.~Smith, C.~A. Riofrío, B.~E. Anderson, H.~Sosa-Martinez, I.~H. Deutsch, and
+  P.~S. Jessen.
+\newblock Quantum state tomography by continuous measurement and compressed
+  sensing.
+\newblock {\em Phys. Rev. A}, 87(3):030102, March 2013.
+
+\bibitem{takano_spin_2009}
+T.~Takano, M.~Fuyama, R.~Namiki, and Y.~Takahashi.
+\newblock Spin {Squeezing} of a {Cold} {Atomic} {Ensemble} with the {Nuclear}
+  {Spin} of {One}-{Half}.
+\newblock {\em Phys. Rev. Lett.}, 102(3):033601, January 2009.
+
+\bibitem{sewell_magnetic_2012}
+R.~J. Sewell, M.~Koschorreck, M.~Napolitano, B.~Dubost, N.~Behbood, and M.~W.
+  Mitchell.
+\newblock Magnetic {Sensitivity} {Beyond} the {Projection} {Noise} {Limit} by
+  {Spin} {Squeezing}.
+\newblock {\em Phys. Rev. Lett.}, 109(25):253605, December 2012.
+
+\bibitem{mitsch_exploiting_2014}
 R.~Mitsch, C.~Sayrin, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
 \newblock Exploiting the local polarization of strongly confined light for
   sub-micrometer-resolution internal state preparation and manipulation of cold
   atoms.
-\newblock {\em Phys. Rev. A}, 89:063829, Jun 2014.
+\newblock {\em Phys. Rev. A}, 89(6):063829, June 2014.
 
-\bibitem{Schneeweiss2014}
-Philipp Schneeweiss, Fam Le~Kien, and Arno Rauschenbeutel.
-\newblock Nanofiber-based atom trap created by combining fictitious and real
-  magnetic fields.
-\newblock {\em New Journal of Physics}, 16(1):013014, 2014.
+\bibitem{sayrin_storage_2015}
+C.~Sayrin, C.~Clausen, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
+\newblock Storage of fiber-guided light in a nanofiber-trapped ensemble of cold
+  atoms.
+\newblock {\em Optica}, 2(4):353--356, April 2015.
 
-\bibitem{Beguin2014}
-J-B B{\'e}guin, EM~Bookjans, SL~Christensen, HL~S{\o}rensen, JH~M{\"u}ller,
-  ES~Polzik, and J~Appel.
-\newblock Generation and detection of a sub-poissonian atom number distribution
-  in a one-dimensional optical lattice.
-\newblock {\em Physical Review Letters}, 113(26):263603, 2014.
+\bibitem{gardiner_input_1985}
+C.~W. Gardiner and M.~J. Collett.
+\newblock Input and output in damped quantum systems: {Quantum} stochastic
+  differential equations and the master equation.
+\newblock {\em Phys. Rev. A}, 31(6):3761--3774, June 1985.
 
-\bibitem{Kuzmich2000}
-A~Kuzmich, L~Mandel, and NP~Bigelow.
-\newblock Generation of spin squeezing via continuous quantum nondemolition
-  measurement.
-\newblock {\em Physical Review Letters}, 85:1594--1597, 2000.
+\bibitem{blow_continuum_1990}
+K.~J. Blow, Rodney Loudon, Simon J.~D. Phoenix, and T.~J. Shepherd.
+\newblock Continuum fields in quantum optics.
+\newblock {\em Phys. Rev. A}, 42(7):4102--4114, October 1990.
 
-\bibitem{Deutsch2010a}
-Ivan~H. Deutsch and Poul~S. Jessen.
-\newblock Quantum control and measurement of atomic spins in polarization
-  spectroscopy.
-\newblock {\em Optics Communications}, 283(5):681 -- 694, 2010.
-\newblock Quo vadis Quantum Optics?
-
-\bibitem{Julsgaard2004}
-Brian Julsgaard, Jacob Sherson, J~Ignacio Cirac, Jaromir Fiur{\'a}{\v{s}}ek,
-  and Eugene~S Polzik.
-\newblock Experimental demonstration of quantum memory for light.
-\newblock {\em Nature}, 432(7016):482--486, 2004.
-
-\bibitem{Choi2008}
-Kyung~Soo Choi, Hui Deng, Julien Laurat, and HJ~Kimble.
-\newblock Mapping photonic entanglement into and out of a quantum memory.
-\newblock {\em Nature}, 452(7183):67--71, 2008.
-
-\bibitem{Hosseini2011}
-M~Hosseini, BM~Sparkes, G~Campbell, PK~Lam, and BC~Buchler.
-\newblock High efficiency coherent optical memory with warm rubidium vapour.
-\newblock {\em Nature communications}, 2:174, 2011.
-
-\bibitem{Hosseini2011a}
-M~Hosseini, Geoff Campbell, Ben~M Sparkes, Ping~K Lam, and Ben~C Buchler.
-\newblock Unconditional room-temperature quantum memory.
-\newblock {\em Nature Physics}, 7(10):794--798, 2011.
-
-\bibitem{Vasilyev2012}
-D~V Vasilyev, K~Hammerer, N~Korolev, and A~S S?rensen.
-\newblock Quantum noise for faraday light�cmatter interfaces.
-\newblock {\em Journal of Physics B: Atomic, Molecular and Optical Physics},
-  45(12):124007, 2012.
-
-\bibitem{Brennen1999}
-Gavin~K. Brennen, Carlton~M. Caves, Poul~S. Jessen, and Ivan~H. Deutsch.
-\newblock Quantum logic gates in optical lattices.
-\newblock {\em Phys. Rev. Lett.}, 82:1060--1063, Feb 1999.
-
-\bibitem{Klimov2004}
-Vasily~V Klimov and Martial Ducloy.
-\newblock Spontaneous emission rate of an excited atom placed near a nanofiber.
-\newblock {\em Physical Review A}, 69(1):013812, 2004.
-
-\bibitem{Nha1997}
-H~Nha and W~Jhe.
-\newblock Cavity quantum electrodynamics for a cylinder: inside a hollow
-  dielectric and near a solid dielectric cylinder.
-\newblock {\em Physical Review A}, 56(3):2213, 1997.
-
-\bibitem{Maslov2006}
-A.~V. Maslov, M.~I. Bakunov, and C.~Z. Ning.
-\newblock Distribution of optical emission between guided modes and free space
-  in a semiconductor nanowire.
-\newblock {\em Journal of Applied Physics}, 99(2):--, 2006.
-
-\bibitem{Glauber1991}
-Roy~J. Glauber and M.~Lewenstein.
-\newblock Quantum optics of dielectric media.
-\newblock {\em Phys. Rev. A}, 43:467--491, Jan 1991.
-
-\bibitem{Sondergaard2001a}
-Thomas S{\o}ndergaard and Bjarne Tromborg.
-\newblock General theory for spontaneous emission in active dielectric
-  microstructures: Example of a fiber amplifier, green function, green's
-  function.
-\newblock {\em Physical Review A}, 64(3):033812, 2001.
-
-\bibitem{LeKien2008}
-Fam Le~Kien and K.~Hakuta.
-\newblock Correlations between photons emitted by multiatom fluorescence into a
-  nanofiber.
-\newblock {\em Phys. Rev. A}, 77:033826, Mar 2008.
-
-\bibitem{Smith2003a}
-Greg~A Smith, Souma Chaudhury, and Poul~S Jessen.
+\bibitem{smith_faraday_2003}
+Greg~A. Smith, Souma Chaudhury, and Poul~S. Jessen.
 \newblock Faraday spectroscopy in an optical lattice: a continuous probe of
   atom dynamics.
-\newblock {\em Journal of Optics B: Quantum and Semiclassical Optics},
-  5(4):323, 2003.
+\newblock {\em J. Opt. B: Quantum Semiclass. Opt.}, 5(4):323, August 2003.
 
-\bibitem{Lacroute2012}
-Clement Lacro{\^u}te, KS~Choi, A~Goban, DJ~Alton, D~Ding, NP~Stern, and
-  HJ~Kimble.
-\newblock A state-insensitive, compensated nanofiber trap.
-\newblock {\em New Journal of Physics}, 14(2):023056, 2012.
+\bibitem{zhang_collective_2012}
+Hao Zhang, Robert McConnell, Senka Ćuk, Qian Lin, Monika~H. Schleier-Smith,
+  Ian~D. Leroux, and Vladan Vuletić.
+\newblock Collective {State} {Measurement} of {Mesoscopic} {Ensembles} with
+  {Single}-{Atom} {Resolution}.
+\newblock {\em Phys. Rev. Lett.}, 109(13):133603, September 2012.
+
+\bibitem{wineland_spin_1992}
+D.~J. Wineland, J.~J. Bollinger, W.~M. Itano, F.~L. Moore, and D.~J. Heinzen.
+\newblock Spin squeezing and reduced quantum noise in spectroscopy.
+\newblock {\em Phys. Rev. A}, 46(11):R6797--R6800, December 1992.
+
+\bibitem{norris_enhanced_2012}
+Leigh~M. Norris, Collin~M. Trail, Poul~S. Jessen, and Ivan~H. Deutsch.
+\newblock Enhanced {Squeezing} of a {Collective} {Spin} via {Control} of {Its}
+  {Qudit} {Subsystems}.
+\newblock {\em Phys. Rev. Lett.}, 109(17):173603, October 2012.
+
+\bibitem{smith_continuous_2004}
+Greg~A. Smith, Souma Chaudhury, Andrew Silberfarb, Ivan~H. Deutsch, and Poul~S.
+  Jessen.
+\newblock Continuous {Weak} {Measurement} and {Nonlinear} {Dynamics} in a
+  {Cold} {Spin} {Ensemble}.
+\newblock {\em Phys. Rev. Lett.}, 93(16):163602, October 2004.
+
+\bibitem{vasilyev_quantum_2012}
+D.~V. Vasilyev, K.~Hammerer, N.~Korolev, and A.~S. Sørensen.
+\newblock Quantum noise for {Faraday} light–matter interfaces.
+\newblock {\em J. Phys. B: At. Mol. Opt. Phys.}, 45(12):124007, June 2012.
+
+\bibitem{bohnet_reduced_2014}
+J.~G. Bohnet, K.~C. Cox, M.~A. Norcia, J.~M. Weiner, Z.~Chen, and J.~K.
+  Thompson.
+\newblock Reduced spin measurement back-action for a phase sensitivity ten
+  times beyond the standard quantum limit.
+\newblock {\em Nat Photon}, 8(9):731--736, September 2014.
+
+\bibitem{le_kien_intracavity_2009}
+Fam Le~Kien and K.~Hakuta.
+\newblock Intracavity electromagnetically induced transparency in atoms around
+  a nanofiber with a pair of {Bragg} grating mirrors.
+\newblock {\em Phys. Rev. A}, 79(4):043813, April 2009.
+
+\bibitem{wuttke_nanofiber_2012}
+C.~Wuttke, M.~Becker, S.~Brückner, M.~Rothhardt, and A.~Rauschenbeutel.
+\newblock Nanofiber {Fabry}–{Perot} microresonator for nonlinear optics and
+  cavity quantum electrodynamics.
+\newblock {\em Opt. Lett.}, 37(11):1949--1951, June 2012.
+
+\bibitem{nayak_optical_2014}
+K.~P. Nayak, Pengfei Zhang, and K.~Hakuta.
+\newblock Optical nanofiber-based photonic crystal cavity.
+\newblock {\em Optics Letters}, 39(2):232, January 2014.
+
+\bibitem{hafezi_atomic_2012}
+M.~Hafezi, Z.~Kim, S.~L. Rolston, L.~A. Orozco, B.~L. Lev, and J.~M. Taylor.
+\newblock Atomic interface between microwave and optical photons.
+\newblock {\em Phys. Rev. A}, 85(2):020302, February 2012.
+
+\bibitem{yalla_cavity_2014}
+Ramachandrarao Yalla, Mark Sadgrove, Kali~P. Nayak, and Kohzo Hakuta.
+\newblock Cavity {Quantum} {Electrodynamics} on a {Nanofiber} {Using} a
+  {Composite} {Photonic} {Crystal} {Cavity}.
+\newblock {\em Phys. Rev. Lett.}, 113(14):143601, September 2014.
+
+\bibitem{smith_quantum_2013-1}
+A.~Smith, B.~E. Anderson, H.~Sosa-Martinez, C.~A. Riofrío, Ivan~H. Deutsch,
+  and Poul~S. Jessen.
+\newblock Quantum {Control} in the {Cs} \$6\{{S}\}\_\{1/2\}\$ {Ground}
+  {Manifold} {Using} {Radio}-{Frequency} and {Microwave} {Magnetic} {Fields}.
+\newblock {\em Phys. Rev. Lett.}, 111(17):170502, October 2013.
+
+\bibitem{kumar_autler-townes_2015}
+Ravi Kumar, Vandna Gokhroo, Kieran Deasy, and Síle~Nic Chormaic.
+\newblock Autler-{Townes} splitting via frequency upconversion at ultra-low
+  power levels in cold \${\textasciicircum}\{87\}\${Rb} atoms using an optical
+  nanofiber.
+\newblock {\em arXiv:1502.01123 [physics]}, February 2015.
+\newblock arXiv: 1502.01123.
+
+\bibitem{gonzalez-tudela_deterministic_2015}
+A.~González-Tudela, V.~Paulisch, D.~E. Chang, H.~J. Kimble, and J.~I. Cirac.
+\newblock Deterministic generation of arbitrary photonic states assisted by
+  dissipation.
+\newblock {\em arXiv:1504.07600 [quant-ph]}, April 2015.
+\newblock arXiv: 1504.07600.
+
+\bibitem{gouraud_demonstration_2015}
+B.~Gouraud, D.~Maxein, A.~Nicolas, O.~Morin, and J.~Laurat.
+\newblock Demonstration of a {Memory} for {Tightly} {Guided} {Light} in an
+  {Optical} {Nanofiber}.
+\newblock {\em Phys. Rev. Lett.}, 114(18):180503, May 2015.
+
+\bibitem{oshea_fiber-optical_2013}
+Danny O’Shea, Christian Junge, Jürgen Volz, and Arno Rauschenbeutel.
+\newblock Fiber-{Optical} {Switch} {Controlled} by a {Single} {Atom}.
+\newblock {\em Phys. Rev. Lett.}, 111(19):193601, November 2013.
+
+\bibitem{scheel_directional_2015}
+Stefan Scheel, Stefan~Yoshi Buhmann, Christoph Clausen, and Philipp
+  Schneeweiss.
+\newblock Directional spontaneous emission and lateral {Casimir}-{Polder} force
+  on an atom close to a nanofiber.
+\newblock {\em arXiv:1505.01275 [quant-ph]}, May 2015.
+\newblock arXiv: 1505.01275.
+
+\bibitem{yao_ultrahigh_2009}
+Peijun Yao, C.~Van~Vlack, A.~Reza, M.~Patterson, M.~M. Dignam, and S.~Hughes.
+\newblock Ultrahigh {Purcell} factors and {Lamb} shifts in slow-light
+  metamaterial waveguides.
+\newblock {\em Phys. Rev. B}, 80(19):195106, November 2009.
+
+\bibitem{yao_-chip_2010}
+P.~Yao, V.s.c. Manga~Rao, and S.~Hughes.
+\newblock On-chip single photon sources using planar photonic crystals and
+  single quantum dots.
+\newblock {\em Laser \& Photon. Rev.}, 4(4):499--516, June 2010.
+
+\bibitem{tong_single-mode_2004}
+Limin Tong, Jingyi Lou, and Eric Mazur.
+\newblock Single-mode guiding properties of subwavelength-diameter silica and
+  silicon wire waveguides.
+\newblock {\em Opt. Express}, 12(6):1025--1035, March 2004.
+
+\bibitem{jacobs_straightforward_2006}
+Kurt Jacobs and Daniel~A. Steck.
+\newblock A straightforward introduction to continuous quantum measurement.
+\newblock {\em Contemporary Physics}, 47(5):279--303, September 2006.
+
+\bibitem{goban_atomlight_2014}
+A.~Goban, C.-L. Hung, S.-P. Yu, J.~D. Hood, J.~A. Muniz, J.~H. Lee, M.~J.
+  Martin, A.~C. McClung, K.~S. Choi, D.~E. Chang, O.~Painter, and H.~J. Kimble.
+\newblock Atom–light interactions in photonic crystals.
+\newblock {\em Nat Commun}, 5, May 2014.
 
 \end{thebibliography}
