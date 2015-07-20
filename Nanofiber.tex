@@ -250,12 +250,22 @@ equations [].
 
 \change{The remainder of this article is organized as follows ...}
 
-\begin{figure}
+\begin{figure}[H]
+\begin{minipage}{0.95\linewidth}
 \centering
-\includegraphics[scale=0.35]{./Figs/BirefringenceMeasurement_randomAtoms}
+%\includegraphics[scale=0.35]{./Figs/BirefringenceMeasurement_randomAtoms}
+\subfloat[]{\label{fig:nanofiber_tikz}\includegraphics[scale=0.35]{./Figs/BirefringenceMeasurement_randomAtoms}}
+\end{minipage}
+\par\medskip
+\begin{minipage}{0.95\linewidth}
+\centering
+\subfloat[]{\label{fig:nanofiber_svg}\includegraphics[scale=0.35]{./Figs/ProbeNanofiber_birefringence_lightpath_inputlight}}
+\end{minipage}
 \caption{Birefringence measurement setup for a nanofiber trapped atomic system. In the evanescent 
 field of the nanofiber, atoms (golden balls) randomly  occupy the periodic trapping sites on both sides of 
-a 1D-chain with a period of $\Lambda$.}
+the \emph{x}-axis in the tapered region shown in the figure.
+We assume the nanofiber has a radius constant $ a=225 $nm in this paper.
+\comment{Need to choose one of them.}}
 \label{fig:BirefringenceMeasurement}
 \end{figure}
 
@@ -744,7 +754,7 @@ In the absence of an decoherence, such a QND measurement for integration time $T
 \begin{equation}
 r = \kappa T  (\Delta J_3^2)_{in}
 \end{equation}
-is the integrated measurement strength.=~\cite{?}.
+is the integrated measurement strength.~\cite{?}.
 
 %As discussed in Sec. \ref{Sec::AtomNumberMeasurement}, the  operator $\hat{\mathcal{M}}$ describes an integrated homodyne measurement of the anti-diagonal $X_L$-quadrature [\erf{Eq::Xquad}], 
 %	\begin{align} \label{Eq::OutputS3Squeeze}
@@ -956,16 +966,17 @@ We see that, with just a few thousands of atoms, a few dB of squeezing can be ac
 Independent of the atom number, the magic wavelength 
 %and effective detuning $\Delta_{44}^m$, given by \erf{Eq::SqueezingEffectiveDetuning}, 
 are plotted in \frf{fig:domega_magic44_qXYoptimal_rp} and \frf{fig:domega_magic33_qXYoptimal_rp} for different choices of quantization axis. 
+Compared to the natural linewidth of Cs atoms ($ \sim 5 $MHz), the magic frequencies for atoms not too close to the fiber surface are well in the far-off-resonance regime.
 Since the optimal quantization axis for spin squeezing is so close to the \emph{y}-axis, one may use \emph{y}-axis as the optimal quantization axis in practice. 
 
 The peak achievable squeezing parameter as a function of quantization axis orientation is also plotted in \frf{fig:xi_q_D1_NA2500_r1d8a} and \frf{fig:ximax_q_D1_xyplane_NA2500_r1d8a} in a full angle scope. 
 
 Insight into the optimal balance between QND measurement and the optical pumping is gained by examining measurement strength and decay rates. 
-The squeezing of $\varz$ is determined by the measurement strength, $\kappa/\gamma_s$, (shown in \frf{fig:OD_q_xyplane_r1d8a_m44}) followed from \erf{Eq::chieff}. 
+The squeezing of $\varz$ is determined by the metrological measurement strength, $\kappa/\gamma_s=\sigma_0 A_{\rm in}/A_{J_3}^2$ (or can be defined as the \emph{optical depth per atom}, $ \mathrm{OD}/\mathrm{atom} $ ), followed from \erf{Eq::chieff} and plotted in \frf{fig:OD_q_xyplane_r1d8a_m44}. 
 In the context of metrological squeezing, optical pumping affects the mean, $\expt{\hat{J}_x}$, and the variance, $\varz$, in different ways. 
 The relative rates of atom loss, of decoherence in $\varz$, and of spin flips that shorten $\expt{\hat{J}_x}$ are balanced with the measurement strength imply the optimal quantization axis direction and the peak achievable metrological squeezing effect.
-By normalizing the measurement strength, $ \kappa $, and the other rates to the photon scattering rate, $ \gamma_s $, we find that the metrological strength which can be defined as $ \mathrm{OD}/\mathrm{atom}\equiv \kappa/\gamma_s $ actually peaks along the \emph{y}-axis. 
-Shown in \frf{fig:gamma34_q_D1_xyplane_NA2500_r1d8a_m44} is one important spin flip rate due to optical pumping from $ \ket{\uparrow} $ to $ \ket{\downarrow} $ which kicks the optimal quantization axis off the \emph{y}-axis for a smaller value or weaker decoherence.
+By normalizing the measurement strength, $ \kappa $, and other rates to the photon scattering rate, $ \gamma_s $, we find that the metrological strength $ \mathrm{OD}/\mathrm{atom}\equiv \kappa/\gamma_s $ actually peaks along the \emph{y}-axis. 
+Shown in \frf{fig:gamma34_q_D1_xyplane_NA2500_r1d8a_m44} is one important spin flip rate due to optical pumping from $ \ket{\uparrow} $ to $ \ket{\downarrow} $ which kicks the optimal quantization axis off the \emph{y}-axis for a smaller value of $ \gammaud $ or weaker decoherence.
 
 
 %========= FIGURE: Peak squeezing (\xi, measurement strength, scattering rates) =========
