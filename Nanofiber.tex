@@ -694,7 +694,10 @@ For using the D1-line of $^{133}$Cs atoms as the probe light, there are two magi
 \centering
 \subfloat[]{\label{fig:kappa_q_D1_xyplane_NA2500_r2a_m44}\includegraphics[scale=0.4]{./Figs/kappa_q_D1_xyplane_NA2500_r2a_m44}}
 \end{minipage}
-\caption{Subfig.~\protect\subref{fig:D1_magicfreqs44_transition}: Clock state level structure for probing on the D1-line of $^{133}$Cs atoms. $ \omega_{44}^m $ and $ \omega_{33}^m $ are the two magic frequencies generate the birefringence interaction.  Subfig.~\protect\subref{fig:domega_magic12_q_NA2500_r1d8a}: Magic detunings, $\Delta_{44}^m/2\pi \equiv (\omega_{0}-\omega_{44'})/2\pi$ and $\Delta_{33}^m/2\pi \equiv (\omega_{0}-\omega_{33'})/2\pi$, for an atom located on the \emph{x}-axis at $ r'\!_\perp=1.8a $ as a function of quantization axis rotating in the transverse plane. The number on the concentric circles are the absolute value of the magic detuning in the unit of MHz. The numbers at the ends of radial lines are the rotating angle of $ \hat{\mathbf{e}}_\pi $ relative to the \emph{x}-axis in the transverse plane. Similarly, Subfig.~\protect\subref{fig:kappa_q_D1_xyplane_NA2500_r2a_m44} shows the measurement strength, $ \kappa=|\chi_{J_3}|^2 \dot{N}_L $, as a function of quantization axis on the transverse plane for an atom trapped at $ r'\!_\perp =2a $ on the \emph{x}-axis using the $ \omega_{44}^m $ magic frequency (arbitrary units). \comment{The measurement sthrength figure should be replaced with the atom placed at $ r\!_\perp=1.8a $ position.} }\label{Fig::CouplingStrength}
+\caption{Subfig.~\protect\subref{fig:D1_magicfreqs44_transition}: Clock state level structure for probing on the D1-line of $^{133}$Cs atoms. 
+$ \omega_{44}^m $ and $ \omega_{33}^m $ are the two magic frequencies generate the birefringence interaction.  
+\comment{Should we label the level gaps in frequency as well?}
+Subfig.~\protect\subref{fig:domega_magic12_q_NA2500_r1d8a}: Magic detunings, $\Delta_{44}^m/2\pi \equiv (\omega_{0}-\omega_{44'})/2\pi$ and $\Delta_{33}^m/2\pi \equiv (\omega_{0}-\omega_{33'})/2\pi$, for an atom located on the \emph{x}-axis at $ r'\!_\perp=1.8a $ as a function of quantization axis rotating in the transverse plane. The number on the concentric circles are the absolute value of the magic detuning in the unit of MHz. The numbers at the ends of radial lines are the rotating angle of $ \hat{\mathbf{e}}_\pi $ relative to the \emph{x}-axis in the transverse plane. Similarly, Subfig.~\protect\subref{fig:kappa_q_D1_xyplane_NA2500_r2a_m44} shows the measurement strength, $ \kappa=|\chi_{J_3}|^2 \dot{N}_L $, as a function of quantization axis on the transverse plane for an atom trapped at $ r'\!_\perp =2a $ on the \emph{x}-axis using the $ \omega_{44}^m $ magic frequency (arbitrary units). \comment{The measurement sthrength figure should be replaced with the atom placed at $ r\!_\perp=1.8a $ position.} }\label{Fig::CouplingStrength}
 \end{figure}
 %=============================================
 
@@ -860,7 +863,7 @@ We calculate the squeezing parameter as a function of time based on the evolutio
 &d \comment{\tilde{N}_A} = -\gamma_{00} \comment{\tilde{N}_A}  dt +  \comment{2\gamma_{30}} \expt{\hat{J}_3} dt \\
 &d \expt{\hat{J}_3}  = s\sqrt{\kappa}\expt{\Delta \hat{J}_3^2}dW -\gamma_{33} \expt{\hat{J}_3}dt +\comment{\frac{\gamma_{03}}{2}} \comment{\tilde{N}_A} dt   \\
 &d \expt{\hat{J}_1}  = -\gamma_{11} \expt{\hat{J}_1} dt  \\
-&d \expt{\Delta \hat{J}_3^2}  = - \kappa \expt{\Delta \hat{J}_3^2}^2 dt \comment{- 2 \gamma_{33}} \expt{\Delta \hat{J}_3^2}dt + \frac{1}{4}\comment{\left(2\gamma_{33}-\gamma_{00} \right)} \tilde{N}_A dt + \comment{\left(\frac{\gamma_{30}}{2}-\gamma_{03}\right)} \expect{\hat{J}_3} dt    
+&d \expt{\Delta \hat{J}_3^2}  = - \kappa \expt{\Delta \hat{J}_3^2}^2 dt \comment{- 2 \gamma_{33}} \expt{\Delta \hat{J}_3^2}dt + \frac{1}{4}\comment{\left(2\gamma_{33}-\gamma_{00} \right)} \tilde{N}_A dt + \comment{\left(\frac{\gamma_{30}}{2}-\gamma_{03}\right)} \expect{\hat{J}_3} dt   \label{eq:dDeltaJ3^2} 
 \end{align}
 where the decay and feeding rates are given in Eq. (?).  
 We have also defined $ \tilde{N}_A $ as the atom number in the clock state subspace.
@@ -887,15 +890,32 @@ Because this term is stochastic, we  solve the equations numerically.
 \centering
 \subfloat[]{\label{fig:NAt_qXoptimal_r1d8a_NA2500}\includegraphics[scale=0.45]{./Figs/NAt_qXoptimal_r1d8a_NA2500}}
 \end{minipage}
-\caption{Squeezing dynamics for $2500$ atoms trapped on the \emph{x}-axis at distance $ r'\!_\perp=1.8a$. The optimal quantization axis (black) is compared to quantization along the $x$-axis (green) and \emph{y}-axis (blue). Solid lines indicate simulations with optical pumping and dashed lines without. (a) Metrological spin squeezing parameter $\xi^2$. (b) Conditional squeezed variance $\varz$. (c) Mean spin $\expt{\hat{J}_x}$ and atom number $N_A$.}\label{Fig::Squeezing_Dynamics}
+\caption{Squeezing dynamics for $2500$ atoms trapped on the \emph{x}-axis at distance $ r'\!_\perp=1.8a$. The optimal quantization axis (red) is compared to quantization along the $x$-axis (blue). 
+%Solid lines indicate simulations with optical pumping and dashed lines without. 
+Subfig.~\protect\subref{fig:xit_qXoptimal_r1d8a_NA2500}: Metrological spin squeezing parameter $\xi^{2}$. 
+\protect\subref{fig:DeltaJz2t_qXoptimal_r1d8a_NA2500}: Conditional squeezed variance $\varz$. 
+\protect\subref{fig:Jxt_qXoptimal_r1d8a_NA2500} and~\protect\subref{fig:NAt_qXoptimal_r1d8a_NA2500}: Mean spin $\expt{\hat{J}_x}$ and atom number $N_A$. \comment{These two should be combined.} }\label{Fig::Squeezing_Dynamics}
 \end{figure}
 %================
+
+
+
+We investigate the dynamics in \frf{Fig::Squeezing_Dynamics} for several choices of $\qaxis$. 
+In \frf{fig:xit_qXoptimal_r1d8a_NA2500} we investigate the dynamics of the squeezing parameter, $ \xi^{2}=N_A \expect{\Delta J_3^2}/\expect{J_1}^2 $, at the optimal quantization axis $\phi_q\approx 86.2^\circ$ given $ 2500 $ trapped at $ r'\!_\perp=1.8a $ on the \emph{x}-axis and compare to using \emph{x}-axis as the quantization axis which is the optimal choice of quantization axis for the idealized situation with no optical pumping where the dynamics results solely from the variations in $\kappa$ (see \frf{fig:kappa_q_D1_xyplane_NA2500_r2a_m44}) and squeezing continues indefinitely.
+% (until the failure of the Gaussian approximation). 
+Shown in \frf{fig:DeltaJz2t_qXoptimal_r1d8a_NA2500} is the decrease in the conditional variance $\varz$, where the time axis is scaled to the characteristic photon scattering rate $\gamma_s = (\sigma_0/\comment{A_{\rm in}})(\Gamma/2 \Delta_\eff)^2 \dot{N}_L$. 
+While the decay of correlations, the primary limiting factor for peak achievable squeezing is the decay of the mean $\expt{\hat{J}_x}$ as optical pumping destroys the coherence between $\ket{\uparrow}$ and $\ket{\downarrow}$ within each atom. 
+In \frf{fig:Jxt_qXoptimal_r1d8a_NA2500} and \frf{fig:NAt_qXoptimal_r1d8a_NA2500} we plot $\expt{\hat{J}_x}$ and the atom number $\tilde{N}_A$.  
 
 
 \begin{figure}
 \begin{minipage}{.49\linewidth}
 \centering
 \subfloat[]{\label{fig:phiq_optimal_NA1000to5000_rp}\includegraphics[scale=0.45]{./Figs/phiq_optimal_NA1000to5000_rp}}
+\end{minipage}
+\begin{minipage}{.49\linewidth}
+\centering
+\subfloat[]{\label{fig:xi_optimal_NA1000to5000_omega44}\includegraphics[scale=0.45]{./Figs/xi_optimal_NA1000to5000_omega44}}
 \end{minipage}
 \par\medskip
 \begin{minipage}{.49\linewidth}
@@ -906,8 +926,31 @@ Because this term is stochastic, we  solve the equations numerically.
 \centering
 \subfloat[]{\label{fig:domega_magic33_qXYoptimal_rp}\includegraphics[scale=0.45]{./Figs/domega_magic33_qXYoptimal_rp}}
 \end{minipage}
-\caption{ (a) $\Delta_m/2\pi$ as a function the atom's distance from the nanofiber for two choices of $\qaxis$, along the \emph{x}-axis and \emph{y}-axis. (b) Variation of $\Delta_m/2\pi$ at fixed $ r'\!_\perp=1.8a$ for different choices of quantization axis. \comment{Should be combined with other figures.}} %\label{Fig::D1_magicfreqs44_transition}
+\caption{ Optimal choice of quantization axis considering optical pumping. \protect\subref{fig:phiq_optimal_NA1000to5000_rp}: Optimal quantization direction, $ \phi_q $, on the transverse plane as a function of atom distance to the core of the nanofiber, $ r`\!_\perp $, and atom number.
+\protect\subref{fig:xi_optimal_NA1000to5000_omega44}: Peak squeezing parameter as a function of atom position and atom number when the optimal quantization axis is used. Subfigs.~\protect\subref{fig:domega_magic44_qXYoptimal_rp} and~\protect\subref{fig:domega_magic33_qXYoptimal_rp} show the magic detuning, $\Delta_{44}^m/2\pi$ and $ \Delta_{33}^m/2\pi $, as functions of $ r`\!_\perp $ for three choices of $\qaxis$, along the \emph{x}-axis and \emph{y}-axis and optimal quantization axis for squeezing.
+} \label{Fig::D1_magicfreqs}
 \end{figure}
+
+ 
+Figure \ref{fig:kappa_q_D1_xyplane_NA2500_r2a_m44} proposes an optimal choice for $\qaxis$ along the $x$-axis, where $\chi_\eff$ reaches a maximum for a probe detuned close to one of $F'=3$ and $F'=4$. 
+However, in \frf{fig:phiq_optimal_NA1000to5000_rp} we see that when optical pumping is included, the optimal $\qaxis$ is rotated approaching to the \emph{y}-axis and the magic frequency, $ \Delta_{44}^m $, is detuned nearly equidistant from $F'=3$ and $F'=4$. 
+Since $ \expect{\Delta J_3^2} $ is nonlinear to atom number from Eq.~\eqref{eq:dDeltaJ3^2}, the optimal choice of quantization axis also weakly depends on the atom number. 
+Using the optimal quantization axis, the peak squeezing is plotted in \frf{fig:xi_optimal_NA1000to5000_omega44}.
+We see that, with just a few thousands of atoms, a few dB of squeezing can be achieved as long as the atoms are trapped at a proper distance to the nanofiber surface. 
+Independent of the atom number, the magic wavelength 
+%and effective detuning $\Delta_{44}^m$, given by \erf{Eq::SqueezingEffectiveDetuning}, 
+are plotted in \frf{fig:domega_magic44_qXYoptimal_rp} and \frf{fig:domega_magic33_qXYoptimal_rp} for different choices of quantization axis. 
+Since the optimal quantization axis for spin squeezing is so close to the \emph{y}-axis, one may use \emph{y}-axis as the optimal quantization axis in practice. 
+
+The peak achievable squeezing parameter as a function of quantization axis orientation is also plotted in \frf{fig:xi_q_D1_NA2500_r1d8a} and \frf{fig:ximax_q_D1_xyplane_NA2500_r1d8a} in a full angle scope. 
+
+Insight into the optimal balance between QND measurement and the optical pumping is gained by examining measurement strength and decay rates. 
+The squeezing of $\varz$ is determined by the measurement strength, $\kappa/\gamma_s$, (shown in \frf{fig:OD_q_xyplane_r1d8a_m44}) followed from \erf{Eq::chieff}. 
+In the context of metrological squeezing, optical pumping affects the mean, $\expt{\hat{J}_x}$, and the variance, $\varz$, in different ways. 
+The relative rates of atom loss, of decoherence in $\varz$, and of spin flips that shorten $\expt{\hat{J}_x}$ are balanced with the measurement strength imply the optimal quantization axis direction and the peak achievable metrological squeezing effect.
+By normalizing the measurement strength, $ \kappa $, and the other rates to the photon scattering rate, $ \gamma_s $, we find that the metrological strength which can be defined as $ \mathrm{OD}/\mathrm{atom}\equiv \kappa/\gamma_s $ actually peaks along the \emph{y}-axis. 
+Shown in \frf{fig:gamma34_q_D1_xyplane_NA2500_r1d8a_m44} is one important spin flip rate due to optical pumping from $ \ket{\uparrow} $ to $ \ket{\downarrow} $ which kicks the optimal quantization axis off the \emph{y}-axis for a smaller value or weaker decoherence.
+
 
 %========= FIGURE: Peak squeezing (\xi, measurement strength, scattering rates) =========
 \begin{figure}
@@ -920,51 +963,49 @@ Because this term is stochastic, we  solve the equations numerically.
 \subfloat[]{\label{fig:ximax_q_D1_xyplane_NA2500_r1d8a}\includegraphics[scale=0.45]{./Figs/ximax_q_D1_xyplane_NA2500_r1d8a}}
 \end{minipage}
 \par\medskip
-\begin{minipage}{.49\linewidth}
+\begin{minipage}{.32\linewidth}
 \centering
-\subfloat[]{\label{fig:gamma34_q_D1_xyplane_NA2500_r1d8a_m44}\includegraphics[scale=0.45]{./Figs/gamma34_q_D1_xyplane_NA2500_r1d8a_m44}}
+\subfloat[]{\label{fig:OD_q_xyplane_r1d8a_m44}\includegraphics[scale=0.4]{./Figs/OD_q_xyplane_r1d8a_m44}}
 \end{minipage}
-\begin{minipage}{.49\linewidth}
+\begin{minipage}{.32\linewidth}
 \centering
-\subfloat[]{\label{fig:OD_q_xyplane_r1d8a_m44}\includegraphics[scale=0.45]{./Figs/OD_q_xyplane_r1d8a_m44}}
+\subfloat[]{\label{fig:gamma34_q_D1_xyplane_NA2500_r1d8a_m44}\includegraphics[scale=0.4]{./Figs/gamma34_q_D1_xyplane_NA2500_r1d8a_m44}}
 \end{minipage}
-\caption{Dependence of metrological squeezing on quantization axis in the \emph{xy}-plane. Simulations were performed for $2500$ atoms trapped on the \emph{x}-axis at distance $ r'\!_\perp=1.8a$. (a) Peak achievable squeezing. (b) Measurement strength $\kappa/\gamma_s$.  (b) Decay rates $\Gamma_{\rm loss}$, $\Gamma_{\rm dec}$, and $\Gamma_{\rm flip}$. }\label{Fig::Squeezing_QuantizationAxis}
+\begin{minipage}{.32\linewidth}
+\centering
+\subfloat[]{\label{fig:OD_optimal_rp}\includegraphics[scale=0.4]{./Figs/OD_optimal_rp}}
+\end{minipage}
+\caption{Dependence of metrological squeezing on quantization axis in the \emph{xy}-plane. Simulations were performed for $2500$ atoms trapped on the \emph{x}-axis at distance $ r'\!_\perp=1.8a$. 
+\protect\subref{fig:xi_q_D1_NA2500_r1d8a}: Peak achievable squeezing as a function of $ \phi_q $ orientated in an arbitrary direction. 
+It is symmetric to the \emph{xy}-plane. 
+\comment{This one needs to be updated.}
+\protect\subref{fig:ximax_q_D1_xyplane_NA2500_r1d8a}: similar to \protect\subref{fig:xi_q_D1_NA2500_r1d8a}, but the $ \phi_q $ is limited on the \emph{xy}-plane. 
+\protect\subref{fig:OD_q_xyplane_r1d8a_m44}: Relative measurement strength $ \mathrm{OD}/\mathrm{atom}=\kappa/\gamma_s $ as a function of $ \phi_q $ on the transverse plane.
+\protect\subref{fig:gamma34_q_D1_xyplane_NA2500_r1d8a_m44}: The normalized $ \gammaud/\gamma_s $ as a function of $ \phi_q $ on the \emph{xy}-plane. 
+\comment{Maybe show Decay rates $\Gamma_{\rm loss}$, $\Gamma_{\rm dec}$, and $\Gamma_{\rm flip}$?} 
+\protect\subref{fig:OD_optimal_rp}: Relative measurement strength $ \mathrm{OD}/\mathrm{atom}=\kappa/\gamma_s $ as a function of atom position $ r`\!_\perp $ when optimal quantization axis is applied.}\label{Fig::Squeezing_QuantizationAxis}
 \end{figure}
 %================
-Figure \ref{Fig::CouplingStrength} proposes an optimal choice for $\qaxis$ along the $y$-axis, where $\chi_\eff$ reaches a maximum for a probe detuned nearly equidistant from $F'=3$ and $F'=4$. 
-However, in \frf{fig:xi_q_D1_NA2500_r1d8a} we see that when optical pumping is included, the optimal $\qaxis$ is rotated away from the \emph{y}-axis. 
-Insight into the optimal balance between QND measurement and the optical pumping is gained by examining measurement strength and decay rates. 
-The squeezing of $\varz$ is determined by the measurement strength, $\kappa/\gamma_s$, shown in \frf{fig:ximax_q_D1_xyplane_NA2500_r1d8a}, where we define a characteristic photon scattering rate $\gamma_s = (\sigma_0/\comment{A_{\rm in}})(\Gamma/2 \Delta_\eff)^2 \dot{N}_L$ that follows from \erf{Eq::chieff}. 
-In the context of metrological squeezing, optical pumping affects the mean, $\expt{\hat{J}_x}$, and the variance, $\varz$, in different ways. 
-The relative rates of atom loss, of decoherence in $\varz$, and of spin flips that shorten $\expt{\hat{J}_x}$ are shown in \frf{fig:gamma34_q_D1_xyplane_NA2500_r1d8a_m44}. 
 
-We investigate the dynamics in \frf{Fig::Squeezing_Dynamics} for several choices of $\qaxis$. 
-In \frf{fig:xit_qXoptimal_r1d8a_NA2500} we investigate the dynamics of the squeezing parameter at the optimal quantization axis $\phi_Q=$ and compare to the idealized situation with no optical pumping where the dynamics results solely from the variations in $\kappa$ in \frf{fig:ximax_q_D1_xyplane_NA2500_r1d8a} and squeezing continues indefinitely (until the failure of the Gaussian approximation). Shown in \frf{fig:DeltaJz2t_qXoptimal_r1d8a_NA2500} is the decrease in the conditional variance $\varz$. While the decay of correlations, the primary limiting factor for peak achievable squeezing is the decay of the mean $\expt{\hat{J}_x}$ as optical pumping destroys the coherence between $\ket{\uparrow}$ and $\ket{\downarrow}$ within each atom. 
-In \frf{fig:Jxt_qXoptimal_r1d8a_NA2500} we plot $\expt{\hat{J}_x}$ and the atom number $N_A$.  
-The magic wavelength and effective detuning $\Delta_{J_3}$, given by \erf{Eq::SqueezingEffectiveDetuning}, are plotted in \frf{fig:domega_magic44_qXYoptimal_rp} and \frf{fig:domega_magic33_qXYoptimal_rp} as a function of $\phi_q$. 
-
-
-
-As the atoms are trapped closer to the nanofiber surface, they experience higher guided-mode fields and the measurement strength increases exponentially, \frf{fig:xi_optimal_NA1000to5000_omega44}. 
-As expected, this yields higher peak squeezing, \frf{Fig::Squeezing_Scaling}(b). However, several effects limit the reliability of the simulations near the fiber surface. 
-First, van der Waals interactions.  
+As the atoms are trapped closer to the nanofiber surface, they experience higher guided-mode fields and the metrological measurement strength $ \kappa/\gamma_s $ increases exponentially, \frf{fig:OD_optimal_rp}. 
+As expected, this yields higher peak squeezing, \frf{fig:xi_optimal_NA1000to5000_omega44}. 
+Using the nanofiber geometry, $ \mathrm{OD}/\mathrm{atom}\sim 10^{-2} $ which is comparable to the cavity case \comment{Ref to James' experiments?}.
+In contrast, when atoms are trapped in free space, it may require millions of atoms to achieve several dB's squeezing as the metrological measurement strength, $ \mathrm{OD}/\mathrm{atom} $ is usually of three orders lower than the nanofiber case. 
+However, several effects limit the reliability of the simulations near the fiber surface. 
+First, strong van der Waals interactions could strong decoherence if the atoms are too close to the nanofiber surface.  
 Second, the optical pumping model used here breaks down near the surface where the density of states is significantly modified in the presence of the dielectric nanofiber \cite{}. 
-Figure \ref{Fig::Squeezing_Scaling}(c) shows the total modified spontaneous emission rate and its guided-mode and radiation-mode contributions as the atoms are moved closer to the nanofiber. 
-Thus, we see that at distances beyond $r_\perp \approx ???$ the atoms' local environment is roughly that of unmodified vacuum and a free-space optical pumping model suffices. 
+The curves in \frf{fig:RelEnhanceFactor_r_w10micro} are proportional to the total modified spontaneous emission rate whose guided-mode and radiation-mode contributions skyrockets as the atoms are moved closer to the nanofiber. 
+Thus, we see that at distances beyond $r_\perp \approx 2a$ the atoms' local environment is roughly that of unmodified vacuum and a free-space optical pumping model suffices. 
 The full details of optical pumping very close to the nanofiber surface will be investigated in future work.
 
 %========= SQUEEZING: variation with r_perp and N_A =========
-\begin{figure}
-\begin{minipage}{.49\linewidth}
-\centering
-\subfloat[]{\label{fig:xi_optimal_NA1000to5000_omega44}\includegraphics[scale=0.45]{./Figs/xi_optimal_NA1000to5000_omega44}}
-\end{minipage}
-\begin{minipage}{.49\linewidth}
-\centering
-\subfloat[]{\label{fig:OD_optimal_rp}\includegraphics[scale=0.45]{./Figs/OD_optimal_rp}}
-\end{minipage}
-\caption{Peak squeezing as a function of distance from the nanofiber for optimal quantization axis. (a) Peak metrological spin squeezing parameter. (b) Measurement strength per atom, $\kappa/\gamma_s$. (c) Decay rates $\Gamma_{\rm loss}$, $\Gamma_{\rm dec}$, and $\Gamma_{\rm flip}$ \comment{(perhaps also the total modified decay rate, $\Gamma_{\rm fiber}/\Gamma_0$? }. }\label{Fig::Squeezing_Scaling}
-\end{figure}
+%\begin{figure}
+%\begin{minipage}{.49\linewidth}
+%\centering
+%\subfloat[]{\label{fig:xi_optimal_NA1000to5000_omega44}\includegraphics[scale=0.45]{./Figs/xi_optimal_NA1000to5000_omega44}}
+%\end{minipage}
+%\caption{Peak squeezing as a function of distance from the nanofiber for optimal quantization axis. (a) Peak metrological spin squeezing parameter. (b) Measurement strength per atom, $\kappa/\gamma_s$. (c) Decay rates $\Gamma_{\rm loss}$, $\Gamma_{\rm dec}$, and $\Gamma_{\rm flip}$ \comment{(perhaps also the total modified decay rate, $\Gamma_{\rm fiber}/\Gamma_0$? }. }\label{Fig::Squeezing_Scaling}
+%\end{figure}
 %================
 
 \subsection{Other applications?} 
