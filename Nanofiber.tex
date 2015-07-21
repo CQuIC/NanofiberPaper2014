@@ -143,6 +143,7 @@
 \newcommand{\jz}{\hat{J}_3}
 \newcommand{\shotnoise}{\Delta \mathcal{M}^2 |_{\rm SN}} 
 \newcommand{\projnoise}{\Delta \mathcal{M}^2_{\rm PN}} 
+\newcommand{\polcomp}{\hat{K}} % p,p' component of the tensor polarizability
 
 %==== physical parameters ======
 \newcommand{\Eamp}{\mathcal{F}_0^{(+)}}
@@ -620,14 +621,14 @@ These, along with the total photon flux operator,
 are used to re\"{e}xpress the Hamiltonian, \erf{Eq::LightShiftHam}, in the $HV$-basis,
 %The trapped atoms are distributed at a fixed distance $r_\perp$ above and below the nanofiber, $N_A = N_0 + N_\pi$, where $N_{\phi}$ is the number of atoms at azimuthal angle $\phi$. For weak scattering, the collective atom-light Hamiltonian is
 	\begin{align}  
-		\hat{H}_{LS} 	= - 2 \pi \hbar k_0 n_g \sum_{\phi'=0,\pi}N_{\phi'} \Big\{ &\big[ \hat{K}_{HH}(\phi')+\hat{K}_{VV}(\phi') \big] \hat{S}_0(t) +  \big[\hat{K}_{HH}(\phi')  - \hat{K}_{VV}(\phi')  \big] \hat{S}_1(t) \nonumber \\
-+ &\big[\hat{K}_{HV}(\phi') + \hat{K}_{VH}(\phi')  \big] \hat{S}_2(t) + i  \big[ \hat{K}_{HV}(\phi')-\hat{K}_{VH}(\phi') \big]\hat{S}_3(t) \Big\}, \label{Eq::GenHamiltonian} 
+		\hat{H}_{LS} 	= - 2 \pi \hbar k_0 n_g \sum_{\phi'=0,\pi}N_{\phi'} \Big\{ &\big[ \polcomp_{HH}(\phi')+\polcomp_{VV}(\phi') \big] \hat{S}_0(t) +  \big[\polcomp_{HH}(\phi')  - \polcomp_{VV}(\phi')  \big] \hat{S}_1(t) \nonumber \\
++ &\big[\polcomp_{HV}(\phi') + \polcomp_{VH}(\phi')  \big] \hat{S}_2(t) + i  \big[ \polcomp_{HV}(\phi')-\polcomp_{VH}(\phi') \big]\hat{S}_3(t) \Big\}, \label{Eq::GenHamiltonian} 
 	\end{align}
 The atomic couplings to the $\{H,V\}$ modes,
 	\begin{align} 
-		\hat{K}_{p p'}(\phi') & \equiv |\mathbf{u}^*_p(r'_\perp)||\mathbf{u}_{p'}(r'_\perp)| \, \hat{\alpha}_{p p'}(\phi') , 
+		\polcomp_{p p'}(\phi') & \equiv |\mathbf{u}^*_p(r'_\perp)||\mathbf{u}_{p'}(r'_\perp)| \, \hat{\alpha}_{p p'}(\phi') , 
 	\end{align}
-are formed by the quantum mechanical analog of the polarizability components from \erf{Eq::PolarizabilityElementsClassical}, $\hat{\alpha}_{p p'} = \mathbf{e}^*_{p'}(\phi')   \cdot \poltens \cdot \mathbf{e}_{p}(\phi') $, weighted by the transverse mode functions at the atomic position.
+are formed by the quantum mechanical analog of the polarizability components that appear in the expression for the phase shift [\erf{Eq::PhaseShift}], $\hat{\alpha}_{p p'} = \mathbf{e}^*_{p'}(\phi') \cdot \poltens \cdot \mathbf{e}_{p}(\phi') $, weighted by the transverse mode functions at the atomic position.
 
 We explore a QND measurement of cesium atoms in the hyperfine manifold of the electronic ground state, $6S_{1/2}$ via polarization spectroscopy based on  the collective atom-light coupling described by the dispersive light-shift Hamiltonian in \erf{Eq::GenHamiltonian}. 
 The atomic polarizability, \erf{Eq::PolarizabilityOperator}, describes an atom's response to an applied field, which results in polarization- and state-dependent phase shifts [\erf{Eq::PhaseShiftMultilevel}].  The atomic polarizability is a rank-2 tensor,
@@ -640,7 +641,7 @@ where the operator $\hat{\tensor{\mbf{A}}}(F,F') = \sum_{i,j} \hat{A}_{ij}(F,F')
 	\begin{align} \label{Eq::PolarizabilityIrrep}
 		\hat{A}_{ij}(F,F')&=  C_{FF'}^{(0)} \delta_{i,j}+ iC_{FF'}^{(1)}\epsilon_{ijk}\hat{F}_k+ C_{FF'}^{(2)} \Big[ \smallfrac{1}{2} ( \hat{F}_i\hat{F}_j +\hat{F}_j\hat{F}_i )-\smallfrac{1}{3}\hat{\mathbf{F}}^2 \delta_{i,j} \Big]. 
 \end{align}
-Here, $\charpol = -(\sigma_0/8\pi k_0) (\Gamma/\Delta_{FF'})$ is the characteristic dynamic polarizability where $\sigma_0$ is the resonant scattering cross section, $\hat{\mathbf{F}}$ is the hyperfine spin operator in the ground state, and $C_{FF'}^{(K)}$ are coefficients for irreducible rank-$K$ components defined in\cite{deutsch_quantum_2010}. 
+Here, $\charpol = -(\sigma_0/8\pi k_0) (\Gamma/\Delta_{FF'})$ is the characteristic dynamic polarizability where $\sigma_0$ is the resonant scattering cross section, $\hat{\mathbf{F}}$ is the hyperfine spin operator in the ground state, and $C_{FF'}^{(K)}$ are coefficients for irreducible rank-$K$ components defined in Ref. \cite{deutsch_quantum_2010}. 
 
 In addition to the atoms' tensor response, the nanofiber geometry gives rise to unique features of polarization spectroscopy not present in free space.  
 The spatial anisotropy of the intensity for the quasilinearly polarized guided modes leads to unequal scattering of the $H$ and $V$ modes, producing \emph{intrinsic} birefringence even for a purely scalar atomic polarizability.  
@@ -653,10 +654,10 @@ This birefringence was exploited by Dawkins {\em et al.} as a mechanism for impl
 
 The anisotropy of the guided modes provides a mechanism for counting the number of atoms trapped around the nanofiber based on polarization spectroscopy.  
 We consider $N_A$ atoms, each in a completely mixed state. In this case the irreducible Cartesian components of the atomic polarizability in \erf{Eq::PolarizabilityIrrep} are $\langle \hat{A}_{ij}(F,F') \rangle = C_{FF'}^{(0)} \delta_{i,j}$, and the collective interaction is determined entirely by the the scalar (rank-0) terms.  
-With the atoms trapped along the quasi-$H$ axis, the off-diagonal elements in \erf{Eq::GenHamiltonian} vanish, $\expt{ \hat{K}_{HV} } = \expt{ \hat{K}_{HV} } =0$, while $\expt{ \hat{K}_{HH} } \neq  \expt{ \hat{K}_{VV} }$.  
+With the atoms trapped along the quasi-$H$ axis, the off-diagonal elements in \erf{Eq::GenHamiltonian} vanish, $\expt{ \polcomp_{HV} } = \expt{ \polcomp_{HV} } =0$, while $\expt{ \polcomp_{HH} } \neq  \expt{ \polcomp_{VV} }$.  
 Atoms on either sides of the nanofiber experience the same scalar light shift yielding from  \erf{Eq::GenHamiltonian} the Hamiltonian for QND measurement of atom number,
 	\begin{align}
-		\hat{H}_{N} =& -2\pi \hbar k_0 n_g \sum_{\phi' = \{0,\pi \}} N_{\phi'} \big[ \expt{ \hat{K}_{HH}(\phi')}  - \expt{ \hat{K}_{VV}(\phi')} \big] \hat{S}_1(t)  \nonumber \\
+		\hat{H}_{N} =& -2\pi \hbar k_0 n_g \sum_{\phi' = \{0,\pi \}} N_{\phi'} \big[ \expt{ \polcomp_{HH}(\phi')}  - \expt{ \polcomp_{VV}(\phi')} \big] \hat{S}_1(t)  \nonumber \\
 		& =  \hbar \chiN N_A \hat{S}_1(t).  \label{Eq::MixedHamiltonian}
 	\end{align}	
 This birefringent interaction induces a rotation of the Stokes vector  around the $S_1$-axis on the Poincar\'{e} sphere through an angle $\chi_0$, 
@@ -747,7 +748,7 @@ where the rotation angle on the Poincar\'{e} sphere at the magic wavelength is ,
 \begin{equation}\label{eq:chiJ3}
 \chieff = \big( \chi_{H, \uparrow} - \chi_{V,\uparrow} \big) - \big(\chi_{H,\downarrow} - \chi_{V,\downarrow} \big) = 2(\chi_{H, \uparrow}-\chi_{H, \downarrow}).
 \end{equation}
-In the standard way, squeezing the uncertainty in $J_3$ by QND measurement can be generated by preparing the atoms in a SCS along $\hat{J}_1$, passing a probe prepared along $\hat{S}_2$ with photon flux $\dot{N}_L$, and continuously monitoring the $S_3$-component of the guided light in a polarimeter. The measurement strength,
+In the standard way, squeezing the uncertainty in $\jz$ by QND measurement can be generated by preparing the atoms in a SCS along $\jx$, passing a probe prepared along $\hat{S}_2$ with photon flux $\dot{N}_L$, and continuously monitoring the $S_3$-component of the guided light in a polarimeter. The measurement strength,
 	\begin{align} \label{Eq::MeasurementStrength}
 		\kappa \equiv |\chieff|^2 \dot{N}_L, 
 	\end{align}
@@ -844,7 +845,7 @@ Since the $z$-component of the guided modes is $90^\circ$ out-of-phase with the 
 	\begin{align} \label{Eq::QuantizationAxis}
 		\qaxis = \cos \phi_\pi \mbf{e}_x + \sin \phi_\pi \mbf{e}_y.
 	\end{align}
-The variation in  \frf{fig:kappa_q_D1_xyplane_NA2500_r1d8a_m44} we plot $|\chieff|^2$ as a function of $\phi_\pi$.  
+The variation in (?) we plot $|\chieff|^2$ as a function of $\phi_\pi$.  
 This suggests that, when based solely on the strength of the coherent interaction, the optimal choice of quantization axis is along the $x$-axis.
 As we will see in the next section, the optimal choice of quantization axis is modified due to the relative strength of coherent coupling and decoherence due to optimal pumping. 
 %The anisotropy of $\chieff$ results from several geometric factors, including the dependence of effective mode area $A_{J_3}$, \erf{Eq::SqueezingModeArea}, plotted in \frf{fig:phiq_optimal_NA500to5000_rp}, on $\mathbf{e}_\pi$. In addition, the tensor atomic response influences the value of the magic wavelength according to \erf{Eq::MagicWavelengthCondition}. 
@@ -953,17 +954,19 @@ To find the peak squeezing in the presence of optical pumping, we numerically in
 Typical time dynamics are shown in \frf{Fig::Squeezing_Dynamics} for $2500$ atoms trapped on the \emph{x}-axis at a distance $r'\!_\perp=1.8a$ from the center of the nanofiber (as in \frf{}), where we operate on the $\magic{4}$ magic detuning, and dimensionless time is scaled to the characteristic scattering rate, $\gamma_s \equiv (\sigma_0/A_{\rm in})(\Gamma/2 \Delta_\eff)^2 \dot{N}_L$.
 We show the dynamics for two choices of quantization axis: (i) along the $x$-axis and (ii) along the numerically determined optimal axis, $\phi_\pi \approx 86^\circ$ in \erf{Eq::QuantizationAxis}. 
 We begin with the dynamics of the squeezing parameter in \frf{fig:xit_qXoptimal_r1d8a_NA2500}. 
-In the presence of optical pumping, peak squeezing is limited by the combined effects of decoherence on the constituent moments of $\xi^2$, $\expt{\jx}$ and $\varz$. 
-The primary limiting factor for metrological squeezing is the decay of the collective mean $\expt{\hat{J}_x}$ \cite{baragiola_three-dimensional_2014}, plotted in (b). 
-Scattered photons destroy the initial coherence between $\ket{\uparrow}$ and $\ket{\downarrow}$ thus depolarizing the collective spin $\expt{\jx}$. 
+In the presence of optical pumping, peak squeezing is limited by the combined effects of decoherence on $\expt{\jx}$ and $\varz$, the constituent moments that determine $\xi^2$. 
+The primary factor that limits metrological squeezing is the decay of the collective mean $\expt{\jx}$ \cite{baragiola_three-dimensional_2014}, plotted in (b). 
+Scattered photons destroy the initial coherence between $\ket{\uparrow}$ and $\ket{\downarrow}$ within a single atom, thus depolarizing the collective mean spin $\expt{\jx}$. 
 Atoms optically pumped to magnetic sublevels outside of the clock subspace decay $\NA$ further reducing $\expt{\jx}$.
 The QND squeezing of the conditional variance, $\varz$, competes with the noise injected by atoms that return to the clock subspace. 
 An additional source of decoherence comes from the decay of the two-body correlations that lie at the heart of spin squeezing, as described by \erf{Eq::TwoBodyDecay}.
-All of these effects are included in the equation for $\varz$, \erf{Eq::varJz}, whose dynamics are shown in (c). \comment{(Since we write the equation for $\expt{\hat{J}_3}$ and explicitly comment about its dynamics being stochastic, perhaps we should show it along with the others here. This would reveal only that it is small compared to $\NA$ and experiences deterministic polarization towards $\ket{\downarrow}$.)}
+All of these effects are included in the equation for $\varz$, \erf{Eq::varJz}, whose dynamics are shown in (c). \comment{(Since we write the equation for $\expt{\hat{J}_3}$ and explicitly comment about its dynamics being stochastic, perhaps we should show it along with the others here. 
+This would reveal only that it is small compared to $\NA$ and experiences deterministic polarization towards $\ket{\downarrow}$.)}
 
-The choice of quantization axis $\qaxis$ along which the clock states are defined affects both the measurement strength and the relative rates of optical pumping. In \frf{} the effective OD/atom is shown the quantization axis varied in the $xy$-plane. The maximum value of $OD/atom = $ occurs for quantization along the $y$-axis. However, when  
+The choice of quantization axis $\qaxis$ along which the clock states are defined affects both the measurement strength and the relative rates of optical pumping. Figure \ref{fig:kappa_q_D1_xyplane_NA2500_r1d8a_m44} suggests an optimal choice for $\qaxis$ along the $x$-axis, where $\chieff$ reaches a maximum for a probe detuned close to one of $F'=3$ and $F'=4$. 
 
-Figure \ref{fig:kappa_q_D1_xyplane_NA2500_r1d8a_m44} proposes an optimal choice for $\qaxis$ along the $x$-axis, where $\chieff$ reaches a maximum for a probe detuned close to one of $F'=3$ and $F'=4$. 
+In \frf{} the effective OD/atom is shown the quantization axis varied in the $xy$-plane with a maximum value of OD/atom $= $ for quantization along the $y$-axis.   
+
 However, in \frf{fig:phiq_optimal_NA500to5000_rp} we see that when optical pumping is included, the optimal $\qaxis$ is rotated approaching to the \emph{y}-axis and the magic frequency, $ \Delta_{44}^m $, is detuned nearly equidistant from $F'=3$ and $F'=4$. 
 Since $ \expt{\Delta J_3^2} $ is nonlinear to atom number from Eq.~\eqref{Eq::varJz}, the optimal choice of quantization axis also weakly depends on the atom number. 
 Using the optimal quantization axis, the peak squeezing is plotted in \frf{fig:xi_optimal_NA500to5000_omega44}.
@@ -998,14 +1001,13 @@ Since the optimal quantization axis for spin squeezing is so close to the \emph{
 \centering
 \subfloat[]{\label{fig:OD_optimal_rp}\includegraphics[scale=0.4]{./Figs/OD_optimal_rp}}
 \end{minipage}
-\caption{Dependence of metrological squeezing on quantization axis in the \emph{xy}-plane. Simulations were performed for $2500$ atoms trapped on the \emph{x}-axis at distance $ r'\!_\perp=1.8a$. 
-\protect\subref{fig:xi_q_D1_NA2500_r1d8a}: Peak achievable squeezing as a function of $ \phi_q $ orientated in an arbitrary direction. 
-It is symmetric to the \emph{xy}-plane. 
-\protect\subref{fig:ximax_q_D1_xyplane_NA2500_r1d8a}: similar to \protect\subref{fig:xi_q_D1_NA2500_r1d8a}, but the $ \phi_q $ is limited on the \emph{xy}-plane. 
-\protect\subref{fig:OD_q_xyplane_r1d8a_m44}: Relative measurement strength $ \mathrm{OD}/\mathrm{atom}=\kappa/\gamma_s $ as a function of $ \phi_q $ on the transverse plane.
-\protect\subref{fig:gamma34togammas_q_D1_xyplane_NA2500_r1d8a_m44}: The normalized $ \gammaud/\gamma_s $ as a function of $ \phi_q $ on the \emph{xy}-plane. 
-\comment{Maybe show Decay rates $\Gamma_{\rm loss}$, $\Gamma_{\rm dec}$, and $\Gamma_{\rm flip}$?} 
-\protect\subref{fig:OD_optimal_rp}: Relative measurement strength $ \mathrm{OD}/\mathrm{atom}=\kappa/\gamma_s $ as a function of atom position $ r'\!_\perp $ when optimal quantization axis is applied.}\label{Fig::Squeezing_QuantizationAxis}
+\caption{Dependence of metrological squeezing on quantization axis, $\qaxis$, for $2500$ atoms trapped on the \emph{x}-axis at a distance $ r'\!_\perp=1.8a$. 
+\protect\subref{fig:xi_q_D1_NA2500_r1d8a} Peak squeezing for varying $\qaxis$. 
+In figures (b--d) $\qaxis$ is confined to the \emph{xy}-plane where optimal peak squeezing occurs.
+\protect\subref{fig:ximax_q_D1_xyplane_NA2500_r1d8a} Peak squeezing. 
+\protect\subref{fig:OD_q_xyplane_r1d8a_m44} OD/atom.
+\protect\subref{fig:gamma34togammas_q_D1_xyplane_NA2500_r1d8a_m44} Optical pumping rate $\gamma/\gamma_s$. 
+}\label{Fig::Squeezing_QuantizationAxis}
 \end{figure}
 %================
 
