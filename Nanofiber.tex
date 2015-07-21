@@ -116,40 +116,43 @@
 % Redefine the tensor command.
 %\renewcommand{\tensor}[1]{\boldsymbol{#1}}
 
+
 %==== Ben's new macros ======
+\newcommand{\half}{\smallfrac{1}{2}}
+
+%==== subscripts ======
 \newcommand{\oneD}{{\rm 1D}}
 \newcommand{\vac}{{\rm vac}}
 \newcommand{\cav}{{\rm cav}}
 \newcommand{\inp}{{\rm in}}
 \newcommand{\out}{{\rm out}}
- \newcommand{\inter}{{\rm int}}
- \newcommand{\scs}{{\rm SCS}}
- 
-\newcommand{\der}[1]{\frac{d {#1}}{dt}}
-\newcommand{\poltens}{\hat{\tensor{\boldsymbol{\alpha}}}}
-\newcommand{\charpol}{\alpha_0(\Delta_{F'F})}
+\newcommand{\inter}{{\rm int}}
+\newcommand{\scs}{{\rm SCS}}
 \newcommand{\fidx}{\eta}
-\newcommand{\unittens}{\tensor{\mathbf{I}}}
-\newcommand{\chibir}{\chi_{\rm bir}}
 \newcommand{\fwd}{+}
 \newcommand{\bwd}{-}
 \newcommand{\trans}{+}
 \newcommand{\refl}{-}
 
-\newcommand{\Eamp}{\mathcal{F}_0^{(+)}}
-
-\newcommand{\shotnoise}{\Delta \mathcal{M}^2_{\rm SN}} 
-\newcommand{\projnoise}{\Delta \mathcal{M}^2_{\rm PN}} 
-
-\newcommand{\qaxis}{\mathbf{e}_\pi}
-\newcommand{\qangle}{\phi_\pi}
-
-%==== collective moments ====%
+ %==== operators/moments ======
+\newcommand{\der}[1]{\frac{d {#1}}{dt}}
+\newcommand{\unittens}{\tensor{\mathbf{I}}}
+\newcommand{\poltens}{\hat{\tensor{\boldsymbol{\alpha}}}}
 \newcommand{\varz}{\Delta J_3^2}
 \newcommand{\jx}{\hat{J}_1}
 \newcommand{\jz}{\hat{J}_3}
+\newcommand{\shotnoise}{\Delta \mathcal{M}^2 |_{\rm SN}} 
+\newcommand{\projnoise}{\Delta \mathcal{M}^2_{\rm PN}} 
 
-\newcommand{\chione}{\chi_{1}}
+%==== physical parameters ======
+\newcommand{\Eamp}{\mathcal{F}_0^{(+)}}
+\newcommand{\charpol}{\alpha_0(\Delta_{F'F})}
+\newcommand{\qaxis}{\mathbf{e}_\pi}
+\newcommand{\qangle}{\phi_\pi}
+\newcommand{\magic}[1]{\omega_{#1}}
+\newcommand{\chiN}{\chi_{N}}
+\newcommand{\NA}{\tilde{N}_A}
+\newcommand{\chieff}{\chi_{J_3}}
 
 %==== scattering and optical pumping rates ====%
 \newcommand{\gammauu}{\gamma_{\uparrow \rightarrow \uparrow}}
@@ -158,25 +161,12 @@
 \newcommand{\gammadu}{\gamma_{\downarrow \rightarrow \uparrow}}
 \newcommand{\gammau}{\gamma_{\uparrow}}
 \newcommand{\gammad}{\gamma_{\downarrow}}
-\newcommand{\gammap}{\tilde{\gamma}_\uparrow + \tilde{\gamma}_\downarrow}
-\newcommand{\gammam}{\tilde{\gamma}_\uparrow - \tilde{\gamma}_\downarrow}
 
-\newcommand{\half}{\smallfrac{1}{2}}
-\newcommand{\polterm}{\hat{F}}
 
-%==== optical pumping rates for Jz variance ====%	
-\newcommand{\xrate}{\Gamma_{1}}
-\newcommand{\lrate}{\Gamma_{\rm loss}}
-\newcommand{\prate}{\Gamma_{\rm pol}}
-
-\newcommand{\zrateA}{\tilde{\Gamma}}
-\newcommand{\zrateB}{\Gamma_{?}}
-\newcommand{\zrate}{\Gamma_{3}}
 
 %==== effective areas ======
 \newcommand{\Ain}{A_{\rm in}}
-\newcommand{\Abiref}{A_{\rm bir}}
-\newcommand{\Aeff}{A_{\rm eff}}
+\newcommand{\Abir}{A_N}
 
 %==== eigenfunctions ======
 \newcommand{\eigenf}{\mbf{f}_\fidx}
@@ -663,17 +653,17 @@ This birefringence was exploited by Dawkins {\em et al.} as a mechanism for impl
 
 The anisotropy of the guided modes provides a mechanism for counting the number of atoms trapped around the nanofiber based on polarization spectroscopy.  
 We consider $N_A$ atoms, each in a completely mixed state. In this case the irreducible Cartesian components of the atomic polarizability in \erf{Eq::PolarizabilityIrrep} are $\langle \hat{A}_{ij}(F,F') \rangle = C_{FF'}^{(0)} \delta_{i,j}$, and the collective interaction is determined entirely by the the scalar (rank-0) terms.  
-With the atoms trapped along the quasi-$H$ axis, the off-diagonal elements in \erf{Eq::GenHamiltonian} vanish, $\expt{ \hat{K}_{HV} } = \expt{ \polterm_{HV} } =0$, while $\expt{ \hat{K}_{HH} } \neq  \expt{ \hat{K}_{VV} }$.  
+With the atoms trapped along the quasi-$H$ axis, the off-diagonal elements in \erf{Eq::GenHamiltonian} vanish, $\expt{ \hat{K}_{HV} } = \expt{ \hat{K}_{HV} } =0$, while $\expt{ \hat{K}_{HH} } \neq  \expt{ \hat{K}_{VV} }$.  
 Atoms on either sides of the nanofiber experience the same scalar light shift yielding from  \erf{Eq::GenHamiltonian} the Hamiltonian for QND measurement of atom number,
 	\begin{align}
 		\hat{H}_{N} =& -2\pi \hbar k_0 n_g \sum_{\phi' = \{0,\pi \}} N_{\phi'} \big[ \expt{ \hat{K}_{HH}(\phi')}  - \expt{ \hat{K}_{VV}(\phi')} \big] \hat{S}_1(t)  \nonumber \\
-		& =  \hbar \chi_N N_A \hat{S}_1(t).  \label{Eq::MixedHamiltonian}
+		& =  \hbar \chiN N_A \hat{S}_1(t).  \label{Eq::MixedHamiltonian}
 	\end{align}	
 This birefringent interaction induces a rotation of the Stokes vector  around the $S_1$-axis on the Poincar\'{e} sphere through an angle $\chi_0$, 
 	\begin{equation} \label{Eq::RotationAngle}
-		\chi_N = \frac{\sigma_0}{A_N}  \sum_{F,F'}  C_{FF'}^{(0)} \frac{\Gamma}{2 \Delta_{FF'}},
+		\chiN = \frac{\sigma_0}{\Abir}  \sum_{F,F'}  C_{FF'}^{(0)} \frac{\Gamma}{2 \Delta_{FF'}},
 	\end{equation}
-is characterized by an effective area, $A_N^{-1} \equiv (n_g/2) \big( |\mathbf{u}_{H}(\br'_\perp)|^2 - |\mathbf{u}_{V}(\br'_\perp)| ^2 \big)$.   %\comment{This area arises as a purely geometric factor independent of the input field - in fact the atom number resolution below might be better written as OD$_{\rm bir}\big( \smallfrac{A_\inp}{A_0} \big)$.  The effective optical density per atom that quantifies the collective birefringent coupling strength, OD$_{\rm bir} = \sigma_0/\Abiref$.  As illustrated in \frf{}, the OD$_{\rm bir}$. } 
+is characterized by an effective area, $\Abir^{-1} \equiv (n_g/2) \big( |\mathbf{u}_{H}(\br'_\perp)|^2 - |\mathbf{u}_{V}(\br'_\perp)| ^2 \big)$.   %\comment{This area arises as a purely geometric factor independent of the input field - in fact the atom number resolution below might be better written as OD$_{\rm bir}\big( \smallfrac{A_\inp}{A_0} \big)$.  The effective optical density per atom that quantifies the collective birefringent coupling strength, OD$_{\rm bir} = \sigma_0/\Abiref$.  As illustrated in \frf{}, the OD$_{\rm bir}$. } 
 %which manifests as in the polarimeter. 
 
 Dawkins {\em et al.} \cite{dawkins_dispersive_2011} used this interaction to make a dispersive measurement of $N_A$ via birefringence polarimetry in the usual way:  launching linearly polarized light at 45$^\circ$ to the quasi-$H$ axis, i.e., $\mbf{u}_\inp = (\mbf{u}_H + \mbf{u}_V )/\sqrt{2}$, and measuring  a differential power between the guided right-and left-circularly polarized photons. 
@@ -688,19 +678,19 @@ Thus, the integrated measurement is described by the operator
 %\end{align}
 %The propagating field quadratures, $\hat{X}_L = (\hat{a}_{\bar{D}} + \hat{a}_{\bar{D}})/\sqrt{2}$ and $\hat{P}_L = -i(\hat{a}_{\bar{D}} - \hat{a}_{\bar{D}})/\sqrt{2}$, satisfy the commutation relation, $[ \hat{X}_L(t), \hat{P}_L(t') ] =i\delta(t-t').$ In this linearized regime, a rotation on the Poincar\'{e} sphere generated by the Hamiltonian in \erf{Eq::MixedHamiltonian} becomes a translation of $\hat{X}_L$ in the quadrature plane given by the scattering solution in \erf{Eq::ScatteringSolution},
 %	\begin{align} \label{Eq:XoutAtomNumber}
-%		\hat{X}_L^{\rm out}(t) = \hat{X}_L^{\rm in}(t) +  \chi_N N_A \sqrt{ \dot{N}_L/2}.
+%		\hat{X}_L^{\rm out}(t) = \hat{X}_L^{\rm in}(t) +  \chiN N_A \sqrt{ \dot{N}_L/2}.
 %	\end{align}
 %Continuous integrated polarimetry yields an effective homodyne measurement of the $X_L$-quadrature in \erf{Eq:XoutAtomNumber}, where the large-amplitude input mode plays the role of the local oscillator \cite{hammerer_quantum_2010}.  
 %In the absence of atom and photon loss, the fluctuations in the integrated measurement, \erf{Eq::MeasOpAtomCounting}, for an input probe pulse of duration $t$ are 
 %	\begin{align}
-%		\Delta \mathcal{M}^2 &= N_L /4 + ( \chi_N N_L /2 )^2 \delta N_A^2 \label{Eq::MeasurementVariance} \\
+%		\Delta \mathcal{M}^2 &= N_L /4 + ( \chiN N_L /2 )^2 \delta N_A^2 \label{Eq::MeasurementVariance} \\
 %			&\equiv \shotnoise + \projnoise.
 %	\end{align}
-Shot noise determines the fundamental resolution of the polarimeter,.  The shot-noise variance $\Delta \mathcal{M}^2|_{SN} =  \dot{N}_L T$, for integration time $T$.  The minimum resolution for atom number detection using this dispersive measurement is thus, $\delta N_A \sim ( \chi_N^2 \dot{N}_L T)^{-1/2}$ \cite{smith_faraday_2003}.  
+The shot-noise variance of the polarimeter, $\shotnoise =  \dot{N}_L T$ for integration time $T$,  determines the fundamental resolution of the polarimeter.  The minimum resolution for atom number detection using this dispersive measurement is thus, $\delta N_A \sim ( \chiN^2 \dot{N}_L T)^{-1/2}$ \cite{smith_faraday_2003}.  
 In an ideal setting, $\delta N_A$ can always be reduced by increasing the integration time. In practice this time is limited by atom loss from photon scattering into reflected and unguided modes. 
-As a coarse approximation, we take this time to be $T=\gamma_s^{-1}$, where $\gamma_s$ is the photon scattering rate in free space.  For detuning $\Delta$ large compared to the excited hyperfine splitting on the D2 line, the unit-oscillator scattering rate is $\gamma_s = \frac{\Gamma^2}{4 \Delta^2}\frac{\sigma_0 }{A_{\rm in}} \dot{N}_L $, with effective area given by \erf{Eq::AreaIn}.  In this limit the rotation angle, $\chi_N = \frac{2}{3} \frac{\sigma_0}{A_N}\frac{\Gamma}{4\Delta}$, yields a shot noise-limited atom number resolution, 
+As a coarse approximation, we take this time to be $T=\gamma_s^{-1}$, where $\gamma_s$ is the photon scattering rate in free space.  For detuning $\Delta$ large compared to the excited hyperfine splitting on the D2 line, the unit-oscillator scattering rate is $\gamma_s = \frac{\Gamma^2}{4 \Delta^2}\frac{\sigma_0 }{A_{\rm in}} \dot{N}_L $, with effective area determined by the probe at the atomic position, \erf{Eq::AreaIn}.  In this limit, the rotation angle, $\chiN = \frac{2}{3} \frac{\sigma_0}{\Abir}\frac{\Gamma}{4\Delta}$, yields a shot noise-limited atom number resolution, 
 	\begin{align} \label{Eq::AtomNumberResolution}
-		\delta N_A  &\sim \sqrt {\frac{A_N^2}{A_{\rm in} \sigma_0}}.
+		\delta N_A  &\sim \sqrt {\frac{\Abir^2}{A_{\rm in} \sigma_0}}.
 	\end{align}
 \comment{Give numbers. Final thoughts about Arno's experiment.} 
 
@@ -737,58 +727,37 @@ Here, the coupling strength between an atom in the clock subspace and a photon w
 	\begin{equation} \label{Eq::ClockCouplingStrength}
 		\chi_{p,F} \equiv - 2\pi k_0 n_g  | \mathbf{u}_p(\mbf{r}_\perp)|^2 \bra{F,0}\hat{\alpha}_{pp}  \ket{F,0},
 	\end{equation}
-where $F = \{4,3\}$ labels $\{\uparrow,\downarrow\}$.  Note, these diagonal terms in the polarizability tensor are the same for atoms at positions above and below the nanofiber, and thus, all atoms contribute equally. In addition, the constant birefringence term, proportional to $ \hat{J}_0\hat{S}_1 $ is neglected here, as it can be canceled with a compensating waveplate. Finally, the first term in \erf{Eq::ClockHamiltonian} does not affect polarization spectroscopy, but will act to rotate the pseudo-spin around the $J_3$-axis of the generalized Bloch sphere.  While this does not affect the squeezing of projection noise in $\hat{J}_3$, it affects the metrologically relevant squeezing by adding uncertainty in the direction of the mean spin.  By choosing a ``magic frequency" at which the light shifts on the two clock states are equal, 
+where $F = \{4,3\}$ labels $\{\uparrow,\downarrow\}$.  Note, these diagonal terms in the polarizability tensor are the same for atoms at positions above and below the nanofiber, and thus, all atoms contribute equally. In addition, the constant birefringence term, proportional to $ \hat{J}_0\hat{S}_1 $ is neglected here, as it can be canceled with a compensating waveplate. Finally, the first term in \erf{Eq::ClockHamiltonian} does not affect polarization spectroscopy, but will act to rotate the pseudo-spin around the $J_3$-axis of the generalized Bloch sphere.  While this does not affect the squeezing of projection noise in $\hat{J}_3$, it affects the metrologically relevant squeezing by adding uncertainty in the mean spin.  By choosing a ``magic frequency" at which the light shifts on the two clock states are equal, 
 	\begin{align} \label{Eq::MagicWavelengthCondition}
 		\chi_{H,\uparrow} +\chi_{V,\uparrow}  = \chi_{H,\downarrow} + \chi_{V,\downarrow},
 	\end{align}
-this term can be cancelled \cite{chaudhury_continuous_2006}. Using the D1-line of $^{133}$Cs atoms as the probe light, there are two magic frequency solutions, $ \omega_{44} $ and $ \omega_{33} $, as shown in \frf{fig:D1_magicfreqs44_transition} relative to the clock-state sublevels.
+this term can be cancelled \cite{chaudhury_continuous_2006}. Using the D1-line of $^{133}$Cs atoms as the probe light, there are two magic-frequency solutions, $ \magic{4} $ and $\magic{3}$, shown in \frf{fig:D1_magicfreqs44_transition} relative to the clock-state sublevels.
 
-%========= FIGURE: Geometry (coupling strength, magic wavelength, area and detuning) =========%
-\begin{figure}
-\begin{minipage}{.32\linewidth}
-\centering
-\subfloat[]{\label{fig:D1_magicfreqs44_transition}\includegraphics[scale=0.65]{./Figs/D1_magicfreqs44_transition}}
-\end{minipage}
-\begin{minipage}{.32\linewidth}
-\centering
-\subfloat[]{\label{fig:domega_magic12_q_NA2500_r1d8a}\includegraphics[scale=0.4]{./Figs/domega_magic12_q_NA2500_r1d8a}}
-\end{minipage}
-\begin{minipage}{.32\linewidth}
-\centering
-\subfloat[]{\label{fig:kappa_q_D1_xyplane_NA2500_r1d8a_m44}\includegraphics[scale=0.4]{./Figs/kappa_q_D1_xyplane_NA2500_r1d8a_m44}}
-\end{minipage}
-\caption{Subfig.~\protect\subref{fig:D1_magicfreqs44_transition}: Clock state level structure for probing on the D1-line of $^{133}$Cs atoms. 
-$ \omega_{44}^m $ and $ \omega_{33}^m $ are the two magic frequencies generate the birefringence interaction.  
-\comment{Should we label the level gaps in frequency as well?}
-Subfig.~\protect\subref{fig:domega_magic12_q_NA2500_r1d8a}: Magic detunings, $\Delta_{44}^m/2\pi \equiv (\omega_{0}-\omega_{44'})/2\pi$ and $\Delta_{33}^m/2\pi \equiv (\omega_{0}-\omega_{33'})/2\pi$, for an atom located on the \emph{x}-axis at $ r'\!_\perp=1.8a $ as a function of quantization axis rotating in the transverse plane. The number on the concentric circles are the absolute value of the magic detuning in the unit of MHz. The numbers at the ends of radial lines are the rotating angle of $ \hat{\mathbf{e}}_\pi $ relative to the \emph{x}-axis in the transverse plane. Similarly, Subfig.~\protect\subref{fig:kappa_q_D1_xyplane_NA2500_r1d8a_m44} shows the measurement strength, $ \kappa=|\chi_{J_3}|^2 \dot{N}_L $, as a function of quantization axis on the transverse plane for an atom trapped at $ r'\!_\perp =2a $ on the \emph{x}-axis using the $ \omega_{44}^m $ magic frequency (arbitrary units).
-}\label{Fig::CouplingStrength}
-\end{figure}
-%=============================================
 
-Note, because quantization axis of the atom can be chosen arbitrarily, and because the guided probe light at the position of the atom will generally be elliptical, the light shift interaction will generally cause coherent coupling between different magnetic sublevels in a given manifold $F$, and thus will not conserve $J_3$.  For example, the ellipticity of the light leads to a fictitious magnetic field proportional to $\mathbf{E}^{(-)}_{in}(\br') \times \mathbf{E}^{(+)}_{in}(\br')$ that causes a precession of the quantization axis.  This can be mitigated a sufficiently strong bias magnetic field compared to the fictions field \cite{smith_continuous_2004}. 
-%\comment{(For large bias, do we need to worry about \emph{excited-state} light shifts? This was part of Jeff Kimble's original nanofiber investigation. }
+Because the quantization axis of the atom can be chosen arbitrarily and the guided probe light at the position of the atom will generally be elliptical, the light shift interaction will coherently couple different magnetic sublevels in a given manifold $F$, and thus will not conserve $J_3$.  
+For example, the ellipticity of the light leads to a fictitious magnetic field proportional to $\mathbf{E}^{(-)}_{\inp}(\br') \times \mathbf{E}^{(+)}_{\inp}(\br')$ that causes a precession of the quantization axis.  This can be mitigated by a sufficiently strong bias magnetic field compared to the fictions field \cite{smith_continuous_2004}. 
 The magic detunings as a function of the direction of quantization axis, $ \phi_q $, on the transverse \emph{xy}-plane is shown in \frf{fig:domega_magic12_q_NA2500_r1d8a} for atoms trapped at typical  distance of $r_\perp'=1.8a$ from the center of the nanofiber. 
-We choose here the magic frequency close to the $ F=4\leftrightarrow F'=4 $ transition, $ \omega_{44}^m $.
+We choose here the magic frequency close to the $ F=4\leftrightarrow F'=4 $ transition, $ \magic{4} $, which is furthest from resonance with both excited hyperfine transitions.
 
 The remaining QND interaction Hamiltonian is
 	\begin{equation} \label{Eq::FaradayHam}
-		\hat{H}_{J_3} = \hbar \chi_{J_3} \jz \hat{S}_1(t),
+		\hat{H}_{J_3} = \hbar \chieff \jz \hat{S}_1(t),
 	\end{equation}
 where the rotation angle on the Poincar\'{e} sphere at the magic wavelength is ,
 \begin{equation}\label{eq:chiJ3}
-\chi_{J_3} = \big( \chi_{H, \uparrow} - \chi_{V,\uparrow} \big) - \big(\chi_{H,\downarrow} - \chi_{V,\downarrow} \big) = 2(\chi_{H, \uparrow}-\chi_{H, \downarrow}).
+\chieff = \big( \chi_{H, \uparrow} - \chi_{V,\uparrow} \big) - \big(\chi_{H,\downarrow} - \chi_{V,\downarrow} \big) = 2(\chi_{H, \uparrow}-\chi_{H, \downarrow}).
 \end{equation}
 In the standard way, squeezing the uncertainty in $J_3$ by QND measurement can be generated by preparing the atoms in a SCS along $\hat{J}_1$, passing a probe prepared along $\hat{S}_2$ with photon flux $\dot{N}_L$, and continuously monitoring the $S_3$-component of the guided light in a polarimeter. The measurement strength,
 	\begin{align} \label{Eq::MeasurementStrength}
-		\kappa \equiv |\chi_{J_3}|^2 \dot{N}_L, 
+		\kappa \equiv |\chieff|^2 \dot{N}_L, 
 	\end{align}
-with $\chi_{J_3}$ given in Eq.~\eqref{eq:chiJ3}, quantifies the rate at which conditional projection noise is reduced. 
+with $\chieff$ given in Eq.~\eqref{eq:chiJ3}, quantifies the rate at which conditional projection noise is reduced. 
 %\comment{Is this right? Where is the area of the input mode?}.  
-In the absence of an decoherence, such a QND measurement for integration time $T$ squeezes the initial uncertainty in $J_3$ according to $(\Delta J_3^2)_{out}= (\Delta J_3^2)_{in}/(1+r)$, where
-\begin{equation}
-r = \kappa T  (\Delta J_3^2)_{in}
-\end{equation}
-is the integrated measurement strength.~\cite{?}.
+In the absence of any decoherence, such a QND measurement for integration time $T$ squeezes the initial uncertainty in $J_3$ according to $(\Delta J_3^2)_{\rm out}= (\Delta J_3^2)_{\rm in}/(1+r)$, where
+	\begin{equation}
+		r = \kappa T  (\Delta J_3^2)_{\inp}
+	\end{equation}
+is the integrated measurement strength \cite{hammerer_quantum_2010, baragiola_three-dimensional_2014}.
 
 %As discussed in Sec. \ref{Sec::AtomNumberMeasurement}, the  operator $\hat{\mathcal{M}}$ describes an integrated homodyne measurement of the anti-diagonal $X_L$-quadrature [\erf{Eq::Xquad}], 
 %	\begin{align} \label{Eq::OutputS3Squeeze}
@@ -805,13 +774,28 @@ is the integrated measurement strength.~\cite{?}.
 %where $\projnoise = \kappa \big( \Delta J_z^\inp \big)^2$ and $\shotnoise = 1/t$ are the (rescaled) projection noise and shot noise, respectively, for the integrated measurement in \erf{Eq::OutputS3Squeeze}. Significant spin squeezing is produced only when the projection noise is highly resolved over the shot noise.  
 
 
-%========= FIGURE: Cartoon of spin squeezing =========
-%\missingfigure{Perhaps: Poincare sphere, Bloch sphere.}
-%==================
-
+%========= FIGURE: Geometry (coupling strength, magic wavelength, area and detuning) =========%
+\begin{figure}
+\begin{minipage}{.32\linewidth}
+\centering
+\subfloat[]{\label{fig:D1_magicfreqs44_transition}\includegraphics[scale=0.65]{./Figs/D1_magicfreqs44_transition}}
+\end{minipage}
+\begin{minipage}{.32\linewidth}
+\centering
+\subfloat[]{\label{fig:domega_magic12_q_NA2500_r1d8a}\includegraphics[scale=0.4]{./Figs/domega_magic12_q_NA2500_r1d8a}}
+\end{minipage}
+\begin{minipage}{.32\linewidth}
+\centering
+\subfloat[]{\label{fig:kappa_q_D1_xyplane_NA2500_r1d8a_m44}\includegraphics[scale=0.4]{./Figs/kappa_q_D1_xyplane_NA2500_r1d8a_m44}}
+\end{minipage}
+\caption{\protect\subref{fig:D1_magicfreqs44_transition} Level structure showing the two magic frequencies for probing the clock states on the D1-line of $^{133}$Cs. 
+\comment{Should we label the level gaps in frequency as well?}
+\protect\subref{fig:domega_magic12_q_NA2500_r1d8a} Magnitude of the magic detunings, $\Delta_{F}/2\pi \equiv (\omega_{0} - \magic{F})/2\pi$ (b) and interaction strengths $\chieff$ \protect\subref{fig:kappa_q_D1_xyplane_NA2500_r1d8a_m44} for an atom trapped on the \emph{x}-axis at $ r'\!_\perp=1.8a $ as the quantization axis, \erf{Eq::QuantizationAxis}, is varied in the $xy$-plane}. }\label{Fig::CouplingStrength}
+\end{figure}
+%=============================================
 
 The strength of the birefringent interaction and thus the degree of achievable squeezing depend on the quantization axis that defines the clock state with projection $M=0$.  
-We obtain an compact expression for the coupling strength in \erf{Eq::FaradayHam}, $\chi_{J_3}$, using the irreducible tensor decomposition of the atomic polarizability, \erf{Eq::PolarizabilityIrrep}.  
+We obtain an compact expression for the coupling strength in \erf{Eq::FaradayHam}, $\chieff$, using the irreducible tensor decomposition of the atomic polarizability, \erf{Eq::PolarizabilityIrrep}.  
 Let $\{\mathbf{e}_1,\mathbf{e}_2, \mathbf{e}_\pi\}$ define a Cartesian basis.  Because of the azimuthal symmetry of clock state around the $\qaxis$-axis, the polarizability tensor is diagonal in that basis.  
 Noting that $\langle F,0 | \hat{F}_{\pi}^2| F,0 \rangle =0$ and $\langle F,0 | \hat{F}_{1}^2| F,0 \rangle = \langle F,0 | \hat{F}_{2}^2| F,0 \rangle = \langle F,0 | \hat{\mathbf{F}}^2| F,0 \rangle /2 =F(F+1)/2$, it follows that the expectation value of the irreducible rank-2 component of the atomic polarizability is
 	\begin{align} \label{Eq::CouplingAngleMagic}
@@ -835,11 +819,16 @@ with coefficients that depend on detunings and atomic structure,
 		a_F &= \sum_{F'}  \Big(C^{(0)}_{FF'} + \frac{F(F+1)}{6} C^{(2)}_{FF'} \Big) \frac{(-1)^F\Gamma}{2 \Delta_{FF'}},\\
 		b_F &= \frac{F(F+1)}{2}\sum_{F'} C^{(2)}_{FF'}  \frac{(-1)^F\Gamma}{2 \Delta_{FF'}}.
 	\end{align}}
+
+
+
+
+
 Birefringence arises from two effects.  The first captures the effect of the anisotropy of the intensity of the $H$ and $V$ modes.  
 Additionally, birefringence arises the tensor atomic response, which depends on $\mathbf{e}_\pi$ relative to the mode polarization. 
 We write the effective rotation angle in the Hamiltonian, \erf{Eq::FaradayHam}, as
 	\begin{align} \label{Eq::chieff}
-		\chi_{J_3} = - \frac{\sigma_0}{A_{J_3}} \frac{\Gamma}{ 2 \Delta_{J_3}},
+		\chieff = - \frac{\sigma_0}{A_{J_3}} \frac{\Gamma}{ 2 \Delta_{J_3}},
 	\end{align}
 with an ``effective detuning" set by the magic-wavelength condition,
 	\begin{align} \label{Eq::SqueezingEffectiveDetuning}
@@ -849,13 +838,16 @@ and an effective area given by
 	\begin{align} \label{Eq::SqueezingModeArea}
 		A_{J_3}^{-1} & = n_g \frac{ |\mathbf{e}_\pi \cdot \mathbf{u}_H(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2 - |\mathbf{e}_\pi \cdot \mathbf{u}_V(\br'_\perp)|^2 |\mathbf{u}_H(\br'_\perp)|^2}{ |\mathbf{u}_H(\br'_\perp)|^2 + |\mathbf{u}_V(\br'_\perp)|^2 } 
 	\end{align}	
-The quantization axis that maximizes $\chi_{J_3}$ is that which minimizes $A_{J_3}$ at a given magic detuning.  
+The quantization axis that maximizes $\chieff$ is that which minimizes $A_{J_3}$ at a given magic detuning.  
 
-We illustrate the effects of geometry and choice of quantization axis on the atom-light coupling in  \frf{fig:kappa_q_D1_xyplane_NA2500_r1d8a_m44}. 
-Because the $z$-component of the guided modes is $90^\circ$ out of phase with the transverse components, the quantization axis maximizing the atom-light coupling is specified by an angle in the transverse \emph{xy}-plane, $\qaxis = \cos \phi_q \mbf{e}_x + \sin \phi_q \mbf{e}_y$.  In \frf{fig:domega_magic12_q_NA2500_r1d8a} we plot $|\chi_{J_3}|^2$ as a function of $\phi_q$.  
-Since measurement strength $\kappa =|\chi_{J_3}|^2 \dot{N}_L$  determines the amount of the spin squeezing in the absence of decoherence, \frf{fig:domega_magic12_q_NA2500_r1d8a} shows that the optimal choice of the quantization axis due solely to the coherent interaction is along the $x$-axis.  
+Since the $z$-component of the guided modes is $90^\circ$ out-of-phase with the transverse components, the quantization axis maximizing the atom-light coupling is specified by an angle in the transverse \emph{xy}-plane, 
+	\begin{align} \label{Eq::QuantizationAxis}
+		\qaxis = \cos \phi_\pi \mbf{e}_x + \sin \phi_\pi \mbf{e}_y.
+	\end{align}
+In \frf{fig:kappa_q_D1_xyplane_NA2500_r1d8a_m44} we plot $|\chieff|^2$ as a function of $\phi_\pi$.  
+This suggests that, when based solely on the strength of the coherent interaction, the optimal choice of quantization axis is along the $x$-axis.
 As we will see in the next section, the optimal choice of quantization axis is modified due to the relative strength of coherent coupling and decoherence due to optimal pumping. 
-%The anisotropy of $\chi_{J_3}$ results from several geometric factors, including the dependence of effective mode area $A_{J_3}$, \erf{Eq::SqueezingModeArea}, plotted in \frf{fig:phiq_optimal_NA500to5000_rp}, on $\mathbf{e}_\pi$. In addition, the tensor atomic response influences the value of the magic wavelength according to \erf{Eq::MagicWavelengthCondition}. 
+%The anisotropy of $\chieff$ results from several geometric factors, including the dependence of effective mode area $A_{J_3}$, \erf{Eq::SqueezingModeArea}, plotted in \frf{fig:phiq_optimal_NA500to5000_rp}, on $\mathbf{e}_\pi$. In addition, the tensor atomic response influences the value of the magic wavelength according to \erf{Eq::MagicWavelengthCondition}. 
  
 
 
@@ -866,11 +858,12 @@ The treatment above considers an idealized QND interaction. The coupling of the 
 This results in optical pumping that destroys the entanglement associated with spin squeezing.  
 In addition it reduces the metrologically useful signal.  The maximum achievable meteorologically relevant squeezing is determined by the balance of this decoherence with the QND measurement. 
 
-We fully model this based on a first-principles stochastic master equation (SME)~\cite{?},
+We fully model this based on a first-principles stochastic master equation (SME)~\cite{baragiola_three-dimensional_2014},
 	\begin{align} \label{Eq::SME}
 		d \hat{\rho} = s\sqrt{\frac{\kappa}{4}} \mathcal{H}[\hat{\rho}] dW + \frac{\kappa}{4} \mathcal{L}[\hat{\rho}] dt + \sum_n \mathcal{D}_n [\hat{\rho}] dt,
 	\end{align}
 where $s = {\rm sign}(\kappa)$ and $\hat{\rho}$ is the collective atomic state. 
+The measurement strength $\kappa =|\chieff|^2 \dot{N}_L$ determines the amount of the spin squeezing in the absence of decoherence, \frf{fig:domega_magic12_q_NA2500_r1d8a} shows that the optimal choice of the quantization axis due solely to the coherent interaction is along the $x$-axis.  
 The first two terms describe the QND measurement with strength $\kappa$ given in \erf{Eq::MeasurementStrength}. The conditional dynamics that result from the measurement are described by the superoperator
 	\begin{align}
 		\mathcal{H}[\hat{\rho}] = \jz \hat{\rho} + \hat{\rho} \jz - 2 \expt{\jz} \hat{\rho},
@@ -904,7 +897,7 @@ These rates can be expressed in terms of the imaginary part of the polarizabilit
 		\gamma_F &=\dot{N}_L  \sum_{F'} \sigma (\Delta_{FF'} ) \mathbf{u}^*_\inp(\br')\cdot \bra{F,0} \tensor{\mathbf{A}}(F,F') \ket{F,0}  \cdot \mathbf{u}_\inp(\br'), \\
 		\gamma_{F \rightarrow \tilde{F}}&=  \dot{N}_L  \sum_{F'} \sigma (\Delta_{FF'}) \big| \mathbf{e}_\pi\cdot \bra{\tilde{F},0} \tensor{\mathbf{A}}(F,F') \ket{F,0}  \cdot \mathbf{u}_\inp(\br') \big|^2 ,
 	\end{align}
-where $ \sigma (\Delta_{FF'} )  = \sigma_0 \Gamma^2/4\Delta^2_{FF'}$ is the the scattering cross section at the probe detuning. \comment{Consider OD at detuning.} When expressed in terms of Pauli operators on the pseudo-spin-$\half$ of the clock states,
+where $ \sigma (\Delta_{FF'} )  = \sigma_0 \Gamma^2/4\Delta^2_{FF'}$ is the the scattering cross section at the probe detuning. When expressed in terms of Pauli operators on the pseudo-spin-$\half$ of the clock states,
 	\begin{align} \label{Eq::OpticalPumpingMapSchr}
 		\mathcal{D}_n [\hat{\rho}] 
 				=& - \bigg( \frac{2(\gammau+ \gammad) - \gammauu - \gammadd}{4} \bigg) \hat{\rho} - \frac{ \gammau - \gammad - \gammauu + \gammadd }{4} \big( \hat{\sigma}_3^{(n)} \hat{\rho}+ \hat{\rho} \hat{\sigma}_3^{(n)} \big) \nn \\
@@ -916,17 +909,17 @@ First, the map is not trace preserving as atoms are pumped out of the clock stat
 Second, unequal rates of optical pumping for $\ket{\uparrow}$ and $\ket{\downarrow}$ will polarize the mean $\expt{\jz}$ towards a value different from that found in the QND measurement. 
 Third, owing to the large ground hyperfine splitting, $F' \rightarrow F=3$ and $F' \rightarrow F=4$ photons are distinguishable, thus coherences between $\ket{\uparrow}$ and $\ket{\downarrow}$ are destroyed. \comment{(Should we need comment on these issues  later?)}
 
-We calculate the squeezing parameter as a function of time based on the evolution of atomic correlation functions.  We use the Heisenberg picture, so operators evolved according to the adjoint form of the SME in \erf{Eq::SME}.  This leads to the following stochastic equations of motion (see Appendix B),
-\begin{align}
-&d \comment{\tilde{N}_A} = -\gamma_{00} \comment{\tilde{N}_A}  dt +  \comment{2\gamma_{30}} \expt{\hat{J}_3} dt \\
-&d \expt{\hat{J}_3}  = s\sqrt{\kappa}\expt{\Delta \hat{J}_3^2}dW -\gamma_{33} \expt{\hat{J}_3}dt +\comment{\frac{\gamma_{03}}{2}} \comment{\tilde{N}_A} dt   \\
-&d \expt{\hat{J}_1}  = -\gamma_{11} \expt{\hat{J}_1} dt  \\
-&d \expt{\Delta \hat{J}_3^2}  = - \kappa \expt{\Delta \hat{J}_3^2}^2 dt \comment{- 2 \gamma_{33}} \expt{\Delta \hat{J}_3^2}dt + \frac{1}{4}\comment{\left(2\gamma_{33}-\gamma_{00} \right)} \tilde{N}_A dt + \comment{\left(\frac{\gamma_{30}}{2}-\gamma_{03}\right)} \expect{\hat{J}_3} dt   \label{eq:dDeltaJ3^2} 
-\end{align}
-where the decay and feeding rates are given in Eq. (?).  
-We have also defined $ \tilde{N}_A $ as the atom number in the clock state subspace.
-Note, the final term in Eq. (?), proportional to $\expt{\hat{J}_3}$ is typically negligible, since in most applications $\expt{\hat{J}_3} \ll N_A$.  
-Here, we retain this small correction since optical pumping will act to polarize the atom.  
+We calculate the squeezing parameter as a function of time based on the evolution of atomic correlation functions. We work in the Heisenberg picture where operators evolve according to the adjoint form of the SME in \erf{Eq::SME}.  This leads to the following stochastic equations of motion (see Appendix \ref{Appendix::OpticalPumping}),
+	\begin{align}
+		&d \NA = -\gamma_{00} \NA  dt + 2\gamma_{03} \expt{\hat{J}_3} dt \label{Eq::NA}\\
+		&d \expt{\hat{J}_3}  = s\sqrt{\kappa} \varz dW -\gamma_{33} \expt{\hat{J}_3}dt + \smallfrac{1}{2}\gamma_{30} \NA dt   \\
+		&d \expt{\hat{J}_1}  = -\gamma_{11} \expt{\hat{J}_1} dt  \\
+		&d \varz  = - \kappa \big(\varz\big)^2 dt- 2 \gamma_{33} \varz dt + \smallfrac{1}{4} \big( 2\gamma_{33}-\gamma_{00} \big) \NA dt + \smallfrac{1}{2} \big( \gamma_{03} - 2 \gamma_{30} \big) \expt{\hat{J}_3} dt   \label{Eq::varJz} 
+	\end{align}
+where the decay and feeding rates are given in \erf{Eq::DecayRates}.  
+We have also defined $ \NA $ as the atom number in the clock state subspace.
+The final term in \erf{Eq::varJz}, proportional to $\expt{\hat{J}_3}$ is typically negligible, since in most applications $\expt{\hat{J}_3} \ll \NA$.  
+We retain this small correction since unbalanced optical pumping will act to polarize the atom.  
 Because this term is stochastic, we  solve the equations numerically. 
 
 %========= SQUEEZING DYNAMICS: \xi, variance, mean,  N_A =========
@@ -948,52 +941,31 @@ Because this term is stochastic, we  solve the equations numerically.
 \centering
 \subfloat[]{\label{fig:NAt_qXoptimal_r1d8a_NA2500}\includegraphics[scale=0.45]{./Figs/NAt_qXoptimal_r1d8a_NA2500}}
 \end{minipage}
-\caption{Squeezing dynamics for $2500$ atoms trapped on the \emph{x}-axis at distance $ r'\!_\perp=1.8a$. The optimal quantization axis (red) is compared to quantization along the $x$-axis (blue). 
-%Solid lines indicate simulations with optical pumping and dashed lines without. 
-Subfig.~\protect\subref{fig:xit_qXoptimal_r1d8a_NA2500}: Metrological spin squeezing parameter $\xi^{2}$. 
-\protect\subref{fig:DeltaJz2t_qXoptimal_r1d8a_NA2500}: Conditional squeezed variance $\varz$. 
-\protect\subref{fig:Jxt_qXoptimal_r1d8a_NA2500} and~\protect\subref{fig:NAt_qXoptimal_r1d8a_NA2500}: Mean spin $\expt{\hat{J}_x}$ and atom number $N_A$. \comment{These two should be combined.} }\label{Fig::Squeezing_Dynamics}
+\caption{Clock-state squeezing dynamics for $2500$ atoms trapped on the \emph{x}-axis at distance $ r'\!_\perp=1.8a$. The optimal quantization axis (red) is compared to quantization along the $x$-axis (blue). 
+Solid lines indicate simulations with optical pumping and dashed lines without. 
+\protect\subref{fig:xit_qXoptimal_r1d8a_NA2500} Metrological spin squeezing parameter $\xi^{2}$. 
+\protect\subref{fig:DeltaJz2t_qXoptimal_r1d8a_NA2500} Conditional variance $\varz$. 
+\protect\subref{fig:Jxt_qXoptimal_r1d8a_NA2500} and~\protect\subref{fig:NAt_qXoptimal_r1d8a_NA2500} Collective mean spin $\expt{\hat{J}_x}$ and atom number $\NA$ (subplot). }\label{Fig::Squeezing_Dynamics}
 \end{figure}
 %================
 
+To find the peak squeezing in the presence of optical pumping, we numerically integrate Eqs. (\ref{Eq::NA}--\ref{Eq::varJz}) and then calculate the squeezing parameter $\xi^2$ [\erf{Eq::SqueezingParameter}] as a function of time.
+Typical time dynamics are shown in \frf{Fig::Squeezing_Dynamics} for $2500$ atoms trapped on the \emph{x}-axis at a distance $r'\!_\perp=1.8a$ from the center of the nanofiber (as in \frf{}), where we operate on the $\magic{4}$ magic detuning, and dimensionless time is scaled to the characteristic scattering rate, $\gamma_s \equiv (\sigma_0/A_{\rm in})(\Gamma/2 \Delta_\eff)^2 \dot{N}_L$.
+We show the dynamics for two choices of quantization axis: (i) along the $x$-axis and (ii) along the numerically determined optimal axis, $\phi_\pi \approx 86^\circ$ in \erf{Eq::QuantizationAxis}. 
+We begin with the dynamics of the squeezing parameter in \frf{fig:xit_qXoptimal_r1d8a_NA2500}. 
+In the presence of optical pumping, peak squeezing is limited by the combined effects of decoherence on the constituent moments of $\xi^2$, $\expt{\jx}$ and $\varz$. 
+The primary limiting factor for metrological squeezing is the decay of the collective mean $\expt{\hat{J}_x}$ \cite{baragiola_three-dimensional_2014}, plotted in (b). 
+Scattered photons destroy the initial coherence between $\ket{\uparrow}$ and $\ket{\downarrow}$ thus depolarizing the collective spin $\expt{\jx}$. 
+Atoms optically pumped to magnetic sublevels outside of the clock subspace decay $\NA$ further reducing $\expt{\jx}$.
+The QND squeezing of the conditional variance, $\varz$, competes with the noise injected by atoms that return to the clock subspace. 
+An additional source of decoherence comes from the decay of the two-body correlations that lie at the heart of spin squeezing, as described by \erf{Eq::TwoBodyDecay}.
+All of these effects are included in the equation for $\varz$, \erf{Eq::varJz}, whose dynamics are shown in (c). \comment{(Since we write the equation for $\expt{\hat{J}_3}$ and explicitly comment about its dynamics being stochastic, perhaps we should show it along with the others here. This would reveal only that it is small compared to $\NA$ and experiences deterministic polarization towards $\ket{\downarrow}$.)}
 
+The choice of quantization axis $\qaxis$ along which the clock states are defined affects both the measurement strength and the relative rates of optical pumping. In \frf{} the effective OD/atom is shown the quantization axis varied in the $xy$-plane. The maximum value of $OD/atom = $ occurs for quantization along the $y$-axis. However, when  
 
-We investigate the dynamics in \frf{Fig::Squeezing_Dynamics} for several choices of $\qaxis$. 
-In \frf{fig:xit_qXoptimal_r1d8a_NA2500} we investigate the dynamics of the squeezing parameter, $ \xi^{2}=N_A \expect{\Delta J_3^2}/\expect{J_1}^2 $, at the optimal quantization axis $\phi_q\approx 86^\circ$ given $ 2500 $ trapped at $ r'\!_\perp=1.8a $ on the \emph{x}-axis and compare to using \emph{x}-axis as the quantization axis which seems to be the optimal choice of quantization axis for the idealized situation with no optical pumping where the dynamics results solely from the variations in $\kappa$ (see \frf{fig:kappa_q_D1_xyplane_NA2500_r1d8a_m44}) and squeezing continues indefinitely.
-% (until the failure of the Gaussian approximation). 
-Shown in \frf{fig:DeltaJz2t_qXoptimal_r1d8a_NA2500} is the decrease in the conditional variance $\varz$, where the time axis is scaled to the characteristic photon scattering rate $\gamma_s = (\sigma_0/\comment{A_{\rm in}})(\Gamma/2 \Delta_\eff)^2 \dot{N}_L$. 
-While the decay of correlations, the primary limiting factor for peak achievable squeezing is the decay of the mean $\expt{\hat{J}_x}$ as optical pumping destroys the coherence between $\ket{\uparrow}$ and $\ket{\downarrow}$ within each atom. 
-In \frf{fig:Jxt_qXoptimal_r1d8a_NA2500} and \frf{fig:NAt_qXoptimal_r1d8a_NA2500} we plot $\expt{\hat{J}_x}$ and the atom number $\tilde{N}_A$.  
-
-
-\begin{figure}
-\begin{minipage}{.49\linewidth}
-\centering
-\subfloat[]{\label{fig:phiq_optimal_NA500to5000_rp}\includegraphics[scale=0.45]{./Figs/phiq_optimal_NA500to5000_rp}}
-\end{minipage}
-\begin{minipage}{.49\linewidth}
-\centering
-\subfloat[]{\label{fig:xi_optimal_NA500to5000_omega44}\includegraphics[scale=0.45]{./Figs/xi_optimal_NA500to5000_omega44}}
-\end{minipage}
-\par\medskip
-\begin{minipage}{.49\linewidth}
-\centering
-\subfloat[]{\label{fig:domega_magic44_qXYoptimal_rp}\includegraphics[scale=0.45]{./Figs/domega_magic44_qXYoptimal_rp}}
-\end{minipage}
-\begin{minipage}{.49\linewidth}
-\centering
-\subfloat[]{\label{fig:domega_magic33_qXYoptimal_rp}\includegraphics[scale=0.45]{./Figs/domega_magic33_qXYoptimal_rp}}
-\end{minipage}
-\caption{ Optimal choice of quantization axis considering optical pumping. \protect\subref{fig:phiq_optimal_NA500to5000_rp}: Optimal quantization direction, $ \phi_q $, on the transverse plane as a function of atom distance to the core of the nanofiber, $ r'\!_\perp $, and atom number. 
-The line is cut off when the squeezing effect is too weak to be observed ($ r'\!_\perp>2.3a $).
-\protect\subref{fig:xi_optimal_NA500to5000_omega44}: Peak squeezing parameter as a function of atom position and atom number when the optimal quantization axis is used. Subfigs.~\protect\subref{fig:domega_magic44_qXYoptimal_rp} and~\protect\subref{fig:domega_magic33_qXYoptimal_rp} show the magic detuning, $\Delta_{44}^m/2\pi$ and $ \Delta_{33}^m/2\pi $, as functions of $ r'\!_\perp $ for three choices of $\qaxis$, along the \emph{x}-axis and \emph{y}-axis and optimal quantization axis for squeezing.
-} \label{Fig::D1_magicfreqs}
-\end{figure}
-
- 
-Figure \ref{fig:kappa_q_D1_xyplane_NA2500_r1d8a_m44} proposes an optimal choice for $\qaxis$ along the $x$-axis, where $\chi_\eff$ reaches a maximum for a probe detuned close to one of $F'=3$ and $F'=4$. 
+Figure \ref{fig:kappa_q_D1_xyplane_NA2500_r1d8a_m44} proposes an optimal choice for $\qaxis$ along the $x$-axis, where $\chieff$ reaches a maximum for a probe detuned close to one of $F'=3$ and $F'=4$. 
 However, in \frf{fig:phiq_optimal_NA500to5000_rp} we see that when optical pumping is included, the optimal $\qaxis$ is rotated approaching to the \emph{y}-axis and the magic frequency, $ \Delta_{44}^m $, is detuned nearly equidistant from $F'=3$ and $F'=4$. 
-Since $ \expect{\Delta J_3^2} $ is nonlinear to atom number from Eq.~\eqref{eq:dDeltaJ3^2}, the optimal choice of quantization axis also weakly depends on the atom number. 
+Since $ \expt{\Delta J_3^2} $ is nonlinear to atom number from Eq.~\eqref{Eq::varJz}, the optimal choice of quantization axis also weakly depends on the atom number. 
 Using the optimal quantization axis, the peak squeezing is plotted in \frf{fig:xi_optimal_NA500to5000_omega44}.
 We see that, with just a few thousands of atoms, a few dB of squeezing can be achieved as long as the atoms are trapped at a proper distance to the nanofiber surface. 
 Independent of the atom number, the magic wavelength 
@@ -1001,15 +973,6 @@ Independent of the atom number, the magic wavelength
 are plotted in \frf{fig:domega_magic44_qXYoptimal_rp} and \frf{fig:domega_magic33_qXYoptimal_rp} for different choices of quantization axis. 
 Compared to the natural linewidth of Cs atoms ($ \sim 5 $MHz), the magic frequencies for atoms not too close to the fiber surface are well in the far-off-resonance regime.
 Since the optimal quantization axis for spin squeezing is so close to the \emph{y}-axis, one may use \emph{y}-axis as the optimal quantization axis in practice. 
-
-The peak achievable squeezing parameter as a function of quantization axis orientation is also plotted in \frf{fig:xi_q_D1_NA2500_r1d8a} and \frf{fig:ximax_q_D1_xyplane_NA2500_r1d8a} in a full angle scope. 
-
-Insight into the optimal balance between QND measurement and the optical pumping is gained by examining measurement strength and decay rates. 
-The squeezing of $\varz$ is determined by the metrological measurement strength, $\kappa/\gamma_s=\sigma_0 A_{\rm in}/A_{J_3}^2$ (or can be defined as the \emph{optical depth per atom}, $ \mathrm{OD}/\mathrm{atom} $ ), followed from \erf{Eq::chieff} and plotted in \frf{fig:OD_q_xyplane_r1d8a_m44}. 
-In the context of metrological squeezing, optical pumping affects the mean, $\expt{\hat{J}_x}$, and the variance, $\varz$, in different ways. 
-The relative rates of atom loss, of decoherence in $\varz$, and of spin flips that shorten $\expt{\hat{J}_x}$ are balanced with the measurement strength imply the optimal quantization axis direction and the peak achievable metrological squeezing effect.
-By normalizing the measurement strength, $ \kappa $, and other rates to the photon scattering rate, $ \gamma_s $, we find that the metrological strength $ \mathrm{OD}/\mathrm{atom}\equiv \kappa/\gamma_s $ actually peaks along the \emph{y}-axis. 
-Shown in \frf{fig:gamma34togammas_q_D1_xyplane_NA2500_r1d8a_m44} is one important spin flip rate due to optical pumping from $ \ket{\uparrow} $ to $ \ket{\downarrow} $ which kicks the optimal quantization axis off the \emph{y}-axis for a smaller value of $ \gammaud/\gamma_s $ or weaker decoherence.
 
 
 %========= FIGURE: Peak squeezing (\xi, measurement strength, scattering rates) =========
@@ -1046,6 +1009,19 @@ It is symmetric to the \emph{xy}-plane.
 \end{figure}
 %================
 
+
+The peak achievable squeezing parameter as a function of quantization axis orientation is also plotted in \frf{fig:xi_q_D1_NA2500_r1d8a} and \frf{fig:ximax_q_D1_xyplane_NA2500_r1d8a} in a full angle scope. 
+
+Insight into the optimal balance between QND measurement and the optical pumping is gained by examining measurement strength and decay rates. 
+The squeezing of $\varz$ is determined by the metrological measurement strength, $\kappa/\gamma_s=\sigma_0 A_{\rm in}/A_{J_3}^2$ (or can be defined as the \emph{optical depth per atom}, $ \mathrm{OD}/\mathrm{atom} $ ), followed from \erf{Eq::chieff} and plotted in \frf{fig:OD_q_xyplane_r1d8a_m44}. 
+In the context of metrological squeezing, optical pumping affects the mean, $\expt{\hat{J}_x}$, and the variance, $\varz$, in different ways. 
+The relative rates of atom loss, of decoherence in $\varz$, and of spin flips that shorten $\expt{\hat{J}_x}$ are balanced with the measurement strength imply the optimal quantization axis direction and the peak achievable metrological squeezing effect.
+By normalizing the measurement strength, $ \kappa $, and other rates to the photon scattering rate, $ \gamma_s $, we find that the metrological strength $ \mathrm{OD}/\mathrm{atom}\equiv \kappa/\gamma_s $ actually peaks along the \emph{y}-axis. 
+Shown in \frf{fig:gamma34togammas_q_D1_xyplane_NA2500_r1d8a_m44} is one important spin flip rate due to optical pumping from $ \ket{\uparrow} $ to $ \ket{\downarrow} $ which kicks the optimal quantization axis off the \emph{y}-axis for a smaller value of $ \gammaud/\gamma_s $ or weaker decoherence.
+
+
+
+
 As the atoms are trapped closer to the nanofiber surface, they experience higher guided-mode fields and the metrological measurement strength $ \kappa/\gamma_s $ increases exponentially, \frf{fig:OD_optimal_rp}. 
 As expected, this yields higher peak squeezing, \frf{fig:xi_optimal_NA500to5000_omega44}. 
 Using the nanofiber geometry, $ \mathrm{OD}/\mathrm{atom}\sim 10^{-2} $ which is comparable to the cavity case \comment{Ref to James' experiments?}.
@@ -1066,6 +1042,32 @@ The full details of optical pumping very close to the nanofiber surface will be 
 %\caption{Peak squeezing as a function of distance from the nanofiber for optimal quantization axis. (a) Peak metrological spin squeezing parameter. (b) Measurement strength per atom, $\kappa/\gamma_s$. (c) Decay rates $\Gamma_{\rm loss}$, $\Gamma_{\rm dec}$, and $\Gamma_{\rm flip}$ \comment{(perhaps also the total modified decay rate, $\Gamma_{\rm fiber}/\Gamma_0$? }. }\label{Fig::Squeezing_Scaling}
 %\end{figure}
 %================
+
+%======= FIG: Scaling with atom number and distance =======
+\begin{figure}
+\begin{minipage}{.49\linewidth}
+\centering
+\subfloat[]{\label{fig:phiq_optimal_NA500to5000_rp}\includegraphics[scale=0.45]{./Figs/phiq_optimal_NA500to5000_rp}}
+\end{minipage}
+\begin{minipage}{.49\linewidth}
+\centering
+\subfloat[]{\label{fig:xi_optimal_NA500to5000_omega44}\includegraphics[scale=0.45]{./Figs/xi_optimal_NA500to5000_omega44}}
+\end{minipage}
+\par\medskip
+\begin{minipage}{.49\linewidth}
+\centering
+\subfloat[]{\label{fig:domega_magic44_qXYoptimal_rp}\includegraphics[scale=0.45]{./Figs/domega_magic44_qXYoptimal_rp}}
+\end{minipage}
+\begin{minipage}{.49\linewidth}
+\centering
+\subfloat[]{\label{fig:domega_magic33_qXYoptimal_rp}\includegraphics[scale=0.45]{./Figs/domega_magic33_qXYoptimal_rp}}
+\end{minipage}
+\caption{ Optimal choice of quantization axis considering optical pumping. \protect\subref{fig:phiq_optimal_NA500to5000_rp}: Optimal quantization direction, $ \phi_q $, on the transverse plane as a function of atom distance to the core of the nanofiber, $ r'\!_\perp $, and atom number. 
+The line is cut off when the squeezing effect is too weak to be observed ($ r'\!_\perp>2.3a $).
+\protect\subref{fig:xi_optimal_NA500to5000_omega44}: Peak squeezing parameter as a function of atom position and atom number when the optimal quantization axis is used. Subfigs.~\protect\subref{fig:domega_magic44_qXYoptimal_rp} and~\protect\subref{fig:domega_magic33_qXYoptimal_rp} show the magic detuning, $\Delta_{44}^m/2\pi$ and $ \Delta_{33}^m/2\pi $, as functions of $ r'\!_\perp $ for three choices of $\qaxis$, along the \emph{x}-axis and \emph{y}-axis and optimal quantization axis for squeezing.
+} \label{Fig::D1_magicfreqs}
+\end{figure}
+%================================
 
 \subsection{Other applications?} 
 
@@ -1174,64 +1176,68 @@ Further details about the guided-mode fields inside the nanofiber ($r_\perp\leq 
 
 %===================APPENDIX: Equations of motion =====================%
 \section{Derivation of the equations of motion for the moments} \label{Appendix::OpticalPumping}	
-The metrologically relevant squeezing parameter, $\xi^2 = N_A \expt{\Delta \hat{J}_3^2}/\expect{\hat{J}_1}^2$.  
+The metrologically relevant squeezing parameter, $\xi^2 = N_A \expt{\Delta \hat{J}_3^2}/\expt{\hat{J}_1}^2$.  
 We thus seek the time evolution of the one and two-body correlation functions:
 \begin{align}
-&\comment{\expect{\hat{N}_A}} = \sum_n \expect{\hat{\mathbbm{1}}^{(n)}} \\
-&\expect{\hat{J}_1} = \frac{1}{2} \sum_n \expect{\hat{\sigma}_1^{(n)}} \\
-&\expect{\hat{J}_3} = \frac{1}{2} \sum_n \expect{\hat{\sigma}_3^{(n)}} \\
-&\expect{\hat{J}_3^2} = \frac{N_A}{4} +\frac{1}{4} \sum_{m \neq n} \expect{\hat{\sigma}_3^{(m)}\otimes \hat{\sigma}_3^{(n)}} 
+&\comment{\expt{\hat{N}_A}} = \sum_n \expt{\hat{\mathbbm{1}}^{(n)}} \\
+&\expt{\hat{J}_1} = \frac{1}{2} \sum_n \expt{\hat{\sigma}_1^{(n)}} \\
+&\expt{\hat{J}_3} = \frac{1}{2} \sum_n \expt{\hat{\sigma}_3^{(n)}} \\
+&\expt{\hat{J}_3^2} = \frac{N_A}{4} +\frac{1}{4} \sum_{m \neq n} \expt{\hat{\sigma}_3^{(m)}\otimes \hat{\sigma}_3^{(n)}}, 
 \end{align}
-\comment{Note: maybe set $ \expect{\hat{N}_A}=N_A(t) $ later, otherwise it is confusing with the initial atom number...}
-We work in the Heisenberg, so operators evolve according to the adjoint form of the SME in \erf{Eq::SME}. 
-To include optical pumping, we apply the following equations of motion. For a collective operator single-body operator $\hat{X} = \sum_n \hat{x}^{(n)}$ the evolution due to optical pumping is $d\expt{ \hat{X}}|_{\rm op} = \sum_n \Tr [\mathcal{D}_n[\hat{\rho}]\hat{X} ] = \sum_n \Tr [\expt{\mathcal{D}_n\dg[\hat{x}^{(n)}]} ] $, where the map, which acts locally on atoms along the nanofiber, is given in \erf{Eq::OpticalPumpingMapSchr}.  
+\comment{Note: maybe set $ \expt{\hat{N}_A}=N_A(t) $ later, otherwise it is confusing with the initial atom number...}
+where $\hat{\mathbbm{1}} \equiv \op{\uparrow}{\uparrow} + \op{\downarrow}{\downarrow}$ is the single-body projector onto the clock states. 
+To include optical pumping, we apply the following equations of motion. For a collective, single-body operator, $\hat{X} = \sum_n \hat{x}^{(n)}$, the evolution due to optical pumping is $d\expt{ \hat{X}}|_{\rm op} = \sum_n \Tr [\mathcal{D}_n[\hat{\rho}]\hat{X} ] = \sum_n \Tr [\expt{\mathcal{D}_n\dg[\hat{x}^{(n)}]} ] $, where the map, which acts locally on atoms along the nanofiber, is given in \erf{Eq::OpticalPumpingMapSchr}.  
 The two-body correlations that form the basis for spin squeezing decay by optical pumping  according to \cite{baragiola_three-dimensional_2014}
-	\begin{align}
+	\begin{align} \label{Eq::TwoBodyDecay}
 		\frac{d}{dt} \expt{ \hat{x}^{(m)} \otimes \hat{y}^{(n)} } \Big|_{\rm op}= &\expt{ \mathcal{D}_m\dg[ \hat{x}^{(m)}] \otimes \hat{y}^{(n)} } + \expt{ \hat{x}^{(m)}\otimes \mathcal{D}_n\dg[ \hat{y}^{(n)}] },
 	\end{align}
-where the superscript refers to the $m^{th}$ and $n^{th}$ atoms. 
+where the superscripts refer to the $m^{th}$ and $n^{th}$ atoms. 
 
 Applying the map to the single-atom operators, 
+	\begin{subequations} \label{Eq::OperatorMap}
 	\begin{align}
-		\mathcal{D}\dg[\hat{\mathbbm{1}}] & = - \gamma_{00} \hat{\mathbbm{1}} +\error{\gamma_{30}} \hat{\sigma}_3 \label {Eq::Idecay} \\
-		\mathcal{D}\dg[\hat{\sigma}_3] & =- \gamma_{33} \hat{\sigma}_3 +  \error{\gamma_{03}} \hat{\mathbbm{1}} 
+		\mathcal{D}\dg[\hat{\mathbbm{1}}] & = - \gamma_{00} \hat{\mathbbm{1}} +\gamma_{03} \hat{\sigma}_3 \label {Eq::Idecay} \\
+		\mathcal{D}\dg[\hat{\sigma}_3] & =- \gamma_{33} \hat{\sigma}_3 +  \gamma_{30} \hat{\mathbbm{1}} 
 \label{Eq::zdecay} \\
 		\mathcal{D}\dg[\hat{\sigma}_1] & = - \gamma_{11} \hat{\sigma}_1\label{Eq::xdecay}
 	\end{align}
+	\end{subequations}
 with rates	
+	\begin{subequations} \label{Eq::DecayRates}
 	\begin{align}
 		\gamma_{00} 
 			& = \frac{\gamma_{\uparrow}+\gamma_{\downarrow} - \gammauu-\gammaud  -\gammadd-\gammadu}{2} \\
 			\gamma_{03} 
-			& = \frac{-\gamma_{\uparrow}+\gamma_{\downarrow} +\gammauu-\gammaud +\gammadd-\gammadu }{2}\\		
+			& = \frac{-\gamma_{\uparrow}+\gamma_{\downarrow} +\gammauu + \gammaud - \gammadd - \gammadu }{2}\\		
 		\gamma_{33} 
 			& = \frac{\gamma_{\uparrow}+\gamma_{\downarrow} - \gammauu+\gammaud  -\gammadd+\gammadu}{2}\\
 			\gamma_{30} 
-			& = \frac{-\gamma_{\uparrow}+\gamma_{\downarrow} +\gammauu+\gammaud -\gammadd-\gammadu }{2} \\
+			& = \frac{-\gamma_{\uparrow} - \gamma_{\downarrow} + \gammauu - \gammaud - \gammadd + \gammadu }{2} \\
 			\gamma_{11} 
 			& = \frac{\gamma_{\uparrow}+\gamma_{\downarrow}}{2}. \label{Eq::frate}
 	\end{align}
-The two-body correlations that appear in the collective operator $\jz^2$ decay as
-	\begin{align}
-		\frac{d}{dt} \expect{\hat{\sigma}_3^{(m)} \otimes \hat{\sigma}_3^{(n)} }  \Big|_{\rm op} = - 2 \comment{\gamma_{33}}  \expect{\hat{\sigma}_3^{(m)} \otimes \hat{\sigma}_3^{(n)}} + \comment{\gamma_{03}} \expect{\big(\hat{\mathbbm{1}}^{(m)} \otimes \hat{\sigma}_3^{(n)} + \hat{\sigma}_3^{(m)} \otimes \hat{\mathbbm{1}}^{(n)}\big)},
+	\end{subequations}
+From \erf{Eq::TwoBodyDecay}, the two-body correlations that appear in the collective operator $\jz^2$ decay as
+	\begin{align} \label{Eq::TwoBodyDecay}
+		\frac{d}{dt} \expt{\hat{\sigma}_3^{(m)} \otimes \hat{\sigma}_3^{(n)} }  \Big|_{\rm op} = - 2 \gamma_{33}  \expt{\hat{\sigma}_3^{(m)} \otimes \hat{\sigma}_3^{(n)}} + \gamma_{30} \expt{\big(\hat{\mathbbm{1}}^{(m)} \otimes \hat{\sigma}_3^{(n)} + \hat{\sigma}_3^{(m)} \otimes \hat{\mathbbm{1}}^{(n)}\big)},
 	\end{align}
-using the map for optical pumping within the pseudospin of each atom given by \erf{Eq::Idecay} through \erf{Eq::xdecay}.  
-Similarly, one can work out the other coupled optical pumping equations for two-body microscopic operator correlations $ \expect{\hat{\mathbbm{1}}^{(m)} \otimes \hat{\mathbbm{1}}^{(n)}} $ and $ \expect{\big(\hat{\mathbbm{1}}^{(m)} \otimes \hat{\sigma}_3^{(n)} + \hat{\sigma}_3^{(m)} \otimes \hat{\mathbbm{1}}^{(n)}\big)} $ when $ m\neq n $ and the macroscopic operator expectation values $ \expect{\hat{J}_3^2} $, $ \expect{\hat{N}_A^2} $ and $ \expect{\hat{N}_A\hat{J}_3} $ due to optical pumping. 
+using the map for optical pumping within the pseudospin of each atom given by Eqs. (\ref{Eq::OperatorMap}).  
+Similarly, one can work out the other coupled optical pumping equations for two-body microscopic operator correlations $ \expt{\hat{\mathbbm{1}}^{(m)} \otimes \hat{\mathbbm{1}}^{(n)}} $ and $ \expt{\big(\hat{\mathbbm{1}}^{(m)} \otimes \hat{\sigma}_3^{(n)} + \hat{\sigma}_3^{(m)} \otimes \hat{\mathbbm{1}}^{(n)}\big)} $ when $ m\neq n $ and the macroscopic operator expectation values $ \expt{\hat{J}_3^2} $, $ \expt{\hat{N}_A^2} $, and $ \expt{\hat{N}_A\hat{J}_3} $. 
 As a result of the correlations between atoms, a weak measurement on the ensemble of atoms may squeeze the pseudospin state in the clock state subspace. 
 As has been examined numerically on the time scale of the birefringence QND measurement studied in this paper, the correlation between atom number in the clock state subspace and the pseudospin moment is so weak that one can treat the atom number operator in the clock state subspace as a number.
-We therefore define $ \tilde{N}_A\equiv \expect{\hat{N}_A}\approx \hat{N}_A $ and set $ \expect{\hat{N}_A\hat{J}_3}-\expect{\hat{N}_A}\expect{\hat{J}_3}\approx 0 $. 
+We therefore set $ \expt{\hat{N}_A\hat{J}_3}-\expt{\hat{N}_A}\expt{\hat{J}_3}\approx 0 $ and $ \expt{\hat{N}_A^2} - \expt{\hat{N}_A}^2 \approx 0 $ and define \error{$ \NA\equiv \expt{\hat{N}_A}\approx \hat{N}_A $} and. 
 
 The equations of motion for the moments of $\jz$ are now found from the SME, \erf{Eq::SME}, 
 	\begin{subequations} \label{Eq::J3MomentEquations}
 	\begin{align} 
-		d \expt{\jz} =& \error{s} \sqrt{\kappa} \varz \, dW - \comment{\gamma_{33}} \expt{\jz}dt + \smallfrac{1}{2} \comment{\gamma_{03}} \tilde{N}_A dt ,  \\
+		d \expt{\jz} =& s \sqrt{\kappa} \varz \, dW - \gamma_{33} \expt{\jz}dt + \smallfrac{1}{2} \gamma_{30} \NA dt ,  \\
 		d \expt{\jz^2} %=& \error{\pm} 2\sqrt{\kappa} \expt{\jz}\Delta J_3^2 \, dW -  2 \zrateB \expt{\jz^2}dt - \big( \lrate - 2\zrateB + 4\zrateA\expt{\jz}  \big) \smallfrac{N_A}{4} dt- \Big( \smallfrac{\prate}{2} - \zrateA \Big) \expt{\jz} dt . \nn \\
-		=& \error{s} 2\sqrt{\kappa} \expt{\jz}\Delta J_3^2 \, dW - 2 \comment{\gamma_{33}} \expt{\jz^2}dt + \smallfrac{1}{4} \big( \comment{\gamma_{33}-\gamma_{00}}\big) \tilde{N}_A \error{dt} \\
-		&+ \comment{\gamma_{03}} \expt{\jz} \tilde{N}_A dt + \comment{\left(\frac{\gamma_{30}}{2}-\gamma_{03}\right)}\expt{\jz}\error{dt}. \nonumber 
+		=& s 2\sqrt{\kappa} \expt{\jz}\Delta J_3^2 \, dW - 2 \gamma_{33} \expt{\jz^2}dt + \smallfrac{1}{4} \big( \error{2}\gamma_{33}-\gamma_{00}\big) \NA dt \\
+		&+ \gamma_{30} \expt{\jz} \NA dt + \smallfrac{1}{2}\left(\gamma_{03} -2 \gamma_{30}\right) \expt{\jz} dt. \nonumber 
 	\end{align}
 	\end{subequations}
 The stochastic term in $d\expt{\jz^2}$ was simplified using the relation $\expt{\jz^3} = 3\expt{\jz^2}\expt{\jz}- 2\expt{\jz}^3$, which comes from Gaussian statistics \cite{jacobs_straightforward_2006}. 
-Finally, the It\={o} calculus governing the stochastically evolving moments requires that differentials be taken to second order, and the evolution of the variance is given by $d \varz = d \expt{\jz^2} - 2 \expt{\jz} d \expt{\jz} - \big( d \expt{\jz} \big)^2$. In the limit where $\expt{\jz}\ll N_A$ the terms proportional to the stochastically fluctuating mean can be dropped, and the equation of motion for the conditional variance, given in \erf{Eq::Jzvariance}, follows from Eqs. (\ref{Eq::J3MomentEquations}).
+Finally, the It\={o} calculus governing the stochastically evolving moments requires that differentials be taken to second order, and the evolution of the variance is given by $d \varz = d \expt{\jz^2} - 2 \expt{\jz} d \expt{\jz} - \big( d \expt{\jz} \big)^2$. In the limit where $\expt{\jz}\ll \NA$ the terms proportional to the stochastically fluctuating mean can be dropped, and the equation of motion for the conditional variance, given in \erf{Eq::varJz}, follows from Eqs. (\ref{Eq::J3MomentEquations}).
 
 
 \change{
