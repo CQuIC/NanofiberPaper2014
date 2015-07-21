@@ -23,12 +23,6 @@ Ben~Q. Baragiola, Leigh~M. Norris, Enrique Montaño, Pascal~G. Mickelson,
   squeezing in atomic ensembles.
 \newblock {\em Phys. Rev. A}, 89(3):033850, March 2014.
 
-\bibitem{kuzmich_generation_2000}
-A.~Kuzmich, L.~Mandel, and N.~P. Bigelow.
-\newblock Generation of {Spin} {Squeezing} via {Continuous} {Quantum}
-  {Nondemolition} {Measurement}.
-\newblock {\em Phys. Rev. Lett.}, 85(8):1594--1597, August 2000.
-
 \bibitem{vetsch_nanofiber-based_2012}
 E.~Vetsch, S.T. Dawkins, R.~Mitsch, D.~Reitz, P.~Schneeweiss, and
   A.~Rauschenbeutel.
@@ -41,11 +35,6 @@ C.~Lacroûte, K.~S. Choi, A.~Goban, D.~J. Alton, D.~Ding, N.~P. Stern, and
   H.~J. Kimble.
 \newblock A state-insensitive, compensated nanofiber trap.
 \newblock {\em New J. Phys.}, 14(2):023056, February 2012.
-
-\bibitem{le_kien_propagation_2014}
-Fam Le~Kien and A.~Rauschenbeutel.
-\newblock Propagation of nanofiber-guided light through an array of atoms.
-\newblock {\em Phys. Rev. A}, 90(6):063816, December 2014.
 
 \bibitem{wubs_multiple-scattering_2004}
 Martijn Wubs, L.~G. Suttorp, and A.~Lagendijk.
@@ -130,6 +119,11 @@ Fam Le~Kien and K.~Hakuta.
   nanofiber.
 \newblock {\em Phys. Rev. A}, 77(3):033826, March 2008.
 
+\bibitem{le_kien_propagation_2014}
+Fam Le~Kien and A.~Rauschenbeutel.
+\newblock Propagation of nanofiber-guided light through an array of atoms.
+\newblock {\em Phys. Rev. A}, 90(6):063816, December 2014.
+
 \bibitem{nha_cavity_1997}
 H.~Nha and W.~Jhe.
 \newblock Cavity quantum electrodynamics for a cylinder: {Inside} a hollow
@@ -192,19 +186,6 @@ Fam~Le Kien, Philipp Schneeweiss, and Arno Rauschenbeutel.
 \newblock Dynamical polarizability of atoms in arbitrary light fields: general
   theory and application to cesium.
 \newblock {\em Eur. Phys. J. D}, 67(5):1--16, May 2013.
-
-\bibitem{mitsch_exploiting_2014}
-R.~Mitsch, C.~Sayrin, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
-\newblock Exploiting the local polarization of strongly confined light for
-  sub-micrometer-resolution internal state preparation and manipulation of cold
-  atoms.
-\newblock {\em Phys. Rev. A}, 89(6):063829, June 2014.
-
-\bibitem{sayrin_storage_2015}
-C.~Sayrin, C.~Clausen, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
-\newblock Storage of fiber-guided light in a nanofiber-trapped ensemble of cold
-  atoms.
-\newblock {\em Optica}, 2(4):353--356, April 2015.
 
 \bibitem{blow_continuum_1990}
 K.~J. Blow, Rodney Loudon, Simon J.~D. Phoenix, and T.~J. Shepherd.
@@ -323,6 +304,12 @@ A.~González-Tudela, V.~Paulisch, D.~E. Chang, H.~J. Kimble, and J.~I. Cirac.
   dissipation.
 \newblock {\em arXiv:1504.07600 [quant-ph]}, April 2015.
 \newblock arXiv: 1504.07600.
+
+\bibitem{sayrin_storage_2015}
+C.~Sayrin, C.~Clausen, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
+\newblock Storage of fiber-guided light in a nanofiber-trapped ensemble of cold
+  atoms.
+\newblock {\em Optica}, 2(4):353--356, April 2015.
 
 \bibitem{gouraud_demonstration_2015}
 B.~Gouraud, D.~Maxein, A.~Nicolas, O.~Morin, and J.~Laurat.
