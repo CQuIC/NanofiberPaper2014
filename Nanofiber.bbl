@@ -187,6 +187,19 @@ Fam~Le Kien, Philipp Schneeweiss, and Arno Rauschenbeutel.
   theory and application to cesium.
 \newblock {\em Eur. Phys. J. D}, 67(5):1--16, May 2013.
 
+\bibitem{mitsch_exploiting_2014}
+R.~Mitsch, C.~Sayrin, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
+\newblock Exploiting the local polarization of strongly confined light for
+  sub-micrometer-resolution internal state preparation and manipulation of cold
+  atoms.
+\newblock {\em Phys. Rev. A}, 89(6):063829, June 2014.
+
+\bibitem{sayrin_storage_2015}
+C.~Sayrin, C.~Clausen, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
+\newblock Storage of fiber-guided light in a nanofiber-trapped ensemble of cold
+  atoms.
+\newblock {\em Optica}, 2(4):353--356, April 2015.
+
 \bibitem{blow_continuum_1990}
 K.~J. Blow, Rodney Loudon, Simon J.~D. Phoenix, and T.~J. Shepherd.
 \newblock Continuum fields in quantum optics.
@@ -228,12 +241,6 @@ J.-B. Béguin, E. M. Bookjans, S. L. Christensen, H. L. Sørensen,
 D.~J. Wineland, J.~J. Bollinger, W.~M. Itano, F.~L. Moore, and D.~J. Heinzen.
 \newblock Spin squeezing and reduced quantum noise in spectroscopy.
 \newblock {\em Phys. Rev. A}, 46(11):R6797--R6800, December 1992.
-
-\bibitem{norris_enhanced_2012}
-Leigh~M. Norris, Collin~M. Trail, Poul~S. Jessen, and Ivan~H. Deutsch.
-\newblock Enhanced {Squeezing} of a {Collective} {Spin} via {Control} of {Its}
-  {Qudit} {Subsystems}.
-\newblock {\em Phys. Rev. Lett.}, 109(17):173603, October 2012.
 
 \bibitem{chaudhury_continuous_2006}
 Souma Chaudhury, Greg~A. Smith, Kevin Schulz, and Poul~S. Jessen.
@@ -304,12 +311,6 @@ A.~González-Tudela, V.~Paulisch, D.~E. Chang, H.~J. Kimble, and J.~I. Cirac.
   dissipation.
 \newblock {\em arXiv:1504.07600 [quant-ph]}, April 2015.
 \newblock arXiv: 1504.07600.
-
-\bibitem{sayrin_storage_2015}
-C.~Sayrin, C.~Clausen, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
-\newblock Storage of fiber-guided light in a nanofiber-trapped ensemble of cold
-  atoms.
-\newblock {\em Optica}, 2(4):353--356, April 2015.
 
 \bibitem{gouraud_demonstration_2015}
 B.~Gouraud, D.~Maxein, A.~Nicolas, O.~Morin, and J.~Laurat.
