@@ -841,7 +841,7 @@ with an ``effective detuning" set by the magic-wavelength condition,
 	\begin{align} \label{Eq::SqueezingEffectiveDetuning}
 		 \Delta_{J_3}^{-1} \equiv \frac{2}{\Gamma} (b_4 \error{+} b_3) =   \sum_{F'}  \left( C^{(2)}_{\error{4F'}}\frac{10}{\Delta_{4F'}} -  C^{(2)}_{\error{3F'}}\frac{6}{ \Delta_{3F'} } \right),
 	\end{align}
-and an effective area given by
+and an effective area given by \comment{(need to find a consistent way to use $ \br' $, $ \br'\!_\perp $ and $ r'\!_\perp $ for field components)}
 	\begin{align} \label{Eq::SqueezingModeArea}
 		A_{J_3}^{-1} & = n_g \frac{ |\mathbf{e}_\pi \cdot \mathbf{u}_H(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2 - |\mathbf{e}_\pi \cdot \mathbf{u}_V(\br'_\perp)|^2 |\mathbf{u}_H(\br'_\perp)|^2}{ |\mathbf{u}_H(\br'_\perp)|^2 + |\mathbf{u}_V(\br'_\perp)|^2 } 
 	\end{align}	
@@ -904,8 +904,8 @@ The rates of optical pumping between the clock states, $\ket{F,0} \rightarrow \k
 where $\hat{W}_\pi$ is the Lindbald jump-operator associated with absorption of the probe photon followed by spontaneous emission of a $\pi$-polarized photon.  
 These rates can be expressed in terms of the imaginary part of the polarizability tensor using \erf{Eq::Polarizability},
 	\begin{align}
-		\gamma_F &=\dot{N}_L  \sum_{F'} \sigma (\Delta_{FF'} ) \mathbf{u}^*_\inp(\br')\cdot \bra{F,0} \tensor{\mathbf{A}}(F,F') \ket{F,0}  \cdot \mathbf{u}_\inp(\br'), \\
-		\gamma_{F \rightarrow \tilde{F}}&=  \dot{N}_L  \sum_{F'} \sigma (\Delta_{FF'}) \big| \mathbf{e}_\pi\cdot \bra{\tilde{F},0} \tensor{\mathbf{A}}(F,F') \ket{F,0}  \cdot \mathbf{u}_\inp(\br') \big|^2 ,
+		\gamma_F &=\dot{N}_L  \sum_{F'} \sigma (\Delta_{FF'} ) \mathbf{u}^*_\inp(\br')\cdot \bra{F,0} \hat{\tensor{\mbf{A}}}(F,F') \ket{F,0}  \cdot \mathbf{u}_\inp(\br'), \\
+		\gamma_{F \rightarrow \tilde{F}}&=  \dot{N}_L  \sum_{F'} \sigma (\Delta_{FF'}) \big| \mathbf{e}_\pi\cdot \bra{\tilde{F},0} \hat{\tensor{\mbf{A}}}(F,F') \ket{F,0}  \cdot \mathbf{u}_\inp(\br') \big|^2 ,
 	\end{align}
 where $ \sigma (\Delta_{FF'} )  = \sigma_0 \Gamma^2/4\Delta^2_{FF'}$ is the the scattering cross section at the probe detuning. When expressed in terms of Pauli operators on the pseudo-spin-$\half$ of the clock states,
 	\begin{align} \label{Eq::OpticalPumpingMapSchr}
