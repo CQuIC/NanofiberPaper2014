@@ -659,7 +659,7 @@ The atomic polarizability, \erf{Eq::PolarizabilityOperator}, describes an atom's
 	\end{align}
 where the operator $\hat{\tensor{\mbf{A}}}(F,F') = \sum_{i,j} \hat{A}_{ij}(F,F')\mathbf{e}_i \otimes \mathbf{e}_j$ decomposes into irreducible components within each ground hyperfine multiplet $F$ for light detuned near excited multiplet $F'$,  
 	\begin{align} \label{Eq::PolarizabilityIrrep}
-		\hat{A}_{ij}(F,F')&=  C_{FF'}^{(0)} \delta_{i,j}+ iC_{FF'}^{(1)}\epsilon_{ijk}\hat{F}_k+ C_{FF'}^{(2)} \Big[ \smallfrac{1}{2} ( \hat{F}_i\hat{F}_j +\hat{F}_j\hat{F}_i )-\smallfrac{1}{3}\hat{\mathbf{F}}^2 \delta_{i,j} \Big]. 
+		\hat{A}_{ij}(F,F')&=  C_{FF'}^{(0)} \delta_{i,j}+ iC_{FF'}^{(1)}\epsilon_{ijk}\hat{F}_k+ C_{FF'}^{(2)} \Big[ \smallfrac{1}{2} ( \hat{F}_i\hat{F}_j +\hat{F}_j\hat{F}_i )-\smallfrac{1}{3}\error{\hat{\mathbf{F}}\!\cdot\!\hat{\mathbf{F}}} \delta_{i,j} \Big]. 
 \end{align}
 Here, $\charpol = -(\sigma_0/8\pi k_0) (\Gamma/\Delta_{FF'})$ is the characteristic dynamic polarizability where $\sigma_0$ is the resonant scattering cross section, $\hat{\mathbf{F}}$ is the hyperfine spin operator in the ground state, and $C_{FF'}^{(K)}$ are coefficients for irreducible rank-$K$ components defined in Ref. \cite{deutsch_quantum_2010}. 
 
