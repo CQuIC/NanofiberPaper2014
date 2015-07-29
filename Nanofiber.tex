@@ -209,18 +209,11 @@ Strong coupling between atoms and photons %is a prerequisite for a quantum atom-
 is at the heart of many quantum information processing protocols including: efficient generation of remote entanglement [], quantum data storage and retrieval [], and QND measurements [].  
 From the most general perspective, strong coupling arises when atoms radiate predominantly into the electromagnetic field mode that defines the quantum atom-light interface.  
 For an individual atom, strong coupling regime is attained via the Purcell effect, whereby the boundary conditions of nearby dielectrics and/or conductors enhance radiation into a desired mode relative to all other modes.  
-This can be achieved with Fabry-Perot cavities (cavity QED) \cite{} and/or via nanophotonic structures engineered such that the radiation is \error{predominantly} into a specified mode \cite{manga_rao_single_2007,hakuta_manipulating_2012, hung_trapped_2013}.  
-The Purcell enhancement factors for emission into a guided or cavity mode scale respectively as  $ \Gamma_{\oneD}/\Gamma_{\vac} \sim \frac{\sigma_0}{A}$ and  
-$\Gamma_{\cav}/\Gamma_{\vac} \sim   Q \frac{\lambda^3}{V}\sim \mathcal{F}  \frac{\sigma_0}{A}$.  
+This can be achieved with Fabry-Perot cavities (cavity QED) \cite{miller_trapped_2005} and/or via nanophotonic structures engineered such that the radiation is predominantly into a specified mode \cite{manga_rao_single_2007, hakuta_manipulating_2012, hung_trapped_2013}.  
+The Purcell enhancement factors for emission into a guided or cavity mode scale respectively as  $ \Gamma_{\oneD}/\Gamma_{\vac} \sim \sigma_0/A$ and  
+$\Gamma_{\cav}/\Gamma_{\vac} \sim   Q \lambda^3/V \sim \mathcal{F}  \sigma_0/A$.  
 Here $\Gamma_{\vac}$ is the free space spontaneous emission rate, $\sigma_0 \propto \lambda^2$ is the resonant absorption cross section, $Q$, $V$, and $\mathcal{F}$,  are the cavity quality factor, volume, and finesse respectively, and $A$ is the effective area of the cavity or guided mode that couples to the atom.  
-The strongest coupling occurs on resonance, and thus much effort has been devoted to developing the largest possible $\Gamma_{\cav}$ and $\Gamma_{\oneD}$ through ultra-high-$Q$, small-volume resonators [Kimble] and through nanophotonic plasmonic [] and dielectric [] waveguides.  
-
-%========= FIGURE: Geometry (coupling strength, magic wavelength, area and detuning) =========%
-\begin{figure}[t]
-\includegraphics[scale=1]{./Figs/Fig_NanofiberSchematic}
-\caption{}\label{Fig::Schematic}
-\end{figure}
-%=============================================
+The strongest coupling occurs on resonance, and thus much effort has been devoted to developing the largest possible $\Gamma_{\cav}$ and $\Gamma_{\oneD}$ through ultra-high-$Q$, small-volume resonators \cite{raimond_manipulating_2001, wallraff_strong_2004, miller_trapped_2005} and through nanophotonic plasmonic \cite{dzsotjan_quantum_2010, tame_quantum_2013}, metamaterial \cite{yao_ultrahigh_2009}, and dielectric \cite{hung_trapped_2013, goban_atomlight_2014} waveguides.   
 
 In free space, where there is no Purcell enhancement, strong coupling can be achieved via the {\em cooperativity} of atomic ensembles.  
 This is most naturally implemented in a dispersive regime, off resonance, where light elastically scattered from the ensemble constructively interferes to match the mode of an exciting paraxial probe \cite{baragiola_three-dimensional_2014}.  
@@ -228,16 +221,33 @@ The cooperatively per atom in a typical paraxial beam is small, $\Gamma_{\oneD}/
 The total cooperativity, however, can be signficant for sufficiently large ensembles, e.g., $N_A \sim  10^7$ atoms, as characterized by the total optical density, OD $= N_A (\sigma_0/A)$.  
 Such strong cooperatively in free space has been employed in a variety of applications including quantum memory for storing photonic states  \cite{?}, and in the generation of squeezed states of the collective spin of the ensemble via quantum nondemolition (QND) measurement \cite{?}.   
 
-A particular system that combines the elements above consists of cold atoms trapped in the evanescent field of the guided mode of an optical nanofiber \cite{vetsch_nanofiber-based_2012, lacroute_state-insensitive_2012} (see Fig. 1).  
-While the nanofiber, with enhancement factor of $\sigma_0/A \sim  10^{-2}$, boosts $\Gamma_{\oneD}$ by orders of magnitude over free space for paraxial beams,
-one cannot reach the strong coupling regime where $\Gamma_{\oneD}$ is on the order of $\Gamma_{\vac}$ as is possible in some engineered nanophotonic waveguides, such as those arising in photonic crystals [], where atoms can be trapped at positions of peak intensity of the field.  
+A particular system that combines the elements above consists of cold atoms trapped in the evanescent field of the guided mode of an optical nanofiber \cite{vetsch_optical_2010, lacroute_state-insensitive_2012, balykin_quantum_2014} (see Fig. 1).  
+While the nanofiber, with enhancement factor of $\sigma_0/A \sim  10^{-2}$, boosts $\Gamma_{\oneD}$ by orders of magnitude over free space for paraxial beams, one cannot reach the strong coupling regime, where $\Gamma_{\oneD}$ is on the order of $\Gamma_{\vac}$, as is possible in some engineered nanophotonic waveguides such as those arising in photonic crystals \cite{hung_trapped_2013}, where atoms can be trapped at positions of peak intensity of the field.  
 One can, however, achieve strong cooperativity in the dispersive regime with small ensembles.  
-When compared to free space, all light scattered into the guided mode is automatically mode matched, and thus, given the large ratio $\sigma_0/A$, one can achieve high OD with only a few thousand atoms.  
-Such strong cooperativity opens the door to new regimes to create non-Gaussian quantum states of the ensemble \cite{} and potentially to implement nonlinear optics at the level of a few photons \cite{shen_coherent_2005, oshea_fiber-optical_2013} .
+When compared to free space, all light scattered into the guided mode is automatically mode matched, and thus, given the large ratio $\sigma_0/A$, one can achieve \error{high OD} with only a few thousand atoms.  
+Such strong cooperativity opens the door to new regimes to create non-Gaussian quantum states of the ensemble \cite{strobel_fisher_2014} and potentially to implement nonlinear optics at the level of a few photons \cite{shen_coherent_2005, oshea_fiber-optical_2013} .
 
-{\color{red}  Good place to mention Arno's and Hakuta's experimental contributions}.  
 
-In this paper we study the quantum atom-light interface associated with optical nanofibers in the dispersive regime.  
+%========= FIGURE: Geometry (coupling strength, magic wavelength, area and detuning) =========%
+\begin{figure}[t]
+\includegraphics[scale=1]{./Figs/Fig_NanofiberSchematic}
+\caption{Quantum spin-polarization interface between two 1D lattices of cold, trapped atoms and the guided modes of an optical nanofiber. a) Schematic of the interface. 
+A linearly polarized probe is launched into the nanofiber and the output light is analyzed in a polarimeter. 
+The atoms, trapped on the $\mathbf{e}_x$-axis, couple to the evanescent portion of the guided $H$- and $V$-modes. 
+Cross-sections of the $H$- and $V$-mode intensities in the b) $xz$-plane and c) transverse $xy$-plane show the mode anisotropy at the atomic positions. }\label{Fig::Schematic}
+\end{figure}
+%=============================================
+
+Optical nanofiber exhibit low loss \cite{hoffman_ultrahigh_2014}, 
+Using a multi-beam trapping configuration, differential lights shifts of ground and excited states can be eliminated, \cite{lacroute_state-insensitive_2012}.
+The anisotropic nature of the strong atom-light coupling has been exploited for control of internal atomic states \cite{mitsch_exploiting_2014}, enhancing spontaneous emission into a preferred direction \cite{petersen_chiral_2014, mitsch_quantum_2014}, and optical switching \cite{oshea_fiber-optical_2013}. 
+Off-resonant coupling has been implemented for non-destructive dispersive atom counting, \cite{dawkins_dispersive_2011, beguin_generation_2014}, 
+and storage of fiber-guided light \cite{gouraud_demonstration_2015, sayrin_storage_2015}.
+
+
+Autler-Townes \cite{kumar_autler-townes_2015}
+
+In this paper we study the nanofiber-based quantum atom-light interface in the dispersive regime.  
 We focus here on the spin-polarization coupling induced by the elastic scattering of tensor-polarizable cesium atoms trapped near the surface of the nanofiber.  
 This provides an entangling interaction to induce spin squeezing of the cesium clock-states, via QND measurement.  
 Our analysis unifies a variety of different approaches found in the literature, including direct calculation of the dyadic Greens function for photon scattering [] and the input-output formalism studied for one-dimensional field theories based on the Heisenberg-Langevin equations [].
@@ -965,13 +975,13 @@ At distances \comment{$r_\perp > 1.5a$} the atoms' local environment is roughly 
 %====== SECTION: Summary and outlook ======%
 \section{Summary and Outlook}
 
-We studied the strong cooperativity in the atom-light interface that can be achieved based on an optical nanofiber platform in the dispersive regime.  
+We studied the strong cooperativity in the atom-light interface that can be achieved in an optical nanofiber platform in the dispersive regime.  
 The key parameter that determines the coupling is the optical density per atom.  
 Due to the tight confinement of the guided mode over the entire chain of atoms, for typical geometries used in current experiments, this parameter is $ \mathrm{OD}/\mathrm{atom}\sim 10^{-2} $, which approaches that achieved for atomic ensembles trapped inside optical cavities of moderate finesse \cite{chen_conditional_2011, zhang_collective_2012}.  
 In contrast, for atoms trapped in free space, the atom-light coupling is typically orders of magnitude smaller, $ \mathrm{OD}/\mathrm{atom} \sim 10^{-6}$.  
 
 Under ideal conditions the atom-interaction is entirely symmetric along the nanofiber, providing a foundation for long-range correlations independent of distance between the atoms. 
-As the light is entirely guided, fiber-couped atomic ensembles can be simply networked together for truly long-range entanglement generation and distribution. 
+As the light is entirely guided, fiber-couped atomic ensembles can be simply networked together for truly long-range entanglement generation and distribution or combined with other physical platforms for hybrid quantum interfaces \cite{hafezi_atomic_2012}. 
 
 We calculated the dispersive response based on a modal decomposition of the dyadic Green's function, which provides a general method to calculate the induced phase shifts and polarization rotations of the guided modes. 
 With this we studied the QND measurement of atoms via polarization spectroscopy. 
@@ -991,7 +1001,7 @@ In addition, optical pumping decoheres the spin correlations at the heart of spi
 The combined effect of QND measurement and decoherence yields a peak squeezing approaching 5 dB with $\sim 2500$ atoms. 
 
 Larger enhancements in atom-light coupling and QND squeezing are possible with modest increases in the number of trapped atoms and/or for atoms trapped closer to the nanofiber surface.  
-Even greater improvement might be achieved by combining the enhancements of the tight transverse confinement of guided modes with longitudinal confinement provided by fiber-based optical cavities~\cite{le_kien_intracavity_2009, wuttke_nanofiber_2012, yalla_cavity_2014, bohnet_reduced_2014,nayak_optical_2014}.  
+Even greater improvement might be achieved by combining the enhancements of the tight transverse confinement of guided modes with longitudinal confinement provided by fiber-based optical cavities~\cite{le_kien_intracavity_2009, wuttke_nanofiber_2012, yalla_cavity_2014, bohnet_reduced_2014,nayak_optical_2014, kato_strong_2015}.  
 The coupling can be further improved under EIT conditions that substantially slow the group velocity \cite{gouraud_demonstration_2015, sayrin_storage_2015, kumar_autler-townes_2015}. 
 In addition, quantum control of the internal hyperfine state \cite{smith_quantum_2013-1} can greatly enhance the entangling power of the atom-light interface~\cite{trail_strongly_2010, norris_enhanced_2012}. A grand challenge of QND measurement is to increase the atom-light entanglement to the point where the production of highly entangled spin states beyond the Gaussian regime is enabled.
 
