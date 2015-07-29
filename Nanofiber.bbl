@@ -94,10 +94,30 @@ J.~T. Shen and Shanhui Fan.
   one-dimensional waveguides.
 \newblock {\em Opt. Lett.}, 30(15):2001--2003, August 2005.
 
+\bibitem{spillane_observation_2008}
+S.~M. Spillane, G.~S. Pati, K.~Salit, M.~Hall, P.~Kumar, R.~G. Beausoleil, and
+  M.~S. Shahriar.
+\newblock Observation of {Nonlinear} {Optical} {Interactions} of {Ultralow}
+  {Levels} of {Light} in a {Tapered} {Optical} {Nanofiber} {Embedded} in a
+  {Hot} {Rubidium} {Vapor}.
+\newblock {\em Phys. Rev. Lett.}, 100(23):233602, June 2008.
+
+\bibitem{pittman_ultralow-power_2013}
+T.~B. Pittman, D.~E. Jones, and J.~D. Franson.
+\newblock Ultralow-power nonlinear optics using tapered optical fibers in
+  metastable xenon.
+\newblock {\em Phys. Rev. A}, 88(5):053804, November 2013.
+
 \bibitem{oshea_fiber-optical_2013}
 Danny O’Shea, Christian Junge, Jürgen Volz, and Arno Rauschenbeutel.
 \newblock Fiber-{Optical} {Switch} {Controlled} by a {Single} {Atom}.
 \newblock {\em Phys. Rev. Lett.}, 111(19):193601, November 2013.
+
+\bibitem{hoffman_ultrahigh_2014}
+J.~E. Hoffman, S.~Ravets, J.~A. Grover, P.~Solano, P.~R. Kordell, J.~D.
+  Wong-Campos, L.~A. Orozco, and S.~L. Rolston.
+\newblock Ultrahigh transmission optical nanofibers.
+\newblock {\em AIP Advances}, 4(6):067124, June 2014.
 
 \bibitem{mitsch_exploiting_2014}
 R.~Mitsch, C.~Sayrin, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
@@ -131,11 +151,25 @@ J.-B. Béguin, E. M. Bookjans, S. L. Christensen, H. L. Sørensen,
   {Distribution} in a {One}-{Dimensional} {Optical} {Lattice}.
 \newblock {\em Phys. Rev. Lett.}, 113(26):263603, December 2014.
 
+\bibitem{gouraud_demonstration_2015}
+B.~Gouraud, D.~Maxein, A.~Nicolas, O.~Morin, and J.~Laurat.
+\newblock Demonstration of a {Memory} for {Tightly} {Guided} {Light} in an
+  {Optical} {Nanofiber}.
+\newblock {\em Phys. Rev. Lett.}, 114(18):180503, May 2015.
+
 \bibitem{sayrin_storage_2015}
 C.~Sayrin, C.~Clausen, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
 \newblock Storage of fiber-guided light in a nanofiber-trapped ensemble of cold
   atoms.
 \newblock {\em Optica}, 2(4):353--356, April 2015.
+
+\bibitem{kumar_autler-townes_2015}
+Ravi Kumar, Vandna Gokhroo, Kieran Deasy, and Síle~Nic Chormaic.
+\newblock Autler-{Townes} splitting via frequency up-conversion at
+  ultralow-power levels in cold
+  \${\textasciicircum}\{87\}{\textbackslash}mathrm\{{Rb}\}\$ atoms using an
+  optical nanofiber.
+\newblock {\em Phys. Rev. A}, 91(5):053842, May 2015.
 
 \bibitem{wubs_multiple-scattering_2004}
 Martijn Wubs, L.~G. Suttorp, and A.~Lagendijk.
@@ -255,12 +289,6 @@ Stefan Scheel, Stefan~Yoshi Buhmann, Christoph Clausen, and Philipp
 \newblock {\em arXiv:1505.01275 [quant-ph]}, May 2015.
 \newblock arXiv: 1505.01275.
 
-\bibitem{vos_orientation-dependent_2009}
-Willem~L. Vos, A.~Femius Koenderink, and Ivan~S. Nikolaev.
-\newblock Orientation-dependent spontaneous emission rates of a two-level
-  quantum emitter in any nanophotonic environment.
-\newblock {\em Phys. Rev. A}, 80(5):053802, November 2009.
-
 \bibitem{fan_input-output_2010}
 Shanhui Fan, Şükrü~Ekin Kocabaş, and Jung-Tsung Shen.
 \newblock Input-output formalism for few-photon transport in one-dimensional
@@ -278,10 +306,11 @@ In a careful derivation of the Lippman-Schwinger scattering equation, it is not
   the scatterer's coupling to the \protect \emph {displacement} rather than the
   electric field \cite {yao_ultrahigh_2009}. The distinction becomes important
   at the source point $\protect \mathbf {r} = \protect \mathbf {r}'$; however,
-  for lossless dielectrics $n(\protect \mathbf {r})$ is real and $\Im [\protect
-  \tensor {\protect \mathbf {G}}(\protect \mathbf {r}',\protect \mathbf {r}';
-  \omega )] = \Im [\protect \tensor {\protect \mathbf {K}}(\protect \mathbf
-  {r}',\protect \mathbf {r}'; \omega )]$ \cite {yao_-chip_2010}.
+  for lossless dielectrics $n(\protect \mathbf {r})$ is real and ${\protect \rm
+  Im}[\protect \tensor {\protect \mathbf {G}}(\protect \mathbf {r}',\protect
+  \mathbf {r}'; \omega )] = {\protect \rm Im}[\protect \tensor {\protect
+  \mathbf {K}}(\protect \mathbf {r}',\protect \mathbf {r}'; \omega )]$ \cite
+  {yao_-chip_2010}.
 
 \bibitem{buhmann_casimir-polder_2004}
 Stefan~Yoshi Buhmann, Ludwig Knöll, Dirk-Gunnar Welsch, and Ho~Trung Dung.
@@ -359,11 +388,6 @@ Zilong Chen, Justin~G. Bohnet, Shannon~R. Sankar, Jiayan Dai, and James~K.
   {Vacuum} {Rabi} {Splitting}.
 \newblock {\em Phys. Rev. Lett.}, 106(13):133601, March 2011.
 
-\bibitem{hafezi_atomic_2012}
-M.~Hafezi, Z.~Kim, S.~L. Rolston, L.~A. Orozco, B.~L. Lev, and J.~M. Taylor.
-\newblock Atomic interface between microwave and optical photons.
-\newblock {\em Phys. Rev. A}, 85(2):020302, February 2012.
-
 \bibitem{le_kien_intracavity_2009}
 Fam Le~Kien and K.~Hakuta.
 \newblock Intracavity electromagnetically induced transparency in atoms around
@@ -393,27 +417,6 @@ J.~G. Bohnet, K.~C. Cox, M.~A. Norcia, J.~M. Weiner, Z.~Chen, and J.~K.
 K.~P. Nayak, Pengfei Zhang, and K.~Hakuta.
 \newblock Optical nanofiber-based photonic crystal cavity.
 \newblock {\em Optics Letters}, 39(2):232, January 2014.
-
-\bibitem{kato_strong_2015}
-Shinya Kato and Takao Aoki.
-\newblock Strong coupling between a trapped single atom and an all-fiber
-  cavity.
-\newblock {\em arXiv:1505.06774 [physics, physics:quant-ph]}, May 2015.
-\newblock arXiv: 1505.06774.
-
-\bibitem{gouraud_demonstration_2015}
-B.~Gouraud, D.~Maxein, A.~Nicolas, O.~Morin, and J.~Laurat.
-\newblock Demonstration of a {Memory} for {Tightly} {Guided} {Light} in an
-  {Optical} {Nanofiber}.
-\newblock {\em Phys. Rev. Lett.}, 114(18):180503, May 2015.
-
-\bibitem{kumar_autler-townes_2015}
-Ravi Kumar, Vandna Gokhroo, Kieran Deasy, and Síle~Nic Chormaic.
-\newblock Autler-{Townes} splitting via frequency up-conversion at
-  ultralow-power levels in cold
-  \${\textasciicircum}\{87\}{\textbackslash}mathrm\{{Rb}\}\$ atoms using an
-  optical nanofiber.
-\newblock {\em Phys. Rev. A}, 91(5):053842, May 2015.
 
 \bibitem{smith_quantum_2013-1}
 A.~Smith, B.~E. Anderson, H.~Sosa-Martinez, C.~A. Riofrío, Ivan~H. Deutsch,
