@@ -1,4 +1,4 @@
-\documentclass[preprint, aps,pra,onecolumn]{revtex4-1} %reprint
+\documentclass[aps,pra,twocolumn]{revtex4-1} %reprint
 %\tightenlines
 
 %\draft
@@ -215,26 +215,12 @@ $\Gamma_{\cav}/\Gamma_{\vac} \sim   Q \frac{\lambda^3}{V}\sim \mathcal{F}  \frac
 Here $\Gamma_{\vac}$ is the free space spontaneous emission rate, $\sigma_0 \propto \lambda^2$ is the resonant absorption cross section, $Q$, $V$, and $\mathcal{F}$,  are the cavity quality factor, volume, and finesse respectively, and $A$ is the effective area of the cavity or guided mode that couples to the atom.  
 The strongest coupling occurs on resonance, and thus much effort has been devoted to developing the largest possible $\Gamma_{\cav}$ and $\Gamma_{\oneD}$ through ultra-high-$Q$, small-volume resonators [Kimble] and through nanophotonic plasmonic [] and dielectric [] waveguides.  
 
-%========FIGURE: Nanofiber Schematic=========%
-\begin{figure*}[t]
-\begin{minipage}{0.95\linewidth}
-\centering
-%\includegraphics[scale=0.35]{./Figs/BirefringenceMeasurement_randomAtoms}
-\subfloat[]{\label{fig:nanofiber_tikz}\includegraphics[scale=0.35]{./Figs/BirefringenceMeasurement_randomAtoms}}
-\end{minipage}
-\par\medskip
-\begin{minipage}{0.95\linewidth}
-\centering
-\subfloat[]{\label{fig:nanofiber_svg}\includegraphics[scale=0.35]{./Figs/ProbeNanofiber_birefringence_lightpath_inputlight}}
-\end{minipage}
-\caption{Birefringence measurement setup for a nanofiber trapped atomic system. In the evanescent 
-field of the nanofiber, atoms (golden balls) randomly  occupy the periodic trapping sites on both sides of 
-the \emph{x}-axis in the tapered region shown in the figure.
-We assume the nanofiber has a radius constant $ a=225 $nm in this paper.
-\comment{Need to choose one of them.}}
-\label{fig:BirefringenceMeasurement}
-\end{figure*}
-%============================================%
+%========= FIGURE: Geometry (coupling strength, magic wavelength, area and detuning) =========%
+\begin{figure}[t]
+\includegraphics[scale=1]{./Figs/Fig_NanofiberSchematic}
+\caption{}\label{Fig::Schematic}
+\end{figure}
+%=============================================
 
 In free space, where there is no Purcell enhancement, strong coupling can be achieved via the {\em cooperativity} of atomic ensembles.  
 This is most naturally implemented in a dispersive regime, off resonance, where light elastically scattered from the ensemble constructively interferes to match the mode of an exciting paraxial probe \cite{baragiola_three-dimensional_2014}.  
@@ -296,7 +282,7 @@ where $\tensor{\delta}^{(T)}(\br-\br')$ is the delta function for transverse vec
 where the eigenvalues appear as $\omega_\fidx^2 = c^2 k_\fidx^2$.  The sum includes both guided and unguided contributions. We focus here on the guided-mode contribution to the Green's function. 
 %Details concerning the radiation modes of a nanofiber can be found in Refs. \cite{Snyder and Love, sondergaard_general_2001,le_kien_spontaneous_2005}.
 
-We treat an optical nanofiber of radius $a$ as having step-index profile,
+We treat an optical nanofiber of radius $a$ with step-index profile,
 	\begin{align} \label{Eq::IndexofRefraction}
 		n(r_\perp) = \Bigg\{  
 			\begin{array}{l l} n_1 & \quad r \leq a \\
@@ -353,12 +339,12 @@ The effective mode area at the atom's position is determined from the total cycl
  		A_{\rm in} \equiv \frac{P_{{\rm in}}}{I_{\rm in}(\mathbf{r}')} = \frac{1}{n_g |\mathbf{u}_{\rm in}(\mathbf{r}'_\perp)|^{2}},
 	\end{align}
 where $n_g = c/v_g$ is the group index of refraction.  
-Tight confinement of the guided modes in the nanofiber results in significant intensity in the evansceent field near the nanofiber for relatively small input power \cite{bures_power_1999}.  
+Tight confinement of the guided modes in the nanofiber results in significant intensity in the evanscent field near the nanofiber for relatively small input power \cite{bures_power_1999}.  
 
 %========= FIGURE: Geometry (coupling strength, magic wavelength, area and detuning) =========%
 \begin{figure}[b]
-\includegraphics[scale=0.80]{./Figs/Fig_ModeMatch}
-\caption{Depiction of mode-matching for various atom-light geometries. (a) Single atom in a tightly focused beam. The atom experiences a large field, but its scattered light is poorly mode-matched to the probe. (b) A paraxial beam probing a rarefied atomic cloud whose scattered radiation interferes constructively in the forward direction. (c) 1D optical lattices near the surface of an optical nanofiber interacting with a fiber-guided probe. The probe field at each atom is large, and the constructive interference enhances scattering into the guided modes}\label{Fig::ModeMatching}
+\includegraphics[scale=1.0]{./Figs/Fig_ModeMatch}
+\caption{Depiction of mode-matching for various atom-light geometries. (a) Single atom in a tightly focused beam. The atom experiences a large field, but its scattered light is poorly mode-matched to the probe. (b) Cold atomic cloud probed by a paraxial beam. Cooperatively scattered radiation interferes constructively in the forward direction. (c) Atoms trapped in 1D optical lattices near the surface of an optical nanofiber interacting with a fiber-guided probe. The field at each atom is large, and the constructive interference enhances scattering into the forward guided modes.}\label{Fig::ModeMatching}
 \end{figure}
 %=============================================
 
