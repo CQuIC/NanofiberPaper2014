@@ -388,6 +388,11 @@ Zilong Chen, Justin~G. Bohnet, Shannon~R. Sankar, Jiayan Dai, and James~K.
   {Vacuum} {Rabi} {Splitting}.
 \newblock {\em Phys. Rev. Lett.}, 106(13):133601, March 2011.
 
+\bibitem{hafezi_atomic_2012}
+M.~Hafezi, Z.~Kim, S.~L. Rolston, L.~A. Orozco, B.~L. Lev, and J.~M. Taylor.
+\newblock Atomic interface between microwave and optical photons.
+\newblock {\em Phys. Rev. A}, 85(2):020302, February 2012.
+
 \bibitem{le_kien_intracavity_2009}
 Fam Le~Kien and K.~Hakuta.
 \newblock Intracavity electromagnetically induced transparency in atoms around
@@ -417,6 +422,13 @@ J.~G. Bohnet, K.~C. Cox, M.~A. Norcia, J.~M. Weiner, Z.~Chen, and J.~K.
 K.~P. Nayak, Pengfei Zhang, and K.~Hakuta.
 \newblock Optical nanofiber-based photonic crystal cavity.
 \newblock {\em Optics Letters}, 39(2):232, January 2014.
+
+\bibitem{kato_strong_2015}
+Shinya Kato and Takao Aoki.
+\newblock Strong coupling between a trapped single atom and an all-fiber
+  cavity.
+\newblock {\em arXiv:1505.06774 [physics, physics:quant-ph]}, May 2015.
+\newblock arXiv: 1505.06774.
 
 \bibitem{smith_quantum_2013-1}
 A.~Smith, B.~E. Anderson, H.~Sosa-Martinez, C.~A. Riofrío, Ivan~H. Deutsch,
