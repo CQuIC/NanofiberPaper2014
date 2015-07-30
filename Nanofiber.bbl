@@ -215,6 +215,24 @@ C.~Sayrin, C.~Clausen, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
   atoms.
 \newblock {\em Optica}, 2(4):353--356, April 2015.
 
+\bibitem{wuttke_nanofiber_2012}
+C.~Wuttke, M.~Becker, S.~Brückner, M.~Rothhardt, and A.~Rauschenbeutel.
+\newblock Nanofiber {Fabry}–{Perot} microresonator for nonlinear optics and
+  cavity quantum electrodynamics.
+\newblock {\em Opt. Lett.}, 37(11):1949--1951, June 2012.
+
+\bibitem{nayak_optical_2014}
+K.~P. Nayak, Pengfei Zhang, and K.~Hakuta.
+\newblock Optical nanofiber-based photonic crystal cavity.
+\newblock {\em Optics Letters}, 39(2):232, January 2014.
+
+\bibitem{schell_highly_2015}
+Andreas~W. Schell, Hideaki Takashima, Shunya Kamioka, Yasuko Oe, Masazumi
+  Fujiwara, Oliver Benson, and Shigeki Takeuchi.
+\newblock Highly {Efficient} {Coupling} of {Nanolight} {Emitters} to a
+  {Ultra}-{Wide} {Tunable} {Nanofibre} {Cavity}.
+\newblock {\em Sci. Rep.}, 5, May 2015.
+
 \bibitem{sakoda_optical_1996}
 Kazuaki Sakoda and Kazuo Ohtaka.
 \newblock Optical response of three-dimensional photonic lattices: {Solutions}
@@ -302,6 +320,11 @@ Fam~Le Kien, J.~Q. Liang, K.~Hakuta, and V.~I. Balykin.
   vacuum-clad subwavelength-diameter optical fiber.
 \newblock {\em Optics Communications}, 242(4–6):445--455, December 2004.
 
+\bibitem{snyder_optical_1983}
+Allan Snyder and John Love.
+\newblock {\em Optical {Waveguide} {Theory}}.
+\newblock Chapman and Hall, London, 1983.
+
 \bibitem{chen_finite-element_2010}
 Yuntian Chen, Torben~Roland Nielsen, Niels Gregersen, Peter Lodahl, and Jesper
   Mørk.
@@ -330,6 +353,17 @@ Haruka Tanji-Suzuki, Ian~D. Leroux, Monika~H. Schleier-Smith, Marko Cetina,
   {In} {Atomic}, {Molecular}, and {Optical} {Physics}}, volume~60 of {\em
   Advances in {Atomic}, {Molecular}, and {Optical} {Physics}}, pages 201--237.
   Academic Press, 2011.
+
+\bibitem{hammerer_quantum_2010}
+Klemens Hammerer, Anders~S. Sørensen, and Eugene~S. Polzik.
+\newblock Quantum interface between light and atomic ensembles.
+\newblock {\em Rev. Mod. Phys.}, 82(2):1041--1093, April 2010.
+
+\bibitem{deutsch_quantum_2010}
+Ivan~H. Deutsch and Poul~S. Jessen.
+\newblock Quantum control and measurement of atomic spins in polarization
+  spectroscopy.
+\newblock {\em Optics Communications}, 283(5):681--694, March 2010.
 
 \bibitem{nha_cavity_1997}
 H.~Nha and W.~Jhe.
@@ -378,12 +412,6 @@ Stefan~Yoshi Buhmann, Ludwig Knöll, Dirk-Gunnar Welsch, and Ho~Trung Dung.
 \newblock Casimir-{Polder} forces: {A} nonperturbative approach.
 \newblock {\em Phys. Rev. A}, 70(5):052117, November 2004.
 
-\bibitem{deutsch_quantum_2010}
-Ivan~H. Deutsch and Poul~S. Jessen.
-\newblock Quantum control and measurement of atomic spins in polarization
-  spectroscopy.
-\newblock {\em Optics Communications}, 283(5):681--694, March 2010.
-
 \bibitem{kien_dynamical_2013}
 Fam~Le Kien, Philipp Schneeweiss, and Arno Rauschenbeutel.
 \newblock Dynamical polarizability of atoms in arbitrary light fields: general
@@ -392,8 +420,8 @@ Fam~Le Kien, Philipp Schneeweiss, and Arno Rauschenbeutel.
 
 \bibitem{baragiola_open_2014}
 Ben~Q. Baragiola.
-\newblock Open {Systems} {Dynamics} for {Propagating} {Quantum} {Fields}.
-\newblock {\em arXiv:1408.4447 [quant-ph]}, August 2014.
+\newblock {\em Open {Systems} {Dynamics} for {Propagating} {Quantum} {Fields}}.
+\newblock PhD thesis, University of New Mexico, Albuquerque, USA, August 2014.
 \newblock arXiv: 1408.4447.
 
 \bibitem{smith_faraday_2003}
@@ -414,6 +442,11 @@ D.~J. Wineland, J.~J. Bollinger, W.~M. Itano, F.~L. Moore, and D.~J. Heinzen.
 \newblock Spin squeezing and reduced quantum noise in spectroscopy.
 \newblock {\em Phys. Rev. A}, 46(11):R6797--R6800, December 1992.
 
+\bibitem{kitagawa_squeezed_1993}
+Masahiro Kitagawa and Masahito Ueda.
+\newblock Squeezed spin states.
+\newblock {\em Phys. Rev. A}, 47(6):5138--5143, June 1993.
+
 \bibitem{chaudhury_continuous_2006}
 Souma Chaudhury, Greg~A. Smith, Kevin Schulz, and Poul~S. Jessen.
 \newblock Continuous {Nondemolition} {Measurement} of the {Cs} {Clock}
@@ -427,15 +460,15 @@ Greg~A. Smith, Souma Chaudhury, Andrew Silberfarb, Ivan~H. Deutsch, and Poul~S.
   {Cold} {Spin} {Ensemble}.
 \newblock {\em Phys. Rev. Lett.}, 93(16):163602, October 2004.
 
-\bibitem{hammerer_quantum_2010}
-Klemens Hammerer, Anders~S. Sørensen, and Eugene~S. Polzik.
-\newblock Quantum interface between light and atomic ensembles.
-\newblock {\em Rev. Mod. Phys.}, 82(2):1041--1093, April 2010.
-
 \bibitem{jacobs_straightforward_2006}
 Kurt Jacobs and Daniel~A. Steck.
 \newblock A straightforward introduction to continuous quantum measurement.
 \newblock {\em Contemporary Physics}, 47(5):279--303, September 2006.
+
+\bibitem{vetsch_eugen_optical_2010}
+Eugen Vetsch.
+\newblock {\em Optical {Interface} {Based} on a {Nanofiber} {Atom}-{Trap}}.
+\newblock PhD thesis, Johannes Gutenberg-Universität, Mainz, Germany, 2010.
 
 \bibitem{le_kien_scattering_2006}
 Fam Le~Kien, V.~I. Balykin, and K.~Hakuta.
@@ -450,17 +483,19 @@ Zilong Chen, Justin~G. Bohnet, Shannon~R. Sankar, Jiayan Dai, and James~K.
   {Vacuum} {Rabi} {Splitting}.
 \newblock {\em Phys. Rev. Lett.}, 106(13):133601, March 2011.
 
-\bibitem{stockton_deterministic_2004}
-John~K. Stockton, Ramon van Handel, and Hideo Mabuchi.
-\newblock Deterministic {Dicke}-state preparation with continuous measurement
-  and control.
-\newblock {\em Phys. Rev. A}, 70(2):022106, August 2004.
+\bibitem{hafezi_atomic_2012}
+M.~Hafezi, Z.~Kim, S.~L. Rolston, L.~A. Orozco, B.~L. Lev, and J.~M. Taylor.
+\newblock Atomic interface between microwave and optical photons.
+\newblock {\em Phys. Rev. A}, 85(2):020302, February 2012.
 
-\bibitem{mcconnell_entanglement_2015}
-Robert McConnell, Hao Zhang, Jiazhong Hu, Senka Ćuk, and Vladan Vuletić.
-\newblock Entanglement with negative {Wigner} function of almost 3,000 atoms
-  heralded by one photon.
-\newblock {\em Nature}, 519(7544):439--442, March 2015.
+\bibitem{liebermeister_tapered_2014}
+Lars Liebermeister, Fabian Petersen, Asmus~v Münchow, Daniel Burchardt,
+  Juliane Hermelbracht, Toshiyuki Tashima, Andreas~W. Schell, Oliver Benson,
+  Thomas Meinhardt, Anke Krueger, Ariane Stiebeiner, Arno Rauschenbeutel,
+  Harald Weinfurter, and Markus Weber.
+\newblock Tapered fiber coupling of single photons emitted by a
+  deterministically positioned single nitrogen vacancy center.
+\newblock {\em Applied Physics Letters}, 104(3):031101, January 2014.
 
 \bibitem{hafezi_atomic_2012}
 M.~Hafezi, Z.~Kim, S.~L. Rolston, L.~A. Orozco, B.~L. Lev, and J.~M. Taylor.
@@ -472,12 +507,6 @@ Fam Le~Kien and K.~Hakuta.
 \newblock Intracavity electromagnetically induced transparency in atoms around
   a nanofiber with a pair of {Bragg} grating mirrors.
 \newblock {\em Phys. Rev. A}, 79(4):043813, April 2009.
-
-\bibitem{wuttke_nanofiber_2012}
-C.~Wuttke, M.~Becker, S.~Brückner, M.~Rothhardt, and A.~Rauschenbeutel.
-\newblock Nanofiber {Fabry}–{Perot} microresonator for nonlinear optics and
-  cavity quantum electrodynamics.
-\newblock {\em Opt. Lett.}, 37(11):1949--1951, June 2012.
 
 \bibitem{yalla_cavity_2014}
 Ramachandrarao Yalla, Mark Sadgrove, Kali~P. Nayak, and Kohzo Hakuta.
@@ -491,11 +520,6 @@ J.~G. Bohnet, K.~C. Cox, M.~A. Norcia, J.~M. Weiner, Z.~Chen, and J.~K.
 \newblock Reduced spin measurement back-action for a phase sensitivity ten
   times beyond the standard quantum limit.
 \newblock {\em Nat Photon}, 8(9):731--736, September 2014.
-
-\bibitem{nayak_optical_2014}
-K.~P. Nayak, Pengfei Zhang, and K.~Hakuta.
-\newblock Optical nanofiber-based photonic crystal cavity.
-\newblock {\em Optics Letters}, 39(2):232, January 2014.
 
 \bibitem{kumar_autler-townes_2015}
 Ravi Kumar, Vandna Gokhroo, Kieran Deasy, and Síle~Nic Chormaic.
@@ -528,6 +552,18 @@ Leigh~M. Norris, Collin~M. Trail, Poul~S. Jessen, and Ivan~H. Deutsch.
 \newblock Enhanced {Squeezing} of a {Collective} {Spin} via {Control} of {Its}
   {Qudit} {Subsystems}.
 \newblock {\em Phys. Rev. Lett.}, 109(17):173603, October 2012.
+
+\bibitem{stockton_deterministic_2004}
+John~K. Stockton, Ramon van Handel, and Hideo Mabuchi.
+\newblock Deterministic {Dicke}-state preparation with continuous measurement
+  and control.
+\newblock {\em Phys. Rev. A}, 70(2):022106, August 2004.
+
+\bibitem{mcconnell_entanglement_2015}
+Robert McConnell, Hao Zhang, Jiazhong Hu, Senka Ćuk, and Vladan Vuletić.
+\newblock Entanglement with negative {Wigner} function of almost 3,000 atoms
+  heralded by one photon.
+\newblock {\em Nature}, 519(7544):439--442, March 2015.
 
 \bibitem{yao_-chip_2010}
 P.~Yao, V.s.c. Manga~Rao, and S.~Hughes.
