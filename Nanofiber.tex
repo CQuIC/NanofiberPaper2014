@@ -753,6 +753,11 @@ with coefficients that depend on detunings and atomic structure,
 		a_F &= \sum_{F'}  \Big(C^{(0)}_{FF'} + \frac{F(F+1)}{6} C^{(2)}_{FF'} \Big) \frac{\Gamma}{4 \Delta_{FF'}},\\
 		b_F &= \frac{F(F+1)}{2}\sum_{F'} C^{(2)}_{FF'}  \frac{\Gamma}{4 \Delta_{FF'}}.
 	\end{align}
+At the magic wavelength set by Eq.(\ref{Eq::MagicWavelengthCondition}),
+\begin{equation}
+	\frac{a_4-a_3}{b_4-b_3} =  \frac{ |\mathbf{e}_\pi \cdot \mathbf{u}_V(\br'_\perp)|^2  + |\mathbf{e}_\pi \cdot \mathbf{u}_H(\br'_\perp) |^2 }{ |\mathbf{u}_H(\br'_\perp)|^2 + |\mathbf{u}_V(\br'_\perp)|^2 },
+\end{equation}
+which depends on the choice of quantization axis.
 
 Birefringence results from two sources.  
 The first arises from the anisotropy of the intensity of the $H$ and $V$ modes.  
@@ -763,8 +768,7 @@ We write the effective rotation angle in the Hamiltonian, \erf{Eq::FaradayHam}, 
 	\end{align}
 with an ``effective detuning" set by the magic-wavelength condition,
 	\begin{align} \label{Eq::SqueezingEffectiveDetuning}
-	\frac{a_4-a_3}{b_4-b_3} =  \frac{ |\mathbf{e}_\pi \cdot \mathbf{u}_V(\br'_\perp)|^2  + |\mathbf{e}_\pi \cdot \mathbf{u}_H(\br'_\perp) |^2 }{ |\mathbf{u}_H(\br'_\perp)|^2 + |\mathbf{u}_V(\br'_\perp)|^2 } \\
-		 \Rightarrow \Delta_{J_3}^{-1} \equiv \frac{4}{\Gamma} (b_4 - b_3) =   \sum_{F'}  \left( C^{(2)}_{4F'}\frac{10}{\Delta_{4F'}} -  C^{(2)}_{3F'}\frac{6}{ \Delta_{3F'} } \right),
+		 \Delta_{J_3}^{-1} \equiv \frac{4}{\Gamma} (b_4 - b_3) =   \sum_{F'}  \left( C^{(2)}_{4F'}\frac{10}{\Delta_{4F'}} -  C^{(2)}_{3F'}\frac{6}{ \Delta_{3F'} } \right),
 	\end{align}
 and an effective area given by
 	\begin{align} \label{Eq::SqueezingModeArea}
