@@ -1050,7 +1050,7 @@ We thus seek the time evolution of the one and two-body correlation functions:
 &\expt{\hat{J}_3^2} = \frac{\expt{\hat{N}_A}}{4} +\frac{1}{4} \sum_{m \neq n} \expt{\hat{\sigma}_3^{(m)}\otimes \hat{\sigma}_3^{(n)}}, 
 \end{align}
 where $\hat{\mathbbm{1}} \equiv \op{\uparrow}{\uparrow} + \op{\downarrow}{\downarrow}$ is the single-atom projector onto the clock states. 
-To include optical pumping, we apply the following equations of motion. For a collective, single-body operator, $\hat{X} = \sum_n \hat{x}^{(n)}$, the evolution due to optical pumping is $d\expt{ \hat{X}}|_{\rm op} = \sum_n \Tr [\mathcal{D}_n[\hat{\rho}]\hat{X} ] = \sum_n \Tr [\expt{\mathcal{D}_n\dg[\hat{x}^{(n)}]} ] $, where the map, which acts locally on atoms along the nanofiber, is given in \erf{Eq::OpticalPumpingMapSchr}.  
+To include optical pumping, we apply the following equations of motion. For a collective, single-body operator, $\hat{X} = \sum_n \hat{x}^{(n)}$, the evolution due to optical pumping is $d\expt{ \hat{X}}|_{\rm op} = \sum_n \Tr [\mathcal{D}_n[\hat{\rho}]\hat{X} ]dt = \sum_n \expt{\mathcal{D}_n\dg[\hat{x}^{(n)}]} dt$, where the map, which acts locally on atoms along the nanofiber, is given in \erf{Eq::OpticalPumpingMapSchr}.  
 Two-body microscopic operators decay by optical pumping according to \cite{baragiola_three-dimensional_2014}
 	\begin{align} \label{Eq::TwoBodyDecay}
 		\frac{d}{dt} \expt{ \hat{x}^{(m)} \otimes \hat{y}^{(n)} } \Big|_{\rm op}= &\expt{ \mathcal{D}_m\dg[ \hat{x}^{(m)}] \otimes \hat{y}^{(n)} } + \expt{ \hat{x}^{(m)}\otimes \mathcal{D}_n\dg[ \hat{y}^{(n)}] },
