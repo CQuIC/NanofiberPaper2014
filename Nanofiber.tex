@@ -819,10 +819,15 @@ The effective non-Hermitian light-shift Hamiltonian that accounts for the imagin
 	\end{equation}
 where $\hat{W}_\pi$ is the Lindbald jump-operator associated with absorption of the probe photon followed by spontaneous emission of a $\pi$-polarized photon~\cite{deutsch_quantum_2010}.  These rates can be expressed in terms of the imaginary part of the polarizability tensor using \erf{Eq::Polarizability},
 	\begin{align}
-		\gamma_F &=\dot{N}_L  \sum_{F'} \sigma (\Delta_{FF'} ) \mathbf{u}^*_\inp(\br'_\perp)\cdot \bra{F,0} \hat{\tensor{\mbf{A}}}(F,F') \ket{F,0}  \cdot \mathbf{u}_\inp(\br'_\perp), \\
-		\gamma_{F \rightarrow \tilde{F}}&=  \dot{N}_L  \sum_{F'} \sigma (\Delta_{FF'}) \big| \mathbf{e}_\pi\cdot \bra{\tilde{F},0}  {\color{red} \hat{\tensor{\mbf{A}}}(F,F') } \ket{F,0}  \cdot \mathbf{u}_\inp(\br'_\perp) \big|^2 ,
+		\gamma_F &=\dot{N}_L  \sum_{F'} \sigma (\Delta_{FF'} ) \mathbf{u}^*_\inp(\br'_\perp)\cdot \bra{F,0} \hat{\tensor{\mbf{A}}}(F,F') \ket{F,0}  \cdot \mathbf{u}_\inp(\br'_\perp)\nonumber\\
+		&\approx \sum_{F'} \frac{\Gamma\Omega^2}{4\Delta_{FF'}^2}\sum_q \left| o_{JF}^{J'F'}C_{F'q}^{F0;1 q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q , \\
+		\gamma_{F \rightarrow \tilde{F}} %&=  \dot{N}_L  \sum_{F'} \sigma (\Delta_{FF'}) \big| \mathbf{e}_\pi\cdot \bra{\tilde{F},0}  {\color{red} \hat{\tensor{\mbf{A}}}(F,F') } \ket{F,0}  \cdot \mathbf{u}_\inp(\br'_\perp) \big|^2 ,
+		&\approx \sum_{F'} \frac{\Gamma\Omega^2}{4\Delta_{FF'}^2}\sum_q \left| o_{J\tilde{F}}^{J'F'} o_{JF}^{J'F'}C_{F'q}^{\tilde{F}0;1 q}C_{F'q}^{F0;1q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q,
 	\end{align}
-where $ \sigma (\Delta_{FF'} )  = \sigma_0 \Gamma^2/4\Delta^2_{FF'}$ is the the scattering cross section at the probe detuning. When expressed in terms of Pauli operators on the clock-state pseudospin, the map acts as
+where $ \sigma (\Delta_{FF'} )  = \sigma_0 \Gamma^2/4\Delta^2_{FF'}$ is the the scattering cross section at the probe detuning. 
+$ o_{JF}^{J'F'} $ are the relative oscillator strengths, the square of which determine the branching ratios for spontaneous decay rates $ \Gamma_{J'F'\rightarrow JF} $ in the hyperfine multiplets to $\Gamma_{J'\rightarrow J}  $ in the atomic fine structure levels~\cite{deutsch_quantum_2010}. 
+$ C_{F'q}^{F0;1 q}=\Braket{F'q}{F0;1q} $ are the Clebsch-Gordan coefficients determining the clock state transition rates. 
+When expressed in terms of Pauli operators on the clock-state pseudospin, the map acts as
 	\begin{align} \label{Eq::OpticalPumpingMapSchr}
 		\mathcal{D}_n [\hat{\rho}] 
 				=& - \bigg[ \frac{2(\gammau+ \gammad) - \gammauu - \gammadd}{4} \bigg] \hat{\rho} - \frac{ \gammau - \gammad - \gammauu + \gammadd }{4} \big( \hat{\sigma}_3^{(n)} \hat{\rho}+ \hat{\rho} \hat{\sigma}_3^{(n)} \big) \nn \\
@@ -849,7 +854,7 @@ To find the peak squeezing in the presence of optical pumping, we numerically in
 We choose here the magic frequency close to the $ F=4\leftrightarrow F'=4 $ transition, $ \magic{4} $, which is furthest from resonance with both excited hyperfine transitions. 
 Typical time evolution is shown in \frf{Fig::Squeezing_Dynamics} for $2500$ atoms trapped on the \emph{x}-axis at a distance $r'\!_\perp=1.8a$ from the center of the nanofiber. 
 Dimensionless time is scaled to the characteristic scattering rate, $\gamma_s \equiv %\frac{\sigma( \Delta_\eff)}{A_{\rm in}} \dot{N}_L=
-\frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_\eff^2} \dot{N}_L$. 
+\frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_\eff^2} \dot{N}_L=\frac{\Gamma\Omega^2}{4\Delta_{\rm eff}^2}$. 
 We study the dynamics for two choices of quantization axis: (i) along the $x$-axis and (ii) along the numerically determined optimal axis. 
 Figure \ref{Fig::Squeezing_Dynamics}(a) shows the time evolution of the squeezing parameter. 
 Squeezing peaks at 4.7 dB when the clock states are chosen along the optimal axis; $\qangle^{\rm opt} \approx 86^\circ$ in \erf{Eq::QuantizationAxis}. 
