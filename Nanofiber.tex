@@ -129,7 +129,6 @@
 \newcommand{\out}{{\rm out}}
 \newcommand{\inter}{{\rm int}}
 \newcommand{\scs}{{\rm SCS}}
-\newcommand{\fidx}{\eta}
 \newcommand{\fwd}{+}
 \newcommand{\bwd}{-}
 \newcommand{\trans}{+}
@@ -169,13 +168,13 @@
 \newcommand{\Abir}{A_N}
 
 %==== eigenfunctions ======
-\newcommand{\eigenf}{\mbf{f}_\fidx}
-\newcommand{\eigenfp}{\mbf{f}_{\fidx'}}
-\newcommand{\eigeng}{\mbf{g}_\fidx}
-\newcommand{\eigengp}{\mbf{g}_{\fidx'}}
+\newcommand{\eigenf}{\mbf{f}_\eta}
+\newcommand{\eigenfp}{\mbf{f}_{\eta'}}
+\newcommand{\eigeng}{\mbf{g}_\eta}
+\newcommand{\eigengp}{\mbf{g}_{\eta'}}
 
 %==== field operators ======
-\newcommand{\awg}{\hat{a}_{f,p}(\omega)}
+\newcommand{\awg}{\hat{a}_{b,p}(\omega)}
 \newcommand{\awr}{\hat{a}_{m,p}(\omega,\beta)}
 
 %==== colors for editing ======
@@ -193,7 +192,7 @@
 \author{Ben Q. Baragiola}
 \affiliation{Center for Quantum Information and Control, University of New Mexico, Albuquerque, New Mexico 87131, USA}
 \author{Poul S. Jessen}
-\affiliation{Center for Quantum Information and Control, University of Arizona, Tuscon, Arizona 87521, USA}
+\affiliation{Center for Quantum Information and Control, University of Arizona, Tucson, Arizona 87521, USA}
 \author{Ivan H. Deutsch}
 \affiliation{Center for Quantum Information and Control, University of New Mexico, Albuquerque, New Mexico 87131, USA}
 \date{\today}
@@ -201,9 +200,7 @@
 
 %================================================================%
 \begin{abstract}
-We study the strong coupling between photons and atoms that can be achieved in the dispersive regime of an optical nanofiber geometry.  
-While the Purcell enhancement factor for spontaneous emission into the guided mode does not reach the strong-coupling regime for individual atoms, strong cooperativity for ensembles of a few thousand atoms can be achieved due to the tight confinement of the guided modes and constructive interference over the entire chain of trapped atoms. We calculate the dyadic Green's function, which determines the scattering of light by atoms in the presence of the fiber, and thus the phase shift and polarization rotation induced on the guided light by the trapped atoms.  The Green's function is related to a full Heisenberg-Langevin treatment of the dispersive response of the quantized field to tensor polarizable atoms.  We apply our formalism to the study of quantum nondemolition (QND) measurement of the atoms via polarimetry.  We calculate the shot-noise-limited detection of atom number for atoms in a completely mixed state, and the squeezing of projection noise on the atomic clock transition.  Compared with squeezing of atomic ensembles in free space, we capitalize on unique features that arise in the nanofiber geometry, including anisotropy of the intensity and polarization of the guided modes.  We use a first principles stochastic master equation to model the squeezing as function of time in the presence of decoherence due optical pumping.  
-We find a peak metrological squeezing of $\sim 5$ dB is achievable with current technology for $\sim 2500$ atoms trapped 180 nm from the surface of a nanofiber with radius 225 nm.  
+We study the strong coupling between photons and atoms that can be achieved in the dispersive regime {\color{blue} of atoms interacting with photons in optical nanofiber geometry.}  While the Purcell enhancement factor for spontaneous emission into the guided mode does not reach the strong-coupling regime for individual atoms, strong cooperativity for ensembles of a few thousand atoms can be achieved due to the tight confinement of the guided modes and constructive interference over the entire chain of trapped atoms. We calculate the dyadic Green's function, which determines the scattering of light by atoms in the presence of the fiber, and thus the phase shift and polarization rotation induced on the guided light by the trapped atoms.  The Green's function is related to a full Heisenberg-Langevin treatment of the dispersive response of the quantized field to tensor polarizable atoms.  We apply our formalism to the study of quantum nondemolition (QND) measurement of the atoms via polarimetry.  We calculate the shot-noise-limited detection of atom number for atoms in a completely mixed state and the squeezing of projection noise on the atomic clock transition.  Compared with squeezing of atomic ensembles in free space, we capitalize on unique features that arise in the nanofiber geometry, including anisotropy of the intensity and polarization of the guided modes.  We use a first principles stochastic master equation to model the squeezing as function of time in the presence of decoherence due optical pumping.  We find a peak metrological squeezing of $\sim 5$ dB is achievable with current technology for $\sim 2500$ atoms trapped 180 nm from the surface of a nanofiber with radius 225 nm.  
 \end{abstract}
 
 \maketitle
@@ -211,25 +208,20 @@ We find a peak metrological squeezing of $\sim 5$ dB is achievable with current 
 %===================INTRODUCTION=====================%
 \section{Introduction}
 
-Strong coupling between atoms and photons is at the heart of many quantum information processing protocols including: efficient generation of remote entanglement \cite{duan_long-distance_2001, julsgaard_experimental_2001}, quantum data storage and retrieval \cite{ eisaman_electromagnetically_2005}, and QND measurements \cite{eckert_quantum_2008}.  
+Strong coupling between atoms and photons is at the heart of many quantum information processing protocols including efficient generation of remote entanglement \cite{duan_long-distance_2001, julsgaard_experimental_2001}, quantum data storage and retrieval \cite{ eisaman_electromagnetically_2005}, and QND measurements \cite{eckert_quantum_2008}.  
 From the most general perspective, strong coupling arises when atoms radiate predominantly into the electromagnetic field mode that defines the quantum atom-light interface.  
 For an individual atom, strong coupling regime is attained via the Purcell effect, whereby the boundary conditions of nearby dielectrics and/or conductors enhance radiation into a desired mode relative to all other modes.  
-This can be achieved with Fabry-Perot cavities (cavity QED) \cite{miller_trapped_2005} and/or via nanophotonic structures engineered such that the radiation is predominantly into a specified mode \cite{manga_rao_single_2007, hakuta_manipulating_2012, hung_trapped_2013}.  
-The Purcell enhancement factors for emission into a guided or cavity mode scale respectively as  $ \Gamma_{\oneD}/\Gamma_{\vac} \sim \sigma_0/A$ and  
-$\Gamma_{\cav}/\Gamma_{\vac} \sim   Q \lambda^3/V \sim \mathcal{F}  \sigma_0/A$.  
-Here $\Gamma_{\vac}$ is the free space spontaneous emission rate, $\sigma_0 \propto \lambda^2$ is the resonant absorption cross section, $Q$, $V$, and $\mathcal{F}$,  are the cavity quality factor, volume, and finesse respectively, and $A$ is the effective area of the cavity or guided mode that couples to the atom.  
-The strongest coupling occurs on resonance, and thus much effort has been devoted to developing the largest possible $\Gamma_{\cav}$ and $\Gamma_{\oneD}$ through ultra-high-$Q$, small-volume resonators \cite{raimond_manipulating_2001, wallraff_strong_2004, miller_trapped_2005} and through nanophotonic plasmonic \cite{dzsotjan_quantum_2010, tame_quantum_2013}, metamaterial \cite{yao_ultrahigh_2009}, and dielectric \cite{hung_trapped_2013, goban_atomlight_2014} waveguides.   
+This can be achieved with Fabry-Perot cavities (cavity QED) \cite{miller_trapped_2005} and/or via nanophotonic structures engineered such that the radiation is predominantly into a specified mode \cite{manga_rao_single_2007, hakuta_manipulating_2012, hung_trapped_2013}.  The Purcell enhancement factors for emission into a guided or cavity mode scale respectively as  $ \Gamma_{\oneD}/\Gamma_{\vac} \sim \sigma_0/A$ and  $\Gamma_{\cav}/\Gamma_{\vac} \sim   Q \lambda^3/V \sim \mathcal{F}  \sigma_0/A$.  Here $\Gamma_{\vac}$ is the free space spontaneous emission rate, $\sigma_0 \propto \lambda^2$ is the resonant absorption cross section, $Q$, $V$, and $\mathcal{F}$,  are the cavity quality factor, volume, and finesse respectively, and $A$ is the effective area of the cavity or guided mode that couples to the atom.  The strongest coupling occurs on resonance, and thus much effort has been devoted to developing the largest possible $\Gamma_{\cav}$ and $\Gamma_{\oneD}$ through ultra-high-$Q$, small-volume resonators \cite{raimond_manipulating_2001, wallraff_strong_2004, miller_trapped_2005} and through nanophotonic plasmonic \cite{dzsotjan_quantum_2010, tame_quantum_2013}, metamaterial \cite{yao_ultrahigh_2009}, and dielectric \cite{hung_trapped_2013, goban_atomlight_2014} waveguides.   
 
 In free space, where there is no Purcell enhancement, strong coupling can be achieved via the {\em cooperativity} of atomic ensembles.  
-This is most naturally implemented in a dispersive regime, off resonance, where light elastically scattered from the ensemble constructively interferes to match the mode of an exciting paraxial probe \cite{baragiola_three-dimensional_2014}.  
-The cooperativity per atom in a typical paraxial beam is small, $\Gamma_{\oneD}/\Gamma_{\vac} \sim \sigma_0/A  \sim 10^{-6}$.  
-The total cooperativity, however, can be signficant for sufficiently large ensembles, e.g., $N_A \sim  10^7$ atoms, as characterized by the total optical density, OD $= N_A (\sigma_0/A)$.  
+This is most naturally implemented in a dispersive regime, off resonance, where light elastically scattered from the ensemble constructively interferes to match the mode of an exciting paraxial probe \cite{baragiola_three-dimensional_2014}.  The cooperativity per atom in a typical paraxial beam is small, $\Gamma_{\oneD}/\Gamma_{\vac} \sim \sigma_0/A  \sim 10^{-6}$.  
+The total cooperativity, however, can be significant for sufficiently large ensembles, e.g., $N_A \sim  10^7$ atoms, and is characterized by the total {\color{blue} resonant} optical density, OD $= N_A (\sigma_0/A)$.  
 Such strong cooperativity in free space has been employed in a variety of applications including quantum memory for storing photonic states \cite{chaneliere_storage_2005}, and in the generation of squeezed states of the collective spin of the ensemble via quantum nondemolition (QND) measurement \cite{kuzmich_generation_2000, appel_mesoscopic_2009, takano_spin_2009, sewell_magnetic_2012}.   
 
 %========= FIGURE: Geometry (coupling strength, magic wavelength, area and detuning) =========%
 \begin{figure}
 \includegraphics[scale=0.80]{./Figs/Fig_ModeMatch}
-\caption{Cooperativity and mode-matching for various atom-light geometries. (a) Single atom in a tightly focused beam. The atom experiences a large field, but its scattered light is poorly mode-matched to the probe. (b) A paraxial beam probing a rarefied atomic cloud whose scattered radiation interferes constructively in the forward direction. (c) Atoms trapped in a 1D optical lattices  near the surface of an optical nanofiber interacting with a fiber-guided probe. The tight confinement and automatic mode matching of scattering into the guided mode leads to strong cooperativity in the atom-photon interaction.}\label{Fig::ModeMatching}
+\caption{Cooperativity and mode-matching for various atom-light geometries. (a) Single atom in a tightly focused beam. The atom experiences a large field, but its scattered light is poorly mode-matched to the probe. (b) A paraxial beam probing a rarefied atomic cloud whose scattered radiation interferes constructively in the forward direction. (c) Atoms trapped in a 1D optical lattices  near the surface of an optical nanofiber interacting with a fiber-guided probe. The tight confinement and automatic mode matching {\color{blue} that accompanies} scattering into the guided mode leads to strong cooperativity in the atom-photon interaction.}\label{Fig::ModeMatching}
 \end{figure}
 %=============================================
 
@@ -248,10 +240,7 @@ Off resonance, dispersive coupling has allowed for non-destructive atom counting
 and storage of fiber-guided light \cite{gouraud_demonstration_2015, sayrin_storage_2015}.
 Recent demonstrations of photonic crystal cavities fabricated on the nanofiber \cite{wuttke_nanofiber_2012, nayak_optical_2014, schell_highly_2015} promise further enhanced atom-light coupling.
 
-In this paper we study the quantum atom-light interface associated with optical nanofibers in the dispersive regime.  
-We focus here on the coupling between atomic spin and light polarization induced by the elastic scattering of photons by tensor-polarizable cesium atoms trapped near the surface of the nanofiber.  
-This provides an entangling interaction to induce spin squeezing via QND measurement.  
-Our analysis unifies a variety of different approaches found in the literature, including direct calculation of the dyadic Greens function for photon scattering \cite{sakoda_optical_1996, dung_spontaneous_2000, sondergaard_general_2001, klimov_spontaneous_2004, wubs_multiple-scattering_2004, fussell_decay_2005, manga_rao_single_2007, dzsotjan_quantum_2010} and the input-output formalism studied for one-dimensional field theories based on Heisenberg-Langevin equations \cite{gardiner_input_1985, blow_continuum_1990, shen_coherent_2005, le_kien_spontaneous_2005, le_kien_correlations_2008, fan_input-output_2010}.
+In this paper we study the quantum atom-light interface in the dispersive regime {\color{blue}  for an optical nanofiber geometry.}  We focus here on the coupling between atomic spin and light polarization induced by the elastic scattering of photons by tensor-polarizable cesium atoms trapped near the surface of the nanofiber.  This provides an entangling interaction {\color{blue} that can be employed to generate} spin squeezing via QND measurement.  Our analysis unifies a variety of different approaches found in the literature, including direct calculation of the dyadic Greens function for photon scattering \cite{sakoda_optical_1996, dung_spontaneous_2000, sondergaard_general_2001, klimov_spontaneous_2004, wubs_multiple-scattering_2004, fussell_decay_2005, manga_rao_single_2007, dzsotjan_quantum_2010} and the input-output formalism studied for one-dimensional field theories based on Heisenberg-Langevin equations \cite{gardiner_input_1985, blow_continuum_1990, shen_coherent_2005, le_kien_spontaneous_2005, le_kien_correlations_2008, fan_input-output_2010}.
 
 The remainder of this article is organized as follows.  
 In \srf{Sec::GreensFunction} we solve for the mode decomposition of the dyadic Green's function which determines the electric field scattered by a point dipole near the surface of the nanofiber.  
@@ -286,17 +275,17 @@ k_0^2 \delta^{(3)}(\mathbf{r}\!-\!\mathbf{r}')\! \unittens,
 where $\unittens$ is the unit tensor.   
 
 The solution for the Green's function $\tensor{\mathbf{G}}(\br ,\br' ; \omega_0)$, following from Maxwell's equations,  
-has been studied previously \cite{sakoda_optical_1996,sondergaard_general_2001,wubs_multiple-scattering_2004}.  As we are interested here in the forward-scattered components that lead to phase shifts and polarization transformations, we directly calculate $\tensor{\mathbf{G}}(\br ,\br' ; \omega_0)$ through a decomposition into normal modes.  A complete set of eigenmodes in the presence of lossless, anisotropic dielectric are defined according to the procedure of Glauber and Lewenstein~\cite{glauber_quantum_1991}.  We seek the eigenmodes $\eigenf(\mathbf{r})$, indexed by $\fidx$, that satisfy the homogeneous wave equation in the absence of sources, i.e., \erf{Eq::WaveEquationSource} for $\tensor{\boldsymbol{\alpha}} = 0$.  To do so, one defines functions $\eigeng(\mbf{r}) \equiv n(\br) \eigenf(\mbf{r})$ that form a complete basis, as they are eigenfunctions of the Hermitian operator, $\mathcal{H}(k_0) = -\frac{1}{n(\br)} \nabla\times\nabla\times \frac{1}{n(\br)} + k_0^2$, according to $\mathcal{H}(k_0)  \eigeng(\mbf{r}) = \lambda_\fidx \eigeng(\mbf{r})$. The eigenvalue, $\lambda_\fidx= k_0^2-k_\fidx^2$, determines the wavenumber for a given mode, $k_\fidx$.  We are interested specifically in the transverse functions, $\nabla \cdot \eigeng(\br) = 0$, with eigenvalues $\lambda_n \neq 0$.  These fall into two categories, guided and unguided (radiation) modes, which form a complete, orthonormal set for transverse vector functions,
+has been studied previously \cite{sakoda_optical_1996,sondergaard_general_2001,wubs_multiple-scattering_2004}.  As we are interested here in the forward-scattered components that lead to phase shifts and polarization transformations, we directly calculate $\tensor{\mathbf{G}}(\br ,\br' ; \omega_0)$ through a decomposition into normal modes.  A complete set of eigenmodes in the presence of lossless, anisotropic dielectric are defined according to the procedure of Glauber and Lewenstein~\cite{glauber_quantum_1991}.  We seek the eigenmodes $\eigenf(\mathbf{r})$, indexed by $\eta$, that satisfy the homogeneous wave equation in the absence of sources, i.e., \erf{Eq::WaveEquationSource} for $\tensor{\boldsymbol{\alpha}} = 0$.  To do so, one defines functions $\eigeng(\mbf{r}) \equiv n(\br) \eigenf(\mbf{r})$ that form a complete basis, as they are eigenfunctions of the Hermitian operator, $\mathcal{H}(k_0) = -\frac{1}{n(\br)} \nabla\times\nabla\times \frac{1}{n(\br)} + k_0^2$, according to $\mathcal{H}(k_0)  \eigeng(\mbf{r}) = \lambda_\eta \eigeng(\mbf{r})$. The eigenvalue, {\color{blue} $\lambda_\eta= (\omega_0^2-\omega_\eta^2)/c^2$}, determines the wavenumber for a given mode {\color{blue} at frequency $\omega_\eta$}.  We are interested specifically in the transverse functions, $\nabla \cdot \eigeng(\br) = 0$, with eigenvalues $\lambda_n \neq 0$.  These fall into two categories, guided {\color{blue} ($\eta = \mu$)} and unguided {\color{blue} ($\eta = \nu$)} modes, which {\color{blue} together} form a complete, orthonormal set for transverse vector functions,
 	\begin{align}
-	&\int\!\! \mathrm{d}^3\br \, \eigeng^*(\mbf{r}) \!\cdot\! \eigengp(\mbf{r})  =\!\! \int\!\! \mathrm{d}^3\br \, n^2(\br) \eigenf^* (\br)\!\cdot\!  \eigenfp(\br) =\delta_{\fidx, \fidx'},\label{Eq::Orthogonality}\\
-	&\!\!\!\!\!\!\!\sum_\fidx \!\eigeng(\br) \eigeng^*(\br') \!=\!\! \sum_\fidx\!\! n(\br)n(\br') \eigenf(\br) \eigenf^*(\br') \!=\!\tensor{\delta}^{(\!T\!)}\!(\br\!-\!\br') \! \unittens, \label{Eq::Completeness}
+	&\int\!\! \mathrm{d}^3\br \, \eigeng^*(\mbf{r}) \!\cdot\! \eigengp(\mbf{r})  =\!\! \int\!\! \mathrm{d}^3\br \, n^2(\br) \eigenf^* (\br)\!\cdot\!  \eigenfp(\br) =\delta_{\eta, \eta'},\label{Eq::Orthogonality}\\
+	&\!\!\!\!\!\!\!\sum_\eta \!\mathbf{g}_\eta(\br) \mathbf{g}_\eta^*(\br') \!=\!\!  \sum_\mu\!\! \mathbf{g}_\mu(\br) \mathbf{g}_\mu^*(\br')  \!+\! \sum_\nu\!\! \mathbf{g}_\nu(\br) \mathbf{g}_\nu^*(\br')  \!=\!\delta^{(\!T\!)}\!(\br\!-\!\br')\!  \unittens, \label{Eq::Completeness}
 	\end{align}
-where $\tensor{\delta}^{(T)}(\br-\br')$ is the delta function for transverse vector fields.  It follows that the transverse dyadic Green's function can be decomposed in terms of the eigenfunctions~\cite{sakoda_optical_1996, sondergaard_general_2001}
+where $\delta^{(T)}(\br-\br')$ is the delta function for transverse vector fields.  It follows that the transverse dyadic Green's function can be decomposed in terms of the eigenfunctions~\cite{sakoda_optical_1996, sondergaard_general_2001}
 	\begin{align}
-		\tensor{\mathbf{G}}^{(T)}(\br,\br'; \omega_0) &= -4\pi \sum_{\fidx} \frac{  \omega_0^2 \eigenf (\br) 
-\eigenfp^* (\br')}{\omega_0^2-\omega_\fidx^2},
+		\tensor{\mathbf{G}}^{(T)}(\br,\br'; \omega_0) &= -4\pi \sum_{\eta} \frac{  \omega_0^2 \eigenf (\br) 
+\eigenfp^* (\br')}{\omega_0^2-\omega_\eta^2},
 	\end{align}
-where the eigenvalues appear as $\omega_\fidx^2 = c^2 k_\fidx^2$.  The sum includes both guided and unguided contributions. We focus here on the guided-mode contribution to the Green's function. 
+where the eigenvalues appear as $\omega_\eta^2 = c^2 k_\eta^2$.  The sum includes both guided and unguided contributions. We focus here on the guided-mode contribution to the Green's function. 
 
 We treat an optical nanofiber of radius $a$ with step-index profile,
 	\begin{align} \label{Eq::IndexofRefraction}
@@ -305,7 +294,7 @@ We treat an optical nanofiber of radius $a$ with step-index profile,
 						 n_2 & \quad r > a 
 		\end{array},
 	\end{align}
-for a silica core ($n_1 = 1.45$) and infinite vacuum cladding ($n_2 = 1$).  For a cylindrically symmetric dielectric the guided modes are $\eigenf (\br) = \mathbf{u}_\mu (\br_\perp) e^{i\beta z}/\sqrt{2 \pi}$, with indices $\mu=\{j, \beta, p\}$ for guided mode $j$ with propagation constant $\beta$ and polarization $p$.  The transverse mode functions are normalized according to $\int d^2 \mbf{r}_\perp \, n^2(r_\perp)\mathbf{u}^*_\mu (\br_\perp) \cdot \mathbf{u}_{\mu'} (\br_\perp)\big|_{\beta = \beta'} = \delta_{j,j'}\delta_{p,p'}$ and have units $1/\sqrt{A}$ \cite{le_kien_anisotropy_2014}.  Two convenient guided-mode bases are the quasilinear and quasicircular polarization modes, given in  Appendix \ref{Appendix::ModeFunctions}, whose $z$-components satisfy the two-dimensional Schr\"{o}dinger-like equation, $\big[\nabla_\perp^2 +k_0^2 n^2(r_\perp) \big] u_{\mu,z} (\br_\perp) = \beta^2 u_{\mu,z} (\br_\perp)$ \cite{kien_field_2004}.  
+for a silica core ($n_1 = 1.4469$)~\cite{kien_field_2004} and infinite vacuum cladding ($n_2 = 1$).  For a cylindrically symmetric dielectric the guided modes are {\color{blue}  $\mathbf{f}_\mu (\br) = \mathbf{u}_\mu (\br_\perp) e^{i\beta z}/\sqrt{2 \pi}$}, with indices $\mu=\{j, \beta , p\}$ for the guided mode $j^{th}$ with propagation constant $\beta$ {\color{blue} at frequency $\omega_\mu=\omega(\beta)$} and polarization $p$.  The transverse mode functions are normalized according to $\int d^2 \mbf{r}_\perp \, n^2(r_\perp)\mathbf{u}^*_\mu (\br_\perp) \cdot \mathbf{u}_{\mu'} (\br_\perp)\big|_{\beta = \beta'} = \delta_{j,j'}\delta_{p,p'}$ and have units $1/\sqrt{A}$ \cite{le_kien_anisotropy_2014}.  Two convenient guided-mode bases are the quasilinear and quasicircular polarization modes, given in  Appendix \ref{Appendix::ModeFunctions} \cite{kien_field_2004}.  
 
 We consider nanofibers that support only the lowest HE$_{11}$ guided modes at the relevant frequency $\omega_0$ \cite{snyder_optical_1983}, and thus we drop the mode index $j$.  In this case there are four guided modes: two polarizations $p$, each with propagation constant (longitudinal wavenumber) $\beta(\omega_0) = \pm\beta_0$ corresponding to forward and backward propagation.  The guided-mode contribution to the dyadic Greens function is then 
 	\begin{equation} \label{Eq::GreensEigenmodes}
@@ -319,14 +308,14 @@ For $z>z'$ ($z<z'$), the contribution of the guided modes to the retarded (causa
 usual displacement of the pole on the positive (negative) $\beta$-axis into the upper (lower) half of 
 the complex plane. The result for $z \neq z'$ is \cite{manga_rao_single_2007}
 	\begin{align} 
-		&\tensor{\mathbf{G}}^{(+)}_g(\br,\br'; \omega_0) \nn\\
-		=& 2\pi i \sum_{f,p}  {\rm Res}\vert_{\beta =f\beta_0} 
-\left[\frac{-4\pi \omega_0^2 }{2\pi ( \omega_0^2-\omega^2(\beta))}\right] \nn\\ &\quad\quad \mathbf{u}_{f\beta_0, p} 
-(\br_\perp)\mathbf{u}^*_{f\beta_0, p} (\br_{\perp}^\prime)e^{if \beta_0 (z-z')} \nonumber \\
-= & 2\pi i \frac{\omega_0}{v_g } \sum_{f,p} \mathbf{u}_{f, p} (\br_\perp)\mathbf{u}^*_{f , p} 
-(\br_{\perp}^\prime) e^{i f \beta_0(z\!-\!z')} \Theta \big( (z\!-\!z')f \big), \label{Eq::GreensGuided}
+		&\tensor{\mathbf{G}}^{(+)}_g(\br,\br'; \omega_0)\nn\\ 
+		=& 2\pi i \sum_{b,p}  {\rm Res}\vert_{\beta =b\beta_0} 
+\left[\frac{-4\pi \omega_0^2 }{2\pi ( \omega_0^2-\omega^2(\beta))}\right]  \nn\\ &\quad\quad \mathbf{u}_{b\beta_0, p} 
+(\br_\perp)\mathbf{u}^*_{b\beta_0, p} (\br_{\perp}^\prime)e^{ib \beta_0 (z-z')} \nonumber \\
+= & 2\pi i \frac{\omega_0}{v_g } \sum_{b,p} \mathbf{u}_{b, p} (\br_\perp)\mathbf{u}^*_{b, p} 
+(\br_{\perp}^\prime) e^{i b\beta_0(z\!-\!z')} \Theta \big( (z\!-\!z')b \big), \label{Eq::GreensGuided}
 	\end{align}
-where $f=\pm$ indicates the propagation direction, $v_g= \vert d\omega/d\beta \vert_{\beta=\beta_0}$ is the group velocity at $\omega_0$, and $\Theta \big( (z-z')f \big)$ is a Heaviside function enforcing causality for the forward- and backward-scattered fields. In the second line, we have suppressed the label $\beta_0$ as it is implicit in the definition of the guided modes at frequency $\omega_0$. 
+where $b=\pm 1$ indicates the propagation direction, $v_g= \vert d\omega/d\beta \vert_{\beta=\beta_0}$ is the group velocity at $\omega_0$, and $\Theta \big( (z-z')b \big)$ is a Heaviside function enforcing causality for the forward- and backward-scattered fields. In the second line, we have suppressed the label $\beta_0$ as it is implicit in the definition of the guided modes at frequency $\omega_0$. 
 
 Radiative properties of a scatterer (the decay rate and energy level shift) are determined by evaluation of the dyadic Green's function at the source point $\mbf{r} = \mbf{r}'$ \cite{fussell_decay_2005}.  However, for $z=z'$ we cannot close the contour. Instead, we expand the resonant denominator in \erf{Eq::GreensEigenmodes} with the poles moved to yield the retarded (causal) response,
 \begin{equation}
@@ -341,8 +330,8 @@ Radiative properties of a scatterer (the decay rate and energy level shift) are 
 \end{equation}
 Only the positive-frequency component contributes to the $\delta$-function, and it follows that the imaginary part of the Green's function at $\br = \br'$ that determines the resonant ($\omega_0 = \omega_{eg}$) Purcell enhancement of spontaneous emission into the guided modes is \cite{dung_spontaneous_2000, fussell_decay_2005, chen_finite-element_2010}
 	\begin{equation}\label{Eq::ImGreenLocal}
-		{\rm Im} \big[\tensor{\mathbf{G}}^{(+)}_g(\br',\br'; \omega_0=\omega_{eg}) \big] = \pi \frac{\omega_{eg}}{v_g } \sum_{f, p} 
-		\mathbf{u}_{f, p} (\br_{\!\perp}^\prime)\mathbf{u}^*_{f , p} (\br_{\!\perp}^\prime).
+		{\rm Im} \big[\tensor{\mathbf{G}}^{(+)}_g(\br',\br'; \omega_0=\omega_{eg}) \big] = \pi \frac{\omega_{eg}}{v_g } \sum_{b, p} 
+		\mathbf{u}_{b, p} (\br_{\!\perp}^\prime)\mathbf{u}^*_{b , p} (\br_{\!\perp}^\prime).
 	\end{equation}
 The energy level shift of the scatterer due to its proximity to the dielectric is found from the real part of the Green's function at $\br = \br'$. 
 To find the total modified spontaneous emission rate and energy level shift one must include the unguided radiation modes \cite{le_kien_spontaneous_2005} or employ other representations of the Green's function \cite{klimov_spontaneous_2004}.  
@@ -379,10 +368,10 @@ Here, the $\{p,p'\}$-element of the tensor polarizability is given by, $\alpha_{
 The phase shift per atom, \erf{Eq::PhaseShift}, is modified over free space in two ways, both of which are captured by the effective mode area $A_{\rm in}$. 
 First, although material dispersion in an optical fiber is negligible over the distances we consider, an atom coupling to a tightly confined guided mode can lead to additional waveguide dispersion and a significant reduction in the group velocity.  
 Such ``slow light" enhances the atom-photon coupling strength. 
-In the nanofiber geometry this effect is moderate -- the group index $n_g \approx 1.4$ for atoms trapped at $r' \approx1.8 a$. 
+In the nanofiber geometry this effect is moderate -- \comment{the group index $n_g \equiv \mathrm{d}\beta/\mathrm{d}k\approx 1.40$}. 
 Second and more importantly, the tight spatial confinement as measured by OD/atom significantly increases the coupling strength over free space for every atom along the nanofiber, which yields strong cooperativity.
-
-In contrast, diffraction restricts the collective phase shift for an ensemble of atoms in free space~\cite{tanji-suzuki_chapter_2011, baragiola_three-dimensional_2014}.  For a Gaussian beam with beam waist $w_0$, the total phase shift induced by a collection of polarizable atoms will be $\delta \phi = N_{\eff} 2 \pi k_0 {\rm Re}({\alpha})/A$, where $A = \pi w^2_0/2$ is the beam area at the focus and $N_{\eff}$ is the effective number of atoms that radiate into this mode.  
+In contrast, diffraction restricts the collective phase shift for an ensemble of atoms in free space~\cite{tanji-suzuki_chapter_2011, baragiola_three-dimensional_2014}.  
+For a Gaussian beam with beam waist $w_0$, the total phase shift induced by a collection of polarizable atoms will be $\delta \phi = N_{\eff} 2 \pi k_0 {\rm Re}({\alpha})/A$, where $A = \pi w^2_0/2$ is the beam area at the focus and $N_{\eff}$ is the effective number of atoms that radiate into this mode.  
 One can couple strongly to few atoms at the center by tightly focusing the beam or couple weakly to many atoms by choosing a larger focal volume, but hence, smaller cooperativity per atom.  
 
 The off-diagonal terms in the transmission matrix, \erf{Eq::PolarizationTransformation}, describe the polarization transformation. For example, if we take the polarization of the modes to be the quasilinear, $p = \{H,V\}$ as defined in \erf{Eq::QuasilinearModes}, then $t_{HV} \equiv \chi_{\rm Far}$ is the rotation angle of the Stokes vector on the Poincar\'{e} sphere corresponding to the Faraday effect \cite{hammerer_quantum_2010, deutsch_quantum_2010}.  
@@ -408,12 +397,12 @@ Following Ref. \cite{le_kien_spontaneous_2005}, we use a Heisenberg-Langevin app
 
 The positive frequency component of the quantized electric field operator decomposes into guided and radiation (unguided) modes, $\hat{\mathbf{E}}^{(+)}=\hat{\mathbf{E}}_g^{(+)}+\hat{\mathbf{E}}_{r}^{(+)}$, where
 	\begin{align}
-		\hat{\mathbf{E}}_g^{(+)}(\br) &= \sum_{f,p} \int \mathrm{d}\omega  \sqrt{\frac{ \hbar \omega}{ v_g}} \; \awg \mathbf{u}_\mu (\br\!_\perp) e^{i f\beta(\omega) z } ,\label{Eq::QuantizedElectricField} \\
+		\hat{\mathbf{E}}_g^{(+)}(\br) &= \sum_{b,p} \int \mathrm{d}\omega  \sqrt{\frac{ \hbar \omega}{ v_g}} \; \awg \mathbf{u}_\mu (\br\!_\perp) e^{i b\beta(\omega) z } ,\label{Eq::QuantizedElectricField} \\
 		\hat{\mathbf{E}}_r^{(+)}(\br) &= \sum_{m,p} \int \mathrm{d}\omega   \int_{-kn_2}^{kn_2}\mathrm{d}\beta \, \sqrt{ \hbar \omega}\;\awr \mathbf{u}_\nu (\br\!_\perp) e^{i\beta(\omega) z }.
 	\end{align}
-The HE$_{11}$ guided modes are specified by $\mu =(\omega, f, p)$, the mode frequency $\omega$,  polarization $p$, and propagation direction $f=\pm1$ corresponding to wavenumbers $f\beta (\omega)$.  
+The HE$_{11}$ guided modes are specified by $\mu =(\omega, b, p)$, the mode frequency $\omega$,  polarization $p$, and propagation direction $b=\pm1$ corresponding to wavenumbers $b \beta (\omega)$.  
 The radiation modes are specified by  $\nu=(\omega, \beta, m, p)$, where $m$ is the azimuthal (angular momentum) quantum number, $p$ labels the two orthogonal polarizations, and longitudinal propagation constant $\beta$ can vary continuously from $-kn_2$ to $kn_2$, with $k = \omega/c$ \cite{sondergaard_general_2001,le_kien_spontaneous_2005}.  
-The creation/annihilation operators satisfy the usual continuous-mode commutation relations, $[\hat{a}_\mu, \hat{a}^\dag_{\mu'} ] = \delta_{f,f'} \delta_{p,p'} \delta ( \omega - \omega ') $ and $[\hat{a}_\nu ,\hat{a}^\dag_{\nu'} ] = \delta_{m,m'} \delta_{p,p'} \delta ( \omega - \omega ')  \delta ( \beta - \beta') $.
+The creation/annihilation operators satisfy the usual continuous-mode commutation relations, $[\hat{a}_\mu, \hat{a}^\dag_{\mu'} ] = \delta_{b,b'} \delta_{p,p'} \delta ( \omega - \omega ') $ and $[\hat{a}_\nu ,\hat{a}^\dag_{\nu'} ] = \delta_{m,m'} \delta_{p,p'} \delta ( \omega - \omega ')  \delta ( \beta - \beta') $.
 
 The Hamiltonian for the system is
 \begin{equation}
@@ -421,7 +410,7 @@ The Hamiltonian for the system is
 \end{equation}
 where the free-field Hamiltonian decomposes into guided and unguided modes, 
 	\begin{equation}
-		\hat{H}_F = \sum_{f,p}\int \mathrm{d}\omega \, \hbar \omega \hat{a}^\dagger_\mu \hat{a}_\mu 
+		\hat{H}_F = \sum_{b,p}\int \mathrm{d}\omega \, \hbar \omega \hat{a}^\dagger_\mu \hat{a}_\mu 
 +\sum_{m,p} \int \mathrm{d}\omega  \int_{-k n_2}^{k n_2} \mathrm{d}\beta \, \hbar \omega 
 \hat{a}^\dagger_\nu \hat{a}_\nu.
 	\end{equation}
@@ -436,7 +425,7 @@ where $\hat{\sigma}_{ij} \equiv \ket{i}\bra{j}$.  In the rotating wave approxima
 	\end{align}
 where the atomic dipole operator is projected between excited and ground subspaces, $\hat{\mathbf{d}}_{eg}= \hat{P}_e \hat{\mathbf{d}} \hat{P}_g $. The interaction Hamiltonian then takes the form, 
 \begin{align}
-	\hat{H}_{\inter} &= -\sum_{e,g} \left(\sum_{f,p} \int\mathrm{d}\omega \; \hbar g_{\mu, e,g}\, \hat{a}_\mu  \, 
+	\hat{H}_{\inter} &= -\sum_{e,g} \left(\sum_{b,p} \int\mathrm{d}\omega \; \hbar g_{\mu, e,g}\, \hat{a}_\mu  \, 
 		\hat{\sigma}_{eg}\right.\nonumber\\
 	&\quad \left. + \sum_{m,p} \int\mathrm{d}\omega \! \int_{-kn_2}^{kn_2}\mathrm{d}\beta \,  \hbar 
 g_{\nu, e,g}\, \hat{a}_\nu \, \hat{\sigma}_{eg}\right) + {H.c.},
@@ -445,7 +434,7 @@ where the coupling constants for guided/radiation modes are
 \begin{subequations} \label{Eq::CouplingConstants}
 	\begin{align}
 		\hbar g_{\mu, e,g} &= \sqrt{\frac{\hbar \omega}{ v_g  }}\, \bra{e} \hat{\mathbf{d}} \ket{g} 
-\cdot\mathbf{u}_\mu ( \br'_\perp ) e^{i f \beta(\omega)z} , \\
+\cdot\mathbf{u}_\mu ( \br'_\perp ) e^{i b \beta(\omega)z} , \\
 		\hbar g_{\nu, e,g} &= \sqrt{  \hbar \omega } \, \bra{e} \hat{\mathbf{d}} \ket{g} \cdot \mathbf{u}_\nu ( \br'_\perp) e^{i\beta(\omega)z}  .
 	\end{align}
 \end{subequations}
@@ -455,7 +444,7 @@ The Heisenberg equations of motion are
 		\der{\hat{a}_\nu} &= -i\omega \hat{a}_\nu +i\sum_{e,g} g_{\nu, e,g}^*  \hat{\sigma}_{ge}\label{eq:danu},\\
 		\der{\hat{\sigma}_{ge}} &= -i\omega_{eg} \hat{\sigma}_{ge} \label{Eq::dsigma}  \\
 			&+ i\!\int_0^{\infty}\!\!\!\!\! \mathrm{d}\omega \sum_{e',g'} \bigg[ \big(\delta_{ee'} \hat{\sigma}_{gg'} \!-\! \delta_{gg'} \hat{\sigma}_{e'e} \big) \nonumber\\
-		&\!\!\!\!\! \bigg\{ \sum_{f,p}  g_{\mu, e',g'}\hat{a}_\mu (\omega; t) \!+\! \sum_{m,p} \!\int_{-kn_2}^{kn_2}\!\!\!\!\!\! \mathrm{d}\beta \; g_{\nu, e',g'} \hat{a}_\nu(\omega, \beta; t) \bigg\} \bigg]. \nonumber
+		&\!\!\!\!\! \bigg\{ \sum_{b,p}  g_{\mu, e',g'}\hat{a}_\mu (\omega; t) \!+\! \sum_{m,p} \!\int_{-kn_2}^{kn_2}\!\!\!\!\!\! \mathrm{d}\beta \; g_{\nu, e',g'} \hat{a}_\nu(\omega, \beta; t) \bigg\} \bigg]. \nonumber
 	\end{align}
 Integrating the field equations, 
 \begin{subequations}\label{eq:aout1}
@@ -476,48 +465,44 @@ substituting into \erf{Eq::dsigma}, and making the usual Markov approximation gi
 \hat{\sigma}_{ge}-\sum_{e'}\frac{\Gamma_{ee'}}{2}\hat{\sigma}_{ge'}  \\
 &+i \sum_{e',g'}\bigg[ (\delta_{e,e'} \hat{\sigma}_{gg'} - \delta_{g,g'} 
 \hat{\sigma}_{e'e})\nn\\
-&\int_0^{\infty}\!\!\!\!\!\mathrm{d}\omega \bigg\{\!\!\sum_{f,p} \!\! g_{\mu, e',g'} \hat{a}_\mu (t_0) 
-\!+\! \sum_{m,p}\!\!  \int_{-kn_2}^{kn_2}\!\!\!\!\!\!\!\!\!\mathrm{d}\beta  g_{\nu, e',g'} \hat{a}_\nu(t_0) \bigg\} e^{-i\omega 
+&\int_0^{\infty}\!\!\!\!\!\mathrm{d}\omega \bigg\{\!\!\sum_{b,p} \!\! g_{\mu, e',g'} \hat{a}_\mu (t_0) 
+\!+\!\sum_{m,p}\!\!  \int_{-kn_2}^{kn_2}\!\!\!\!\!\!\!\!\!\mathrm{d}\beta  g_{\nu, e',g'} \hat{a}_\nu(t_0) \bigg\} e^{-i\omega 
 (t-t_0)}\bigg], \nonumber
 \end{align}
 where the decay rates of excited-populations and coherences are given by 
 	\begin{align}
 		\Gamma_{ee'} &= 2\pi \sum_{\mu,g} g_{\mu,e,g}g^*_{\mu,e',g} \vert_{\omega=\omega_{eg}}\nn\\
 		&\quad +2\pi 
-\sum_{m,p,g} \int d\beta \, g_{\nu,e,g}g^*_{\nu,e',g} \vert_{\omega=\omega_{eg}}, \label{Eq::TotaleeDecayRate}
+\sum_{m,p,g} \int_{-kn_2}^{kn_2}\!\!\!\!\! d\beta \, g_{\nu,e,g}g^*_{\nu,e',g} \vert_{\omega=\omega_{eg}}, \label{Eq::TotaleeDecayRate}
 	\end{align}
 and the small energy shift is absorbed into the transition frequency $\omega_{eg} = (E_e - E_g)/\hbar$.  
 Equation (\ref{Eq::TotaleeDecayRate}) captures the modification of the spontaneous emission rate due to the nanofiber.  
 The first sum describes decay into the guided modes and the second into the unguided radiation modes \cite{ nha_cavity_1997,klimov_spontaneous_2004,le_kien_spontaneous_2005,maslov_distribution_2006, scheel_directional_2015}. The decay rate of a given excited state into all guided modes is given by
 	\begin{equation}
-		\Gamma_e^{\oneD}= 2\pi \sum_{f,p,g} |g_{\mu,e,g} |^2_{\omega \!=\! \omega_{eg}} \!\!=\!  \frac{ 2\pi }{\hbar} \frac{ \omega_{eg} }{v_g} \sum_{f,p,g} \big|\bra{e}\hat{\mathbf{d}}\ket{g} \cdot \mathbf{u}_{fp}(\br'_\perp)\big|^2  .
+		\Gamma_e^{\oneD}\!\!=\!\! 2\pi\!\! \sum_{b,p,g}\!\! |g_{\mu,e,g} |^2_{\omega \!=\! \omega_{eg}} \!\!\!=\!\!  \frac{ 2\pi }{\hbar}\! \frac{ \omega_{eg} }{v_g}\!\! \sum_{b,p,g}\!\! \big|\bra{e}\hat{\mathbf{d}}\ket{g} \!\cdot\! \mathbf{u}_{bp}(\!\br'_\perp\!)\big|^2 \! .
 	\end{equation}
 This is in agreement with the expected expression from the guided-mode contribution to the dyadic Green's function in \erf{Eq::ImGreenLocal},
 	\begin{equation} \label{Eq::Gamma1DGreens}
-		\Gamma_e^{\oneD} =  \frac{2}{\hbar} \sum_{g}  \bra{g}\hat{\mathbf{d}}\ket{e}\cdot 
-{\rm Im} \Big[\tensor{\mathbf{G}}^{(+)}_g(\br', \br'; \omega_{eg} ) \Big] \cdot \bra{e}\hat{\mathbf{d}}\ket{g},
+		\Gamma_e^{\oneD} =  \frac{2}{\hbar} \sum_{g}  \bra{g}\hat{\mathbf{d}}\ket{e}\!\cdot\! 
+{\rm Im} \Big[\tensor{\mathbf{G}}^{(+)}_g(\br', \br'; \omega_{eg} ) \Big] \!\cdot\! \bra{e}\hat{\mathbf{d}}\ket{g},
 	\end{equation}
 which is enhanced over the free-space rate by the Purcell factor. 
-%The decay rate into a given mode, guided or radiation, depends on the atom's position and dipole orientation \cite{klimov_spontaneous_2004, vos_orientation-dependent_2009}. Recently it was demonstrated that decay rates into the forward and backward guided modes are not always equal \cite{mitsch_quantum_2014}. When the atomic dipole has a component rotating in the plane defined by the atom and nanofiber, the relative decay rates differ due to the broken symmetry arising from the out-of-phase longitudinal component of the guided modes \cite{le_kien_anisotropy_2014}. 
 
 Here we are interested in linear response for excitation far from resonance. We follow Ref. \cite{le_kien_propagation_2014} and consider an atom sufficiently far from the fiber surface such that the modification of the spontaneous emission rate is small.   In this case the decay rate is approximated as $\Gamma_{ee'} \approx \delta_{e,e'} \Gamma_{e}$, where $\Gamma_e$ is the total decay rate from excited state $\ket{e}$, given by the diagonal elements of \erf{Eq::TotaleeDecayRate}.  In steady state, the dipole operator in the linear regime ($\hat{\sigma}_{ee'} \rightarrow 0 $) is approximately
 	\begin{align}
-		\hat{\sigma}_{ge} &\approx  -\sum_{g'} \hat{\sigma}_{gg'}\int_0^{\infty}\mathrm{d}\omega \bigg(  \sum_{f,p}  
+		\hat{\sigma}_{ge} &\approx  -\sum_{g'} \hat{\sigma}_{gg'}\int_0^{\infty}\mathrm{d}\omega \bigg(  \sum_{b,p}  
 \frac{g_{\mu, e,g'}}{\omega-\omega_{eg} + i \Gamma_{e}/2  }\, \hat{a}_\mu (t_0) \\
 	&\!\!\!\! +\sum_{m,p} \int_{-kn_2}^{kn_2}\mathrm{d}\beta \, \frac{g_{\nu, e,g'}}{\omega-\omega_{eg} + i \Gamma_{e}/2 } \,\hat{a}_\nu (t_0)  \bigg)e^{-i\omega (t-t_0)} . \nn
 	\end{align}
-%\comment{In fact, this is obtained by defining $ \hat{\sigma}_{ge'}(t)=\int \frac{\mathrm{d}\omega}{\sqrt{2\pi}}\hat{\sigma}_{ge'}(\omega) e^{-i\omega(t-t_0)} $. } 
 By substituting this into \erf{Eq::aguidedEOM} and defining asymptotic modes, $\hat{a}^{\inp}(\omega) = \lim_{t_0\rightarrow -\infty} \hat{a}(t_0) e^{i\omega t_0}$, $\hat{a}^{\out}(\omega) = \lim_{t\rightarrow +\infty} \hat{a}(t) e^{i\omega t}$ \cite{fan_input-output_2010}, we obtain the input-output relationship for the guided modes,
 	\begin{align} \label{Eq::aout}
-		\hat{a}^{\out}_\mu (\omega) &= \hat{a}^{\inp}_\mu (\omega) \!-\! 2\pi i\! \sum_{p',f'} 
+		\hat{a}^{\out}_\mu (\omega) &= \hat{a}^{\inp}_\mu (\omega) \!-\! 2\pi i\sum_{b',p'} 
 \sum_{e,g,g'}\!\!\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\mu',e,g'}}{ \Delta_{eg} \!+\! i \Gamma_{e}/2 }\hat{a}^{\inp}_{\mu'}(\omega) \\
 &- 2\pi i\!\sum_{m,p} \sum_{e,g,g'}\! \int^{kn_2}_{-kn_2} d\beta \,\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\nu',e,g'}}{ \Delta_{eg} + i \Gamma_{e}/2 }\hat{a}^{\inp}_{\nu}(\omega),\nn
 	\end{align}
 where $\Delta_{eg} = \omega - \omega_{eg}$. 
 
-This input-output relation contains the phase shift on forward scattered modes as well was attenuation due to elastic scattering into all other modes.
-% The real part of this relationship describes the coherent elastic scattering of photons into the forward scattered guided mode $\mu$, mediated by the atomic state.  The imaginary part describes loss from elastic scattering into all other modes.
-Equation (\ref{Eq::aout}) agrees with the expected form given by the Lippmann-Schwinger equation in the first Born approximation \footnote{In a careful derivation of the Lippman-Schwinger scattering equation, it is not the total Green's function that appears in \erf{Eq::ScatteredField} but rather a related dyadic quantity, $\mbf{K}(\br,\br', \omega_0) = \mbf{G}(\br,\br', \omega_0) + \delta(\br-\br')/n^2(\br)$ \cite{wubs_multiple-scattering_2004}. 
+This input-output relation contains the phase shift on forward scattered modes as well was attenuation due to elastic scattering into all other modes. Equation (\ref{Eq::aout}) agrees with the expected form given by the Lippmann-Schwinger equation in the first Born approximation \footnote{In a careful derivation of the Lippman-Schwinger scattering equation, it is not the total Green's function that appears in \erf{Eq::ScatteredField} but rather a related dyadic quantity, $\mbf{K}(\br,\br', \omega_0) = \mbf{G}(\br,\br', \omega_0) + \delta(\br-\br')/n^2(\br)$ \cite{wubs_multiple-scattering_2004}. 
 This function arises by proper accounting of the scatterer's coupling to the \emph{displacement} rather than the electric field \cite{yao_ultrahigh_2009}.  The distinction becomes important at the source point $\mbf{r} = \mbf{r}'$; however, for lossless dielectrics $n(\mathbf{r})$ is real and ${\rm Im}[\tensor{\mathbf{G}}(\br',\br'; \omega)] = {\rm Im}[\tensor{\mathbf{K}}(\br',\br'; \omega)]$ \cite{yao_-chip_2010}. },
 	\begin{align} \label{Eq::IOScatteredField}
 		\!\!\!\hat{\mathbf{E}}^{(+)}_{\out,g}&(\br, \omega_0)=\hat{\mathbf{E}}^{(+)}_{ \inp, g}(\br, \omega_0)\nn\\
@@ -534,7 +519,6 @@ where the guided-mode dyadic Green's function is given in \erf{Eq::GreensGuided}
 		\poltens = - \frac{1}{\hbar} \sum_{e,g,g'}\ket{g}\frac{\bra{g}\hat{\mathbf{d}}\ket{e}\bra{e} 
 \hat{\mathbf{d}}\ket{g'}}{\Delta_{eg} + i \Gamma_{e}/2 }\bra{g'}.
 	\end{equation}	
-%Scattering of classical waves follows when the field is in a coherent state. Injection of a classical field does not alter the Purcell effect or decay rate (which is tied to the atomic transition frequency) it does scatter into all field modes with the same frequency, thus promoting them from vacuum.  
 For an atom in ground state $\ket{g}$ and polarization $p$, the phase shift can be expressed as \cite{le_kien_propagation_2014}
 	\begin{align} \label{Eq::PhaseShiftMultilevel}
 		\delta  \phi_{p,g} &=2\pi \frac{ \omega_{0}}{v_g} \mathbf{u}^*_{+, p}(\br'_\perp) \cdot {\rm Re}\big[\bra{g} 
@@ -552,19 +536,19 @@ We employ this dispersive response for QND measurement of atoms, as we describe 
 %========= FIGURE: Geometry (coupling strength, magic wavelength, area and detuning) =========%
 \begin{figure}[t]
 \includegraphics[scale=1]{./Figs/Fig_NanofiberSchematic}
-\caption{Quantum interface for spin-polarization coupling of two 1D lattices of cold, trapped atoms and the guided modes of an optical nanofiber. a) Schematic of the interface.  A linearly polarized probe is launched into the nanofiber and the output light is analyzed in a polarimeter.  The atoms (green circles), trapped on the $x$-axis, couple to the evanescent portion of the guided $H$- and $V$-modes.  Cross-sections of the $H$- and $V$-mode intensities in the b) $x$-direction and c) transverse $x$-$y$ plane show the mode anisotropy at the atomic positions. }\label{Fig::Schematic}
+\caption{Quantum interface for spin-polarization coupling of two 1D lattices of cold, trapped atoms and the guided modes of an optical nanofiber. a) Schematic of the interface.  A linearly polarized probe is launched into the nanofiber and the output light is analyzed in a polarimeter.  The atoms (green circles), trapped {\color{blue} in the $x$-$z$ plane}, couple to the evanescent portion of the guided $H$- and $V$-modes.  Cross-sections of the $H$- and $V$-mode intensities in the b) $x$-direction and c) transverse $x$-$y$ plane show the mode anisotropy at the atomic positions. }\label{Fig::Schematic}
 \end{figure}
 %=============================================
 
 The dispersive interface between the atoms and nanofiber guided photons provides the entangling mechanism necessary to perform a QND measurement on the atoms.  
 We restrict here to the quasilinear modes, $p =\{H,V\}$, of a single HE$_{11}$ guided mode at frequency $\omega_0$, whose form is given explicitly in \erf{Eq::QuasilinearModes}.  
 In typical experimental configurations, two one-dimensional arrays of atoms are trapped on either side of the nanofiber, see Fig. \ref{Fig::Schematic}. 
-We define coordinate axes $(x,y,z)$ with $z$ oriented along the fiber axis for forward propagation, and the two chains of atoms lie in the $x$-$z$ plane at $\pm x$-axis at $\phi' = \{0, \pi\}$.
+We define coordinate axes $(x,y,z)$ with $z$ oriented along the fiber axis for forward propagation, and the two chains of atoms lie in the $x$-$z$ plane {\color{blue} at azimuthal angles} $\phi' = \{0, \pi\}$.
 In the evansecent region, the $H$-mode is purely $\mathbf{e}_x$-polarized at $\phi = \pm \pi/2$ and the $V$-mode is purely $\mathbf{e}_y$-polarized at $\phi = \{0,\pi\}$.  
 At other azimuthal angles the electric field is generally rotating along an ellipse.  The atoms trapped along the $x$-axis at $\phi'=0$ experience $H$ and $V$ fields,
 	\begin{align}
-		\mbf{u}_{f,H}(r_\perp, \phi = 0) = & \sqrt{2} \big[ \mathbf{e}_x u_r(r_\perp)+  if \mathbf{e}_z  u_z(r_\perp) \big] \\
-		\mbf{u}_{f,V}(r_\perp, \phi = 0) = & \sqrt{2} \mathbf{e}_y u_\phi(r_\perp), 
+		\mbf{u}_{b,H}(r_\perp, \phi = 0) = & \sqrt{2} \big[ \mathbf{e}_x u_r(r_\perp)+  i b \mathbf{e}_z  u_z(r_\perp) \big] \\
+		\mbf{u}_{b,V}(r_\perp, \phi = 0) = & \sqrt{2} \mathbf{e}_y u_\phi(r_\perp), 
 	\end{align}
 where the real-valued functions $u_\alpha(r_\perp)$, given in \erf{Eq::ProfileFunctions}, depend only on the radial coordinate.  
 On the opposite side of the fiber at $\phi' = \pi$, atoms experience the same transverse electric field, but the $z$-component changes sign.   This broken symmetry has been used to selectively address and separately control the two atomic arrays \cite{mitsch_exploiting_2014, mitsch_quantum_2014, sayrin_storage_2015}.  
@@ -572,24 +556,24 @@ On the opposite side of the fiber at $\phi' = \pi$, atoms experience the same tr
 We consider quasi-monochromatic fields at carrier frequency $\omega_0$ that are sufficiently narrowband, $\Delta \omega \ll \omega_0$. 
 For each guided mode we define input propagating, continuous-mode field operators in the interaction picture \cite{gardiner_input_1985, blow_continuum_1990, le_kien_correlations_2008},
 	\begin{align}
-		\hat{a}_{f,p}(z,t) =\frac{1}{\sqrt{2 \pi}}  \int d \omega \, \hat{a}_{f,p}(\omega) e^{i[ \beta_0 z- (\omega-\omega_0) t ]}, 
+		\hat{a}_{b,p}(z,t) =\frac{1}{\sqrt{2 \pi}}  \int d \omega \, \hat{a}_{b,p}(\omega) e^{i[ \beta_0 z- (\omega-\omega_0) t ]}, 
 	\end{align}
 that satisfy the free-field commutation relations,
 	\begin{equation} \label{Eq::InputOutputCommutation}
-		\big[\hat{a}_{f,p}(z,t),\hat{a}^\dag_{f',p'}(z',t')\big]=\delta_{f,f'}\delta_{p,p'}  \delta(t-t'-(z-z')/v_g).
+		\big[\hat{a}_{b,p}(z,t),\hat{a}^\dag_{b'\!,p'}(z'\!,t')\big]=\delta_{b,b'}\delta_{p,p'}  \delta(t\!-\!t'\!\!-\!(\!z\!-\!z')/v_g).
 	\end{equation}
 In terms of these propagating modes the quantized electric field operator, \erf{Eq::QuantizedElectricField}, becomes
 	\begin{align} \label{Eq::PropagatingElectricField}
 		\hat{\mathbf{E}}^{(+)}(r\!_\perp,\phi,z;t) 
-		=& \sum_{f,p} \sqrt{ \frac{2 \pi \hbar \omega_0}{ v_g} } \big[ \mathbf{u}_{f,p}(r\!_\perp,\phi) \hat{a}_{f,p}(z,t)\nn\\
-		 &+ \mathbf{u}_{f,p}(r\!_\perp,\phi) \hat{a}_{f,p}(z,t) \big] e^{i \beta_0 z},
+		=& \sum_{b,p} \sqrt{ \frac{2 \pi \hbar \omega_0}{ v_g} } \big[ \mathbf{u}_{b,p}(r\!_\perp,\phi) \hat{a}_{b,p}(z,t)\nn\\ 
+		&+ \mathbf{u}_{b,p}(r\!_\perp,\phi) \hat{a}_{b,p}(z,t) \big] e^{i \beta_0 z},
 	\end{align}	
-Considering here only the forward-propagating guided modes $(f=+)$, we  drop the $f$ index.  
+{\color{red} -- Something got messed up here.  Why do we have the mode function repeated.}  Considering here only the forward-propagating guided modes, we  drop the $b$ index.  
 The propagating electric field, \erf{Eq::PropagatingElectricField}, interacts with the trapped atoms via the dispersive light-shift Hamiltonian~\cite{deutsch_quantum_2010,kien_dynamical_2013,baragiola_open_2014},
 	\begin{equation} \label{Eq::LightShiftHam}
 		\hat{H}_{LS} = - \sum_{n=1}^{N_A} \hat{\mathbf{E}}^{(-)}(\mathbf{r}'_n ; t ) \cdot \poltens^{(n)} \cdot \hat{\mathbf{E}}^{(+)}(\mathbf{r}'_n ;t ),
 	\end{equation}
-where $\poltens(\br'_n)$ is the atomic tensor polarizability operator, given in \erf{Eq::PolarizabilityOperator}, for the $n^{th}$ atom trapped near the nanofiber surface at position $\mathbf{r}'_n$.   
+where $\poltens^{(n)}$ is the atomic tensor polarizability operator, given in \erf{Eq::PolarizabilityOperator}, for the $n^{th}$ atom trapped near the nanofiber surface at position $\mathbf{r}'_n$.   
 
 The Lippmann-Schwinger scattering equation, \erf{Eq::IOScatteredField}, follows in the time domain as the evolution of coarse-grained input-ouput modes \cite{gardiner_input_1985, fan_input-output_2010, le_kien_propagation_2014}.  
 The forward-propagating output fields are given by the Fourier transform of \erf{Eq::aout}, yielding \cite{le_kien_correlations_2008} 
@@ -597,7 +581,7 @@ The forward-propagating output fields are given by the Fourier transform of \erf
 		\hat{a}^{\rm out}_{p}(t) = \hat{a}^{\rm in}_{p}&(t) + i  \frac{2\pi \omega_0}{v_g}\sum_{p'}\Big[ N_0  \mathbf{u}^*_p(r'_\perp,0) \cdot \poltens \cdot  \mathbf{u}_{p'}(r'_\perp,0)  \nn\\
 		&+ N_\pi \mathbf{u}^*_p(r'_\perp,\pi) \cdot \poltens \cdot  \mathbf{u}_{p'}(r'_\perp,\pi) \Big] \hat{a}^{\rm in}_{p'}(t),
 	\end{align} 
-where we have neglected effects of retardation over the propagation distance of the nanofiber (for details see \cite{le_kien_correlations_2008, baragiola_open_2014}).  
+where we have neglected effects of retardation over the propagation distance of the nanofiber{\color{blue}, in which case each term in the sum over atoms contributes equally for all atoms} (for details see \cite{le_kien_correlations_2008, baragiola_open_2014}).  
 Here $\{N_0,N_\pi \}$ are the total number of atoms trapped at $\phi' = \{0,\pi\}$. 
 The quantum effects from the first term give rise to shot noise in the transmitted field at the detector.  
 The second term represents that scattering into the guided modes, as described by the dyadic Green's function, \erf{Eq::Gamma1DGreens}.  
@@ -653,7 +637,7 @@ This birefringence was exploited by Dawkins {\em et al.} \cite{dawkins_dispersiv
 	\subsection{Dispersive atom number measurement} \label{Sec::AtomNumberMeasurement}
 
 The anisotropy of the guided modes provides a mechanism for counting the number of atoms trapped around the nanofiber based on polarization spectroscopy.  
-We consider $N_A$ atoms, each in a completely mixed state. In this case the atomic polarizability tensor in \erf{Eq::PolarizabilityIrrep} reduces to $\langle \hat{A}_{ij}(F,F') \rangle = C_{FF'}^{(0)} \delta_{i,j}$, and the collective interaction is determined entirely by the the scalar (rank-0) terms.  
+We consider $N_A$ atoms, each in a completely mixed {\color{blue} hyperfine spin} state. In this case the atomic polarizability tensor in \erf{Eq::PolarizabilityIrrep} reduces to $\langle \hat{A}_{ij}(F,F') \rangle = C_{FF'}^{(0)} \delta_{i,j}$, and the collective interaction is determined entirely by the the scalar (rank-0) terms.  
 With the atoms trapped along the quasi-$H$ axis, the off-diagonal elements in \erf{Eq::GenHamiltonian} vanish, $\expt{ \polcomp_{HV} } = \expt{ \polcomp_{HV} } =0$, while $\expt{ \polcomp_{HH} } \neq  \expt{ \polcomp_{VV} }$.  
 Atoms on either sides of the nanofiber experience the same scalar light shift yielding from  \erf{Eq::GenHamiltonian} the Hamiltonian for QND measurement of atom number,
 	\begin{align}
@@ -851,10 +835,15 @@ The effective non-Hermitian light-shift Hamiltonian that accounts for the imagin
 	\end{equation}
 where $\hat{W}_\pi$ is the Lindbald jump-operator associated with absorption of the probe photon followed by spontaneous emission of a $\pi$-polarized photon~\cite{deutsch_quantum_2010}.  These rates can be expressed in terms of the imaginary part of the polarizability tensor using \erf{Eq::Polarizability},
 	\begin{align}
-		\gamma_F &=\dot{N}_L  \sum_{F'} \sigma (\Delta_{FF'} ) \mathbf{u}^*_\inp(\br'_\perp)\cdot \bra{F,0} \hat{\tensor{\mbf{A}}}(F,F') \ket{F,0}  \cdot \mathbf{u}_\inp(\br'_\perp), \\
-		\gamma_{F \rightarrow \tilde{F}}&=  \dot{N}_L  \sum_{F'} \sigma (\Delta_{FF'}) \big| \mathbf{e}_\pi\cdot \bra{\tilde{F},0} \hat{\tensor{\mbf{A}}}(F,F') \ket{F,0}  \cdot \mathbf{u}_\inp(\br'_\perp) \big|^2 ,
+		\gamma_F &=\dot{N}_L  \sum_{F'} \sigma (\Delta_{FF'} ) \mathbf{u}^*_\inp(\br'_\perp)\cdot \bra{F,0} \hat{\tensor{\mbf{A}}}(F,F') \ket{F,0}  \cdot \mathbf{u}_\inp(\br'_\perp)\nonumber\\
+		&\approx \sum_{F'} \frac{\Gamma\Omega^2}{4\Delta_{FF'}^2}\sum_q \left| o_{JF}^{J'F'}C_{F'q}^{F0;1 q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q , \\
+		\gamma_{F \rightarrow \tilde{F}} %&=  \dot{N}_L  \sum_{F'} \sigma (\Delta_{FF'}) \big| \mathbf{e}_\pi\cdot \bra{\tilde{F},0}  {\color{red} \hat{\tensor{\mbf{A}}}(F,F') } \ket{F,0}  \cdot \mathbf{u}_\inp(\br'_\perp) \big|^2 ,
+		&\approx \sum_{F'} \frac{\Gamma\Omega^2}{4\Delta_{FF'}^2}\sum_q \left| o_{J\tilde{F}}^{J'F'} o_{JF}^{J'F'}C_{F'q}^{\tilde{F}0;1 q}C_{F'q}^{F0;1q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q,
 	\end{align}
-where $ \sigma (\Delta_{FF'} )  = \sigma_0 \Gamma^2/4\Delta^2_{FF'}$ is the the scattering cross section at the probe detuning. When expressed in terms of Pauli operators on the clock-state pseudospin, the map acts as
+where $ \sigma (\Delta_{FF'} )  = \sigma_0 \Gamma^2/4\Delta^2_{FF'}$ is the the scattering cross section at the probe detuning. 
+$ o_{JF}^{J'F'} $ are the relative oscillator strengths, the square of which determine the branching ratios for spontaneous decay rates $ \Gamma_{J'F'\rightarrow JF} $ in the hyperfine multiplets to $\Gamma_{J'\rightarrow J}  $ in the atomic fine structure levels~\cite{deutsch_quantum_2010}. 
+$ C_{F'q}^{F0;1 q}=\Braket{F'q}{F0;1q} $ are the Clebsch-Gordan coefficients determining the clock state transition rates. 
+When expressed in terms of Pauli operators on the clock-state pseudospin, the map acts as
 	\begin{align} \label{Eq::OpticalPumpingMapSchr}
 		\mathcal{D}_n [\hat{\rho}] 
 				=& - \bigg[ \frac{2(\gammau+ \gammad) - \gammauu - \gammadd}{4} \bigg] \hat{\rho} - \frac{ \gammau - \gammad - \gammauu + \gammadd }{4} \big( \hat{\sigma}_3^{(n)} \hat{\rho}+ \hat{\rho} \hat{\sigma}_3^{(n)} \big) \nn \\
@@ -881,7 +870,7 @@ To find the peak squeezing in the presence of optical pumping, we numerically in
 We choose here the magic frequency close to the $ F=4\leftrightarrow F'=4 $ transition, $ \magic{4} $, which is furthest from resonance with both excited hyperfine transitions. 
 Typical time evolution is shown in \frf{Fig::Squeezing_Dynamics} for $2500$ atoms trapped on the \emph{x}-axis at a distance $r'\!_\perp=1.8a$ from the center of the nanofiber. 
 Dimensionless time is scaled to the characteristic scattering rate, $\gamma_s \equiv %\frac{\sigma( \Delta_\eff)}{A_{\rm in}} \dot{N}_L=
-\frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_\eff^2} \dot{N}_L$. 
+\frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_\eff^2} \dot{N}_L=\frac{\Gamma\Omega^2}{4\Delta_{\rm eff}^2}$. 
 We study the dynamics for two choices of quantization axis: (i) along the $x$-axis and (ii) along the numerically determined optimal axis. 
 Figure \ref{Fig::Squeezing_Dynamics}(a) shows the time evolution of the squeezing parameter. 
 Squeezing peaks at 4.7 dB when the clock states are chosen along the optimal axis; $\qangle^{\rm opt} \approx 86^\circ$ in \erf{Eq::QuantizationAxis}. 
@@ -909,11 +898,12 @@ These effects are captured by the depolarization rate $\gamma_{11}$ in the equat
 %The QND squeezing of the conditional variance, $\varz$, competes with two types of decoherence from optical pumping. First, optical pumping leads to decay of the two-body correlations that lie at the heart of spin squeezing.  
 We can gain deeper understanding in the microscopic effects of optical pumping on spin squeezing by looking at the evolution of the one and two-body correlation functions.  In terms of its constituent pseudospins, the collective variance takes the form
 	\begin{align}
-		\varz & = \tilde{N}_A \big( \Delta j_3^{(1)} \big)^2 + \tilde{N}_A(\tilde{N}_A-1) \expt{ \Delta j_3^{(1)} \Delta j_3^{(2)} }
+	\varz & = N_A \big( \Delta j_3^{(1)} \big)^2 + N_A(N_A-1) \expt{ \Delta j_3^{(1)} \Delta j_3^{(2)} }
+	%\varz & = \tilde{N}_A \big( \Delta j_3^{(1)} \big)^2 + \tilde{N}_A(\tilde{N}_A-1) \expt{ \Delta j_3^{(1)} \Delta j_3^{(2)} }
 	\end{align}
-for permutationally symmetric states considered here. Loss of atoms affects the first (single-body) variance term, which scales as $\tilde{N}_A$.
+for permutationally symmetric states considered here. Loss of atoms affects the first (single-body) variance term, which scales as $N_A$.
 %and $ N_A \big( \Delta j_3^{(1)} \big)^2=\NA/4+\expt{\hat{J}_3}^2/N_A $. 
-The two-body correlations which contribute as $\tilde{N}_A^2$ to the collective fluctuations, 
+The two-body correlations which contribute as $N_A^2$ to the collective fluctuations, 
 	\begin{align}
 		\expt{ \Delta j_3^{(1)} \Delta j_3^{(2)} } &\equiv \smallfrac{1}{4} \big( \expt{ \hat{\sigma}_3^{(1)} \otimes \hat{\sigma}_3^{(2)}  } - \expt{\hat{\sigma}_3^{(1)} }^2  \big).
 %		&= \frac{1}{N_A(N_A-1)}\big[ \expt{\hat{J}_3^2}-\frac{N_A-1}{N_A}\expt{\hat{J}_3}^2-\frac{\NA}{4} \big],	
