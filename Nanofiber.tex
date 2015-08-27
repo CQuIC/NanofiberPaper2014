@@ -459,7 +459,7 @@ substituting into \erf{Eq::dsigma}, and making the usual Markov approximation gi
 &\dt{\hat{\sigma}_{ge}} =-i\omega_{eg} 
 \hat{\sigma}_{ge}-\sum_{e'}\frac{\Gamma_{ee'}}{2}\hat{\sigma}_{ge'}  \\
 &+i \sum_{e',g'}\bigg[ (\delta_{e,e'} \hat{\sigma}_{gg'} - \delta_{g,g'} 
-\hat{\sigma}_{e'e})\int_0^{\infty}\!\!\!\!\!\mathrm{d}\omega \bigg\{\sum_{b3,p}  g_{\mu, e',g'} \hat{a}_\mu (t_0) 
+\hat{\sigma}_{e'e})\int_0^{\infty}\!\!\!\!\!\mathrm{d}\omega \bigg\{\sum_{b,p}  g_{\mu, e',g'} \hat{a}_\mu (t_0) 
 +\sum_{m,p}  \int_{-kn_2}^{kn_2}\!\!\!\!\!\mathrm{d}\beta  g_{\nu, e',g'} \hat{a}_\nu(t_0) \bigg\} e^{-i\omega 
 (t-t_0)}\bigg], \nonumber
 \end{align}
@@ -472,7 +472,7 @@ and the small energy shift is absorbed into the transition frequency $\omega_{eg
 Equation (\ref{Eq::TotaleeDecayRate}) captures the modification of the spontaneous emission rate due to the nanofiber.  
 The first sum describes decay into the guided modes and the second into the unguided radiation modes \cite{ nha_cavity_1997,klimov_spontaneous_2004,le_kien_spontaneous_2005,maslov_distribution_2006, scheel_directional_2015}. The decay rate of a given excited state into all guided modes is given by
 	\begin{equation}
-		\Gamma_e^{\oneD}= 2\pi \sum_{f,p,g} |g_{\mu,e,g} |^2_{\omega = \omega_{eg}} =  \frac{ 2\pi }{\hbar} \frac{ \omega_{eg} }{v_g} \sum_{b,p,g} \big|\bra{e}\hat{\mathbf{d}}\ket{g} \cdot \mathbf{u}_{fp}(\br'_\perp)\big|^2  .
+		\Gamma_e^{\oneD}= 2\pi \sum_{b,p,g} |g_{\mu,e,g} |^2_{\omega = \omega_{eg}} =  \frac{ 2\pi }{\hbar} \frac{ \omega_{eg} }{v_g} \sum_{b,p,g} \big|\bra{e}\hat{\mathbf{d}}\ket{g} \cdot \mathbf{u}_{bp}(\br'_\perp)\big|^2  .
 	\end{equation}
 This is in agreement with the expected expression from the guided-mode contribution to the dyadic Green's function in \erf{Eq::ImGreenLocal},
 	\begin{equation} \label{Eq::Gamma1DGreens}
