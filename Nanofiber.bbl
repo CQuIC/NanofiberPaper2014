@@ -308,17 +308,17 @@ Roy~J. Glauber and M.~Lewenstein.
 \newblock Quantum optics of dielectric media.
 \newblock {\em Phys. Rev. A}, 43(1):467--491, January 1991.
 
-\bibitem{le_kien_anisotropy_2014}
-Fam Le~Kien and A.~Rauschenbeutel.
-\newblock Anisotropy in scattering of light from an atom into the guided modes
-  of a nanofiber.
-\newblock {\em Phys. Rev. A}, 90(2):023805, August 2014.
-
 \bibitem{kien_field_2004}
 Fam~Le Kien, J.~Q. Liang, K.~Hakuta, and V.~I. Balykin.
 \newblock Field intensity distributions and polarization orientations in a
   vacuum-clad subwavelength-diameter optical fiber.
 \newblock {\em Optics Communications}, 242(4–6):445--455, December 2004.
+
+\bibitem{le_kien_anisotropy_2014}
+Fam Le~Kien and A.~Rauschenbeutel.
+\newblock Anisotropy in scattering of light from an atom into the guided modes
+  of a nanofiber.
+\newblock {\em Phys. Rev. A}, 90(2):023805, August 2014.
 
 \bibitem{snyder_optical_1983}
 Allan Snyder and John Love.
