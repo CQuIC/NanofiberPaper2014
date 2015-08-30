@@ -153,7 +153,7 @@
 \newcommand{\qangle}{\phi_\pi}
 \newcommand{\magic}[1]{\omega_{#1}^m}
 \newcommand{\chiN}{\chi_{N}}
-\newcommand{\NA}{\tilde{N}_A}
+\newcommand{\NA}{N_C}
 \newcommand{\chieff}{\chi_{\raisebox{-.1pt}{\tiny $J_3$}}}
 
 %==== scattering and optical pumping rates ====%
@@ -201,7 +201,7 @@
 
 %================================================================%
 \begin{abstract}
-We study the strong coupling between photons and atoms that can be achieved in the dispersive regime {\color{blue} of atoms interacting with photons in optical nanofiber geometry.}  While the Purcell enhancement factor for spontaneous emission into the guided mode does not reach the strong-coupling regime for individual atoms, strong cooperativity for ensembles of a few thousand atoms can be achieved due to the tight confinement of the guided modes and constructive interference over the entire chain of trapped atoms. We calculate the dyadic Green's function, which determines the scattering of light by atoms in the presence of the fiber, and thus the phase shift and polarization rotation induced on the guided light by the trapped atoms.  The Green's function is related to a full Heisenberg-Langevin treatment of the dispersive response of the quantized field to tensor polarizable atoms.  We apply our formalism to the study of quantum nondemolition (QND) measurement of the atoms via polarimetry.  We calculate the shot-noise-limited detection of atom number for atoms in a completely mixed state and the squeezing of projection noise on the atomic clock transition.  Compared with squeezing of atomic ensembles in free space, we capitalize on unique features that arise in the nanofiber geometry, including anisotropy of the intensity and polarization of the guided modes.  We use a first principles stochastic master equation to model the squeezing as function of time in the presence of decoherence due optical pumping.  We find a peak metrological squeezing of $\sim 5$ dB is achievable with current technology for $\sim 2500$ atoms trapped 180 nm from the surface of a nanofiber with radius 225 nm.  
+We study {\color{blue} the dispersive regime of strong coupling between photons and atoms that can be achieved in an optical nanofiber geometry.}  While the Purcell enhancement factor for spontaneous emission into the guided mode does not reach the strong-coupling regime for individual atoms, strong cooperativity for ensembles of a few thousand atoms can be achieved due to the tight confinement of the guided modes and constructive interference over the entire chain of trapped atoms. We calculate the dyadic Green's function, which determines the scattering of light by atoms in the presence of the fiber, and thus the phase shift and polarization rotation induced on the guided light by the trapped atoms.  The Green's function is related to a full Heisenberg-Langevin treatment of the dispersive response of the quantized field to tensor polarizable atoms.  We apply our formalism to the study of quantum nondemolition (QND) measurement of the atoms via polarimetry.  We calculate the shot-noise-limited detection of atom number for atoms in a completely mixed state and the squeezing of projection noise on the atomic clock transition.  Compared with squeezing of atomic ensembles in free space, we capitalize on unique features that arise in the nanofiber geometry, including anisotropy of the intensity and polarization of the guided modes.  We use a first principles stochastic master equation to model the squeezing as function of time in the presence of decoherence due optical pumping.  We find a peak metrological squeezing of $\sim 5$ dB is achievable with current technology for $\sim 2500$ atoms trapped 180 nm from the surface of a nanofiber with radius 225 nm.  
 \end{abstract}
 
 \maketitle
@@ -211,7 +211,7 @@ We study the strong coupling between photons and atoms that can be achieved in t
 
 Strong coupling between atoms and photons is at the heart of many quantum information processing protocols including efficient generation of remote entanglement \cite{duan_long-distance_2001, julsgaard_experimental_2001}, quantum data storage and retrieval \cite{ eisaman_electromagnetically_2005}, and QND measurements \cite{eckert_quantum_2008}.  
 From the most general perspective, strong coupling arises when atoms radiate predominantly into the electromagnetic field mode that defines the quantum atom-light interface.  
-For an individual atom, strong coupling regime is attained via the Purcell effect, whereby the boundary conditions of nearby dielectrics and/or conductors enhance radiation into a desired mode relative to all other modes.  
+For an individual atom, the strong coupling regime is attained via the Purcell effect, whereby the boundary conditions of nearby dielectrics and/or conductors enhance radiation into a desired mode relative to all other modes.  
 This can be achieved with Fabry-Perot cavities (cavity QED) \cite{miller_trapped_2005} and/or via nanophotonic structures engineered such that the radiation is predominantly into a specified mode \cite{manga_rao_single_2007, hakuta_manipulating_2012, hung_trapped_2013}.  The Purcell enhancement factors for emission into a guided or cavity mode scale respectively as  $ \Gamma_{\oneD}/\Gamma_{\vac} \sim \sigma_0/A$ and  $\Gamma_{\cav}/\Gamma_{\vac} \sim   Q \lambda^3/V \sim \mathcal{F}  \sigma_0/A$.  Here $\Gamma_{\vac}$ is the free space spontaneous emission rate, $\sigma_0 \propto \lambda^2$ is the resonant absorption cross section, $Q$, $V$, and $\mathcal{F}$,  are the cavity quality factor, volume, and finesse respectively, and $A$ is the effective area of the cavity or guided mode that couples to the atom.  The strongest coupling occurs on resonance, and thus much effort has been devoted to developing the largest possible $\Gamma_{\cav}$ and $\Gamma_{\oneD}$ through ultra-high-$Q$, small-volume resonators \cite{raimond_manipulating_2001, wallraff_strong_2004, miller_trapped_2005} and through nanophotonic plasmonic \cite{dzsotjan_quantum_2010, tame_quantum_2013}, metamaterial \cite{yao_ultrahigh_2009}, and dielectric \cite{hung_trapped_2013, goban_atomlight_2014} waveguides.   
 
 In free space, where there is no Purcell enhancement, strong coupling can be achieved via the {\em cooperativity} of atomic ensembles.  
@@ -228,29 +228,28 @@ Such strong cooperativity in free space has been employed in a variety of applic
 
 A particular system that combines the elements above consists of cold atoms trapped in the evanescent field of the guided mode of a tapered optical nanofiber with a subwavelength diameter \cite{vetsch_optical_2010, lacroute_state-insensitive_2012, balykin_quantum_2014} (see \frf{Fig::ModeMatching}).  
 While the nanofiber, with a typical OD/atom $\sigma_0/A \sim  10^{-2}$ is boosted by orders of magnitude over free space for paraxial beams, one cannot reach the strong coupling regime where $\Gamma_{\oneD}$ is on the order of $\Gamma_{\vac}$ as is possible in some engineered nanophotonic waveguides, such as those arising in photonic crystals \cite{hung_trapped_2013}, where atoms can be trapped at positions of peak intensity of the field.  
-One can, however, achieve strong cooperativity in the dispersive regime with a moderately sized ensemble.  When compared to free space, all light scattered into the guided mode is automatically mode matched, and thus, given the large ratio $\sigma_0/A$, one can achieve high OD with only a few thousand atoms (see \frf{Fig::ModeMatching}).  
+One can, however, achieve strong cooperativity in the dispersive regime with a moderately sized ensemble.  When compared to free space, all light scattered into the guided mode is automatically mode matched, and thus, given the {\color{blue} relatively large ratio of} $\sigma_0/A$, one can achieve high OD with only a few thousand atoms (see \frf{Fig::ModeMatching}).  
 Such strong cooperativity opens the door to new regimes to create non-Gaussian quantum states of the ensemble \cite{dubost_efficient_2012} and potentially to implement nonlinear optics at the level of a few photons \cite{spillane_observation_2008, pittman_ultralow-power_2013, oshea_fiber-optical_2013}.
 
 
-
 One-dimensional optical lattices in nanofibers based on multiple co- and counter-propagating trapping beams have been loaded with up to several thousand alkali atoms \cite{vetsch_optical_2010, lacroute_state-insensitive_2012}.
-Probe light launched into the guided modes exhibits low loss through the adiabatic taper \cite{hoffman_ultrahigh_2014} yielding significant intensity at the trapped atoms.
+% Probe light launched into the guided modes exhibits low loss through the adiabatic taper \cite{hoffman_ultrahigh_2014} yielding significant intensity at the trapped atoms.
 This has proved a fruitful platform for quantum information processing.  
 The anisotropic nature of the strong atom-light coupling has been exploited for control of internal atomic states \cite{mitsch_exploiting_2014}, enhanced coupling into a preferred propagation direction \cite{petersen_chiral_2014, mitsch_quantum_2014}, and optical switching \cite{oshea_fiber-optical_2013}. 
 Off resonance, dispersive coupling has allowed for non-destructive atom counting \cite{dawkins_dispersive_2011, beguin_generation_2014} 
 and storage of fiber-guided light \cite{gouraud_demonstration_2015, sayrin_storage_2015}.
 Recent demonstrations of photonic crystal cavities fabricated on the nanofiber \cite{wuttke_nanofiber_2012, nayak_optical_2014, schell_highly_2015} promise further enhanced atom-light coupling.
 
-In this paper we study the quantum atom-light interface in the dispersive regime {\color{blue}  for an optical nanofiber geometry.}  We focus here on the coupling between atomic spin and light polarization induced by the elastic scattering of photons by tensor-polarizable cesium atoms trapped near the surface of the nanofiber.  This provides an entangling interaction {\color{blue} that can be employed to generate} spin squeezing via QND measurement.  Our analysis unifies a variety of different approaches found in the literature, including direct calculation of the dyadic Greens function for photon scattering \cite{sakoda_optical_1996, dung_spontaneous_2000, sondergaard_general_2001, klimov_spontaneous_2004, wubs_multiple-scattering_2004, fussell_decay_2005, manga_rao_single_2007, dzsotjan_quantum_2010} and the input-output formalism studied for one-dimensional field theories based on Heisenberg-Langevin equations \cite{gardiner_input_1985, blow_continuum_1990, shen_coherent_2005, le_kien_spontaneous_2005, le_kien_correlations_2008, fan_input-output_2010}.
+In this paper we study the quantum atom-light interface in the dispersive regime {\color{blue} for an optical nanofiber geometry.}  We focus here on the coupling between the atomic spin and light polarization induced by the elastic scattering of photons by tensor-polarizable cesium atoms trapped near the surface of the nanofiber.  This provides an entangling interaction {\color{blue} that can be employed to generate} spin squeezing via QND measurement.  Our analysis unifies a variety of different approaches found in the literature, including direct calculation of the dyadic Green's function for photon scattering \cite{sakoda_optical_1996, dung_spontaneous_2000, sondergaard_general_2001, klimov_spontaneous_2004, wubs_multiple-scattering_2004, fussell_decay_2005, manga_rao_single_2007, dzsotjan_quantum_2010} and the input-output formalism studied for one-dimensional field theories based on Heisenberg-Langevin equations \cite{gardiner_input_1985, blow_continuum_1990, shen_coherent_2005, le_kien_spontaneous_2005, le_kien_correlations_2008, fan_input-output_2010}.
 
 The remainder of this article is organized as follows.  
 In \srf{Sec::GreensFunction} we solve for the mode decomposition of the dyadic Green's function which determines the electric field scattered by a point dipole near the surface of the nanofiber.  
 This allows us to calculate the phase shift and polarization transformation for fiber-guided photons induced by tensor-polarizable atoms in the dispersive regime.  
 We connect this with a fully quantum mechanical treatment based on a Heisenberg-Langevin picture in \srf{Sec::HeisenbergLangevin}.  
-The developed formalism is used in \srf{Sec::QNDMeasurement} to study QND measurement of atoms based on polarization spectroscopy. 
+The formalism we develop is used in \srf{Sec::QNDMeasurement} to study QND measurement of atoms based on polarization spectroscopy. 
 We consider shot-noise-limited atom detection as well as measurement-backaction-induced squeezing of spin projection noise.  
 We study squeezing of the collective pseudospin associated with ensembles of atoms in the atomic clock state and calculate its dynamics based on a first principles stochastic master equation that includes both the effects of QND measurement as well as decoherence due to optical pumping.  
-Conclusions and an outlook for future research are summarized in \srf{Sec::Conclusion}.  
+We conclude with a summary and outlook for future research in \srf{Sec::Conclusion}.  
 
 
 %========GREEN'S FUNCTION AND INPUT/OUTPUT RESPONSE=========%
@@ -258,7 +257,7 @@ Conclusions and an outlook for future research are summarized in \srf{Sec::Concl
 
 Given a point particle with tensor polarizability $\tensor{\boldsymbol{\alpha}}$ at position $\br'$ near the surface of a nanofiber, the field  at frequency $\omega_0$ is given by the solution to the wave equation, 
 	\begin{align}\label{Eq::WaveEquationSource}
-		\left[ - \nabla \times\nabla \times + \, n^2(\br)k_0^2 \right] \mathbf{E}(\br) &= -4\pi  k_0^2 \delta^{(3)}(\br-\br')\,  \tensor{\boldsymbol{\alpha}}\cdot \mathbf{E}(\br),
+		\left[ - \nabla\times\nabla\times + \, n^2(\br)k_0^2 \right] \mathbf{E}(\br) &= -4\pi  k_0^2 \delta^{(3)}(\br-\br')\,  \tensor{\boldsymbol{\alpha}}\cdot \mathbf{E}(\br),
 	\end{align}
 where $k_0=\omega_0/c$ and $n(\mbf{r})$ is the spatially varying index of refraction that describes the fiber; Gaussian-cgs units are used throughout.  
 For an asymptotic input field $\mathbf{E}_{\inp}(\br)$, the scattering solution to \erf{Eq::WaveEquationSource} is given by the Lippmann-Schwinger equation \cite{wubs_multiple-scattering_2004},
@@ -276,7 +275,7 @@ k_0^2 \delta^{(3)}(\mathbf{r}-\mathbf{r}') \unittens,
 where $\unittens$ is the unit tensor.   
 
 The solution for the Green's function $\tensor{\mathbf{G}}(\br ,\br' ; \omega_0)$, following from Maxwell's equations,  
-has been studied previously \cite{sakoda_optical_1996,sondergaard_general_2001,wubs_multiple-scattering_2004}.  As we are interested here in the forward-scattered components that lead to phase shifts and polarization transformations, we directly calculate $\tensor{\mathbf{G}}(\br ,\br' ; \omega_0)$ through a decomposition into normal modes.  A complete set of eigenmodes in the presence of lossless, anisotropic dielectric are defined according to the procedure of Glauber and Lewenstein~\cite{glauber_quantum_1991}.  We seek the eigenmodes $\eigenf(\mathbf{r})$, indexed by $\eta$, that satisfy the homogeneous wave equation in the absence of sources, i.e., \erf{Eq::WaveEquationSource} for $\tensor{\boldsymbol{\alpha}} = 0$.  To do so, one defines functions $\eigeng(\mbf{r}) \equiv n(\br) \eigenf(\mbf{r})$ that form a complete basis, as they are eigenfunctions of the Hermitian operator, $\mathcal{H}(k_0) = -\frac{1}{n(\br)} \nabla\times\nabla\times \frac{1}{n(\br)} + k_0^2$, according to $\mathcal{H}(k_0)  \eigeng(\mbf{r}) = \lambda_\eta \eigeng(\mbf{r})$. The eigenvalue, {\color{blue} $\lambda_\eta= (\omega_0^2-\omega_\eta^2)/c^2$}, determines the wavenumber for a given mode {\color{blue} at frequency $\omega_\eta$}.  We are interested specifically in the transverse functions, $\nabla \cdot \eigeng(\br) = 0$, with eigenvalues $\lambda_n \neq 0$.  These fall into two categories, guided {\color{blue} ($\eta = \mu$)} and unguided {\color{blue} ($\eta = \nu$)} modes, which {\color{blue} together} form a complete, orthonormal set for transverse vector functions,
+has been studied previously \cite{sakoda_optical_1996,sondergaard_general_2001,wubs_multiple-scattering_2004}.  As we are interested here in the forward-scattered components that lead to phase shifts and polarization transformations, we directly calculate $\tensor{\mathbf{G}}(\br ,\br' ; \omega_0)$ through a decomposition into normal modes.  A complete set of eigenmodes in the presence of lossless, anisotropic dielectric are defined according to the procedure of Glauber and Lewenstein~\cite{glauber_quantum_1991}.  We seek the eigenmodes $\eigenf(\mathbf{r})$, indexed by $\eta$, that satisfy the homogeneous wave equation in the absence of sources, i.e., \erf{Eq::WaveEquationSource} for $\tensor{\boldsymbol{\alpha}} = 0$.  To do so, one defines functions $\eigeng(\mbf{r}) \equiv n(\br) \eigenf(\mbf{r})$ that form a complete basis, as they are eigenfunctions of the Hermitian operator, $\mathcal{H}(k_0) = -\frac{1}{n(\br)} \nabla\times\nabla\times \frac{1}{n(\br)} + k_0^2$, according to $\mathcal{H}(k_0)  \eigeng(\mbf{r}) = \lambda_\eta \eigeng(\mbf{r})$. The eigenvalue, {\color{blue} $\lambda_\eta= (\omega_0^2-\omega_\eta^2)/c^2$}, determines the wavenumber for a given mode {\color{blue} at frequency $\omega_\eta$}.  We are interested specifically in the transverse functions, $\nabla\cdot \eigeng(\br) = 0$, with eigenvalues $\lambda_n \neq 0$.  These fall into two categories, guided {\color{blue} ($\eta = \mu$)} and unguided {\color{blue} ($\eta = \nu$)} modes, which {\color{blue} together} form a complete, orthonormal set for transverse vector functions,
 	\begin{align}
 	\int \mathrm{d}^3\br \, \eigeng^*(\mbf{r}) \cdot \eigengp(\mbf{r})  = \int \mathrm{d}^3\br \, n^2(\br) \eigenf^* (\br)\cdot  \eigenfp(\br) =\delta_{\eta, \eta'},\label{Eq::Orthogonality}\\
 	 \sum_\eta \mathbf{g}_\eta(\br) \mathbf{g}_\eta^*(\br') =  \sum_\mu \mathbf{g}_\mu(\br) \mathbf{g}_\mu^*(\br')  + \sum_\nu \mathbf{g}_\nu(\br) \mathbf{g}_\nu^*(\br')  =\delta^{(T)}(\br-\br')  \unittens, \label{Eq::Completeness}
@@ -295,7 +294,7 @@ We treat an optical nanofiber of radius $a$ as having step-index profile,
 						 n_2 & \quad r > a 
 		\end{array},
 	\end{align}
-for a silica core ($n_1 = 1.4469$)~\cite{kien_field_2004} and infinite vacuum cladding ($n_2 = 1$).  For a cylindrically symmetric dielectric the guided modes are {\color{blue}  $\mathbf{f}_\mu (\br) = \mathbf{u}_\mu (\br_\perp) e^{i\beta z}/\sqrt{2 \pi}$}, with indices $\mu=\{j, \beta , p\}$ for the guided mode $j^{th}$ with propagation constant $\beta$ {\color{blue} at frequency $\omega_\mu=\omega(\beta)$} and polarization $p$.  The transverse mode functions are normalized according to $\int d^2 \mbf{r}_\perp \, n^2(r_\perp)\mathbf{u}^*_\mu (\br_\perp) \cdot \mathbf{u}_{\mu'} (\br_\perp)\big|_{\beta = \beta'} = \delta_{j,j'}\delta_{p,p'}$ and have units $1/\sqrt{A}$ \cite{le_kien_anisotropy_2014}.  Two convenient guided-mode bases are the quasilinear and quasicircular polarization modes, given in  Appendix \ref{Appendix::ModeFunctions} \cite{kien_field_2004}.  
+for a silica core ($n_1 = 1.4469$)~\cite{kien_field_2004} and infinite vacuum cladding ($n_2 = 1$).  For a cylindrically symmetric dielectric the guided modes are {\color{blue}  $\mathbf{f}_\mu (\br) = \mathbf{u}_\mu (\br_\perp) e^{i\beta z}/\sqrt{2 \pi}$}, with indices $\mu=\{j, \beta , p\}$ for the $j^{th}$ guided mode with propagation constant $\beta$ {\color{blue} at frequency $\omega_\mu=\omega(\beta)$} and polarization $p$.  The transverse mode functions are normalized according to $\int d^2 \mbf{r}_\perp \, n^2(r_\perp)\mathbf{u}^*_\mu (\br_\perp) \cdot \mathbf{u}_{\mu'} (\br_\perp)\big|_{\beta = \beta'} = \delta_{j,j'}\delta_{p,p'}$ and have units $1/\sqrt{A}$ \cite{le_kien_anisotropy_2014}.  Two convenient guided-mode bases are the quasilinear and quasicircular polarization modes, given in  Appendix \ref{Appendix::ModeFunctions} \cite{kien_field_2004}.  
 
 We consider nanofibers that support only the lowest HE$_{11}$ guided modes at the relevant frequency $\omega_0$ \cite{snyder_optical_1983}, and thus we drop the mode index $j$.  In this case there are four guided modes: two polarizations $p$, each with propagation constant (longitudinal wavenumber) $\beta(\omega_0) = \pm\beta_0$ corresponding to forward and backward propagation.  The guided-mode contribution to the dyadic Greens function is then 
 	\begin{equation} \label{Eq::GreensEigenmodes}
@@ -336,12 +335,12 @@ Only the positive-frequency component contributes to the $\delta$-function, and 
 The energy level shift of the scatterer due to its proximity to the dielectric is found from the real part of the Green's function at $\br = \br'$. 
 To find the total modified spontaneous emission rate and energy level shift one must include the unguided radiation modes \cite{le_kien_spontaneous_2005} or employ other representations of the Green's function \cite{klimov_spontaneous_2004}.  
 
-Equation (\ref{Eq::GreensGuided}) is the central result from which we can calculate the dispersive response.  Consider a forward-propagating \comment{($b=+$)} input field in the guided modes with frequency $\omega_0$, positive-frequency amplitude $\Eamp$, and arbitrary polarization, $\mathbf{E}^{(+)}_{\inp}(\br) = \Eamp  \mathbf{u}_{\rm in}(\br_\perp) e^{i \beta_0 z}$.   
+Equation (\ref{Eq::GreensGuided}) is the central result from which we can calculate the dispersive response.  Consider a forward-propagating {\color{blue} ($b=+1$)} input field in the guided modes with frequency $\omega_0$, positive-frequency amplitude $\Eamp$, and arbitrary polarization, $\mathbf{E}^{(+)}_{\inp}(\br) = \Eamp  \mathbf{u}_{\rm in}(\br_\perp) e^{i \beta_0 z}$.   
 The effective mode area at the atom's position is determined from the total cycle-averaged power transported along the nanofiber, $P_{{\rm in},z} = (v_g/2\pi) \int d^2\br \, n^2(r_\perp) |\mathbf{E}^{(+)}_{\inp}(\br) |^2$, and the intensity at the atom, $I_{\rm in}(\mathbf{r}') = (c/2\pi) |\mathbf{E}^{(+)}_{\inp}(\br') |^2$, via the relation \cite{domokos_quantum_2002},
  	\begin{align} \label{Eq::AreaIn}
  		A_{\rm in} \equiv \frac{P_{{\rm in}}}{I_{\rm in}(\mathbf{r}')} = \frac{1}{n_g |\mathbf{u}_{\rm in}(\mathbf{r}'_\perp)|^{2}},
 	\end{align}
-where \comment{$n_g\equiv \mathrm{d}\beta/\mathrm{d}k = c/v_g$} is the group index of refraction.  
+where \comment{$n_g\equiv c \; \mathrm{d}\beta/\mathrm{d}k = c/v_g$} is the group index of refraction.  
 Tight confinement of the guided modes in the nanofiber results in significant intensity in the evanescent field near the nanofiber for relatively small input power \cite{bures_power_1999}.  
 
 Substitution of the guided-mode Green's function, \erf{Eq::GreensGuided}, into the Lippman-Schwinger equation, \erf{Eq::ScatteredField}, yields the transmitted (forward-scattered) and reflected (backward-scattered) output fields, $\mathbf{E}_{\out}(\br) = \Eamp \big[ \mathbf{u}_{\trans, \out} (\br_\perp) e^{i \beta_0 z} + \mathbf{u}_{\refl,\out} (\br_\perp) e^{-i \beta_0 z} \big]$, 
@@ -368,7 +367,7 @@ Here, the $\{p,p'\}$-element of the tensor polarizability is given by, $\alpha_{
 The phase shift per atom, \erf{Eq::PhaseShift}, is modified over free space in two ways, both of which are captured by the effective mode area $A_{\rm in}$. 
 First, although material dispersion in an optical fiber is negligible over the distances we consider, an atom coupling to a tightly confined guided mode can lead to additional waveguide dispersion and a significant reduction in the group velocity.  
 Such ``slow light" enhances the atom-photon coupling strength. 
-In the nanofiber geometry this effect is moderate -- \comment{the group index $n_g \approx 1.40$}. 
+In the nanofiber geometry this effect is moderate -- \comment{the group index $n_g \approx 1.40$~\cite{?}}. 
 Second and more importantly, the tight spatial confinement as measured by OD/atom significantly increases the coupling strength over free space for every atom along the nanofiber, which yields strong cooperativity.
 In contrast, diffraction restricts the collective phase shift for an ensemble of atoms in free space~\cite{tanji-suzuki_chapter_2011, baragiola_three-dimensional_2014}.  
 For a Gaussian beam with beam waist $w_0$, the total phase shift induced by a collection of polarizable atoms will be $\delta \phi = N_{\eff} 2 \pi k_0 {\rm Re}({\alpha})/A$, where $A = \pi w^2_0/2$ is the beam area at the focus and $N_{\eff}$ is the effective number of atoms that radiate into this mode.  
@@ -414,7 +413,7 @@ where the free-field Hamiltonian decomposes into guided and unguided modes,
 +\sum_{m,p} \int \mathrm{d}\omega  \int_{-k n_2}^{k n_2} \mathrm{d}\beta \, \hbar \omega 
 \hat{a}^\dagger_\nu \hat{a}_\nu.
 	\end{equation}
-We consider here alkali atoms with hyperfine multiplets of ground and excited levels, $\{ \ket{g}=\ket{nS_{1/2}, f, m_f}\}$, $\{ \ket{e} =\ket{nP_{j'}, f', m_{f'}}\}$, so the free atomic Hamiltonian reads,
+We consider here alkali atoms with ground and excited levels, $\{ \ket{g}=\ket{nS_{1/2}, f, m_f}\}$, $\{ \ket{e} =\ket{nP_{j'}, f', m_{f'}}\}$, {\color{blue} where $\ket{f, m_f}$ denotes the hyperfine sublevels,  and express the free atomic Hamiltonian as}
 	\begin{equation}
 		\hat{H}_A  = \sum_g E_g \hat{\sigma}_{gg} + \sum_e E_e \hat{\sigma}_{ee},
 	\end{equation}
@@ -535,7 +534,7 @@ We restrict here to the quasilinear modes, $p =\{H,V\}$, of a single HE$_{11}$ g
 In typical experimental configurations, two one-dimensional arrays of atoms are trapped on either side of the nanofiber, see Fig. \ref{Fig::Schematic}. 
 We define coordinate axes $(x,y,z)$ with $z$ oriented along the fiber axis for forward propagation, and the two chains of atoms lie in the $x$-$z$ plane {\color{blue} at azimuthal angles} $\phi' = \{0, \pi\}$.
 In the evansecent region, the $H$-mode is purely $\mathbf{e}_x$-polarized at $\phi = \pm \pi/2$ and the $V$-mode is purely $\mathbf{e}_y$-polarized at $\phi = \{0,\pi\}$.  
-At other azimuthal angles the electric field is generally rotating along an ellipse.  The atoms trapped along the $x$-axis at $\phi'=0$ experience $H$ and $V$ fields,
+At other azimuthal angles the electric field is generally rotating along an ellipse {\color{blue} in the $x$-$z$ plane}.  The atoms trapped along the $x$-axis at $\phi'=0$ experience $H$ and $V$ fields,
 	\begin{align}
 		\mbf{u}_{b,H}(r_\perp, \phi = 0) = & \sqrt{2} \big[ \mathbf{e}_x u_r(r_\perp)+  i b \mathbf{e}_z  u_z(r_\perp) \big] \\
 		\mbf{u}_{b,V}(r_\perp, \phi = 0) = & \sqrt{2} \mathbf{e}_y u_\phi(r_\perp), 
@@ -546,7 +545,7 @@ On the opposite side of the fiber at $\phi' = \pi$, atoms experience the same tr
 We consider quasi-monochromatic fields at carrier frequency $\omega_0$ that are sufficiently narrowband, $\Delta \omega \ll \omega_0$. 
 For each guided mode we define input propagating, continuous-mode field operators in the interaction picture \cite{gardiner_input_1985, blow_continuum_1990, le_kien_correlations_2008},
 	\begin{align}
-		\hat{a}_{b,p}(z,t) =\frac{1}{\sqrt{2 \pi}}  \int d \omega \, \hat{a}_{b,p}(\omega) e^{i[ \beta_0 z- (\omega-\omega_0) t ]}, 
+		\hat{a}_{b,p}(z,t) =\frac{1}{\sqrt{2 \pi}}  \int d \omega \, \hat{a}_{b,p}(\omega) e^{i[b \beta_0 z- (\omega-\omega_0) t ]}, 
 	\end{align}
 that satisfy the free-field commutation relations,
 	\begin{equation} \label{Eq::InputOutputCommutation}
@@ -554,14 +553,14 @@ that satisfy the free-field commutation relations,
 	\end{equation}
 In terms of these propagating modes the quantized electric field operator, \erf{Eq::QuantizedElectricField}, becomes
 	\begin{equation} \label{Eq::PropagatingElectricField}
-		\hat{\mathbf{E}}^{(+)}(r\!_\perp,\phi,z;t) = \sum_{b,p} \sqrt{ \frac{2 \pi \hbar \omega_0}{ v_g} } \big[ \mathbf{u}_{b,p}(r\!_\perp,\phi) \hat{a}_{b,p}(z,t) + \mathbf{u}_{b,p}(r\!_\perp,\phi) \hat{a}_{b,p}(z,t) \big] e^{i \beta_0 z},
+		\hat{\mathbf{E}}^{(+)}(r\!_\perp,\phi,z;t) = \sum_{b,p} \sqrt{ \frac{2 \pi \hbar \omega_0}{ v_g} } \mathbf{u}_{b,p}(r\!_\perp,\phi) \hat{a}_{b,p}(z,t)  e^{i b \beta_0 z},
 	\end{equation}	
 {\color{red} -- Something got messed up here.  Why do we have the mode function repeated.}  Considering here only the forward-propagating guided modes, we  drop the $b$ index.  
 The propagating electric field, \erf{Eq::PropagatingElectricField}, interacts with the trapped atoms via the dispersive light-shift Hamiltonian~\cite{deutsch_quantum_2010,kien_dynamical_2013,baragiola_open_2014},
 	\begin{equation} \label{Eq::LightShiftHam}
 		\hat{H}_{LS} = - \sum_{n=1}^{N_A} \hat{\mathbf{E}}^{(-)}(\mathbf{r}'_n ; t ) \cdot \poltens^{(n)} \cdot \hat{\mathbf{E}}^{(+)}(\mathbf{r}'_n ;t ),
 	\end{equation}
-where $\poltens^{(n)}$ is the atomic tensor polarizability operator, given in \erf{Eq::PolarizabilityOperator}, for the $n^{th}$ atom trapped near the nanofiber surface at position $\mathbf{r}'_n$.   
+where $\poltens^{(n)}$ is the atomic tensor polarizability operator, given in \erf{Eq::PolarizabilityOperator}, for the $n^{th}$ atom trapped near the nanofiber surface at position $\mathbf{r}'_n$.   {\color{blue}  Note, we ignore here any effects of atoms motion, and treat the atoms as localized at fixed positions in space.}
 
 The Lippmann-Schwinger scattering equation, \erf{Eq::IOScatteredField}, follows in the time domain as the evolution of coarse-grained input-ouput modes \cite{gardiner_input_1985, fan_input-output_2010, le_kien_propagation_2014}.  
 The forward-propagating output fields are given by the Fourier transform of \erf{Eq::aout}, yielding \cite{le_kien_correlations_2008} 
@@ -604,7 +603,7 @@ where the operator $\hat{\tensor{\mbf{A}}}(f,f') = \sum_{i,j} \hat{A}_{ij}(f,f')
 	\begin{align} \label{Eq::PolarizabilityIrrep}
 		\hat{A}_{ij}(f,f')&=  C_{ff'}^{(0)} \delta_{i,j}+ iC_{ff'}^{(1)}\epsilon_{ijk}\hat{f}_k+ C_{ff'}^{(2)} \Big[ \smallfrac{1}{2} ( \hat{f}_i\hat{f}_j +\hat{f}_j\hat{f}_i )-\smallfrac{1}{3} \hat{\mathbf{f}}\!\cdot\!\hat{\mathbf{f}} \delta_{i,j} \Big]. 
 \end{align}
-Here, $\charpol = -\frac{\sigma_0}{4\pi k_0}\frac{\Gamma/2 }{\Delta_{ff'}}$ is the characteristic dynamic polarizability where $\sigma_0 = 3 \lambda^2/2\pi$ is the resonant scattering cross section, \comment{$\hat{\mathbf{f}}$ is the spin operator} in hyperfine multiplet $f$, and $C_{ff'}^{(K)}$ are coefficients for irreducible rank-$K$ components defined in \cite{deutsch_quantum_2010}. 
+Here, $\charpol = -\frac{\sigma_0}{4\pi k_0}\frac{\Gamma/2 }{\Delta_{ff'}}$ is the characteristic dynamic polarizability where $\sigma_0 = 3 \lambda^2/2\pi$ is the resonant scattering cross section, \comment{$\hat{\mathbf{f}}$ is the atomic  spin operator} in hyperfine multiplet $f$, and $C_{ff'}^{(K)}$ are coefficients for irreducible rank-$K$ components defined in \cite{deutsch_quantum_2010}. 
 
 In addition to the atomic tensor response, the nanofiber geometry gives rise to unique features of polarization spectroscopy not present in free space.  The spatial anisotropy of the intensity for the quasilinearly polarized guided modes leads to unequal scattering of the $H$ and $V$ modes, producing \emph{intrinsic} birefringence even for a purely scalar atomic polarizability.  
 In particular, atoms trapped on the quasi-$H$ axis leads to a phase delay of this mode relative the fast quasi-$V$ axis. 
@@ -656,7 +655,7 @@ A similar scheme, recently employed by \emph{B\'{e}guin et al.} \cite{beguin_gen
 	%===================QND spin squeezing=====================%
 	\subsection{Collective spin squeezing via QND measurement}
 
-The same birefringent interaction, \erf{Eq::GenHamiltonian}, can be utilized in a QND measurement to squeeze the projection noise of the collective atomic spin.  We consider squeezing of the uncertainty associated with the ``clock" transition of cesium, $\ket{\uparrow} = \ket{6S_{1/2}, f=4, m_f=0}$ and $\ket{\downarrow} = \ket{6S_{1/2}, f=3, M=0}$, which define a pseudospin within each atom, and associated Pauli operators $\{\hat{\sigma}_1, \hat{\sigma}_2, \hat{\sigma}_3\}$.  The quantum uncertainty in the collective pseudospin,
+The same birefringent interaction, \erf{Eq::GenHamiltonian}, can be utilized in a QND measurement to squeeze the projection noise of the collective atomic spin.  We consider squeezing of the uncertainty associated with the ``clock" transition of cesium, $\ket{\uparrow} = \ket{6S_{1/2}, f=4, m_f=0}$ and $\ket{\downarrow} = \ket{6S_{1/2}, f=3, m_f=0}$, which define a pseudospin within each atom, and associated Pauli operators $\{\hat{\sigma}_1, \hat{\sigma}_2, \hat{\sigma}_3\}$.  The quantum uncertainty in the collective pseudospin,
 	\begin{align}
 		\jz = \frac{1}{2} \sum_{n=1}^{N_A} \hat{\sigma}_3^{(n)},  
 	\end{align}
@@ -666,9 +665,9 @@ fundamentally limits the precision of atomic clocks \cite{wineland_spin_1992}. F
 	\end{align}
 where $\expt{\hat{J}_{||}}$ is the mean collective spin along the direction of spin polarization. 
 
-The clock states are defined to have zero projection of angular momentum with respect to a bias magnetic field that defines a quantization axis $\mathbf{e}_{\tilde{z}}$.  
+The clock states are defined to have zero projection of angular momentum with respect to a bias magnetic field that defines a quantization axis, $\mathbf{e}_{\tilde{z}}$.  
 Within the clock-state subspace the rank-1 vector light shift in the dispersive Hamiltonian, \erf{Eq::GenHamiltonian}, vanishes since $\bra{\uparrow}\hat{f}_k \ket{\uparrow} =\bra{\downarrow}\hat{f}_k \ket{\downarrow} = 0$ for any projection $k$ of the collective spin, and any quantization axis $\mathbf{e}_{\tilde{z}}$. 
-Further, as shown below, atoms on either side of the nanofiber experience the same birefringent coupling. 
+Furthermore, as shown below, atoms on either side of the nanofiber experience the same birefringent coupling. 
 The resulting Hamiltonian, restricted to the clock subspace, couples the guided field of the nanofiber to the $\hat{J}_3$ component of the collective pseudospin. The interaction has contributions from both the scalar and tensor light shifts,
 	\begin{align} \label{Eq::ClockHamiltonian}
 		\hat{H}_{J_3} = \hbar \Big\{ & \big[ \big( \chi_{H,\uparrow} +\chi_{V,\uparrow} \big) - \big( \chi_{H,\downarrow} + \chi_{V,\downarrow}\big) \big] \jz \hat{S}_0(t) \\
@@ -689,7 +688,7 @@ While this does not affect the squeezing of projection noise in $\hat{J}_3$, it 
 this term can be cancelled \cite{chaudhury_continuous_2006}.
 Using the D1-line of $^{133}$Cs atoms as the probe light, there are two magic-frequency solutions, $ \magic{3} $ and $\magic{4}$, shown schematically in \frf{Fig::CouplingStrength}(a).  
 
-Because the quantization axis of the atom can be chosen arbitrarily and the guided probe light at the position of the atom will generally be elliptical, the light-shift interaction coherently couples different magnetic sublevels in \comment{a given manifold $F$}, and thus does not conserve $J_3$.  For example, the ellipticity of the probe light leads to a fictitious magnetic field proportional to $i \mathbf{E}^{(-)}_{\inp}(\br') \times \mathbf{E}^{(+)}_{\inp}(\br')$ that causes a precession of the {\color{blue} spin}.  This can be mitigated by a sufficiently strong bias magnetic field compared to the fictitious field \cite{smith_continuous_2004}. 
+{\color{blue} Because the guided probe light at the position of the atom will generally be elliptical}, the light-shift interaction coherently couples different magnetic sublevels in \comment{a given manifold $F$}, and thus does not conserve $J_3$.  For example, the ellipticity of the probe light leads to a fictitious magnetic field proportional to $i \mathbf{E}^{(-)}_{\inp}(\br') \times \mathbf{E}^{(+)}_{\inp}(\br')$ that causes a precession of the {\color{blue} spin}.  This can be mitigated by a sufficiently strong bias magnetic field compared to the fictitious field \cite{smith_continuous_2004}. 
 
 
 %========= FIGURE: Geometry (coupling strength, magic wavelength, area and detuning) =========%
@@ -721,7 +720,7 @@ In the absence of any decoherence, such a QND measurement for integration time $
 	\end{equation}
 is the integrated measurement strength \cite{hammerer_quantum_2010, baragiola_three-dimensional_2014}.
 
-The strength of the birefringent interaction {\color{blue} arises from two fundamental sources.  The anisotropy of the   $H$ and $V$ polarized modes leads to polarization-dependent index of refraction, as described in Sec.~\ref{Sec::GreensFunction}.  In addition there is dependence of the atom-photon coupling on the internal spin state of the atom due to the atomic tensor polarizability.  In particular, we are interested in the dependence on the two clock states of the atom.  This in turn will depend on the choice of quantization axis that defines the clock state with projection $m_f=0$.  We can combine these two effects}, and obtain an compact expression for the coupling strength $\chieff$ using the irreducible tensor decomposition of the atomic polarizability, \erf{Eq::PolarizabilityIrrep}.  
+The strength of the birefringent interaction {\color{blue} arises from two fundamental sources.  The anisotropy of the   $H$ and $V$ polarized modes leads to a polarization-dependent index of refraction, as described in Sec.~\ref{Sec::GreensFunction}.  In addition there is dependence of the atom-photon coupling on the internal spin state of the atom due to the atomic tensor polarizability.  In particular, we are interested in the dependence on the two clock states of the atom.  This in turn will depend on the choice of quantization axis that defines the clock state with projection $m_f=0$.  We can combine these two effects}, and obtain an compact expression for the coupling strength $\chieff$ using the irreducible tensor decomposition of the atomic polarizability, \erf{Eq::PolarizabilityIrrep}.  
 Let {\color{blue} $\{\mathbf{e}_{\tilde{x}},\mathbf{e}_{\tilde{y}}, \mathbf{e}_{\tilde{z}}\}$ be a space fixed Cartesian coordinated, where $\mathbf{e}_{\tilde{z}}$ defines the quantization axis of the atom, set by the magnetic field}.  Because of the azimuthal symmetry of clock state around the $\qaxis$-axis, the polarizability tensor is diagonal in that basis.  
 Noting that $\langle f,0 | \hat{f}_{\tilde{z}}| f,0 \rangle =0$ and $\langle f,0 | \hat{f}_{\tilde{x}}^2| f,0 \rangle = \langle f,0 | \hat{f}_{\tilde{y}}^2| f,0 \rangle = \langle f,0 | \hat{\mathbf{f}}^2| f,0 \rangle /2 =f(f+1)/2$, it follows that the expectation value of the irreducible rank-2 component of the atomic polarizability is
 	\begin{align} \label{Eq::CouplingAngleMagic}
@@ -779,7 +778,7 @@ We fully model this using a first-principles stochastic master equation descript
 	\begin{align} \label{Eq::SME}
 		d \hat{\rho} = s\sqrt{\frac{\kappa}{4}} \mathcal{H}[\hat{\rho}] dW + \frac{\kappa}{4} \mathcal{L}[\hat{\rho}] dt + \sum_n \mathcal{D}_n [\hat{\rho}] dt,
 	\end{align}
-where $s = {\rm sign}(\kappa)$ and $\hat{\rho}$ is the collective atomic state. 
+where $s = {\rm sign}(\chieff)$ and $\hat{\rho}$ is the collective atomic state. 
 The measurement strength $\kappa =|\chieff|^2 \dot{N}_L$ determines the rate of the spin squeezing in the absence of decoherence.  
 The first two terms describe the QND measurement, where $dW$ is a stochastic Weiner increment satisfying $dW^2 = dt$. 
 The conditional dynamics that result from the measurement are generated by the superoperator
@@ -806,7 +805,9 @@ The effective non-Hermitian light-shift Hamiltonian that accounts for the imagin
 	\begin{equation}
 		\gamma_{f \rightarrow \tilde{f} } =\big| \bra{f,0} \hat{W}_\pi \ket{\tilde{f},0} \big|^2,
 	\end{equation}
-where $\hat{W}_\pi$ is the Lindbald jump-operator associated with absorption of the probe photon followed by spontaneous emission of a $\pi$-polarized photon~\cite{deutsch_quantum_2010}.  These rates can be expressed in terms of the imaginary part of the polarizability tensor using \erf{Eq::Polarizability},
+where $\hat{W}_\pi$ is the Lindblad jump-operator associated with absorption of the probe photon followed by spontaneous emission of a $\pi$-polarized photon~\cite{deutsch_quantum_2010}.  
+{\color{red}  This gets very messy.  Let's move this to the Appendix:
+These rates can be expressed in terms of the imaginary part of the polarizability tensor using \erf{Eq::Polarizability},
 	\begin{align}
 		\gamma_f &=\dot{N}_L  \sum_{f'} \sigma (\Delta_{ff'} ) \mathbf{u}^*_\inp(\br'_\perp)\cdot \bra{f,0} \hat{\tensor{\mbf{A}}}(f,f') \ket{f,0}  \cdot \mathbf{u}_\inp(\br'_\perp)\nonumber\\
 		&\approx \sum_{f'} \frac{\Gamma\Omega^2}{4\Delta_{ff'}^2}\sum_q \left| o_{jf}^{j'f'}C_{f'q}^{f0;1 q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q , \\
@@ -816,7 +817,7 @@ where $\hat{W}_\pi$ is the Lindbald jump-operator associated with absorption of 
 \comment{Could also be written in terms of $ \gamma_s $. Where is the best place to introduce $ \gamma_s $?}
 where $ \sigma (\Delta_{ff'} )  = \sigma_0 \Gamma^2/4\Delta^2_{ff'}$ is the the scattering cross section at the probe detuning. 
 $ o_{jf}^{j'f'} $ are the relative oscillator strengths, the square of which determine the branching ratios for spontaneous decay rates $ \Gamma_{j'f'\rightarrow jf} $ in the hyperfine multiplets to $\Gamma_{j'\rightarrow j}  $ in the atomic fine structure levels~\cite{deutsch_quantum_2010}. 
-$ C_{f'q}^{f0;1 q}=\Braket{f'q}{f0;1q} $ are the Clebsch-Gordan coefficients determining the clock state transition rates. 
+$ C_{f'q}^{f0;1 q}=\Braket{f'q}{f0;1q} $ are the Clebsch-Gordan coefficients determining the clock state transition rates.}
 When expressed in terms of Pauli operators on the clock-state pseudospin, the map acts as
 	\begin{align} \label{Eq::OpticalPumpingMapSchr}
 		\mathcal{D}_n [\hat{\rho}] 
@@ -828,27 +829,21 @@ First, the map is not trace preserving because atoms can be pumped out of the cl
 Second, unequal rates of optical pumping for $\ket{\uparrow}$ and $\ket{\downarrow}$ polarize the mean $\expt{\jz}$ towards a value different from that found in the QND measurement. 
 Third, owing to the large ground hyperfine splitting, photons arising from optical pumping of $f' \rightarrow f=3$ and $f' \rightarrow f=4$ are distinguishable, thus these processes destroy coherences between $\ket{\uparrow}$ and $\ket{\downarrow}$. 
 
-We calculate the squeezing parameter as a function of time based on the evolution of atomic correlation functions  in the Heisenberg picture, where operators evolve according to the adjoint form of the SME in \erf{Eq::SME}.  The collective moments obey the following stochastic equations of motion (see Appendix \ref{Appendix::OpticalPumping}),
+We calculate the squeezing parameter as a function of time based on the evolution of atomic correlation functions, where operators evolve according to the adjoint form of the SME in \erf{Eq::SME}.  The collective atomic variables obey the following stochastic equations of motion (see Appendix \ref{Appendix::OpticalPumping}),
 	\begin{align} 
-		&d \NA = -\gamma_{00} \NA  dt + 2\gamma_{03} \expt{\hat{J}_3} dt \label{Eq::NA}\\
+		&d N_C = -\gamma_{00} N_C dt + 2\gamma_{03} \expt{\hat{J}_3} dt \label{Eq::NA}\\
 		&d \expt{\hat{J}_1}  = -\gamma_{11} \expt{\hat{J}_1} dt  \label{Eq::MeanSpinDecay} \\
-		&d \expt{\hat{J}_3}  = s\sqrt{\kappa} \varz dW -\gamma_{33} \expt{\hat{J}_3}dt + \smallfrac{1}{2}\gamma_{30} \NA dt   \\
-		&d \varz  = - \kappa \big(\varz\big)^2 dt- 2 \gamma_{33} \varz dt + \smallfrac{1}{4} \big( 2\gamma_{33}-\gamma_{00} \big) \NA dt + \smallfrac{1}{2} \big( \gamma_{03} - 2 \gamma_{30} \big) \expt{\hat{J}_3} dt,   \label{Eq::varJz} 
+		&d \expt{\hat{J}_3}  = s\sqrt{\kappa} \varz dW -\gamma_{33} \expt{\hat{J}_3}dt + \smallfrac{1}{2}\gamma_{30} N_C dt   \\
+		&d \varz  = - \kappa \big(\varz\big)^2 dt- 2 \gamma_{33} \varz dt + \smallfrac{1}{4} \big( 2\gamma_{33}-\gamma_{00} \big) N_C dt + \smallfrac{1}{2} \big( \gamma_{03} - 2 \gamma_{30} \big) \expt{\hat{J}_3} dt,   \label{Eq::varJz} 
 	\end{align}
 where the decay and feeding rates are given in \erf{Eq::DecayRates}.
-Loss of atoms from the clock-state subspace is captured by the atom number $ \NA $, which decays at rate $\gamma_{00}$. 
-\comment{Use $ N_C$ instead of $\tilde{N}_A $?}
-The final term in \erf{Eq::varJz}, proportional to $\expt{\hat{J}_3}$, is typically negligible since in most applications $\expt{\hat{J}_3} \ll \NA$.  
+Loss of atoms from the clock-state subspace is captured by the atom number $N_C$, which decays at rate $\gamma_{00}$. 
+The final term in \erf{Eq::varJz}, proportional to $\expt{\hat{J}_3}$, is typically negligible since in most applications $\expt{\hat{J}_3} \ll N_C$.  
 We retain this small correction since unbalanced optical pumping acts to polarize the atoms and alters the rate of atom loss.  
 
 To find the peak squeezing in the presence of optical pumping, we numerically integrate Eqs. (\ref{Eq::NA}--\ref{Eq::varJz}) and then use \erf{Eq::SqueezingParameter} to calculate the metrological squeezing parameter, $\xi^2$, as a function of time. 
 We choose here the magic frequency close to the $ f=4\leftrightarrow f'=4 $ transition, $ \magic{4} $, which is furthest from resonance with both excited hyperfine transitions. 
-Typical time evolution is shown in \frf{Fig::Squeezing_Dynamics} for $2500$ atoms trapped on the \emph{x}-axis at a distance $r'\!_\perp=1.8a$ from the center of the nanofiber. 
-Dimensionless time is scaled to the characteristic scattering rate, $\gamma_s \equiv %\frac{\sigma( \Delta_\eff)}{A_{\rm in}} \dot{N}_L=
-\frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_\eff^2} \dot{N}_L=\frac{\Gamma\Omega^2}{4\Delta_{\rm eff}^2}$. 
-We study the dynamics for two choices of quantization axis: (i) along the $x$-axis and (ii) along the numerically determined optimal axis. 
-Figure \ref{Fig::Squeezing_Dynamics}(a) shows the time evolution of the squeezing parameter. 
-Squeezing peaks at 4.7 dB when the clock states are chosen along the optimal axis; $\qangle^{\rm opt} \approx 86^\circ$ in \erf{Eq::QuantizationAxis}. 
+Typical time evolution is shown in \frf{Fig::Squeezing_Dynamics} for $2500$ atoms trapped on the \emph{x}-axis at a distance $r'\!_\perp=1.8a$ from the center of the nanofiber, {\color{blue} where time is scaled} to the characteristic scattering rate, $\gamma_s \equiv \frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_\eff^2} \dot{N}_L ${\color{red}  we never introduce the Rabi frequency anywhere.  He can put this formula in the appendix $=\frac{\Gamma\Omega^2}{4\Delta_{\rm eff}^2}$}.  We study the dynamics for two choices of quantization axis: (i) along the $x$-axis and (ii) along the numerically determined optimal axis.  Figure \ref{Fig::Squeezing_Dynamics}(a) shows the time evolution of the squeezing parameter.  {\color{blue} We achieve a maximum squeezing of} 4.7 dB when the clock states are chosen along the optimal axis; $\qangle^{\rm opt} \approx 86^\circ$ in \erf{Eq::QuantizationAxis}. 
 
 %========= SQUEEZING DYNAMICS: \xi, variance, mean,  N_A =========
 \begin{figure*}[t]
@@ -857,7 +852,7 @@ Squeezing peaks at 4.7 dB when the clock states are chosen along the optimal axi
 The optimal quantization axis (red) is compared to quantization along the $x$-axis (blue). 
 Solid lines indicate simulations with optical pumping and dashed lines without. 
 (a) Metrological spin squeezing parameter $\xi^{2}$. 
-(b) Collective mean spin $\expt{\hat{J}_1}$ and decaying atom number in the clock states $\NA$ (subplot).
+(b) Collective mean spin $\expt{\hat{J}_1}$ and decaying atom number in the clock states $N_C$ (subplot).
 (c) Conditional variance $\varz$. 
 Using the optimal quantization axis, the inset shows the decomposition of $ \Delta J_3^2 $ (red dashed) into the variance part $N_A (\Delta j_3^{(1)})^2$ (green dash-dot) and the covariance part $N_A(N_A-1)\expect{\Delta j_3^{(1)}\Delta j_3^{(2)}}$ (black dotted).
 }\label{Fig::Squeezing_Dynamics}
@@ -867,7 +862,7 @@ Using the optimal quantization axis, the inset shows the decomposition of $ \Del
 
 The peak squeezing is ultimately limited by the combined effects of optical pumping on both $\expt{\jx}$ and $\varz$.  Here, as in a free-space model \cite{baragiola_three-dimensional_2014}, the primary factor that limits metrological squeezing is the decay of the collective mean spin $\expt{\jx}$. 
 A scattered photon eliminates the initial coherence between $\ket{\uparrow}$ and $\ket{\downarrow}$ within a single atom, thus depolarizing $\expt{\jx}$.  
-Atoms optically pumped to magnetic sublevels outside of the clock subspace decay $\NA$, further reducing $\expt{\jx}$. 
+Atoms optically pumped to magnetic sublevels outside of the clock subspace decay $N_C$, further reducing $\expt{\jx}$. 
 These effects are captured by the depolarization rate $\gamma_{11}$ in the equation for $\expt{\jx}$, \erf{Eq::MeanSpinDecay}, whose solution is plotted in \frf{Fig::Squeezing_Dynamics}(b).
 
 %The QND squeezing of the conditional variance, $\varz$, competes with two types of decoherence from optical pumping. First, optical pumping leads to decay of the two-body correlations that lie at the heart of spin squeezing.  
@@ -877,11 +872,11 @@ We can gain deeper understanding in the microscopic effects of optical pumping o
 	%\varz & = \tilde{N}_A \big( \Delta j_3^{(1)} \big)^2 + \tilde{N}_A(\tilde{N}_A-1) \expt{ \Delta j_3^{(1)} \Delta j_3^{(2)} }
 	\end{align}
 for permutationally symmetric states considered here, {\color{blue} where $(1)$ and $(2)$ label any two atoms in the ensemble}. Loss of atoms affects the first (single-body) variance term, which scales as $N_A$.
-%and $ N_A \big( \Delta j_3^{(1)} \big)^2=\NA/4+\expt{\hat{J}_3}^2/N_A $. 
+%and $ N_A \big( \Delta j_3^{(1)} \big)^2=N_C/4+\expt{\hat{J}_3}^2/N_A $. 
 The two-body correlations which contribute as $N_A^2$ to the collective fluctuations, 
 	\begin{align}
 		\expt{ \Delta j_3^{(1)} \Delta j_3^{(2)} } &\equiv \smallfrac{1}{4} \big( \expt{ \hat{\sigma}_3^{(1)} \otimes \hat{\sigma}_3^{(2)}  } - \expt{\hat{\sigma}_3^{(1)} }^2  \big).
-%		&= \frac{1}{N_A(N_A-1)}\big[ \expt{\hat{J}_3^2}-\frac{N_A-1}{N_A}\expt{\hat{J}_3}^2-\frac{\NA}{4} \big],	
+%		&= \frac{1}{N_A(N_A-1)}\big[ \expt{\hat{J}_3^2}-\frac{N_A-1}{N_A}\expt{\hat{J}_3}^2-\frac{N_C}{4} \big],	
 \end{align}
 have a much larger influence on the total variance. Spin-spin correlations at the heart of spin squeezing, $\expt{ \hat{\sigma}_3^{(1)} \otimes \hat{\sigma}_3^{(2)} }$, rapidly generated by the measurement backaction decohere by optical pumping according to Eqs. (\ref{Eq::TwoBodyDecay}--\ref{Eq::OperatorMap}),
 	\begin{align} \label{Eq::TwoBodySpinDecay}
@@ -904,9 +899,7 @@ All of these effects are included in the equation for $\varz$, \erf{Eq::varJz}, 
 %================
 
 
-With our model, we explore optimal conditions for generating spin squeezing.  
-The choice of quantization axis $\qaxis$ that defines clock states affects both the measurement strength and the relative rates of optical pumping. 
-We plot the peak squeezing for $\qaxis$ in the $x$-$y$ plane in \frf{Fig::Squeezing_QuantizationAxis}(a). 
+With our model, we explore optimal conditions for generating spin squeezing.   The choice of quantization axis $\qaxis$ that defines clock states affects both the measurement strength and the relative rates of optical pumping. We plot the peak squeezing for $\qaxis$ in the $x$-$y$ plane in \frf{Fig::Squeezing_QuantizationAxis}(a). 
 We gain insight into the tradeoffs between QND entangling interaction and decoherence by independent inspection of the measurement strength and optical pumping rates.  
 First, the rate of squeezing is determined by the OD/atom $=\sigma_0 A_{\rm in}/A_{J_3}^2$ (equivalent to the ratio of the measurement strength to the scattering rate, $\kappa/\gamma_s$), which peaks when $\qaxis$ is along the $y$-axis, as seen in \frf{Fig::Squeezing_QuantizationAxis}(a). 
 Choosing $\qaxis$ along $y$, the OD/atom is about 50\% larger than along $x$-axis.  
@@ -936,9 +929,7 @@ Further, elastically scattered incoherent photons from optical pumping are assum
 %====== SECTION: Summary and outlook ======%
 \section{Summary and Outlook} \label{Sec::Conclusion}
 
-We studied the strong cooperativity in the atom-light interface that can be achieved based on an optical nanofiber platform in the dispersive regime.  
-The key parameter that determines the coupling is the optical density per atom.  
-Due to the tight confinement of the guided mode over the entire chain of atoms, for typical geometries used in current experiments, this parameter is $ \mathrm{OD}/\mathrm{atom}\sim 10^{-2} $, which approaches that achieved for atomic ensembles trapped inside optical cavities of moderate finesse \cite{chen_conditional_2011, zhang_collective_2012}.  
+We studied the strong cooperativity in the atom-light interface that can be achieved based on {\color{blue} atoms trapped in the evanescent field surrounding an optical nanofiber, and interacting with a guided mode in the dispersive regime.} The key parameter that determines the coupling is the {\color{blue} resonant} optical density per atom. Due to the tight confinement of the guided mode over the entire chain of atoms, for typical geometries used in current experiments, this parameter is $ \mathrm{OD}/\mathrm{atom}\sim 10^{-2} $, which approaches that achieved for atomic ensembles trapped inside optical cavities of moderate finesse \cite{chen_conditional_2011, zhang_collective_2012}.  
 In contrast the atom-light coupling for atoms in free space is typically orders of magnitude smaller, $ \mathrm{OD}/\mathrm{atom} \sim 10^{-6}$.  
 Under ideal conditions the atom-light interaction is entirely symmetric along the nanofiber, providing a platform for long-range correlations independent of distance between the atoms. 
 As the light is entirely guided, fiber-coupled atomic ensembles can be networked together or coupled to other physical systems in a hybrid platform \cite{hafezi_atomic_2012, liebermeister_tapered_2014} for truly long-range entanglement generation and distribution. 
@@ -955,11 +946,8 @@ The former corresponds to co\"{o}perative forward scattering into the guided mod
 It is the cooperativity, specified by the OD/atom, that determines the ratio of these two effects and thus the ultimate power of the quantum atom-light interface. 
 
 We treated this using a first-principles stochastic master equation model, which allowed us to track the atomic correlation functions that define the metrologically relevant squeezing parameter.  
-These include the atomic projection noise uncertainty as well as the mean length of the pseudospin that defines the metrological signal.  
-We find that decoherence acts primarily to depolarize the mean pseudospin and optically pump atoms out of the clock subspace, which we treat as loss.  In addition, optical pumping decoheres the spin correlations at the heart of spin squeezing, but at a reduced rate compared with the effect on the mean pseudospin.  
+These include the atomic projection noise uncertainty as well as the mean length of the pseudospin that defines the metrological signal.  We find that decoherence acts primarily to depolarize the mean pseudospin and optically pump atoms out of the clock subspace, which we treat as loss.  In addition, optical pumping decoheres the spin correlations at the heart of spin squeezing, but at a reduced rate compared with the effect on the mean pseudospin.  
 The combined effect of QND measurement and decoherence yields a peak squeezing approaching 5 dB with $\sim 2500$ atoms. 
-
-
 
 Larger enhancements in atom-light coupling and QND squeezing are possible with modest increases in the number of trapped atoms and/or for atoms trapped closer to the nanofiber surface.  
 Even greater improvement might be achieved by combining the enhancements of the tight transverse confinement of guided modes with longitudinal confinement provided by fiber-based optical cavities~\cite{le_kien_intracavity_2009, wuttke_nanofiber_2012, yalla_cavity_2014, bohnet_reduced_2014,nayak_optical_2014}.  
@@ -1072,14 +1060,14 @@ The decay of two-body spin correlations, given in \erf{Eq::TwoBodySpinDecay}, is
 Similarly, one can work out the other coupled optical pumping equations for two-body microscopic operator correlations $ \expt{\hat{\mathbbm{1}}^{(m)} \otimes \hat{\mathbbm{1}}^{(n)}} $ and $ \expt{\hat{\mathbbm{1}}^{(m)} \otimes \hat{\sigma}_3^{(n)} + \hat{\sigma}_3^{(m)} \otimes \hat{\mathbbm{1}}^{(n)} } $ when $ m\neq n $ and the macroscopic operator expectation values $ \expt{\hat{J}_3^2} $, $ \expt{\hat{N}_A^2} $, and $ \expt{\hat{N}_A\hat{J}_3} $. 
 As a result of the correlations between atoms, a weak measurement on the ensemble of atoms may squeeze the pseudospin state in the clock state subspace. 
 As has been examined numerically on the time scale of the birefringence QND measurement studied in this paper, the correlation between atom number in the clock state subspace and the pseudospin moment is so weak that one can treat the atom number operator in the clock state subspace as a number.
-We therefore set $ \expt{\hat{N}_A\hat{J}_3}-\expt{\hat{N}_A}\expt{\hat{J}_3}\approx 0 $ and $ \expt{\hat{N}_A^2} - \expt{\hat{N}_A}^2 \approx 0 $ and define $ \NA\equiv \expt{\hat{N}_A}$. 
+We therefore set $ \expt{\hat{N}_A\hat{J}_3}-\expt{\hat{N}_A}\expt{\hat{J}_3}\approx 0 $ and $ \expt{\hat{N}_A^2} - \expt{\hat{N}_A}^2 \approx 0 $ and define $ N_C\equiv \expt{\hat{N}_A}$. 
 
 The equations of motion for the moments of $\jz$ are now found from the SME, \erf{Eq::SME},
 	\begin{subequations} \label{Eq::J3MomentEquations}
 	\begin{align} 
-		d \expt{\jz} =& s \sqrt{\kappa} \varz \, dW - \gamma_{33} \expt{\jz}dt + \smallfrac{1}{2} \gamma_{30} \NA dt ,  \\
-		d \expt{\jz^2} =& s 2\sqrt{\kappa} \expt{\jz}\Delta J_3^2 \, dW - 2 \gamma_{33} \expt{\jz^2}dt + \smallfrac{1}{4} \big( 2 \gamma_{33}-\gamma_{00}\big) \NA dt \\
-		&+ \gamma_{30} \expt{\jz} \NA dt + \smallfrac{1}{2}\left(\gamma_{03} -2 \gamma_{30}\right) \expt{\jz} dt. \nonumber 
+		d \expt{\jz} =& s \sqrt{\kappa} \varz \, dW - \gamma_{33} \expt{\jz}dt + \smallfrac{1}{2} \gamma_{30} N_C dt ,  \\
+		d \expt{\jz^2} =& s 2\sqrt{\kappa} \expt{\jz}\Delta J_3^2 \, dW - 2 \gamma_{33} \expt{\jz^2}dt + \smallfrac{1}{4} \big( 2 \gamma_{33}-\gamma_{00}\big) N_C dt \\
+		&+ \gamma_{30} \expt{\jz} N_C dt + \smallfrac{1}{2}\left(\gamma_{03} -2 \gamma_{30}\right) \expt{\jz} dt. \nonumber 
 	\end{align}
 	\end{subequations}
 The stochastic term in $d\expt{\jz^2}$ was simplified using the relation $\expt{\jz^3} = 3\expt{\jz^2}\expt{\jz}- 2\expt{\jz}^3$, which comes from Gaussian statistics \cite{jacobs_straightforward_2006}. 
