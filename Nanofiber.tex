@@ -675,7 +675,7 @@ The resulting Hamiltonian, restricted to the clock subspace, couples the guided 
 	\end{align}
 where the coupling strength between an atom in the clock subspace and a photon with polarization $p = \{H,V\}$ is
 	\begin{equation} \label{Eq::ClockCouplingStrength}
-		\chi_{p,F} \equiv - 2\pi k_0 n_g  | \mathbf{u}_p(\mbf{r}_\perp)|^2 \bra{f,0}\hat{\alpha}_{pp}  \ket{f,0},
+		\chi_{p,f} \equiv - 2\pi k_0 n_g  | \mathbf{u}_p(\mbf{r}_\perp)|^2 \bra{f,0}\hat{\alpha}_{pp}  \ket{f,0},
 	\end{equation}
 and $f = \{4,3\}$ labels $\{\uparrow,\downarrow\}$.  
 The diagonal terms in the polarizability tensor are the same for atoms at positions above and below the nanofiber, and thus all atoms contribute equally. 
@@ -799,8 +799,9 @@ Restricting to the two-dimensional subspace associated with the clock states, th
 	\end{align}
 Here, $\gamma_{f}$ is the total rate of photon scattering by atoms in the clock state $\ket{f,0}$, defined by
 	\begin{equation}
-		\gamma_{f}=- \frac{2}{\hbar} {\rm Im} \big[ \bra{f,0} \hat{H}_{\rm eff}\ket{f,0} \big] .
+		\gamma_{f}=- \frac{2}{\hbar} {\rm Im} \big[ \bra{f,0}\comment{ \hat{H}_{\rm eff}}\ket{f,0} \big] .
 	\end{equation}
+\comment{$ \hat{H}_{\rm eff} $ should be the per atom Hamiltonian and is not defined besides $ \hat{H}_{J_3} $.}
 The effective non-Hermitian light-shift Hamiltonian that accounts for the imaginary part of the atomic polarizability is found by substitution of $\charpol \rightarrow -\frac{\sigma_0}{4\pi k_0}\frac{\Gamma/2}{\Delta_{ff'}+i\Gamma/2}$ in \erf{Eq::LightShiftHam}.  The rates of optical pumping between the clock states, $\ket{f,0} \rightarrow \ket{\tilde{f},0}$, are
 	\begin{equation}
 		\gamma_{f \rightarrow \tilde{f} } =\big| \bra{f,0} \hat{W}_\pi \ket{\tilde{f},0} \big|^2,
