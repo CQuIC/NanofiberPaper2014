@@ -696,7 +696,7 @@ Using the D1-line of $^{133}$Cs atoms as the probe light, there are two magic-fr
 
 %========= FIGURE: Geometry (coupling strength, magic wavelength, area and detuning) =========%
 \begin{figure}
-\includegraphics[scale=0.44]{./Figs/Fig_MagicFrequencies_alt}
+\includegraphics[scale=0.44]{./Figs/Fig_MagicFrequencies}
 \caption{Atom-light interface using the clock states of $^{133}$Cs.  
 (a) Energy level structure for atoms probed with one of two magic frequencies on the D1-line. 
 (b) Magnitude of the magic detunings, $| \tilde{\Delta}_{f}|/2\pi \equiv | \omega_0 - \magic{f} |/2\pi$, and (c) dimensionless rotation angle  $\chi_{\tiny J_3}$ for an atom trapped on the $x$-axis at $ r'\!_\perp=1.8a $ as the quantization axis, \erf{Eq::QuantizationAxis}, is varied in the $x$-$y$ plane. 
@@ -758,7 +758,7 @@ and an effective area given by
 		A_{J_3}^{-1} & = n_g \frac{ |\mathbf{e}_{\tilde{z}} \cdot \mathbf{u}_V(\br'_\perp)|^2 |\mathbf{u}_H(\br'_\perp)|^2 - |\mathbf{e}_{\tilde{z}} \cdot \mathbf{u}_H(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2 }{ |\mathbf{u}_H(\br'_\perp)|^2 + |\mathbf{u}_V(\br'_\perp)|^2 } 
 	\end{align}	
 {\color{blue} We see explicitly here that the coupling strength depends both on the anisotropy of the modes and the tensor atomic response, which in turn depends on a particular choice of clock states.}  The quantization axis that maximizes $\chieff$ is that which minimizes $A_{J_3}$ at a given magic detuning.  
-Since the $z$-component of the guided modes is $90^\circ$ out-of-phase with the transverse components, the quantization axis maximizing the atom-light coupling is specified by an angle in the transverse \emph{xy}-plane, $\phi_\pi$,
+Since the $z$-component of the guided modes is $90^\circ$ out-of-phase with the transverse components, the quantization axis maximizing the atom-light coupling is specified by an angle in the transverse $x$-$y$ plane, $\phi_\pi$,
 	\begin{align} \label{Eq::QuantizationAxis}
 		\qaxis = \cos \phi_\pi \mbf{e}_x + \sin \phi_\pi \mbf{e}_y.
 	\end{align}
@@ -839,7 +839,7 @@ Dotted lines indicate simulations without optical pumping; i.e. no decoherence.
 (a) Metrological spin squeezing parameter $\xi^{2}$. 
 (b) Collective mean spin $\expt{\hat{J}_1}$ and decaying atom number in the clock states $N_C$ (inset).
 (c) Conditional squeezed variance $\varz$. 
-The inset shows the decomposition at the optimal quantization axis of $ \Delta J_3^2 $ (red dashed) into the single-atom variance, $N_A (\Delta j_3^{(1)})^2$ (green) and the two-body covariance, $N_A(N_A-1)\expect{\Delta j_3^{(1)}\Delta j_3^{(2)}}$ (black), as given by \erf{Eq::VarianceDecomposition}..
+The inset shows the decomposition at the optimal quantization axis of $ \Delta J_3^2 $ (red dashed) into the single-body variance, $N_A (\Delta j_3^{(1)})^2$ (green) and the two-body covariance, $N_A(N_A-1)\expect{\Delta j_3^{(1)}\Delta j_3^{(2)}}$ (black), as given by \erf{Eq::VarianceDecomposition}.
 }\label{Fig::Squeezing_Dynamics}
 \end{figure*}
 %================
@@ -876,7 +876,7 @@ All of these effects are included in the equation for $\varz$, \erf{Eq::varJz}, 
 %========= FIGURE: Peak squeezing (\xi, measurement strength, scattering rates) =========
 \begin{figure}
 \includegraphics[scale=0.37]{./Figs/Fig_SqueezingQuantAxis}
-\caption{Dependence of metrological squeezing on quantization axis, $\qaxis$, for $2500$ atoms trapped on the $x$-axis at a distance $ r'\!_\perp=1.8a$. In (b--d) $\qaxis$ is confined to the \emph{xy}-plane where the optimal peak squeezing occurs.
+\caption{Dependence of metrological squeezing on quantization axis, $\qaxis$, for $2500$ atoms trapped on the $x$-axis at a distance $ r'\!_\perp=1.8a$. In (b--d) $\qaxis$ is confined to the $x$-$y$ plane where the optimal peak squeezing occurs.
 (a--b) Peak squeezing for varying $\qaxis$. 
 (c) OD/atom.
 (d) Rates of atom loss, $\gamma_{00}$, and depolarization, $\gamma_{11}$ relative to the characteristic scattering rate $\gamma_s$. }\label{Fig::Squeezing_QuantizationAxis}
@@ -903,10 +903,12 @@ Further, elastically scattered incoherent photons from optical pumping are assum
 
 
 %======= FIG: Scaling with atom number and distance =======
-\begin{figure*}\includegraphics[scale=0.4]{./Figs/Fig_SqueezingDistance}[t]
-\caption{Squeezing as a function of trapping distance $r_\perp$ and initial atom number $N_A$. (a) OD/atom. (b) Optimal quantization axis $\qaxis$. 
-%The line is cut off when the squeezing effect is too weak to be observed ($ r'\!_\perp>2.3a $).
-(c) Peak metrological squeezing at the optimal $\qaxis$.} \label{Fig::Squeezing_Distance}
+\begin{figure*}[t]\includegraphics[scale=0.4]{./Figs/Fig_SqueezingDistance}
+\caption{Squeezing as a function of trapping distance $r_\perp$ and initial atom number $N_A$. 
+(a) OD/atom. Inset is the corresponding magic detuning in units of MHz.
+(b) Optimal quantization axis orientation angle $\qaxis$ in the $x$-$y$ plane for different atom numbers. 
+The line with $ 500 $ atoms is cut off when the squeezing effect is too weak to be observed ($ r'\!_\perp>2.3a $).
+(c) Peak metrological squeezing at the optimal $\qaxis$ for different atom numbers.} \label{Fig::Squeezing_Distance}
 \end{figure*}
 %================================
 
@@ -1034,7 +1036,7 @@ where $ \sigma (\Delta_{ff'} )  = \sigma_0 \Gamma^2/4\Delta^2_{ff'}$ is the the 
 $ o_{jf}^{j'f'} $ are the relative oscillator strengths, the square of which determine the branching ratios for spontaneous decay rates $ \Gamma_{j'f'\rightarrow jf} $ in the hyperfine multiplets to $\Gamma_{j'\rightarrow j}  $ in the atomic fine structure levels~\cite{deutsch_quantum_2010}. 
 $ C_{f'q}^{f0;1 q}=\Braket{f'q}{f0;1q} $ are the Clebsch-Gordan coefficients determining the clock state transition rates.
 
-Along the same line, the ratio of $ \kappa $ and $ \gamma_s $ characterizes the per-photon measurement strength on one atom, which is also defined as OD$\!/\! $atom in this paper. Together with the photon scattering and optical pumping rates discussed above, the spin squeezing dynamics due to the QND measurement can be studied independently of light intensity.
+%Along the same line, the ratio of $ \kappa $ and $ \gamma_s $ characterizes the per-photon measurement strength on one atom, which is also defined as OD$\!/\! $atom in this paper. Together with the photon scattering and optical pumping rates discussed above, the spin squeezing dynamics due to the QND measurement can be studied independently of light intensity.
 
 %===================APPENDIX: Equations of motion =====================%
 \section{Derivation of the equations of motion for the moments} \label{Appendix::OpticalPumping}	
