@@ -151,7 +151,7 @@
 \newcommand{\charpol}{\alpha_0(\Delta_{f'f})}
 \newcommand{\qaxis}{\mathbf{e}_{\tilde{z}}}
 \newcommand{\qangle}{\phi_\pi}
-\newcommand{\magic}[1]{\omega_{#1}^m}
+\newcommand{\magic}[1]{\tilde{\omega}_{#1}}
 \newcommand{\chiN}{\chi_{N}}
 \newcommand{\NA}{N_C}
 \newcommand{\chieff}{\chi_{\raisebox{-.1pt}{\tiny $J_3$}}}
@@ -312,9 +312,9 @@ the complex plane. The result for $z \neq z'$ is \cite{manga_rao_single_2007}
 \left[\frac{-4\pi \omega_0^2 }{2\pi ( \omega_0^2-\omega^2(\beta))}\right]  \mathbf{u}_{b\beta_0, p} 
 (\br_\perp)\mathbf{u}^*_{b\beta_0, p} (\br_{\perp}^\prime)e^{ib \beta_0 (z-z')} \nonumber \\
 = & 2\pi i \frac{\omega_0}{v_g } \sum_{b,p} \mathbf{u}_{b, p} (\br_\perp)\mathbf{u}^*_{b, p} 
-(\br_{\perp}^\prime) e^{i b\beta_0(z-z')} \Theta \big( (z-z')b \big), \label{Eq::GreensGuided}
+(\br_{\perp}^\prime) e^{i b\beta_0(z-z')} \Theta \big( b(z-z') \big), \label{Eq::GreensGuided}
 	\end{align}
-where $b=\pm 1$ indicates the propagation direction, $v_g= \vert d\omega/d\beta \vert_{\beta=\beta_0}$ is the group velocity at $\omega_0$, and $\Theta \big( (z-z')b \big)$ is a Heaviside function enforcing causality for the forward- and backward-scattered fields. In the second line, we have suppressed the label $\beta_0$ as it is implicit in the definition of the guided modes at frequency $\omega_0$. 
+where $b=\pm$ indicates the propagation direction, $v_g= \vert d\omega/d\beta \vert_{\beta=\beta_0}$ is the group velocity at $\omega_0$, and $\Theta \big( b(z-z') \big)$ is a Heaviside function enforcing causality for the forward- and backward-scattered fields. In the second line, we have suppressed the label $\beta_0$ as it is implicit in the definition of the guided modes at frequency $\omega_0$. 
 
 Radiative properties of a scatterer (the decay rate and energy level shift) are determined by evaluation of the dyadic Green's function at the source point $\mbf{r} = \mbf{r}'$ \cite{fussell_decay_2005}.  However, for $z=z'$ we cannot close the contour. Instead, we expand the resonant denominator in \erf{Eq::GreensEigenmodes} with the poles moved to yield the retarded (causal) response,
 \begin{equation}
@@ -335,7 +335,7 @@ Only the positive-frequency component contributes to the $\delta$-function, and 
 The energy level shift of the scatterer due to its proximity to the dielectric is found from the real part of the Green's function at $\br = \br'$. 
 To find the total modified spontaneous emission rate and energy level shift one must include the unguided radiation modes \cite{le_kien_spontaneous_2005} or employ other representations of the Green's function \cite{klimov_spontaneous_2004}.  
 
-Equation (\ref{Eq::GreensGuided}) is the central result from which we can calculate the dispersive response.  Consider a forward-propagating {\color{blue} ($b=+1$)} input field in the guided modes with frequency $\omega_0$, positive-frequency amplitude $\Eamp$, and arbitrary polarization, $\mathbf{E}^{(+)}_{\inp}(\br) = \Eamp  \mathbf{u}_{\rm in}(\br_\perp) e^{i \beta_0 z}$.   
+Equation (\ref{Eq::GreensGuided}) is the central result from which we can calculate the dispersive response.  Consider a forward-propagating {\color{blue} ($b=+$)} input field in the guided modes with frequency $\omega_0$, positive-frequency amplitude $\Eamp$, and arbitrary polarization, $\mathbf{E}^{(+)}_{\inp}(\br) = \Eamp  \mathbf{u}_{\rm in}(\br_\perp) e^{i \beta_0 z}$ {\color{red} (Is there any confusion between the + for forward-propagating and the + for positive frequency component of the E-field? Along these lines, I changed the $b = \pm 1 \rightarrow b = \pm$. The digit 1 makes no sense there, since this is just a label for a mode, not a value.)}.   
 The effective mode area at the atom's position is determined from the total cycle-averaged power transported along the nanofiber, $P_{{\rm in},z} = (v_g/2\pi) \int d^2\br \, n^2(r_\perp) |\mathbf{E}^{(+)}_{\inp}(\br) |^2$, and the intensity at the atom, $I_{\rm in}(\mathbf{r}') = (c/2\pi) |\mathbf{E}^{(+)}_{\inp}(\br') |^2$, via the relation \cite{domokos_quantum_2002},
  	\begin{align} \label{Eq::AreaIn}
  		A_{\rm in} \equiv \frac{P_{{\rm in}}}{I_{\rm in}(\mathbf{r}')} = \frac{1}{n_g |\mathbf{u}_{\rm in}(\mathbf{r}'_\perp)|^{2}},
@@ -696,7 +696,7 @@ Using the D1-line of $^{133}$Cs atoms as the probe light, there are two magic-fr
 \includegraphics[scale=0.44]{./Figs/Fig_MagicFrequencies_alt}
 \caption{Atom-light interface using the clock states of $^{133}$Cs.  
 (a) Energy level structure for atoms probed with one of two magic frequencies on the D1-line. 
-(b) Magnitude of the magic detunings, $|\Delta^{m_f}|/2\pi$, and (c) dimensionless rotation angle  $\chi_{\tiny J_3}$ for an atom trapped on the $x$-axis at $ r'\!_\perp=1.8a $ as the quantization axis, \erf{Eq::QuantizationAxis}, is varied in the $x$-$y$ plane. 
+(b) Magnitude of the magic detunings, $| \tilde{\Delta}_{f}|/2\pi \eqiov | \omega_0 - \magic{f} |/2\pi$, and (c) dimensionless rotation angle  $\chi_{\tiny J_3}$ for an atom trapped on the $x$-axis at $ r'\!_\perp=1.8a $ as the quantization axis, \erf{Eq::QuantizationAxis}, is varied in the $x$-$y$ plane. 
 \comment{See text for details.}}\label{Fig::CouplingStrength}
 \end{figure}
 %=============================================
@@ -832,11 +832,11 @@ Typical time evolution is shown in \frf{Fig::Squeezing_Dynamics} for $2500$ atom
 \includegraphics[scale=0.42]{./Figs/Fig_SqueezingDynamics}
 \caption{Dynamics of spin squeezing on the clock states for $2500$ atoms trapped on the \emph{x}-axis at distance $ r'\!_\perp=1.8a$. 
 The optimal quantization axis (red) is compared to quantization along the $x$-axis (blue). 
-Solid lines indicate simulations with optical pumping and dashed lines without. 
+Dotted lines indicate simulations without optical pumping; i.e. no decoherence. 
 (a) Metrological spin squeezing parameter $\xi^{2}$. 
-(b) Collective mean spin $\expt{\hat{J}_1}$ and decaying atom number in the clock states $N_C$ (subplot).
-(c) Conditional variance $\varz$. 
-Using the optimal quantization axis, the inset shows the decomposition of $ \Delta J_3^2 $ (red dashed) into the variance part $N_A (\Delta j_3^{(1)})^2$ (green dash-dot) and the covariance part $N_A(N_A-1)\expect{\Delta j_3^{(1)}\Delta j_3^{(2)}}$ (black dotted).
+(b) Collective mean spin $\expt{\hat{J}_1}$ and decaying atom number in the clock states $N_C$ (inset).
+(c) Conditional squeezed variance $\varz$. 
+The inset shows the decomposition at the optimal quantization axis of $ \Delta J_3^2 $ (red dashed) into the single-atom variance, $N_A (\Delta j_3^{(1)})^2$ (green) and the two-body covariance, $N_A(N_A-1)\expect{\Delta j_3^{(1)}\Delta j_3^{(2)}}$ (black), as given by \erf{Eq::VarianceDecomposition}..
 }\label{Fig::Squeezing_Dynamics}
 \end{figure*}
 %================
@@ -849,7 +849,7 @@ These effects are captured by the depolarization rate $\gamma_{11}$ in the equat
 
 %The QND squeezing of the conditional variance, $\varz$, competes with two types of decoherence from optical pumping. First, optical pumping leads to decay of the two-body correlations that lie at the heart of spin squeezing.  
 We can gain deeper understanding in the microscopic effects of optical pumping on spin squeezing by looking at the evolution of the one and two-body correlation functions.  In terms of its constituent pseudospins, the collective variance takes the form
-	\begin{align}
+	\begin{align} \label{Eq::VarianceDecomposition}
 	\varz & = N_A \big( \Delta j_3^{(1)} \big)^2 + N_A(N_A-1) \expt{ \Delta j_3^{(1)} \Delta j_3^{(2)} }
 	%\varz & = \tilde{N}_A \big( \Delta j_3^{(1)} \big)^2 + \tilde{N}_A(\tilde{N}_A-1) \expt{ \Delta j_3^{(1)} \Delta j_3^{(2)} }
 	\end{align}
@@ -998,13 +998,13 @@ Further details about the guided-mode fields inside the nanofiber ($r_\perp\leq 
 %===================APPENDIX: Equations of motion =====================%
 \section{Derivation of the equations of motion for the moments} \label{Appendix::OpticalPumping}	
 
-For our choice of initial SCS along $\expt{\jx}$, the metrologically relevant squeezing parameter in \erf{Eq::SqueezingParameter} is $\xi^2 = N_A \expt{\Delta \hat{J}_3^2}/\expt{\hat{J}_1}^2$.  
+For our choice of initial SCS along $\expt{\jx}$, the metrologically relevant squeezing parameter in \erf{Eq::SqueezingParameter} is $\xi^2 = N_A \Delta J_3^2/\expt{\hat{J}_1}^2$.  
 We thus seek the time evolution of the one and two-body correlation functions:
 \begin{align}
-&\expt{\hat{N}_A} = \sum_n \expt{\hat{\mathbbm{1}}^{(n)}_C} \\
+&\expt{\hat{N}_C} = \sum_n \expt{\hat{\mathbbm{1}}^{(n)}_C} \\
 &\expt{\hat{J}_1} = \frac{1}{2} \sum_n \expt{\hat{\sigma}_1^{(n)}} \\
 &\expt{\hat{J}_3} = \frac{1}{2} \sum_n \expt{\hat{\sigma}_3^{(n)}} \\
-&\expt{\hat{J}_3^2} = \frac{\expt{\hat{N}_A}}{4} +\frac{1}{4} \sum_{m \neq n} \expt{\hat{\sigma}_3^{(m)}\otimes \hat{\sigma}_3^{(n)}}, 
+&\expt{\hat{J}_3^2} = \frac{\expt{\hat{N}_C}}{4} +\frac{1}{4} \sum_{m \neq n} \expt{\hat{\sigma}_3^{(m)}\otimes \hat{\sigma}_3^{(n)}}, 
 \end{align}
 where $\hat{\mathbbm{1}}_C \equiv \op{\uparrow}{\uparrow} + \op{\downarrow}{\downarrow}$ is the single-atom projector onto the clock states. 
 To include optical pumping, we apply the following equations of motion. For a collective, single-body operator, $\hat{X} = \sum_n \hat{x}^{(n)}$, the evolution due to optical pumping is $d\expt{ \hat{X}}|_{\rm op} = \sum_n \Tr [\mathcal{D}_n[\hat{\rho}]\hat{X} ]dt = \sum_n \expt{\mathcal{D}_n\dg[\hat{x}^{(n)}]} dt$, where the map, which acts locally on atoms along the nanofiber, is given in \erf{Eq::OpticalPumpingMapSchr}.  
@@ -1039,10 +1039,10 @@ with rates
 	\end{align}
 	\end{subequations}
 The decay of two-body spin correlations, given in \erf{Eq::TwoBodySpinDecay}, is then derived using the map for optical pumping within the pseudospin of each atom given by Eqs. (\ref{Eq::OperatorMap}).  
-Similarly, one can work out the other coupled optical pumping equations for two-body microscopic operator correlations $ \expt{\hat{\mathbbm{1}}^{(m)}_C \otimes \hat{\mathbbm{1}}^{(n)}_C} $ and $ \expt{\hat{\mathbbm{1}}^{(m)}_C \otimes \hat{\sigma}_3^{(n)} + \hat{\sigma}_3^{(m)} \otimes \hat{\mathbbm{1}}^{(n)}_C } $ when $ m\neq n $ and the macroscopic operator expectation values $ \expt{\hat{J}_3^2} $, $ \expt{\hat{N}_A^2} $, and $ \expt{\hat{N}_A\hat{J}_3} $. 
+Similarly, one can work out the other coupled optical pumping equations for two-body microscopic operator correlations $ \expt{\hat{\mathbbm{1}}^{(m)}_C \otimes \hat{\mathbbm{1}}^{(n)}_C} $ and $ \expt{\hat{\mathbbm{1}}^{(m)}_C \otimes \hat{\sigma}_3^{(n)} + \hat{\sigma}_3^{(m)} \otimes \hat{\mathbbm{1}}^{(n)}_C } $ when $ m\neq n $ and the macroscopic operator expectation values $ \expt{\hat{J}_3^2} $, $ \expt{\hat{N}_C^2} $, and $ \expt{\hat{N}_C\hat{J}_3} $. 
 As a result of the correlations between atoms, a weak measurement on the ensemble of atoms may squeeze the pseudospin state in the clock state subspace. 
 As has been examined numerically on the time scale of the birefringence QND measurement studied in this paper, the correlation between atom number in the clock state subspace and the pseudospin moment is so weak that one can treat the atom number operator in the clock state subspace as a number.
-We therefore set $ \expt{\hat{N}_A\hat{J}_3}-\expt{\hat{N}_A}\expt{\hat{J}_3}\approx 0 $ and $ \expt{\hat{N}_A^2} - \expt{\hat{N}_A}^2 \approx 0 $ and define $ N_C\equiv \expt{\hat{N}_A}$. 
+We therefore set $ \expt{\hat{N}_C\hat{J}_3}-\expt{\hat{N}_A}\expt{\hat{J}_3}\approx 0 $ and $ \expt{\hat{N}_C^2} - \expt{\hat{N}_C}^2 \approx 0 $ and define $ N_C\equiv \expt{\hat{N}_C}$. 
 
 The equations of motion for the moments of $\jz$ are now found from the SME, \erf{Eq::SME},
 	\begin{subequations} \label{Eq::J3MomentEquations}
