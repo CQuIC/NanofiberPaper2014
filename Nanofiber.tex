@@ -603,7 +603,7 @@ where the operator $\hat{\tensor{\mbf{A}}}(f,f') = \sum_{i,j} \hat{A}_{ij}(f,f')
 	\begin{align} \label{Eq::PolarizabilityIrrep}
 		\hat{A}_{ij}(f,f')&=  C_{ff'}^{(0)} \delta_{i,j}+ iC_{ff'}^{(1)}\epsilon_{ijk}\hat{f}_k+ C_{ff'}^{(2)} \Big[ \smallfrac{1}{2} ( \hat{f}_i\hat{f}_j +\hat{f}_j\hat{f}_i )-\smallfrac{1}{3} \hat{\mathbf{f}}\!\cdot\!\hat{\mathbf{f}} \delta_{i,j} \Big]. 
 \end{align}
-Here, $\charpol = -\frac{\sigma_0}{4\pi k_0}\frac{\Gamma/2 }{\Delta_{ff'}}$ is the characteristic dynamic polarizability where $\sigma_0 = 3 \lambda^2/2\pi$ is the resonant scattering cross section, $\hat{\mathbf{f}}$ is the atomic  spin operator in hyperfine multiplet $f$, and $C_{ff'}^{(K)}$ are coefficients for irreducible rank-$K$ components defined in \cite{deutsch_quantum_2010}. 
+Here, \comment{$\charpol = -\frac{\sigma_0}{4\pi k_0}\frac{1 }{\Delta_{ff'}+i\Gamma/2}$ is the characteristic dynamic polarizability} where $\sigma_0 = 3 \lambda^2/2\pi$ is the resonant scattering cross section, $\hat{\mathbf{f}}$ is the atomic  spin operator in hyperfine multiplet $f$, and $C_{ff'}^{(K)}$ are coefficients for irreducible rank-$K$ components defined in \cite{deutsch_quantum_2010}. 
 
 In addition to the atomic tensor response, the nanofiber geometry gives rise to unique features of polarization spectroscopy not present in free space.  The spatial anisotropy of the intensity for the quasilinearly polarized guided modes leads to unequal scattering of the $H$ and $V$ modes, producing \emph{intrinsic} birefringence even for a purely scalar atomic polarizability.  
 In particular, atoms trapped on the quasi-$H$ axis leads to a phase delay of this mode relative the fast quasi-$V$ axis. 
@@ -768,7 +768,7 @@ As we see in the next section, the optimal quantization axis is significantly mo
 
 
 	%====== SUBSECTION: Including optical pumping ======%
-	\subsection{Decoherence due to optical pumping}
+	\subsection{Decoherence due to optical pumping}\label{sec:decoherence}
 	
 The treatment above considers an idealized QND interaction. 
 The coupling of the atoms to the probe, however, will always lead to scattering of photons into modes other than the forward-scattered guided mode.  
@@ -798,7 +798,7 @@ Restricting to the two-dimensional subspace associated with the clock states, th
 		\mathcal{D}_n[\hat{\rho}] =  \sum_{f=3,4} \Big\{& -\frac{\gamma_{f}}{2} \big[ \hat{\rho} (\op{f,0}{f,0})^{(n)} + (\op{f,0}{f,0})^{(n)}\hat{\rho} \big)]\\
 		&+  \sum_{\tilde{f} =3,4}  \gamma_{f \rightarrow \tilde{f}}(\op{\tilde{f},0}{f,0})^{(n)} \hat{\rho}(\op{f,0}{\tilde{f},0})^{(n)} \Big\}.\nonumber
 	\end{align}
-Here, \comment{$\gamma_{f}$ is the total rate of photon scattering by atoms in the clock state $\ket{f,0}$, and $\gamma_{f \rightarrow \tilde{f} }$ are the rates of optical pumping between the clock states, $\ket{f,0} \rightarrow \ket{\tilde{f},0}$ (see Appendix~\ref{Appendix::OpticalPumping}). } 
+Here, \comment{$\gamma_{f}$ are the total rates of photon scattering by atoms in the clock state $\ket{f,0}$.  $\gamma_{f \rightarrow \tilde{f} }$ are the rates of optical pumping between the clock states, $\ket{f,0} \rightarrow \ket{\tilde{f},0}$ (see Appendix~\ref{Appendix::Rates}). } 
 
 When expressed in terms of Pauli operators on the clock-state pseudospin, the map acts as
 	\begin{align} \label{Eq::OpticalPumpingMapSchr}
@@ -995,6 +995,44 @@ Of particular interest is the $z$-component, \erf{Eq::zprofile}, which can becom
 Further details about the guided-mode fields inside the nanofiber ($r_\perp\leq a$), the radiation (unguided) modes, and the quantized form of both can be found in Refs. \cite{sondergaard_general_2001, tong_single-mode_2004, kien_field_2004, le_kien_spontaneous_2005, vetsch_eugen_optical_2010}.
 
 
+%===================APPENDIX: Photon scattering and optical pumping rates =====================%
+\section{Photon scattering and optical pumping rates} \label{Appendix::Rates}	
+
+To process section~\ref{sec:decoherence}, we define the total rate of photon scattering by atoms in the clock state $\ket{f,0}$ by
+	\begin{equation}\label{Eq::gammaf}
+		\gamma_{f}=- \frac{2}{\hbar} {\rm Im} \big[ \bra{f,0} \hat{h}_{\rm eff}\ket{f,0} \big] ,
+	\end{equation}
+where the effective non-Hermitian light-shift Hamiltonian for one atom is defined by
+\begin{align}
+\hat{h}_{\rm eff} = - \hat{\mathbf{E}}^{(-)}_{\rm in}(\mathbf{r}' ; t ) \cdot \poltens \cdot \hat{\mathbf{E}}^{(+)}_{\rm in}(\mathbf{r}' ;t )
+\end{align}
+followed from \erf{Eq::LightShiftHam}. 
+Since only the imaginary part of the Hamiltonian is required, one can calculate the photon scattering rates, $\gamma_{f}$, by accounting for the imaginary part of the atomic polarizability either using Eq.~\eqref{Eq::Polarizability} by substitution of $\charpol \rightarrow -\frac{\sigma_0}{4\pi k_0}\frac{1}{\Delta_{ff'}+i\Gamma/2}$ and the irreducible tensor operator $ \hat{\tensor{\mbf{A}}}(f,f') $ found in \erf{Eq::PolarizabilityIrrep} or using Eq.~\eqref{Eq::PolarizabilityOperator} with Wigner-Eckart theorem applied.  
+
+Meanwhile, the rates of optical pumping between the clock states, $\ket{f,0} \rightarrow \ket{\tilde{f},0}$, are
+	\begin{equation}\label{Eq::gammaff}
+		\gamma_{f \rightarrow \tilde{f} } =\sum_{f_a,f_b,q}\big| \bra{f,0} \hat{W}_q^{f_bf_a} \ket{\tilde{f},0} \big|^2=\sum_{q}\big| \bra{f,0} \hat{W}_q^{f\tilde{f}} \ket{\tilde{f},0} \big|^2,
+	\end{equation}
+where $ \hat{W}_q^{f_bf_a} = \sum_{f'}\frac{\Omega/2}{\Delta_{f'f_a}+i\Gamma/2}(\mathbf{e}_q^*\cdot\hat{\mathbf{D}}_{f_bf'} )(\mathbf{e}_{\rm in}\cdot \hat{\mathbf{D}}^\dagger_{f'f_a} ) $ are the Lindblad jump operators for optical pumping between ground levels $ f_a\rightarrow f_b $~\cite{deutsch_quantum_2010}. 
+Each jump operator $\hat{W}_q^{f_bf_a}$ is associated with absorption of the probe photon polarized along $ \mathbf{e}_{\rm in} $ direction followed by spontaneous emission of a photon with the circular polarization unit vector $ \mathbf{e}_q $ ($q=0,\pm 1$) for $\pi$ or $\pm \sigma$ transitions.  
+
+To separate the dependence of the input field intensity, we define a characteristic photon scattering rate, $\gamma_s \equiv \frac{\Gamma\Omega^2}{4\Delta_{\rm eff}^2}= \frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_\eff^2} \dot{N}_L $, where the Rabi frequency $ \Omega=2\bra{J}|d|\ket{J'}\mathcal{E}^{(+)}_{\rm in}/\hbar $ with reduced optical dipole matrix element $\bra{J}|d|\ket{J'}$ and the field amplitude $ \mathcal{E}^{(+)}_{\rm in}=|\mathbf{E}_{\rm in}^{(+)}(\br')| $.
+Eqs.~\eqref{Eq::gammaf} and~\eqref{Eq::gammaff} yield,
+	\begin{align}
+		\gamma_f &=n_g\dot{N}_L  \sum_{f'} \sigma (\Delta_{ff'} ) \mathbf{u}^*_\inp(\br'_\perp)\cdot \bra{f,0} \hat{\tensor{\mbf{A}}}(f,f') \ket{f,0}  \cdot \mathbf{u}_\inp(\br'_\perp)\\
+		&\approx \sum_{f'} \frac{\Gamma\Omega^2}{4\Delta_{ff'}^2}\sum_q \left| o_{jf}^{j'f'}C_{f'q}^{f0;1 q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q \\
+		&= \gamma_s \sum_{f'} \frac{\Delta_{\rm eff}^2}{\Delta_{ff'}^2}\sum_q \left| o_{jf}^{j'f'}C_{f'q}^{f0;1 q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q, \\
+		\gamma_{f \rightarrow \tilde{f}} 
+		%&=\sum_{f_a,f_b,q}\big| \bra{f,0} \hat{W}_q^{f_bf_a} \ket{\tilde{f},0} \big|^2\\
+		&\approx \sum_{f'} \frac{\Gamma\Omega^2}{4\Delta_{ff'}^2}\sum_q \left| o_{j\tilde{f}}^{j'f'} o_{jf}^{j'f'}C_{f'q}^{\tilde{f}0;1 q}C_{f'q}^{f0;1q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q\\
+		&= \gamma_s \sum_{f'} \frac{\Delta_{\rm eff}^2}{\Delta_{ff'}^2}\sum_q \left| o_{j\tilde{f}}^{j'f'} o_{jf}^{j'f'}C_{f'q}^{\tilde{f}0;1 q}C_{f'q}^{f0;1q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q,
+	\end{align}
+where $ \sigma (\Delta_{ff'} )  = \sigma_0 \Gamma^2/4\Delta^2_{ff'}$ is the the scattering cross section at the probe detuning. 
+$ o_{jf}^{j'f'} $ are the relative oscillator strengths, the square of which determine the branching ratios for spontaneous decay rates $ \Gamma_{j'f'\rightarrow jf} $ in the hyperfine multiplets to $\Gamma_{j'\rightarrow j}  $ in the atomic fine structure levels~\cite{deutsch_quantum_2010}. 
+$ C_{f'q}^{f0;1 q}=\Braket{f'q}{f0;1q} $ are the Clebsch-Gordan coefficients determining the clock state transition rates.
+
+Along the same line, the ratio of $ \kappa $ and $ \gamma_s $ characterizes the per-photon measurement strength on one atom, which is also defined as OD$\!/\! $atom in this paper. Together with the photon scattering and optical pumping rates discussed above, the spin squeezing dynamics due to the QND measurement can be studied independently of light intensity.
+
 %===================APPENDIX: Equations of motion =====================%
 \section{Derivation of the equations of motion for the moments} \label{Appendix::OpticalPumping}	
 
@@ -1055,33 +1093,6 @@ The equations of motion for the moments of $\jz$ are now found from the SME, \er
 The stochastic term in $d\expt{\jz^2}$ was simplified using the relation $\expt{\jz^3} = 3\expt{\jz^2}\expt{\jz}- 2\expt{\jz}^3$, which comes from Gaussian statistics \cite{jacobs_straightforward_2006}. 
 Finally, the It\={o} calculus governing the stochastically evolving moments requires that differentials be taken to second order, and the evolution of the variance is given by $d \varz = d \expt{\jz^2} - 2 \expt{\jz} d \expt{\jz} - ( d \expt{\jz} )^2$. 
 The equation of motion for the conditional variance, \erf{Eq::varJz}, then follows from Eqs.\eqref{Eq::J3MomentEquations}.
-
-\comment{Here, $\gamma_{f}$ is the total rate of photon scattering by atoms in the clock state $\ket{f,0}$, defined by
-	\begin{equation}\label{Eq::gammaf}
-		\gamma_{f}=- \frac{2}{\hbar} {\rm Im} \big[ \bra{f,0}\comment{ \hat{h}_{\rm eff}}\ket{f,0} \big] .
-	\end{equation}
-The effective non-Hermitian light-shift Hamiltonian that accounts for the imaginary part of the atomic polarizability is found by substitution of $\charpol \rightarrow -\frac{\sigma_0}{4\pi k_0}\frac{\Gamma/2}{\Delta_{ff'}+i\Gamma/2}$ in \erf{Eq::LightShiftHam}.  The rates of optical pumping between the clock states, $\ket{f,0} \rightarrow \ket{\tilde{f},0}$, are
-	\begin{equation}\label{Eq::gammaff}
-		\gamma_{f \rightarrow \tilde{f} } =\sum_{f_a,f_b,q}\big| \bra{f,0} \hat{W}_q^{f_bf_a} \ket{\tilde{f},0} \big|^2,
-	\end{equation}
-where $\hat{W}_\pi$ is the Lindblad jump-operator associated with absorption of the probe photon followed by spontaneous emission of a $q$-polarized photon ($q=0,\pm 1$ corresponding to $\pi$ and $\pm \sigma$ transitions)~\cite{deutsch_quantum_2010}.  
-
-To calculate the rates, we define a characteristic photon scattering rate, $\gamma_s \equiv \frac{\Gamma\Omega^2}{4\Delta_{\rm eff}^2}= \frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_\eff^2} \dot{N}_L $, to capture the input field intensity, where the Rabi frequency $ \Omega=2\bra{J}|d|\ket{J'}\mathcal{E}^{(+)}_{\rm in}/\hbar $ with reduced optical dipole matrix element $\bra{J}|d|\ket{J'}$ and the field amplitude $ \mathcal{E}^{(+)}_{\rm in}=|\mathbf{E}_{\rm in}^{(+)}(\br')| $.
-Using the Wigner-Eckart theorem, Eqs.~\eqref{Eq::gammaf} and~\eqref{Eq::gammaff} yield,
-	\begin{align}
-		\gamma_f &=n_g\dot{N}_L  \sum_{f'} \sigma (\Delta_{ff'} ) \mathbf{u}^*_\inp(\br'_\perp)\cdot \bra{f,0} \hat{\tensor{\mbf{A}}}(f,f') \ket{f,0}  \cdot \mathbf{u}_\inp(\br'_\perp)\\
-		&\approx \sum_{f'} \frac{\Gamma\Omega^2}{4\Delta_{ff'}^2}\sum_q \left| o_{jf}^{j'f'}C_{f'q}^{f0;1 q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q \\
-		&= \gamma_s \sum_{f'} \frac{\Delta_{\rm eff}^2}{\Delta_{ff'}^2}\sum_q \left| o_{jf}^{j'f'}C_{f'q}^{f0;1 q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q, \\
-		\gamma_{f \rightarrow \tilde{f}} &=\sum_{f_a,f_b,q}\big| \bra{f,0} \hat{W}_q^{f_bf_a} \ket{\tilde{f},0} \big|^2\\
-		&\approx \sum_{f'} \frac{\Gamma\Omega^2}{4\Delta_{ff'}^2}\sum_q \left| o_{j\tilde{f}}^{j'f'} o_{jf}^{j'f'}C_{f'q}^{\tilde{f}0;1 q}C_{f'q}^{f0;1q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q\\
-		&= \gamma_s \sum_{f'} \frac{\Delta_{\rm eff}^2}{\Delta_{ff'}^2}\sum_q \left| o_{j\tilde{f}}^{j'f'} o_{jf}^{j'f'}C_{f'q}^{\tilde{f}0;1 q}C_{f'q}^{f0;1q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q,
-	\end{align}
-where $ \sigma (\Delta_{ff'} )  = \sigma_0 \Gamma^2/4\Delta^2_{ff'}$ is the the scattering cross section at the probe detuning, and $ \mathbf{e}_q $ and $ \mathbf{e}_{\rm in} $ are the unit vectors for the spherical basis and input field respectively. 
-$ \hat{W}_q^{F_bF_a} = \sum_{f'}\frac{\Omega/2}{\Delta_{f'f_a}+i\Gamma/2}(\mathbf{e}_q^*\cdot\hat{\mathbf{D}}_{f_bf'} )(\mathbf{e}_{\rm in}\cdot \hat{\mathbf{D}}^\dagger_{f'f_a} ) $ are the jump operators for optical pumping between magnetic sublevels~\cite{deutsch_quantum_2010}.
-$ o_{jf}^{j'f'} $ are the relative oscillator strengths, the square of which determine the branching ratios for spontaneous decay rates $ \Gamma_{j'f'\rightarrow jf} $ in the hyperfine multiplets to $\Gamma_{j'\rightarrow j}  $ in the atomic fine structure levels~\cite{deutsch_quantum_2010}. 
-$ C_{f'q}^{f0;1 q}=\Braket{f'q}{f0;1q} $ are the Clebsch-Gordan coefficients determining the clock state transition rates.
-
-Similarly, the ratio between $ \kappa $ and $ \gamma_s $ characterize the coupling strength between the atom ensembles and the light, which is independent of light intensity. Together with those rates discussed above, the spin squeezing dynamics can be fully studied independently of light intensity.}
 
 
 
