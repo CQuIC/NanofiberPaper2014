@@ -380,14 +380,6 @@ The phase difference in that basis, $\delta  \phi_H - \delta \phi_V$, correspond
 Analyzed in the quasicircular polarization modes ($p=\pm$), given in \erf{Eq::QuasicircularModes}, the differential phase $\delta \phi_+ -\delta  \phi_-$ corresponds to Faraday rotation and $t_{+-}$ to birefringence.  
 We make use of such polarization transformations as a means to nondestructively measure the atoms and generate collective spin squeezing.
 
-
-%%============== FIGURE: Phase Shifts =====================%
-%\begin{figure}
-%\includegraphics[scale=0.35]{./Figs/RelEnhanceFactor_r_w10micro}
-%\caption{Dispersive phase shift imparted by scalar scatterers (atoms) near a nanofiber on the \emph{x}-axis compared to phase shift in free space on a paraxial $\mathrm{TEM}_{00}$ beam with waist $w_0 = 30 \mu$m. (a) Peak single-atom phase shift. (b) Average phase shift per atom compared to a three-dimensional Gaussian cloud in free space. }\label{Fig::PhaseShift}
-%\end{figure}
-%%=====================================================%
-
 	
 %===================Heisenberg-Langevin Equations=====================%
 \section{Heisenberg-Langevin-picture solution and atomic response} \label{Sec::HeisenbergLangevin}
@@ -700,7 +692,7 @@ Using the D1-line of $^{133}$Cs atoms as the probe light, there are two magic-fr
 \includegraphics[scale=0.44]{./Figs/Fig_MagicFrequencies}
 \caption{Atom-light interface using the clock states of $^{133}$Cs.  
 (a) Energy level structure for atoms probed with one of two magic frequencies on the D1-line. 
-(b) Magnitude of the magic detunings, $| \tilde{\Delta}_{f}|/2\pi \equiv | \omega_0 - \magic{f} |/2\pi$, {\color{blue} at which the clock states are equally light-shifted and (c) the coupling strength, as measured by the polarization rotation angle on the Poincar\'{e} sphere, $\chi_{\tiny J_3}$ for an atom trapped in the $x$-$z$ plane, a distance $ r'\!_\perp=1.8a $ from the fiber surface.  This coupling strength varies as a function of the direction of the quantization axis that defines the clock states, \erf{Eq::QuantizationAxis}.  We plot $\chi_{\tiny J_3}$ as the direction of the clock state quantization axis is varied in the $x$-$y$ plane.}
+(b) Magnitude of the magic detunings, $| \tilde{\Delta}_{f}|/2\pi \equiv | \omega_0 - \magic{f} |/2\pi$, {\color{blue} at which the clock states are equally light-shifted.  There are two solutions shown as blue and red lines. (c) The coupling strength, as measured by the polarization rotation angle on the Poincar\'{e} sphere, $\chi_{\tiny J_3}$ for an atom trapped in the $x$-$z$ plane, a distance $ r'\!_\perp=1.8a $ from the fiber surface.  This coupling strength varies as a function of the direction of the quantization axis that defines the clock states, \erf{Eq::QuantizationAxis}.  We plot $\chi_{\tiny J_3}$ as the direction of the clock state quantization axis is varied in the $x$-$y$ plane for the two choices of magic detunings.}
 \comment{See text for details.}}\label{Fig::CouplingStrength}
 \end{figure}
 %=============================================
@@ -829,18 +821,18 @@ We retain this small correction since unbalanced optical pumping acts to polariz
 
 To find the peak squeezing in the presence of optical pumping, we numerically integrate Eqs. (\ref{Eq::NA}--\ref{Eq::varJz}) and then use \erf{Eq::SqueezingParameter} to calculate the metrological squeezing parameter, $\xi^2$, as a function of time. 
 We choose here the magic frequency close to the $ f=4\leftrightarrow f'=4 $ transition, $ \magic{4} $, which is furthest from resonance with both excited hyperfine transitions. 
-Typical time evolution is shown in \frf{Fig::Squeezing_Dynamics} for $2500$ atoms trapped on the \emph{x}-axis at a distance $r'\!_\perp=1.8a$ from the center of the nanofiber, {\color{blue} where time is scaled} to the characteristic scattering rate, $\gamma_s \equiv \frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_\eff^2} \dot{N}_L $.  We study the dynamics for two choices of quantization axis: (i) along the $x$-axis and (ii) along the numerically determined optimal axis.  Figure \ref{Fig::Squeezing_Dynamics}(a) shows the time evolution of the squeezing parameter.  {\color{blue} We achieve a maximum squeezing of} 4.7 dB when the clock states are chosen along the optimal axis; $\qangle^{\rm opt} \approx 86^\circ$ in \erf{Eq::QuantizationAxis}. 
+Typical time evolution is shown in \frf{Fig::Squeezing_Dynamics} for $2500$ atoms trapped a distance $r'\!_\perp=1.8a$ from the center of the nanofiber, {\color{blue} where time is scaled} to the characteristic scattering rate, $\gamma_s \equiv \frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_\eff^2} \dot{N}_L $.  We study the dynamics for two choices of quantization axis: (i) along the $x$-axis and (ii) along the numerically determined optimal axis.  Figure \ref{Fig::Squeezing_Dynamics}(a) shows the time evolution of the squeezing parameter.  {\color{blue} We achieve a maximum squeezing of} 4.7 dB when the clock states are chosen along the optimal axis; $\qangle^{\rm opt} \approx 86^\circ$ in \erf{Eq::QuantizationAxis}. 
 
 %========= SQUEEZING DYNAMICS: \xi, variance, mean,  N_A =========
 \begin{figure*}[t]
 \includegraphics[scale=0.42]{./Figs/Fig_SqueezingDynamics}
-\caption{Dynamics of spin squeezing on the clock states for $2500$ atoms trapped on the \emph{x}-axis at distance $ r'\!_\perp=1.8a$. 
+\caption{Dynamics of spin squeezing on the clock states for $2500$ atoms trapped {\color{blue} in the $x$-$z$ plane at distance $ r'\!_\perp=1.8a$ from the axis of the nanofiber.} 
 The optimal quantization axis (red) is compared to quantization along the $x$-axis (blue). 
 Dotted lines indicate simulations without optical pumping; i.e. no decoherence. 
-(a) Metrological spin squeezing parameter $\xi^{2}$. 
+(a) Metrological spin squeezing parameter $\xi^{2}${\color{blue}, Eq. (?)}. 
 (b) Collective mean spin $\expt{\hat{J}_1}$ and decaying atom number in the clock states $N_C$ (inset).
 (c) Conditional squeezed variance $\varz$. 
-The inset shows the decomposition at the optimal quantization axis of $ \Delta J_3^2 $ (red dashed) into the single-body variance, $N_A (\Delta j_3^{(1)})^2$ (green) and the two-body covariance, $N_A(N_A-1)\expect{\Delta j_3^{(1)}\Delta j_3^{(2)}}$ (black), as given by \erf{Eq::VarianceDecomposition}.
+The inset shows the decomposition at the optimal quantization axis of $ \Delta J_3^2 $ (red dashed) into the single-body variance, $N_A (\Delta j_3^{(1)})^2$ (green) and the two-body covariance, $N_A(N_A-1)\expect{\Delta j_3^{(1)}\Delta j_3^{(2)}}$ (black), as given by \erf{Eq::VarianceDecomposition} {\color{blue} where (1) and (2) denote any two atoms in the symmetric ensemble}.
 }\label{Fig::Squeezing_Dynamics}
 \end{figure*}
 %================
@@ -877,10 +869,11 @@ All of these effects are included in the equation for $\varz$, \erf{Eq::varJz}, 
 %========= FIGURE: Peak squeezing (\xi, measurement strength, scattering rates) =========
 \begin{figure}
 \includegraphics[scale=0.37]{./Figs/Fig_SqueezingQuantAxis}
-\caption{Dependence of metrological squeezing on quantization axis, $\qaxis$, for $2500$ atoms trapped on the $x$-axis at a distance $ r'\!_\perp=1.8a$. In (b--d) $\qaxis$ is confined to the $x$-$y$ plane where the optimal peak squeezing occurs.
-(a--b) Peak squeezing for varying $\qaxis$. 
-(c) OD/atom.
-(d) Rates of atom loss, $\gamma_{00}$, and depolarization, $\gamma_{11}$ relative to the characteristic scattering rate $\gamma_s$. }\label{Fig::Squeezing_QuantizationAxis}
+\caption{Dependence of the parameters that determine metrological squeezing  on {\color{blue} the direction of the quantization axis that defines the clock states, $\qaxis$.  In all cases we consider $2500$ atoms trapped in the $x$-$z$ plane at distance $ r'\!_\perp=1.8a$ from the axis of the nanofiber. 
+In (b--d) $\qaxis$ is confined to the $x$-$y$ plane, where the optimal peak squeezing occurs.
+(a,b)  Maximum squeezing achievable at the peak time, measured in dB, as a function of the direction of  $\qaxis$. 
+(c) OD/atom=$\sigma_0 A_{in}/A^2_{J_3}$, Eq. (?) .
+(d) Rates of atom loss, $\gamma_{00}$, and depolarization, $\gamma_{11}$ relative to the characteristic scattering rate $\gamma_s$.  Eqns. (?)} }\label{Fig::Squeezing_QuantizationAxis}
 \end{figure}
 %================
 
@@ -906,9 +899,9 @@ Further, elastically scattered incoherent photons from optical pumping are assum
 %======= FIG: Scaling with atom number and distance =======
 \begin{figure*}[t]\includegraphics[scale=0.4]{./Figs/Fig_SqueezingDistance}
 \caption{Squeezing as a function of trapping distance $r_\perp$ and initial atom number $N_A$. 
-(a) OD/atom. Inset is the corresponding magic detuning in units of MHz.
+(a) OD/atom. Inset is the corresponding magic detuning in units of MHz {\color{blue} (see text)}.
 (b) Optimal quantization axis orientation angle $\qaxis$ in the $x$-$y$ plane for different atom numbers. 
-The line with $ 500 $ atoms is cut off when the squeezing effect is too weak to be observed ($ r'\!_\perp>2.3a $).
+The line with $ 500 $ atoms {\color{blue} terminates} when the squeezing effect is too weak to be observed ($ r'\!_\perp>2.3a $).
 (c) Peak metrological squeezing at the optimal $\qaxis$ for different atom numbers.} \label{Fig::Squeezing_Distance}
 \end{figure*}
 %================================
