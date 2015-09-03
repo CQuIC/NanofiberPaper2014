@@ -258,7 +258,7 @@ We conclude with a summary and outlook for future research in \srf{Sec::Conclusi
 
 Given a point particle with tensor polarizability $\tensor{\boldsymbol{\alpha}}$ at position $\br'$ near the surface of a nanofiber, the field  at frequency $\omega_0$ is given by the solution to the wave equation, 
 	\begin{align}\label{Eq::WaveEquationSource}
-		\left[ - \nabla\times\nabla\times + \, n^2(\br)k_0^2 \right] \mathbf{E}(\br) &= -4\pi  k_0^2 \delta^{(3)}(\br-\br')\,  \tensor{\boldsymbol{\alpha}}\cdot \mathbf{E}(\br),
+		\left[ - \!\nabla\!\!\times\!\nabla\!\!\times \!+  n^2\!(\br)k_0^2 \right]\! \mathbf{E}(\br) &\!=\! -4\pi  k_0^2 \delta^{(3)}\!(\br\!-\!\br')\,  \tensor{\boldsymbol{\alpha}}\!\cdot\! \mathbf{E}(\br),
 	\end{align}
 where $k_0=\omega_0/c$ and $n(\mbf{r})$ is the spatially varying index of refraction that describes the fiber; Gaussian-cgs units are used throughout.  
 For an asymptotic input field $\mathbf{E}_{\inp}(\br)$, the scattering solution to \erf{Eq::WaveEquationSource} is given by the Lippmann-Schwinger equation \cite{wubs_multiple-scattering_2004},
@@ -299,9 +299,9 @@ for a silica core ($n_1 = 1.4469$)~\cite{kien_field_2004} and infinite vacuum cl
 
 We consider nanofibers that support only the lowest HE$_{11}$ guided modes at the relevant frequency $\omega_0$ \cite{snyder_optical_1983}, and thus we drop the mode index $j$.  In this case there are four guided modes: two polarizations $p$, each with propagation constant (longitudinal wavenumber) $\beta(\omega_0) = \pm\beta_0$ corresponding to forward and backward propagation.  The guided-mode contribution to the dyadic Greens function is then 
 	\begin{align} \label{Eq::GreensEigenmodes}
-		\tensor{\mathbf{G}}\!_g(\br\!,\br'\!; \omega_0) \!=&\! \int_{\!-\infty}^\infty \!\!\!\! \mathrm{d} \beta \!\sum_{p} \!
-\frac{-2\omega_0^2}{\omega_0^2\!\!-\!\omega^2(\beta)} \mathbf{u}_{\beta,p} (\br\!_\perp)\mathbf{u}^*_{\beta,p} 
-(\br_{\!\perp}^\prime) e^{i\beta(\!z\!-\!z'\!)},
+		\tensor{\mathbf{G}}\!_g\!(\!\br\!,\br'\!; \omega_0\!) \!=&\!\! \int_{\!-\infty}^\infty \!\!\!\!\!\! \mathrm{d} \beta \!\sum_{p} \!\!
+\frac{-2\omega_0^2}{\omega_0^2\!\!-\!\omega^2(\!\beta\!)} \mathbf{u}_{\beta\!,p} (\!\br\!_\perp\!)\mathbf{u}^*_{\beta\!,p} 
+(\!\br_{\!\perp}^\prime\!) e^{i\beta(\!z\!-\!z'\!)}\!,
 	\end{align}
 where $ \omega(\beta)$ is the frequency of the guided HE$_{11}$ for a given $\beta$.  
 
