@@ -150,7 +150,7 @@
 \newcommand{\Eamp}{\mathcal{F}_0^{(+)}}
 \newcommand{\charpol}{\alpha_0(\Delta_{f'f})}
 \newcommand{\qaxis}{\mathbf{e}_{\tilde{z}}}
-\newcommand{\qangle}{\phi_\pi}
+\newcommand{\qangle}{\varphi}
 \newcommand{\magic}[1]{\tilde{\omega}_{#1}}
 \newcommand{\chiN}{\chi_{N}}
 \newcommand{\NA}{N_C}
@@ -201,7 +201,7 @@
 
 %================================================================%
 \begin{abstract}
-We study {\color{blue} the dispersive regime of strong coupling between photons and atoms that can be achieved in an optical nanofiber geometry.}  While the Purcell enhancement factor for spontaneous emission into the guided mode does not reach the strong-coupling regime for individual atoms, strong cooperativity for ensembles of a few thousand atoms can be achieved due to the tight confinement of the guided modes and constructive interference over the entire chain of trapped atoms. We calculate the dyadic Green's function, which determines the scattering of light by atoms in the presence of the fiber, and thus the phase shift and polarization rotation induced on the guided light by the trapped atoms.  The Green's function is related to a full Heisenberg-Langevin treatment of the dispersive response of the quantized field to tensor polarizable atoms.  We apply our formalism to the study of quantum nondemolition (QND) measurement of the atoms via polarimetry.  We calculate the shot-noise-limited detection of atom number for atoms in a completely mixed state and the squeezing of projection noise on the atomic clock transition.  Compared with squeezing of atomic ensembles in free space, we capitalize on unique features that arise in the nanofiber geometry, including anisotropy of the intensity and polarization of the guided modes.  We use a first principles stochastic master equation to model the squeezing as function of time in the presence of decoherence due optical pumping.  We find a peak metrological squeezing of $\sim 5$ dB is achievable with current technology for $\sim 2500$ atoms trapped 180 nm from the surface of a nanofiber with radius 225 nm.  
+We study {\color{blue} the dispersive regime of strong coupling between photons and atoms that can be achieved in an optical nanofiber geometry.}  While the Purcell enhancement factor for spontaneous emission into the guided mode does not reach the strong-coupling regime for individual atoms, strong cooperativity for ensembles of a few thousand atoms can be achieved due to the tight confinement of the guided modes and constructive interference over the entire chain of trapped atoms. We calculate the dyadic Green's function, which determines the scattering of light by atoms in the presence of the fiber, and thus the phase shift and polarization rotation induced on the guided light by the trapped atoms.  The Green's function is related to a full Heisenberg-Langevin treatment of the dispersive response of the quantized field to tensor polarizable atoms.  We apply our formalism to the study of quantum nondemolition (QND) measurement of the atoms via polarimetry.  We calculate the shot-noise-limited detection of atom number for atoms in a completely mixed state and the squeezing of projection noise on the atomic clock transition.  Compared with squeezing of atomic ensembles in free space, we capitalize on unique features that arise in the nanofiber geometry, including anisotropy of the intensity and polarization of the guided modes.  We use a first principles stochastic master equation to model the squeezing as function of time in the presence of decoherence \comment{due to} optical pumping.  We find a peak metrological squeezing of $\sim 5$ dB is achievable with current technology for $\sim 2500$ atoms trapped 180 nm from the surface of a nanofiber with radius 225 nm.  
 \end{abstract}
 
 \maketitle
@@ -335,7 +335,7 @@ Only the positive-frequency component contributes to the $\delta$-function, and 
 The energy level shift of the scatterer due to its proximity to the dielectric is found from the real part of the Green's function at $\br = \br'$. 
 To find the total modified spontaneous emission rate and energy level shift one must include the unguided radiation modes \cite{le_kien_spontaneous_2005} or employ other representations of the Green's function \cite{klimov_spontaneous_2004}.  
 
-Equation (\ref{Eq::GreensGuided}) is the central result from which we can calculate the dispersive response.  Consider a forward-propagating {\color{blue} ($b=+$)} input field in the guided modes with frequency $\omega_0$, positive-frequency amplitude $\Eamp$, and arbitrary polarization, $\mathbf{E}^{(+)}_{\inp}(\br) = \Eamp  \mathbf{u}_{\rm in}(\br_\perp) e^{i \beta_0 z}$ {\color{red} (Is there any confusion between the + for forward-propagating and the + for positive frequency component of the E-field? Along these lines, I changed the $b = \pm 1 \rightarrow b = \pm$. The digit 1 makes no sense there, since this is just a label for a mode, not a value.)}  {\color{purple}  Ivan -- I don't think there is a confusion here.  The positive frequency component is in the exponent.  As for  $b = \pm 1$, or $b = \pm$, either is fine.  The value is $\pm 1$ as it multiplies $\beta_0$.  I really don't care either way}.
+Equation (\ref{Eq::GreensGuided}) is the central result from which we can calculate the dispersive response.  Consider a forward-propagating {\color{blue} ($b=+$)} input field in the guided modes with frequency $\omega_0$, positive-frequency amplitude $\Eamp$, and arbitrary polarization, $\mathbf{E}^{(+)}_{\inp}(\br) = \Eamp  \mathbf{u}_{\rm in}(\br_\perp) e^{i \beta_0 z}$.
 
 
 The effective mode area at the atom's position is determined from the total cycle-averaged power transported along the nanofiber, $P_{{\rm in},z} = (v_g/2\pi) \int d^2\br \, n^2(r_\perp) |\mathbf{E}^{(+)}_{\inp}(\br) |^2$, and the intensity at the atom, $I_{\rm in}(\mathbf{r}') = (c/2\pi) |\mathbf{E}^{(+)}_{\inp}(\br') |^2$, via the relation \cite{domokos_quantum_2002},
@@ -597,7 +597,7 @@ where the operator $\hat{\tensor{\mbf{A}}}(f,f') = \sum_{i,j} \hat{A}_{ij}(f,f')
 	\begin{align} \label{Eq::PolarizabilityIrrep}
 		\hat{A}_{ij}(f,f')&=  C_{ff'}^{(0)} \delta_{i,j}+ iC_{ff'}^{(1)}\epsilon_{ijk}\hat{f}_k+ C_{ff'}^{(2)} \Big[ \smallfrac{1}{2} ( \hat{f}_i\hat{f}_j +\hat{f}_j\hat{f}_i )-\smallfrac{1}{3} \hat{\mathbf{f}}\!\cdot\!\hat{\mathbf{f}} \delta_{i,j} \Big]. 
 \end{align}
-Here, \comment{$\charpol = -\frac{\sigma_0}{4\pi k_0}\frac{1 }{\Delta_{ff'}+i\Gamma/2}$ is the characteristic dynamic polarizability} where $\sigma_0 = 3 \lambda^2/2\pi$ is the resonant scattering cross section, $\hat{\mathbf{f}}$ is the atomic  spin operator in hyperfine multiplet $f$, and $C_{ff'}^{(K)}$ are coefficients for irreducible rank-$K$ components defined in \cite{deutsch_quantum_2010}. 
+Here, $\charpol = -\frac{\sigma_0}{4\pi k_0}\frac{1 }{\Delta_{ff'}+i\Gamma/2}$ is the characteristic dynamic polarizability where $\sigma_0 = 3 \lambda^2/2\pi$ is the resonant scattering cross section, $\hat{\mathbf{f}}$ is the atomic  spin operator in hyperfine multiplet $f$, and $C_{ff'}^{(K)}$ are coefficients for irreducible rank-$K$ components defined in \cite{deutsch_quantum_2010}. 
 
 In addition to the atomic tensor response, the nanofiber geometry gives rise to unique features of polarization spectroscopy not present in free space.  The spatial anisotropy of the intensity for the quasilinearly polarized guided modes leads to unequal scattering of the $H$ and $V$ modes, producing \emph{intrinsic} birefringence even for a purely scalar atomic polarizability.  
 In particular, atoms trapped on the quasi-$H$ axis leads to a phase delay of this mode relative the fast quasi-$V$ axis. 
@@ -630,16 +630,19 @@ The shot-noise variance of the polarimeter, $\shotnoise =  \dot{N}_L T$ for inte
 The {\color{blue} smallest detectable atom number} using this dispersive measurement is thus, $\delta N_A \sim ( \chiN^2 \dot{N}_L T)^{-1/2}$ \cite{smith_faraday_2003}.  
 In an ideal setting, $\delta N_A$ can always be reduced by increasing the integration time. In practice this time is limited by atom loss from photon scattering into reflected and unguided modes. 
 As a coarse approximation, we take this time to be $T=\gamma_s^{-1}$, where $\gamma_s$ is the photon scattering rate in free space, \comment{and we have set the quantum efficiency of photon detectors to be $ 100 \% $}.  
-For detuning $\Delta$ large compared to the excited hyperfine splitting on the \comment{D1 or D2 lines}, the unit-oscillator scattering rate is $\gamma_s =(\sigma_0 /A_{\rm in})(\Gamma/2 \Delta)^2 \dot{N}_L $, with effective area determined by the probe at the atomic position, \erf{Eq::AreaIn}.  
+For detuning $\Delta$ large compared to the excited hyperfine splitting on the \comment{D1 or D2 lines}, the unit-oscillator scattering rate is 
+$\gamma_s =\frac{\sigma_0}{A_{\rm in}}\left(\frac{\Gamma}{2 \Delta}\right)^2 \dot{N}_L $, 
+with effective area determined by the probe at the atomic position, \erf{Eq::AreaIn}.  
 In this limit, the rotation angle $\chiN = C^{(0)}_{j'} (\sigma_0/\Abir)(\Gamma/2\Delta)$, \erf{Eq::RotationAngle}, yields a shot noise-limited atom number resolution, 
 	\begin{align} \label{Eq::AtomNumberResolution}
 		\delta N_A  &\sim \frac{1}{C^{(0)}_{j'}}\sqrt {\frac{\Abir^2}{A_{\rm in} \sigma_0}},
 	\end{align}
-\comment{where $ C^{(0)}_{j'}=\sum_{f,f'}C^{(0)}_{ff'}=2^{(j'-1/2)}/3  $ with $ j'=1/2,3/2 $ are the far-tuning irreducible rank-$0$ coefficients for the D1 and D2 line transitions. 
+where $ C^{(0)}_{j'}=\sum_{f,f'}C^{(0)}_{ff'}=2^{(j'-1/2)}/3  $ with $ j'=1/2,3/2 $ are the far-tuning irreducible rank-$0$ coefficients for the D1 and D2 line transitions. 
 Using the parameters chosen for this paper, we find the minimum detectable atom number with a D1 probe light to be $10\sim 20$ for atoms trapped at $ 1.5a\sim 2.0a $ away from the fiber axis. As the fiber diameter increases in a reasonable range, the minimum detectable atom number will be increased by a small amount as a result of the stronger confinement of the light field as well as the larger H-to-V mode intensity contrast at the atom position. Using a D2 line probe light, the minimum detectable atom number will be decreased almost by a factor of 2 due to the stronger atom-light interaction.
 
-{\color{red} In general,} loss and decoherence due to the imperfection of atomic trapping and photon detection will degrade the measurement for long integration times and {\color{red} will} yield a worse atom number resolution than the minimum detectable atom number roughly estimated above~\cite{dawkins_dispersive_2011, zhang_collective_2012}. The experimental implementation of the dispersive atom number measurement reported by Dawkins \emph{et al.}~\cite{dawkins_dispersive_2011} implies a few tens of atom number resolution can be reached when $ 200\sim 1000 $ atoms are loaded at $ r'\approx 1.9a $ with the fiber radius $ a=250nm $. 
-A similar scheme, recently employed by \emph{B\'{e}guin et al.} \cite{beguin_generation_2014} to perform nondestructive atom number measurements in a nanofiber geometry,  reported an improved atom number resolution of $\delta N_A = 8$ for $\expt{N_A}\sim2500$ atoms trapped at $ r'\approx 1.8a $ ($a=250nm$) by using the differential signal of two-color probes.  {\color{red}  The optical nanofiber provides a promising geometry in which to perform continuous atom number measurements at the level of a few atoms when coupled to guided light} in the dispersive regime. }
+In general, loss and decoherence due to the imperfection of atomic trapping and photon detection will degrade the measurement for long integration times and will yield a worse atom number resolution than the minimum detectable atom number roughly estimated above~\cite{dawkins_dispersive_2011, zhang_collective_2012}. The experimental implementation of the dispersive atom number measurement reported by Dawkins \emph{et al.}~\cite{dawkins_dispersive_2011} implies a few tens of atom number resolution can be reached when $ 200\sim 1000 $ atoms are loaded at $ r'\!_\perp \approx 1.9a $ with the fiber radius $ a=250nm $. 
+A similar scheme, recently employed by \emph{B\'{e}guin et al.} \cite{beguin_generation_2014} to perform nondestructive atom number measurements in a nanofiber geometry,  reported an improved atom number resolution of $\delta N_A = 8$ for $N_A\sim2500$ atoms trapped at $ r'\!_\perp\approx 1.8a $ ($a=250nm$) by using the differential signal of two-color probes. 
+The optical nanofiber provides a promising geometry in which to perform continuous atom number measurements at the level of a few atoms when coupled to guided light in the dispersive regime.
 
 
 
@@ -751,14 +754,14 @@ and an effective area given by
 		A_{J_3}^{-1} & = n_g \frac{ |\mathbf{e}_{\tilde{z}} \cdot \mathbf{u}_V(\br'_\perp)|^2 |\mathbf{u}_H(\br'_\perp)|^2 - |\mathbf{e}_{\tilde{z}} \cdot \mathbf{u}_H(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2 }{ |\mathbf{u}_H(\br'_\perp)|^2 + |\mathbf{u}_V(\br'_\perp)|^2 } 
 	\end{align}	
 {\color{blue} We see explicitly here that the coupling strength depends both on the anisotropy of the modes and the tensor atomic response, which in turn depends on a particular choice of clock states.}  The quantization axis that maximizes $\chieff$ is that which minimizes $A_{J_3}$ at a given magic detuning.  
-Since the $z$-component of the guided modes is $90^\circ$ out-of-phase with the transverse components, the quantization axis maximizing the atom-light coupling is specified by an angle in the transverse $x$-$y$ plane, $\phi_\pi$,
+Since the $z$-component of the guided modes is $90^\circ$ out-of-phase with the transverse components, the quantization axis maximizing the atom-light coupling is specified by \comment{an angle in the transverse $x$-$y$ plane, $\varphi$},
 	\begin{align} \label{Eq::QuantizationAxis}
-		\qaxis = \cos \phi_\pi \mbf{e}_x + \sin \phi_\pi \mbf{e}_y.
+		\qaxis = \cos \varphi \mbf{e}_x + \sin \varphi \mbf{e}_y.
 	\end{align}
 The dependence of the magic detunings on the direction of quantization axis is shown in \frf{Fig::CouplingStrength}(b) for atoms trapped at a typical distance of $r_\perp'=1.8a$ on the $x$-axis.   
 In typical operating regimes, the magic frequencies are hundreds of MHz from resonance with either excited state, placing the interaction in the off-resonant, dispersive regime.  
 %Their additional dependence on distance from the nanofiber is plotted in \frf{Fig::CouplingStrength}(c) for several choices of quantization axis.  
-Using these magic detunings, in \frf{Fig::CouplingStrength}(c) we show the variation in $\chieff$ as a function of $\phi_\pi$.  
+Using these magic detunings, in \frf{Fig::CouplingStrength}(c) we show the variation in $\chieff$ as a function of $\varphi$.  
 This suggests that, based solely on the strength of the coherent interaction, the $x$-axis is the optimal quantization axis. 
 As we see in the next section, the optimal quantization axis is significantly modified when decoherence due to optimal pumping is included.
 
@@ -821,7 +824,11 @@ We retain this small correction since unbalanced optical pumping acts to polariz
 
 To find the peak squeezing in the presence of optical pumping, we numerically integrate Eqs. (\ref{Eq::NA}--\ref{Eq::varJz}) and then use \erf{Eq::SqueezingParameter} to calculate the metrological squeezing parameter, $\xi^2$, as a function of time. 
 We choose here the magic frequency close to the $ f=4\leftrightarrow f'=4 $ transition, $ \magic{4} $, which is furthest from resonance with both excited hyperfine transitions. 
-Typical time evolution is shown in \frf{Fig::Squeezing_Dynamics} for $2500$ atoms trapped a distance $r'\!_\perp=1.8a$ from the center of the nanofiber, {\color{blue} where time is scaled} to the characteristic scattering rate, $\gamma_s \equiv \frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_\eff^2} \dot{N}_L $.  We study the dynamics for two choices of quantization axis: (i) along the $x$-axis and (ii) along the numerically determined optimal axis.  Figure \ref{Fig::Squeezing_Dynamics}(a) shows the time evolution of the squeezing parameter.  {\color{blue} We achieve a maximum squeezing of} 4.7 dB when the clock states are chosen along the optimal axis; $\qangle^{\rm opt} \approx 86^\circ$ in \erf{Eq::QuantizationAxis}. 
+Typical time evolution is shown in \frf{Fig::Squeezing_Dynamics} for $2500$ atoms trapped a distance $r'\!_\perp=1.8a$ from the center of the nanofiber, {\color{blue} where time is scaled} to the characteristic scattering rate, 
+\begin{align}\label{Eq::gamma_s}
+\gamma_s \equiv \frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_\eff^2} \dot{N}_L .
+\end{align}  
+We study the dynamics for two choices of quantization axis: (i) along the $x$-axis and (ii) along the numerically determined optimal axis.  Figure \ref{Fig::Squeezing_Dynamics}(a) shows the time evolution of the squeezing parameter.  {\color{blue} We achieve a maximum squeezing of} 4.7 dB when the clock states are chosen along the optimal axis; $\qangle^{\rm opt} \approx 86^\circ$ in \erf{Eq::QuantizationAxis}. 
 
 %========= SQUEEZING DYNAMICS: \xi, variance, mean,  N_A =========
 \begin{figure*}[t]
@@ -829,7 +836,7 @@ Typical time evolution is shown in \frf{Fig::Squeezing_Dynamics} for $2500$ atom
 \caption{Dynamics of spin squeezing on the clock states for $2500$ atoms trapped {\color{blue} in the $x$-$z$ plane at distance $ r'\!_\perp=1.8a$ from the axis of the nanofiber.} 
 The optimal quantization axis (red) is compared to quantization along the $x$-axis (blue). 
 Dotted lines indicate simulations without optical pumping; i.e. no decoherence. 
-(a) Metrological spin squeezing parameter $\xi^{2}${\color{blue}, Eq. (?)}. 
+(a) Metrological spin squeezing parameter $\xi^{2}$, \erf{Eq::SqueezingParameter}. 
 (b) Collective mean spin $\expt{\hat{J}_1}$ and decaying atom number in the clock states $N_C$ (inset).
 (c) Conditional squeezed variance $\varz$. 
 The inset shows the decomposition at the optimal quantization axis of $ \Delta J_3^2 $ (red dashed) into the single-body variance, $N_A (\Delta j_3^{(1)})^2$ (green) and the two-body covariance, $N_A(N_A-1)\expect{\Delta j_3^{(1)}\Delta j_3^{(2)}}$ (black), as given by \erf{Eq::VarianceDecomposition} {\color{blue} where (1) and (2) denote any two atoms in the symmetric ensemble}.
@@ -872,15 +879,19 @@ All of these effects are included in the equation for $\varz$, \erf{Eq::varJz}, 
 \caption{Dependence of the parameters that determine metrological squeezing  on {\color{blue} the direction of the quantization axis that defines the clock states, $\qaxis$.  In all cases we consider $2500$ atoms trapped in the $x$-$z$ plane at distance $ r'\!_\perp=1.8a$ from the axis of the nanofiber. 
 In (b--d) $\qaxis$ is confined to the $x$-$y$ plane, where the optimal peak squeezing occurs.
 (a,b)  Maximum squeezing achievable at the peak time, measured in dB, as a function of the direction of  $\qaxis$. 
-(c) OD/atom=$\sigma_0 A_{in}/A^2_{J_3}$, Eq. (?) .
-(d) Rates of atom loss, $\gamma_{00}$, and depolarization, $\gamma_{11}$ relative to the characteristic scattering rate $\gamma_s$.  Eqns. (?)} }\label{Fig::Squeezing_QuantizationAxis}
+(c) OD/atom=$\sigma_0 A_{in}/A^2_{J_3}$, \erf{Eq::OD/atom}.
+(d) Rates of atom loss, $\gamma_{00}$, and depolarization, $\gamma_{11}$ relative to the characteristic scattering rate $\gamma_s$.  See Eqs.~\eqref{Eq::lrate} and~\eqref{Eq::frate}.} }\label{Fig::Squeezing_QuantizationAxis}
 \end{figure}
 %================
 
 
 With our model, we explore optimal conditions for generating spin squeezing.   The choice of quantization axis $\qaxis$ that defines clock states affects both the measurement strength and the relative rates of optical pumping. We plot the peak squeezing for $\qaxis$ in the $x$-$y$ plane in \frf{Fig::Squeezing_QuantizationAxis}(a). 
 We gain insight into the tradeoffs between QND entangling interaction and decoherence by independent inspection of the measurement strength and optical pumping rates.  
-First, the rate of squeezing is determined by the OD/atom $=\sigma_0 A_{\rm in}/A_{J_3}^2$ (equivalent to the ratio of the measurement strength to the scattering rate, $\kappa/\gamma_s$), which peaks when $\qaxis$ is along the $y$-axis, as seen in \frf{Fig::Squeezing_QuantizationAxis}(a). 
+First, the rate of squeezing is determined by the 
+\begin{align}\label{Eq::OD/atom}
+\mathrm{OD}/\mathrm{atom} \equiv \frac{\kappa}{\gamma_s}=\frac{\sigma_0 A_{\rm in}}{A_{J_3}^2},
+\end{align} 
+which peaks when $\qaxis$ is along the $y$-axis, as seen in \frf{Fig::Squeezing_QuantizationAxis}(a). 
 Choosing $\qaxis$ along $y$, the OD/atom is about 50\% larger than along $x$-axis.  
 The various forms of decoherence similarly vary with quantization axis, as seen in \frf{Fig::Squeezing_QuantizationAxis}(c), where we plot the dominant rate of atom loss, $\gamma_{00}$, and the depolarization rate of the mean pseudospin $\expt{\jx}$, $\gamma_{11}$. 
 Because the magic frequency $\magic{4}$ is nearly equidistant from $f'=3$ and $f'=4$ near the $y$-axis (see \frf{Fig::CouplingStrength}(b)) this choice of quantization axis provides more protection from decoherence.   
@@ -890,10 +901,10 @@ Finally, we explore the optimal conditions as a function of the trapping geometr
 The dispersive entangling interaction is based on the collective atomic coupling to the evanescent guided-mode fields, which decay exponentially away from the nanofiber surface, as seen in OD/atom plotted in \frf{Fig::Squeezing_Distance}(a). 
 From Eq.~\eqref{Eq::varJz}, the optimal choice of quantization axis depends not only on distance from the fiber but also weakly on the atom number, \frf{Fig::Squeezing_Distance}(b).  
 At the optimal quantization axis, the strong dependence of peak achievable squeezing on distance from the fiber is as seen in \frf{Fig::Squeezing_Distance}(c) along with the expected increase as more atoms contribute to the atom-light interface.  
-Several effects limit the reliability of the simulations for atoms trapped very near the fiber surface as $r_\perp \rightarrow a$. 
+Several effects limit the reliability of the simulations for atoms trapped very near the fiber surface as $r'\!_\perp \rightarrow a$. 
 First, strong van der Waals interactions modify the light shifts and magic frequencies \cite{vetsch_eugen_optical_2010, lacroute_state-insensitive_2012}.  
 Second, the optical pumping model used here breaks down when the local density of states is significantly modified by the presence of the dielectric nanofiber \cite{le_kien_spontaneous_2005, le_kien_scattering_2006}. 
-Further, elastically scattered incoherent photons from optical pumping are assumed to be elastically scattered entirely into unguided modes.  At distances $r_\perp > 1.5a$ the atoms' local environment is roughly that of unmodified vacuum \cite{le_kien_spontaneous_2005} and a free-space optical pumping model in \erf{Eq::OpticalPumpingMapSchr} suffices. 
+Further, elastically scattered incoherent photons from optical pumping are assumed to be elastically scattered entirely into unguided modes.  At distances $r'\!_\perp > 1.5a$ the atoms' local environment is roughly that of unmodified vacuum \cite{le_kien_spontaneous_2005} and a free-space optical pumping model in \erf{Eq::OpticalPumpingMapSchr} suffices. 
 
 
 %======= FIG: Scaling with atom number and distance =======
@@ -1019,12 +1030,9 @@ To separate the dependence of the input field intensity, we define a characteris
 Eqs.~\eqref{Eq::gammaf} and~\eqref{Eq::gammaff} yield,
 	\begin{align}
 		\gamma_f &=n_g\dot{N}_L  \sum_{f'} \sigma (\Delta_{ff'} ) \mathbf{u}^*_\inp(\br'_\perp)\cdot \bra{f,0} \hat{\tensor{\mbf{A}}}(f,f') \ket{f,0}  \cdot \mathbf{u}_\inp(\br'_\perp)\\
-		&\approx \sum_{f'} \frac{\Gamma\Omega^2}{4\Delta_{ff'}^2}\sum_q \left| o_{jf}^{j'f'}C_{f'q}^{f0;1 q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q \\
-		&= \gamma_s \sum_{f'} \frac{\Delta_{\rm eff}^2}{\Delta_{ff'}^2}\sum_q \left| o_{jf}^{j'f'}C_{f'q}^{f0;1 q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q, \\
+		&\approx  \gamma_s \sum_{f'} \frac{\Delta_{\rm eff}^2}{\Delta_{ff'}^2}\sum_q \left| o_{jf}^{j'f'}C_{f'q}^{f0;1 q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q, \\
 		\gamma_{f \rightarrow \tilde{f}} 
-		%&=\sum_{f_a,f_b,q}\big| \bra{f,0} \hat{W}_q^{f_bf_a} \ket{\tilde{f},0} \big|^2\\
-		&\approx \sum_{f'} \frac{\Gamma\Omega^2}{4\Delta_{ff'}^2}\sum_q \left| o_{j\tilde{f}}^{j'f'} o_{jf}^{j'f'}C_{f'q}^{\tilde{f}0;1 q}C_{f'q}^{f0;1q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q\\
-		&= \gamma_s \sum_{f'} \frac{\Delta_{\rm eff}^2}{\Delta_{ff'}^2}\sum_q \left| o_{j\tilde{f}}^{j'f'} o_{jf}^{j'f'}C_{f'q}^{\tilde{f}0;1 q}C_{f'q}^{f0;1q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q,
+		&\approx \gamma_s \sum_{f'} \frac{\Delta_{\rm eff}^2}{\Delta_{ff'}^2}\sum_q \left| o_{j\tilde{f}}^{j'f'} o_{jf}^{j'f'}C_{f'q}^{\tilde{f}0;1 q}C_{f'q}^{f0;1q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q,
 	\end{align}
 where $ \sigma (\Delta_{ff'} )  = \sigma_0 \Gamma^2/4\Delta^2_{ff'}$ is the the scattering cross section at the probe detuning. 
 $ o_{jf}^{j'f'} $ are the relative oscillator strengths, the square of which determine the branching ratios for spontaneous decay rates $ \Gamma_{j'f'\rightarrow jf} $ in the hyperfine multiplets to $\Gamma_{j'\rightarrow j}  $ in the atomic fine structure levels~\cite{deutsch_quantum_2010}. 
@@ -1064,7 +1072,7 @@ with rates
 	\begin{subequations} \label{Eq::DecayRates}
 	\begin{align}
 		\gamma_{00} 
-			& = \frac{\gamma_{\uparrow}+\gamma_{\downarrow} - \gammauu-\gammaud  -\gammadd-\gammadu}{2} \\
+			& = \frac{\gamma_{\uparrow}+\gamma_{\downarrow} - \gammauu-\gammaud  -\gammadd-\gammadu}{2} \label{Eq::lrate} \\
 			\gamma_{03} 
 			& = \frac{-\gamma_{\uparrow}+\gamma_{\downarrow} +\gammauu + \gammaud - \gammadd - \gammadu }{2}\\		
 		\gamma_{33} 
@@ -1079,7 +1087,7 @@ The decay of two-body spin correlations, given in \erf{Eq::TwoBodySpinDecay}, is
 Similarly, one can work out the other coupled optical pumping equations for two-body microscopic operator correlations $ \expt{\hat{\mathbbm{1}}^{(m)}_C \otimes \hat{\mathbbm{1}}^{(n)}_C} $ and $ \expt{\hat{\mathbbm{1}}^{(m)}_C \otimes \hat{\sigma}_3^{(n)} + \hat{\sigma}_3^{(m)} \otimes \hat{\mathbbm{1}}^{(n)}_C } $ when $ m\neq n $ and the macroscopic operator expectation values $ \expt{\hat{J}_3^2} $, $ \expt{\hat{N}_C^2} $, and $ \expt{\hat{N}_C\hat{J}_3} $. 
 As a result of the correlations between atoms, a weak measurement on the ensemble of atoms may squeeze the pseudospin state in the clock state subspace. 
 As has been examined numerically on the time scale of the birefringence QND measurement studied in this paper, the correlation between atom number in the clock state subspace and the pseudospin moment is so weak that one can treat the atom number operator in the clock state subspace as a number.
-We therefore set $ \expt{\hat{N}_C\hat{J}_3}-\expt{\hat{N}_A}\expt{\hat{J}_3}\approx 0 $ and $ \expt{\hat{N}_C^2} - \expt{\hat{N}_C}^2 \approx 0 $ and define $ N_C\equiv \expt{\hat{N}_C}$. 
+We therefore set \comment{$ \expt{\hat{N}_C\hat{J}_3}-\expt{\hat{N}_C}\expt{\hat{J}_3}\approx 0 $} and $ \expt{\hat{N}_C^2} - \expt{\hat{N}_C}^2 \approx 0 $ and define $ N_C\equiv \expt{\hat{N}_C}$. 
 
 The equations of motion for the moments of $\jz$ are now found from the SME, \erf{Eq::SME},
 	\begin{subequations} \label{Eq::J3MomentEquations}
