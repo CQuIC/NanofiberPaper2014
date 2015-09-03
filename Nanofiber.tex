@@ -704,7 +704,7 @@ While this does not affect the squeezing of projection noise in $\hat{J}_3$, it 
 	\begin{align} \label{Eq::MagicWavelengthCondition}
 		\chi_{H,\uparrow} +\chi_{V,\uparrow}  = \chi_{H,\downarrow} + \chi_{V,\downarrow},
 	\end{align}
-this term can be cancelled \cite{chaudhury_continuous_2006}.
+this term can be canceled \cite{chaudhury_continuous_2006}.
 Using the D1-line of $^{133}$Cs atoms as the probe light, there are two magic-frequency solutions, $ \magic{3} $ and $\magic{4}$, shown schematically in \frf{Fig::CouplingStrength}(a).  
 
 {\color{blue} Because the guided probe light at the position of the atom will generally be elliptical}, the light-shift interaction coherently couples different magnetic sublevels in a given manifold $f$, and thus does not conserve $J_3$.  For example, the ellipticity of the probe light leads to a fictitious magnetic field proportional to $i \mathbf{E}^{(-)}_{\inp}(\br') \times \mathbf{E}^{(+)}_{\inp}(\br')$ that causes a precession of the {\color{blue} spin}.  This can be mitigated by a sufficiently strong bias magnetic field compared to the fictitious field \cite{smith_continuous_2004}. 
@@ -744,7 +744,7 @@ The strength of the birefringent interaction {\color{blue} arises from two funda
 Let {\color{blue} $\{\mathbf{e}_{\tilde{x}},\mathbf{e}_{\tilde{y}}, \mathbf{e}_{\tilde{z}}\}$ be a space fixed Cartesian coordinated, where $\mathbf{e}_{\tilde{z}}$ defines the quantization axis of the atom, set by the magnetic field}.  Because of the azimuthal symmetry of clock state around the $\qaxis$-axis, the polarizability tensor is diagonal in that basis.  
 Noting that $\langle f,0 | \hat{f}_{\tilde{z}}| f,0 \rangle =0$ and $\langle f,0 | \hat{f}_{\tilde{x}}^2| f,0 \rangle = \langle f,0 | \hat{f}_{\tilde{y}}^2| f,0 \rangle = \langle f,0 | \hat{\mathbf{f}}^2| f,0 \rangle /2 =f(f+1)/2$, it follows that the expectation value of the irreducible rank-2 component of the atomic polarizability is
 	\begin{align} \label{Eq::CouplingAngleMagic}
-		\langle f,0 | \poltens \phantom{}^{(2)}| f,0 \rangle = \sum_{f'}\! \charpol C^{(2)}_{ff'} \frac{f(f+1)}{6} \Big( \unittens \!-\! 3\qaxis \otimes \qaxis \Big).
+		\!\!\!\!\!\langle f,\! 0 | \poltens \phantom{}^{(\!2\!)}\!| f,\!0 \rangle \!=\!\! \sum_{f'}\! \charpol C^{(\!2\!)}_{f\!f'} \frac{f(f\!\!+\!\!1)}{6} \Big( \unittens \!\!-\! 3\qaxis \!\!\otimes\! \qaxis\! \Big).
 	\end{align}
 The combined scalar and tensor light shifts yield a coupling strength, \erf{Eq::ClockCouplingStrength},
 	\begin{align}
@@ -767,11 +767,11 @@ We write the effective rotation angle in the Hamiltonian, \erf{Eq::FaradayHam}, 
 	\end{align}
 with an ``effective detuning" set by the magic-wavelength condition,
 	\begin{align} \label{Eq::SqueezingEffectiveDetuning}
-		 \Delta_{J_3}^{-1} \equiv \frac{4}{\Gamma} (b_4 - b_3) =   \sum_{f'}  \left( C^{(2)}_{4f'}\frac{10}{\Delta_{4f'}} -  C^{(2)}_{3f'}\frac{6}{ \Delta_{3f'} } \right),
+		 \Delta_{J_3}^{-1} \equiv \frac{4}{\Gamma} (b_4 \!-\! b_3) =\!   \sum_{f'}\!  \left( C^{(2)}_{4f'}\!\frac{10}{\Delta_{4f'}} \!-\!  C^{(2)}_{3f'}\!\frac{6}{ \Delta_{3f'} } \right),
 	\end{align}
 and an effective area given by
 	\begin{align} \label{Eq::SqueezingModeArea}
-		A_{J_3}^{-1} & = n_g \frac{ |\mathbf{e}_{\tilde{z}} \cdot \mathbf{u}_V(\br'_\perp)|^2 |\mathbf{u}_H(\br'_\perp)|^2 - |\mathbf{e}_{\tilde{z}} \cdot \mathbf{u}_H(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2 }{ |\mathbf{u}_H(\br'_\perp)|^2 + |\mathbf{u}_V(\br'_\perp)|^2 } 
+		A_{J_3}^{-1} & = n_g \frac{ |\mathbf{e}_{\tilde{z}} \!\cdot\! \mathbf{u}_V(\br'_\perp)|^2 |\mathbf{u}_H(\br'_\perp)|^2 \!-\! |\mathbf{e}_{\tilde{z}} \!\cdot\! \mathbf{u}_H(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2 }{ |\mathbf{u}_H(\br'_\perp)|^2 + |\mathbf{u}_V(\br'_\perp)|^2 } 
 	\end{align}	
 {\color{blue} We see explicitly here that the coupling strength depends both on the anisotropy of the modes and the tensor atomic response, which in turn depends on a particular choice of clock states.}  The quantization axis that maximizes $\chieff$ is that which minimizes $A_{J_3}$ at a given magic detuning.  
 Since the $z$-component of the guided modes is $90^\circ$ out-of-phase with the transverse components, the quantization axis maximizing the atom-light coupling is specified by \comment{an angle in the transverse $x$-$y$ plane, $\varphi$},
@@ -814,16 +814,18 @@ The final term in \erf{Eq::SME} describes the effect of optical pumping acting l
 The optical pumping map is governed by a standard master equation~\cite{deutsch_quantum_2010}.  
 Restricting to the two-dimensional subspace associated with the clock states, the action on the $n^{th}$ atom is
 	\begin{align}
-		\mathcal{D}_n[\hat{\rho}] =  \sum_{f=3,4} \Big\{& -\frac{\gamma_{f}}{2} \big[ \hat{\rho} (\op{f,0}{f,0})^{(n)} + (\op{f,0}{f,0})^{(n)}\hat{\rho} \big)]\\
-		&+  \sum_{\tilde{f} =3,4}  \gamma_{f \rightarrow \tilde{f}}(\op{\tilde{f},0}{f,0})^{(n)} \hat{\rho}(\op{f,0}{\tilde{f},0})^{(n)} \Big\}.\nonumber
+		\mathcal{D}_n[\hat{\rho}] &=  \!\sum_{f=3,4}\!\! \Big\{ \!-\! \frac{\gamma_{f}}{2} \big[ \hat{\rho} (\op{f,\! 0}{f,\! 0})^{(n)} \!+\! (\op{f,\! 0}{f,\! 0})^{(n)}\hat{\rho} \big]\nn\\
+		&+\!  \sum_{\tilde{f} =3,4}\!\!  \gamma_{f \!\rightarrow\! \tilde{f}}(\op{\tilde{f},\! 0}{f,\! 0})^{(n)} \hat{\rho}(\op{f,\! 0}{\tilde{f},\! 0})^{(n)} \Big\}.
 	\end{align}
 Here, \comment{$\gamma_{f}$ are the total rates of photon scattering by atoms in the clock state $\ket{f,0}$.  $\gamma_{f \rightarrow \tilde{f} }$ are the rates of optical pumping between the clock states, $\ket{f,0} \rightarrow \ket{\tilde{f},0}$ (see Appendix~\ref{Appendix::Rates}). } 
 
 When expressed in terms of Pauli operators on the clock-state pseudospin, the map acts as
 	\begin{align} \label{Eq::OpticalPumpingMapSchr}
 		\mathcal{D}_n [\hat{\rho}] 
-				=& - \bigg[ \frac{2(\gammau+ \gammad) - \gammauu - \gammadd}{4} \bigg] \hat{\rho} - \frac{ \gammau - \gammad - \gammauu + \gammadd }{4} \big( \hat{\sigma}_3^{(n)} \hat{\rho}+ \hat{\rho} \hat{\sigma}_3^{(n)} \big) \nn \\
-		&+ \frac{\gammauu+\gammadd}{4} \hat{\sigma}_ 3^{(n)}\hat{\rho} \hat{\sigma}_3^{(n)} + \gammaud  \hat{\sigma}_-^{(n)} \hat{\rho} \hat{\sigma}_+^{(n)} + \gammadu  \hat{\sigma}_+^{(n)} \hat{\rho} \hat{\sigma}_- ^{(n)}.   
+				=& - \bigg[ \frac{2(\gammau+ \gammad) - \gammauu - \gammadd}{4} \bigg] \hat{\rho} \nn\\
+				&- \frac{ \gammau - \gammad - \gammauu + \gammadd }{4} \big( \hat{\sigma}_3^{(n)} \hat{\rho}+ \hat{\rho} \hat{\sigma}_3^{(n)} \big) \nn \\
+		&+ \frac{\gammauu+\gammadd}{4} \hat{\sigma}_ 3^{(n)}\hat{\rho} \hat{\sigma}_3^{(n)} \nn\\
+		&+ \gammaud  \hat{\sigma}_-^{(n)} \hat{\rho} \hat{\sigma}_+^{(n)} + \gammadu  \hat{\sigma}_+^{(n)} \hat{\rho} \hat{\sigma}_- ^{(n)}.   
 	\end{align} 
 There are three important features of this map that are not typical in a QND measurement of ideal spin-$\half$ particles.  
 First, the map is not trace preserving because atoms can be pumped out of the clock states. 
@@ -835,7 +837,8 @@ We calculate the squeezing parameter as a function of time based on the evolutio
 		&d N_C = -\gamma_{00} N_C dt + 2\gamma_{03} \expt{\hat{J}_3} dt \label{Eq::NA}\\
 		&d \expt{\hat{J}_1}  = -\gamma_{11} \expt{\hat{J}_1} dt  \label{Eq::MeanSpinDecay} \\
 		&d \expt{\hat{J}_3}  = s\sqrt{\kappa} \varz dW -\gamma_{33} \expt{\hat{J}_3}dt + \smallfrac{1}{2}\gamma_{30} N_C dt   \\
-		&d \varz  = - \kappa \big(\varz\big)^2 dt- 2 \gamma_{33} \varz dt + \smallfrac{1}{4} \big( 2\gamma_{33}-\gamma_{00} \big) N_C dt + \smallfrac{1}{2} \big( \gamma_{03} - 2 \gamma_{30} \big) \expt{\hat{J}_3} dt,   \label{Eq::varJz} 
+		&d \varz  = - \kappa \big(\varz\big)^2 dt- 2 \gamma_{33} \varz dt \nn\\
+		&\quad\quad\quad \!+\! \smallfrac{1}{4} \big( 2\gamma_{33}\!-\!\gamma_{00} \big) N_C dt \!+\! \smallfrac{1}{2} \big( \gamma_{03} \!-\! 2 \gamma_{30} \big) \expt{\hat{J}_3} dt,   \label{Eq::varJz} 
 	\end{align}
 where the decay and feeding rates are given in \erf{Eq::DecayRates}.
 Loss of atoms from the clock-state subspace is captured by the atom number $N_C$, which decays at rate $\gamma_{00}$. 
@@ -885,7 +888,7 @@ The two-body correlations which contribute as $N_A^2$ to the collective fluctuat
 \end{align}
 have a much larger influence on the total variance. Spin-spin correlations at the heart of spin squeezing, $\expt{ \hat{\sigma}_3^{(1)} \otimes \hat{\sigma}_3^{(2)} }$, rapidly generated by the measurement backaction decohere by optical pumping according to Eqs. (\ref{Eq::TwoBodyDecay}--\ref{Eq::OperatorMap}),
 	\begin{align} \label{Eq::TwoBodySpinDecay}
-		\frac{d}{dt} \expt{\hat{\sigma}_3^{(1)} \otimes \hat{\sigma}_3^{(2)} }  \Big|_{\rm op} = - 2 \gamma_{33}  \expt{\hat{\sigma}_3^{(1)} \otimes \hat{\sigma}_3^{(2)}} + \gamma_{30} \expt{ \hat{\mathbbm{1}}^{(1)}_C \otimes \hat{\sigma}_3^{(2)} + \hat{\sigma}_3^{(1)} \otimes \hat{\mathbbm{1}}^{(2)}_C },
+		\!\!\!\!\!\!\frac{d}{dt}\! \expt{\hat{\sigma}\!_3^{(\!1\!)}\!\! \otimes\! \hat{\sigma}\!_3^{(\!2\!)} }  \!\Big|_{\rm op}\!\!\!\! =\! - 2 \gamma_{33} \! \expt{\hat{\sigma}\!_3^{(\!1\!)} \!\!\otimes\! \hat{\sigma}\!_3^{(\!2\!)} } \!\!+\! \gamma_{30}\! \expt{ \hat{\mathbbm{1}}\!^{(\!1\!)}_C \!\!\otimes\! \hat{\sigma}\!_3^{(\!2\!)\!} \!\!+\! \hat{\sigma}\!_3^{(\!1\!)} \!\!\!\otimes\!\! \hat{\mathbbm{1}}\!^{(\!2\!)}_C },
 	\end{align}
 where $\hat{\mathbbm{1}}^{(n)}_C \equiv \big( \op{\uparrow}{\uparrow} + \op{\downarrow}{\downarrow} \big){}^{(n)}$ is the single-body projector onto the clock states. 
 %A limit to the measurement-induced entanglement between atoms throughout the ensemble is enforced by the decoherence process in \erf{Eq::TwoBodySpinDecay}.  
@@ -988,8 +991,8 @@ ACKNOWLEDGMENTS and FUNDING
 Here, we provide, for reference, the fundamental HE$_{11}$ solutions to the homogeneous wave equation, \erf{Eq::WaveEquationSource} with $\tensor{\boldsymbol{\alpha}} = 0$, for a cylindrical nanofiber of radius $a$ and index of refraction given by \erf{Eq::IndexofRefraction}.  At a given frequency, $\omega_0 = c k_0$, the magnitudes of the longitudinal and transverse wave vectors for a guided mode are related by $n^2 k_0^2 = \beta_0^2 + k_\perp^2$.  
 The positive propagation constant, $\beta_0 \equiv \beta(\omega_0)$, is determined from the eigenvalue equation that results from enforcing physical boundary conditions at the fiber surface \cite{snyder_optical_1983},
 	\begin{align}
-		&\frac{J_0(ha)}{ha J_1(ha)} = - \frac{n_1^2+n_2^2}{2n_1^2} \frac{K'(qa)}{qa K_1(qa)} + \frac{1}{h^2 a^2} \nn\\
-		&\quad- \bigg[ \bigg(\frac{n_1^2 \!-\! n_2^2}{2 n_1^2} \frac{K'(qa)}{qa K_1(qa)} \bigg)^2  \!\!+\! \frac{\beta_0^2}{n^2_1 k^2} \bigg(\frac{1}{q^2a^2} \!+\! \frac{1}{h^2a^2} \bigg)^2 \bigg]^{1/2}.
+		\!\!\!& \frac{J_0(ha)}{ha J_1(ha)} = - \frac{n_1^2+n_2^2}{2n_1^2} \frac{K'(qa)}{qa K_1(qa)} + \frac{1}{h^2 a^2} \nn\\
+		\!\!\!\!\!\!\!\!&\, - \bigg[\! \bigg(\!\frac{n_1^2 \!-\! n_2^2}{2 n_1^2}\! \frac{K'\!(qa)}{qa K_1\!(qa)} \!\bigg)^2  \!\!\!+\! \frac{\beta_0^2}{n^2_1 k^2}\!\! \left(\!\frac{1}{q^2a^2} \!+\! \frac{1}{h^2a^2}\! \right)^2\! \bigg]^{\frac{1}{2}}\!.
 	\end{align}
 Inside the nanofiber the transverse wavevector is real, $k_\perp = q$, where $q=\sqrt{\beta_0^2- n_2^2k_0^2}$, and outside the nanofiber it is purely imaginary, $k_\perp = i h$, where $h=\sqrt{n_1^2 k_0^2 - \beta_0^2}$.  The vector eigenfunctions are expressed as $\mbf{f}_{\mu}(\br) = (2\pi)^{-1/2}\mbf{u}_{b,p}(\mbf{r}_\perp) e^{i f \beta_0 z}$, where the modes are indexed by frequency $\omega_0$, propagation direction $b = \pm$, and polarization $p$.
 
@@ -1076,7 +1079,7 @@ where $\hat{\mathbbm{1}}_C \equiv \op{\uparrow}{\uparrow} + \op{\downarrow}{\dow
 To include optical pumping, we apply the following equations of motion. For a collective, single-body operator, $\hat{X} = \sum_n \hat{x}^{(n)}$, the evolution due to optical pumping is $d\expt{ \hat{X}}|_{\rm op} = \sum_n \Tr [\mathcal{D}_n[\hat{\rho}]\hat{X} ]dt = \sum_n \expt{\mathcal{D}_n\dg[\hat{x}^{(n)}]} dt$, where the map, which acts locally on atoms along the nanofiber, is given in \erf{Eq::OpticalPumpingMapSchr}.  
 Two-body microscopic operators decay by optical pumping according to \cite{baragiola_three-dimensional_2014}
 	\begin{align} \label{Eq::TwoBodyDecay}
-		\frac{d}{dt} \expt{ \hat{x}^{(m)} \otimes \hat{y}^{(n)} } \Big|_{\rm op}= &\expt{ \mathcal{D}_m\dg[ \hat{x}^{(m)}] \otimes \hat{y}^{(n)} } + \expt{ \hat{x}^{(m)}\otimes \mathcal{D}_n\dg[ \hat{y}^{(n)}] },
+		\!\!\!\!\!\frac{d}{dt}\! \expt{ \hat{x}^{(\!m\!)} \!\otimes\! \hat{y}^{(\!n\!)} } \!\Big|_{\rm op} \!\!= &\expt{ \mathcal{D}_m\dg[ \hat{x}^{(\!m\!)}] \!\otimes\! \hat{y}^{(\!n\!)} } \!+\! \expt{ \hat{x}^{(\!m\!)}\!\otimes\! \mathcal{D}_n\dg[ \hat{y}^{(\!n\!)}] },
 	\end{align}
 where the superscripts refer to the $m^{th}$ and $n^{th}$ atoms. 
 
