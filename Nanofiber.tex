@@ -227,7 +227,7 @@ Such strong cooperativity in free space has been employed in a variety of applic
 %=============================================
 
 A particular system that combines the elements above consists of cold atoms trapped in the evanescent field of the guided mode of a tapered optical nanofiber with a subwavelength diameter \cite{vetsch_optical_2010, lacroute_state-insensitive_2012, balykin_quantum_2014, grover_photon-correlation_2015} (see \frf{Fig::ModeMatching}).  
-The typical OD/atom in the nanofiber ($\sigma_0/A \sim  10^{-2}$) is boosted by orders of magnitude over free space for paraxial beams. 
+The typical {\color{blue} resonant} OD/atom in the nanofiber ($\sigma_0/A \sim  10^{-2}$) is boosted by orders of magnitude over free space for paraxial beams. 
 However, one cannot reach the strong coupling regime where $\Gamma_{\oneD}$ is on the order of $\Gamma_{\vac}$ as is possible in engineered nanophotonic waveguides, such as those arising in photonic crystals \cite{hung_trapped_2013}, where atoms can be trapped at positions of peak intensity of the field.  
 One can, however, achieve strong cooperativity in the dispersive regime with a moderately sized ensemble.  When compared to free space, all light scattered into the guided mode is automatically mode matched, and thus, given the relatively large ratio $\sigma_0/A$, one can achieve high OD with only a few thousand atoms (see \frf{Fig::ModeMatching}).  
 Such strong cooperativity opens the door to new regimes to create non-Gaussian quantum states of the ensemble \cite{dubost_efficient_2012} and potentially to implement nonlinear optics at the level of a few photons \cite{spillane_observation_2008, pittman_ultralow-power_2013, oshea_fiber-optical_2013}.
@@ -336,7 +336,7 @@ Only the positive-frequency component contributes to the $\delta$-function, and 
 The energy level shift of the scatterer due to its proximity to the dielectric is found from the real part of the Green's function at $\br = \br'$. 
 To find the total modified spontaneous emission rate and energy level shift one must include the unguided radiation modes \cite{le_kien_spontaneous_2005} or employ other representations of the Green's function \cite{klimov_spontaneous_2004}.  
 
-Equation (\ref{Eq::GreensGuided}) is the central result from which we can calculate the dispersive response.  Consider a forward-propagating ($b=+$) input field in the guided modes with frequency $\omega_0$, positive-frequency amplitude $\Eamp$, and arbitrary polarization, $\mathbf{E}^{(+)}_{\inp}(\br) = \Eamp  \mathbf{u}_{\rm in}(\br_\perp) e^{i \beta_0 z}$ dispersively coupled to an atom at position $\mathbf{r}'$.  The effective mode area at the atom's position is determined from the total cycle-averaged power transported along the nanofiber, $P_{{\rm in},z} = (v_g/2\pi) \int d^2\br \, n^2(r_\perp) |\mathbf{E}^{(+)}_{\inp}(\br) |^2$, and the intensity at the atom, $I_{\rm in}(\mathbf{r}') = (c/2\pi) |\mathbf{E}^{(+)}_{\inp}(\br') |^2$, via the relation \cite{domokos_quantum_2002},
+Equation (\ref{Eq::GreensGuided}) is the central result from which we can calculate the dispersive response.  Consider a forward-propagating input field in the guided modes with frequency $\omega_0$, positive-frequency amplitude $\Eamp$, and arbitrary polarization, $\mathbf{E}^{(+)}_{\inp}(\br) = \Eamp  \mathbf{u}_{\rm in}(\br_\perp) e^{i \beta_0 z}$ dispersively coupled to an atom at position $\mathbf{r}'$.  The effective mode area at the atom's position is determined from the total cycle-averaged power transported along the nanofiber, $P_{{\rm in},z} = (v_g/2\pi) \int d^2\br \, n^2(r_\perp) |\mathbf{E}^{(+)}_{\inp}(\br) |^2$, and the intensity at the atom, $I_{\rm in}(\mathbf{r}') = (c/2\pi) |\mathbf{E}^{(+)}_{\inp}(\br') |^2$, via the relation \cite{domokos_quantum_2002},
  	\begin{align} \label{Eq::AreaIn}
  		A_{\rm in} \equiv \frac{P_{{\rm in}}}{I_{\rm in}(\mathbf{r}')} = \frac{1}{n_g |\mathbf{u}_{\rm in}(\mathbf{r}'_\perp)|^{2}},
 	\end{align}
@@ -391,8 +391,7 @@ The positive frequency component of the quantized electric field operator decomp
 		\hat{\mathbf{E}}_g^{(+)}(\br) &= \sum_{b,p} \int \mathrm{d}\omega  \sqrt{\frac{ \hbar \omega}{ v_g}} \; \awg \mathbf{u}_\mu (\br\!_\perp) e^{i b\beta(\omega) z } ,\label{Eq::QuantizedElectricField} \\
 		\hat{\mathbf{E}}_r^{(+)}(\br) &= \sum_{m,p} \int \mathrm{d}\omega   \int_{-kn_2}^{kn_2}\mathrm{d}\beta \, \sqrt{ \hbar \omega}\;\awr \mathbf{u}_\nu (\br\!_\perp) e^{i\beta(\omega) z }.
 	\end{align}
-The HE$_{11}$ guided modes are specified by $\mu =(\omega, b, p)$, the mode frequency $\omega$,  polarization $p$, and propagation direction $b=\pm1$ corresponding to wavenumbers $b \beta (\omega)$.  
-The radiation modes are specified by  $\nu=(\omega, \beta, m, p)$, where $m$ is the azimuthal (angular momentum) quantum number, $p$ labels the two orthogonal polarizations, and longitudinal propagation constant $\beta$ can vary continuously from $-kn_2$ to $kn_2$, with $k = \omega/c$ \cite{sondergaard_general_2001,le_kien_spontaneous_2005}.  
+The HE$_{11}$ guided modes are specified by $\mu =(\omega, b, p)$, {\color{blue} where $\omega$ is the mode frequency,  $p$ is the polarization, and propagation direction $b=\pm$ corresponding to wave numbers $b \beta (\omega)$.}  The radiation modes are specified by  $\nu=(\omega, \beta, m, p)$, where $m$ is the azimuthal (angular momentum) quantum number, $p$ labels the two orthogonal polarizations, and longitudinal propagation constant $\beta$ can vary continuously from $-kn_2$ to $kn_2$, with $k = \omega/c$ \cite{sondergaard_general_2001,le_kien_spontaneous_2005}.  
 The creation/annihilation operators satisfy the usual continuous-mode commutation relations, $[\hat{a}_\mu, \hat{a}^\dag_{\mu'} ] = \delta_{b,b'} \delta_{p,p'} \delta ( \omega - \omega ') $ and $[\hat{a}_\nu ,\hat{a}^\dag_{\nu'} ] = \delta_{m,m'} \delta_{p,p'} \delta ( \omega - \omega ')  \delta ( \beta - \beta') $.
 
 The Hamiltonian for the system is
@@ -530,7 +529,7 @@ We restrict here the quasilinear modes, $p =\{H,V\}$, of a single HE$_{11}$ guid
 In typical experimental configurations, two one-dimensional arrays of atoms are trapped on either side of the nanofiber, see Fig. \ref{Fig::Schematic}. 
 We define coordinate axes $(x,y,z)$ with $z$ oriented along the fiber axis for forward propagation, and the two chains of atoms lie in the $x$-$z$ plane at azimuthal angles $\phi' = \{0, \pi\}$.
 In the evansecent region, the $H$-mode is purely $\mathbf{e}_x$-polarized at $\phi = \pm \pi/2$ and the $V$-mode is purely $\mathbf{e}_y$-polarized at $\phi = \{0,\pi\}$.  
-At other azimuthal angles the electric field is generally rotating along an ellipse in the $x$-$z$ plane.  The atomsat $\phi'=0$ experience $H$ and $V$ fields,
+At other azimuthal angles the electric field is generally rotating along an ellipse in the $x$-$z$ plane.  The atoms at $\phi'=0$ experience $H$ and $V$ fields,
 	\begin{align}
 		\mbf{u}_{b,H}(r_\perp, \phi = 0) = & \sqrt{2} \big[ \mathbf{e}_x u_r(r_\perp)+  i b \mathbf{e}_z  u_z(r_\perp) \big] \\
 		\mbf{u}_{b,V}(r_\perp, \phi = 0) = & \sqrt{2} \mathbf{e}_y u_\phi(r_\perp), 
@@ -559,7 +558,7 @@ The propagating electric field, \erf{Eq::PropagatingElectricField}, interacts wi
 where $\poltens {}^{(n)}$ is the atomic tensor polarizability operator, given in \erf{Eq::PolarizabilityOperator}, for the $n^{th}$ atom trapped near the nanofiber surface at position $\mathbf{r}'_n$.  We ignore here any effects of atomic motion and treat the atoms as localized at fixed positions in space.
 
 The Lippmann-Schwinger scattering equation, \erf{Eq::IOScatteredField}, follows in the time domain as the evolution of coarse-grained input-ouput modes \cite{gardiner_input_1985, fan_input-output_2010, le_kien_propagation_2014}.  
-{\color{blue} Because we work in the first Born approximation and because the propagation time across the ensemble is small compared to the atomic dynamics, we drop the position label $z$ and index the propagating fields by time; $\hat{a}_{b,p}(z,t) \rightarrow \hat{a}_{b,p}(t) $. It follows that the effects of retardation can be ignorned, in which case each term in the sum over atoms contributes equally for all atoms} (for details see \cite{le_kien_correlations_2008, baragiola_open_2014}).  
+{\color{blue} Because multiple scattering is negligible and because the propagation time across the ensemble is small compared to the atomic dynamics, we drop the position label $z$ and index the propagating fields by time alone; $\hat{a}_{b,p}(z,t) \rightarrow \hat{a}_{b,p}(t) $. It follows that the effects of retardation can be ignorned, in which case each term in the sum over atoms contributes equally for all atoms} (for details see \cite{le_kien_correlations_2008, baragiola_open_2014}).  
 The forward-propagating output fields are then given by the Fourier transform of \erf{Eq::aout}, yielding \cite{le_kien_correlations_2008} 
 \begin{align} \label{Eq::ScatteringSolution}
 		\hat{a}^{\rm out}_{p}(t) = \hat{a}^{\rm in}_{p}(t) + i  \frac{2\pi \omega_0}{v_g}\sum_{p'}\Big[ N_0  \mathbf{u}^*_p(r'_\perp,0) \cdot \poltens \cdot  \mathbf{u}_{p'}(r'_\perp,0)  + N_\pi \mathbf{u}^*_p(r'_\perp,\pi) \cdot \poltens \cdot  \mathbf{u}_{p'}(r'_\perp,\pi) \Big] \hat{a}^{\rm in}_{p'}(t), 
@@ -629,7 +628,7 @@ Thus, the integrated measurement is described by the operator
 \begin{align} \label{Eq::MeasOpAtomCounting}
 		\hat{\mathcal{M}} & \equiv \int_0^T dt' \hat{S}^{\rm out}_3(t').
 \end{align} 
-The shot-noise variance of the polarimeter, $\shotnoise =  \dot{N}_L T$ for integration time $T$,  determines the fundamental resolution of the polarimeter.  
+The shot-noise variance of the polarimeter, {\color{blue} $\shotnoise =  \chiN^2 \dot{N}_L T$ }for integration time $T$,  determines the fundamental resolution of the polarimeter.  
 The smallest detectable atom number using this dispersive measurement is thus, $\delta N_A \sim ( \chiN^2 \dot{N}_L T)^{-1/2}$ \cite{smith_faraday_2003}.  
 In an ideal setting, $\delta N_A$ can always be reduced by increasing the integration time, while in practice this time is limited by atom loss from photon scattering into reflected and unguided modes. 
 As a coarse approximation we take this time to be $T=\gamma_s^{-1}$, where $\gamma_s$ is the photon scattering rate in free space, {\color{blue}and assume perfect quantum efficiency of the detectors.}  
@@ -674,7 +673,7 @@ fundamentally limits the precision of atomic clocks \cite{wineland_spin_1992}. F
 where $\expt{\hat{J}_{||}}$ is the mean collective spin along the direction of spin polarization. 
 
 The clock states are defined to have zero projection of angular momentum with respect to a bias magnetic field that defines a quantization axis, $\mathbf{e}_{\tilde{z}}$.  
-Within the clock-state subspace the rank-1 vector light shift in the dispersive Hamiltonian, \erf{Eq::GenHamiltonian}, vanishes since $\bra{\uparrow}\hat{f}_k \ket{\uparrow} =\bra{\downarrow}\hat{f}_k \ket{\downarrow} = 0$ for any projection $k$ \sout{of the collective spin}, and any quantization axis $\mathbf{e}_{\tilde{z}}$. 
+Within the clock-state subspace the rank-1 vector light shift in the dispersive Hamiltonian, \erf{Eq::GenHamiltonian}, vanishes since $\bra{\uparrow}\hat{f}_k \ket{\uparrow} =\bra{\downarrow}\hat{f}_k \ket{\downarrow} = 0$ for any  {\color{blue} direction of the spin, $k$}, and any quantization axis, $\mathbf{e}_{\tilde{z}}$. 
 Furthermore, as shown below, atoms on either side of the nanofiber experience the same birefringent coupling. 
 The resulting Hamiltonian, restricted to the clock subspace, couples the guided field of the nanofiber to the $J_3$-component of the collective pseudospin. The interaction has contributions from both the scalar and tensor light shifts,
 	\begin{align} \label{Eq::ClockHamiltonian}
@@ -696,7 +695,7 @@ While this does not affect the squeezing of projection noise in $\hat{J}_3$, it 
 this term can be canceled \cite{chaudhury_continuous_2006}.
 Using the D1-line of $^{133}$Cs atoms as the probe light, there are two magic-frequency solutions, $ \magic{3} $ and $\magic{4}$, shown schematically in \frf{Fig::CouplingStrength}(a).  
 
-Because the guided probe light at the position of the atom will generally be elliptical, the light-shift interaction coherently couples different magnetic sublevels in a given manifold $f$, and thus does not conserve $\hat{J}_3$.  For example, the ellipticity of the probe light leads to a fictitious magnetic field proportional to $i \mathbf{E}^{(-)}_{\inp}(\br') \times \mathbf{E}^{(+)}_{\inp}(\br')$ that causes a precession of the {\color{blue} spin within hyperfine manifold $f$} \comment{(Note that this does not rotate $\ket{\uparrow}$ into $\ket{\downarrow}$)}.  This can be mitigated by a sufficiently strong bias magnetic field compared to the fictitious field \cite{smith_continuous_2004}. 
+Because the guided probe light at the position of the atom will generally be elliptical, the light-shift interaction coherently couples different magnetic sublevels in a given manifold $f$, and thus does not conserve $\hat{J}_3$.  For example, the ellipticity of the probe light leads to a fictitious magnetic field proportional to $i \mathbf{E}^{(-)}_{\inp}(\br') \times \mathbf{E}^{(+)}_{\inp}(\br')$ that causes a precession of the {\color{blue} spin within hyperfine manifold $f$}.  This can be mitigated by a sufficiently strong bias magnetic field compared to the fictitious field \cite{smith_continuous_2004}. 
 
 
 %========= FIGURE: Geometry (coupling strength, magic wavelength, area and detuning) =========%
@@ -729,7 +728,7 @@ In the absence of any decoherence, such a QND measurement for integration time $
 	\end{equation}
 is the integrated measurement strength \cite{hammerer_quantum_2010, baragiola_three-dimensional_2014}.
 
-The strength of the birefringent interaction {\color{blue} arises from two fundamental sources.  The anisotropy of the   $H$ and $V$ polarized modes leads to a polarization-dependent index of refraction, as described in Sec.~\ref{Sec::GreensFunction}.  In addition there is dependence of the atom-photon coupling on the internal spin state of the atom due to the atomic tensor polarizability.  In particular, we are interested in the dependence on the two clock states of the atom.  This in turn will depend on the choice of quantization axis that defines the clock state with projection $m_f=0$. } We combine these two effects and obtain an compact expression for the coupling strength $\chieff$ using the irreducible tensor decomposition of the atomic polarizability, \erf{Eq::PolarizabilityIrrep}.  
+The strength of the birefringent interaction {\color{blue} arises from two fundamental sources.  The anisotropy of the   $H$ and $V$ polarized modes leads to a polarization-dependent index of refraction, as described in Sec.~\ref{Sec::GreensFunction}.  In addition there is a dependence of the atom-photon coupling on the internal spin state of the atom due to the atomic tensor polarizability.  In particular, we are interested in the dependence on the two clock states of the atom.  This in turn will depend on the choice of quantization axis that defines the clock state with projection $m_f=0$. } We combine these two effects and obtain an compact expression for the coupling strength $\chieff$ using the irreducible tensor decomposition of the atomic polarizability, \erf{Eq::PolarizabilityIrrep}.  
 Let {\color{blue} $\{\mathbf{e}_{\tilde{x}},\mathbf{e}_{\tilde{y}}, \mathbf{e}_{\tilde{z}}\}$ be a space fixed Cartesian coordinated, where $\mathbf{e}_{\tilde{z}}$ defines the quantization axis of the atom, set by the magnetic field}.  Because of the azimuthal symmetry of clock state around the $\qaxis$-axis, the polarizability tensor is diagonal in that basis.  
 Noting that $\langle f,0 | \hat{f}_{\tilde{z}}| f,0 \rangle =0$ and $\langle f,0 | \hat{f}_{\tilde{x}}^2| f,0 \rangle = \langle f,0 | \hat{f}_{\tilde{y}}^2| f,0 \rangle = \langle f,0 | \hat{\mathbf{f}}^2| f,0 \rangle /2 =f(f+1)/2$, it follows that the expectation value of the irreducible rank-2 component of the atomic polarizability is
 	\begin{align} \label{Eq::CouplingAngleMagic}
@@ -1015,25 +1014,24 @@ Further details about the guided-mode fields inside the nanofiber ($r_\perp\leq 
 %===================APPENDIX: Photon scattering and optical pumping rates =====================%
 \section{Photon scattering and optical pumping rates} \label{Appendix::Rates}	
 
-To process section~\ref{Sec::QNDMeasurement}, we define the total rate of photon scattering by atoms in the clock state $\ket{f,0}$ by
+{\color{blue} We give in this Appendix an explicit expressions for the photon scattering rates used in Sec.~\ref{Sec::QNDMeasurement} following the formalism given in~\cite{deutsch_quantum_2010}.  The} total rate of photon scattering by atoms in the clock state $\ket{f,0}$ is
 	\begin{equation}\label{Eq::gammaf}
 		\gamma_{f}=- \frac{2}{\hbar} {\rm Im} \big[ \bra{f,0} \hat{h}_{\rm eff}\ket{f,0} \big] ,
 	\end{equation}
-where the effective non-Hermitian light-shift Hamiltonian for one atom is defined by
+where the effective non-Hermitian light-shift Hamiltonian for one atom is
 \begin{align}
 \hat{h}_{\rm eff} = - \hat{\mathbf{E}}^{(-)}_{\rm in}(\mathbf{r}' ; t ) \cdot \poltens \cdot \hat{\mathbf{E}}^{(+)}_{\rm in}(\mathbf{r}' ;t )
 \end{align}
-followed from \erf{Eq::LightShiftHam}. 
-Since only the imaginary part of the Hamiltonian is required, one can calculate the photon scattering rates, $\gamma_{f}$, by accounting for the imaginary part of the atomic polarizability either using Eq.~\eqref{Eq::Polarizability} by substitution of $\charpol \rightarrow -\frac{\sigma_0}{4\pi k_0}\frac{1}{\Delta_{ff'}+i\Gamma/2}$ and the irreducible tensor operator $ \hat{\tensor{\mbf{A}}}(f,f') $ found in \erf{Eq::PolarizabilityIrrep} or using Eq.~\eqref{Eq::PolarizabilityOperator} with Wigner-Eckart theorem applied.  
+as follows from \erf{Eq::LightShiftHam}, where here $\charpol = -\frac{\sigma_0}{4\pi k_0}\frac{1}{\Delta_{ff'}+i\Gamma/2}$ {\color{blue} is complex polarizability} and the irreducible tensor operator $ \hat{\tensor{\mbf{A}}}(f,f') $ is given in \erf{Eq::PolarizabilityIrrep}.
 
-Meanwhile, the rates of optical pumping between the clock states, $\ket{f,0} \rightarrow \ket{\tilde{f},0}$, are
+The rates of optical pumping between the clock states, $\ket{f,0} \rightarrow \ket{\tilde{f},0}$, are
 	\begin{equation}\label{Eq::gammaff}
 		\gamma_{f \rightarrow \tilde{f} } =\sum_{f_a,f_b,q}\big| \bra{f,0} \hat{W}_q^{f_bf_a} \ket{\tilde{f},0} \big|^2=\sum_{q}\big| \bra{f,0} \hat{W}_q^{f\tilde{f}} \ket{\tilde{f},0} \big|^2,
 	\end{equation}
 where $ \hat{W}_q^{f_bf_a} = \sum_{f'}\frac{\Omega/2}{\Delta_{f'f_a}+i\Gamma/2}(\mathbf{e}_q^*\cdot\hat{\mathbf{D}}_{f_bf'} )(\mathbf{e}_{\rm in}\cdot \hat{\mathbf{D}}^\dagger_{f'f_a} ) $ are the Lindblad jump operators for optical pumping between ground levels $ f_a\rightarrow f_b $~\cite{deutsch_quantum_2010}. 
 Each jump operator $\hat{W}_q^{f_bf_a}$ is associated with absorption of the probe photon polarized along $ \mathbf{e}_{\rm in} $ followed by spontaneous emission of a photon with polarization $ \mathbf{e}_q $, where $q=0,\pm 1$ labels spherical basis elements for $\pi$ or $\pm \sigma$ transitions.  
 
-To separate the dependence of the input field intensity, we define a characteristic photon scattering rate, $\gamma_s \equiv \frac{\Gamma\Omega^2}{4\Delta_{\rm eff}^2}= \frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_\eff^2} \dot{N}_L $, where the Rabi frequency $ \Omega=2\bra{J}|d|\ket{J'}\mathcal{E}^{(+)}_{\rm in}/\hbar $ with reduced optical dipole matrix element $\bra{J}|d|\ket{J'}$ and the field amplitude $ \mathcal{E}^{(+)}_{\rm in}=|\mathbf{E}_{\rm in}^{(+)}(\br')| $.
+{\color{blue} To find} the dependence of the input field intensity, we define a characteristic photon scattering rate, $\gamma_s \equiv \frac{\Gamma\Omega^2}{4\Delta_{\rm eff}^2}= \frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_\eff^2} \dot{N}_L $, where the Rabi frequency $ \Omega=2\bra{J}|d|\ket{J'}\mathcal{E}^{(+)}_{\rm in}/\hbar $ with reduced optical dipole matrix element $\bra{J}|d|\ket{J'}$ and the field amplitude $ \mathcal{E}^{(+)}_{\rm in}=|\mathbf{E}_{\rm in}^{(+)}(\br')| $.
 Eqs.~\eqref{Eq::gammaf} and~\eqref{Eq::gammaff} yield,
 	\begin{align}
 		\gamma_f &=n_g\dot{N}_L  \sum_{f'} \sigma (\Delta_{ff'} ) \mathbf{u}^*_\inp(\br'_\perp)\cdot \bra{f,0} \hat{\tensor{\mbf{A}}}(f,f') \ket{f,0}  \cdot \mathbf{u}_\inp(\br'_\perp)\\
@@ -1042,9 +1040,16 @@ Eqs.~\eqref{Eq::gammaf} and~\eqref{Eq::gammaff} yield,
 		&\approx \gamma_s \sum_{f'} \frac{\Delta_{\rm eff}^2}{\Delta_{ff'}^2}\sum_q \left| o_{j\tilde{f}}^{j'f'} o_{jf}^{j'f'}C_{f'q}^{\tilde{f}0;1 q}C_{f'q}^{f0;1q}\right|^2 \mathbf{e}_q^* \cdot (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\cdot \mathbf{e}_q,
 	\end{align}
 where $ \sigma (\Delta_{ff'} )  = \sigma_0 \Gamma^2/4\Delta^2_{ff'}$ is the the scattering cross section at the probe detuning. 
-$ o_{jf}^{j'f'} $ are the relative oscillator strengths, the square of which determine the branching ratios for spontaneous decay rates $ \Gamma_{j'f'\rightarrow jf} $ in the hyperfine multiplets to $\Gamma_{j'\rightarrow j}  $ in the atomic fine structure levels~\cite{deutsch_quantum_2010}. 
-$ C_{f'q}^{f0;1 q}=\Braket{f'q}{f0;1q} $ are the Clebsch-Gordan coefficients determining the clock state transition rates.
-
+{\color{blue}  $ C_{f'q}^{f0;1 q}=\Braket{f'q}{f0;1q}$ are the Clebsch-Gordan coefficients and }
+\begin{equation}
+\left|o_{jf}^{j'f'}\right|^2=(2j'+1)(2f+2) \left\{
+\begin{array}{ccc}
+f' & 7/2 & j' \\
+ j & 1 & f 
+ \end{array}
+ \right\}
+\end{equation}
+are the relative oscillator strengths determined by the relevant Wigner-6J symbol.
 %Along the same line, the ratio of $ \kappa $ and $ \gamma_s $ characterizes the per-photon measurement strength on one atom, which is also defined as OD$\!/\! $atom in this paper. Together with the photon scattering and optical pumping rates discussed above, the spin squeezing dynamics due to the QND measurement can be studied independently of light intensity.
 
 %===================APPENDIX: Equations of motion =====================%
