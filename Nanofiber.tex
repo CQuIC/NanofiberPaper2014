@@ -367,7 +367,7 @@ Here, the $\{p,p'\}$-element of the tensor polarizability is given by, $\alpha_{
 The phase shift per atom, \erf{Eq::PhaseShift}, is modified over free space in two ways, both of which are captured by the effective mode area $A_{\rm in}$. 
 First, although material dispersion in an optical fiber is negligible over the distances we consider, an atom coupling to a tightly confined guided mode can lead to additional waveguide dispersion and a significant reduction in the group velocity.  
 Such ``slow light" enhances the atom-photon coupling strength. 
-In the nanofiber geometry this effect is moderate -- \comment{we calculated the group index to be $n_g \approx 1.40$}. 
+In the nanofiber geometry this effect is moderate -- we calculated the group index to be $n_g \approx 1.40$. 
 Second and more importantly, the tight spatial confinement as measured by OD/atom significantly increases the coupling strength over free space for every atom along the nanofiber, which yields strong cooperativity.
 In contrast, diffraction restricts the collective phase shift for an ensemble of atoms in free space~\cite{tanji-suzuki_chapter_2011, baragiola_three-dimensional_2014}.  
 For a Gaussian beam with beam waist $w_0$, the total phase shift induced by a collection of polarizable atoms will be $\delta \phi = N_{\eff} 2 \pi k_0 {\rm Re}({\alpha})/A$, where $A = \pi w^2_0/2$ is the beam area at the focus and $N_{\eff}$ is the effective number of atoms that radiate into this mode.  
@@ -632,7 +632,7 @@ The shot-noise variance of the polarimeter, {\color{blue} $\shotnoise =  \chiN^2
 The smallest detectable atom number using this dispersive measurement is thus, $\delta N_A \sim ( \chiN^2 \dot{N}_L T)^{-1/2}$ \cite{smith_faraday_2003}.  
 In an ideal setting, $\delta N_A$ can always be reduced by increasing the integration time, while in practice this time is limited by atom loss from photon scattering into reflected and unguided modes. 
 As a coarse approximation we take this time to be $T=\gamma_s^{-1}$, where $\gamma_s$ is the photon scattering rate in free space, {\color{blue}and assume perfect quantum efficiency of the detectors.}  
-For detuning $\Delta$ large compared to the excited hyperfine splitting on the \comment{D1- or D2-line ($j' = 1/2$ or $3/2$)}, the unit-oscillator scattering rate is 
+For detuning $\Delta$ large compared to the excited hyperfine splitting on the D1- or D2-line ($j' = 1/2$ or $3/2$), the unit-oscillator scattering rate is 
 $\gamma_s =\frac{\sigma_0}{A_{\rm in}}\left(\frac{\Gamma}{2 \Delta}\right)^2 \dot{N}_L $, 
 with effective area determined by the probe at the atomic position, \erf{Eq::AreaIn}.  
 In this limit, the rotation angle $\chiN = C^{(0)}_{j'} (\sigma_0/\Abir)(\Gamma/2\Delta)$, \erf{Eq::RotationAngle}, yields a shot noise-limited atom number resolution, 
@@ -642,11 +642,11 @@ In this limit, the rotation angle $\chiN = C^{(0)}_{j'} (\sigma_0/\Abir)(\Gamma/
 where $ C^{(0)}_{j'}=\sum_{f,f'}C^{(0)}_{ff'}$ are the far-detuned, rank-$0$ coefficients \cite{deutsch_quantum_2010}.  
 Using the parameters above, we find an atom-number resolution of $\delta N_A = 10\sim 20$ for atoms trapped at $ 1.5a\sim 2.0a $ and probed on the D1-line. 
 Using a D2-line probe, the atom-number resolution improves by nearly a factor of 2 due to the stronger atom-light interaction. 
-\comment{Smaller fiber diameters yield further improvements in the atom-number resolution as a result of tighter confinement of the light field and larger $H$-to-$V$ mode intensity contrast at the atomic positions. }
+\comment{However, a larger fiber diameter like the $ 500nm $ one used in some reported experiments~\cite{dawkins_dispersive_2011,beguin_generation_2014} worsens the atom-number resolution by a small amount as a result of tighter confinement of the light field. }
 
 {\color{blue} 
 In practice, loss and decoherence %due to the imperfection of atomic trapping and photon detection will degrade the measurement for long integration times and 
-limit the atom-number resolution %than the minimum detectable atom number roughly estimated above~
+limit the \comment{atom-number resolution} %than the minimum detectable atom number roughly estimated above~
 \cite{dawkins_dispersive_2011, zhang_collective_2012}. The experimental implementation %of the dispersive atom number measurement 
 reported by Dawkins \emph{et al.}~\cite{dawkins_dispersive_2011} implies a resolution of a few tens of atoms for $ 200\sim 1000 $ trapped atoms.  %loaded at $ r'\!_\perp \approx 1.9a $ ($a=250$ nm). 
 A similar scheme based on a two-color QND measurement in a nanofiber geometry was recently employed by \emph{B\'{e}guin et al.} \cite{beguin_generation_2014} and achieved an improved atom number resolution of $\delta N_A = 8$ for $\sim2500$ atoms. % trapped at $ r'\!_\perp \approx 1.8a $ ($a=250$ nm). 
@@ -762,7 +762,7 @@ and an effective area given by
 		A_{J_3}^{-1} & = n_g \frac{ |\mathbf{e}_{\tilde{z}} \cdot \mathbf{u}_V(\br'_\perp)|^2 |\mathbf{u}_H(\br'_\perp)|^2 - |\mathbf{e}_{\tilde{z}} \cdot \mathbf{u}_H(\br'_\perp) |^2 |\mathbf{u}_V(\br'_\perp)|^2 }{ |\mathbf{u}_H(\br'_\perp)|^2 + |\mathbf{u}_V(\br'_\perp)|^2 } 
 	\end{align}	
 {\color{blue} We see here the explicit dependence of the coupling strength on both the anisotropy of the modes and on the tensor atomic response, which in turn depends on a particular choice of clock states.}  The quantization axis that maximizes $\chieff$ is that which minimizes $A_{J_3}$ at a given magic detuning.  
-Since the $z$-component of the guided modes is $90^\circ$ out-of-phase with the transverse components, the quantization axis maximizing the atom-light coupling is specified by \comment{an angle in the transverse $x$-$y$ plane, $\varphi$},
+Since the $z$-component of the guided modes is $90^\circ$ out-of-phase with the transverse components, the quantization axis maximizing the atom-light coupling is specified by an angle in the transverse $x$-$y$ plane, $\varphi$,
 	\begin{align} \label{Eq::QuantizationAxis}
 		\qaxis = \cos \varphi \mbf{e}_x + \sin \varphi \mbf{e}_y.
 	\end{align}
