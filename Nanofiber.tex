@@ -201,7 +201,7 @@
 
 %================================================================%
 \begin{abstract}
-We study strong dispersive coupling between photons and atoms that can be achieved in an optical nanofiber geometry.  While the Purcell enhancement factor for spontaneous emission into the guided mode does not reach the strong-coupling regime for individual atoms, high cooperativity for ensembles of a few thousand atoms can be achieved due to the tight confinement of the guided modes and constructive interference over the entire chain of trapped atoms. We calculate the dyadic Green's function, which determines the scattering of light by atoms in the presence of the fiber, and thus the phase shift and polarization rotation induced on the guided light by the trapped atoms.  The Green's function is related to a full Heisenberg-Langevin treatment of the dispersive response of the quantized field to tensor polarizable atoms.  We apply our formalism to quantum nondemolition (QND) measurement of the atoms via polarimetry.  We study shot-noise-limited detection of atom number \sout{for atoms in a completely mixed state} and the squeezing of projection noise on the atomic clock transition.  Compared with squeezing of atomic ensembles in free space, we capitalize on unique features that arise in the nanofiber geometry including anisotropy of both the intensity and polarization of the guided modes.  We use a first principles stochastic master equation to model the squeezing as function of time in the presence of decoherence due to optical pumping.  We find a peak metrological squeezing of $\sim 5$ dB is achievable with current technology for $\sim 2500$ atoms trapped 180 nm from the surface of a nanofiber with radius 225 nm.  
+We study strong dispersive coupling between photons and atoms that can be achieved in an optical nanofiber geometry.  While the Purcell enhancement factor for spontaneous emission into the guided mode does not reach the strong-coupling regime for individual atoms, high cooperativity for ensembles of a few thousand atoms can be achieved due to the tight confinement of the guided modes and constructive interference over the entire chain of trapped atoms. We calculate the dyadic Green's function, which determines the scattering of light by atoms in the presence of the fiber, and thus the phase shift and polarization rotation induced on the guided light by the trapped atoms.  The Green's function is related to a full Heisenberg-Langevin treatment of the dispersive response of the quantized field to tensor polarizable atoms.  We apply our formalism to quantum nondemolition (QND) measurement of the atoms via polarimetry.  We study shot-noise-limited detection of atom number \comment{\sout{for atoms in a completely mixed state}} and the squeezing of projection noise on the atomic clock transition.  Compared with squeezing of atomic ensembles in free space, we capitalize on unique features that arise in the nanofiber geometry including anisotropy of both the intensity and polarization of the guided modes.  We use a first principles stochastic master equation to model the squeezing as function of time in the presence of decoherence due to optical pumping.  We find a peak metrological squeezing of $\sim 5$ dB is achievable with current technology for $\sim 2500$ atoms trapped 180 nm from the surface of a nanofiber with radius 225 nm.  
 \end{abstract}
 
 \maketitle
@@ -640,9 +640,9 @@ In this limit, the rotation angle $\chiN = C^{(0)}_{j'} (\sigma_0/\Abir)(\Gamma/
 		\delta N_A  &\sim \frac{1}{C^{(0)}_{j'}}\sqrt {\frac{\Abir^2}{A_{\rm in} \sigma_0}},
 	\end{align}
 where $ C^{(0)}_{j'}=\sum_{f,f'}C^{(0)}_{ff'}$ are the far-detuned, rank-$0$ coefficients \cite{deutsch_quantum_2010}.  
-Using the parameters above, we find an atom-number resolution of $\delta N_A = 10\sim 20$ for atoms trapped at $ 1.5a\sim 2.0a $ and probed on the D1-line. 
-Using a D2-line probe, the atom-number resolution improves by nearly a factor of 2 due to the stronger atom-light interaction. 
-\comment{However, a larger fiber diameter like the $ 500nm $ one used in some reported experiments~\cite{dawkins_dispersive_2011,beguin_generation_2014} worsens the atom-number resolution by a small amount as a result of tighter confinement of the light field. }
+\comment{Using the parameters reported in one experiment by Dawkins \emph{et al.}~\cite{dawkins_dispersive_2011}, we find the shot-noise limited minimum detectable atom-number $\delta N_A \sim 10$ for atoms trapped at $ 1.8a\sim 2.0a $ from the fiber axis with a D2-line probe light. }
+%Using a D2-line probe, the atom-number resolution improves by nearly a factor of 2 due to the stronger atom-light interaction. 
+%\comment{However, a larger fiber diameter like the $ 500nm $ one used in some reported experiments~\cite{dawkins_dispersive_2011,beguin_generation_2014} worsens the atom-number resolution by a small amount as a result of tighter confinement of the light field. }
 
 {\color{blue} 
 In practice, loss and decoherence %due to the imperfection of atomic trapping and photon detection will degrade the measurement for long integration times and 
@@ -805,7 +805,7 @@ Restricting to the two-dimensional subspace associated with the clock states, th
 		\mathcal{D}_n[\hat{\rho}] =  \sum_{f=3,4} \Big\{& -\frac{\gamma_{f}}{2} \big[ \hat{\rho} (\op{f,0}{f,0})^{(n)} + (\op{f,0}{f,0})^{(n)}\hat{\rho} \big]\\
 		&+  \sum_{\tilde{f} =3,4}  \gamma_{f \rightarrow \tilde{f}}(\op{\tilde{f},0}{f,0})^{(n)} \hat{\rho}(\op{f,0}{\tilde{f},0})^{(n)} \Big\}.\nonumber
 	\end{align}
-Here, \comment{$\gamma_{f}$ is the total rate of photon scattering by atoms in state $\ket{f,0}$ and  $\gamma_{f \rightarrow \tilde{f} }$ is the rate of optical pumping between the clock states, $\ket{f,0} \rightarrow \ket{\tilde{f},0}$ (see Appendix~\ref{Appendix::Rates}). } Expressed in terms of Pauli operators on the clock-state pseudospin, the map acts as
+Here, $\gamma_{f}$ is the total rate of photon scattering by atoms in state $\ket{f,0}$ and  $\gamma_{f \rightarrow \tilde{f} }$ is the rate of optical pumping between the clock states, $\ket{f,0} \rightarrow \ket{\tilde{f},0}$ (see Appendix~\ref{Appendix::Rates}). Expressed in terms of Pauli operators on the clock-state pseudospin, the map acts as
 	\begin{align} \label{Eq::OpticalPumpingMapSchr}
 		\mathcal{D}_n [\hat{\rho}] 
 				=& - \bigg[ \frac{2(\gammau+ \gammad) - \gammauu - \gammadd}{4} \bigg] \hat{\rho} - \frac{ \gammau - \gammad - \gammauu + \gammadd }{4} \big( \hat{\sigma}_3^{(n)} \hat{\rho}+ \hat{\rho} \hat{\sigma}_3^{(n)} \big) \nn \\
@@ -1018,7 +1018,7 @@ Further details about the guided-mode fields inside the nanofiber ($r_\perp\leq 
 	\begin{equation}\label{Eq::gammaf}
 		\gamma_{f}=- \frac{2}{\hbar} {\rm Im} \big[ \bra{f,0} \hat{h}_{\rm eff}\ket{f,0} \big] ,
 	\end{equation}
-where the effective non-Hermitian light-shift Hamiltonian for one atom is
+where the effective non-Hermitian light-shift Hamiltonian for one atom is \comment{(do we need to ``restate'' the definitions for $ \hat{h}_{\rm eff} $ and $ \charpol $?)}
 \begin{align}
 \hat{h}_{\rm eff} = - \hat{\mathbf{E}}^{(-)}_{\rm in}(\mathbf{r}' ; t ) \cdot \poltens \cdot \hat{\mathbf{E}}^{(+)}_{\rm in}(\mathbf{r}' ;t )
 \end{align}
@@ -1026,7 +1026,9 @@ as follows from \erf{Eq::LightShiftHam}, where here $\charpol = -\frac{\sigma_0}
 
 The rates of optical pumping between the clock states, $\ket{f,0} \rightarrow \ket{\tilde{f},0}$, are
 	\begin{equation}\label{Eq::gammaff}
-		\gamma_{f \rightarrow \tilde{f} } =\sum_{f_a,f_b,q}\big| \bra{f,0} \hat{W}_q^{f_bf_a} \ket{\tilde{f},0} \big|^2=\sum_{q}\big| \bra{f,0} \hat{W}_q^{f\tilde{f}} \ket{\tilde{f},0} \big|^2,
+		\gamma_{f \rightarrow \tilde{f} } 
+		%\equiv \sum_{f_a,f_b,q}\big| \bra{f,0} \hat{W}_q^{f_bf_a} \ket{\tilde{f},0} \big|^2
+		=\sum_{q}\big| \bra{f,0} \hat{W}_q^{f\tilde{f}} \ket{\tilde{f},0} \big|^2,
 	\end{equation}
 where $ \hat{W}_q^{f_bf_a} = \sum_{f'}\frac{\Omega/2}{\Delta_{f'f_a}+i\Gamma/2}(\mathbf{e}_q^*\cdot\hat{\mathbf{D}}_{f_bf'} )(\mathbf{e}_{\rm in}\cdot \hat{\mathbf{D}}^\dagger_{f'f_a} ) $ are the Lindblad jump operators for optical pumping between ground levels $ f_a\rightarrow f_b $~\cite{deutsch_quantum_2010}. 
 Each jump operator $\hat{W}_q^{f_bf_a}$ is associated with absorption of the probe photon polarized along $ \mathbf{e}_{\rm in} $ followed by spontaneous emission of a photon with polarization $ \mathbf{e}_q $, where $q=0,\pm 1$ labels spherical basis elements for $\pi$ or $\pm \sigma$ transitions.  
