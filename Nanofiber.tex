@@ -201,7 +201,7 @@
 
 %================================================================%
 \begin{abstract}
-We study strong dispersive coupling between photons and atoms that can be achieved in an optical nanofiber geometry.  While the Purcell enhancement factor for spontaneous emission into the guided mode does not reach the strong-coupling regime for individual atoms, high cooperativity for ensembles of a few thousand atoms can be achieved due to the tight confinement of the guided modes and constructive interference over the entire chain of trapped atoms. We calculate the dyadic Green's function, which determines the scattering of light by atoms in the presence of the fiber, and thus the phase shift and polarization rotation induced on the guided light by the trapped atoms.  The Green's function is related to a full Heisenberg-Langevin treatment of the dispersive response of the quantized field to tensor polarizable atoms.  We apply our formalism to quantum nondemolition (QND) measurement of the atoms via polarimetry.  We study shot-noise-limited detection of atom number \comment{\sout{for atoms in a completely mixed state}} and the squeezing of projection noise on the atomic clock transition.  Compared with squeezing of atomic ensembles in free space, we capitalize on unique features that arise in the nanofiber geometry including anisotropy of both the intensity and polarization of the guided modes.  We use a first principles stochastic master equation to model the squeezing as function of time in the presence of decoherence due to optical pumping.  We find a peak metrological squeezing of $\sim 5$ dB is achievable with current technology for $\sim 2500$ atoms trapped 180 nm from the surface of a nanofiber with radius 225 nm.  
+We study strong dispersive coupling between photons and atoms that can be achieved in an optical nanofiber geometry.  While the Purcell enhancement factor for spontaneous emission into the guided mode does not reach the strong-coupling regime for individual atoms, high cooperativity for ensembles of a few thousand atoms can be achieved due to the tight confinement of the guided modes and constructive interference over the entire chain of trapped atoms. We calculate the dyadic Green's function, which determines the scattering of light by atoms in the presence of the fiber, and thus the phase shift and polarization rotation induced on the guided light by the trapped atoms.  The Green's function is related to a full Heisenberg-Langevin treatment of the dispersive response of the quantized field to tensor polarizable atoms.  We apply our formalism to quantum nondemolition (QND) measurement of the atoms via polarimetry.  We study shot-noise-limited detection of atom number \comment{\sout{for atoms in a completely mixed state} (I think we may want this -- Qi)} and the squeezing of projection noise on the atomic clock transition.  Compared with squeezing of atomic ensembles in free space, we capitalize on unique features that arise in the nanofiber geometry including anisotropy of both the intensity and polarization of the guided modes.  We use a first principles stochastic master equation to model the squeezing as function of time in the presence of decoherence due to optical pumping.  We find a peak metrological squeezing of $\sim 5$ dB is achievable with current technology for $\sim 2500$ atoms trapped 180 nm from the surface of a nanofiber with radius 225 nm.  
 \end{abstract}
 
 \maketitle
@@ -478,17 +478,24 @@ Here we are interested in linear response for excitation far from resonance. We 
 \frac{g_{\mu, e,g'}}{\omega-\omega_{eg} + i \Gamma_{e}/2  }\, \hat{a}_\mu (t_0) \\
 	&+\sum_{m,p} \int_{-kn_2}^{kn_2}\mathrm{d}\beta \, \frac{g_{\nu, e,g'}}{\omega-\omega_{eg} + i \Gamma_{e}/2 } \,\hat{a}_\nu (t_0)  \bigg)e^{-i\omega (t-t_0)} . \nn
 	\end{align}
-By substituting this into \erf{Eq::aguidedEOM} and defining asymptotic modes, $\hat{a}^{\inp}(\omega) = \lim_{t_0\rightarrow -\infty} \hat{a}(t_0) e^{i\omega t_0}$, $\hat{a}^{\out}(\omega) = \lim_{t\rightarrow +\infty} \hat{a}(t) e^{i\omega t}$ \cite{fan_input-output_2010}, we obtain the input-output relationship for the guided modes,\comment{(from here till next session, $ \hat{a}^{\inp}_\mu(\omega) $ has been changed to $ \hat{a}^{\inp}_{b,p}(\omega) $ since $ \mu $ actually includes $ \omega $... )}
+By substituting this into \erf{Eq::aguidedEOM} and defining asymptotic modes, $\hat{a}^{\inp}(\omega) = \lim_{t_0\rightarrow -\infty} \hat{a}(t_0) e^{i\omega t_0}$, $\hat{a}^{\out}(\omega) = \lim_{t\rightarrow +\infty} \hat{a}(t) e^{i\omega t}$ \cite{fan_input-output_2010}, we obtain the input-output relationship for the guided modes,
+\comment{(what Ben had changed below was $ \hat{a}^{\inp}_\mu(\omega) \rightarrow \hat{a}^{\inp}_{b,p}(\omega) $ since $ \mu $ actually includes $ \omega $, also $ \hat{a}^{\inp}_\nu(\omega) \rightarrow \hat{a}^{\inp}_{b,p}(\omega,\beta) $ for a similar reason. I disagree with this change because the change makes it hard to distinguish guided and radiative modes and $ \nu=(\omega,\beta,m,p)\neq (\omega,\beta,b,p) $ with different meanings of $p$'s as well. But we can do the replacement in the next session when only guided components are discussed. So, I left the original one and commented out alternatives below. )}
 %	\begin{align} \label{Eq::aout}
 %		\hat{a}^{\out}_\mu(\omega) = \hat{a}^{\inp}_\mu(\omega) &- 2\pi i\sum_{b',p'} 
 %\sum_{e,g,g'}\!\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\mu',e,g'}}{ \omega-\omega_{eg} + i \Gamma_{e}/2 }\hat{a}^{\inp}_{\mu'}(\omega) \\
-%&- 2\pi i\sum_{m,p} \sum_{e,g,g'} \int^{kn_2}_{-kn_2} d\beta \,\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\nu',e,g'}}{ \omega-\omega_{eg} + i \Gamma_{e}/2 }\hat{a}^{\inp}_{\nu}(\omega).\nn
+%&- 2\pi i\sum_{m,p} \sum_{e,g,g'} \int^{kn_2}_{-kn_2} \mathrm{d}\beta \,\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\nu',e,g'}}{ \omega-\omega_{eg} + i \Gamma_{e}/2 }\hat{a}^{\inp}_{\nu}(\omega).\nn
+%	\end{align} 
+%	\begin{align} \label{Eq::aout}
+%		\hat{a}^{\out}_{b,p}(\omega) = \hat{a}^{\inp}_{b,p}(\omega) &- 2\pi i\sum_{b',p'} 
+%\sum_{e,g,g'}\!\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\mu',e,g'}}{ \omega-\omega_{eg} + i \Gamma_{e}/2 }\hat{a}^{\inp}_{b'\!\!, p'}(\omega) \\
+%&- 2\pi i\sum_{m,p} \sum_{e,g,g'} \int^{kn_2}_{-kn_2} \mathrm{d}\beta \,\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\nu',e,g'}}{ \omega-\omega_{eg} + i \Gamma_{e}/2 }\hat{a}^{\inp}_{b,p}(\omega, \beta).\nn
 %	\end{align} 
 	\begin{align} \label{Eq::aout}
-		\hat{a}^{\out}_{b,p}(\omega) = \hat{a}^{\inp}_{b,p}(\omega) &- 2\pi i\sum_{b',p'} 
-\sum_{e,g,g'}\!\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\mu',e,g'}}{ \omega-\omega_{eg} + i \Gamma_{e}/2 }\hat{a}^{\inp}_{b'\!\!, p'}(\omega) \\
-&- 2\pi i\sum_{m,p} \sum_{e,g,g'} \int^{kn_2}_{-kn_2} \mathrm{d}\beta \,\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\nu',e,g'}}{ \omega-\omega_{eg} + i \Gamma_{e}/2 }\hat{a}^{\inp}_{b,p}(\omega, \beta).\nn
-	\end{align} 
+		\hat{a}^{\out}_\mu (\omega) &\!=\! \hat{a}^{\inp}_\mu (\omega) \!-\! 2\pi i\sum_{b',p'} 
+\sum_{e,g,g'}\!\!\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\mu'\!\!,e,g'}}{ \omega \!-\! \omega_{eg} \!+\! i \Gamma\!_{e}/2 }\hat{a}^{\inp}_{\mu'}(\omega) \nn\\
+&\!\!\!\!\!\!\!\!-\! 2\pi i\!\sum_{m\!,p} \sum_{e\!,g\!,g'}\! \int^{kn_2}_{-kn_2}\!\!\!\! \mathrm{d}\beta \,\hat{\sigma}\!_{gg'}\frac{ g_{\mu,e,g}^* g_{\nu'\!\!,e,g'}}{ \omega \!-\! \omega_{eg} \!\!+\! i \Gamma\!_{e}/2 }\hat{a}^{\inp}_{\nu}(\omega).
+	\end{align}
+%where $\Delta_{eg} = \omega - \omega_{eg}$.
 	
 This input-output relation contains the phase shift on forward scattered modes as well as attenuation due to elastic scattering into all other modes. For a probe with frequency $\omega_0$, \erf{Eq::aout} agrees with the expected form given by the Lippmann-Schwinger equation in the first Born approximation \footnote{In a careful derivation of the Lippman-Schwinger scattering equation, it is not the total Green's function that appears in \erf{Eq::ScatteredField} but rather a related dyadic quantity, $\mbf{K}(\br,\br', \omega_0) = \mbf{G}(\br,\br', \omega_0) + \delta(\br-\br')/n^2(\br)$ \cite{wubs_multiple-scattering_2004}. 
 This function arises by proper accounting of the scatterer's coupling to the \emph{displacement} rather than the electric field \cite{yao_ultrahigh_2009}.  The distinction becomes important at the source point $\mbf{r} = \mbf{r}'$; however, for lossless dielectrics $n(\mathbf{r})$ is real and ${\rm Im}[\tensor{\mathbf{G}}(\br',\br'; \omega)] = {\rm Im}[\tensor{\mathbf{K}}(\br',\br'; \omega)]$ \cite{yao_-chip_2010}. },
@@ -497,7 +504,7 @@ This function arises by proper accounting of the scatterer's coupling to the \em
 	\end{equation}
 by noting that for the guided-mode dyadic Green's function given in \erf{Eq::GreensGuided},
 	\begin{align}
-		\int d^2 \mbf{r}_\perp \, \mathbf{u}^*_{\mu} (\br_\perp)\cdot \tensor{\mathbf{G}}_g^{(+)}(\br,\br',\omega_0)\cdot \poltens \cdot \mathbf{u}_{\mu'} (\br'_\perp) &= i \frac{ 2\pi \omega_0}{v_g} \mathbf{u}^*_{bp} (\br') \cdot \poltens \cdot \mathbf{u}_{b' p'} (\br'). 
+		\int d^2 \mbf{r}_\perp \, \mathbf{u}^*_{\mu} (\br_\perp)\cdot \tensor{\mathbf{G}}_g^{(+)}(\br,\br',\omega_0)\cdot \poltens \cdot \mathbf{u}_{\mu'} (\br'_\perp) &= i \frac{ 2\pi \omega_0}{v_g} \mathbf{u}^*_{b,p} (\br'\!_\perp) \cdot \poltens \cdot \mathbf{u}_{b'\!\!, p'} (\br'\!_\perp). 
 		%& = - i \frac{2 \pi}{\hbar} \sum_{e,g,g'}  \hat{\sigma}_{gg'} \frac{g_{\mu,e,g}^* g_{\mu',e,g'}}{ \Delta_{eg} + i \Gamma_{e}/2 }, 
 	\end{align}
 Here, the atomic polarizability operator \cite{buhmann_casimir-polder_2004, deutsch_quantum_2010,kien_dynamical_2013}, is given by
@@ -1021,7 +1028,7 @@ We present in this Appendix explicit expressions for the photon scattering rates
 	\begin{equation}\label{Eq::gammaf}
 		\gamma_{f}=- \frac{2}{\hbar} {\rm Im} \big[ \bra{f,0} \hat{h}_{\rm eff}\ket{f,0} \big] ,
 	\end{equation}
-where the effective non-Hermitian light-shift Hamiltonian for one atom is \comment{(do we need to ``restate'' the definitions for $ \hat{h}_{\rm eff} $ and $ \charpol $?)}
+where the effective non-Hermitian light-shift Hamiltonian for one atom is \comment{(do we need to ``restate'' the definitions for $ \hat{h}_{\rm eff} $ and $ \charpol $? -- Ben. It may not hurt anything, since $ \hat{h}_{\rm eff} $ is  different from \erf{Eq::LightShiftHam} and the equation of $ \charpol $ serves as a reminder since it has been defined in a few different ways in this paper. -- Qi.)}
 \begin{align}
 \hat{h}_{\rm eff} = - \hat{\mathbf{E}}^{(-)}_{\rm in}(\mathbf{r}' ; t ) \cdot \poltens \cdot \hat{\mathbf{E}}^{(+)}_{\rm in}(\mathbf{r}' ;t )
 \end{align}

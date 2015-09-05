@@ -423,6 +423,12 @@ Ben~Q. Baragiola.
 \newblock PhD thesis, University of New Mexico, Albuquerque, USA, August 2014.
 \newblock arXiv: 1408.4447.
 
+\bibitem{stockton_deterministic_2004}
+John~K. Stockton, Ramon van Handel, and Hideo Mabuchi.
+\newblock Deterministic {Dicke}-state preparation with continuous measurement
+  and control.
+\newblock {\em Phys. Rev. A}, 70(2):022106, August 2004.
+
 \bibitem{smith_faraday_2003}
 Greg~A. Smith, Souma Chaudhury, and Poul~S. Jessen.
 \newblock Faraday spectroscopy in an optical lattice: a continuous probe of
@@ -546,12 +552,6 @@ Leigh~M. Norris, Collin~M. Trail, Poul~S. Jessen, and Ivan~H. Deutsch.
 \newblock Enhanced {Squeezing} of a {Collective} {Spin} via {Control} of {Its}
   {Qudit} {Subsystems}.
 \newblock {\em Phys. Rev. Lett.}, 109(17):173603, October 2012.
-
-\bibitem{stockton_deterministic_2004}
-John~K. Stockton, Ramon van Handel, and Hideo Mabuchi.
-\newblock Deterministic {Dicke}-state preparation with continuous measurement
-  and control.
-\newblock {\em Phys. Rev. A}, 70(2):022106, August 2004.
 
 \bibitem{mcconnell_entanglement_2015}
 Robert McConnell, Hao Zhang, Jiazhong Hu, Senka Ćuk, and Vladan Vuletić.
