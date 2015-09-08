@@ -372,9 +372,7 @@ For weak scattering the diagonal terms, $t_{p p} \approx \sqrt{1-R_p}e^{i \delta
 \end{subequations}
 Here, the $\{p,p'\}$-element of the tensor polarizability is given by, $\alpha_{pp'} \equiv \mathbf{e}^*_{p'} \cdot \tensor{\boldsymbol{\alpha}}\cdot \mathbf{e}_{p}$, with unit vectors for each of the forward-propagating mode functions, $\mathbf{e}_{p}\equiv \mathbf{u}_{+,p}(\br'_\perp)/|\mathbf{u}_{+,p}(\br'_\perp)|$. 
 
-The phase shift per atom, \erf{Eq::PhaseShift}, is modified over free space in two ways, both of which are captured by the effective mode area $A_{\rm in}$. 
-\comment{First, although material dispersion in an optical fiber is negligible over the distances we consider, an atom coupling to a tightly confined guided mode can lead to additional waveguide dispersion and a significant reduction in the group velocity.(Let's discuss this.)}  
-Such ``slow light" enhances the atom-photon coupling strength. 
+The phase shift per atom, \erf{Eq::PhaseShift}, is modified over free space in two ways, both of which are captured by the effective mode area $A_{\rm in}$. {\color{blue} First, although material dispersion in an optical fiber is negligible over the distances we consider, additional waveguide dispersion can lead to a significant reduction in the group velocity~\cite{?}}.  Such ``slow light" enhances the atom-photon coupling strength. 
 In the nanofiber geometry this effect is moderate -- we calculated the group index to be $n_g \approx 1.40$. 
 Second and more importantly, the tight spatial confinement as measured by OD/atom significantly increases the coupling strength over free space for every atom along the nanofiber, which yields strong cooperativity.
 In contrast, in free space diffraction restricts the collective phase shift for an ensemble of atoms~\cite{tanji-suzuki_chapter_2011, baragiola_three-dimensional_2014}.  
@@ -964,7 +962,7 @@ The former corresponds to cooperative forward scattering into the guided mode wh
 The cooperativity, specified by the OD/atom, determines the ratio of these two effects and thus the ultimate power of the quantum atom-light interface. 
 
 We studied QND measurement using a first-principles stochastic master equation model, which allowed us to track the atomic correlation functions that define the metrologically relevant squeezing parameter.  
-These include the atomic projection noise uncertainty as well as the \comment{mean length of the pseudospin (?)} that defines the metrological signal.  We find that decoherence acts primarily to depolarize the mean pseudospin and optically pump atoms out of the clock subspace, which we treat as loss.  In addition, optical pumping decoheres the spin correlations at the heart of spin squeezing, but at a reduced rate compared with the effect on the mean pseudospin.  
+These include the atomic projection noise uncertainty as well as {\color{blue} the length of the collective spin vector} that defines the metrological signal.  We find that decoherence acts primarily to depolarize the mean pseudospin and optically pump atoms out of the clock subspace, which we treat as loss.  In addition, optical pumping decoheres the spin correlations at the heart of spin squeezing, but at a reduced rate compared with the effect on the mean pseudospin.  
 The combined effect of QND measurement and decoherence yields a peak squeezing approaching 5 dB with $\sim 2500$ atoms. 
 
 Larger enhancements in atom-light coupling and QND squeezing are possible with modest increases in the number of trapped atoms and/or for atoms trapped closer to the nanofiber surface.  
@@ -973,8 +971,8 @@ The coupling can be further improved under EIT conditions that substantially slo
 In addition, quantum control of the internal hyperfine state \cite{smith_quantum_2013-1} can greatly enhance the entangling power of the atom-light interface~\cite{trail_strongly_2010, norris_enhanced_2012}. 
 For large enough coupling, QND measurement should allow production of highly entangled spin states beyond the Gaussian regime \cite{stockton_deterministic_2004, mcconnell_entanglement_2015}.
 
-ACKNOWLEDGMENTS and FUNDING
-
+ACKNOWLEDGMENTS 
+We gratefully acknowledge Sudhakar Prasad for helpful discussions regarding the dyadic Green's function.  This work was support by the AFOSR, under grant Y600242, and the NSF, under grants PHY-1212445, 1307520. 
 %\bibliography
 %\bibliographystyle{amsplain}
 \bibliographystyle{unsrt}
@@ -1050,7 +1048,6 @@ as follows from \erf{Eq::LightShiftHam}, where here $\charpol = -\frac{\sigma_0}
 The rate of optical pumping between clock states $\ket{f,0} \rightarrow \ket{\tilde{f},0}$ is
 	\begin{equation}\label{Eq::gammaff}
 		\gamma_{f \rightarrow \tilde{f} } 
-		%\equiv \sum_{f_a,f_b,q}\big| \bra{f,0} \hat{W}_q^{f_bf_a} \ket{\tilde{f},0} \big|^2
 		=\sum_{q}\big| \bra{\tilde{f},0} \hat{W}_q^{\tilde{f}f} \ket{f,0} \big|^2,
 	\end{equation}
 where $ \hat{W}_q^{\tilde{f}f} = \sum_{f'}\frac{\Omega/2}{\Delta_{f'\tilde{f}}+i\Gamma/2}(\mathbf{e}_q^*\cdot\hat{\mathbf{D}}_{\tilde{f} f'} )(\mathbf{e}_{\rm in}\cdot \hat{\mathbf{D}}^\dagger_{f'f} ) $ are the Lindblad jump operators for optical pumping between ground levels $ f\rightarrow \tilde{f} $~\cite{deutsch_quantum_2010}. 
