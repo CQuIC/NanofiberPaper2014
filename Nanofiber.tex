@@ -19,100 +19,40 @@
 \usepackage{calc}
 \usepackage{natbib} %[numbers]
 \usepackage{bibentry}
-% underline tool
-\usepackage[normalem]{ulem}
-\usepackage[low-sup]{subdepth}
-\usepackage[usenames,dvipsnames]{xcolor}
-%\uline{foo}	Underlines foo
-%\uuline{foo}	Double underlines foo
-%\uwave{foo}	Underlines foo with a wavy line
-%\sout{foo}	Strikesout foo
-%\xout{foo}	Crosses out foo with ¡®/6¤7¡¯
-% triple lines in colors
-\makeatletter
-\newcommand\uuuline{\bgroup\markoverwith%
-   {%
-     \textcolor{red}{\rule[-0.5ex]{2pt}{0.4pt}}%
-     \llap{\textcolor{blue}{\rule[-0.7ex]{2pt}{0.4pt}}}%
-     \llap{\textcolor{green}{\rule[-0.9ex]{2pt}{0.4pt}}}%
-   }%
-   \ULon}
-\makeatother
-
-
-\usepackage{amsmath,soul} % underline with a number
-% usage example: $\underset{4}{\text{\ul{This is short text}}}$
-% another package to use, but did not work for me.
-% From: http://tex.stackexchange.com/questions/45341/labeling-underlined-text-over-multiple-lines
-%\usepackage{soulpos}
-%\ulposdef{\ulnumaux}{%
-%   $\underset{\saveulnum}{\rule[-.7ex]{\ulwidth}{.4pt}}$}
-%
-%\newcommand{\ulnum}[2]{%
-%  \def\saveulnum{#1}%
-%  \ulnumaux{#2}}
 
 % todo list and commands
-\usepackage{todonotes}
+%\usepackage{todonotes}
 %% to avoid the conflict with amths package % not working
 %\makeatletter
 %\providecommand\@dotsep{5}
 %\makeatother
 %\listoftodos\relax
-\usepackage{makeidx}
-\allowdisplaybreaks
-% for eps transfering to pdf.
-\usepackage[update,prepend]{epstopdf}
-\usepackage{ifpdf}
-
-\ifpdf
-   \usepackage{graphicx}
-   \usepackage{epstopdf}
-   \epstopdfsetup{suffix=}
-   \DeclareGraphicsRule{.eps}{pdf}{.pdf}{`epstopdf #1}
-   \pdfcompresslevel=9
-\else
-   \usepackage{graphicx}
-\fi
+%\usepackage{makeidx}
+%\allowdisplaybreaks
+%% for eps transfering to pdf.
+%\usepackage[update,prepend]{epstopdf}
+%\usepackage{ifpdf}
+%
+%\ifpdf
+%   \usepackage{graphicx}
+%   \usepackage{epstopdf}
+%   \epstopdfsetup{suffix=}
+%   \DeclareGraphicsRule{.eps}{pdf}{.pdf}{`epstopdf #1}
+%   \pdfcompresslevel=9
+%\else
+%   \usepackage{graphicx}
+%\fi
 % subfig
 %\usepackage{mwe}
-\usepackage{subfig}
+%\usepackage{subfig}
 % to fix a figure's position using [H] option of thec figure.
-\usepackage{float}
+%\usepackage{float}
 % to use \lesssim and other math symbols
-\usepackage{amssymb}
+%\usepackage{amssymb}
 
 
 % self-defined short-cuts and commands
-
-% packages we need for judging the operating system
-% compile your tex file with option -shell-escape is required: 
-% e.g. xelatex -shell-escape file.tex
-\usepackage{pdftexcmds}
-\usepackage{catchfile}
-\usepackage{ifluatex}
-\usepackage{ifplatform}
-
 \input{Mydef.tex}
-% judge platform and include correct definiation package
-%\ifwindows
-%	%\input{F:/Research/Works/Templates/Mydef.tex} % %
-%	\input{F:/Research/Works/Templates/Mydef.tex} % 
-%\else
-%	\input{/media/F/Research/Works/Templates/Mydef.tex} %
-%\fi
-
-%\includeonly{VectorTensor}
-% for table captions.
-\usepackage{tabularx,ragged2e,booktabs} %,caption
-
-% packages for drawing
-\usepackage{tikz}
-%\usepackage{xypic}
-%\usepackage[matrix,frame,arrow]{xypic}
-\usetikzlibrary{calc}
-%\input{Qcircuit}
-%\usepackage{qcircuit}
 
 % Redefine the tensor command.
 %\renewcommand{\tensor}[1]{\boldsymbol{#1}}
@@ -234,7 +174,6 @@ Such strong cooperativity opens the door to new regimes to create non-Gaussian q
 
 
 One-dimensional optical lattices in nanofibers based on multiple co- and counter-propagating trapping beams have been loaded with up to several thousand alkali atoms \cite{vetsch_optical_2010, lacroute_state-insensitive_2012}.
-% Probe light launched into the guided modes exhibits low loss through the adiabatic taper \cite{hoffman_ultrahigh_2014} yielding significant intensity at the trapped atoms.
 This has proved a fruitful platform for quantum information processing.  
 The anisotropic nature of the strong atom-light coupling has been exploited for control of internal atomic states \cite{mitsch_exploiting_2014}, enhanced coupling into a preferred propagation direction \cite{petersen_chiral_2014, mitsch_quantum_2014}, and optical switching \cite{oshea_fiber-optical_2013}. 
 Off resonance, dispersive coupling has allowed for non-destructive atom counting \cite{dawkins_dispersive_2011, beguin_generation_2014} 
@@ -342,8 +281,7 @@ Equation (\ref{Eq::GreensGuided}) is the central result from which we can calcul
  	\begin{align} \label{Eq::AreaIn}
  		A_{\rm in} \equiv \frac{P_{{\rm in}}}{I_{\rm in}(\mathbf{r}')} = \frac{1}{n_g |\mathbf{u}_{\rm in}(\mathbf{r}'_\perp)|^{2}},
 	\end{align}
-where $n_g\equiv c/v_g$ is the group index of refraction.  
-%The tight confinement of the guided modes in the nanofiber results in significant intensity (and thus small effective mode area) in the evanescent field near the nanofiber for relatively small input power \cite{bures_power_1999}.  
+where $n_g\equiv c/v_g$ is the group index of refraction.    
 
 Substitution of the guided-mode Green's function, \erf{Eq::GreensGuided}, into the Lippman-Schwinger equation, \erf{Eq::ScatteredField}, yields the transmitted (forward-scattered) and reflected (backward-scattered) output fields, $\mathbf{E}_{\out}(\br) = \Eamp \big[ \mathbf{u}_{\trans, \out} (\br_\perp) e^{i \beta_0 z} + \mathbf{u}_{\refl,\out} (\br_\perp) e^{-i \beta_0 z} \big]$, 
 \begin{subequations}
@@ -488,17 +426,7 @@ Here we are interested in linear response for excitation far from resonance. We 
 \frac{g_{\mu, e,g'}}{\omega-\omega_{eg} + i \Gamma_{e}/2  }\, \hat{a}_\mu (t_0) \\
 	&+\sum_{m,p} \int_{-kn_2}^{kn_2}\mathrm{d}\beta \, \frac{g_{\nu, e,g'}}{\omega-\omega_{eg} + i \Gamma_{e}/2 } \,\hat{a}_\nu (t_0)  \bigg)e^{-i\omega (t-t_0)} . \nn
 	\end{align}
-By substituting this into \erf{Eq::aguidedEOM} and defining asymptotic modes, $\hat{a}^{\inp}(\omega) = \lim_{t_0\rightarrow -\infty} \hat{a}(t_0) e^{i\omega t_0}$, $\hat{a}^{\out}(\omega) = \lim_{t\rightarrow +\infty} \hat{a}(t) e^{i\omega t}$ \cite{fan_input-output_2010}, we obtain the input-output relationship for the guided modes,
-%	\begin{align} \label{Eq::aout}
-%		\hat{a}^{\out}_\mu(\omega) = \hat{a}^{\inp}_\mu(\omega) &- 2\pi i\sum_{b',p'} 
-%\sum_{e,g,g'}\!\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\mu',e,g'}}{ \omega-\omega_{eg} + i \Gamma_{e}/2 }\hat{a}^{\inp}_{\mu'}(\omega) \\
-%&- 2\pi i\sum_{m,p} \sum_{e,g,g'} \int^{kn_2}_{-kn_2} \mathrm{d}\beta \,\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\nu',e,g'}}{ \omega-\omega_{eg} + i \Gamma_{e}/2 }\hat{a}^{\inp}_{\nu}(\omega).\nn
-%	\end{align} 
-%	\begin{align} \label{Eq::aout}
-%		\hat{a}^{\out}_{b,p}(\omega) = \hat{a}^{\inp}_{b,p}(\omega) &- 2\pi i\sum_{b',p'} 
-%\sum_{e,g,g'}\!\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\mu',e,g'}}{ \omega-\omega_{eg} + i \Gamma_{e}/2 }\hat{a}^{\inp}_{b'\!\!, p'}(\omega) \\
-%&- 2\pi i\sum_{m,p} \sum_{e,g,g'} \int^{kn_2}_{-kn_2} \mathrm{d}\beta \,\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\nu',e,g'}}{ \omega-\omega_{eg} + i \Gamma_{e}/2 }\hat{a}^{\inp}_{b,p}(\omega, \beta).\nn
-%	\end{align} 
+By substituting this into \erf{Eq::aguidedEOM} and defining asymptotic modes, $\hat{a}^{\inp}(\omega) = \lim_{t_0\rightarrow -\infty} \hat{a}(t_0) e^{i\omega t_0}$, $\hat{a}^{\out}(\omega) = \lim_{t\rightarrow +\infty} \hat{a}(t) e^{i\omega t}$ \cite{fan_input-output_2010}, we obtain the input-output relationship for the guided modes, 
 	\begin{align} \label{Eq::aout}
 		\hat{a}^{\out}_\mu (\omega) &\!=\! \hat{a}^{\inp}_\mu (\omega) \!-\! 2\pi i\sum_{b',p'} 
 \sum_{e,g,g'}\!\!\hat{\sigma}_{gg'}\frac{ g_{\mu,e,g}^* g_{\mu'\!\!,e,g'}}{ \omega \!-\! \omega_{eg} \!+\! i \Gamma\!_{e}/2 }\hat{a}^{\inp}_{\mu'}(\omega) \nn\\
@@ -513,8 +441,7 @@ This function arises by proper accounting of the scatterer's coupling to the \em
 	\end{equation}
 by noting that for the guided-mode dyadic Green's function given in \erf{Eq::GreensGuided},
 	\begin{align}
-		\int d^2 \mbf{r}_\perp \, \mathbf{u}^*_{\mu} (\br_\perp)\cdot \tensor{\mathbf{G}}_g^{(+)}(\br,\br',\omega_0)\cdot \poltens \cdot \mathbf{u}_{\mu'} (\br'_\perp) &= i \frac{ 2\pi \omega_0}{v_g} \mathbf{u}^*_{b,p} (\br'_\perp) \cdot \poltens \cdot \mathbf{u}_{b'\!\!, p'} (\br'_\perp). 
-		%& = - i \frac{2 \pi}{\hbar} \sum_{e,g,g'}  \hat{\sigma}_{gg'} \frac{g_{\mu,e,g}^* g_{\mu',e,g'}}{ \Delta_{eg} + i \Gamma_{e}/2 }, 
+		\int d^2 \mbf{r}_\perp \, \mathbf{u}^*_{\mu} (\br_\perp)\cdot \tensor{\mathbf{G}}_g^{(+)}(\br,\br',\omega_0)\cdot \poltens \cdot \mathbf{u}_{\mu'} (\br'_\perp) &= i \frac{ 2\pi \omega_0}{v_g} \mathbf{u}^*_{b,p} (\br'_\perp) \cdot \poltens \cdot \mathbf{u}_{b'\!\!, p'} (\br'_\perp).  
 	\end{align}
 Here, the atomic polarizability operator \cite{buhmann_casimir-polder_2004, deutsch_quantum_2010,kien_dynamical_2013}, is given by
 	\begin{equation} \label{Eq::PolarizabilityOperator}
@@ -662,10 +589,6 @@ In practice, loss and decoherence limit the atom-number resolution~\cite{dawkins
 The experimental implementation reported by Dawkins \emph{et al.}~\cite{dawkins_dispersive_2011} implies a resolution of a few tens of atoms for $ 200\sim 1000 $ trapped atoms.  
 A similar experiment based on a two-color QND measurement in a nanofiber geometry was recently carried out by \emph{B\'{e}guin et al.} \cite{beguin_generation_2014} to squeeze the uncertainty in the number of trapped atoms. They achieved an atom number uncertainty of $\delta N_A = 8$ for $N_A\sim2500$ atoms, well below standard quantum limit, $\delta N_A=\sqrt{N_A}$.
 
-%=================== FIGURE: Atom number detection ===================%
-%\missingfigure{Diagram of rotation on Poincar\'{e} sphere, plot for $N^{\rm min}_A$.}
-%================================================================%
-
 
 	%===================QND spin squeezing=====================%
 	\subsection{Collective spin squeezing via QND measurement}
@@ -711,7 +634,7 @@ Because the guided probe light at the position of the atom will generally be ell
 \includegraphics[scale=0.44]{./Figs/3}
 \caption{Parameters of the atom-light interface using the clock states of $^{133}$Cs.  
 (a) Energy level structure for atoms probed with one of two magic frequencies on the D1-line. 
-(b) Magnitude of the magic detunings at which the clock states are equally light-shifted, $| \tilde{\Delta}_{f}|/2\pi \equiv | \omega_0 - \magic{f} |/2\pi$ (in units of MHz). There are two solutions shown as blue (dashed) and red lines. (c) The coupling strength, as measured by the magnitude of the polarization rotation angle on the Poincar\'{e} sphere, $|\chi_{\tiny J_3}|$, for an atom trapped in the $x$-$z$ plane at a distance $ r'\!_\perp=1.8a $ from the fiber center.  In both (b) and (c) we plot the parameter as the direction of the clock-state quantization axis is varied in the $x$-$y$ plane, for the two possible choices of magic detunings.
+(b) Magnitude of the magic detunings at which the clock states are equally light-shifted, $| \tilde{\Delta}_{f}|/2\pi \equiv | \omega_0 - \magic{f} |/2\pi$ (in units of MHz). There are two solutions shown as blue (dashed) and red lines. (c) The coupling strength, as measured by the magnitude of the polarization rotation angle on the Poincar\'{e} sphere, $|\chi_{_{ J_3}}|$, for an atom trapped in the $x$-$z$ plane at a distance $ r'\!_\perp=1.8a $ from the fiber center.  In both (b) and (c) we plot the parameter as the direction of the clock-state quantization axis is varied in the $x$-$y$ plane, for the two possible choices of magic detunings.
 See text for details.}\label{Fig::CouplingStrength}
 \end{figure}
 %=============================================
@@ -867,8 +790,7 @@ The peak squeezing is ultimately limited by the combined effects of optical pump
 A scattered photon eliminates the initial coherence between $\ket{\uparrow}$ and $\ket{\downarrow}$ within a single atom, thus depolarizing $\expt{\jx}$.  
 Atoms optically pumped to magnetic sublevels outside of the clock subspace decay $N_C$, further reducing $\expt{\jx}$. 
 These effects are captured by the depolarization rate $\gamma_{11}$ in the equation for $\expt{\jx}$, \erf{Eq::MeanSpinDecay}, whose solution is plotted in \frf{Fig::Squeezing_Dynamics}(b).
-
-%The QND squeezing of the conditional variance, $\varz$, competes with two types of decoherence from optical pumping. First, optical pumping leads to decay of the two-body correlations that lie at the heart of spin squeezing.  
+  
 We can gain deeper understanding in the microscopic effects of optical pumping on spin squeezing by looking at the evolution of the one and two-body correlation functions.  In terms of its constituent pseudospins, the collective variance takes the form
 	\begin{align} \label{Eq::VarianceDecomposition}
 	\varz & = N_A \big( \Delta j_3^{(1)} \big)^2 + N_A(N_A-1) \expt{ \Delta j_3^{(1)} \Delta j_3^{(2)} }
@@ -885,8 +807,7 @@ have a much larger influence on the total variance. Spin-spin correlations at th
 	\begin{align} \label{Eq::TwoBodySpinDecay}
 		\frac{d}{dt} \expt{\hat{\sigma}_3^{(1)} \otimes \hat{\sigma}_3^{(2)} }  \Big|_{\rm op} = - 2 \gamma_{33}  \expt{\hat{\sigma}_3^{(1)} \otimes \hat{\sigma}_3^{(2)}} + \gamma_{30} \expt{ \hat{\mathbbm{1}}^{(1)}_C \otimes \hat{\sigma}_3^{(2)} + \hat{\sigma}_3^{(1)} \otimes \hat{\mathbbm{1}}^{(2)}_C },
 	\end{align}
-where $\hat{\mathbbm{1}}^{(n)}_C \equiv \big( \op{\uparrow}{\uparrow} + \op{\downarrow}{\downarrow} \big){}^{(n)}$ is the single-body projector onto the clock states. 
-%A limit to the measurement-induced entanglement between atoms throughout the ensemble is enforced by the decoherence process in \erf{Eq::TwoBodySpinDecay}.  
+where $\hat{\mathbbm{1}}^{(n)}_C \equiv \big( \op{\uparrow}{\uparrow} + \op{\downarrow}{\downarrow} \big){}^{(n)}$ is the single-body projector onto the clock states.   
 In addition, atoms that return to the clock subspace after scattering a photon inject additional noise into $\varz$.  
 All of these effects are included in the equation for $\varz$, \erf{Eq::varJz}, whose overall and decomposed dynamical evolutions are shown in Fig. \ref{Fig::Squeezing_Dynamics}(c). 
 
