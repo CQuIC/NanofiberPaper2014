@@ -52,7 +52,32 @@
 
 
 % self-defined short-cuts and commands
-\input{Mydef.tex}
+%\input{Mydef.tex}
+\DeclareMathOperator{\tr}{tr}
+\newcommand{\dt}[1]{\frac{{\mathrm d} {#1}}{{\mathrm d}t}}
+\def\br{\mathbf{r}}
+\def\bra#1{\langle{#1}\rvert}%{\mathinner{\langle{#1}\rvert}}
+\def\ket#1{\lvert{#1}\rangle}%{\mathinner{\lvert{#1}\rangle}}
+\def\Braket#1#2{\mathinner{\langle{#1}\! \mid\! {#2} \rangle}}
+%========================================================================================
+\newcommand{\erf}[1]{Eq.~(\ref{#1})}
+\newcommand{\frf}[1]{Fig.~\ref{#1}}
+\newcommand{\srf}[1]{Sec.~\ref{#1}}
+\newcommand{\nn}{\nonumber}
+\newcommand{\mbf}[1]{\mathbf{#1}}
+%========================================================================================
+% General quantum mechanics macros
+%========================================================================================
+\newcommand{\op}[2]{\ket{#1}\bra{#2}}
+\newcommand{\expt}[1]{\langle{#1}\rangle}
+\newcommand{\dg}{^\dagger}
+\newcommand{\smallfrac}[2]{\mbox{$\frac{#1}{#2}$}}
+\newcommand{\Tr}{\mbox{Tr}}
+%========================================================================================
+\newcommand{\expect}[1]{\big\langle #1 \big\rangle}
+\newcommand{\eff}{\text{eff}}
+
+
 
 % Redefine the tensor command.
 %\renewcommand{\tensor}[1]{\boldsymbol{#1}}
