@@ -152,7 +152,7 @@
 
 
 \begin{document}
-\title{Dispersive response of atoms trapped near the surface of an optical nanofiber with applications to QND measurement and spin squeezing}
+\title{Dispersive response of atoms trapped near the surface of an optical nanofiber with applications to quantum nondemolition measurement and spin squeezing}
 \author{Xiaodong Qi}
 \affiliation{Center for Quantum Information and Control, University of New Mexico, Albuquerque, New Mexico 87131, USA}
 \author{Ben Q. Baragiola}
@@ -551,10 +551,10 @@ The second term represents scattering into the guided modes, as described by the
 
 We introduce the vector Stokes operators that describe the polarization of the propagating fields in the quasilinear $HV$-basis,
 \begin{subequations}\label{Eq::StokesComponents}
-	\begin{align}
-		\hat{S}_1(t) &= \smallfrac{1}{2}\big( \hat{a}^\dag_H(t) \hat{a}_H(t)-\hat{a}^\dag_V(t) \hat{a}_V(t) \big), \\
-		\hat{S}_2(t) &= \smallfrac{1}{2}\big( \hat{a}^\dag_H(t) \hat{a}_V(t)+\hat{a}^\dag_V(t) \hat{a}_H(t) \big), \\
-		\hat{S}_3(t) &= \smallfrac{1}{2}\big( \hat{a}^\dag_H(t) \hat{a}_V(t) -\hat{a}^\dag_V(t) \hat{a}_H(t) \big),
+	\begin{align} 
+		\hat{S}_1(t) & = \smallfrac{1}{2}\big[ \hat{a}^\dag_H(t) \hat{a}_H(t)-\hat{a}^\dag_V(t) \hat{a}_V(t) \big], \\
+	 	\hat{S}_2(t) & = \smallfrac{1}{2}\big[ \hat{a}^\dag_H(t) \hat{a}_V(t)+\hat{a}^\dag_V(t) \hat{a}_H(t) \big], \\ 
+		\hat{S}_3(t) & = \smallfrac{1}{2i}\big[ \hat{a}^\dag_H(t) \hat{a}_V(t) -\hat{a}^\dag_V(t) \hat{a}_H(t) \big],
 	\end{align}
 \end{subequations}
 that satisfy equal-$z$ commutation relations following from \erf{Eq::InputOutputCommutation},
@@ -810,7 +810,7 @@ To find the peak squeezing in the presence of optical pumping, we numerically in
 We choose here the magic frequency close to the $ f=4\leftrightarrow f'=4 $ transition, $ \magic{4} $, which is furthest from resonance with both excited hyperfine transitions. 
 Typical time evolution is shown in \frf{Fig::Squeezing_Dynamics} for $2500$ atoms trapped a distance $r'\!_\perp=1.8a$ from the center of the nanofiber, where time is scaled to the characteristic scattering rate, 
 \begin{align}\label{Eq::gamma_s}
-\gamma_s \equiv \frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_\eff^2} \dot{N}_L .
+\gamma_s \equiv \frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_{J_3}^2} \dot{N}_L .
 \end{align}  
 We study the dynamics for two choices of quantization axis: (i) along the $x$-axis and (ii) along the numerically determined optimal axis.  Figure \ref{Fig::Squeezing_Dynamics}(a) shows the time evolution of the squeezing parameter.  We achieve a maximum squeezing of 4.7 dB when the clock states are chosen along the optimal axis; $\qangle_{\rm opt} \approx 86^\circ$ in \erf{Eq::QuantizationAxis}. 
 
@@ -931,7 +931,6 @@ ACKNOWLEDGMENTS
 We gratefully acknowledge Sudhakar Prasad for helpful discussions regarding the dyadic Green's function. 
 We thank the UNM Center for Advanced Research Computing for computational resources used in this work. 
 This work was support by the AFOSR, under grant Y600242, and the NSF, under grants PHY-1212445, 1307520. 
-\bibliographystyle{unsrt}
 \bibliography{Nanofiber}
 
 
@@ -950,35 +949,35 @@ The positive propagation constant, $\beta_0 \equiv \beta(\omega_0)$, is determin
 		\!\!\!& \frac{J_0(ha)}{ha J_1(ha)} = - \frac{n_1^2+n_2^2}{2n_1^2} \frac{K'(qa)}{qa K_1(qa)} + \frac{1}{h^2 a^2} \nn\\
 		\!\!\!\!\!\!\!\!&\, - \bigg[\! \bigg(\!\frac{n_1^2 \!-\! n_2^2}{2 n_1^2}\! \frac{K'\!(qa)}{qa K_1\!(qa)} \!\bigg)^2  \!\!\!+\! \frac{\beta_0^2}{n^2_1 k^2}\!\! \left(\!\frac{1}{q^2a^2} \!+\! \frac{1}{h^2a^2}\! \right)^2\! \bigg]^{\frac{1}{2}}\!.
 	\end{align}
-Inside the nanofiber the transverse wavevector is real, $k_\perp = q$, where $q=\sqrt{\beta_0^2- n_2^2k_0^2}$, and outside the nanofiber it is purely imaginary, $k_\perp = i h$, where $h=\sqrt{n_1^2 k_0^2 - \beta_0^2}$.  The vector eigenfunctions are expressed as $\mbf{f}_{\mu}(\br) = (2\pi)^{-1/2}\mbf{u}_{b,p}(\mbf{r}_\perp) e^{i f \beta_0 z}$, where the modes are indexed by frequency $\omega_0$, propagation direction $b = \pm$, and polarization $p$.
+Inside the nanofiber the transverse wavevector is real, $k_\perp = q$, where $q=\sqrt{\beta_0^2- n_2^2k_0^2}$, and outside the nanofiber it is purely imaginary, $k_\perp = i h$, where $h=\sqrt{n_1^2 k_0^2 - \beta_0^2}$.  The vector eigenfunctions are expressed as $\mbf{f}_{\mu}(\br) = (2\pi)^{-1/2}\mbf{u}_{b,p}(\mbf{r}_\perp) e^{i b \beta_0 z}$, where the modes are indexed by frequency $\omega_0$, propagation direction $b = \pm$, and polarization $p$.
 
 A relatively simple form for the guided-mode functions can be expressed in a cylindrical basis $(r_\perp, \phi, z)$ with longitudinal unit vector $\mathbf{e}_z$, oriented along the fiber axis.  
 The transverse unit vectors are related to their fixed Cartesian counterparts via the relations
 \begin{subequations}
 	\begin{align}
-		\mathbf{e}_r     &= \mathbf{e}_x \cos \phi + \mathbf{e}_y \sin \phi, \\
+		\mathbf{e}_{r_{\!\perp}}     &= \mathbf{e}_x \cos \phi + \mathbf{e}_y \sin \phi, \\
 		\mathbf{e}_\phi &= - \mathbf{e}_x \sin \phi + \mathbf{e}_y \cos \phi.
 	\end{align}
 \end{subequations}
 The transverse profile for the quasicircular guided modes, $p = \pm$, is
 	\begin{align} \label{Eq::QuasicircularModes}
-		\!\!\!\!\!\mbf{u}_{b,\pm}(\mathbf{r}\!_\perp) \!=\! \big[\mathbf{e}_r u_r(r\!_\perp) \!\pm\! i \mathbf{e}_\phi u_\phi(r\!_\perp) \!+\!  i b \mathbf{e}_z  u_z(r\!_\perp) \big]e^{ \pm i \phi}, 
+		\!\!\!\!\!\mbf{u}_{b,\pm}(\mathbf{r}\!_\perp) \!=\! \big[\mathbf{e}_{r_{\!\perp}}\!\! u_{r_{\!\perp}}\!\!(r\!_\perp) \!\pm\! i \mathbf{e}_\phi u_\phi(r\!_\perp) \!+\!  i b \mathbf{e}_z  u_z(r\!_\perp) \big]e^{ \pm i \phi}, 
 	\end{align}
 and for the quasilinear guided modes, $p = \{H,V\}$, is
 	\begin{subequations} \label{Eq::QuasilinearModes}
 	\begin{align}
-		\mbf{u}_{b,H}(\mathbf{r}\!_\perp) = & \sqrt{2} \big[ \mathbf{e}_r u_r(r\!_\perp) \cos \phi \nn\\
+		\mbf{u}_{b,H}(\mathbf{r}\!_\perp) = & \sqrt{2} \big[ \mathbf{e}_{r_{\!\perp}} u_{r_{\!\perp}}(r\!_\perp) \cos \phi \nn\\
 		&-\! \mathbf{e}_\phi u_\phi(r\!_\perp) \sin \phi \!+\!  ib \mathbf{e}_z  u_z(r\!_\perp) \cos \phi \big] \\
-		\mbf{u}_{b,V}(\mathbf{r}_\perp) = & \sqrt{2} \big[ \mathbf{e}_r u_r(r_\perp) \sin \phi \nn\\
+		\mbf{u}_{b,V}(\mathbf{r}_\perp) = & \sqrt{2} \big[ \mathbf{e}_{r_{\!\perp}} u_{r_{\!\perp}}(r_\perp) \sin \phi \nn\\
 		&+\! \mathbf{e}_\phi u_\phi(r_\perp) \cos \phi \!+\!  ib \mathbf{e}_z  u_z(r_\perp) \sin \phi \big]. 
 	\end{align}
 	\end{subequations}
 The modes are expressed in terms of real-valued functions that depend only on the radial coordinate $r_\perp$,
 	\begin{subequations} \label{Eq::ProfileFunctions}
 	\begin{align} 
-		u_r(r_\perp) =& u_0 \big[ (1-s) K_0(qr) + (1+s)K_2(qr)\big] \\
-		u_\phi(r_\perp) =& u_0\big[ (1-s) K_0(qr) - (1+s)K_2(qr)\big] \\
-		u_z(r_\perp) =& u_0 \frac{2 q}{\beta_0} \frac{K_1(qa)}{J_1(ha)} J_1(hr), \label{Eq::zprofile}
+		u_{r_{\!\perp}}(r_\perp) =& u_0 \big[ (1-s) K_0(q{r_{\!\perp}}) + (1+s)K_2(q{r_{\!\perp}})\big] \\
+		u_\phi(r_\perp) =& u_0\big[ (1-s) K_0(q{r_{\!\perp}}) - (1+s)K_2(q{r_{\!\perp}})\big] \\
+		u_z(r_\perp) =& u_0 \frac{2 q}{\beta_0} \frac{K_1(qa)}{J_1(ha)} J_1(h{r_{\!\perp}}), \label{Eq::zprofile}
 	\end{align}
 	\end{subequations}
 where $u_0$ is set by the normalization condition, $\int d^2 \mathbf{r}_\perp n(r_\perp) | \mathbf{u}_\mu(\br_\perp)|^2=1$, $J_n$ and $K_n$ are the $n^{th}$ Bessel functions of the first and second kind, $f'(x)$ indicates a derivative with respect to the argument $x$, and 
@@ -1011,17 +1010,17 @@ The rate of optical pumping between clock states $\ket{f,0} \rightarrow \ket{\ti
 where $ \hat{W}_q^{\tilde{f}f} = \sum_{f'}\frac{\Omega/2}{\Delta_{f'\tilde{f}}+i\Gamma/2}(\mathbf{e}_q^*\cdot\hat{\mathbf{D}}_{\tilde{f} f'} )(\mathbf{e}_{\rm in}\cdot \hat{\mathbf{D}}^\dagger_{f'f} ) $ are the Lindblad jump operators for optical pumping between ground levels $ f\rightarrow \tilde{f} $~\cite{deutsch_quantum_2010}. 
 Each jump operator $\hat{W}_q^{\tilde{f}f}$ is associated with absorption of the probe photon polarized along $ \mathbf{e}_{\rm in} $ followed by spontaneous emission of a photon with polarization $ \mathbf{e}_q $, where $q= \{0,\pm 1\}$ labels spherical basis elements for $\pi$ and $ \sigma_\pm$ transitions.  
 
-To find the dependence on the input field intensity, we define a characteristic photon scattering rate, $\gamma_s \equiv \frac{\Gamma\Omega^2}{4\Delta_{\rm eff}^2}= \frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_\eff^2} \dot{N}_L $, with Rabi frequency $ \Omega=2\bra{j}|d|\ket{j'}\mathcal{E}^{(+)}_{\rm in}/\hbar $, reduced optical dipole matrix element $\bra{j}|d|\ket{j'}$, and field amplitude $ \mathcal{E}^{(+)}_{\rm in}=|\mathbf{E}_{\rm in}^{(+)}(\br')| $.
+To find the dependence on the input field intensity, we define a characteristic photon scattering rate, $\gamma_s \equiv \frac{\Gamma\Omega^2}{4\Delta_{J_3}^2}= \frac{\sigma_0}{A_{\rm in}}\frac{\Gamma^2}{4 \Delta_{J_3}^2} \dot{N}_L $, with Rabi frequency $ \Omega=2\bra{j}|d|\ket{j'}\mathcal{E}^{(+)}_{\rm in}/\hbar $, reduced optical dipole matrix element $\bra{j}|d|\ket{j'}$, and field amplitude $ \mathcal{E}^{(+)}_{\rm in}=|\mathbf{E}_{\rm in}^{(+)}(\br')| $.
 Eqs.~\eqref{Eq::gammaf} and~\eqref{Eq::gammaff} yield,
 \begin{subequations}
 	\begin{align}
 		\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\gamma\!_{_f} &\!=\!n_g\dot{N}\!\!_L  \!\!\sum_{f'}\!\! \sigma (\Delta_{f\!f'} \!) \mathbf{u}^*_\inp(\!\br'\!\!\!_{_\perp}\!)\!\cdot\! \bra{f\!,\!0} \hat{\tensor{\mbf{A}}}(f\!,\!f') \ket{f\!,\!0} \! \cdot\! \mathbf{u}_\inp(\!\br'\!\!\!_{_\perp}\!)\\
-		&\!\approx\!  \gamma_s\! \sum_{f'}\! \frac{\Delta_{\rm eff}^2}{\Delta_{f\!f'}^2}\!\sum_q\!\! \left| o_{jf}^{j'\!f'}C_{f'q}^{f0;1 q}\right|^2\! \mathbf{e}_q^* \!\cdot\! (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\!\cdot\! \mathbf{e}_q, 
+		&\!\approx\!  \gamma_s\! \sum_{f'}\! \frac{\Delta_{J_3}^2}{\Delta_{f\!f'}^2}\!\sum_q\!\! \left| o_{jf}^{j'\!f'}C_{f'q}^{f0;1 q}\right|^2\! \mathbf{e}_q^* \!\cdot\! (\mathbf{e}_{\rm in}\mathbf{e}_{\rm in}^* )\!\cdot\! \mathbf{e}_q, 
 	\end{align}
 \end{subequations}
 	\begin{align}
 		\!\!\!\!\!\gamma\!_{_{f \!\rightarrow\! \tilde{f}}} 
-		&\!\approx\! \gamma_s \!\!\sum_{f'}\!\! \frac{\Delta_{\rm eff}^2}{\Delta_{f\!f'}^2}\!\!\sum_q\!\! \left|\! o_{j\tilde{f}}^{j'\!\!f'}\! o_{jf}^{j'\!\!f'}\!\!C_{f'q}^{\tilde{f}0;1 q} \!C_{f'q}^{f0;1q} \!\right|^2 \!\! \mathbf{e}_q^* \!\!\cdot\!\! (\mathbf{e}_{\rm in}\!\mathbf{e}_{\rm in}^* )\!\!\cdot\! \mathbf{e}_q,
+		&\!\approx\! \gamma_s \!\!\sum_{f'}\!\! \frac{\Delta_{J_3}^2}{\Delta_{f\!f'}^2}\!\!\sum_q\!\! \left|\! o_{j\tilde{f}}^{j'\!\!f'}\! o_{jf}^{j'\!\!f'}\!\!C_{f'q}^{\tilde{f}0;1 q} \!C_{f'q}^{f0;1q} \!\right|^2 \!\! \mathbf{e}_q^* \!\!\cdot\!\! (\mathbf{e}_{\rm in}\!\mathbf{e}_{\rm in}^* )\!\!\cdot\! \mathbf{e}_q,
 	\end{align}
 where $ \sigma (\Delta_{f\!f'} ) \! =\! \sigma_0 \Gamma^2\!/\!4\Delta^2_{f\!f'}$ is the scattering cross section at the probe detuning, $ C_{f'q}^{f0;1 q}=\Braket{f'q}{f0;1q}$ are the Clebsch-Gordan coefficients, and
 \begin{equation}
