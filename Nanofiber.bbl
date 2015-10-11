@@ -1,400 +1,803 @@
-\begin{thebibliography}{10}
-
-\bibitem{duan_long-distance_2001}
-L.-M. Duan, M.~D. Lukin, J.~I. Cirac, and P.~Zoller.
-\newblock Long-distance quantum communication with atomic ensembles and linear
-  optics.
-\newblock {\em Nature}, 414(6862):413--418, November 2001.
-
-\bibitem{julsgaard_experimental_2001}
-Brian Julsgaard, Alexander Kozhekin, and Eugene~S. Polzik.
-\newblock Experimental long-lived entanglement of two macroscopic objects.
-\newblock {\em Nature}, 413(6854):400--403, September 2001.
-
-\bibitem{eisaman_electromagnetically_2005}
-M.~D. Eisaman, A.~Andr茅, F.~Massou, M.~Fleischhauer, A.~S. Zibrov, and M.~D.
-  Lukin.
-\newblock Electromagnetically induced transparency with tunable single-photon
-  pulses.
-\newblock {\em Nature}, 438(7069):837--841, December 2005.
-
-\bibitem{eckert_quantum_2008}
-Kai Eckert, Oriol Romero-Isart, Mirta Rodriguez, Maciej Lewenstein, Eugene~S.
-  Polzik, and Anna Sanpera.
-\newblock Quantum non-demolition detection of strongly correlated systems.
-\newblock {\em Nat Phys}, 4(1):50--54, January 2008.
-
-\bibitem{miller_trapped_2005}
-R.~Miller, T.~E. Northup, K.~M. Birnbaum, A.~Boca, A.~D. Boozer, and H.~J.
-  Kimble.
-\newblock Trapped atoms in cavity {QED}: coupling quantized light and matter.
-\newblock {\em J. Phys. B: At. Mol. Opt. Phys.}, 38(9):S551, May 2005.
-
-\bibitem{manga_rao_single_2007}
-V.~S.~C. Manga~Rao and S.~Hughes.
-\newblock Single quantum-dot {Purcell} factor and \$beta\$ factor in a photonic
-  crystal waveguide.
-\newblock {\em Phys. Rev. B}, 75(20):205437, May 2007.
-
-\bibitem{hakuta_manipulating_2012}
-Kohzo Hakuta and Kali~Prasanna Nayak.
-\newblock Manipulating single atoms and photons using optical nanofibers.
-\newblock {\em Adv. Nat. Sci: Nanosci. Nanotechnol.}, 3(1):015005, March 2012.
-
-\bibitem{hung_trapped_2013}
-C.-L. Hung, S.~M. Meenehan, D.~E. Chang, O.~Painter, and H.~J. Kimble.
-\newblock Trapped atoms in one-dimensional photonic crystals.
-\newblock {\em New J. Phys.}, 15(8):083026, August 2013.
-
-\bibitem{raimond_manipulating_2001}
-J.~M. Raimond, M.~Brune, and S.~Haroche.
-\newblock Manipulating quantum entanglement with atoms and photons in a cavity.
-\newblock {\em Rev. Mod. Phys.}, 73(3):565--582, August 2001.
-
-\bibitem{wallraff_strong_2004}
-A.~Wallraff, D.~I. Schuster, A.~Blais, L.~Frunzio, R.-S. Huang, J.~Majer,
-  S.~Kumar, S.~M. Girvin, and R.~J. Schoelkopf.
-\newblock Strong coupling of a single photon to a superconducting qubit using
-  circuit quantum electrodynamics.
-\newblock {\em Nature}, 431(7005):162--167, September 2004.
-
-\bibitem{dzsotjan_quantum_2010}
-David Dzsotjan, Anders~S. S酶rensen, and Michael Fleischhauer.
-\newblock Quantum emitters coupled to surface plasmons of a nanowire: {A}
-  {Green}'s function approach.
-\newblock {\em Phys. Rev. B}, 82(7):075427, August 2010.
-
-\bibitem{tame_quantum_2013}
-M.~S. Tame, K.~R. McEnery, 艦~K. 脰zdemir, J.~Lee, S.~A. Maier, and M.~S.
-  Kim.
-\newblock Quantum plasmonics.
-\newblock {\em Nat Phys}, 9(6):329--340, June 2013.
-
-\bibitem{yao_ultrahigh_2009}
-Peijun Yao, C.~Van~Vlack, A.~Reza, M.~Patterson, M.~M. Dignam, and S.~Hughes.
-\newblock Ultrahigh {Purcell} factors and {Lamb} shifts in slow-light
-  metamaterial waveguides.
-\newblock {\em Phys. Rev. B}, 80(19):195106, November 2009.
-
-\bibitem{goban_atomlight_2014}
-A.~Goban, C.-L. Hung, S.-P. Yu, J.~D. Hood, J.~A. Muniz, J.~H. Lee, M.~J.
-  Martin, A.~C. McClung, K.~S. Choi, D.~E. Chang, O.~Painter, and H.~J. Kimble.
-\newblock Atom鈥搇ight interactions in photonic crystals.
-\newblock {\em Nat Commun}, 5, May 2014.
-
-\bibitem{baragiola_three-dimensional_2014}
-Ben~Q. Baragiola, Leigh~M. Norris, Enrique Monta帽o, Pascal~G. Mickelson,
-  Poul~S. Jessen, and Ivan~H. Deutsch.
-\newblock Three-dimensional light-matter interface for collective spin
-  squeezing in atomic ensembles.
-\newblock {\em Phys. Rev. A}, 89(3):033850, March 2014.
-
-\bibitem{chaneliere_storage_2005}
-T.~Chaneli猫re, D.~N. Matsukevich, S.~D. Jenkins, S.-Y. Lan, T.~a.~B. Kennedy,
-  and A.~Kuzmich.
-\newblock Storage and retrieval of single photons transmitted between remote
-  quantum memories.
-\newblock {\em Nature}, 438(7069):833--836, December 2005.
-
-\bibitem{kuzmich_generation_2000}
-A.~Kuzmich, L.~Mandel, and N.~P. Bigelow.
-\newblock Generation of {Spin} {Squeezing} via {Continuous} {Quantum}
-  {Nondemolition} {Measurement}.
-\newblock {\em Phys. Rev. Lett.}, 85(8):1594--1597, August 2000.
-
-\bibitem{appel_mesoscopic_2009}
-J.~Appel, P.~J. Windpassinger, D.~Oblak, U.~B. Hoff, N.~Kj忙rgaard, and E.~S.
-  Polzik.
-\newblock Mesoscopic atomic entanglement for precision measurements beyond the
-  standard quantum limit.
-\newblock {\em PNAS}, 106(27):10960--10965, July 2009.
-
-\bibitem{takano_spin_2009}
-T.~Takano, M.~Fuyama, R.~Namiki, and Y.~Takahashi.
-\newblock Spin {Squeezing} of a {Cold} {Atomic} {Ensemble} with the {Nuclear}
-  {Spin} of {One}-{Half}.
-\newblock {\em Phys. Rev. Lett.}, 102(3):033601, January 2009.
-
-\bibitem{sewell_magnetic_2012}
-R.~J. Sewell, M.~Koschorreck, M.~Napolitano, B.~Dubost, N.~Behbood, and M.~W.
-  Mitchell.
-\newblock Magnetic {Sensitivity} {Beyond} the {Projection} {Noise} {Limit} by
-  {Spin} {Squeezing}.
-\newblock {\em Phys. Rev. Lett.}, 109(25):253605, December 2012.
-
-\bibitem{vetsch_optical_2010}
-E.~Vetsch, D.~Reitz, G.~Sagu茅, R.~Schmidt, S.~T. Dawkins, and
-  A.~Rauschenbeutel.
-\newblock Optical {Interface} {Created} by {Laser}-{Cooled} {Atoms} {Trapped}
-  in the {Evanescent} {Field} {Surrounding} an {Optical} {Nanofiber}.
-\newblock {\em Phys. Rev. Lett.}, 104(20):203603, May 2010.
-
-\bibitem{lacroute_state-insensitive_2012}
-C.~Lacro没te, K.~S. Choi, A.~Goban, D.~J. Alton, D.~Ding, N.~P. Stern, and
-  H.~J. Kimble.
-\newblock A state-insensitive, compensated nanofiber trap.
-\newblock {\em New J. Phys.}, 14(2):023056, February 2012.
-
-\bibitem{balykin_quantum_2014}
-V.~I. Balykin.
-\newblock Quantum control of atoms and photons by optical nanofibers.
-\newblock {\em Phys.-Usp.}, 57(6):607, June 2014.
-
-\bibitem{grover_photon-correlation_2015}
-J.~A. Grover, P.~Solano, L.~A. Orozco, and S.~L. Rolston.
-\newblock Photon-correlation measurements of atomic-cloud temperature using an
-  optical nanofiber.
-\newblock {\em Phys. Rev. A}, 92(1):013850, July 2015.
-
-\bibitem{Lee2015Inhomogeneous}
-J~Lee, J~A Grover, J~E Hoffman, L~A Orozco, and S~L Rolston.
-\newblock Inhomogeneous broadening of optical transitions of 87 rb atoms in an
-  optical nanofiber trap.
-\newblock {\em Journal of Physics B: Atomic, Molecular and Optical Physics},
-  48(16):165004, 2015.
-
-\bibitem{dubost_efficient_2012}
-B.~Dubost, M.~Koschorreck, M.~Napolitano, N.~Behbood, R.~J. Sewell, and M.~W.
-  Mitchell.
-\newblock Efficient {Quantification} of {Non}-{Gaussian} {Spin}
-  {Distributions}.
-\newblock {\em Phys. Rev. Lett.}, 108(18):183602, May 2012.
-
-\bibitem{spillane_observation_2008}
-S.~M. Spillane, G.~S. Pati, K.~Salit, M.~Hall, P.~Kumar, R.~G. Beausoleil, and
-  M.~S. Shahriar.
-\newblock Observation of {Nonlinear} {Optical} {Interactions} of {Ultralow}
-  {Levels} of {Light} in a {Tapered} {Optical} {Nanofiber} {Embedded} in a
-  {Hot} {Rubidium} {Vapor}.
-\newblock {\em Phys. Rev. Lett.}, 100(23):233602, June 2008.
-
-\bibitem{pittman_ultralow-power_2013}
-T.~B. Pittman, D.~E. Jones, and J.~D. Franson.
-\newblock Ultralow-power nonlinear optics using tapered optical fibers in
-  metastable xenon.
-\newblock {\em Phys. Rev. A}, 88(5):053804, November 2013.
-
-\bibitem{oshea_fiber-optical_2013}
-Danny O鈥橲hea, Christian Junge, J眉rgen Volz, and Arno Rauschenbeutel.
-\newblock Fiber-{Optical} {Switch} {Controlled} by a {Single} {Atom}.
-\newblock {\em Phys. Rev. Lett.}, 111(19):193601, November 2013.
-
-\bibitem{mitsch_exploiting_2014}
-R.~Mitsch, C.~Sayrin, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
-\newblock Exploiting the local polarization of strongly confined light for
-  sub-micrometer-resolution internal state preparation and manipulation of cold
-  atoms.
-\newblock {\em Phys. Rev. A}, 89(6):063829, June 2014.
-
-\bibitem{petersen_chiral_2014}
-Jan Petersen, J眉rgen Volz, and Arno Rauschenbeutel.
-\newblock Chiral nanophotonic waveguide interface based on spin-orbit
-  interaction of light.
-\newblock {\em Science}, 346(6205):67--71, October 2014.
-
-\bibitem{mitsch_quantum_2014}
-R.~Mitsch, C.~Sayrin, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
-\newblock Quantum state-controlled directional spontaneous emission of photons
-  into a nanophotonic waveguide.
-\newblock {\em Nat Commun}, 5, December 2014.
-
-\bibitem{dawkins_dispersive_2011}
-S.~T. Dawkins, R.~Mitsch, D.~Reitz, E.~Vetsch, and A.~Rauschenbeutel.
-\newblock Dispersive {Optical} {Interface} {Based} on {Nanofiber}-{Trapped}
-  {Atoms}.
-\newblock {\em Phys. Rev. Lett.}, 107(24):243601, December 2011.
-
-\bibitem{beguin_generation_2014}
-J.-B. B茅guin, E.鈥塎. Bookjans, S.鈥塋. Christensen, H.鈥塋.
-  S酶rensen, J.鈥塇. M眉ller, E.鈥塖. Polzik, and J.~Appel.
-\newblock Generation and {Detection} of a {Sub}-{Poissonian} {Atom} {Number}
-  {Distribution} in a {One}-{Dimensional} {Optical} {Lattice}.
-\newblock {\em Phys. Rev. Lett.}, 113(26):263603, December 2014.
-
-\bibitem{gouraud_demonstration_2015}
-B.~Gouraud, D.~Maxein, A.~Nicolas, O.~Morin, and J.~Laurat.
-\newblock Demonstration of a {Memory} for {Tightly} {Guided} {Light} in an
-  {Optical} {Nanofiber}.
-\newblock {\em Phys. Rev. Lett.}, 114(18):180503, May 2015.
-
-\bibitem{sayrin_storage_2015}
-C.~Sayrin, C.~Clausen, B.~Albrecht, P.~Schneeweiss, and A.~Rauschenbeutel.
-\newblock Storage of fiber-guided light in a nanofiber-trapped ensemble of cold
-  atoms.
-\newblock {\em Optica}, 2(4):353--356, April 2015.
-
-\bibitem{wuttke_nanofiber_2012}
-Nanofiber {Fabry}鈥搟perot.
-
-\bibitem{nayak_optical_2014}
-K.~P. Nayak, Pengfei Zhang, and K.~Hakuta.
-\newblock Optical nanofiber-based photonic crystal cavity.
-\newblock {\em Optics Letters}, 39(2):232, January 2014.
-
-\bibitem{schell_highly_2015}
-Andreas~W. Schell, Hideaki Takashima, Shunya Kamioka, Yasuko Oe, Masazumi
-  Fujiwara, Oliver Benson, and Shigeki Takeuchi.
-\newblock Highly {Efficient} {Coupling} of {Nanolight} {Emitters} to a
-  {Ultra}-{Wide} {Tunable} {Nanofibre} {Cavity}.
-\newblock {\em Sci. Rep.}, 5, May 2015.
-
-\bibitem{sakoda_optical_1996}
-Kazuaki Sakoda and Kazuo Ohtaka.
-\newblock Optical response of three-dimensional photonic lattices: {Solutions}
-  of inhomogeneous {Maxwell}'s equations and their applications.
-\newblock {\em Phys. Rev. B}, 54(8):5732--5741, August 1996.
-
-\bibitem{dung_spontaneous_2000}
-Ho~Trung Dung, Ludwig Kn枚ll, and Dirk-Gunnar Welsch.
-\newblock Spontaneous decay in the presence of dispersing and absorbing bodies:
-  {General} theory and application to a spherical cavity.
-\newblock {\em Phys. Rev. A}, 62(5):053804, October 2000.
-
-\bibitem{sondergaard_general_2001}
-T.~S酶ndergaard and B.~Tromborg.
-\newblock General theory for spontaneous emission in active dielectric
-  microstructures: {Example} of a fiber amplifier.
-\newblock {\em Phys. Rev. A}, 64(3):033812, August 2001.
-
-\bibitem{klimov_spontaneous_2004}
-V.~V. Klimov and M.~Ducloy.
-\newblock Spontaneous emission rate of an excited atom placed near a nanofiber.
-\newblock {\em Phys. Rev. A}, 69(1):013812, January 2004.
-
-\bibitem{wubs_multiple-scattering_2004}
-Martijn Wubs, L.~G. Suttorp, and A.~Lagendijk.
-\newblock Multiple-scattering approach to interatomic interactions and
-  superradiance in inhomogeneous dielectrics.
-\newblock {\em Phys. Rev. A}, 70(5):053823, November 2004.
-
-\bibitem{fussell_decay_2005}
-D.~P. Fussell, R.~C. McPhedran, and C.~Martijn~de Sterke.
-\newblock Decay rate and level shift in a circular dielectric waveguide.
-\newblock {\em Phys. Rev. A}, 71(1):013815, January 2005.
-
-\bibitem{gardiner_input_1985}
-C.~W. Gardiner and M.~J. Collett.
-\newblock Input and output in damped quantum systems: {Quantum} stochastic
-  differential equations and the master equation.
-\newblock {\em Phys. Rev. A}, 31(6):3761--3774, June 1985.
-
-\bibitem{blow_continuum_1990}
-K.~J. Blow, Rodney Loudon, Simon J.~D. Phoenix, and T.~J. Shepherd.
-\newblock Continuum fields in quantum optics.
-\newblock {\em Phys. Rev. A}, 42(7):4102--4114, October 1990.
-
-\bibitem{shen_coherent_2005}
-J.~T. Shen and Shanhui Fan.
-\newblock Coherent photon transport from spontaneous emission in
-  one-dimensional waveguides.
-\newblock {\em Opt. Lett.}, 30(15):2001--2003, August 2005.
-
-\bibitem{le_kien_spontaneous_2005}
-Fam Le~Kien, S.~Dutta~Gupta, V.~I. Balykin, and K.~Hakuta.
-\newblock Spontaneous emission of a cesium atom near a nanofiber: {Efficient}
-  coupling of light to guided modes.
-\newblock {\em Phys. Rev. A}, 72(3):032509, September 2005.
-
-\bibitem{le_kien_correlations_2008}
-Fam Le~Kien and K.~Hakuta.
-\newblock Correlations between photons emitted by multiatom fluorescence into a
-  nanofiber.
-\newblock {\em Phys. Rev. A}, 77(3):033826, March 2008.
-
-\bibitem{fan_input-output_2010}
-Shanhui Fan, 艦眉kr眉~Ekin Kocaba艧, and Jung-Tsung Shen.
-\newblock Input-output formalism for few-photon transport in one-dimensional
-  nanophotonic waveguides coupled to a qubit.
-\newblock {\em Phys. Rev. A}, 82(6):063821, December 2010.
-
-\bibitem{glauber_quantum_1991}
-Roy~J. Glauber and M.~Lewenstein.
-\newblock Quantum optics of dielectric media.
-\newblock {\em Phys. Rev. A}, 43(1):467--491, January 1991.
-
-\bibitem{kien_field_2004}
-Fam~Le Kien, J.~Q. Liang, K.~Hakuta, and V.~I. Balykin.
-\newblock Field intensity distributions and polarization orientations in a
-  vacuum-clad subwavelength-diameter optical fiber.
-\newblock {\em Optics Communications}, 242(4鈥�6):445--455, December 2004.
-
-\bibitem{le_kien_anisotropy_2014}
-Fam Le~Kien and A.~Rauschenbeutel.
-\newblock Anisotropy in scattering of light from an atom into the guided modes
-  of a nanofiber.
-\newblock {\em Phys. Rev. A}, 90(2):023805, August 2014.
-
-\bibitem{snyder_optical_1983}
-Allan Snyder and John Love.
-\newblock {\em Optical {Waveguide} {Theory}}.
-\newblock Chapman and Hall, London, 1983.
-
-\bibitem{chen_finite-element_2010}
-Yuntian Chen, Torben~Roland Nielsen, Niels Gregersen, Peter Lodahl, and Jesper
-  M酶rk.
-\newblock Finite-element modeling of spontaneous emission of a quantum emitter
-  at nanoscale proximity to plasmonic waveguides.
-\newblock {\em Phys. Rev. B}, 81(12):125431, March 2010.
-
-\bibitem{domokos_quantum_2002}
-Peter Domokos, Peter Horak, and Helmut Ritsch.
-\newblock Quantum description of light-pulse scattering on a single atom in
-  waveguides.
-\newblock {\em Phys. Rev. A}, 65(3):033832, March 2002.
-
-\bibitem{tanji-suzuki_chapter_2011}
-Haruka Tanji-Suzuki, Ian~D. Leroux, Monika~H. Schleier-Smith, Marko Cetina,
-  Andrew~T. Grier, Jonathan Simon, and Vladan Vuleti膰.
-\newblock Chapter 4 - {Interaction} between {Atomic} {Ensembles} and {Optical}
-  {Resonators}: {Classical} {Description}.
-\newblock In P.~R. Berman {and} C. C.~Lin E.~Arimondo, editor, {\em Advances
-  {In} {Atomic}, {Molecular}, and {Optical} {Physics}}, volume~60 of {\em
-  Advances in {Atomic}, {Molecular}, and {Optical} {Physics}}, pages 201--237.
-  Academic Press, 2011.
-
-\bibitem{hammerer_quantum_2010}
-Klemens Hammerer, Anders~S. S酶rensen, and Eugene~S. Polzik.
-\newblock Quantum interface between light and atomic ensembles.
-\newblock {\em Rev. Mod. Phys.}, 82(2):1041--1093, April 2010.
-
-\bibitem{deutsch_quantum_2010}
-Ivan~H. Deutsch and Poul~S. Jessen.
-\newblock Quantum control and measurement of atomic spins in polarization
-  spectroscopy.
-\newblock {\em Optics Communications}, 283(5):681--694, March 2010.
-
-\bibitem{nha_cavity_1997}
-H.~Nha and W.~Jhe.
-\newblock Cavity quantum electrodynamics for a cylinder: {Inside} a hollow
-  dielectric and near a solid dielectric cylinder.
-\newblock {\em Phys. Rev. A}, 56(3):2213--2220, September 1997.
-
-\bibitem{maslov_distribution_2006}
-A.~V. Maslov, M.~I. Bakunov, and C.~Z. Ning.
-\newblock Distribution of optical emission between guided modes and free space
-  in a semiconductor nanowire.
-\newblock {\em Journal of Applied Physics}, 99(2):024314, January 2006.
-
-\bibitem{scheel_directional_2015}
-Stefan Scheel, Stefan~Yoshi Buhmann, Christoph Clausen, and Philipp
-  Schneeweiss.
-\newblock Directional spontaneous emission and lateral {Casimir}-{Polder} force
-  on an atom close to a nanofiber.
-\newblock {\em arXiv:1505.01275 [quant-ph]}, May 2015.
-\newblock arXiv: 1505.01275.
-
-\bibitem{le_kien_propagation_2014}
-Fam Le~Kien and A.~Rauschenbeutel.
-\newblock Propagation of nanofiber-guided light through an array of atoms.
-\newblock {\em Phys. Rev. A}, 90(6):063816, December 2014.
-
-\bibitem{Note1}
-In a careful derivation of the Lippman-Schwinger scattering equation, it is not
-  the total Green's function that appears in Eq.~(\ref {Eq::ScatteredField})
-  but rather a related dyadic quantity, $\protect \mathbf {K}(\protect \mathbf
-  {r},\protect \mathbf {r}', \omega _0) = \protect \mathbf {G}(\protect \mathbf
-  {r},\protect \mathbf {r}', \omega _0) + \delta (\protect \mathbf {r}-\protect
-  \mathbf {r}')/n^2(\protect \mathbf {r})$ \cite
+%merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (-1) disabled
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{94}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Duan}\ \emph {et~al.}(2001)\citenamefont {Duan},
+  \citenamefont {Lukin}, \citenamefont {Cirac},\ and\ \citenamefont
+  {Zoller}}]{duan_long-distance_2001}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.-M.}\ \bibnamefont
+  {Duan}}, \bibinfo {author} {\bibfnamefont {M.~D.}\ \bibnamefont {Lukin}},
+  \bibinfo {author} {\bibfnamefont {J.~I.}\ \bibnamefont {Cirac}}, \ and\
+  \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Zoller}},\ }\href
+  {\doibase 10.1038/35106500} {\bibfield  {journal} {\bibinfo  {journal}
+  {Nature}\ }\textbf {\bibinfo {volume} {414}},\ \bibinfo {pages} {413}
+  (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Julsgaard}\ \emph {et~al.}(2001)\citenamefont
+  {Julsgaard}, \citenamefont {Kozhekin},\ and\ \citenamefont
+  {Polzik}}]{julsgaard_experimental_2001}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Julsgaard}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Kozhekin}},
+  \ and\ \bibinfo {author} {\bibfnamefont {E.~S.}\ \bibnamefont {Polzik}},\
+  }\href {\doibase 10.1038/35096524} {\bibfield  {journal} {\bibinfo  {journal}
+  {Nature}\ }\textbf {\bibinfo {volume} {413}},\ \bibinfo {pages} {400}
+  (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Eisaman}\ \emph {et~al.}(2005)\citenamefont
+  {Eisaman}, \citenamefont {Andr茅}, \citenamefont {Massou}, \citenamefont
+  {Fleischhauer}, \citenamefont {Zibrov},\ and\ \citenamefont
+  {Lukin}}]{eisaman_electromagnetically_2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~D.}\ \bibnamefont
+  {Eisaman}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Andr茅}},
+  \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Massou}}, \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Fleischhauer}}, \bibinfo {author}
+  {\bibfnamefont {A.~S.}\ \bibnamefont {Zibrov}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {M.~D.}\ \bibnamefont {Lukin}},\ }\href {\doibase
+  10.1038/nature04327} {\bibfield  {journal} {\bibinfo  {journal} {Nature}\
+  }\textbf {\bibinfo {volume} {438}},\ \bibinfo {pages} {837} (\bibinfo {year}
+  {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Eckert}\ \emph {et~al.}(2008)\citenamefont {Eckert},
+  \citenamefont {Romero-Isart}, \citenamefont {Rodriguez}, \citenamefont
+  {Lewenstein}, \citenamefont {Polzik},\ and\ \citenamefont
+  {Sanpera}}]{eckert_quantum_2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Eckert}}, \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont
+  {Romero-Isart}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Rodriguez}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Lewenstein}}, \bibinfo {author} {\bibfnamefont {E.~S.}\ \bibnamefont
+  {Polzik}}, \ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Sanpera}},\ }\href {\doibase 10.1038/nphys776} {\bibfield  {journal}
+  {\bibinfo  {journal} {Nat Phys}\ }\textbf {\bibinfo {volume} {4}},\ \bibinfo
+  {pages} {50} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Miller}\ \emph {et~al.}(2005)\citenamefont {Miller},
+  \citenamefont {Northup}, \citenamefont {Birnbaum}, \citenamefont {Boca},
+  \citenamefont {Boozer},\ and\ \citenamefont {Kimble}}]{miller_trapped_2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Miller}}, \bibinfo {author} {\bibfnamefont {T.~E.}\ \bibnamefont {Northup}},
+  \bibinfo {author} {\bibfnamefont {K.~M.}\ \bibnamefont {Birnbaum}}, \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Boca}}, \bibinfo {author}
+  {\bibfnamefont {A.~D.}\ \bibnamefont {Boozer}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {H.~J.}\ \bibnamefont {Kimble}},\ }\href {\doibase
+  10.1088/0953-4075/38/9/007} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Phys. B: At. Mol. Opt. Phys.}\ }\textbf {\bibinfo {volume} {38}},\ \bibinfo
+  {pages} {S551} (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Manga~Rao}\ and\ \citenamefont
+  {Hughes}(2007)}]{manga_rao_single_2007}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.~S.~C.}\
+  \bibnamefont {Manga~Rao}}\ and\ \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Hughes}},\ }\href {\doibase 10.1103/PhysRevB.75.205437}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo
+  {volume} {75}},\ \bibinfo {pages} {205437} (\bibinfo {year}
+  {2007})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hakuta}\ and\ \citenamefont
+  {Nayak}(2012)}]{hakuta_manipulating_2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Hakuta}}\ and\ \bibinfo {author} {\bibfnamefont {K.~P.}\ \bibnamefont
+  {Nayak}},\ }\href {\doibase 10.1088/2043-6262/3/1/015005} {\bibfield
+  {journal} {\bibinfo  {journal} {Adv. Nat. Sci: Nanosci. Nanotechnol.}\
+  }\textbf {\bibinfo {volume} {3}},\ \bibinfo {pages} {015005} (\bibinfo {year}
+  {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hung}\ \emph {et~al.}(2013)\citenamefont {Hung},
+  \citenamefont {Meenehan}, \citenamefont {Chang}, \citenamefont {Painter},\
+  and\ \citenamefont {Kimble}}]{hung_trapped_2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.-L.}\ \bibnamefont
+  {Hung}}, \bibinfo {author} {\bibfnamefont {S.~M.}\ \bibnamefont {Meenehan}},
+  \bibinfo {author} {\bibfnamefont {D.~E.}\ \bibnamefont {Chang}}, \bibinfo
+  {author} {\bibfnamefont {O.}~\bibnamefont {Painter}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {H.~J.}\ \bibnamefont {Kimble}},\ }\href {\doibase
+  10.1088/1367-2630/15/8/083026} {\bibfield  {journal} {\bibinfo  {journal}
+  {New J. Phys.}\ }\textbf {\bibinfo {volume} {15}},\ \bibinfo {pages} {083026}
+  (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Raimond}\ \emph {et~al.}(2001)\citenamefont
+  {Raimond}, \citenamefont {Brune},\ and\ \citenamefont
+  {Haroche}}]{raimond_manipulating_2001}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
+  {Raimond}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Brune}}, \
+  and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Haroche}},\ }\href
+  {\doibase 10.1103/RevModPhys.73.565} {\bibfield  {journal} {\bibinfo
+  {journal} {Rev. Mod. Phys.}\ }\textbf {\bibinfo {volume} {73}},\ \bibinfo
+  {pages} {565} (\bibinfo {year} {2001})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wallraff}\ \emph {et~al.}(2004)\citenamefont
+  {Wallraff}, \citenamefont {Schuster}, \citenamefont {Blais}, \citenamefont
+  {Frunzio}, \citenamefont {Huang}, \citenamefont {Majer}, \citenamefont
+  {Kumar}, \citenamefont {Girvin},\ and\ \citenamefont
+  {Schoelkopf}}]{wallraff_strong_2004}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Wallraff}}, \bibinfo {author} {\bibfnamefont {D.~I.}\ \bibnamefont
+  {Schuster}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Blais}},
+  \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Frunzio}}, \bibinfo
+  {author} {\bibfnamefont {R.-S.}\ \bibnamefont {Huang}}, \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Majer}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Kumar}}, \bibinfo {author} {\bibfnamefont {S.~M.}\
+  \bibnamefont {Girvin}}, \ and\ \bibinfo {author} {\bibfnamefont {R.~J.}\
+  \bibnamefont {Schoelkopf}},\ }\href {\doibase 10.1038/nature02851} {\bibfield
+   {journal} {\bibinfo  {journal} {Nature}\ }\textbf {\bibinfo {volume}
+  {431}},\ \bibinfo {pages} {162} (\bibinfo {year} {2004})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Dzsotjan}\ \emph {et~al.}(2010)\citenamefont
+  {Dzsotjan}, \citenamefont {S酶rensen},\ and\ \citenamefont
+  {Fleischhauer}}]{dzsotjan_quantum_2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Dzsotjan}}, \bibinfo {author} {\bibfnamefont {A.~S.}\ \bibnamefont
+  {S酶rensen}}, \ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Fleischhauer}},\ }\href {\doibase 10.1103/PhysRevB.82.075427} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume}
+  {82}},\ \bibinfo {pages} {075427} (\bibinfo {year} {2010})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Tame}\ \emph {et~al.}(2013)\citenamefont {Tame},
+  \citenamefont {McEnery}, \citenamefont {脰zdemir}, \citenamefont {Lee},
+  \citenamefont {Maier},\ and\ \citenamefont {Kim}}]{tame_quantum_2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.~S.}\ \bibnamefont
+  {Tame}}, \bibinfo {author} {\bibfnamefont {K.~R.}\ \bibnamefont {McEnery}},
+  \bibinfo {author} {\bibfnamefont {.~K.}\ \bibnamefont {脰zdemir}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Lee}}, \bibinfo {author}
+  {\bibfnamefont {S.~A.}\ \bibnamefont {Maier}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {M.~S.}\ \bibnamefont {Kim}},\ }\href {\doibase
+  10.1038/nphys2615} {\bibfield  {journal} {\bibinfo  {journal} {Nat Phys}\
+  }\textbf {\bibinfo {volume} {9}},\ \bibinfo {pages} {329} (\bibinfo {year}
+  {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Yao}\ \emph {et~al.}(2009)\citenamefont {Yao},
+  \citenamefont {Van~Vlack}, \citenamefont {Reza}, \citenamefont {Patterson},
+  \citenamefont {Dignam},\ and\ \citenamefont {Hughes}}]{yao_ultrahigh_2009}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Yao}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Van~Vlack}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Reza}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Patterson}}, \bibinfo {author}
+  {\bibfnamefont {M.~M.}\ \bibnamefont {Dignam}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {S.}~\bibnamefont {Hughes}},\ }\href {\doibase
+  10.1103/PhysRevB.80.195106} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {80}},\ \bibinfo {pages} {195106}
+  (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Goban}\ \emph {et~al.}(2014)\citenamefont {Goban},
+  \citenamefont {Hung}, \citenamefont {Yu}, \citenamefont {Hood}, \citenamefont
+  {Muniz}, \citenamefont {Lee}, \citenamefont {Martin}, \citenamefont
+  {McClung}, \citenamefont {Choi}, \citenamefont {Chang}, \citenamefont
+  {Painter},\ and\ \citenamefont {Kimble}}]{goban_atomlight_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Goban}}, \bibinfo {author} {\bibfnamefont {C.-L.}\ \bibnamefont {Hung}},
+  \bibinfo {author} {\bibfnamefont {S.-P.}\ \bibnamefont {Yu}}, \bibinfo
+  {author} {\bibfnamefont {J.~D.}\ \bibnamefont {Hood}}, \bibinfo {author}
+  {\bibfnamefont {J.~A.}\ \bibnamefont {Muniz}}, \bibinfo {author}
+  {\bibfnamefont {J.~H.}\ \bibnamefont {Lee}}, \bibinfo {author} {\bibfnamefont
+  {M.~J.}\ \bibnamefont {Martin}}, \bibinfo {author} {\bibfnamefont {A.~C.}\
+  \bibnamefont {McClung}}, \bibinfo {author} {\bibfnamefont {K.~S.}\
+  \bibnamefont {Choi}}, \bibinfo {author} {\bibfnamefont {D.~E.}\ \bibnamefont
+  {Chang}}, \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Painter}}, \
+  and\ \bibinfo {author} {\bibfnamefont {H.~J.}\ \bibnamefont {Kimble}},\
+  }\href {\doibase 10.1038/ncomms4808} {\bibfield  {journal} {\bibinfo
+  {journal} {Nat Commun}\ }\textbf {\bibinfo {volume} {5}} (\bibinfo {year}
+  {2014}),\ 10.1038/ncomms4808}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Baragiola}\ \emph {et~al.}(2014)\citenamefont
+  {Baragiola}, \citenamefont {Norris}, \citenamefont {Monta帽o}, \citenamefont
+  {Mickelson}, \citenamefont {Jessen},\ and\ \citenamefont
+  {Deutsch}}]{baragiola_three-dimensional_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~Q.}\ \bibnamefont
+  {Baragiola}}, \bibinfo {author} {\bibfnamefont {L.~M.}\ \bibnamefont
+  {Norris}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Monta帽o}},
+  \bibinfo {author} {\bibfnamefont {P.~G.}\ \bibnamefont {Mickelson}}, \bibinfo
+  {author} {\bibfnamefont {P.~S.}\ \bibnamefont {Jessen}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {I.~H.}\ \bibnamefont {Deutsch}},\ }\href {\doibase
+  10.1103/PhysRevA.89.033850} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. A}\ }\textbf {\bibinfo {volume} {89}},\ \bibinfo {pages} {033850}
+  (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chaneli猫re}\ \emph {et~al.}(2005)\citenamefont
+  {Chaneli猫re}, \citenamefont {Matsukevich}, \citenamefont {Jenkins},
+  \citenamefont {Lan}, \citenamefont {Kennedy},\ and\ \citenamefont
+  {Kuzmich}}]{chaneliere_storage_2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Chaneli猫re}}, \bibinfo {author} {\bibfnamefont {D.~N.}\ \bibnamefont
+  {Matsukevich}}, \bibinfo {author} {\bibfnamefont {S.~D.}\ \bibnamefont
+  {Jenkins}}, \bibinfo {author} {\bibfnamefont {S.-Y.}\ \bibnamefont {Lan}},
+  \bibinfo {author} {\bibfnamefont {T.~a.~B.}\ \bibnamefont {Kennedy}}, \ and\
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Kuzmich}},\ }\href
+  {\doibase 10.1038/nature04315} {\bibfield  {journal} {\bibinfo  {journal}
+  {Nature}\ }\textbf {\bibinfo {volume} {438}},\ \bibinfo {pages} {833}
+  (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kuzmich}\ \emph {et~al.}(2000)\citenamefont
+  {Kuzmich}, \citenamefont {Mandel},\ and\ \citenamefont
+  {Bigelow}}]{kuzmich_generation_2000}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Kuzmich}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Mandel}}, \
+  and\ \bibinfo {author} {\bibfnamefont {N.~P.}\ \bibnamefont {Bigelow}},\
+  }\href {\doibase 10.1103/PhysRevLett.85.1594} {\bibfield  {journal} {\bibinfo
+   {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {85}},\ \bibinfo
+  {pages} {1594} (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Appel}\ \emph {et~al.}(2009)\citenamefont {Appel},
+  \citenamefont {Windpassinger}, \citenamefont {Oblak}, \citenamefont {Hoff},
+  \citenamefont {Kj忙rgaard},\ and\ \citenamefont
+  {Polzik}}]{appel_mesoscopic_2009}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Appel}}, \bibinfo {author} {\bibfnamefont {P.~J.}\ \bibnamefont
+  {Windpassinger}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Oblak}}, \bibinfo {author} {\bibfnamefont {U.~B.}\ \bibnamefont {Hoff}},
+  \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Kj忙rgaard}}, \ and\
+  \bibinfo {author} {\bibfnamefont {E.~S.}\ \bibnamefont {Polzik}},\ }\href
+  {\doibase 10.1073/pnas.0901550106} {\bibfield  {journal} {\bibinfo  {journal}
+  {PNAS}\ }\textbf {\bibinfo {volume} {106}},\ \bibinfo {pages} {10960}
+  (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Takano}\ \emph {et~al.}(2009)\citenamefont {Takano},
+  \citenamefont {Fuyama}, \citenamefont {Namiki},\ and\ \citenamefont
+  {Takahashi}}]{takano_spin_2009}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Takano}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Fuyama}},
+  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Namiki}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {Y.}~\bibnamefont {Takahashi}},\ }\href {\doibase
+  10.1103/PhysRevLett.102.033601} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {102}},\ \bibinfo {pages}
+  {033601} (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sewell}\ \emph {et~al.}(2012)\citenamefont {Sewell},
+  \citenamefont {Koschorreck}, \citenamefont {Napolitano}, \citenamefont
+  {Dubost}, \citenamefont {Behbood},\ and\ \citenamefont
+  {Mitchell}}]{sewell_magnetic_2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~J.}\ \bibnamefont
+  {Sewell}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Koschorreck}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Napolitano}}, \bibinfo
+  {author} {\bibfnamefont {B.}~\bibnamefont {Dubost}}, \bibinfo {author}
+  {\bibfnamefont {N.}~\bibnamefont {Behbood}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {M.~W.}\ \bibnamefont {Mitchell}},\ }\href {\doibase
+  10.1103/PhysRevLett.109.253605} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {109}},\ \bibinfo {pages}
+  {253605} (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Vetsch}\ \emph {et~al.}(2010)\citenamefont {Vetsch},
+  \citenamefont {Reitz}, \citenamefont {Sagu茅}, \citenamefont {Schmidt},
+  \citenamefont {Dawkins},\ and\ \citenamefont
+  {Rauschenbeutel}}]{vetsch_optical_2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Vetsch}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Reitz}},
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Sagu茅}}, \bibinfo
+  {author} {\bibfnamefont {R.}~\bibnamefont {Schmidt}}, \bibinfo {author}
+  {\bibfnamefont {S.~T.}\ \bibnamefont {Dawkins}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Rauschenbeutel}},\ }\href {\doibase
+  10.1103/PhysRevLett.104.203603} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {104}},\ \bibinfo {pages}
+  {203603} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lacro没te}\ \emph {et~al.}(2012)\citenamefont
+  {Lacro没te}, \citenamefont {Choi}, \citenamefont {Goban}, \citenamefont
+  {Alton}, \citenamefont {Ding}, \citenamefont {Stern},\ and\ \citenamefont
+  {Kimble}}]{lacroute_state-insensitive_2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Lacro没te}}, \bibinfo {author} {\bibfnamefont {K.~S.}\ \bibnamefont
+  {Choi}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Goban}},
+  \bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont {Alton}}, \bibinfo
+  {author} {\bibfnamefont {D.}~\bibnamefont {Ding}}, \bibinfo {author}
+  {\bibfnamefont {N.~P.}\ \bibnamefont {Stern}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {H.~J.}\ \bibnamefont {Kimble}},\ }\href {\doibase
+  10.1088/1367-2630/14/2/023056} {\bibfield  {journal} {\bibinfo  {journal}
+  {New J. Phys.}\ }\textbf {\bibinfo {volume} {14}},\ \bibinfo {pages} {023056}
+  (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Balykin}(2014)}]{balykin_quantum_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.~I.}\ \bibnamefont
+  {Balykin}},\ }\href {\doibase 10.3367/UFNe.0184.201406h.0656} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys.-Usp.}\ }\textbf {\bibinfo {volume}
+  {57}},\ \bibinfo {pages} {607} (\bibinfo {year} {2014})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Grover}\ \emph {et~al.}(2015)\citenamefont {Grover},
+  \citenamefont {Solano}, \citenamefont {Orozco},\ and\ \citenamefont
+  {Rolston}}]{grover_photon-correlation_2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~A.}\ \bibnamefont
+  {Grover}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Solano}},
+  \bibinfo {author} {\bibfnamefont {L.~A.}\ \bibnamefont {Orozco}}, \ and\
+  \bibinfo {author} {\bibfnamefont {S.~L.}\ \bibnamefont {Rolston}},\ }\href
+  {\doibase 10.1103/PhysRevA.92.013850} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {92}},\ \bibinfo
+  {pages} {013850} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lee}\ \emph {et~al.}(2015)\citenamefont {Lee},
+  \citenamefont {Grover}, \citenamefont {Hoffman}, \citenamefont {Orozco},\
+  and\ \citenamefont {Rolston}}]{Lee2015Inhomogeneous}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Lee}}, \bibinfo {author} {\bibfnamefont {J.~A.}\ \bibnamefont {Grover}},
+  \bibinfo {author} {\bibfnamefont {J.~E.}\ \bibnamefont {Hoffman}}, \bibinfo
+  {author} {\bibfnamefont {L.~A.}\ \bibnamefont {Orozco}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {S.~L.}\ \bibnamefont {Rolston}},\ }\href
+  {http://stacks.iop.org/0953-4075/48/i=16/a=165004} {\bibfield  {journal}
+  {\bibinfo  {journal} {Journal of Physics B: Atomic, Molecular and Optical
+  Physics}\ }\textbf {\bibinfo {volume} {48}},\ \bibinfo {pages} {165004}
+  (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dubost}\ \emph {et~al.}(2012)\citenamefont {Dubost},
+  \citenamefont {Koschorreck}, \citenamefont {Napolitano}, \citenamefont
+  {Behbood}, \citenamefont {Sewell},\ and\ \citenamefont
+  {Mitchell}}]{dubost_efficient_2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Dubost}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Koschorreck}},
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Napolitano}}, \bibinfo
+  {author} {\bibfnamefont {N.}~\bibnamefont {Behbood}}, \bibinfo {author}
+  {\bibfnamefont {R.~J.}\ \bibnamefont {Sewell}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {M.~W.}\ \bibnamefont {Mitchell}},\ }\href {\doibase
+  10.1103/PhysRevLett.108.183602} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {108}},\ \bibinfo {pages}
+  {183602} (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Spillane}\ \emph {et~al.}(2008)\citenamefont
+  {Spillane}, \citenamefont {Pati}, \citenamefont {Salit}, \citenamefont
+  {Hall}, \citenamefont {Kumar}, \citenamefont {Beausoleil},\ and\
+  \citenamefont {Shahriar}}]{spillane_observation_2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~M.}\ \bibnamefont
+  {Spillane}}, \bibinfo {author} {\bibfnamefont {G.~S.}\ \bibnamefont {Pati}},
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Salit}}, \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Hall}}, \bibinfo {author}
+  {\bibfnamefont {P.}~\bibnamefont {Kumar}}, \bibinfo {author} {\bibfnamefont
+  {R.~G.}\ \bibnamefont {Beausoleil}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {M.~S.}\ \bibnamefont {Shahriar}},\ }\href {\doibase
+  10.1103/PhysRevLett.100.233602} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {100}},\ \bibinfo {pages}
+  {233602} (\bibinfo {year} {2008})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Pittman}\ \emph {et~al.}(2013)\citenamefont
+  {Pittman}, \citenamefont {Jones},\ and\ \citenamefont
+  {Franson}}]{pittman_ultralow-power_2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~B.}\ \bibnamefont
+  {Pittman}}, \bibinfo {author} {\bibfnamefont {D.~E.}\ \bibnamefont {Jones}},
+  \ and\ \bibinfo {author} {\bibfnamefont {J.~D.}\ \bibnamefont {Franson}},\
+  }\href {\doibase 10.1103/PhysRevA.88.053804} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {88}},\ \bibinfo
+  {pages} {053804} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {O鈥橲hea}\ \emph {et~al.}(2013)\citenamefont
+  {O鈥橲hea}, \citenamefont {Junge}, \citenamefont {Volz},\ and\
+  \citenamefont {Rauschenbeutel}}]{oshea_fiber-optical_2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {O鈥橲hea}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Junge}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Volz}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Rauschenbeutel}},\ }\href
+  {\doibase 10.1103/PhysRevLett.111.193601} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {111}},\ \bibinfo
+  {pages} {193601} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mitsch}\ \emph
+  {et~al.}(2014{\natexlab{a}})\citenamefont {Mitsch}, \citenamefont {Sayrin},
+  \citenamefont {Albrecht}, \citenamefont {Schneeweiss},\ and\ \citenamefont
+  {Rauschenbeutel}}]{mitsch_exploiting_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Mitsch}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Sayrin}},
+  \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Albrecht}}, \bibinfo
+  {author} {\bibfnamefont {P.}~\bibnamefont {Schneeweiss}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Rauschenbeutel}},\ }\href
+  {\doibase 10.1103/PhysRevA.89.063829} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {89}},\ \bibinfo
+  {pages} {063829} (\bibinfo {year} {2014}{\natexlab{a}})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Petersen}\ \emph {et~al.}(2014)\citenamefont
+  {Petersen}, \citenamefont {Volz},\ and\ \citenamefont
+  {Rauschenbeutel}}]{petersen_chiral_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Petersen}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Volz}}, \
+  and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Rauschenbeutel}},\
+  }\href {\doibase 10.1126/science.1257671} {\bibfield  {journal} {\bibinfo
+  {journal} {Science}\ }\textbf {\bibinfo {volume} {346}},\ \bibinfo {pages}
+  {67} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mitsch}\ \emph
+  {et~al.}(2014{\natexlab{b}})\citenamefont {Mitsch}, \citenamefont {Sayrin},
+  \citenamefont {Albrecht}, \citenamefont {Schneeweiss},\ and\ \citenamefont
+  {Rauschenbeutel}}]{mitsch_quantum_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Mitsch}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Sayrin}},
+  \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Albrecht}}, \bibinfo
+  {author} {\bibfnamefont {P.}~\bibnamefont {Schneeweiss}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Rauschenbeutel}},\ }\href
+  {\doibase 10.1038/ncomms6713} {\bibfield  {journal} {\bibinfo  {journal} {Nat
+  Commun}\ }\textbf {\bibinfo {volume} {5}} (\bibinfo {year}
+  {2014}{\natexlab{b}}),\ 10.1038/ncomms6713}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dawkins}\ \emph {et~al.}(2011)\citenamefont
+  {Dawkins}, \citenamefont {Mitsch}, \citenamefont {Reitz}, \citenamefont
+  {Vetsch},\ and\ \citenamefont {Rauschenbeutel}}]{dawkins_dispersive_2011}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~T.}\ \bibnamefont
+  {Dawkins}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Mitsch}},
+  \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Reitz}}, \bibinfo
+  {author} {\bibfnamefont {E.}~\bibnamefont {Vetsch}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Rauschenbeutel}},\ }\href {\doibase
+  10.1103/PhysRevLett.107.243601} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {107}},\ \bibinfo {pages}
+  {243601} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {B茅guin}\ \emph {et~al.}(2014)\citenamefont
+  {B茅guin}, \citenamefont {Bookjans}, \citenamefont {Christensen},
+  \citenamefont {S酶rensen}, \citenamefont {M眉ller}, \citenamefont
+  {Polzik},\ and\ \citenamefont {Appel}}]{beguin_generation_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.-B.}\ \bibnamefont
+  {B茅guin}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Bookjans}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Christensen}}, \bibinfo
+  {author} {\bibfnamefont {H.}~\bibnamefont {S酶rensen}}, \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {M眉ller}}, \bibinfo {author}
+  {\bibfnamefont {E.}~\bibnamefont {Polzik}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Appel}},\ }\href {\doibase
+  10.1103/PhysRevLett.113.263603} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {113}},\ \bibinfo {pages}
+  {263603} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gouraud}\ \emph {et~al.}(2015)\citenamefont
+  {Gouraud}, \citenamefont {Maxein}, \citenamefont {Nicolas}, \citenamefont
+  {Morin},\ and\ \citenamefont {Laurat}}]{gouraud_demonstration_2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Gouraud}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Maxein}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Nicolas}}, \bibinfo
+  {author} {\bibfnamefont {O.}~\bibnamefont {Morin}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {Laurat}},\ }\href {\doibase
+  10.1103/PhysRevLett.114.180503} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {114}},\ \bibinfo {pages}
+  {180503} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sayrin}\ \emph {et~al.}(2015)\citenamefont {Sayrin},
+  \citenamefont {Clausen}, \citenamefont {Albrecht}, \citenamefont
+  {Schneeweiss},\ and\ \citenamefont {Rauschenbeutel}}]{sayrin_storage_2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Sayrin}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Clausen}},
+  \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Albrecht}}, \bibinfo
+  {author} {\bibfnamefont {P.}~\bibnamefont {Schneeweiss}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Rauschenbeutel}},\ }\href
+  {\doibase 10.1364/OPTICA.2.000353} {\bibfield  {journal} {\bibinfo  {journal}
+  {Optica}\ }\textbf {\bibinfo {volume} {2}},\ \bibinfo {pages} {353} (\bibinfo
+  {year} {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wuttke}\ \emph {et~al.}(2012)\citenamefont {Wuttke},
+  \citenamefont {Becker}, \citenamefont {Br\"{u}ckner}, \citenamefont
+  {Rothhardt},\ and\ \citenamefont {Rauschenbeutel}}]{wuttke_nanofiber_2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Wuttke}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Becker}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Br\"{u}ckner}}, \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Rothhardt}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {A.}~\bibnamefont {Rauschenbeutel}},\ }\href
+  {\doibase 10.1364/OL.37.001949} {\bibfield  {journal} {\bibinfo  {journal}
+  {Opt. Lett.}\ }\textbf {\bibinfo {volume} {37}},\ \bibinfo {pages} {1949}
+  (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Nayak}\ \emph {et~al.}(2014)\citenamefont {Nayak},
+  \citenamefont {Zhang},\ and\ \citenamefont {Hakuta}}]{nayak_optical_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.~P.}\ \bibnamefont
+  {Nayak}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Zhang}}, \ and\
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Hakuta}},\ }\href
+  {\doibase 10.1364/OL.39.000232} {\bibfield  {journal} {\bibinfo  {journal}
+  {Optics Letters}\ }\textbf {\bibinfo {volume} {39}},\ \bibinfo {pages} {232}
+  (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Schell}\ \emph {et~al.}(2015)\citenamefont {Schell},
+  \citenamefont {Takashima}, \citenamefont {Kamioka}, \citenamefont {Oe},
+  \citenamefont {Fujiwara}, \citenamefont {Benson},\ and\ \citenamefont
+  {Takeuchi}}]{schell_highly_2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~W.}\ \bibnamefont
+  {Schell}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Takashima}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Kamioka}}, \bibinfo
+  {author} {\bibfnamefont {Y.}~\bibnamefont {Oe}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Fujiwara}}, \bibinfo {author}
+  {\bibfnamefont {O.}~\bibnamefont {Benson}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {S.}~\bibnamefont {Takeuchi}},\ }\href {\doibase
+  10.1038/srep09619} {\bibfield  {journal} {\bibinfo  {journal} {Sci. Rep.}\
+  }\textbf {\bibinfo {volume} {5}} (\bibinfo {year} {2015}),\
+  10.1038/srep09619}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sakoda}\ and\ \citenamefont
+  {Ohtaka}(1996)}]{sakoda_optical_1996}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Sakoda}}\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Ohtaka}},\ }\href {\doibase 10.1103/PhysRevB.54.5732} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. B}\ }\textbf {\bibinfo {volume} {54}},\
+  \bibinfo {pages} {5732} (\bibinfo {year} {1996})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dung}\ \emph {et~al.}(2000)\citenamefont {Dung},
+  \citenamefont {Kn枚ll},\ and\ \citenamefont
+  {Welsch}}]{dung_spontaneous_2000}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~T.}\ \bibnamefont
+  {Dung}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Kn枚ll}}, \
+  and\ \bibinfo {author} {\bibfnamefont {D.-G.}\ \bibnamefont {Welsch}},\
+  }\href {\doibase 10.1103/PhysRevA.62.053804} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {62}},\ \bibinfo
+  {pages} {053804} (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {S酶ndergaard}\ and\ \citenamefont
+  {Tromborg}(2001)}]{sondergaard_general_2001}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {S酶ndergaard}}\ and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Tromborg}},\ }\href {\doibase 10.1103/PhysRevA.64.033812} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume}
+  {64}},\ \bibinfo {pages} {033812} (\bibinfo {year} {2001})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Klimov}\ and\ \citenamefont
+  {Ducloy}(2004)}]{klimov_spontaneous_2004}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.~V.}\ \bibnamefont
+  {Klimov}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Ducloy}},\ }\href {\doibase 10.1103/PhysRevA.69.013812} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume}
+  {69}},\ \bibinfo {pages} {013812} (\bibinfo {year} {2004})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Wubs}\ \emph {et~al.}(2004)\citenamefont {Wubs},
+  \citenamefont {Suttorp},\ and\ \citenamefont
+  {Lagendijk}}]{wubs_multiple-scattering_2004}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Wubs}}, \bibinfo {author} {\bibfnamefont {L.~G.}\ \bibnamefont {Suttorp}}, \
+  and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Lagendijk}},\ }\href
+  {\doibase 10.1103/PhysRevA.70.053823} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {70}},\ \bibinfo
+  {pages} {053823} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Fussell}\ \emph {et~al.}(2005)\citenamefont
+  {Fussell}, \citenamefont {McPhedran},\ and\ \citenamefont {Martijn~de
+  Sterke}}]{fussell_decay_2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~P.}\ \bibnamefont
+  {Fussell}}, \bibinfo {author} {\bibfnamefont {R.~C.}\ \bibnamefont
+  {McPhedran}}, \ and\ \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Martijn~de Sterke}},\ }\href {\doibase 10.1103/PhysRevA.71.013815}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo
+  {volume} {71}},\ \bibinfo {pages} {013815} (\bibinfo {year}
+  {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Gardiner}\ and\ \citenamefont
+  {Collett}(1985)}]{gardiner_input_1985}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~W.}\ \bibnamefont
+  {Gardiner}}\ and\ \bibinfo {author} {\bibfnamefont {M.~J.}\ \bibnamefont
+  {Collett}},\ }\href {\doibase 10.1103/PhysRevA.31.3761} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {31}},\
+  \bibinfo {pages} {3761} (\bibinfo {year} {1985})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Blow}\ \emph {et~al.}(1990)\citenamefont {Blow},
+  \citenamefont {Loudon}, \citenamefont {Phoenix},\ and\ \citenamefont
+  {Shepherd}}]{blow_continuum_1990}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.~J.}\ \bibnamefont
+  {Blow}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Loudon}},
+  \bibinfo {author} {\bibfnamefont {S.~J.~D.}\ \bibnamefont {Phoenix}}, \ and\
+  \bibinfo {author} {\bibfnamefont {T.~J.}\ \bibnamefont {Shepherd}},\ }\href
+  {\doibase 10.1103/PhysRevA.42.4102} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {42}},\ \bibinfo
+  {pages} {4102} (\bibinfo {year} {1990})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Shen}\ and\ \citenamefont
+  {Fan}(2005)}]{shen_coherent_2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~T.}\ \bibnamefont
+  {Shen}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Fan}},\
+  }\href {\doibase 10.1364/OL.30.002001} {\bibfield  {journal} {\bibinfo
+  {journal} {Opt. Lett.}\ }\textbf {\bibinfo {volume} {30}},\ \bibinfo {pages}
+  {2001} (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Le~Kien}\ \emph {et~al.}(2005)\citenamefont
+  {Le~Kien}, \citenamefont {Dutta~Gupta}, \citenamefont {Balykin},\ and\
+  \citenamefont {Hakuta}}]{le_kien_spontaneous_2005}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Le~Kien}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Dutta~Gupta}}, \bibinfo {author} {\bibfnamefont {V.~I.}\ \bibnamefont
+  {Balykin}}, \ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Hakuta}},\ }\href {\doibase 10.1103/PhysRevA.72.032509} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume}
+  {72}},\ \bibinfo {pages} {032509} (\bibinfo {year} {2005})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Le~Kien}\ and\ \citenamefont
+  {Hakuta}(2008)}]{le_kien_correlations_2008}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Le~Kien}}\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Hakuta}},\ }\href {\doibase 10.1103/PhysRevA.77.033826} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume}
+  {77}},\ \bibinfo {pages} {033826} (\bibinfo {year} {2008})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Fan}\ \emph {et~al.}(2010)\citenamefont {Fan},
+  \citenamefont {Kocaba艧},\ and\ \citenamefont
+  {Shen}}]{fan_input-output_2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Fan}}, \bibinfo {author} {\bibfnamefont {k.~E.}\ \bibnamefont {Kocaba艧}},
+  \ and\ \bibinfo {author} {\bibfnamefont {J.-T.}\ \bibnamefont {Shen}},\
+  }\href {\doibase 10.1103/PhysRevA.82.063821} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {82}},\ \bibinfo
+  {pages} {063821} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Glauber}\ and\ \citenamefont
+  {Lewenstein}(1991)}]{glauber_quantum_1991}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~J.}\ \bibnamefont
+  {Glauber}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Lewenstein}},\ }\href {\doibase 10.1103/PhysRevA.43.467} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume}
+  {43}},\ \bibinfo {pages} {467} (\bibinfo {year} {1991})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Kien}\ \emph {et~al.}(2004)\citenamefont {Kien},
+  \citenamefont {Liang}, \citenamefont {Hakuta},\ and\ \citenamefont
+  {Balykin}}]{kien_field_2004}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.~L.}\ \bibnamefont
+  {Kien}}, \bibinfo {author} {\bibfnamefont {J.~Q.}\ \bibnamefont {Liang}},
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Hakuta}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {V.~I.}\ \bibnamefont {Balykin}},\ }\href {\doibase
+  10.1016/j.optcom.2004.08.044} {\bibfield  {journal} {\bibinfo  {journal}
+  {Optics Communications}\ }\textbf {\bibinfo {volume} {242}},\ \bibinfo
+  {pages} {445} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Le~Kien}\ and\ \citenamefont
+  {Rauschenbeutel}(2014{\natexlab{a}})}]{le_kien_anisotropy_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Le~Kien}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Rauschenbeutel}},\ }\href {\doibase 10.1103/PhysRevA.90.023805} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume}
+  {90}},\ \bibinfo {pages} {023805} (\bibinfo {year}
+  {2014}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Snyder}\ and\ \citenamefont
+  {Love}(1983)}]{snyder_optical_1983}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Snyder}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Love}},\
+  }\href@noop {} {\emph {\bibinfo {title} {Optical {Waveguide} {Theory}}}}\
+  (\bibinfo  {publisher} {Chapman and Hall},\ \bibinfo {address} {London},\
+  \bibinfo {year} {1983})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chen}\ \emph {et~al.}(2010)\citenamefont {Chen},
+  \citenamefont {Nielsen}, \citenamefont {Gregersen}, \citenamefont {Lodahl},\
+  and\ \citenamefont {M酶rk}}]{chen_finite-element_2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Chen}}, \bibinfo {author} {\bibfnamefont {T.~R.}\ \bibnamefont {Nielsen}},
+  \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Gregersen}}, \bibinfo
+  {author} {\bibfnamefont {P.}~\bibnamefont {Lodahl}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {J.}~\bibnamefont {M酶rk}},\ }\href {\doibase
+  10.1103/PhysRevB.81.125431} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {81}},\ \bibinfo {pages} {125431}
+  (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Domokos}\ \emph {et~al.}(2002)\citenamefont
+  {Domokos}, \citenamefont {Horak},\ and\ \citenamefont
+  {Ritsch}}]{domokos_quantum_2002}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Domokos}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Horak}}, \
+  and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Ritsch}},\ }\href
+  {\doibase 10.1103/PhysRevA.65.033832} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {65}},\ \bibinfo
+  {pages} {033832} (\bibinfo {year} {2002})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tanji-Suzuki}\ \emph {et~al.}(2011)\citenamefont
+  {Tanji-Suzuki}, \citenamefont {Leroux}, \citenamefont {Schleier-Smith},
+  \citenamefont {Cetina}, \citenamefont {Grier}, \citenamefont {Simon},\ and\
+  \citenamefont {Vuleti膰}}]{tanji-suzuki_chapter_2011}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Tanji-Suzuki}}, \bibinfo {author} {\bibfnamefont {I.~D.}\ \bibnamefont
+  {Leroux}}, \bibinfo {author} {\bibfnamefont {M.~H.}\ \bibnamefont
+  {Schleier-Smith}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Cetina}}, \bibinfo {author} {\bibfnamefont {A.~T.}\ \bibnamefont {Grier}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Simon}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {V.}~\bibnamefont {Vuleti膰}},\ }in\ \href
+  {http://www.sciencedirect.com/science/article/pii/B9780123855084000048}
+  {\emph {\bibinfo {booktitle} {Advances {In} {Atomic}, {Molecular}, and
+  {Optical} {Physics}}}},\ \bibinfo {series} {Advances in {Atomic},
+  {Molecular}, and {Optical} {Physics}}, Vol.~\bibinfo {volume} {60},\ \bibinfo
+  {editor} {edited by\ \bibinfo {editor} {\bibfnamefont {P.~R. B. a. C. C.~L.}\
+  \bibnamefont {E.~Arimondo}}}\ (\bibinfo  {publisher} {Academic Press},\
+  \bibinfo {year} {2011})\ pp.\ \bibinfo {pages} {201--237}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Hammerer}\ \emph {et~al.}(2010)\citenamefont
+  {Hammerer}, \citenamefont {S酶rensen},\ and\ \citenamefont
+  {Polzik}}]{hammerer_quantum_2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Hammerer}}, \bibinfo {author} {\bibfnamefont {A.~S.}\ \bibnamefont
+  {S酶rensen}}, \ and\ \bibinfo {author} {\bibfnamefont {E.~S.}\ \bibnamefont
+  {Polzik}},\ }\href {\doibase 10.1103/RevModPhys.82.1041} {\bibfield
+  {journal} {\bibinfo  {journal} {Rev. Mod. Phys.}\ }\textbf {\bibinfo {volume}
+  {82}},\ \bibinfo {pages} {1041} (\bibinfo {year} {2010})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Deutsch}\ and\ \citenamefont
+  {Jessen}(2010)}]{deutsch_quantum_2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.~H.}\ \bibnamefont
+  {Deutsch}}\ and\ \bibinfo {author} {\bibfnamefont {P.~S.}\ \bibnamefont
+  {Jessen}},\ }\href {\doibase 10.1016/j.optcom.2009.10.059} {\bibfield
+  {journal} {\bibinfo  {journal} {Optics Communications}\ }\textbf {\bibinfo
+  {volume} {283}},\ \bibinfo {pages} {681} (\bibinfo {year}
+  {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Nha}\ and\ \citenamefont
+  {Jhe}(1997)}]{nha_cavity_1997}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Nha}}\ and\ \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Jhe}},\
+  }\href {\doibase 10.1103/PhysRevA.56.2213} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {56}},\ \bibinfo
+  {pages} {2213} (\bibinfo {year} {1997})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Maslov}\ \emph {et~al.}(2006)\citenamefont {Maslov},
+  \citenamefont {Bakunov},\ and\ \citenamefont
+  {Ning}}]{maslov_distribution_2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~V.}\ \bibnamefont
+  {Maslov}}, \bibinfo {author} {\bibfnamefont {M.~I.}\ \bibnamefont {Bakunov}},
+  \ and\ \bibinfo {author} {\bibfnamefont {C.~Z.}\ \bibnamefont {Ning}},\
+  }\href {\doibase 10.1063/1.2164538} {\bibfield  {journal} {\bibinfo
+  {journal} {Journal of Applied Physics}\ }\textbf {\bibinfo {volume} {99}},\
+  \bibinfo {pages} {024314} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Scheel}\ \emph {et~al.}(2015)\citenamefont {Scheel},
+  \citenamefont {Buhmann}, \citenamefont {Clausen},\ and\ \citenamefont
+  {Schneeweiss}}]{scheel_directional_2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Scheel}}, \bibinfo {author} {\bibfnamefont {S.~Y.}\ \bibnamefont {Buhmann}},
+  \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Clausen}}, \ and\
+  \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Schneeweiss}},\ }\href
+  {http://arxiv.org/abs/1505.01275} {\bibfield  {journal} {\bibinfo  {journal}
+  {arXiv:1505.01275 [quant-ph]}\ } (\bibinfo {year} {2015})},\ \bibinfo {note}
+  {arXiv: 1505.01275}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Le~Kien}\ and\ \citenamefont
+  {Rauschenbeutel}(2014{\natexlab{b}})}]{le_kien_propagation_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Le~Kien}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Rauschenbeutel}},\ }\href {\doibase 10.1103/PhysRevA.90.063816} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume}
+  {90}},\ \bibinfo {pages} {063816} (\bibinfo {year}
+  {2014}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{Note1()}]{Note1}%
+  \BibitemOpen
+  \bibinfo {note} {In a careful derivation of the Lippman-Schwinger scattering
+  equation, it is not the total Green's function that appears in Eq.~(\ref
+  {Eq::ScatteredField}) but rather a related dyadic quantity, $\protect \mathbf
+  {K}(\protect \mathbf {r},\protect \mathbf {r}', \omega _0) = \protect \mathbf
+  {G}(\protect \mathbf {r},\protect \mathbf {r}', \omega _0) + \delta (\protect
+  \mathbf {r}-\protect \mathbf {r}')/n^2(\protect \mathbf {r})$ \cite
   {wubs_multiple-scattering_2004}. This function arises by proper accounting of
   the scatterer's coupling to the \protect \emph {displacement} rather than the
   electric field \cite {yao_ultrahigh_2009}. The distinction becomes important
@@ -403,182 +806,333 @@ In a careful derivation of the Lippman-Schwinger scattering equation, it is not
   Im}[\protect \tensor {\protect \mathbf {G}}(\protect \mathbf {r}',\protect
   \mathbf {r}'; \omega )] = {\protect \rm Im}[\protect \tensor {\protect
   \mathbf {K}}(\protect \mathbf {r}',\protect \mathbf {r}'; \omega )]$ \cite
-  {yao_-chip_2010}.
-
-\bibitem{buhmann_casimir-polder_2004}
-Stefan~Yoshi Buhmann, Ludwig Kn枚ll, Dirk-Gunnar Welsch, and Ho~Trung Dung.
-\newblock Casimir-{Polder} forces: {A} nonperturbative approach.
-\newblock {\em Phys. Rev. A}, 70(5):052117, November 2004.
-
-\bibitem{kien_dynamical_2013}
-Fam~Le Kien, Philipp Schneeweiss, and Arno Rauschenbeutel.
-\newblock Dynamical polarizability of atoms in arbitrary light fields: general
-  theory and application to cesium.
-\newblock {\em Eur. Phys. J. D}, 67(5):1--16, May 2013.
-
-\bibitem{baragiola_open_2014}
-Ben~Q. Baragiola.
-\newblock {\em Open {Systems} {Dynamics} for {Propagating} {Quantum} {Fields}}.
-\newblock PhD thesis, University of New Mexico, Albuquerque, USA, August 2014.
-\newblock arXiv: 1408.4447.
-
-\bibitem{stockton_deterministic_2004}
-John~K. Stockton, Ramon van Handel, and Hideo Mabuchi.
-\newblock Deterministic {Dicke}-state preparation with continuous measurement
-  and control.
-\newblock {\em Phys. Rev. A}, 70(2):022106, August 2004.
-
-\bibitem{smith_faraday_2003}
-Greg~A. Smith, Souma Chaudhury, and Poul~S. Jessen.
-\newblock Faraday spectroscopy in an optical lattice: a continuous probe of
-  atom dynamics.
-\newblock {\em J. Opt. B: Quantum Semiclass. Opt.}, 5(4):323, August 2003.
-
-\bibitem{zhang_collective_2012}
-Hao Zhang, Robert McConnell, Senka 膯uk, Qian Lin, Monika~H. Schleier-Smith,
-  Ian~D. Leroux, and Vladan Vuleti膰.
-\newblock Collective {State} {Measurement} of {Mesoscopic} {Ensembles} with
-  {Single}-{Atom} {Resolution}.
-\newblock {\em Phys. Rev. Lett.}, 109(13):133603, September 2012.
-
-\bibitem{wineland_spin_1992}
-D.~J. Wineland, J.~J. Bollinger, W.~M. Itano, F.~L. Moore, and D.~J. Heinzen.
-\newblock Spin squeezing and reduced quantum noise in spectroscopy.
-\newblock {\em Phys. Rev. A}, 46(11):R6797--R6800, December 1992.
-
-\bibitem{kitagawa_squeezed_1993}
-Masahiro Kitagawa and Masahito Ueda.
-\newblock Squeezed spin states.
-\newblock {\em Phys. Rev. A}, 47(6):5138--5143, June 1993.
-
-\bibitem{chaudhury_continuous_2006}
-Souma Chaudhury, Greg~A. Smith, Kevin Schulz, and Poul~S. Jessen.
-\newblock Continuous {Nondemolition} {Measurement} of the {Cs} {Clock}
-  {Transition} {Pseudospin}.
-\newblock {\em Phys. Rev. Lett.}, 96(4):043001, January 2006.
-
-\bibitem{smith_continuous_2004}
-Greg~A. Smith, Souma Chaudhury, Andrew Silberfarb, Ivan~H. Deutsch, and Poul~S.
-  Jessen.
-\newblock Continuous {Weak} {Measurement} and {Nonlinear} {Dynamics} in a
-  {Cold} {Spin} {Ensemble}.
-\newblock {\em Phys. Rev. Lett.}, 93(16):163602, October 2004.
-
-\bibitem{jacobs_straightforward_2006}
-Kurt Jacobs and Daniel~A. Steck.
-\newblock A straightforward introduction to continuous quantum measurement.
-\newblock {\em Contemporary Physics}, 47(5):279--303, September 2006.
-
-\bibitem{vetsch_eugen_optical_2010}
-Eugen Vetsch.
-\newblock {\em Optical {Interface} {Based} on a {Nanofiber} {Atom}-{Trap}}.
-\newblock PhD thesis, Johannes Gutenberg-Universit盲t, Mainz, Germany, 2010.
-
-\bibitem{le_kien_scattering_2006}
-Fam Le~Kien, V.~I. Balykin, and K.~Hakuta.
-\newblock Scattering of an evanescent light field by a single cesium atom near
-  a nanofiber.
-\newblock {\em Phys. Rev. A}, 73(1):013819, January 2006.
-
-\bibitem{chen_conditional_2011}
-Zilong Chen, Justin~G. Bohnet, Shannon~R. Sankar, Jiayan Dai, and James~K.
-  Thompson.
-\newblock Conditional {Spin} {Squeezing} of a {Large} {Ensemble} via the
-  {Vacuum} {Rabi} {Splitting}.
-\newblock {\em Phys. Rev. Lett.}, 106(13):133601, March 2011.
-
-\bibitem{hafezi_atomic_2012}
-M.~Hafezi, Z.~Kim, S.~L. Rolston, L.~A. Orozco, B.~L. Lev, and J.~M. Taylor.
-\newblock Atomic interface between microwave and optical photons.
-\newblock {\em Phys. Rev. A}, 85(2):020302, February 2012.
-
-\bibitem{liebermeister_tapered_2014}
-Lars Liebermeister, Fabian Petersen, Asmus~v M眉nchow, Daniel Burchardt,
-  Juliane Hermelbracht, Toshiyuki Tashima, Andreas~W. Schell, Oliver Benson,
-  Thomas Meinhardt, Anke Krueger, Ariane Stiebeiner, Arno Rauschenbeutel,
-  Harald Weinfurter, and Markus Weber.
-\newblock Tapered fiber coupling of single photons emitted by a
-  deterministically positioned single nitrogen vacancy center.
-\newblock {\em Applied Physics Letters}, 104(3):031101, January 2014.
-
-\bibitem{Meng2015nanowaveguide}
-Y.~Meng, J.~Lee, M.~Dagenais, and S.~L. Rolston.
-\newblock A nanowaveguide platform for collective atom-light interaction.
-\newblock {\em Applied Physics Letters}, 107(9):--, 2015.
-
-\bibitem{Tiecke2015Efficient}
-T.~G. Tiecke, K.~P. Nayak, J.~D. Thompson, T.~Peyronel, N.~P. de~Leon,
-  V.~Vuleti\'{c}, and M.~D. Lukin.
-\newblock Efficient fiber-optical interface for nanophotonic devices.
-\newblock {\em Optica}, 2(2):70--75, Feb 2015.
-
-\bibitem{le_kien_intracavity_2009}
-Fam Le~Kien and K.~Hakuta.
-\newblock Intracavity electromagnetically induced transparency in atoms around
-  a nanofiber with a pair of {Bragg} grating mirrors.
-\newblock {\em Phys. Rev. A}, 79(4):043813, April 2009.
-
-\bibitem{yalla_cavity_2014}
-Ramachandrarao Yalla, Mark Sadgrove, Kali~P. Nayak, and Kohzo Hakuta.
-\newblock Cavity {Quantum} {Electrodynamics} on a {Nanofiber} {Using} a
-  {Composite} {Photonic} {Crystal} {Cavity}.
-\newblock {\em Phys. Rev. Lett.}, 113(14):143601, September 2014.
-
-\bibitem{bohnet_reduced_2014}
-J.~G. Bohnet, K.~C. Cox, M.~A. Norcia, J.~M. Weiner, Z.~Chen, and J.~K.
-  Thompson.
-\newblock Reduced spin measurement back-action for a phase sensitivity ten
-  times beyond the standard quantum limit.
-\newblock {\em Nat Photon}, 8(9):731--736, September 2014.
-
-\bibitem{kumar_autler-townes_2015}
-Ravi Kumar, Vandna Gokhroo, Kieran Deasy, and S铆le~Nic Chormaic.
-\newblock Autler-{Townes} splitting via frequency up-conversion at
-  ultralow-power levels in cold
-  \${\textasciicircum}\{87\}{\textbackslash}mathrm\{{Rb}\}\$ atoms using an
-  optical nanofiber.
-\newblock {\em Phys. Rev. A}, 91(5):053842, May 2015.
-
-\bibitem{le_kien_electromagnetically_2015}
-Fam Le~Kien and A.~Rauschenbeutel.
-\newblock Electromagnetically induced transparency for guided light in an
-  atomic array outside an optical nanofiber.
-\newblock {\em Phys. Rev. A}, 91(5):053847, May 2015.
-
-\bibitem{smith_quantum_2013-1}
-A.~Smith, B.~E. Anderson, H.~Sosa-Martinez, C.~A. Riofr铆o, Ivan~H. Deutsch,
-  and Poul~S. Jessen.
-\newblock Quantum {Control} in the {Cs} \$6\{{S}\}\_\{1/2\}\$ {Ground}
-  {Manifold} {Using} {Radio}-{Frequency} and {Microwave} {Magnetic} {Fields}.
-\newblock {\em Phys. Rev. Lett.}, 111(17):170502, October 2013.
-
-\bibitem{trail_strongly_2010}
-Collin~M. Trail, Poul~S. Jessen, and Ivan~H. Deutsch.
-\newblock Strongly {Enhanced} {Spin} {Squeezing} via {Quantum} {Control}.
-\newblock {\em Phys. Rev. Lett.}, 105(19):193602, November 2010.
-
-\bibitem{norris_enhanced_2012}
-Leigh~M. Norris, Collin~M. Trail, Poul~S. Jessen, and Ivan~H. Deutsch.
-\newblock Enhanced {Squeezing} of a {Collective} {Spin} via {Control} of {Its}
-  {Qudit} {Subsystems}.
-\newblock {\em Phys. Rev. Lett.}, 109(17):173603, October 2012.
-
-\bibitem{mcconnell_entanglement_2015}
-Robert McConnell, Hao Zhang, Jiazhong Hu, Senka 膯uk, and Vladan Vuleti膰.
-\newblock Entanglement with negative {Wigner} function of almost 3,000 atoms
-  heralded by one photon.
-\newblock {\em Nature}, 519(7544):439--442, March 2015.
-
-\bibitem{yao_-chip_2010}
-P.~Yao, V.s.c. Manga~Rao, and S.~Hughes.
-\newblock On-chip single photon sources using planar photonic crystals and
-  single quantum dots.
-\newblock {\em Laser \& Photon. Rev.}, 4(4):499--516, June 2010.
-
-\bibitem{tong_single-mode_2004}
-Limin Tong, Jingyi Lou, and Eric Mazur.
-\newblock Single-mode guiding properties of subwavelength-diameter silica and
-  silicon wire waveguides.
-\newblock {\em Opt. Express}, 12(6):1025--1035, March 2004.
-
-\end{thebibliography}
+  {yao_-chip_2010}.}\BibitemShut {Stop}%
+\bibitem [{\citenamefont {Buhmann}\ \emph {et~al.}(2004)\citenamefont
+  {Buhmann}, \citenamefont {Kn枚ll}, \citenamefont {Welsch},\ and\
+  \citenamefont {Dung}}]{buhmann_casimir-polder_2004}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~Y.}\ \bibnamefont
+  {Buhmann}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Kn枚ll}},
+  \bibinfo {author} {\bibfnamefont {D.-G.}\ \bibnamefont {Welsch}}, \ and\
+  \bibinfo {author} {\bibfnamefont {H.~T.}\ \bibnamefont {Dung}},\ }\href
+  {\doibase 10.1103/PhysRevA.70.052117} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {70}},\ \bibinfo
+  {pages} {052117} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kien}\ \emph {et~al.}(2013)\citenamefont {Kien},
+  \citenamefont {Schneeweiss},\ and\ \citenamefont
+  {Rauschenbeutel}}]{kien_dynamical_2013}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.~L.}\ \bibnamefont
+  {Kien}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Schneeweiss}}, \
+  and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Rauschenbeutel}},\
+  }\href {\doibase 10.1140/epjd/e2013-30729-x} {\bibfield  {journal} {\bibinfo
+  {journal} {Eur. Phys. J. D}\ }\textbf {\bibinfo {volume} {67}},\ \bibinfo
+  {pages} {1} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Baragiola}(2014)}]{baragiola_open_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.~Q.}\ \bibnamefont
+  {Baragiola}},\ }\emph {\bibinfo {title} {Open {Systems} {Dynamics} for
+  {Propagating} {Quantum} {Fields}}},\ \href {http://arxiv.org/abs/1408.4447}
+  {Ph.D. thesis},\ \bibinfo  {school} {University of New Mexico}, \bibinfo
+  {address} {Albuquerque, USA} (\bibinfo {year} {2014}),\ \bibinfo {note}
+  {arXiv: 1408.4447}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Stockton}\ \emph {et~al.}(2004)\citenamefont
+  {Stockton}, \citenamefont {van Handel},\ and\ \citenamefont
+  {Mabuchi}}]{stockton_deterministic_2004}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~K.}\ \bibnamefont
+  {Stockton}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {van
+  Handel}}, \ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Mabuchi}},\ }\href {\doibase 10.1103/PhysRevA.70.022106} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume}
+  {70}},\ \bibinfo {pages} {022106} (\bibinfo {year} {2004})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Smith}\ \emph {et~al.}(2003)\citenamefont {Smith},
+  \citenamefont {Chaudhury},\ and\ \citenamefont
+  {Jessen}}]{smith_faraday_2003}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.~A.}\ \bibnamefont
+  {Smith}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Chaudhury}}, \
+  and\ \bibinfo {author} {\bibfnamefont {P.~S.}\ \bibnamefont {Jessen}},\
+  }\href {\doibase 10.1088/1464-4266/5/4/301} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Opt. B: Quantum Semiclass. Opt.}\ }\textbf {\bibinfo {volume}
+  {5}},\ \bibinfo {pages} {323} (\bibinfo {year} {2003})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zhang}\ \emph {et~al.}(2012)\citenamefont {Zhang},
+  \citenamefont {McConnell}, \citenamefont {膯uk}, \citenamefont {Lin},
+  \citenamefont {Schleier-Smith}, \citenamefont {Leroux},\ and\ \citenamefont
+  {Vuleti膰}}]{zhang_collective_2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Zhang}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {McConnell}},
+  \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {膯uk}}, \bibinfo
+  {author} {\bibfnamefont {Q.}~\bibnamefont {Lin}}, \bibinfo {author}
+  {\bibfnamefont {M.~H.}\ \bibnamefont {Schleier-Smith}}, \bibinfo {author}
+  {\bibfnamefont {I.~D.}\ \bibnamefont {Leroux}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {V.}~\bibnamefont {Vuleti膰}},\ }\href {\doibase
+  10.1103/PhysRevLett.109.133603} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {109}},\ \bibinfo {pages}
+  {133603} (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wineland}\ \emph {et~al.}(1992)\citenamefont
+  {Wineland}, \citenamefont {Bollinger}, \citenamefont {Itano}, \citenamefont
+  {Moore},\ and\ \citenamefont {Heinzen}}]{wineland_spin_1992}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont
+  {Wineland}}, \bibinfo {author} {\bibfnamefont {J.~J.}\ \bibnamefont
+  {Bollinger}}, \bibinfo {author} {\bibfnamefont {W.~M.}\ \bibnamefont
+  {Itano}}, \bibinfo {author} {\bibfnamefont {F.~L.}\ \bibnamefont {Moore}}, \
+  and\ \bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont {Heinzen}},\
+  }\href {\doibase 10.1103/PhysRevA.46.R6797} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {46}},\ \bibinfo
+  {pages} {R6797} (\bibinfo {year} {1992})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kitagawa}\ and\ \citenamefont
+  {Ueda}(1993)}]{kitagawa_squeezed_1993}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Kitagawa}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Ueda}},\ }\href {\doibase 10.1103/PhysRevA.47.5138} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume} {47}},\
+  \bibinfo {pages} {5138} (\bibinfo {year} {1993})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Chaudhury}\ \emph {et~al.}(2006)\citenamefont
+  {Chaudhury}, \citenamefont {Smith}, \citenamefont {Schulz},\ and\
+  \citenamefont {Jessen}}]{chaudhury_continuous_2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Chaudhury}}, \bibinfo {author} {\bibfnamefont {G.~A.}\ \bibnamefont
+  {Smith}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Schulz}}, \
+  and\ \bibinfo {author} {\bibfnamefont {P.~S.}\ \bibnamefont {Jessen}},\
+  }\href {\doibase 10.1103/PhysRevLett.96.043001} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {96}},\
+  \bibinfo {pages} {043001} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Smith}\ \emph {et~al.}(2004)\citenamefont {Smith},
+  \citenamefont {Chaudhury}, \citenamefont {Silberfarb}, \citenamefont
+  {Deutsch},\ and\ \citenamefont {Jessen}}]{smith_continuous_2004}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.~A.}\ \bibnamefont
+  {Smith}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Chaudhury}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Silberfarb}}, \bibinfo
+  {author} {\bibfnamefont {I.~H.}\ \bibnamefont {Deutsch}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {P.~S.}\ \bibnamefont {Jessen}},\ }\href {\doibase
+  10.1103/PhysRevLett.93.163602} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {93}},\ \bibinfo {pages}
+  {163602} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Jacobs}\ and\ \citenamefont
+  {Steck}(2006)}]{jacobs_straightforward_2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Jacobs}}\ and\ \bibinfo {author} {\bibfnamefont {D.~A.}\ \bibnamefont
+  {Steck}},\ }\href {\doibase 10.1080/00107510601101934} {\bibfield  {journal}
+  {\bibinfo  {journal} {Contemporary Physics}\ }\textbf {\bibinfo {volume}
+  {47}},\ \bibinfo {pages} {279} (\bibinfo {year} {2006})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Vetsch}(2010)}]{vetsch_eugen_optical_2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Vetsch}},\ }\emph {\bibinfo {title} {Optical {Interface} {Based} on a
+  {Nanofiber} {Atom}-{Trap}}},\ \href@noop {} {Ph.D. thesis},\ \bibinfo
+  {school} {Johannes Gutenberg-Universit盲t}, \bibinfo {address} {Mainz,
+  Germany} (\bibinfo {year} {2010})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Le~Kien}\ \emph {et~al.}(2006)\citenamefont
+  {Le~Kien}, \citenamefont {Balykin},\ and\ \citenamefont
+  {Hakuta}}]{le_kien_scattering_2006}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Le~Kien}}, \bibinfo {author} {\bibfnamefont {V.~I.}\ \bibnamefont
+  {Balykin}}, \ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Hakuta}},\ }\href {\doibase 10.1103/PhysRevA.73.013819} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume}
+  {73}},\ \bibinfo {pages} {013819} (\bibinfo {year} {2006})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Chen}\ \emph {et~al.}(2011)\citenamefont {Chen},
+  \citenamefont {Bohnet}, \citenamefont {Sankar}, \citenamefont {Dai},\ and\
+  \citenamefont {Thompson}}]{chen_conditional_2011}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont
+  {Chen}}, \bibinfo {author} {\bibfnamefont {J.~G.}\ \bibnamefont {Bohnet}},
+  \bibinfo {author} {\bibfnamefont {S.~R.}\ \bibnamefont {Sankar}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Dai}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {J.~K.}\ \bibnamefont {Thompson}},\ }\href {\doibase
+  10.1103/PhysRevLett.106.133601} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {106}},\ \bibinfo {pages}
+  {133601} (\bibinfo {year} {2011})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hafezi}\ \emph {et~al.}(2012)\citenamefont {Hafezi},
+  \citenamefont {Kim}, \citenamefont {Rolston}, \citenamefont {Orozco},
+  \citenamefont {Lev},\ and\ \citenamefont {Taylor}}]{hafezi_atomic_2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Hafezi}}, \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Kim}},
+  \bibinfo {author} {\bibfnamefont {S.~L.}\ \bibnamefont {Rolston}}, \bibinfo
+  {author} {\bibfnamefont {L.~A.}\ \bibnamefont {Orozco}}, \bibinfo {author}
+  {\bibfnamefont {B.~L.}\ \bibnamefont {Lev}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {J.~M.}\ \bibnamefont {Taylor}},\ }\href {\doibase
+  10.1103/PhysRevA.85.020302} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. A}\ }\textbf {\bibinfo {volume} {85}},\ \bibinfo {pages} {020302}
+  (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Liebermeister}\ \emph {et~al.}(2014)\citenamefont
+  {Liebermeister}, \citenamefont {Petersen}, \citenamefont {M眉nchow},
+  \citenamefont {Burchardt}, \citenamefont {Hermelbracht}, \citenamefont
+  {Tashima}, \citenamefont {Schell}, \citenamefont {Benson}, \citenamefont
+  {Meinhardt}, \citenamefont {Krueger}, \citenamefont {Stiebeiner},
+  \citenamefont {Rauschenbeutel}, \citenamefont {Weinfurter},\ and\
+  \citenamefont {Weber}}]{liebermeister_tapered_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Liebermeister}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Petersen}}, \bibinfo {author} {\bibfnamefont {A.~v.}\ \bibnamefont
+  {M眉nchow}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Burchardt}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Hermelbracht}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Tashima}}, \bibinfo {author} {\bibfnamefont {A.~W.}\ \bibnamefont {Schell}},
+  \bibinfo {author} {\bibfnamefont {O.}~\bibnamefont {Benson}}, \bibinfo
+  {author} {\bibfnamefont {T.}~\bibnamefont {Meinhardt}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Krueger}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Stiebeiner}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Rauschenbeutel}}, \bibinfo {author} {\bibfnamefont
+  {H.}~\bibnamefont {Weinfurter}}, \ and\ \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Weber}},\ }\href {\doibase 10.1063/1.4862207} {\bibfield
+  {journal} {\bibinfo  {journal} {Applied Physics Letters}\ }\textbf {\bibinfo
+  {volume} {104}},\ \bibinfo {pages} {031101} (\bibinfo {year}
+  {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Meng}\ \emph {et~al.}(2015)\citenamefont {Meng},
+  \citenamefont {Lee}, \citenamefont {Dagenais},\ and\ \citenamefont
+  {Rolston}}]{Meng2015nanowaveguide}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Meng}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Lee}}, \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Dagenais}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {S.~L.}\ \bibnamefont {Rolston}},\ }\href {\doibase
+  http://dx.doi.org/10.1063/1.4929947} {\bibfield  {journal} {\bibinfo
+  {journal} {Applied Physics Letters}\ }\textbf {\bibinfo {volume} {107}},\
+  \bibinfo {eid} {091110} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tiecke}\ \emph {et~al.}(2015)\citenamefont {Tiecke},
+  \citenamefont {Nayak}, \citenamefont {Thompson}, \citenamefont {Peyronel},
+  \citenamefont {de~Leon}, \citenamefont {Vuleti\'{c}},\ and\ \citenamefont
+  {Lukin}}]{Tiecke2015Efficient}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.~G.}\ \bibnamefont
+  {Tiecke}}, \bibinfo {author} {\bibfnamefont {K.~P.}\ \bibnamefont {Nayak}},
+  \bibinfo {author} {\bibfnamefont {J.~D.}\ \bibnamefont {Thompson}}, \bibinfo
+  {author} {\bibfnamefont {T.}~\bibnamefont {Peyronel}}, \bibinfo {author}
+  {\bibfnamefont {N.~P.}\ \bibnamefont {de~Leon}}, \bibinfo {author}
+  {\bibfnamefont {V.}~\bibnamefont {Vuleti\'{c}}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {M.~D.}\ \bibnamefont {Lukin}},\ }\href {\doibase
+  10.1364/OPTICA.2.000070} {\bibfield  {journal} {\bibinfo  {journal} {Optica}\
+  }\textbf {\bibinfo {volume} {2}},\ \bibinfo {pages} {70} (\bibinfo {year}
+  {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Le~Kien}\ and\ \citenamefont
+  {Hakuta}(2009)}]{le_kien_intracavity_2009}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Le~Kien}}\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Hakuta}},\ }\href {\doibase 10.1103/PhysRevA.79.043813} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume}
+  {79}},\ \bibinfo {pages} {043813} (\bibinfo {year} {2009})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Yalla}\ \emph {et~al.}(2014)\citenamefont {Yalla},
+  \citenamefont {Sadgrove}, \citenamefont {Nayak},\ and\ \citenamefont
+  {Hakuta}}]{yalla_cavity_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Yalla}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Sadgrove}},
+  \bibinfo {author} {\bibfnamefont {K.~P.}\ \bibnamefont {Nayak}}, \ and\
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Hakuta}},\ }\href
+  {\doibase 10.1103/PhysRevLett.113.143601} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {113}},\ \bibinfo
+  {pages} {143601} (\bibinfo {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bohnet}\ \emph {et~al.}(2014)\citenamefont {Bohnet},
+  \citenamefont {Cox}, \citenamefont {Norcia}, \citenamefont {Weiner},
+  \citenamefont {Chen},\ and\ \citenamefont {Thompson}}]{bohnet_reduced_2014}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~G.}\ \bibnamefont
+  {Bohnet}}, \bibinfo {author} {\bibfnamefont {K.~C.}\ \bibnamefont {Cox}},
+  \bibinfo {author} {\bibfnamefont {M.~A.}\ \bibnamefont {Norcia}}, \bibinfo
+  {author} {\bibfnamefont {J.~M.}\ \bibnamefont {Weiner}}, \bibinfo {author}
+  {\bibfnamefont {Z.}~\bibnamefont {Chen}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {J.~K.}\ \bibnamefont {Thompson}},\ }\href {\doibase
+  10.1038/nphoton.2014.151} {\bibfield  {journal} {\bibinfo  {journal} {Nat
+  Photon}\ }\textbf {\bibinfo {volume} {8}},\ \bibinfo {pages} {731} (\bibinfo
+  {year} {2014})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kumar}\ \emph {et~al.}(2015)\citenamefont {Kumar},
+  \citenamefont {Gokhroo}, \citenamefont {Deasy},\ and\ \citenamefont
+  {Chormaic}}]{kumar_autler-townes_2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Kumar}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Gokhroo}},
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Deasy}}, \ and\ \bibinfo
+  {author} {\bibfnamefont {S.~N.}\ \bibnamefont {Chormaic}},\ }\href {\doibase
+  10.1103/PhysRevA.91.053842} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. A}\ }\textbf {\bibinfo {volume} {91}},\ \bibinfo {pages} {053842}
+  (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Le~Kien}\ and\ \citenamefont
+  {Rauschenbeutel}(2015)}]{le_kien_electromagnetically_2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.}~\bibnamefont
+  {Le~Kien}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Rauschenbeutel}},\ }\href {\doibase 10.1103/PhysRevA.91.053847} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume}
+  {91}},\ \bibinfo {pages} {053847} (\bibinfo {year} {2015})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Smith}\ \emph {et~al.}(2013)\citenamefont {Smith},
+  \citenamefont {Anderson}, \citenamefont {Sosa-Martinez}, \citenamefont
+  {Riofr铆o}, \citenamefont {Deutsch},\ and\ \citenamefont
+  {Jessen}}]{smith_quantum_2013-1}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Smith}}, \bibinfo {author} {\bibfnamefont {B.~E.}\ \bibnamefont {Anderson}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Sosa-Martinez}}, \bibinfo
+  {author} {\bibfnamefont {C.~A.}\ \bibnamefont {Riofr铆o}}, \bibinfo {author}
+  {\bibfnamefont {I.~H.}\ \bibnamefont {Deutsch}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {P.~S.}\ \bibnamefont {Jessen}},\ }\href {\doibase
+  10.1103/PhysRevLett.111.170502} {\bibfield  {journal} {\bibinfo  {journal}
+  {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {111}},\ \bibinfo {pages}
+  {170502} (\bibinfo {year} {2013})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Trail}\ \emph {et~al.}(2010)\citenamefont {Trail},
+  \citenamefont {Jessen},\ and\ \citenamefont {Deutsch}}]{trail_strongly_2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~M.}\ \bibnamefont
+  {Trail}}, \bibinfo {author} {\bibfnamefont {P.~S.}\ \bibnamefont {Jessen}}, \
+  and\ \bibinfo {author} {\bibfnamefont {I.~H.}\ \bibnamefont {Deutsch}},\
+  }\href {\doibase 10.1103/PhysRevLett.105.193602} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {105}},\
+  \bibinfo {pages} {193602} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Norris}\ \emph {et~al.}(2012)\citenamefont {Norris},
+  \citenamefont {Trail}, \citenamefont {Jessen},\ and\ \citenamefont
+  {Deutsch}}]{norris_enhanced_2012}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~M.}\ \bibnamefont
+  {Norris}}, \bibinfo {author} {\bibfnamefont {C.~M.}\ \bibnamefont {Trail}},
+  \bibinfo {author} {\bibfnamefont {P.~S.}\ \bibnamefont {Jessen}}, \ and\
+  \bibinfo {author} {\bibfnamefont {I.~H.}\ \bibnamefont {Deutsch}},\ }\href
+  {\doibase 10.1103/PhysRevLett.109.173603} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. Lett.}\ }\textbf {\bibinfo {volume} {109}},\ \bibinfo
+  {pages} {173603} (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {McConnell}\ \emph {et~al.}(2015)\citenamefont
+  {McConnell}, \citenamefont {Zhang}, \citenamefont {Hu}, \citenamefont
+  {膯uk},\ and\ \citenamefont {Vuleti膰}}]{mcconnell_entanglement_2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {McConnell}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Zhang}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Hu}}, \bibinfo {author}
+  {\bibfnamefont {S.}~\bibnamefont {膯uk}}, \ and\ \bibinfo {author}
+  {\bibfnamefont {V.}~\bibnamefont {Vuleti膰}},\ }\href {\doibase
+  10.1038/nature14293} {\bibfield  {journal} {\bibinfo  {journal} {Nature}\
+  }\textbf {\bibinfo {volume} {519}},\ \bibinfo {pages} {439} (\bibinfo {year}
+  {2015})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Yao}\ \emph {et~al.}(2010)\citenamefont {Yao},
+  \citenamefont {Manga~Rao},\ and\ \citenamefont {Hughes}}]{yao_-chip_2010}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Yao}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Manga~Rao}}, \
+  and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Hughes}},\ }\href
+  {\doibase 10.1002/lpor.200810081} {\bibfield  {journal} {\bibinfo  {journal}
+  {Laser \& Photon. Rev.}\ }\textbf {\bibinfo {volume} {4}},\ \bibinfo {pages}
+  {499} (\bibinfo {year} {2010})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tong}\ \emph {et~al.}(2004)\citenamefont {Tong},
+  \citenamefont {Lou},\ and\ \citenamefont {Mazur}}]{tong_single-mode_2004}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Tong}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Lou}}, \ and\
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Mazur}},\ }\href
+  {\doibase 10.1364/OPEX.12.001025} {\bibfield  {journal} {\bibinfo  {journal}
+  {Opt. Express}\ }\textbf {\bibinfo {volume} {12}},\ \bibinfo {pages} {1025}
+  (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\end{thebibliography}%
