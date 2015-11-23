@@ -600,7 +600,7 @@ This birefringence was exploited by Dawkins {\em et al.} \cite{dawkins_dispersiv
 
 The anisotropy of the guided modes provides a mechanism for counting the number of atoms trapped around the nanofiber based on polarization spectroscopy.  
 We consider $N_A$ atoms, each in a completely mixed hyperfine spin state. In this case the atomic polarizability tensor in \erf{Eq::PolarizabilityIrrep} reduces to $\langle \hat{A}_{ij}(f,f') \rangle = C_{ff'}^{(0)} \delta_{i,j}$, and the collective interaction is determined entirely by the the scalar (rank-0) terms.  
-With the atoms trapped along the quasi-$H$ axis, the off-diagonal elements in \erf{Eq::GenHamiltonian} vanish, $\expt{ \polcomp_{HV} } = \expt{ \polcomp_{VH} } =0$, while $\expt{ \polcomp_{HH} } \neq  \expt{ \polcomp_{VV} }$.  
+\error{With the atoms trapped along the quasi-$H$ axis, while $\expt{ \polcomp_{HH} } \neq  \expt{ \polcomp_{VV} }$, the off-diagonal elements in \erf{Eq::GenHamiltonian} do not contribute to the Birefringent interaction we are insterested in and actually vanish ($\expt{ \polcomp_{HV} } = \expt{ \polcomp_{VH} } =0$) when $x-$, $ y- $ or $ z- $axis is chosen as the quantization axis which includes the one close to the optimal choice of quantization axis for spin squeezing we will discuss in the next section.}  
 Atoms on either side of the nanofiber experience the same scalar light shift yielding from  \erf{Eq::GenHamiltonian} the Hamiltonian for QND measurement of atom number,
 	\begin{align}
 		\hat{H}_{N} &= -2\pi \hbar k_0 n_g \!\!\!\!\!\sum_{\phi' = \{0,\pi \}}\!\!\!\!\!\! N_{\phi'} \big[ \expt{ \polcomp_{HH}(\phi')}  - \expt{ \polcomp_{VV}(\phi')} \big] \hat{S}_1(t)  \nonumber \\
@@ -664,7 +664,7 @@ While this does not affect the squeezing of projection noise in $\hat{J}_3$, it 
 	\begin{align} \label{Eq::MagicWavelengthCondition}
 		\chi_{H,\uparrow} +\chi_{V,\uparrow}  = \chi_{H,\downarrow} + \chi_{V,\downarrow},
 	\end{align}
-this term can be canceled \cite{chaudhury_continuous_2006}.
+this term can be canceled \cite{chaudhury_continuous_2006}, \error{where we have ignored the imaginary part of the coupling strengths in the dispersive regime}.
 Using the D1-line of $^{133}$Cs atoms as the probe light, there are two magic-frequency solutions, $ \magic{3} $ and $\magic{4}$, shown in \frf{Fig::CouplingStrength}(a).  
 
 Because the guided probe light at the position of the atom will generally be elliptical, the light-shift interaction coherently couples different magnetic sublevels in a given manifold $f$, and thus does not conserve $\hat{J}_3$.  For example, the ellipticity of the probe light leads to a fictitious magnetic field proportional to $i \mathbf{E}^{(-)}_{\inp}(\br') \times \mathbf{E}^{(+)}_{\inp}(\br')$ that causes a precession of the spin within hyperfine manifold $f$.  This can be mitigated by a sufficiently strong bias magnetic field compared to the fictitious field \cite{smith_continuous_2004}. 
