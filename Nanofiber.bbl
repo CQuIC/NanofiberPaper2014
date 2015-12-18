@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{94}%
+\begin{thebibliography}{95}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -663,6 +663,13 @@
   {journal} {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume}
   {43}},\ \bibinfo {pages} {467} (\bibinfo {year} {1991})}\BibitemShut
   {NoStop}%
+\bibitem [{Note1()}]{Note1}%
+  \BibitemOpen
+  \bibinfo {note} {The functions $\protect \mathbf {g}_\eta (\protect \mathbf
+  {r})$ are not strictly transverse because of the spatial variation of the
+  index of refraction, $n(r_\perp )$. These modes do, nonetheless, constitute
+  the far-field radiated by the dipole. For further details see Refs. \cite
+  {sakoda_optical_1996, wubs_multiple-scattering_2004}}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Kien}\ \emph {et~al.}(2004)\citenamefont {Kien},
   \citenamefont {Liang}, \citenamefont {Hakuta},\ and\ \citenamefont
   {Balykin}}]{kien_field_2004}%
@@ -791,7 +798,7 @@
   {journal} {\bibinfo  {journal} {Phys. Rev. A}\ }\textbf {\bibinfo {volume}
   {90}},\ \bibinfo {pages} {063816} (\bibinfo {year}
   {2014}{\natexlab{b}})}\BibitemShut {NoStop}%
-\bibitem [{Note1()}]{Note1}%
+\bibitem [{Note2()}]{Note2}%
   \BibitemOpen
   \bibinfo {note} {In a careful derivation of the Lippman-Schwinger scattering
   equation, it is not the total Green's function that appears in Eq.~(\ref
@@ -801,13 +808,13 @@
   \mathbf {r}-\protect \mathbf {r}')/n^2(\protect \mathbf {r})$ \cite
   {wubs_multiple-scattering_2004}. This function arises by proper accounting of
   the scatterer's coupling to the \protect \emph {displacement} rather than the
-  electric field \cite {yao_ultrahigh_2009}. The distinction becomes important
-  at the source point $\protect \mathbf {r} = \protect \mathbf {r}'$; however,
-  for lossless dielectrics $n(\protect \mathbf {r})$ is real and ${\protect \rm
-  Im}[\protect \tensor {\protect \mathbf {G}}(\protect \mathbf {r}',\protect
-  \mathbf {r}'; \omega )] = {\protect \rm Im}[\protect \tensor {\protect
-  \mathbf {K}}(\protect \mathbf {r}',\protect \mathbf {r}'; \omega )]$ \cite
-  {yao_-chip_2010}.}\BibitemShut {Stop}%
+  electric field \cite {yao_ultrahigh_2009} with a distinction that becomes
+  important at the source point $\protect \mathbf {r} = \protect \mathbf {r}'$.
+  However, for lossless dielectrics $n(\protect \mathbf {r})$ is real and
+  ${\protect \rm Im}[\protect \tensor {\protect \mathbf {G}}(\protect \mathbf
+  {r}',\protect \mathbf {r}'; \omega )] = {\protect \rm Im}[\protect \tensor
+  {\protect \mathbf {K}}(\protect \mathbf {r}',\protect \mathbf {r}'; \omega
+  )]$ \cite {yao_-chip_2010}.}\BibitemShut {Stop}%
 \bibitem [{\citenamefont {Buhmann}\ \emph {et~al.}(2004)\citenamefont
   {Buhmann}, \citenamefont {Kn{\"o}ll}, \citenamefont {Welsch},\ and\
   \citenamefont {Dung}}]{buhmann_casimir-polder_2004}%
