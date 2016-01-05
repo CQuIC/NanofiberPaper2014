@@ -1,4 +1,4 @@
-\documentclass[pra,twocolumn,floatfix]{revtex4-1} %reprint
+\documentclass[pra,twocolumn,floatfix,superscriptaddress]{revtex4-1} %reprint
 %\tightenlines
 
 %\draft
@@ -242,12 +242,12 @@ k_0^2 \delta^{(3)}(\mathbf{r}\!-\!\mathbf{r}')\! \unittens,
 where $\unittens$ is the unit tensor.   
 
 The solution for the Green's function $\tensor{\mathbf{G}}(\br ,\br' ; \omega_0)$, following from Maxwell's equations,  
-has been studied previously \cite{sakoda_optical_1996,sondergaard_general_2001,wubs_multiple-scattering_2004}.  As we are interested here in the forward-scattered components that lead to phase shifts and polarization transformations, we directly calculate $\tensor{\mathbf{G}}(\br ,\br' ; \omega_0)$ through a decomposition into normal modes.  A complete set of eigenmodes in the presence of lossless, anisotropic dielectric are defined according to the procedure of Glauber and Lewenstein~\cite{glauber_quantum_1991}.  We seek the eigenmodes $\eigenf(\mathbf{r})$, indexed by $\eta$, that satisfy the homogeneous wave equation in the absence of sources, i.e., \erf{Eq::WaveEquationSource} for $\tensor{\boldsymbol{\alpha}} = 0$.  To do so, one defines functions $\eigeng(\mbf{r}) \equiv n(\br) \eigenf(\mbf{r})$ that form a complete basis, as they are eigenfunctions of the Hermitian operator, $\mathcal{H}(k_0) = -\frac{1}{n(\br)} \nabla\times\nabla\times \frac{1}{n(\br)} + k_0^2$, according to $\mathcal{H}(k_0)  \eigeng(\mbf{r}) = \lambda_\eta \eigeng(\mbf{r})$. The eigenvalue, $\lambda_\eta= (\omega_0^2-\omega_\eta^2)/c^2$, determines the wavenumber for a given mode at frequency $\omega_\eta$.  We are interested specifically in the transverse functions, $\nabla\cdot \eigeng(\br) = 0$, with eigenvalues $\lambda_n \neq 0$.  These fall into two categories, guided ($\eta = \mu$) and unguided ($\eta = \nu$) modes, which together form a complete, orthonormal set for transverse vector functions,
+has been studied previously \cite{sakoda_optical_1996,sondergaard_general_2001,wubs_multiple-scattering_2004}.  As we are interested here in the forward-scattered components that lead to phase shifts and polarization transformations, we directly calculate $\tensor{\mathbf{G}}(\br ,\br' ; \omega_0)$ through a decomposition into normal modes.  A complete set of eigenmodes in the presence of lossless, spatially inhomogeneous dielectric are defined according to the procedure of Glauber and Lewenstein~\cite{glauber_quantum_1991}.  We seek the eigenmodes $\eigenf(\mathbf{r})$, indexed by $\eta$, that satisfy the homogeneous wave equation in the absence of sources, i.e., \erf{Eq::WaveEquationSource} for $\tensor{\boldsymbol{\alpha}} = 0$ with the eigen-wavenumber $k_0 \rightarrow k_\eta$.  To do so, one defines functions $\eigeng(\mbf{r}) \equiv n(\br) \eigenf(\mbf{r})$ that form a complete basis, as they are eigenfunctions of the Hermitian operator, $\mathcal{H}(k_0) = -\frac{1}{n(\br)} \nabla\times\nabla\times \frac{1}{n(\br)} + k_0^2$, according to $\mathcal{H}(k_0)  \eigeng(\mbf{r}) = \lambda_\eta \eigeng(\mbf{r})$. The eigenvalue, $\lambda_\eta= (\omega_0^2-\omega_\eta^2)/c^2$, determines the wavenumber for a given mode at frequency $\omega_\eta$.  We are interested specifically in the generalized transverse functions satisfying $\nabla\cdot [ n(\mathbf{r}) \eigeng(\br) ] = 0$ with eigenvalues $\lambda_n \neq 0$ \cite{wubs_multiple-scattering_2004}. These fall into two categories, guided ($\eta = \mu$) and unguided ($\eta = \nu$) modes, which together form a complete, orthonormal set for transverse vector functions,
 	\begin{align}
 	&\int\!\! \mathrm{d}^3\br \, \eigeng^*(\mbf{r}) \!\cdot\! \eigengp(\mbf{r})  =\!\! \int\!\! \mathrm{d}^3\br \, n^2(\br) \eigenf^* (\br)\!\cdot\!  \eigenfp(\br) =\delta_{\eta, \eta'},\label{Eq::Orthogonality}\\
-	&\!\!\!\!\!\!\!\sum_\eta \!\mathbf{g}_\eta\!(\!\br\!) \mathbf{g}_\eta^*\!(\!\br'\!) \!=\!\!\!  \sum_\mu\! \mathbf{g}_\mu\!(\!\br\!) \mathbf{g}_\mu^*\!(\!\br'\!)  \!+\!\! \sum_\nu\! \mathbf{g}_\nu\!(\!\br\!) \mathbf{g}_\nu^*\!(\!\br'\!)  \!=\!\delta^{(\!T\!)}\!(\!\br\!-\!\br'\!)\!  \unittens, \label{Eq::Completeness}
+	&\!\!\!\!\!\!\!\sum_\eta \!\mathbf{g}_\eta\!(\!\br\!) \mathbf{g}_\eta^*\!(\!\br'\!) \!=\!\!\!  \sum_\mu\! \mathbf{g}_\mu\!(\!\br\!) \mathbf{g}_\mu^*\!(\!\br'\!)  \!+\!\! \sum_\nu\! \mathbf{g}_\nu\!(\!\br\!) \mathbf{g}_\nu^*\!(\!\br'\!)  \!=\!\tilde{\delta}^{(\!T\!)}\!(\!\br\!-\!\br'\!)\!  \unittens, \label{Eq::Completeness}
 	\end{align}
-where $\delta^{(T)}(\br\!-\!\br')$ is the delta function for transverse vector fields.  It follows that the transverse dyadic Green's function can be decomposed in terms of the eigenfunctions~\cite{sakoda_optical_1996, sondergaard_general_2001}
+where $\tilde{\delta}^{(T)}(\br-\br')$ is the delta function for generalized transverse vector fields \footnote{The functions $\eigeng(\br)$ are not strictly transverse because of the spatial variation of the index of refraction, $n(r_\perp)$.  These modes do, nonetheless, constitute the far-field radiated by the dipole. For further details see Refs. \cite{sakoda_optical_1996, wubs_multiple-scattering_2004} }.  It follows that the generalized transverse dyadic Green's function can be decomposed in terms of the eigenfunctions~\cite{sakoda_optical_1996, sondergaard_general_2001}
 	\begin{align}
 		\tensor{\mathbf{G}}^{(T)}(\br,\br'; \omega_0) &= -4\pi \sum_{\eta} \frac{  \omega_0^2 \eigenf (\br) 
 \eigenfp^* (\br')}{\omega_0^2-\omega_\eta^2},
@@ -423,7 +423,7 @@ Integrating the field equations,
 t' e^{-i\omega (t-t')}\hat{\sigma}_{ge}(t'),
 \end{align}
 \end{subequations}
-substituting into \erf{Eq::dsigma}, and making the usual Markov approximation gives an expression for the ground-excited state coherences, yields
+substituting into \erf{Eq::dsigma}, and making the usual Markov approximation \cite{le_kien_spontaneous_2005} gives an expression for the ground-excited coherences.   This yields
 \begin{align}
 &\dt{\hat{\sigma}_{ge}} \!=\!-i\omega\!_{eg} 
 \hat{\sigma}\!_{ge}\!\!-\!\!\sum_{e'}\!\!\frac{\Gamma_{ee'}}{2}\hat{\sigma}\!_{ge'}  
@@ -466,12 +466,12 @@ By substituting this into \erf{Eq::aguidedEOM} and defining asymptotic modes, $\
 	\end{align}
 	
 This input-output relation contains the phase shift on forward scattered modes as well as attenuation due to elastic scattering into all other modes. For a probe with frequency $\omega_0$, \erf{Eq::aout} agrees with the expected form given by the Lippmann-Schwinger equation in the first Born approximation \footnote{In a careful derivation of the Lippman-Schwinger scattering equation, it is not the total Green's function that appears in \erf{Eq::ScatteredField} but rather a related dyadic quantity, $\mbf{K}(\br,\br', \omega_0) = \mbf{G}(\br,\br', \omega_0) + \delta(\br-\br')/n^2(\br)$ \cite{wubs_multiple-scattering_2004}. 
-This function arises by proper accounting of the scatterer's coupling to the \emph{displacement} rather than the electric field \cite{yao_ultrahigh_2009}.  The distinction becomes important at the source point $\mbf{r} = \mbf{r}'$; however, for lossless dielectrics $n(\mathbf{r})$ is real and ${\rm Im}[\tensor{\mathbf{G}}(\br',\br'; \omega)] = {\rm Im}[\tensor{\mathbf{K}}(\br',\br'; \omega)]$ \cite{yao_-chip_2010}. },
+This function arises by proper accounting of the scatterer's coupling to the \emph{displacement} rather than the electric field \cite{yao_ultrahigh_2009} with a distinction that becomes important at the source point $\mbf{r} = \mbf{r}'$. However, for lossless dielectrics $n(\mathbf{r})$ is real and ${\rm Im}[\tensor{\mathbf{G}}(\br',\br'; \omega)] = {\rm Im}[\tensor{\mathbf{K}}(\br',\br'; \omega)]$ \cite{yao_-chip_2010}. },
 	\begin{align} \label{Eq::IOScatteredField}
 		\!\!\!\hat{\mathbf{E}}^{(+)}_{\out,g}&(\br, \omega_0)=\hat{\mathbf{E}}^{(+)}_{ \inp, g}(\br, \omega_0)\nn\\
 		&\!\!\!\!\!\!\!\!\!+\tensor{\mathbf{G}}_g^{(+)}(\br,\br',\omega_0)\!\cdot\! \poltens \!\cdot\! \big[\hat{\mathbf{E}}^{(+)}_{\inp, g}(\br', \omega_0)\!+\!\hat{\mathbf{E}}^{(+)}_{\inp,r}(\br', \omega_0) \big],
 	\end{align}
-by noting, for the guided-mode dyadic Green's function given in \erf{Eq::GreensGuided},
+by noting that for the guided-mode dyadic Green's function given in \erf{Eq::GreensGuided},
 	\begin{align}
 		&\int d^2 \mbf{r}_\perp \, \mathbf{u}^*_{\mu} (\br_\perp)\cdot \tensor{\mathbf{G}}_g^{(+)}(\br,\br',\omega_0)\cdot \poltens \cdot \mathbf{u}_{\mu'} (\br'_\perp) \nn\\
 		=& i \frac{ 2\pi \omega_0}{v_g} \mathbf{u}^*_{b,p} (\br'_\perp) \cdot \poltens \cdot \mathbf{u}_{b'\!\!, p'} (\br'_\perp). 
@@ -600,7 +600,7 @@ This birefringence was exploited by Dawkins {\em et al.} \cite{dawkins_dispersiv
 
 The anisotropy of the guided modes provides a mechanism for counting the number of atoms trapped around the nanofiber based on polarization spectroscopy.  
 We consider $N_A$ atoms, each in a completely mixed hyperfine spin state. In this case the atomic polarizability tensor in \erf{Eq::PolarizabilityIrrep} reduces to $\langle \hat{A}_{ij}(f,f') \rangle = C_{ff'}^{(0)} \delta_{i,j}$, and the collective interaction is determined entirely by the the scalar (rank-0) terms.  
-\error{With the atoms trapped along the quasi-$H$ axis, while $\expt{ \polcomp_{HH} } \neq  \expt{ \polcomp_{VV} }$, the off-diagonal elements in \erf{Eq::GenHamiltonian} do not contribute to the Birefringent interaction we are insterested in and actually vanish ($\expt{ \polcomp_{HV} } = \expt{ \polcomp_{VH} } =0$) when $x-$, $ y- $ or $ z- $axis is chosen as the quantization axis which includes the one close to the optimal choice of quantization axis for spin squeezing we will discuss in the next section.}  
+With the atoms trapped along the quasi-$H$ axis, while $\expt{ \polcomp_{HH} } \neq  \expt{ \polcomp_{VV} }$, the off-diagonal elements in \erf{Eq::GenHamiltonian} do not contribute to the Birefringent interaction we are interested in and actually vanish ($\expt{ \polcomp_{HV} } = \expt{ \polcomp_{VH} } =0$) when $x-$, $ y- $ or $ z- $axis is chosen as the quantization axis which includes the one close to the optimal choice of quantization axis for spin squeezing we will discuss in the next section.  
 Atoms on either side of the nanofiber experience the same scalar light shift yielding from  \erf{Eq::GenHamiltonian} the Hamiltonian for QND measurement of atom number,
 	\begin{align}
 		\hat{H}_{N} &= -2\pi \hbar k_0 n_g \!\!\!\!\!\sum_{\phi' = \{0,\pi \}}\!\!\!\!\!\! N_{\phi'} \big[ \expt{ \polcomp_{HH}(\phi')}  - \expt{ \polcomp_{VV}(\phi')} \big] \hat{S}_1(t)  \nonumber \\
@@ -664,7 +664,7 @@ While this does not affect the squeezing of projection noise in $\hat{J}_3$, it 
 	\begin{align} \label{Eq::MagicWavelengthCondition}
 		\chi_{H,\uparrow} +\chi_{V,\uparrow}  = \chi_{H,\downarrow} + \chi_{V,\downarrow},
 	\end{align}
-this term can be canceled \cite{chaudhury_continuous_2006}, \error{where we have ignored the imaginary part of the coupling strengths in the dispersive regime}.
+this term can be canceled \cite{chaudhury_continuous_2006}, where we have ignored the imaginary part of the coupling strengths in the dispersive regime.
 Using the D1-line of $^{133}$Cs atoms as the probe light, there are two magic-frequency solutions, $ \magic{3} $ and $\magic{4}$, shown in \frf{Fig::CouplingStrength}(a).  
 
 Because the guided probe light at the position of the atom will generally be elliptical, the light-shift interaction coherently couples different magnetic sublevels in a given manifold $f$, and thus does not conserve $\hat{J}_3$.  For example, the ellipticity of the probe light leads to a fictitious magnetic field proportional to $i \mathbf{E}^{(-)}_{\inp}(\br') \times \mathbf{E}^{(+)}_{\inp}(\br')$ that causes a precession of the spin within hyperfine manifold $f$.  This can be mitigated by a sufficiently strong bias magnetic field compared to the fictitious field \cite{smith_continuous_2004}. 
