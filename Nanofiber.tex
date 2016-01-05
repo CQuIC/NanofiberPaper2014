@@ -192,7 +192,7 @@ Such strong cooperativity in free space has been employed in a variety of applic
 %=============================================
 
 A particular system that combines the elements above consists of cold atoms trapped in the evanescent field of the guided mode of a tapered optical nanofiber with a subwavelength diameter \cite{vetsch_optical_2010, lacroute_state-insensitive_2012, balykin_quantum_2014, grover_photon-correlation_2015, Lee2015Inhomogeneous} (see \frf{Fig::ModeMatching}).  
-The typical resonant OD/atom in the nanofiber ($\sigma_0/A \sim  10^{-2}$) is boosted by orders of magnitude over free space for paraxial beams. 
+The typical resonant OD per atom, or OD/$N_A$, in the nanofiber ($\sigma_0/A \sim  10^{-2}$) is boosted by orders of magnitude over free space for paraxial beams. 
 However, one cannot reach the strong coupling regime where $\Gamma_{\oneD}$ is on the order of $\Gamma_{\vac}$ as is possible in engineered nanophotonic waveguides, such as those arising in photonic crystals \cite{hung_trapped_2013}, where atoms can be trapped at positions of peak intensity of the field.  
 One can, however, achieve strong cooperativity in the dispersive regime with a moderately sized ensemble.  When compared to free space, all light scattered into the guided mode is automatically mode matched, and thus, given the relatively large ratio $\sigma_0/A$, one can achieve high OD with only a few thousand atoms (see \frf{Fig::ModeMatching}).  
 Such strong cooperativity opens the door to new regimes to create non-Gaussian quantum states of the ensemble \cite{dubost_efficient_2012} and potentially to implement nonlinear optics at the level of a few photons \cite{spillane_observation_2008, pittman_ultralow-power_2013, oshea_fiber-optical_2013}.
@@ -338,7 +338,7 @@ Here, the $\{p,p'\}$-element of the tensor polarizability is given by, $\alpha_{
 
 The phase shift per atom, \erf{Eq::PhaseShift}, is modified over free space in two ways, both of which are captured by the effective mode area $A_{\rm in}$. First, although material dispersion in an optical fiber is negligible over the distances we consider, additional waveguide dispersion can lead to a significant reduction in the group velocity~\cite{hung_trapped_2013,goban_atomlight_2014}.  Such ``slow light" enhances the atom-photon coupling strength. 
 In the nanofiber geometry this effect is moderate -- we calculated the group index to be $n_g \approx 1.40$. 
-Second and more importantly, the tight spatial confinement as measured by OD/atom significantly increases the coupling strength over free space for every atom along the nanofiber, which yields strong cooperativity.
+Second and more importantly, the tight spatial confinement as measured by OD/$N_A$ significantly increases the coupling strength over free space for every atom along the nanofiber, which yields strong cooperativity.
 In contrast, in free space diffraction restricts the collective phase shift for an ensemble of atoms~\cite{tanji-suzuki_chapter_2011, baragiola_three-dimensional_2014}.  
 For a Gaussian beam with beam waist $w_0$, the total phase shift induced by a collection of polarizable atoms will be $\delta \phi = N_{\eff} 2 \pi k_0 {\rm Re}({\alpha})/A$, where $A = \pi w^2_0/2$ is the beam area at the focus and $N_{\eff}$ is the effective number of atoms that radiate into this mode.  
 One can couple strongly to few atoms at the center by tightly focusing the beam or couple weakly to many atoms by choosing a larger focal volume, but hence, smaller cooperativity per atom.  
@@ -858,7 +858,7 @@ All of these effects are included in the equation for $\varz$, \erf{Eq::varJz}, 
 \caption{Dependence of the parameters that determine metrological squeezing  on the direction of the quantization axis that defines the clock states, $\qaxis$.  In all cases we consider $2500$ atoms trapped in the $x$-$z$ plane at distance $ r'\!_\perp=1.8a$ from the axis of the nanofiber. 
 In (b--d) $\qaxis$ is confined to the $x$-$y$ plane, where the optimal peak squeezing occurs.
 (a,b)  Peak achievable squeezing at the maximum time, measured in dB, as a function of the direction of  $\qaxis$. 
-(c) OD/atom=$\sigma_0 A_{in}/A^2_{J_3}$, \erf{Eq::OD/atom}.
+(c) OD/$N_A$=$\sigma_0 A_{in}/A^2_{J_3}$, \erf{Eq::OD/atom}.
 (d) Rates of atom loss, $\gamma_{00}$, and depolarization, $\gamma_{11}$ relative to the characteristic scattering rate $\gamma_s$.  See Eqs.~\eqref{Eq::lrate} and~\eqref{Eq::frate}. }\label{Fig::Squeezing_QuantizationAxis}
 \end{figure}
 %================
@@ -868,16 +868,16 @@ With our model, we explore optimal conditions for generating spin squeezing.   T
 We gain insight into the tradeoffs between QND entangling interaction and decoherence by independent inspection of the measurement strength and optical pumping rates.  
 First, the rate of squeezing is determined by the effective optical density per atom on resonance,
 \begin{align}\label{Eq::OD/atom}
-\mathrm{OD}/\mathrm{atom} \equiv \frac{\kappa}{\gamma_s}=\frac{\sigma_0 A_{\rm in}}{A_{J_3}^2},
+\mathrm{OD}/N_A \equiv \frac{\kappa}{\gamma_s}=\frac{\sigma_0 A_{\rm in}}{A_{J_3}^2},
 \end{align} 
 which peaks when $\qaxis$ is along the $y$-axis, as seen in \frf{Fig::Squeezing_QuantizationAxis}(c). 
-Choosing $\qaxis$ along $y$, the OD/atom is about 50\% larger than along $x$-axis.  
+Choosing $\qaxis$ along $y$, the OD/$N_A$ is about 50\% larger than along $x$-axis.  
 The various forms of decoherence similarly vary with quantization axis, as seen in \frf{Fig::Squeezing_QuantizationAxis}(d), where we plot the dominant rate of atom loss, $\gamma_{00}$, and the depolarization rate of the mean pseudospin $\expt{\jx}$, $\gamma_{11}$. 
 Because the magic frequency $\magic{4}$ is nearly equidistant from $f'=3$ and $f'=4$ when the quantization  axis is near the $y$-axis (see \frf{Fig::CouplingStrength}(b)) this choice of quantization axis provides more protection from decoherence.   
 While the decoherence rates in \frf{Fig::Squeezing_QuantizationAxis}(d) are largest near the $y$-axis, the increase in $\kappa$ more than compensates to provide optimal peak squeezing.
 
 Finally, we explore the optimal conditions as a function of the trapping geometry.  
-The dispersive entangling interaction is based on the collective atomic coupling to the evanescent guided-mode fields, which decay exponentially away from the nanofiber surface, as seen in OD/atom plotted in \frf{Fig::Squeezing_Distance}(a). 
+The dispersive entangling interaction is based on the collective atomic coupling to the evanescent guided-mode fields, which decay exponentially away from the nanofiber surface, as seen in OD/$N_A$ plotted in \frf{Fig::Squeezing_Distance}(a). 
 From Eq.~\eqref{Eq::varJz}, the optimal choice of quantization axis depends not only on distance from the fiber but also weakly on the atom number, \frf{Fig::Squeezing_Distance}(b) because of the competition between squeezing and decoherence.  
 At the optimal quantization axis, the strong dependence of peak achievable squeezing on distance from the fiber is as seen in \frf{Fig::Squeezing_Distance}(c) along with the expected increase as more atoms contribute to the atom-light interface.  
 
@@ -888,8 +888,8 @@ At distances $r'\!\!_\perp \!>\! 1.5a$ the atoms' local environment is roughly t
 
 
 %======= FIG: Scaling with atom number and distance =======
-\begin{figure*}\includegraphics[scale=0.4]{Fig6}
-\caption{Parameters that define squeezing as a function of trapping distance $r'_\perp$ and initial atom number $N_A$. (a) OD/atom. Inset is the corresponding magic detuning in units of MHz (see text).
+\begin{figure*}\includegraphics[scale=0.4]{./Fig6}
+\caption{Parameters that define squeezing as a function of trapping distance $r'_\perp$ and initial atom number $N_A$. (a) OD/$N_A$. Inset is the corresponding magic detuning in units of MHz (see text).
 (b) Optimal quantization axis orientation angle $\qaxis$ in the $x$-$y$ plane for different atom numbers. 
 The line with $ 500 $ atoms terminates when the squeezing effect is too weak to be observed ($ r'\!_\perp>2.3a $).
 (c) Peak metrological squeezing at the optimal $\qaxis$ for different atom numbers.} \label{Fig::Squeezing_Distance}
@@ -902,8 +902,8 @@ The line with $ 500 $ atoms terminates when the squeezing effect is too weak to 
 
 We studied the strong cooperativity in the atom-light interface that can be achieved based on atoms trapped in the evanescent field surrounding an optical nanofiber, and interacting with a guided mode in the dispersive regime. 
 The key parameter that determines the coupling is the resonant optical density per atom. 
-Due to the tight confinement of the guided mode over the entire chain of atoms this parameter is $ \mathrm{OD}/\mathrm{atom}\sim 10^{-2} $ for typical geometries used in current experiments, which approaches that achieved for atomic ensembles trapped inside optical cavities of moderate finesse \cite{chen_conditional_2011, zhang_collective_2012}.  
-In contrast, the atom-light coupling for atoms in free space is typically orders of magnitude smaller, $ \mathrm{OD}/\mathrm{atom} \sim 10^{-6}$.  
+Due to the tight confinement of the guided mode over the entire chain of atoms this parameter is $ \mathrm{OD}/N_A\sim 10^{-2} $ for typical geometries used in current experiments, which approaches that achieved for atomic ensembles trapped inside optical cavities of moderate finesse \cite{chen_conditional_2011, zhang_collective_2012}.  
+In contrast, the atom-light coupling for atoms in free space is typically orders of magnitude smaller, $ \mathrm{OD}/N_A \sim 10^{-6}$.  
 Under ideal conditions the atom-light interaction is entirely symmetric along the nanofiber, providing a platform for long-range correlations independent of distance between the atoms. 
 As the light is entirely guided, fiber- or waveguide-coupled atomic ensembles can be networked together or coupled to other physical systems in a hybrid platform \cite{hafezi_atomic_2012, liebermeister_tapered_2014, Meng2015nanowaveguide, Tiecke2015Efficient} for truly long-range entanglement generation and distribution. 
 
@@ -915,7 +915,7 @@ Based on our formalism we calculated the nanofiber-enhanced measurement strength
 
 The peak squeezing one can generate depends on a detailed balance between the reduction of spin projection noise based on QND measurement and the damage done to the spin ensemble due to optical pumping.  
 Both measurement and optical pumping arise from the same physical mechanism -- scattering of photons by atoms.  
-The former corresponds to cooperative forward scattering into the guided mode whereas the latter corresponds to local scattering into all other modes, primarily the unguided ``radiation" modes.   The cooperativity, specified by the effective OD/atom, determines the ratio of these two effects and thus the ultimate power of the quantum atom-light interface. 
+The former corresponds to cooperative forward scattering into the guided mode whereas the latter corresponds to local scattering into all other modes, primarily the unguided ``radiation" modes.   The cooperativity, specified by the effective OD/$N_A$, determines the ratio of these two effects and thus the ultimate power of the quantum atom-light interface. 
 
 We studied QND measurement using a first-principles stochastic master equation model, which allowed us to track the atomic correlation functions that define the metrologically relevant squeezing parameter.  
 These include the atomic projection noise uncertainty as well as the length of the collective spin vector that defines the metrological signal.  We find that decoherence acts primarily to depolarize the mean pseudospin and optically pump atoms out of the clock subspace, which we treat as loss.  In addition, optical pumping decoheres the spin correlations at the heart of spin squeezing, but at a reduced rate compared with the effect on the mean pseudospin.  
