@@ -1,11 +1,13 @@
 #Not tracked folders and files
 
-NanoFiberPaper_Ivan
-NanoFiberPaper_Ben
-NanoFiberPaper_Qi
-NanofiberPaper_twocolumn
+Ivan
+Ben
+Qi
+twocolumn
 
-
+Makefile
+SyncFromMaster.sh
+SyncToMaster.sh
 
 #TempFiles for tex.
 
@@ -26,7 +28,7 @@ NanofiberPaper_twocolumn
 *.bak
 
 *~
-
+*.bbl
 
 Nanofiber.pdf
 *_edited.*
